@@ -518,3 +518,29 @@ public partial class V1beta1NamespaceDisasterRecoveryConfig : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1NamespaceDisasterRecoveryConfigStatus? Status { get; set; }
 }
+
+/// <summary>NamespaceDisasterRecoveryConfig is the Schema for the NamespaceDisasterRecoveryConfigs API. Manages an Disaster Recovery Config for an Event Hub Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NamespaceDisasterRecoveryConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NamespaceDisasterRecoveryConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NamespaceDisasterRecoveryConfigList";
+    public const string KubeGroup = "eventhub.azure.upbound.io";
+    public const string KubePluralName = "namespacedisasterrecoveryconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NamespaceDisasterRecoveryConfig> Items { get; set; }
+}

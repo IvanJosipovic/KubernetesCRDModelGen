@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class VertexAITensorboardMetadata
+{
+}
+
 /// <summary>Immutable. Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAITensorboardSpecEncryptionSpec
+public partial class VertexAITensorboardSpecEncryptionSpec
 {
     /// <summary>Immutable. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the resource is created.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -19,7 +25,7 @@ public partial class V1alpha1VertexAITensorboardSpecEncryptionSpec
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAITensorboardSpecProjectRef
+public partial class VertexAITensorboardSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -36,7 +42,7 @@ public partial class V1alpha1VertexAITensorboardSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAITensorboardSpec
+public partial class VertexAITensorboardSpec
 {
     /// <summary>Description of this Tensorboard.</summary>
     [JsonPropertyName("description")]
@@ -48,11 +54,11 @@ public partial class V1alpha1VertexAITensorboardSpec
 
     /// <summary>Immutable. Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key.</summary>
     [JsonPropertyName("encryptionSpec")]
-    public V1alpha1VertexAITensorboardSpecEncryptionSpec? EncryptionSpec { get; set; }
+    public VertexAITensorboardSpecEncryptionSpec? EncryptionSpec { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1VertexAITensorboardSpecProjectRef ProjectRef { get; set; }
+    public VertexAITensorboardSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the tensorboard. eg us-central1.</summary>
     [JsonPropertyName("region")]
@@ -65,7 +71,7 @@ public partial class V1alpha1VertexAITensorboardSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAITensorboardStatusConditions
+public partial class VertexAITensorboardStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -90,7 +96,7 @@ public partial class V1alpha1VertexAITensorboardStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1VertexAITensorboardStatus
+public partial class VertexAITensorboardStatus
 {
     /// <summary>Consumer project Cloud Storage path prefix used to store blob data, which can either be a bucket or directory. Does not end with a '/'.</summary>
     [JsonPropertyName("blobStoragePathPrefix")]
@@ -98,7 +104,7 @@ public partial class V1alpha1VertexAITensorboardStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1VertexAITensorboardStatusConditions>? Conditions { get; set; }
+    public IList<VertexAITensorboardStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the Tensorboard was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -123,30 +129,25 @@ public partial class V1alpha1VertexAITensorboardStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VertexAITensorboard : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAITensorboardSpec>, IStatus<V1alpha1VertexAITensorboardStatus>
+public partial class VertexAITensorboard
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VertexAITensorboard";
-    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
-    public const string KubePluralName = "vertexaitensorboards";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public VertexAITensorboardMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1VertexAITensorboardSpec Spec { get; set; }
+    public VertexAITensorboardSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1VertexAITensorboardStatus? Status { get; set; }
+    public VertexAITensorboardStatus? Status { get; set; }
 }

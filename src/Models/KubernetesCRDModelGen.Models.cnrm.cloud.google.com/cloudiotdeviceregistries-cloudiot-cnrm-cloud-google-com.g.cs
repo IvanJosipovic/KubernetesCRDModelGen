@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cloudiot.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceRegistrySpecCredentials
+public partial class CloudIOTDeviceRegistryMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class CloudIOTDeviceRegistrySpecCredentials
 {
     /// <summary>A public key certificate format and data.</summary>
     [JsonPropertyName("publicKeyCertificate")]
@@ -19,7 +25,7 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpecCredentials
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceRegistrySpecEventNotificationConfigs
+public partial class CloudIOTDeviceRegistrySpecEventNotificationConfigs
 {
     /// <summary>PubSub topic name to publish device events.</summary>
     [JsonPropertyName("pubsubTopicName")]
@@ -32,15 +38,15 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpecEventNotificationConfigs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceRegistrySpec
+public partial class CloudIOTDeviceRegistrySpec
 {
     /// <summary>List of public key certificates to authenticate devices.</summary>
     [JsonPropertyName("credentials")]
-    public IList<V1alpha1CloudIOTDeviceRegistrySpecCredentials>? Credentials { get; set; }
+    public IList<CloudIOTDeviceRegistrySpecCredentials>? Credentials { get; set; }
 
     /// <summary>List of configurations for event notifications, such as PubSub topics to publish device events to.</summary>
     [JsonPropertyName("eventNotificationConfigs")]
-    public IList<V1alpha1CloudIOTDeviceRegistrySpecEventNotificationConfigs>? EventNotificationConfigs { get; set; }
+    public IList<CloudIOTDeviceRegistrySpecEventNotificationConfigs>? EventNotificationConfigs { get; set; }
 
     /// <summary>Activate or deactivate HTTP.</summary>
     [JsonPropertyName("httpConfig")]
@@ -73,7 +79,7 @@ public partial class V1alpha1CloudIOTDeviceRegistrySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceRegistryStatusConditions
+public partial class CloudIOTDeviceRegistryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -98,11 +104,11 @@ public partial class V1alpha1CloudIOTDeviceRegistryStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceRegistryStatus
+public partial class CloudIOTDeviceRegistryStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1CloudIOTDeviceRegistryStatusConditions>? Conditions { get; set; }
+    public IList<CloudIOTDeviceRegistryStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -111,30 +117,25 @@ public partial class V1alpha1CloudIOTDeviceRegistryStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1CloudIOTDeviceRegistry : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudIOTDeviceRegistrySpec>, IStatus<V1alpha1CloudIOTDeviceRegistryStatus>
+public partial class CloudIOTDeviceRegistry
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "CloudIOTDeviceRegistry";
-    public const string KubeGroup = "cloudiot.cnrm.cloud.google.com";
-    public const string KubePluralName = "cloudiotdeviceregistries";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public CloudIOTDeviceRegistryMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1CloudIOTDeviceRegistrySpec Spec { get; set; }
+    public CloudIOTDeviceRegistrySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1CloudIOTDeviceRegistryStatus? Status { get; set; }
+    public CloudIOTDeviceRegistryStatus? Status { get; set; }
 }

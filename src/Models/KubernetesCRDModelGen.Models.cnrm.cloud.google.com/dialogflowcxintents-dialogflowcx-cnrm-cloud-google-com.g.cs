@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentSpecParameters
+public partial class DialogflowCXIntentMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DialogflowCXIntentSpecParameters
 {
     /// <summary>The entity type of the parameter. Format: projects/-/locations/-/agents/-/entityTypes/&lt;System Entity Type ID&gt; for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt; for developer entity types.</summary>
     [JsonPropertyName("entityType")]
@@ -31,7 +37,7 @@ public partial class V1alpha1DialogflowCXIntentSpecParameters
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
+public partial class DialogflowCXIntentSpecTrainingPhrasesParts
 {
     /// <summary>The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.</summary>
     [JsonPropertyName("parameterId")]
@@ -44,7 +50,7 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
+public partial class DialogflowCXIntentSpecTrainingPhrases
 {
     /// <summary>The unique identifier of the training phrase.</summary>
     [JsonPropertyName("id")]
@@ -52,7 +58,7 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
 
     /// <summary>The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase. Note: The API does not automatically annotate training phrases like the Dialogflow Console does. Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated. If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set. If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways: Part.text is set to a part of the phrase that has no parameters. Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.</summary>
     [JsonPropertyName("parts")]
-    public IList<V1alpha1DialogflowCXIntentSpecTrainingPhrasesParts> Parts { get; set; }
+    public IList<DialogflowCXIntentSpecTrainingPhrasesParts> Parts { get; set; }
 
     /// <summary>Indicates how many times this example was added to the intent.</summary>
     [JsonPropertyName("repeatCount")]
@@ -61,7 +67,7 @@ public partial class V1alpha1DialogflowCXIntentSpecTrainingPhrases
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentSpec
+public partial class DialogflowCXIntentSpec
 {
     /// <summary>Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.</summary>
     [JsonPropertyName("description")]
@@ -81,7 +87,7 @@ public partial class V1alpha1DialogflowCXIntentSpec
 
     /// <summary>The collection of parameters associated with the intent.</summary>
     [JsonPropertyName("parameters")]
-    public IList<V1alpha1DialogflowCXIntentSpecParameters>? Parameters { get; set; }
+    public IList<DialogflowCXIntentSpecParameters>? Parameters { get; set; }
 
     /// <summary>Immutable. The agent to create an intent for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
@@ -97,12 +103,12 @@ public partial class V1alpha1DialogflowCXIntentSpec
 
     /// <summary>The collection of training phrases the agent is trained on to identify the intent.</summary>
     [JsonPropertyName("trainingPhrases")]
-    public IList<V1alpha1DialogflowCXIntentSpecTrainingPhrases>? TrainingPhrases { get; set; }
+    public IList<DialogflowCXIntentSpecTrainingPhrases>? TrainingPhrases { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentStatusConditions
+public partial class DialogflowCXIntentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -127,11 +133,11 @@ public partial class V1alpha1DialogflowCXIntentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DialogflowCXIntentStatus
+public partial class DialogflowCXIntentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DialogflowCXIntentStatusConditions>? Conditions { get; set; }
+    public IList<DialogflowCXIntentStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the intent. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/intents/&lt;Intent ID&gt;.</summary>
     [JsonPropertyName("name")]
@@ -144,30 +150,25 @@ public partial class V1alpha1DialogflowCXIntentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DialogflowCXIntent : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXIntentSpec>, IStatus<V1alpha1DialogflowCXIntentStatus>
+public partial class DialogflowCXIntent
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DialogflowCXIntent";
-    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
-    public const string KubePluralName = "dialogflowcxintents";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DialogflowCXIntentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DialogflowCXIntentSpec Spec { get; set; }
+    public DialogflowCXIntentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DialogflowCXIntentStatus? Status { get; set; }
+    public DialogflowCXIntentStatus? Status { get; set; }
 }

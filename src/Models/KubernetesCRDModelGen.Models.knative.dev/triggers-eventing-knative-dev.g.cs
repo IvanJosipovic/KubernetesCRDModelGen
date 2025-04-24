@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1TriggerStatusAuth
+public partial class TriggerStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -23,7 +23,7 @@ public partial class V1TriggerStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1TriggerStatusConditions
+public partial class TriggerStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -52,7 +52,7 @@ public partial class V1TriggerStatusConditions
 
 /// <summary>Status represents the current state of the Trigger. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1TriggerStatus
+public partial class TriggerStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -60,11 +60,11 @@ public partial class V1TriggerStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1TriggerStatusAuth? Auth { get; set; }
+    public TriggerStatusAuth? Auth { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1TriggerStatusConditions>? Conditions { get; set; }
+    public IList<TriggerStatusConditions>? Conditions { get; set; }
 
     /// <summary>DeadLetterSinkURI is the resolved URI of the dead letter sink for this Trigger, in case there is none this will fallback to it's Broker status DeadLetterSinkURI.</summary>
     [JsonPropertyName("deadLetterSinkUri")]
@@ -97,30 +97,13 @@ public partial class V1TriggerStatus
 
 /// <summary>Trigger represents a request to have events delivered to a subscriber from a Broker's event pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1Trigger : IKubernetesObject<V1ObjectMeta>, ISpec<JsonNode>, IStatus<V1TriggerStatus>
+public partial class Trigger
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "Trigger";
-    public const string KubeGroup = "eventing.knative.dev";
-    public const string KubePluralName = "triggers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>Spec defines the desired state of the Trigger.</summary>
     [JsonPropertyName("spec")]
     public JsonNode? Spec { get; set; }
 
     /// <summary>Status represents the current state of the Trigger. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public V1TriggerStatus? Status { get; set; }
+    public TriggerStatus? Status { get; set; }
 }

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securitycenter.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class SecurityCenterSourceMetadata
+{
+}
+
 /// <summary>The organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterSourceSpecOrganizationRef
+public partial class SecurityCenterSourceSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1SecurityCenterSourceSpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterSourceSpec
+public partial class SecurityCenterSourceSpec
 {
     /// <summary>The description of the source (max of 1024 characters).</summary>
     [JsonPropertyName("description")]
@@ -39,7 +45,7 @@ public partial class V1alpha1SecurityCenterSourceSpec
 
     /// <summary>The organization that this resource belongs to.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1alpha1SecurityCenterSourceSpecOrganizationRef OrganizationRef { get; set; }
+    public SecurityCenterSourceSpecOrganizationRef OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -48,7 +54,7 @@ public partial class V1alpha1SecurityCenterSourceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterSourceStatusConditions
+public partial class SecurityCenterSourceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -73,11 +79,11 @@ public partial class V1alpha1SecurityCenterSourceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterSourceStatus
+public partial class SecurityCenterSourceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1SecurityCenterSourceStatusConditions>? Conditions { get; set; }
+    public IList<SecurityCenterSourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of this source, in the format 'organizations/{{organization}}/sources/{{source}}'.</summary>
     [JsonPropertyName("name")]
@@ -90,30 +96,25 @@ public partial class V1alpha1SecurityCenterSourceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SecurityCenterSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1SecurityCenterSourceSpec>, IStatus<V1alpha1SecurityCenterSourceStatus>
+public partial class SecurityCenterSource
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SecurityCenterSource";
-    public const string KubeGroup = "securitycenter.cnrm.cloud.google.com";
-    public const string KubePluralName = "securitycentersources";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public SecurityCenterSourceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1SecurityCenterSourceSpec Spec { get; set; }
+    public SecurityCenterSourceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1SecurityCenterSourceStatus? Status { get; set; }
+    public SecurityCenterSourceStatus? Status { get; set; }
 }

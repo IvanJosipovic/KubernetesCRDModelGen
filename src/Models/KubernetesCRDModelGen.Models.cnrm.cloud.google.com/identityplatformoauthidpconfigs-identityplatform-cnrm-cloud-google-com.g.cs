@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IdentityPlatformOAuthIDPConfigMetadata
+{
+}
+
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
+public partial class IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -23,16 +29,16 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueF
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom
+public partial class IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public IdentityPlatformOAuthIDPConfigSpecClientSecretValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecret
+public partial class IdentityPlatformOAuthIDPConfigSpecClientSecret
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -40,12 +46,12 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecret
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom? ValueFrom { get; set; }
+    public IdentityPlatformOAuthIDPConfigSpecClientSecretValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType
+public partial class IdentityPlatformOAuthIDPConfigSpecResponseType
 {
     /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
     [JsonPropertyName("code")]
@@ -62,7 +68,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigSpec
+public partial class IdentityPlatformOAuthIDPConfigSpec
 {
     /// <summary>The client id of an OAuth client.</summary>
     [JsonPropertyName("clientId")]
@@ -70,7 +76,7 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpec
 
     /// <summary>The client secret of the OAuth client, to enable OIDC code flow.</summary>
     [JsonPropertyName("clientSecret")]
-    public V1beta1IdentityPlatformOAuthIDPConfigSpecClientSecret? ClientSecret { get; set; }
+    public IdentityPlatformOAuthIDPConfigSpecClientSecret? ClientSecret { get; set; }
 
     /// <summary>The config's display name set by developers.</summary>
     [JsonPropertyName("displayName")]
@@ -90,12 +96,12 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigSpec
 
     /// <summary>The multiple response type to request for in the OAuth authorization flow. This can possibly be a combination of set bits (e.g.: {id\_token, token}).</summary>
     [JsonPropertyName("responseType")]
-    public V1beta1IdentityPlatformOAuthIDPConfigSpecResponseType? ResponseType { get; set; }
+    public IdentityPlatformOAuthIDPConfigSpecResponseType? ResponseType { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigStatusConditions
+public partial class IdentityPlatformOAuthIDPConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -120,11 +126,11 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IdentityPlatformOAuthIDPConfigStatus
+public partial class IdentityPlatformOAuthIDPConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1IdentityPlatformOAuthIDPConfigStatusConditions>? Conditions { get; set; }
+    public IList<IdentityPlatformOAuthIDPConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -133,30 +139,25 @@ public partial class V1beta1IdentityPlatformOAuthIDPConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IdentityPlatformOAuthIDPConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformOAuthIDPConfigSpec>, IStatus<V1beta1IdentityPlatformOAuthIDPConfigStatus>
+public partial class IdentityPlatformOAuthIDPConfig
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IdentityPlatformOAuthIDPConfig";
-    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
-    public const string KubePluralName = "identityplatformoauthidpconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IdentityPlatformOAuthIDPConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1IdentityPlatformOAuthIDPConfigSpec? Spec { get; set; }
+    public IdentityPlatformOAuthIDPConfigSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1IdentityPlatformOAuthIDPConfigStatus? Status { get; set; }
+    public IdentityPlatformOAuthIDPConfigStatus? Status { get; set; }
 }

@@ -518,3 +518,29 @@ public partial class V1beta1LBAttachment : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1LBAttachmentStatus? Status { get; set; }
 }
+
+/// <summary>LBAttachment is the Schema for the LBAttachments API. Attaches a Lightsail Instance to a Lightsail Load Balancer</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBAttachmentList";
+    public const string KubeGroup = "lightsail.aws.upbound.io";
+    public const string KubePluralName = "lbattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBAttachment> Items { get; set; }
+}

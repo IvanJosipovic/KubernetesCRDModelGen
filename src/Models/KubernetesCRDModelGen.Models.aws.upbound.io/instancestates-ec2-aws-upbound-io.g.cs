@@ -402,3 +402,29 @@ public partial class V1beta1InstanceState : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1InstanceStateStatus? Status { get; set; }
 }
+
+/// <summary>InstanceState is the Schema for the InstanceStates API. Provides an EC2 instance state resource. This allows managing an instance power state.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InstanceStateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceState>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InstanceStateList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "instancestates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InstanceState> Items { get; set; }
+}

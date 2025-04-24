@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vpcaccess.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class VPCAccessConnectorMetadata
+{
+}
+
 /// <summary>Immutable. Name or self_link of the VPC network. Required if 'ip_cidr_range' is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpecNetworkRef
+public partial class VPCAccessConnectorSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1VPCAccessConnectorSpecNetworkRef
 
 /// <summary>Immutable. The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpecProjectRef
+public partial class VPCAccessConnectorSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1VPCAccessConnectorSpecProjectRef
 
 /// <summary>Immutable. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpecSubnetNameRef
+public partial class VPCAccessConnectorSpecSubnetNameRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1VPCAccessConnectorSpecSubnetNameRef
 
 /// <summary>Immutable. Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpecSubnetProjectRef
+public partial class VPCAccessConnectorSpecSubnetProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -78,20 +84,20 @@ public partial class V1beta1VPCAccessConnectorSpecSubnetProjectRef
 
 /// <summary>Immutable. The subnet in which to house the connector.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpecSubnet
+public partial class VPCAccessConnectorSpecSubnet
 {
     /// <summary>Immutable. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"</summary>
     [JsonPropertyName("nameRef")]
-    public V1beta1VPCAccessConnectorSpecSubnetNameRef? NameRef { get; set; }
+    public VPCAccessConnectorSpecSubnetNameRef? NameRef { get; set; }
 
     /// <summary>Immutable. Project in which the subnet exists. If not set, this project is assumed to be the project for which the connector create request was issued.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1VPCAccessConnectorSpecSubnetProjectRef? ProjectRef { get; set; }
+    public VPCAccessConnectorSpecSubnetProjectRef? ProjectRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorSpec
+public partial class VPCAccessConnectorSpec
 {
     /// <summary>Immutable. The range of internal addresses that follows RFC 4632 notation. Example: '10.132.0.0/28'.</summary>
     [JsonPropertyName("ipCidrRange")]
@@ -123,11 +129,11 @@ public partial class V1beta1VPCAccessConnectorSpec
 
     /// <summary>Immutable. Name or self_link of the VPC network. Required if 'ip_cidr_range' is set.</summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1VPCAccessConnectorSpecNetworkRef? NetworkRef { get; set; }
+    public VPCAccessConnectorSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1VPCAccessConnectorSpecProjectRef ProjectRef { get; set; }
+    public VPCAccessConnectorSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -135,12 +141,12 @@ public partial class V1beta1VPCAccessConnectorSpec
 
     /// <summary>Immutable. The subnet in which to house the connector.</summary>
     [JsonPropertyName("subnet")]
-    public V1beta1VPCAccessConnectorSpecSubnet? Subnet { get; set; }
+    public VPCAccessConnectorSpecSubnet? Subnet { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorStatusConditions
+public partial class VPCAccessConnectorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -165,11 +171,11 @@ public partial class V1beta1VPCAccessConnectorStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VPCAccessConnectorStatus
+public partial class VPCAccessConnectorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1VPCAccessConnectorStatusConditions>? Conditions { get; set; }
+    public IList<VPCAccessConnectorStatusConditions>? Conditions { get; set; }
 
     /// <summary>List of projects using the connector.</summary>
     [JsonPropertyName("connectedProjects")]
@@ -190,30 +196,25 @@ public partial class V1beta1VPCAccessConnectorStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPCAccessConnector : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCAccessConnectorSpec>, IStatus<V1beta1VPCAccessConnectorStatus>
+public partial class VPCAccessConnector
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPCAccessConnector";
-    public const string KubeGroup = "vpcaccess.cnrm.cloud.google.com";
-    public const string KubePluralName = "vpcaccessconnectors";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public VPCAccessConnectorMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1VPCAccessConnectorSpec Spec { get; set; }
+    public VPCAccessConnectorSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1VPCAccessConnectorStatus? Status { get; set; }
+    public VPCAccessConnectorStatus? Status { get; set; }
 }

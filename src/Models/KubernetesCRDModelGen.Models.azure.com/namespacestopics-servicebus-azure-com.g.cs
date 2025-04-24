@@ -362,3 +362,29 @@ public partial class V1api20240101storageNamespacesTopic : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1api20240101storageNamespacesTopicStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240101.NamespacesTopic Generator information: - Generated from: /servicebus/resource-manager/Microsoft.ServiceBus/stable/2024-01-01/topics.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ServiceBus/namespaces/{namespaceName}/topics/{topicName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240101storageNamespacesTopicList : IKubernetesObject<V1ListMeta>, IItems<V1api20240101storageNamespacesTopic>
+{
+    public const string KubeApiVersion = "v1api20240101storage";
+    public const string KubeKind = "NamespacesTopicList";
+    public const string KubeGroup = "servicebus.azure.com";
+    public const string KubePluralName = "namespacestopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240101storageNamespacesTopic> Items { get; set; }
+}

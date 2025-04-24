@@ -524,3 +524,29 @@ public partial class V1beta1Monitor : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1MonitorStatus? Status { get; set; }
 }
+
+/// <summary>Monitor is the Schema for the Monitors API. Manages a logz Monitor.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Monitor>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitorList";
+    public const string KubeGroup = "logz.azure.upbound.io";
+    public const string KubePluralName = "monitors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Monitor> Items { get; set; }
+}

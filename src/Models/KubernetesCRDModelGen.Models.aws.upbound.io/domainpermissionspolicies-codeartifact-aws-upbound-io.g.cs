@@ -350,3 +350,29 @@ public partial class V1beta1DomainPermissionsPolicy : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1DomainPermissionsPolicyStatus? Status { get; set; }
 }
+
+/// <summary>DomainPermissionsPolicy is the Schema for the DomainPermissionsPolicys API. Provides a CodeArtifact Domain Permissions Policy resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainPermissionsPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainPermissionsPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainPermissionsPolicyList";
+    public const string KubeGroup = "codeartifact.aws.upbound.io";
+    public const string KubePluralName = "domainpermissionspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainPermissionsPolicy> Items { get; set; }
+}

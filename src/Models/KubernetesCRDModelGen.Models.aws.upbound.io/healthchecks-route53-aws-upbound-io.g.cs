@@ -754,3 +754,29 @@ public partial class V1beta1HealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1HealthCheckStatus? Status { get; set; }
 }
+
+/// <summary>HealthCheck is the Schema for the HealthChecks API. Provides a Route53 health check.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HealthCheckList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthCheck>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HealthCheckList";
+    public const string KubeGroup = "route53.aws.upbound.io";
+    public const string KubePluralName = "healthchecks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HealthCheck> Items { get; set; }
+}

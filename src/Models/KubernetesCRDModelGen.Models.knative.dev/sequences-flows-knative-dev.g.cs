@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.flows.knative.dev;
 /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpecChannelTemplate
+public partial class SequenceSpecChannelTemplate
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
@@ -27,7 +27,7 @@ public partial class V1SequenceSpecChannelTemplate
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpecReplyRef
+public partial class SequenceSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -48,11 +48,11 @@ public partial class V1SequenceSpecReplyRef
 
 /// <summary>Reply is a Reference to where the result of the last Subscriber gets sent to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpecReply
+public partial class SequenceSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1SequenceSpecReplyRef? Ref { get; set; }
+    public SequenceSpecReplyRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -69,7 +69,7 @@ public partial class V1SequenceSpecReply
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpecStepsRef
+public partial class SequenceSpecStepsRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -90,7 +90,7 @@ public partial class V1SequenceSpecStepsRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpecSteps
+public partial class SequenceSpecSteps
 {
     /// <summary>Delivery is the delivery specification for events to the subscriber This includes things like retries, DLQ, etc.</summary>
     [JsonPropertyName("delivery")]
@@ -98,7 +98,7 @@ public partial class V1SequenceSpecSteps
 
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1SequenceSpecStepsRef? Ref { get; set; }
+    public SequenceSpecStepsRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -115,24 +115,24 @@ public partial class V1SequenceSpecSteps
 
 /// <summary>Spec defines the desired state of the Sequence.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceSpec
+public partial class SequenceSpec
 {
     /// <summary>ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).</summary>
     [JsonPropertyName("channelTemplate")]
-    public V1SequenceSpecChannelTemplate? ChannelTemplate { get; set; }
+    public SequenceSpecChannelTemplate? ChannelTemplate { get; set; }
 
     /// <summary>Reply is a Reference to where the result of the last Subscriber gets sent to.</summary>
     [JsonPropertyName("reply")]
-    public V1SequenceSpecReply? Reply { get; set; }
+    public SequenceSpecReply? Reply { get; set; }
 
     /// <summary>Steps is the list of Destinations (processors / functions) that will be called in the order provided. Each step has its own delivery options</summary>
     [JsonPropertyName("steps")]
-    public IList<V1SequenceSpecSteps>? Steps { get; set; }
+    public IList<SequenceSpecSteps>? Steps { get; set; }
 }
 
 /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusAddress
+public partial class SequenceStatusAddress
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -153,7 +153,7 @@ public partial class V1SequenceStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusAddresses
+public partial class SequenceStatusAddresses
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -174,7 +174,7 @@ public partial class V1SequenceStatusAddresses
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusAuth
+public partial class SequenceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -187,7 +187,7 @@ public partial class V1SequenceStatusAuth
 
 /// <summary>Channel is the reference to the underlying channel.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusChannelStatusesChannel
+public partial class SequenceStatusChannelStatusesChannel
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -220,7 +220,7 @@ public partial class V1SequenceStatusChannelStatusesChannel
 
 /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusChannelStatusesReady
+public partial class SequenceStatusChannelStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -249,20 +249,20 @@ public partial class V1SequenceStatusChannelStatusesReady
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusChannelStatuses
+public partial class SequenceStatusChannelStatuses
 {
     /// <summary>Channel is the reference to the underlying channel.</summary>
     [JsonPropertyName("channel")]
-    public V1SequenceStatusChannelStatusesChannel? Channel { get; set; }
+    public SequenceStatusChannelStatusesChannel? Channel { get; set; }
 
     /// <summary>ReadyCondition indicates whether the Channel is ready or not.</summary>
     [JsonPropertyName("ready")]
-    public V1SequenceStatusChannelStatusesReady? Ready { get; set; }
+    public SequenceStatusChannelStatusesReady? Ready { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusPolicies
+public partial class SequenceStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
     [JsonPropertyName("apiVersion")]
@@ -275,7 +275,7 @@ public partial class V1SequenceStatusPolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusConditions
+public partial class SequenceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -304,7 +304,7 @@ public partial class V1SequenceStatusConditions
 
 /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusSubscriptionStatusesReady
+public partial class SequenceStatusSubscriptionStatusesReady
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -333,7 +333,7 @@ public partial class V1SequenceStatusSubscriptionStatusesReady
 
 /// <summary>Subscription is the reference to the underlying Subscription.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusSubscriptionStatusesSubscription
+public partial class SequenceStatusSubscriptionStatusesSubscription
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -366,28 +366,28 @@ public partial class V1SequenceStatusSubscriptionStatusesSubscription
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatusSubscriptionStatuses
+public partial class SequenceStatusSubscriptionStatuses
 {
     /// <summary>ReadyCondition indicates whether the Subscription is ready or not.</summary>
     [JsonPropertyName("ready")]
-    public V1SequenceStatusSubscriptionStatusesReady? Ready { get; set; }
+    public SequenceStatusSubscriptionStatusesReady? Ready { get; set; }
 
     /// <summary>Subscription is the reference to the underlying Subscription.</summary>
     [JsonPropertyName("subscription")]
-    public V1SequenceStatusSubscriptionStatusesSubscription? Subscription { get; set; }
+    public SequenceStatusSubscriptionStatusesSubscription? Subscription { get; set; }
 }
 
 /// <summary>Status represents the current state of the Sequence. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SequenceStatus
+public partial class SequenceStatus
 {
     /// <summary>Sequence is Addressable. It exposes the endpoint as an URI to get events delivered into the Sequence.</summary>
     [JsonPropertyName("address")]
-    public V1SequenceStatusAddress? Address { get; set; }
+    public SequenceStatusAddress? Address { get; set; }
 
     /// <summary>Sequence is Addressable. It exposes the endpoints as URIs to get events delivered into the Sequence.</summary>
     [JsonPropertyName("addresses")]
-    public IList<V1SequenceStatusAddresses>? Addresses { get; set; }
+    public IList<SequenceStatusAddresses>? Addresses { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -395,19 +395,19 @@ public partial class V1SequenceStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1SequenceStatusAuth? Auth { get; set; }
+    public SequenceStatusAuth? Auth { get; set; }
 
     /// <summary>ChannelStatuses is an array of corresponding Channel statuses. Matches the Spec.Steps array in the order.</summary>
     [JsonPropertyName("channelStatuses")]
-    public IList<V1SequenceStatusChannelStatuses>? ChannelStatuses { get; set; }
+    public IList<SequenceStatusChannelStatuses>? ChannelStatuses { get; set; }
 
     /// <summary>List of applied EventPolicies</summary>
     [JsonPropertyName("policies")]
-    public IList<V1SequenceStatusPolicies>? Policies { get; set; }
+    public IList<SequenceStatusPolicies>? Policies { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1SequenceStatusConditions>? Conditions { get; set; }
+    public IList<SequenceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -415,35 +415,18 @@ public partial class V1SequenceStatus
 
     /// <summary>SubscriptionStatuses is an array of corresponding Subscription statuses. Matches the Spec.Steps array in the order.</summary>
     [JsonPropertyName("subscriptionStatuses")]
-    public IList<V1SequenceStatusSubscriptionStatuses>? SubscriptionStatuses { get; set; }
+    public IList<SequenceStatusSubscriptionStatuses>? SubscriptionStatuses { get; set; }
 }
 
 /// <summary>Sequence defines a sequence of Subscribers that will be wired in series through Channels and Subscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1Sequence : IKubernetesObject<V1ObjectMeta>, ISpec<V1SequenceSpec>, IStatus<V1SequenceStatus>
+public partial class Sequence
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "Sequence";
-    public const string KubeGroup = "flows.knative.dev";
-    public const string KubePluralName = "sequences";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>Spec defines the desired state of the Sequence.</summary>
     [JsonPropertyName("spec")]
-    public V1SequenceSpec? Spec { get; set; }
+    public SequenceSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the Sequence. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public V1SequenceStatus? Status { get; set; }
+    public SequenceStatus? Status { get; set; }
 }

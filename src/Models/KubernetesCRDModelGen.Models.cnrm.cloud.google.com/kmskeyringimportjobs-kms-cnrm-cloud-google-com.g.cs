@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyRingImportJobSpec
+public partial class KMSKeyRingImportJobMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class KMSKeyRingImportJobSpec
 {
     /// <summary>Immutable. It must be unique within a KeyRing and match the regular expression [a-zA-Z0-9_-]{1,63}.</summary>
     [JsonPropertyName("importJobId")]
@@ -35,7 +41,7 @@ public partial class V1alpha1KMSKeyRingImportJobSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyRingImportJobStatusAttestation
+public partial class KMSKeyRingImportJobStatusAttestation
 {
     /// <summary>The attestation data provided by the HSM when the key operation was performed. A base64-encoded string.</summary>
     [JsonPropertyName("content")]
@@ -48,7 +54,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatusAttestation
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyRingImportJobStatusConditions
+public partial class KMSKeyRingImportJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -73,7 +79,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyRingImportJobStatusPublicKey
+public partial class KMSKeyRingImportJobStatusPublicKey
 {
     /// <summary>The public key, encoded in PEM format. For more information, see the RFC 7468 sections for General Considerations and Textual Encoding of Subject Public Key Info.</summary>
     [JsonPropertyName("pem")]
@@ -82,15 +88,15 @@ public partial class V1alpha1KMSKeyRingImportJobStatusPublicKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1KMSKeyRingImportJobStatus
+public partial class KMSKeyRingImportJobStatus
 {
     /// <summary>Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.</summary>
     [JsonPropertyName("attestation")]
-    public IList<V1alpha1KMSKeyRingImportJobStatusAttestation>? Attestation { get; set; }
+    public IList<KMSKeyRingImportJobStatusAttestation>? Attestation { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1KMSKeyRingImportJobStatusConditions>? Conditions { get; set; }
+    public IList<KMSKeyRingImportJobStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time at which this resource is scheduled for expiration and can no longer be used. This is in RFC3339 text format.</summary>
     [JsonPropertyName("expireTime")]
@@ -106,7 +112,7 @@ public partial class V1alpha1KMSKeyRingImportJobStatus
 
     /// <summary>The public key with which to wrap key material prior to import. Only returned if state is 'ACTIVE'.</summary>
     [JsonPropertyName("publicKey")]
-    public IList<V1alpha1KMSKeyRingImportJobStatusPublicKey>? PublicKey { get; set; }
+    public IList<KMSKeyRingImportJobStatusPublicKey>? PublicKey { get; set; }
 
     /// <summary>The current state of the ImportJob, indicating if it can be used.</summary>
     [JsonPropertyName("state")]
@@ -115,30 +121,25 @@ public partial class V1alpha1KMSKeyRingImportJobStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1KMSKeyRingImportJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSKeyRingImportJobSpec>, IStatus<V1alpha1KMSKeyRingImportJobStatus>
+public partial class KMSKeyRingImportJob
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "KMSKeyRingImportJob";
-    public const string KubeGroup = "kms.cnrm.cloud.google.com";
-    public const string KubePluralName = "kmskeyringimportjobs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public KMSKeyRingImportJobMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1KMSKeyRingImportJobSpec Spec { get; set; }
+    public KMSKeyRingImportJobSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1KMSKeyRingImportJobStatus? Status { get; set; }
+    public KMSKeyRingImportJobStatus? Status { get; set; }
 }

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IAMWorkloadIdentityPoolProviderMetadata
+{
+}
+
 /// <summary>An Amazon Web Services identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
+public partial class IAMWorkloadIdentityPoolProviderSpecAws
 {
     /// <summary>Required. The AWS account ID.</summary>
     [JsonPropertyName("accountId")]
@@ -23,7 +29,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecAws
 
 /// <summary>An OpenId Connect 1.0 identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
+public partial class IAMWorkloadIdentityPoolProviderSpecOidc
 {
     /// <summary>Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange requests are rejected if the token audience does not match one of the configured values. Each audience may be at most 256 characters. A maximum of 10 audiences may be configured. If this list is empty, the OIDC token audience must be equal to the full canonical resource name of the WorkloadIdentityPoolProvider, with or without the HTTPS prefix. For example: ``` //iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ https://iam.googleapis.com/projects//locations//workloadIdentityPools//providers/ ```</summary>
     [JsonPropertyName("allowedAudiences")]
@@ -36,7 +42,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecOidc
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
+public partial class IAMWorkloadIdentityPoolProviderSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef
+public partial class IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef
 {
     /// <summary>The workloadIdentityPool for the resource  Allowed value: The Google Cloud resource name of an `IAMWorkloadIdentityPool` resource (format: `projects/{{project}}/locations/{{location}}/workloadIdentityPools/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -70,7 +76,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityP
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
+public partial class IAMWorkloadIdentityPoolProviderSpec
 {
     /// <summary>[A Common Expression Language](https://opensource.google/projects/cel) expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions: * `assertion`: JSON representing the authentication credential issued by the provider. * `google`: The Google attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the attribute condition expression is 4096 characters. If unspecified, all valid authentication credential are accepted. The following example shows how to only allow credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```</summary>
     [JsonPropertyName("attributeCondition")]
@@ -82,7 +88,7 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 
     /// <summary>An Amazon Web Services identity provider.</summary>
     [JsonPropertyName("aws")]
-    public V1beta1IAMWorkloadIdentityPoolProviderSpecAws? Aws { get; set; }
+    public IAMWorkloadIdentityPoolProviderSpecAws? Aws { get; set; }
 
     /// <summary>A description for the provider. Cannot exceed 256 characters.</summary>
     [JsonPropertyName("description")]
@@ -102,11 +108,11 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 
     /// <summary>An OpenId Connect 1.0 identity provider.</summary>
     [JsonPropertyName("oidc")]
-    public V1beta1IAMWorkloadIdentityPoolProviderSpecOidc? Oidc { get; set; }
+    public IAMWorkloadIdentityPoolProviderSpecOidc? Oidc { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1IAMWorkloadIdentityPoolProviderSpecProjectRef ProjectRef { get; set; }
+    public IAMWorkloadIdentityPoolProviderSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -114,12 +120,12 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderSpec
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("workloadIdentityPoolRef")]
-    public V1beta1IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef WorkloadIdentityPoolRef { get; set; }
+    public IAMWorkloadIdentityPoolProviderSpecWorkloadIdentityPoolRef WorkloadIdentityPoolRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
+public partial class IAMWorkloadIdentityPoolProviderStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -144,11 +150,11 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
+public partial class IAMWorkloadIdentityPoolProviderStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1IAMWorkloadIdentityPoolProviderStatusConditions>? Conditions { get; set; }
+    public IList<IAMWorkloadIdentityPoolProviderStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -161,30 +167,25 @@ public partial class V1beta1IAMWorkloadIdentityPoolProviderStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAMWorkloadIdentityPoolProvider : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkloadIdentityPoolProviderSpec>, IStatus<V1beta1IAMWorkloadIdentityPoolProviderStatus>
+public partial class IAMWorkloadIdentityPoolProvider
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAMWorkloadIdentityPoolProvider";
-    public const string KubeGroup = "iam.cnrm.cloud.google.com";
-    public const string KubePluralName = "iamworkloadidentitypoolproviders";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IAMWorkloadIdentityPoolProviderMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1IAMWorkloadIdentityPoolProviderSpec Spec { get; set; }
+    public IAMWorkloadIdentityPoolProviderSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1IAMWorkloadIdentityPoolProviderStatus? Status { get; set; }
+    public IAMWorkloadIdentityPoolProviderStatus? Status { get; set; }
 }

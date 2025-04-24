@@ -564,3 +564,29 @@ public partial class V1beta1BackupPolicyPostgreSQL : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyPostgreSQLStatus? Status { get; set; }
 }
+
+/// <summary>BackupPolicyPostgreSQL is the Schema for the BackupPolicyPostgreSQLs API. Manages a Backup Policy to back up PostgreSQL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupPolicyPostgreSQLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyPostgreSQL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupPolicyPostgreSQLList";
+    public const string KubeGroup = "dataprotection.azure.upbound.io";
+    public const string KubePluralName = "backuppolicypostgresqls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupPolicyPostgreSQL> Items { get; set; }
+}

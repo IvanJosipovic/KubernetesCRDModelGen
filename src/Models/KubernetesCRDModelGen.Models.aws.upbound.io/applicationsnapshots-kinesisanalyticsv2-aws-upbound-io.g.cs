@@ -386,3 +386,29 @@ public partial class V1beta1ApplicationSnapshot : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ApplicationSnapshotStatus? Status { get; set; }
 }
+
+/// <summary>ApplicationSnapshot is the Schema for the ApplicationSnapshots API. Manages a Kinesis Analytics v2 Application Snapshot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationSnapshotList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationSnapshot>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationSnapshotList";
+    public const string KubeGroup = "kinesisanalyticsv2.aws.upbound.io";
+    public const string KubePluralName = "applicationsnapshots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApplicationSnapshot> Items { get; set; }
+}

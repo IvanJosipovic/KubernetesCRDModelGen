@@ -410,3 +410,29 @@ public partial class V1beta1TokenSigningCertificate : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1TokenSigningCertificateStatus? Status { get; set; }
 }
+
+/// <summary>TokenSigningCertificate is the Schema for the TokenSigningCertificates API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TokenSigningCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TokenSigningCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TokenSigningCertificateList";
+    public const string KubeGroup = "serviceprincipals.azuread.upbound.io";
+    public const string KubePluralName = "tokensigningcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TokenSigningCertificate> Items { get; set; }
+}

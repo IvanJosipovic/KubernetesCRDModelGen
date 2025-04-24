@@ -973,3 +973,29 @@ public partial class V1beta1NotebookInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1NotebookInstanceStatus? Status { get; set; }
 }
+
+/// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker Notebook Instance resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NotebookInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NotebookInstanceList";
+    public const string KubeGroup = "sagemaker.aws.upbound.io";
+    public const string KubePluralName = "notebookinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NotebookInstance> Items { get; set; }
+}

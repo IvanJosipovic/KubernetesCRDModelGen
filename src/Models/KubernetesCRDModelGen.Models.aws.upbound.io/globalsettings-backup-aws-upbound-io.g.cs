@@ -250,3 +250,29 @@ public partial class V1beta1GlobalSettings : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1GlobalSettingsStatus? Status { get; set; }
 }
+
+/// <summary>GlobalSettings is the Schema for the GlobalSettingss API. Provides an AWS Backup Global Settings resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GlobalSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalSettings>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GlobalSettingsList";
+    public const string KubeGroup = "backup.aws.upbound.io";
+    public const string KubePluralName = "globalsettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GlobalSettings> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceAttachmentSpec
+public partial class ApigeeInstanceAttachmentMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeInstanceAttachmentSpec
 {
     /// <summary>Immutable. The resource ID of the environment.</summary>
     [JsonPropertyName("environment")]
@@ -27,7 +33,7 @@ public partial class V1alpha1ApigeeInstanceAttachmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceAttachmentStatusConditions
+public partial class ApigeeInstanceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -52,11 +58,11 @@ public partial class V1alpha1ApigeeInstanceAttachmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceAttachmentStatus
+public partial class ApigeeInstanceAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ApigeeInstanceAttachmentStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeInstanceAttachmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>The name of the newly created  attachment (output parameter).</summary>
     [JsonPropertyName("name")]
@@ -69,30 +75,25 @@ public partial class V1alpha1ApigeeInstanceAttachmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ApigeeInstanceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeInstanceAttachmentSpec>, IStatus<V1alpha1ApigeeInstanceAttachmentStatus>
+public partial class ApigeeInstanceAttachment
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ApigeeInstanceAttachment";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeinstanceattachments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeInstanceAttachmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ApigeeInstanceAttachmentSpec Spec { get; set; }
+    public ApigeeInstanceAttachmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ApigeeInstanceAttachmentStatus? Status { get; set; }
+    public ApigeeInstanceAttachmentStatus? Status { get; set; }
 }

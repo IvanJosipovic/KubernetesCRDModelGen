@@ -143,3 +143,29 @@ public partial class V1beta1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1KMSAutokeyConfigStatus? Status { get; set; }
 }
+
+/// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KMSAutokeyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KMSAutokeyConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KMSAutokeyConfigList";
+    public const string KubeGroup = "kms.cnrm.cloud.google.com";
+    public const string KubePluralName = "kmsautokeyconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KMSAutokeyConfig> Items { get; set; }
+}

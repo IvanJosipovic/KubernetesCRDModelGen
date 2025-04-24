@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeEnvironmentMetadata
+{
+}
+
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef
+public partial class ApigeeEnvironmentSpecApigeeOrganizationRef
 {
     /// <summary>The apigee organization for the resource  Allowed value: The Google Cloud resource name of an `ApigeeOrganization` resource (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,11 +33,11 @@ public partial class V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeEnvironmentSpec
+public partial class ApigeeEnvironmentSpec
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("apigeeOrganizationRef")]
-    public V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef ApigeeOrganizationRef { get; set; }
+    public ApigeeEnvironmentSpecApigeeOrganizationRef ApigeeOrganizationRef { get; set; }
 
     /// <summary>Optional. Description of the environment.</summary>
     [JsonPropertyName("description")]
@@ -52,7 +58,7 @@ public partial class V1beta1ApigeeEnvironmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeEnvironmentStatusConditions
+public partial class ApigeeEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,11 +83,11 @@ public partial class V1beta1ApigeeEnvironmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ApigeeEnvironmentStatus
+public partial class ApigeeEnvironmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ApigeeEnvironmentStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeEnvironmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Creation time of this environment as milliseconds since epoch.</summary>
     [JsonPropertyName("createdAt")]
@@ -102,30 +108,25 @@ public partial class V1beta1ApigeeEnvironmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApigeeEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeEnvironmentSpec>, IStatus<V1beta1ApigeeEnvironmentStatus>
+public partial class ApigeeEnvironment
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApigeeEnvironment";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeenvironments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeEnvironmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ApigeeEnvironmentSpec Spec { get; set; }
+    public ApigeeEnvironmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ApigeeEnvironmentStatus? Status { get; set; }
+    public ApigeeEnvironmentStatus? Status { get; set; }
 }

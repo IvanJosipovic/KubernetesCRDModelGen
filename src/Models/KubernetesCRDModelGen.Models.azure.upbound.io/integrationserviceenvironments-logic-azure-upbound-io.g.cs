@@ -510,3 +510,29 @@ public partial class V1beta1IntegrationServiceEnvironment : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1beta1IntegrationServiceEnvironmentStatus? Status { get; set; }
 }
+
+/// <summary>IntegrationServiceEnvironment is the Schema for the IntegrationServiceEnvironments API. Manages private and isolated Logic App instances within an Azure virtual network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IntegrationServiceEnvironmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IntegrationServiceEnvironment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IntegrationServiceEnvironmentList";
+    public const string KubeGroup = "logic.azure.upbound.io";
+    public const string KubePluralName = "integrationserviceenvironments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IntegrationServiceEnvironment> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeInterconnectAttachmentMetadata
+{
+}
+
 /// <summary>Immutable. The addresses that have been reserved for the interconnect attachment. Used only for interconnect attachment that has the encryption option as IPSEC.  The addresses must be RFC 1918 IP address ranges. When creating HA VPN gateway over the interconnect attachment, if the attachment is configured to use an RFC 1918 IP address, then the VPN gateway's IP address will be allocated from the IP address range specified here.  For example, if the HA VPN gateway's interface 0 is paired to this interconnect attachment, then an RFC 1918 IP address for the VPN gateway interface 0 will be allocated from the IP address specified for this interconnect attachment.  If this field is not specified for interconnect attachment that has encryption option as IPSEC, later on when creating HA VPN gateway on this interconnect attachment, the HA VPN gateway's IP address will be allocated from regional external IP address pool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentSpecIpsecInternalAddresses
+public partial class ComputeInterconnectAttachmentSpecIpsecInternalAddresses
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpecIpsecInternalAddres
 
 /// <summary>The Cloud Router to be used for dynamic routing. This router must be in the same region as this ComputeInterconnectAttachment. The ComputeInterconnectAttachment will automatically connect the interconnect to the network &amp; region within which the Cloud Router is configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentSpecRouterRef
+public partial class ComputeInterconnectAttachmentSpecRouterRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeRouter` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpecRouterRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentSpec
+public partial class ComputeInterconnectAttachmentSpec
 {
     /// <summary>Whether the VLAN attachment is enabled or disabled.  When using PARTNER type this will Pre-Activate the interconnect attachment.</summary>
     [JsonPropertyName("adminEnabled")]
@@ -76,7 +82,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpec
 
     /// <summary></summary>
     [JsonPropertyName("ipsecInternalAddresses")]
-    public IList<V1beta1ComputeInterconnectAttachmentSpecIpsecInternalAddresses>? IpsecInternalAddresses { get; set; }
+    public IList<ComputeInterconnectAttachmentSpecIpsecInternalAddresses>? IpsecInternalAddresses { get; set; }
 
     /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.</summary>
     [JsonPropertyName("mtu")]
@@ -92,7 +98,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpec
 
     /// <summary>The Cloud Router to be used for dynamic routing. This router must be in the same region as this ComputeInterconnectAttachment. The ComputeInterconnectAttachment will automatically connect the interconnect to the network &amp; region within which the Cloud Router is configured.</summary>
     [JsonPropertyName("routerRef")]
-    public V1beta1ComputeInterconnectAttachmentSpecRouterRef RouterRef { get; set; }
+    public ComputeInterconnectAttachmentSpecRouterRef RouterRef { get; set; }
 
     /// <summary>Immutable. The type of InterconnectAttachment you wish to create. Defaults to DEDICATED. Possible values: ["DEDICATED", "PARTNER", "PARTNER_PROVIDER"].</summary>
     [JsonPropertyName("type")]
@@ -105,7 +111,7 @@ public partial class V1beta1ComputeInterconnectAttachmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentStatusConditions
+public partial class ComputeInterconnectAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -130,7 +136,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatusConditions
 
 /// <summary>Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentStatusPrivateInterconnectInfo
+public partial class ComputeInterconnectAttachmentStatusPrivateInterconnectInfo
 {
     /// <summary>802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.</summary>
     [JsonPropertyName("tag8021q")]
@@ -139,7 +145,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatusPrivateInterconne
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeInterconnectAttachmentStatus
+public partial class ComputeInterconnectAttachmentStatus
 {
     /// <summary>IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.</summary>
     [JsonPropertyName("cloudRouterIpAddress")]
@@ -147,7 +153,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeInterconnectAttachmentStatusConditions>? Conditions { get; set; }
+    public IList<ComputeInterconnectAttachmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -175,7 +181,7 @@ public partial class V1beta1ComputeInterconnectAttachmentStatus
 
     /// <summary>Information specific to an InterconnectAttachment. This property is populated if the interconnect that this is attached to is of type DEDICATED.</summary>
     [JsonPropertyName("privateInterconnectInfo")]
-    public V1beta1ComputeInterconnectAttachmentStatusPrivateInterconnectInfo? PrivateInterconnectInfo { get; set; }
+    public ComputeInterconnectAttachmentStatusPrivateInterconnectInfo? PrivateInterconnectInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("selfLink")]
@@ -188,30 +194,25 @@ public partial class V1beta1ComputeInterconnectAttachmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeInterconnectAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInterconnectAttachmentSpec>, IStatus<V1beta1ComputeInterconnectAttachmentStatus>
+public partial class ComputeInterconnectAttachment
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeInterconnectAttachment";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeinterconnectattachments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeInterconnectAttachmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeInterconnectAttachmentSpec Spec { get; set; }
+    public ComputeInterconnectAttachmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeInterconnectAttachmentStatus? Status { get; set; }
+    public ComputeInterconnectAttachmentStatus? Status { get; set; }
 }

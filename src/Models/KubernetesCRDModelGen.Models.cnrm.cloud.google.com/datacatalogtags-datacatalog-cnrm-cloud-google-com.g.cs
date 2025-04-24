@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagSpecFields
+public partial class DataCatalogTagMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataCatalogTagSpecFields
 {
     /// <summary>Holds the value for a tag field with boolean type.</summary>
     [JsonPropertyName("boolValue")]
@@ -47,7 +53,7 @@ public partial class V1alpha1DataCatalogTagSpecFields
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagSpec
+public partial class DataCatalogTagSpec
 {
     /// <summary>Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an individual column based on that schema.  For attaching a tag to a nested column, use '.' to separate the column names. Example: 'outer_column.inner_column'.</summary>
     [JsonPropertyName("column")]
@@ -55,7 +61,7 @@ public partial class V1alpha1DataCatalogTagSpec
 
     /// <summary>This maps the ID of a tag field to the value of and additional information about that field. Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.</summary>
     [JsonPropertyName("fields")]
-    public IList<V1alpha1DataCatalogTagSpecFields> Fields { get; set; }
+    public IList<DataCatalogTagSpecFields> Fields { get; set; }
 
     /// <summary>Immutable. The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to all entries in that group.</summary>
     [JsonPropertyName("parent")]
@@ -72,7 +78,7 @@ public partial class V1alpha1DataCatalogTagSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagStatusConditions
+public partial class DataCatalogTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -97,11 +103,11 @@ public partial class V1alpha1DataCatalogTagStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagStatus
+public partial class DataCatalogTagStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DataCatalogTagStatusConditions>? Conditions { get; set; }
+    public IList<DataCatalogTagStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of the tag in URL format. Example: projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated identifier. Note that this Tag may not actually be stored in the location in this name.</summary>
     [JsonPropertyName("name")]
@@ -118,30 +124,25 @@ public partial class V1alpha1DataCatalogTagStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataCatalogTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogTagSpec>, IStatus<V1alpha1DataCatalogTagStatus>
+public partial class DataCatalogTag
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataCatalogTag";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogtags";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataCatalogTagMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DataCatalogTagSpec Spec { get; set; }
+    public DataCatalogTagSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DataCatalogTagStatus? Status { get; set; }
+    public DataCatalogTagStatus? Status { get; set; }
 }

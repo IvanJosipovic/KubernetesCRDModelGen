@@ -301,3 +301,29 @@ public partial class V1beta1AgentPool : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1AgentPoolStatus? Status { get; set; }
 }
+
+/// <summary>AgentPool is the Schema for the AgentPools API. Represents an On-Premises Agent pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AgentPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AgentPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AgentPoolList";
+    public const string KubeGroup = "storagetransfer.gcp.upbound.io";
+    public const string KubePluralName = "agentpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AgentPool> Items { get; set; }
+}

@@ -658,3 +658,29 @@ public partial class V1beta2Attachment : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta2AttachmentStatus? Status { get; set; }
 }
+
+/// <summary>Attachment is the Schema for the Attachments API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2AttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta2Attachment>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "AttachmentList";
+    public const string KubeGroup = "autoscaling.aws.upbound.io";
+    public const string KubePluralName = "attachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2Attachment> Items { get; set; }
+}

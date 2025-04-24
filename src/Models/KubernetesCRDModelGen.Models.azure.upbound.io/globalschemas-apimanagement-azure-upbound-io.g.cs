@@ -414,3 +414,29 @@ public partial class V1beta1GlobalSchema : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1beta1GlobalSchemaStatus? Status { get; set; }
 }
+
+/// <summary>GlobalSchema is the Schema for the GlobalSchemas API. Manages a Global Schema within an API Management Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GlobalSchemaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalSchema>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GlobalSchemaList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "globalschemas";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GlobalSchema> Items { get; set; }
+}

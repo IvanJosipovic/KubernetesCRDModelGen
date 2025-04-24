@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecManagedZoneRef
+public partial class DNSRecordSetMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DNSRecordSetSpecManagedZoneRef
 {
     /// <summary>Allowed value: The `name` field of a `DNSManagedZone` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1DNSRecordSetSpecManagedZoneRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -78,7 +84,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -95,11 +101,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
     [JsonPropertyName("ipAddressRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
 
     /// <summary>The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"].</summary>
     [JsonPropertyName("ipProtocol")]
@@ -111,7 +117,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
 
     /// <summary>The configured port of the load balancer.</summary>
     [JsonPropertyName("port")]
@@ -119,25 +125,25 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("regionRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
 /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
+public partial class DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
     [JsonPropertyName("internalLoadBalancers")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
+public partial class DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -158,11 +164,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
+public partial class DNSRecordSetSpecRoutingPolicyGeo
 {
     /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
     [JsonPropertyName("healthCheckedTargets")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets? HealthCheckedTargets { get; set; }
+    public DNSRecordSetSpecRoutingPolicyGeoHealthCheckedTargets? HealthCheckedTargets { get; set; }
 
     /// <summary>The location name defined in Google Cloud.</summary>
     [JsonPropertyName("location")]
@@ -170,12 +176,12 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyGeo
 
     /// <summary></summary>
     [JsonPropertyName("rrdatasRefs")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs>? RrdatasRefs { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -192,7 +198,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -209,7 +215,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -226,7 +232,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -243,11 +249,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
     [JsonPropertyName("ipAddressRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
 
     /// <summary>The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"].</summary>
     [JsonPropertyName("ipProtocol")]
@@ -259,7 +265,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
 
     /// <summary>The configured port of the load balancer.</summary>
     [JsonPropertyName("port")]
@@ -267,25 +273,25 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoH
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("regionRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
 /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
     [JsonPropertyName("internalLoadBalancers")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -302,11 +308,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
 {
     /// <summary>For A and AAAA types only. The list of targets to be health checked. These can be specified along with `rrdatas` within this item.</summary>
     [JsonPropertyName("healthCheckedTargets")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets? HealthCheckedTargets { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets? HealthCheckedTargets { get; set; }
 
     /// <summary>The location name defined in Google Cloud.</summary>
     [JsonPropertyName("location")]
@@ -314,12 +320,12 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo
 
     /// <summary></summary>
     [JsonPropertyName("rrdatasRefs")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs>? RrdatasRefs { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeoRrdatasRefs>? RrdatasRefs { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -336,7 +342,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -353,7 +359,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -370,7 +376,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -387,11 +393,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers
 {
     /// <summary></summary>
     [JsonPropertyName("ipAddressRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
 
     /// <summary>The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"].</summary>
     [JsonPropertyName("ipProtocol")]
@@ -403,7 +409,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef NetworkRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersNetworkRef NetworkRef { get; set; }
 
     /// <summary>The configured port of the load balancer.</summary>
     [JsonPropertyName("port")]
@@ -411,29 +417,29 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInt
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef ProjectRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersProjectRef ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("regionRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef? RegionRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
 /// <summary>The list of global primary targets to be health checked.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary
 {
     /// <summary>The list of internal load balancers to health check.</summary>
     [JsonPropertyName("internalLoadBalancers")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers> InternalLoadBalancers { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
 /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
+public partial class DNSRecordSetSpecRoutingPolicyPrimaryBackup
 {
     /// <summary>The backup geo targets, which provide a regional failover policy for the otherwise global primary targets.</summary>
     [JsonPropertyName("backupGeo")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo> BackupGeo { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyPrimaryBackupBackupGeo> BackupGeo { get; set; }
 
     /// <summary>Specifies whether to enable fencing for backup geo queries.</summary>
     [JsonPropertyName("enableGeoFencingForBackups")]
@@ -441,7 +447,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
 
     /// <summary>The list of global primary targets to be health checked.</summary>
     [JsonPropertyName("primary")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary Primary { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackupPrimary Primary { get; set; }
 
     /// <summary>Specifies the percentage of traffic to send to the backup targets even when the primary targets are healthy.</summary>
     [JsonPropertyName("trickleRatio")]
@@ -450,7 +456,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -467,7 +473,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -484,7 +490,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -501,7 +507,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef
 {
     /// <summary>Allowed value: The `location` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -518,11 +524,11 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers
 {
     /// <summary></summary>
     [JsonPropertyName("ipAddressRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersIpAddressRef IpAddressRef { get; set; }
 
     /// <summary>The configured IP protocol of the load balancer. This value is case-sensitive. Possible values: ["tcp", "udp"].</summary>
     [JsonPropertyName("ipProtocol")]
@@ -534,7 +540,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersNetworkRef NetworkRef { get; set; }
 
     /// <summary>The configured port of the load balancer.</summary>
     [JsonPropertyName("port")]
@@ -542,25 +548,25 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersProjectRef ProjectRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("regionRef")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
+    public DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancersRegionRef? RegionRef { get; set; }
 }
 
 /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
+public partial class DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets
 {
     /// <summary>The list of internal load balancers to health check.</summary>
     [JsonPropertyName("internalLoadBalancers")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers> InternalLoadBalancers { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
+public partial class DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -581,15 +587,15 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
+public partial class DNSRecordSetSpecRoutingPolicyWrr
 {
     /// <summary>The list of targets to be health checked. Note that if DNSSEC is enabled for this zone, only one of `rrdatas` or `health_checked_targets` can be set.</summary>
     [JsonPropertyName("healthCheckedTargets")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets? HealthCheckedTargets { get; set; }
+    public DNSRecordSetSpecRoutingPolicyWrrHealthCheckedTargets? HealthCheckedTargets { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("rrdatasRefs")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs>? RrdatasRefs { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyWrrRrdatasRefs>? RrdatasRefs { get; set; }
 
     /// <summary>The ratio of traffic routed to the target.</summary>
     [JsonPropertyName("weight")]
@@ -598,7 +604,7 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicyWrr
 
 /// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRoutingPolicy
+public partial class DNSRecordSetSpecRoutingPolicy
 {
     /// <summary>Specifies whether to enable fencing for geo queries.</summary>
     [JsonPropertyName("enableGeoFencing")]
@@ -606,20 +612,20 @@ public partial class V1beta1DNSRecordSetSpecRoutingPolicy
 
     /// <summary>The configuration for Geo location based routing policy.</summary>
     [JsonPropertyName("geo")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyGeo>? Geo { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyGeo>? Geo { get; set; }
 
     /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.</summary>
     [JsonPropertyName("primaryBackup")]
-    public V1beta1DNSRecordSetSpecRoutingPolicyPrimaryBackup? PrimaryBackup { get; set; }
+    public DNSRecordSetSpecRoutingPolicyPrimaryBackup? PrimaryBackup { get; set; }
 
     /// <summary>The configuration for Weighted Round Robin based routing policy.</summary>
     [JsonPropertyName("wrr")]
-    public IList<V1beta1DNSRecordSetSpecRoutingPolicyWrr>? Wrr { get; set; }
+    public IList<DNSRecordSetSpecRoutingPolicyWrr>? Wrr { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpecRrdatasRefs
+public partial class DNSRecordSetSpecRrdatasRefs
 {
     /// <summary>Allowed value: The `address` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -640,11 +646,11 @@ public partial class V1beta1DNSRecordSetSpecRrdatasRefs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetSpec
+public partial class DNSRecordSetSpec
 {
     /// <summary></summary>
     [JsonPropertyName("managedZoneRef")]
-    public V1beta1DNSRecordSetSpecManagedZoneRef ManagedZoneRef { get; set; }
+    public DNSRecordSetSpecManagedZoneRef ManagedZoneRef { get; set; }
 
     /// <summary>Immutable. The DNS name this record set will apply to.</summary>
     [JsonPropertyName("name")]
@@ -652,7 +658,7 @@ public partial class V1beta1DNSRecordSetSpec
 
     /// <summary>The configuration for steering traffic based on query. You can specify either Weighted Round Robin(WRR) type or Geolocation(GEO) type.</summary>
     [JsonPropertyName("routingPolicy")]
-    public V1beta1DNSRecordSetSpecRoutingPolicy? RoutingPolicy { get; set; }
+    public DNSRecordSetSpecRoutingPolicy? RoutingPolicy { get; set; }
 
     /// <summary>DEPRECATED. Although this field is still available, there is limited support. We recommend that you use `spec.rrdatasRefs` instead.</summary>
     [JsonPropertyName("rrdatas")]
@@ -660,7 +666,7 @@ public partial class V1beta1DNSRecordSetSpec
 
     /// <summary></summary>
     [JsonPropertyName("rrdatasRefs")]
-    public IList<V1beta1DNSRecordSetSpecRrdatasRefs>? RrdatasRefs { get; set; }
+    public IList<DNSRecordSetSpecRrdatasRefs>? RrdatasRefs { get; set; }
 
     /// <summary>The time-to-live of this record set (seconds).</summary>
     [JsonPropertyName("ttl")]
@@ -673,7 +679,7 @@ public partial class V1beta1DNSRecordSetSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetStatusConditions
+public partial class DNSRecordSetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -698,11 +704,11 @@ public partial class V1beta1DNSRecordSetStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DNSRecordSetStatus
+public partial class DNSRecordSetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1DNSRecordSetStatusConditions>? Conditions { get; set; }
+    public IList<DNSRecordSetStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -711,30 +717,25 @@ public partial class V1beta1DNSRecordSetStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DNSRecordSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DNSRecordSetSpec>, IStatus<V1beta1DNSRecordSetStatus>
+public partial class DNSRecordSet
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DNSRecordSet";
-    public const string KubeGroup = "dns.cnrm.cloud.google.com";
-    public const string KubePluralName = "dnsrecordsets";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DNSRecordSetMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1DNSRecordSetSpec Spec { get; set; }
+    public DNSRecordSetSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1DNSRecordSetStatus? Status { get; set; }
+    public DNSRecordSetStatus? Status { get; set; }
 }

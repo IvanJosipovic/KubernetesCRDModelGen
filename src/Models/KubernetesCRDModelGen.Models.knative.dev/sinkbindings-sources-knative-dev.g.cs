@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecCeOverrides
+public partial class SinkBindingSpecCeOverrides
 {
     /// <summary>Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.</summary>
     [JsonPropertyName("extensions")]
@@ -19,7 +19,7 @@ public partial class V1SinkBindingSpecCeOverrides
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecSinkRef
+public partial class SinkBindingSpecSinkRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -40,11 +40,11 @@ public partial class V1SinkBindingSpecSinkRef
 
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecSink
+public partial class SinkBindingSpecSink
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1SinkBindingSpecSinkRef? Ref { get; set; }
+    public SinkBindingSpecSinkRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -61,7 +61,7 @@ public partial class V1SinkBindingSpecSink
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecSubjectSelectorMatchExpressions
+public partial class SinkBindingSpecSubjectSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -78,11 +78,11 @@ public partial class V1SinkBindingSpecSubjectSelectorMatchExpressions
 
 /// <summary>Selector of the referents. Mutually exclusive with Name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecSubjectSelector
+public partial class SinkBindingSpecSubjectSelector
 {
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<V1SinkBindingSpecSubjectSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<SinkBindingSpecSubjectSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -91,7 +91,7 @@ public partial class V1SinkBindingSpecSubjectSelector
 
 /// <summary>Subject references the resource(s) whose "runtime contract" should be augmented by Binding implementations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpecSubject
+public partial class SinkBindingSpecSubject
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -111,29 +111,29 @@ public partial class V1SinkBindingSpecSubject
 
     /// <summary>Selector of the referents. Mutually exclusive with Name.</summary>
     [JsonPropertyName("selector")]
-    public V1SinkBindingSpecSubjectSelector? Selector { get; set; }
+    public SinkBindingSpecSubjectSelector? Selector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingSpec
+public partial class SinkBindingSpec
 {
     /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
     [JsonPropertyName("ceOverrides")]
-    public V1SinkBindingSpecCeOverrides? CeOverrides { get; set; }
+    public SinkBindingSpecCeOverrides? CeOverrides { get; set; }
 
     /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
     [JsonPropertyName("sink")]
-    public V1SinkBindingSpecSink? Sink { get; set; }
+    public SinkBindingSpecSink? Sink { get; set; }
 
     /// <summary>Subject references the resource(s) whose "runtime contract" should be augmented by Binding implementations.</summary>
     [JsonPropertyName("subject")]
-    public V1SinkBindingSpecSubject? Subject { get; set; }
+    public SinkBindingSpecSubject? Subject { get; set; }
 }
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingStatusAuth
+public partial class SinkBindingStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -146,7 +146,7 @@ public partial class V1SinkBindingStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingStatusCeAttributes
+public partial class SinkBindingStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
     [JsonPropertyName("source")]
@@ -159,7 +159,7 @@ public partial class V1SinkBindingStatusCeAttributes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingStatusConditions
+public partial class SinkBindingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -188,7 +188,7 @@ public partial class V1SinkBindingStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1SinkBindingStatus
+public partial class SinkBindingStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -196,15 +196,15 @@ public partial class V1SinkBindingStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1SinkBindingStatusAuth? Auth { get; set; }
+    public SinkBindingStatusAuth? Auth { get; set; }
 
     /// <summary>CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.</summary>
     [JsonPropertyName("ceAttributes")]
-    public IList<V1SinkBindingStatusCeAttributes>? CeAttributes { get; set; }
+    public IList<SinkBindingStatusCeAttributes>? CeAttributes { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1SinkBindingStatusConditions>? Conditions { get; set; }
+    public IList<SinkBindingStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -229,30 +229,13 @@ public partial class V1SinkBindingStatus
 
 /// <summary>SinkBinding describes a Binding that is also a Source. The `sink` (from the Source duck) is resolved to a URL and then projected into the `subject` by augmenting the runtime contract of the referenced containers to have a `K_SINK` environment variable holding the endpoint to which to send cloud events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1SinkBinding : IKubernetesObject<V1ObjectMeta>, ISpec<V1SinkBindingSpec>, IStatus<V1SinkBindingStatus>
+public partial class SinkBinding
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "SinkBinding";
-    public const string KubeGroup = "sources.knative.dev";
-    public const string KubePluralName = "sinkbindings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1SinkBindingSpec? Spec { get; set; }
+    public SinkBindingSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1SinkBindingStatus? Status { get; set; }
+    public SinkBindingStatus? Status { get; set; }
 }

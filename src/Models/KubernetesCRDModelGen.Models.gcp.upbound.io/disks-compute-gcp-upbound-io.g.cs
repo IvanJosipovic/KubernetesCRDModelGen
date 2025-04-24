@@ -949,3 +949,29 @@ public partial class V1beta1Disk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1DiskStatus? Status { get; set; }
 }
+
+/// <summary>Disk is the Schema for the Disks API. Persistent disks are durable storage devices that function similarly to the physical disks in a desktop or a server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Disk>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DiskList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "disks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Disk> Items { get; set; }
+}

@@ -633,3 +633,29 @@ public partial class V1beta1Grant : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1GrantStatus? Status { get; set; }
 }
+
+/// <summary>Grant is the Schema for the Grants API. Provides a resource-based access control mechanism for KMS Customer Master Keys.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GrantList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Grant>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GrantList";
+    public const string KubeGroup = "kms.aws.upbound.io";
+    public const string KubePluralName = "grants";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Grant> Items { get; set; }
+}

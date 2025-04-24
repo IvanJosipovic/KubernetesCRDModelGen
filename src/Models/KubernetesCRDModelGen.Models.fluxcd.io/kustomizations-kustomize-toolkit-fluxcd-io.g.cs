@@ -456,3 +456,29 @@ public partial class V1Kustomization : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1KustomizationStatus? Status { get; set; }
 }
+
+/// <summary>Kustomization is the Schema for the kustomizations API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1KustomizationList : IKubernetesObject<V1ListMeta>, IItems<V1Kustomization>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "KustomizationList";
+    public const string KubeGroup = "kustomize.toolkit.fluxcd.io";
+    public const string KubePluralName = "kustomizations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Kustomization> Items { get; set; }
+}

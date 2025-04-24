@@ -741,3 +741,29 @@ public partial class V1Composition : IKubernetesObject<V1ObjectMeta>, ISpec<V1Co
     [JsonPropertyName("spec")]
     public V1CompositionSpec? Spec { get; set; }
 }
+
+/// <summary>A Composition defines a collection of managed resources or functions that Crossplane uses to create and manage new composite resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CompositionList : IKubernetesObject<V1ListMeta>, IItems<V1Composition>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CompositionList";
+    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubePluralName = "compositions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Composition> Items { get; set; }
+}

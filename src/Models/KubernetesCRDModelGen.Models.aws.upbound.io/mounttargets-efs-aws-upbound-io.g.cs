@@ -698,3 +698,29 @@ public partial class V1beta1MountTarget : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1MountTargetStatus? Status { get; set; }
 }
+
+/// <summary>MountTarget is the Schema for the MountTargets API. Provides an Elastic File System (EFS) mount target.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MountTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MountTarget>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MountTargetList";
+    public const string KubeGroup = "efs.aws.upbound.io";
+    public const string KubePluralName = "mounttargets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MountTarget> Items { get; set; }
+}

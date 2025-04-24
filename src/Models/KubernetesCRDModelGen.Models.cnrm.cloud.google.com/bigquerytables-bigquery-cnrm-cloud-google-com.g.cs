@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecDatasetRef
+public partial class BigQueryTableMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BigQueryTableSpecDatasetRef
 {
     /// <summary>Allowed value: The `name` field of a `BigQueryDataset` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1BigQueryTableSpecDatasetRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
+public partial class BigQueryTableSpecEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,11 +50,11 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef
 
 /// <summary>Immutable. Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
+public partial class BigQueryTableSpecEncryptionConfiguration
 {
     /// <summary></summary>
     [JsonPropertyName("kmsKeyRef")]
-    public V1beta1BigQueryTableSpecEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
+    public BigQueryTableSpecEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
 
     /// <summary>The self link or full name of the kms key version used to encrypt this table.</summary>
     [JsonPropertyName("kmsKeyVersion")]
@@ -57,7 +63,7 @@ public partial class V1beta1BigQueryTableSpecEncryptionConfiguration
 
 /// <summary>Additional options if source_format is set to "AVRO".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOptions
+public partial class BigQueryTableSpecExternalDataConfigurationAvroOptions
 {
     /// <summary>If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).</summary>
     [JsonPropertyName("useAvroLogicalTypes")]
@@ -66,7 +72,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationAvroOption
 
 /// <summary>Additional properties to set if source_format is set to "CSV".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
+public partial class BigQueryTableSpecExternalDataConfigurationCsvOptions
 {
     /// <summary>Indicates if BigQuery should accept rows that are missing trailing optional columns.</summary>
     [JsonPropertyName("allowJaggedRows")]
@@ -95,7 +101,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions
 
 /// <summary>Additional options if source_format is set to "GOOGLE_SHEETS".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions
+public partial class BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions
 {
     /// <summary>Range of a sheet to query from. Only used when non-empty. At least one of range or skip_leading_rows must be set. Typical format: "sheet_name!top_left_cell_id:bottom_right_cell_id" For example: "sheet1!A1:B20".</summary>
     [JsonPropertyName("range")]
@@ -108,7 +114,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationGoogleShee
 
 /// <summary>When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions
+public partial class BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions
 {
     /// <summary>When set, what mode of hive partitioning to use when reading data.</summary>
     [JsonPropertyName("mode")]
@@ -125,7 +131,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationHivePartit
 
 /// <summary>Additional properties to set if sourceFormat is set to JSON.".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOptions
+public partial class BigQueryTableSpecExternalDataConfigurationJsonOptions
 {
     /// <summary>The character encoding of the data. The supported values are UTF-8, UTF-16BE, UTF-16LE, UTF-32BE, and UTF-32LE. The default value is UTF-8.</summary>
     [JsonPropertyName("encoding")]
@@ -134,7 +140,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationJsonOption
 
 /// <summary>Additional properties to set if sourceFormat is set to PARQUET.".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOptions
+public partial class BigQueryTableSpecExternalDataConfigurationParquetOptions
 {
     /// <summary>Indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
     [JsonPropertyName("enableListInference")]
@@ -147,7 +153,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfigurationParquetOpt
 
 /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
+public partial class BigQueryTableSpecExternalDataConfiguration
 {
     /// <summary>Let BigQuery try to autodetect the schema and format of the table.</summary>
     [JsonPropertyName("autodetect")]
@@ -155,7 +161,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
     /// <summary>Additional options if source_format is set to "AVRO".</summary>
     [JsonPropertyName("avroOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationAvroOptions? AvroOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationAvroOptions? AvroOptions { get; set; }
 
     /// <summary>The compression type of the data source. Valid values are "NONE" or "GZIP".</summary>
     [JsonPropertyName("compression")]
@@ -167,7 +173,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
     /// <summary>Additional properties to set if source_format is set to "CSV".</summary>
     [JsonPropertyName("csvOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationCsvOptions? CsvOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationCsvOptions? CsvOptions { get; set; }
 
     /// <summary>Specifies how source URIs are interpreted for constructing the file set to load.  By default source URIs are expanded against the underlying storage.  Other options include specifying manifest files. Only applicable to object storage systems.</summary>
     [JsonPropertyName("fileSetSpecType")]
@@ -175,11 +181,11 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
     /// <summary>Additional options if source_format is set to "GOOGLE_SHEETS".</summary>
     [JsonPropertyName("googleSheetsOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions? GoogleSheetsOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationGoogleSheetsOptions? GoogleSheetsOptions { get; set; }
 
     /// <summary>When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification.</summary>
     [JsonPropertyName("hivePartitioningOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions? HivePartitioningOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationHivePartitioningOptions? HivePartitioningOptions { get; set; }
 
     /// <summary>Indicates if BigQuery should allow extra values that are not represented in the table schema. If true, the extra values are ignored. If false, records with extra columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false.</summary>
     [JsonPropertyName("ignoreUnknownValues")]
@@ -187,7 +193,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
     /// <summary>Additional properties to set if sourceFormat is set to JSON.".</summary>
     [JsonPropertyName("jsonOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationJsonOptions? JsonOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationJsonOptions? JsonOptions { get; set; }
 
     /// <summary>The maximum number of bad records that BigQuery can ignore when reading data.</summary>
     [JsonPropertyName("maxBadRecords")]
@@ -203,7 +209,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
     /// <summary>Additional properties to set if sourceFormat is set to PARQUET.".</summary>
     [JsonPropertyName("parquetOptions")]
-    public V1beta1BigQueryTableSpecExternalDataConfigurationParquetOptions? ParquetOptions { get; set; }
+    public BigQueryTableSpecExternalDataConfigurationParquetOptions? ParquetOptions { get; set; }
 
     /// <summary>When creating an external table, the user can provide a reference file with the table schema. This is enabled for the following formats: AVRO, PARQUET, ORC.</summary>
     [JsonPropertyName("referenceFileSchemaUri")]
@@ -224,7 +230,7 @@ public partial class V1beta1BigQueryTableSpecExternalDataConfiguration
 
 /// <summary>If specified, configures this table as a materialized view.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecMaterializedView
+public partial class BigQueryTableSpecMaterializedView
 {
     /// <summary>Immutable. Allow non incremental materialized view definition. The default value is false.</summary>
     [JsonPropertyName("allowNonIncrementalDefinition")]
@@ -245,7 +251,7 @@ public partial class V1beta1BigQueryTableSpecMaterializedView
 
 /// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecRangePartitioningRange
+public partial class BigQueryTableSpecRangePartitioningRange
 {
     /// <summary>End of the range partitioning, exclusive.</summary>
     [JsonPropertyName("end")]
@@ -262,7 +268,7 @@ public partial class V1beta1BigQueryTableSpecRangePartitioningRange
 
 /// <summary>If specified, configures range-based partitioning for this table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecRangePartitioning
+public partial class BigQueryTableSpecRangePartitioning
 {
     /// <summary>Immutable. The field used to determine how to create a range-based partition.</summary>
     [JsonPropertyName("field")]
@@ -270,12 +276,12 @@ public partial class V1beta1BigQueryTableSpecRangePartitioning
 
     /// <summary>Information required to partition based on ranges. Structure is documented below.</summary>
     [JsonPropertyName("range")]
-    public V1beta1BigQueryTableSpecRangePartitioningRange Range { get; set; }
+    public BigQueryTableSpecRangePartitioningRange Range { get; set; }
 }
 
 /// <summary>The pair of the foreign key column and primary key column.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnReferences
+public partial class BigQueryTableSpecTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>The column in the primary key that are referenced by the referencingColumn.</summary>
     [JsonPropertyName("referencedColumn")]
@@ -288,7 +294,7 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnRe
 
 /// <summary>The table that holds the primary key and is referenced by this foreign key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable
+public partial class BigQueryTableSpecTableConstraintsForeignKeysReferencedTable
 {
     /// <summary>The ID of the dataset containing this table.</summary>
     [JsonPropertyName("datasetId")]
@@ -305,11 +311,11 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferenc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
+public partial class BigQueryTableSpecTableConstraintsForeignKeys
 {
     /// <summary>The pair of the foreign key column and primary key column.</summary>
     [JsonPropertyName("columnReferences")]
-    public V1beta1BigQueryTableSpecTableConstraintsForeignKeysColumnReferences ColumnReferences { get; set; }
+    public BigQueryTableSpecTableConstraintsForeignKeysColumnReferences ColumnReferences { get; set; }
 
     /// <summary>Set only if the foreign key constraint is named.</summary>
     [JsonPropertyName("name")]
@@ -317,12 +323,12 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsForeignKeys
 
     /// <summary>The table that holds the primary key and is referenced by this foreign key.</summary>
     [JsonPropertyName("referencedTable")]
-    public V1beta1BigQueryTableSpecTableConstraintsForeignKeysReferencedTable ReferencedTable { get; set; }
+    public BigQueryTableSpecTableConstraintsForeignKeysReferencedTable ReferencedTable { get; set; }
 }
 
 /// <summary>Represents a primary key constraint on a table's columns. Present only if the table has a primary key. The primary key is not enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
+public partial class BigQueryTableSpecTableConstraintsPrimaryKey
 {
     /// <summary>The columns that are composed of the primary key constraint.</summary>
     [JsonPropertyName("columns")]
@@ -331,20 +337,20 @@ public partial class V1beta1BigQueryTableSpecTableConstraintsPrimaryKey
 
 /// <summary>Defines the primary key and foreign keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTableConstraints
+public partial class BigQueryTableSpecTableConstraints
 {
     /// <summary>Present only if the table has a foreign key. The foreign key is not enforced.</summary>
     [JsonPropertyName("foreignKeys")]
-    public IList<V1beta1BigQueryTableSpecTableConstraintsForeignKeys>? ForeignKeys { get; set; }
+    public IList<BigQueryTableSpecTableConstraintsForeignKeys>? ForeignKeys { get; set; }
 
     /// <summary>Represents a primary key constraint on a table's columns. Present only if the table has a primary key. The primary key is not enforced.</summary>
     [JsonPropertyName("primaryKey")]
-    public V1beta1BigQueryTableSpecTableConstraintsPrimaryKey? PrimaryKey { get; set; }
+    public BigQueryTableSpecTableConstraintsPrimaryKey? PrimaryKey { get; set; }
 }
 
 /// <summary>If specified, configures time-based partitioning for this table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecTimePartitioning
+public partial class BigQueryTableSpecTimePartitioning
 {
     /// <summary>Number of milliseconds for which to keep the storage for a partition.</summary>
     [JsonPropertyName("expirationMs")]
@@ -365,7 +371,7 @@ public partial class V1beta1BigQueryTableSpecTimePartitioning
 
 /// <summary>If specified, configures this table as a view.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpecView
+public partial class BigQueryTableSpecView
 {
     /// <summary>A query that BigQuery executes when the view is referenced.</summary>
     [JsonPropertyName("query")]
@@ -378,7 +384,7 @@ public partial class V1beta1BigQueryTableSpecView
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableSpec
+public partial class BigQueryTableSpec
 {
     /// <summary>Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.</summary>
     [JsonPropertyName("clustering")]
@@ -386,7 +392,7 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary></summary>
     [JsonPropertyName("datasetRef")]
-    public V1beta1BigQueryTableSpecDatasetRef DatasetRef { get; set; }
+    public BigQueryTableSpecDatasetRef DatasetRef { get; set; }
 
     /// <summary>The field description.</summary>
     [JsonPropertyName("description")]
@@ -394,7 +400,7 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary>Immutable. Specifies how the table should be encrypted. If left blank, the table will be encrypted with a Google-managed key; that process is transparent to the user.</summary>
     [JsonPropertyName("encryptionConfiguration")]
-    public V1beta1BigQueryTableSpecEncryptionConfiguration? EncryptionConfiguration { get; set; }
+    public BigQueryTableSpecEncryptionConfiguration? EncryptionConfiguration { get; set; }
 
     /// <summary>The time when this table expires, in milliseconds since the epoch. If not present, the table will persist indefinitely. Expired tables will be deleted and their storage reclaimed.</summary>
     [JsonPropertyName("expirationTime")]
@@ -402,7 +408,7 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.</summary>
     [JsonPropertyName("externalDataConfiguration")]
-    public V1beta1BigQueryTableSpecExternalDataConfiguration? ExternalDataConfiguration { get; set; }
+    public BigQueryTableSpecExternalDataConfiguration? ExternalDataConfiguration { get; set; }
 
     /// <summary>A descriptive name for the table.</summary>
     [JsonPropertyName("friendlyName")]
@@ -410,7 +416,7 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary>If specified, configures this table as a materialized view.</summary>
     [JsonPropertyName("materializedView")]
-    public V1beta1BigQueryTableSpecMaterializedView? MaterializedView { get; set; }
+    public BigQueryTableSpecMaterializedView? MaterializedView { get; set; }
 
     /// <summary>The maximum staleness of data that could be returned when the table (or stale MV) is queried. Staleness encoded as a string encoding of sql IntervalValue type.</summary>
     [JsonPropertyName("maxStaleness")]
@@ -418,7 +424,7 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary>If specified, configures range-based partitioning for this table.</summary>
     [JsonPropertyName("rangePartitioning")]
-    public V1beta1BigQueryTableSpecRangePartitioning? RangePartitioning { get; set; }
+    public BigQueryTableSpecRangePartitioning? RangePartitioning { get; set; }
 
     /// <summary>If set to true, queries over this table require a partition filter that can be used for partition elimination to be specified.</summary>
     [JsonPropertyName("requirePartitionFilter")]
@@ -434,20 +440,20 @@ public partial class V1beta1BigQueryTableSpec
 
     /// <summary>Defines the primary key and foreign keys.</summary>
     [JsonPropertyName("tableConstraints")]
-    public V1beta1BigQueryTableSpecTableConstraints? TableConstraints { get; set; }
+    public BigQueryTableSpecTableConstraints? TableConstraints { get; set; }
 
     /// <summary>If specified, configures time-based partitioning for this table.</summary>
     [JsonPropertyName("timePartitioning")]
-    public V1beta1BigQueryTableSpecTimePartitioning? TimePartitioning { get; set; }
+    public BigQueryTableSpecTimePartitioning? TimePartitioning { get; set; }
 
     /// <summary>If specified, configures this table as a view.</summary>
     [JsonPropertyName("view")]
-    public V1beta1BigQueryTableSpecView? View { get; set; }
+    public BigQueryTableSpecView? View { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableStatusConditions
+public partial class BigQueryTableStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -472,11 +478,11 @@ public partial class V1beta1BigQueryTableStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BigQueryTableStatus
+public partial class BigQueryTableStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1BigQueryTableStatusConditions>? Conditions { get; set; }
+    public IList<BigQueryTableStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when this table was created, in milliseconds since the epoch.</summary>
     [JsonPropertyName("creationTime")]
@@ -521,30 +527,25 @@ public partial class V1beta1BigQueryTableStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigQueryTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryTableSpec>, IStatus<V1beta1BigQueryTableStatus>
+public partial class BigQueryTable
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigQueryTable";
-    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigquerytables";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BigQueryTableMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1BigQueryTableSpec Spec { get; set; }
+    public BigQueryTableSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1BigQueryTableStatus? Status { get; set; }
+    public BigQueryTableStatus? Status { get; set; }
 }

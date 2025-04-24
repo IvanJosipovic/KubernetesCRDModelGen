@@ -433,3 +433,29 @@ public partial class V1beta1RouteTable : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RouteTableStatus? Status { get; set; }
 }
+
+/// <summary>RouteTable is the Schema for the RouteTables API. Manages a Route Table</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouteTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteTable>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouteTableList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "routetables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RouteTable> Items { get; set; }
+}

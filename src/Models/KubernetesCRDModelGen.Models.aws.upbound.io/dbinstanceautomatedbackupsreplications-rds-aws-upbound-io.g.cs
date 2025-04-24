@@ -542,3 +542,29 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplication : IKubernetesO
     [JsonPropertyName("status")]
     public V1beta1DBInstanceAutomatedBackupsReplicationStatus? Status { get; set; }
 }
+
+/// <summary>DBInstanceAutomatedBackupsReplication is the Schema for the DBInstanceAutomatedBackupsReplications API. Enables replication of automated backups to a different AWS Region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DBInstanceAutomatedBackupsReplicationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DBInstanceAutomatedBackupsReplication>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DBInstanceAutomatedBackupsReplicationList";
+    public const string KubeGroup = "rds.aws.upbound.io";
+    public const string KubePluralName = "dbinstanceautomatedbackupsreplications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DBInstanceAutomatedBackupsReplication> Items { get; set; }
+}

@@ -414,3 +414,29 @@ public partial class V1beta1NamespaceAuthorizationRule : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1NamespaceAuthorizationRuleStatus? Status { get; set; }
 }
+
+/// <summary>NamespaceAuthorizationRule is the Schema for the NamespaceAuthorizationRules API. Manages an Azure Relay Namespace Authorization Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NamespaceAuthorizationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NamespaceAuthorizationRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NamespaceAuthorizationRuleList";
+    public const string KubeGroup = "relay.azure.upbound.io";
+    public const string KubePluralName = "namespaceauthorizationrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NamespaceAuthorizationRule> Items { get; set; }
+}

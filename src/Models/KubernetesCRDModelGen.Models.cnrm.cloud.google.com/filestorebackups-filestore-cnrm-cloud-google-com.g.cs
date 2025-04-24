@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class FilestoreBackupMetadata
+{
+}
+
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreBackupSpecProjectRef
+public partial class FilestoreBackupSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1FilestoreBackupSpecProjectRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreBackupSpecSourceInstanceRef
+public partial class FilestoreBackupSpecSourceInstanceRef
 {
     /// <summary>The resource name of the source Cloud Filestore instance, in the format projects/{project_number}/locations/{location_id}/instances/{instance_id}, used to create this backup.  Allowed value: The Google Cloud resource name of a `FilestoreInstance` resource (format: `projects/{{project}}/locations/{{location}}/instances/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1FilestoreBackupSpecSourceInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreBackupSpec
+public partial class FilestoreBackupSpec
 {
     /// <summary>A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.</summary>
     [JsonPropertyName("description")]
@@ -56,7 +62,7 @@ public partial class V1beta1FilestoreBackupSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1FilestoreBackupSpecProjectRef ProjectRef { get; set; }
+    public FilestoreBackupSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -68,12 +74,12 @@ public partial class V1beta1FilestoreBackupSpec
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("sourceInstanceRef")]
-    public V1beta1FilestoreBackupSpecSourceInstanceRef SourceInstanceRef { get; set; }
+    public FilestoreBackupSpecSourceInstanceRef SourceInstanceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreBackupStatusConditions
+public partial class FilestoreBackupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -98,7 +104,7 @@ public partial class V1beta1FilestoreBackupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FilestoreBackupStatus
+public partial class FilestoreBackupStatus
 {
     /// <summary>Output only. Capacity of the source file share when the backup was created.</summary>
     [JsonPropertyName("capacityGb")]
@@ -106,7 +112,7 @@ public partial class V1beta1FilestoreBackupStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1FilestoreBackupStatusConditions>? Conditions { get; set; }
+    public IList<FilestoreBackupStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time when the backup was created.</summary>
     [JsonPropertyName("createTime")]
@@ -135,30 +141,25 @@ public partial class V1beta1FilestoreBackupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FilestoreBackup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FilestoreBackupSpec>, IStatus<V1beta1FilestoreBackupStatus>
+public partial class FilestoreBackup
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FilestoreBackup";
-    public const string KubeGroup = "filestore.cnrm.cloud.google.com";
-    public const string KubePluralName = "filestorebackups";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public FilestoreBackupMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1FilestoreBackupSpec Spec { get; set; }
+    public FilestoreBackupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1FilestoreBackupStatus? Status { get; set; }
+    public FilestoreBackupStatus? Status { get; set; }
 }

@@ -438,3 +438,29 @@ public partial class V1beta1SMSPreferences : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1SMSPreferencesStatus? Status { get; set; }
 }
+
+/// <summary>SMSPreferences is the Schema for the SMSPreferencess API. Provides a way to set SNS SMS preferences.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SMSPreferencesList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SMSPreferences>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SMSPreferencesList";
+    public const string KubeGroup = "sns.aws.upbound.io";
+    public const string KubePluralName = "smspreferences";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SMSPreferences> Items { get; set; }
+}

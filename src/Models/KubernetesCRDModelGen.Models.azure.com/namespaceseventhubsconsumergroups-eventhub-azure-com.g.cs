@@ -241,3 +241,29 @@ public partial class V1api20240101storageNamespacesEventhubsConsumerGroup : IKub
     [JsonPropertyName("status")]
     public V1api20240101storageNamespacesEventhubsConsumerGroupStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240101.NamespacesEventhubsConsumerGroup Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/consumergroups.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}/consumergroups/{consumerGroupName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240101storageNamespacesEventhubsConsumerGroupList : IKubernetesObject<V1ListMeta>, IItems<V1api20240101storageNamespacesEventhubsConsumerGroup>
+{
+    public const string KubeApiVersion = "v1api20240101storage";
+    public const string KubeKind = "NamespacesEventhubsConsumerGroupList";
+    public const string KubeGroup = "eventhub.azure.com";
+    public const string KubePluralName = "namespaceseventhubsconsumergroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240101storageNamespacesEventhubsConsumerGroup> Items { get; set; }
+}

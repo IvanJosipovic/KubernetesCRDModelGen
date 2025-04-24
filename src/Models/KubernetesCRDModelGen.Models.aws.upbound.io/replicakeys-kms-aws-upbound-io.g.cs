@@ -474,3 +474,29 @@ public partial class V1beta1ReplicaKey : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1ReplicaKeyStatus? Status { get; set; }
 }
+
+/// <summary>ReplicaKey is the Schema for the ReplicaKeys API. Manages a KMS multi-Region replica key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReplicaKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReplicaKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReplicaKeyList";
+    public const string KubeGroup = "kms.aws.upbound.io";
+    public const string KubePluralName = "replicakeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReplicaKey> Items { get; set; }
+}

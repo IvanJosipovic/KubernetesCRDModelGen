@@ -393,3 +393,29 @@ public partial class V1beta1ReferenceDataSet : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ReferenceDataSetStatus? Status { get; set; }
 }
+
+/// <summary>ReferenceDataSet is the Schema for the ReferenceDataSets API. Manages an Azure IoT Time Series Insights Reference Data Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReferenceDataSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReferenceDataSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReferenceDataSetList";
+    public const string KubeGroup = "timeseriesinsights.azure.upbound.io";
+    public const string KubePluralName = "referencedatasets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReferenceDataSet> Items { get; set; }
+}

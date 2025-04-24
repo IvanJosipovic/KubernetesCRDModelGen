@@ -363,3 +363,29 @@ public partial class V1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1Gatewa
     [JsonPropertyName("status")]
     public V1GatewayStatus? Status { get; set; }
 }
+
+/// <summary>Gateway represents an instance of a service-traffic handling infrastructure by binding Listeners to a set of IP addresses.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1Gateway>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "GatewayList";
+    public const string KubeGroup = "gateway.networking.k8s.io";
+    public const string KubePluralName = "gateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Gateway> Items { get; set; }
+}

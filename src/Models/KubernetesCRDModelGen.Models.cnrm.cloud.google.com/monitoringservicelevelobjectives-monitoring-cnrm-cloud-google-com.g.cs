@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MonitoringServiceLevelObjectiveMetadata
+{
+}
+
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecProjectRef
+public partial class MonitoringServiceLevelObjectiveSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecProjectRef
 
 /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliLatency
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
     [JsonPropertyName("experience")]
@@ -40,7 +46,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliOperationLatency
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliOperationLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
     [JsonPropertyName("experience")]
@@ -53,7 +59,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Basic SLI on a well-known service type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSli
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSli
 {
     /// <summary>Good service is defined to be the count of requests made to this service that return successfully.</summary>
     [JsonPropertyName("availability")]
@@ -61,7 +67,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
     [JsonPropertyName("latency")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliLatency? Latency { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliLatency? Latency { get; set; }
 
     /// <summary>OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.</summary>
     [JsonPropertyName("location")]
@@ -77,7 +83,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
     [JsonPropertyName("operationLatency")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliOperationLatency? OperationLatency { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSliOperationLatency? OperationLatency { get; set; }
 
     /// <summary>OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.</summary>
     [JsonPropertyName("version")]
@@ -86,7 +92,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCutRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCutRange
 {
     /// <summary>Range maximum.</summary>
     [JsonPropertyName("max")]
@@ -99,7 +105,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCut
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCut
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` aggregating values. Must have `ValueType = DISTRIBUTION` and `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
     [JsonPropertyName("distributionFilter")]
@@ -107,12 +113,12 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
     [JsonPropertyName("range")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCutRange? Range { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCutRange? Range { get; set; }
 }
 
 /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedGoodTotalRatio
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedGoodTotalRatio
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have `ValueType = DOUBLE` or `ValueType = INT64` and must have `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
     [JsonPropertyName("badServiceFilter")]
@@ -129,20 +135,20 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Request-based SLIs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBased
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBased
 {
     /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
     [JsonPropertyName("distributionCut")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCut? DistributionCut { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedDistributionCut? DistributionCut { get; set; }
 
     /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
     [JsonPropertyName("goodTotalRatio")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedGoodTotalRatio? GoodTotalRatio { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBasedGoodTotalRatio? GoodTotalRatio { get; set; }
 }
 
 /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceLatency
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
     [JsonPropertyName("experience")]
@@ -155,7 +161,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceOperationLatency
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceOperationLatency
 {
     /// <summary>A description of the experience associated with failing requests. Possible values: LATENCY_EXPERIENCE_UNSPECIFIED, DELIGHTING, SATISFYING, ANNOYING</summary>
     [JsonPropertyName("experience")]
@@ -168,7 +174,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>`BasicSli` to evaluate to judge window quality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformance
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformance
 {
     /// <summary>Good service is defined to be the count of requests made to this service that return successfully.</summary>
     [JsonPropertyName("availability")]
@@ -176,7 +182,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Good service is defined to be the count of requests made to this service that are fast enough with respect to `latency.threshold`.</summary>
     [JsonPropertyName("latency")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceLatency? Latency { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceLatency? Latency { get; set; }
 
     /// <summary>OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.</summary>
     [JsonPropertyName("location")]
@@ -192,7 +198,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Good service is defined to be the count of operations performed by this service that are fast enough with respect to `operation_latency.threshold`.</summary>
     [JsonPropertyName("operationLatency")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceOperationLatency? OperationLatency { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformanceOperationLatency? OperationLatency { get; set; }
 
     /// <summary>OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.</summary>
     [JsonPropertyName("version")]
@@ -201,7 +207,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCutRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCutRange
 {
     /// <summary>Range maximum.</summary>
     [JsonPropertyName("max")]
@@ -214,7 +220,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCut
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCut
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` aggregating values. Must have `ValueType = DISTRIBUTION` and `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
     [JsonPropertyName("distributionFilter")]
@@ -222,12 +228,12 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
     [JsonPropertyName("range")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCutRange? Range { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCutRange? Range { get; set; }
 }
 
 /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceGoodTotalRatio
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceGoodTotalRatio
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have `ValueType = DOUBLE` or `ValueType = INT64` and must have `MetricKind = DELTA` or `MetricKind = CUMULATIVE`.</summary>
     [JsonPropertyName("badServiceFilter")]
@@ -244,28 +250,28 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>`RequestBasedSli` to evaluate to judge window quality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance
 {
     /// <summary>`distribution_cut` is used when `good_service` is a count of values aggregated in a `Distribution` that fall into a good range. The `total_service` is the total count of all values aggregated in the `Distribution`.</summary>
     [JsonPropertyName("distributionCut")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCut? DistributionCut { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceDistributionCut? DistributionCut { get; set; }
 
     /// <summary>`good_total_ratio` is used when the ratio of `good_service` to `total_service` is computed from two `TimeSeries`.</summary>
     [JsonPropertyName("goodTotalRatio")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceGoodTotalRatio? GoodTotalRatio { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformanceGoodTotalRatio? GoodTotalRatio { get; set; }
 }
 
 /// <summary>A window is good if its `performance` is high enough.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThreshold
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThreshold
 {
     /// <summary>`BasicSli` to evaluate to judge window quality.</summary>
     [JsonPropertyName("basicSliPerformance")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformance? BasicSliPerformance { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdBasicSliPerformance? BasicSliPerformance { get; set; }
 
     /// <summary>`RequestBasedSli` to evaluate to judge window quality.</summary>
     [JsonPropertyName("performance")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance? Performance { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThresholdPerformance? Performance { get; set; }
 
     /// <summary>If window `performance &gt;= threshold`, the window is counted as good.</summary>
     [JsonPropertyName("threshold")]
@@ -274,7 +280,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRangeRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRangeRange
 {
     /// <summary>Range maximum.</summary>
     [JsonPropertyName("max")]
@@ -287,11 +293,11 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>A window is good if the metric's value is in a good range, averaged across returned streams.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRange
 {
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
     [JsonPropertyName("range")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRangeRange? Range { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRangeRange? Range { get; set; }
 
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying the `TimeSeries` to use for evaluating window quality.</summary>
     [JsonPropertyName("timeSeries")]
@@ -300,7 +306,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRangeRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRangeRange
 {
     /// <summary>Range maximum.</summary>
     [JsonPropertyName("max")]
@@ -313,11 +319,11 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>A window is good if the metric's value is in a good range, summed across returned streams.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRange
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRange
 {
     /// <summary>Range of values considered "good." For a one-sided range, set one bound to an infinite value.</summary>
     [JsonPropertyName("range")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRangeRange? Range { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRangeRange? Range { get; set; }
 
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying the `TimeSeries` to use for evaluating window quality.</summary>
     [JsonPropertyName("timeSeries")]
@@ -326,7 +332,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>Windows-based SLIs</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBased
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBased
 {
     /// <summary>A [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters) specifying a `TimeSeries` with `ValueType = BOOL`. The window is good if any `true` values appear in the window.</summary>
     [JsonPropertyName("goodBadMetricFilter")]
@@ -334,15 +340,15 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
     /// <summary>A window is good if its `performance` is high enough.</summary>
     [JsonPropertyName("goodTotalRatioThreshold")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThreshold? GoodTotalRatioThreshold { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedGoodTotalRatioThreshold? GoodTotalRatioThreshold { get; set; }
 
     /// <summary>A window is good if the metric's value is in a good range, averaged across returned streams.</summary>
     [JsonPropertyName("metricMeanInRange")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRange? MetricMeanInRange { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricMeanInRange? MetricMeanInRange { get; set; }
 
     /// <summary>A window is good if the metric's value is in a good range, summed across returned streams.</summary>
     [JsonPropertyName("metricSumInRange")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRange? MetricSumInRange { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBasedMetricSumInRange? MetricSumInRange { get; set; }
 
     /// <summary>Duration over which window quality is evaluated. Must be an integer fraction of a day and at least `60s`.</summary>
     [JsonPropertyName("windowPeriod")]
@@ -351,24 +357,24 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndic
 
 /// <summary>The definition of good service, used to measure and calculate the quality of the `Service`'s performance with respect to a single aspect of service quality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicator
+public partial class MonitoringServiceLevelObjectiveSpecServiceLevelIndicator
 {
     /// <summary>Basic SLI on a well-known service type.</summary>
     [JsonPropertyName("basicSli")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSli? BasicSli { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorBasicSli? BasicSli { get; set; }
 
     /// <summary>Request-based SLIs</summary>
     [JsonPropertyName("requestBased")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBased? RequestBased { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorRequestBased? RequestBased { get; set; }
 
     /// <summary>Windows-based SLIs</summary>
     [JsonPropertyName("windowsBased")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBased? WindowsBased { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicatorWindowsBased? WindowsBased { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceRef
+public partial class MonitoringServiceLevelObjectiveSpecServiceRef
 {
     /// <summary>The service for the resource  Allowed value: The Google Cloud resource name of a `MonitoringService` resource (format: `projects/{{project}}/services/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -385,7 +391,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpecServiceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveSpec
+public partial class MonitoringServiceLevelObjectiveSpec
 {
     /// <summary>A calendar period, semantically "since the start of the current ``". At this time, only `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH` are supported. Possible values: CALENDAR_PERIOD_UNSPECIFIED, DAY, WEEK, FORTNIGHT, MONTH, QUARTER, HALF, YEAR</summary>
     [JsonPropertyName("calendarPeriod")]
@@ -401,7 +407,7 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecProjectRef ProjectRef { get; set; }
+    public MonitoringServiceLevelObjectiveSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -413,16 +419,16 @@ public partial class V1beta1MonitoringServiceLevelObjectiveSpec
 
     /// <summary>The definition of good service, used to measure and calculate the quality of the `Service`'s performance with respect to a single aspect of service quality.</summary>
     [JsonPropertyName("serviceLevelIndicator")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceLevelIndicator? ServiceLevelIndicator { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceLevelIndicator? ServiceLevelIndicator { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1MonitoringServiceLevelObjectiveSpecServiceRef ServiceRef { get; set; }
+    public MonitoringServiceLevelObjectiveSpecServiceRef ServiceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveStatusConditions
+public partial class MonitoringServiceLevelObjectiveStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -447,11 +453,11 @@ public partial class V1beta1MonitoringServiceLevelObjectiveStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringServiceLevelObjectiveStatus
+public partial class MonitoringServiceLevelObjectiveStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringServiceLevelObjectiveStatusConditions>? Conditions { get; set; }
+    public IList<MonitoringServiceLevelObjectiveStatusConditions>? Conditions { get; set; }
 
     /// <summary>Time stamp of the `Create` or most recent `Update` command on this `Slo`.</summary>
     [JsonPropertyName("createTime")]
@@ -472,30 +478,25 @@ public partial class V1beta1MonitoringServiceLevelObjectiveStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitoringServiceLevelObjective : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringServiceLevelObjectiveSpec>, IStatus<V1beta1MonitoringServiceLevelObjectiveStatus>
+public partial class MonitoringServiceLevelObjective
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitoringServiceLevelObjective";
-    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
-    public const string KubePluralName = "monitoringservicelevelobjectives";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MonitoringServiceLevelObjectiveMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MonitoringServiceLevelObjectiveSpec Spec { get; set; }
+    public MonitoringServiceLevelObjectiveSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MonitoringServiceLevelObjectiveStatus? Status { get; set; }
+    public MonitoringServiceLevelObjectiveStatus? Status { get; set; }
 }

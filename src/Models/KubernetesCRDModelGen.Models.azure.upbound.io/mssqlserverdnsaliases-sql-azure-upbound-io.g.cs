@@ -311,3 +311,29 @@ public partial class V1beta1MSSQLServerDNSAlias : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerDNSAliasStatus? Status { get; set; }
 }
+
+/// <summary>MSSQLServerDNSAlias is the Schema for the MSSQLServerDNSAliass API. Manages a MS SQL Server DNS Alias.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLServerDNSAliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLServerDNSAlias>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLServerDNSAliasList";
+    public const string KubeGroup = "sql.azure.upbound.io";
+    public const string KubePluralName = "mssqlserverdnsaliases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLServerDNSAlias> Items { get; set; }
+}

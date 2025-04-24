@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MonitoringNotificationChannelMetadata
+{
+}
+
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -23,16 +29,16 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuth
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthToken
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsAuthToken
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -40,12 +46,12 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuth
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom? ValueFrom { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsAuthTokenValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -58,16 +64,16 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPass
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPassword
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -75,12 +81,12 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPass
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom? ValueFrom { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsPasswordValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -93,16 +99,16 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKey
+public partial class MonitoringNotificationChannelSpecSensitiveLabelsServiceKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -110,29 +116,29 @@ public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServ
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom? ValueFrom { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsServiceKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpecSensitiveLabels
+public partial class MonitoringNotificationChannelSpecSensitiveLabels
 {
     /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack.</summary>
     [JsonPropertyName("authToken")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsAuthToken? AuthToken { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsAuthToken? AuthToken { get; set; }
 
     /// <summary>An password for a notification channel. Channel types that support this field include: webhook_basicauth.</summary>
     [JsonPropertyName("password")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsPassword? Password { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsPassword? Password { get; set; }
 
     /// <summary>An servicekey token for a notification channel. Channel types that support this field include: pagerduty.</summary>
     [JsonPropertyName("serviceKey")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabelsServiceKey? ServiceKey { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabelsServiceKey? ServiceKey { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelSpec
+public partial class MonitoringNotificationChannelSpec
 {
     /// <summary>An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.</summary>
     [JsonPropertyName("description")]
@@ -156,7 +162,7 @@ public partial class V1beta1MonitoringNotificationChannelSpec
 
     /// <summary>Different notification type behaviors are configured primarily using the the 'labels' field on this resource. This block contains the labels which contain secrets or passwords so that they can be marked sensitive and hidden from plan output. The name of the field, eg: password, will be the key in the 'labels' map in the api request.  Credentials may not be specified in both locations and will cause an error. Changing from one location to a different credential configuration in the config will require an apply to update state.</summary>
     [JsonPropertyName("sensitiveLabels")]
-    public V1beta1MonitoringNotificationChannelSpecSensitiveLabels? SensitiveLabels { get; set; }
+    public MonitoringNotificationChannelSpecSensitiveLabels? SensitiveLabels { get; set; }
 
     /// <summary>The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field. See https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.notificationChannelDescriptors/list to get the list of valid values such as "email", "slack", etc...</summary>
     [JsonPropertyName("type")]
@@ -165,7 +171,7 @@ public partial class V1beta1MonitoringNotificationChannelSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelStatusConditions
+public partial class MonitoringNotificationChannelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,11 +196,11 @@ public partial class V1beta1MonitoringNotificationChannelStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringNotificationChannelStatus
+public partial class MonitoringNotificationChannelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringNotificationChannelStatusConditions>? Conditions { get; set; }
+    public IList<MonitoringNotificationChannelStatusConditions>? Conditions { get; set; }
 
     /// <summary>The full REST resource name for this channel. The syntax is: projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically assigned by the server on creation.</summary>
     [JsonPropertyName("name")]
@@ -211,30 +217,25 @@ public partial class V1beta1MonitoringNotificationChannelStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitoringNotificationChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringNotificationChannelSpec>, IStatus<V1beta1MonitoringNotificationChannelStatus>
+public partial class MonitoringNotificationChannel
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitoringNotificationChannel";
-    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
-    public const string KubePluralName = "monitoringnotificationchannels";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MonitoringNotificationChannelMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MonitoringNotificationChannelSpec Spec { get; set; }
+    public MonitoringNotificationChannelSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MonitoringNotificationChannelStatus? Status { get; set; }
+    public MonitoringNotificationChannelStatus? Status { get; set; }
 }

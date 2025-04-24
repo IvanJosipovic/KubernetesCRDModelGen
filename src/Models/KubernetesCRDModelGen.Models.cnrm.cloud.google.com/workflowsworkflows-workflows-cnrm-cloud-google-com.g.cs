@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workflows.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class WorkflowsWorkflowMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
+public partial class WorkflowsWorkflowSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1WorkflowsWorkflowSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkflowsWorkflowSpec
+public partial class WorkflowsWorkflowSpec
 {
     /// <summary>The KMS key used to encrypt workflow and execution data.  Format: projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}.</summary>
     [JsonPropertyName("cryptoKeyName")]
@@ -43,7 +49,7 @@ public partial class V1alpha1WorkflowsWorkflowSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1WorkflowsWorkflowSpecProjectRef ProjectRef { get; set; }
+    public WorkflowsWorkflowSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the workflow.</summary>
     [JsonPropertyName("region")]
@@ -64,7 +70,7 @@ public partial class V1alpha1WorkflowsWorkflowSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkflowsWorkflowStatusConditions
+public partial class WorkflowsWorkflowStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -89,11 +95,11 @@ public partial class V1alpha1WorkflowsWorkflowStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1WorkflowsWorkflowStatus
+public partial class WorkflowsWorkflowStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1WorkflowsWorkflowStatusConditions>? Conditions { get; set; }
+    public IList<WorkflowsWorkflowStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the workflow was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -118,30 +124,25 @@ public partial class V1alpha1WorkflowsWorkflowStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WorkflowsWorkflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WorkflowsWorkflowSpec>, IStatus<V1alpha1WorkflowsWorkflowStatus>
+public partial class WorkflowsWorkflow
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WorkflowsWorkflow";
-    public const string KubeGroup = "workflows.cnrm.cloud.google.com";
-    public const string KubePluralName = "workflowsworkflows";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public WorkflowsWorkflowMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1WorkflowsWorkflowSpec Spec { get; set; }
+    public WorkflowsWorkflowSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1WorkflowsWorkflowStatus? Status { get; set; }
+    public WorkflowsWorkflowStatus? Status { get; set; }
 }

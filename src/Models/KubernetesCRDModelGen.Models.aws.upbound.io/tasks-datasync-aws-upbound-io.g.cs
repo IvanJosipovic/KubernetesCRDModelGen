@@ -1239,3 +1239,29 @@ public partial class V1beta1Task : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1TaskStatus? Status { get; set; }
 }
+
+/// <summary>Task is the Schema for the Tasks API. Manages an AWS DataSync Task</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TaskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Task>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TaskList";
+    public const string KubeGroup = "datasync.aws.upbound.io";
+    public const string KubePluralName = "tasks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Task> Items { get; set; }
+}

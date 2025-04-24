@@ -596,3 +596,29 @@ public partial class V1beta1OutputSynapse : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1OutputSynapseStatus? Status { get; set; }
 }
+
+/// <summary>OutputSynapse is the Schema for the OutputSynapses API. Manages a Stream Analytics Output to an Azure Synapse Analytics Workspace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OutputSynapseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputSynapse>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OutputSynapseList";
+    public const string KubeGroup = "streamanalytics.azure.upbound.io";
+    public const string KubePluralName = "outputsynapses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OutputSynapse> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkServicesMeshMetadata
+{
+}
+
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesMeshSpecProjectRef
+public partial class NetworkServicesMeshSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1NetworkServicesMeshSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesMeshSpec
+public partial class NetworkServicesMeshSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -43,7 +49,7 @@ public partial class V1beta1NetworkServicesMeshSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1NetworkServicesMeshSpecProjectRef ProjectRef { get; set; }
+    public NetworkServicesMeshSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -52,7 +58,7 @@ public partial class V1beta1NetworkServicesMeshSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesMeshStatusConditions
+public partial class NetworkServicesMeshStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,11 +83,11 @@ public partial class V1beta1NetworkServicesMeshStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesMeshStatus
+public partial class NetworkServicesMeshStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1NetworkServicesMeshStatusConditions>? Conditions { get; set; }
+    public IList<NetworkServicesMeshStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -102,30 +108,25 @@ public partial class V1beta1NetworkServicesMeshStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkServicesMesh : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesMeshSpec>, IStatus<V1beta1NetworkServicesMeshStatus>
+public partial class NetworkServicesMesh
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkServicesMesh";
-    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkservicesmeshes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkServicesMeshMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1NetworkServicesMeshSpec Spec { get; set; }
+    public NetworkServicesMeshSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1NetworkServicesMeshStatus? Status { get; set; }
+    public NetworkServicesMeshStatus? Status { get; set; }
 }

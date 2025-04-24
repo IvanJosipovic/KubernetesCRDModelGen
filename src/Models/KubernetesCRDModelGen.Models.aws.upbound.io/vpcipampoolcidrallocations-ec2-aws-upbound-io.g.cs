@@ -442,3 +442,29 @@ public partial class V1beta1VPCIpamPoolCidrAllocation : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1VPCIpamPoolCidrAllocationStatus? Status { get; set; }
 }
+
+/// <summary>VPCIpamPoolCidrAllocation is the Schema for the VPCIpamPoolCidrAllocations API. Allocates (reserves) a CIDR from an IPAM address pool, preventing usage by IPAM.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCIpamPoolCidrAllocationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCIpamPoolCidrAllocation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCIpamPoolCidrAllocationList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "vpcipampoolcidrallocations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCIpamPoolCidrAllocation> Items { get; set; }
+}

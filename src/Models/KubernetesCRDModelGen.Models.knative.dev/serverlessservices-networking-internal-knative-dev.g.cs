@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ServerlessServiceMetadata
+{
+}
+
 /// <summary>ObjectRef defines the resource that this ServerlessService is responsible for making "serverless".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ServerlessServiceSpecObjectRef
+public partial class ServerlessServiceSpecObjectRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -43,7 +49,7 @@ public partial class V1alpha1ServerlessServiceSpecObjectRef
 
 /// <summary>Spec is the desired state of the ServerlessService. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ServerlessServiceSpec
+public partial class ServerlessServiceSpec
 {
     /// <summary>Mode describes the mode of operation of the ServerlessService.</summary>
     [JsonPropertyName("mode")]
@@ -55,7 +61,7 @@ public partial class V1alpha1ServerlessServiceSpec
 
     /// <summary>ObjectRef defines the resource that this ServerlessService is responsible for making "serverless".</summary>
     [JsonPropertyName("objectRef")]
-    public V1alpha1ServerlessServiceSpecObjectRef ObjectRef { get; set; }
+    public ServerlessServiceSpecObjectRef ObjectRef { get; set; }
 
     /// <summary>The application-layer protocol. Matches `RevisionProtocolType` set on the owning pa/revision. serving imports networking, so just use string.</summary>
     [JsonPropertyName("protocolType")]
@@ -64,7 +70,7 @@ public partial class V1alpha1ServerlessServiceSpec
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ServerlessServiceStatusConditions
+public partial class ServerlessServiceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -93,7 +99,7 @@ public partial class V1alpha1ServerlessServiceStatusConditions
 
 /// <summary>Status is the current state of the ServerlessService. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ServerlessServiceStatus
+public partial class ServerlessServiceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -101,7 +107,7 @@ public partial class V1alpha1ServerlessServiceStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ServerlessServiceStatusConditions>? Conditions { get; set; }
+    public IList<ServerlessServiceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -118,30 +124,25 @@ public partial class V1alpha1ServerlessServiceStatus
 
 /// <summary>ServerlessService is a proxy for the K8s service objects containing the endpoints for the revision, whether those are endpoints of the activator or revision pods. See: https://knative.page.link/naxz for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ServerlessService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServerlessServiceSpec>, IStatus<V1alpha1ServerlessServiceStatus>
+public partial class ServerlessService
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ServerlessService";
-    public const string KubeGroup = "networking.internal.knative.dev";
-    public const string KubePluralName = "serverlessservices";
-    /// <summary></summary>
+    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ServerlessServiceMetadata? Metadata { get; set; }
 
     /// <summary>Spec is the desired state of the ServerlessService. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ServerlessServiceSpec? Spec { get; set; }
+    public ServerlessServiceSpec? Spec { get; set; }
 
     /// <summary>Status is the current state of the ServerlessService. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("status")]
-    public V1alpha1ServerlessServiceStatus? Status { get; set; }
+    public ServerlessServiceStatus? Status { get; set; }
 }

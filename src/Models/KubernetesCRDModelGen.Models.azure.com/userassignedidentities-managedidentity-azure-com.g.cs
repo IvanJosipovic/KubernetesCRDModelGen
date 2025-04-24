@@ -377,3 +377,29 @@ public partial class V1api20230131storageUserAssignedIdentity : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1api20230131storageUserAssignedIdentityStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230131.UserAssignedIdentity Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230131storageUserAssignedIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1api20230131storageUserAssignedIdentity>
+{
+    public const string KubeApiVersion = "v1api20230131storage";
+    public const string KubeKind = "UserAssignedIdentityList";
+    public const string KubeGroup = "managedidentity.azure.com";
+    public const string KubePluralName = "userassignedidentities";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230131storageUserAssignedIdentity> Items { get; set; }
+}

@@ -361,3 +361,29 @@ public partial class V1beta1ServiceAction : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1ServiceActionStatus? Status { get; set; }
 }
+
+/// <summary>ServiceAction is the Schema for the ServiceActions API. Manages a Service Catalog Service Action</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceActionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceAction>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceActionList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "serviceactions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceAction> Items { get; set; }
+}

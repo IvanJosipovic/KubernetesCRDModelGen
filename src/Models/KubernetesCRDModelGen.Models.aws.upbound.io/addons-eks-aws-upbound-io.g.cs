@@ -681,3 +681,29 @@ public partial class V1beta1Addon : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1AddonStatus? Status { get; set; }
 }
+
+/// <summary>Addon is the Schema for the Addons API. Manages an EKS add-on</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AddonList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Addon>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AddonList";
+    public const string KubeGroup = "eks.aws.upbound.io";
+    public const string KubePluralName = "addons";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Addon> Items { get; set; }
+}

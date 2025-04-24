@@ -651,3 +651,29 @@ public partial class V1beta1Intent : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1IntentStatus? Status { get; set; }
 }
+
+/// <summary>Intent is the Schema for the Intents API. An intent represents a user's intent to interact with a conversational agent.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IntentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Intent>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IntentList";
+    public const string KubeGroup = "dialogflowcx.gcp.upbound.io";
+    public const string KubePluralName = "intents";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Intent> Items { get; set; }
+}

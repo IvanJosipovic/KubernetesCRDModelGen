@@ -847,3 +847,29 @@ public partial class V1beta1LabServicePlan : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1LabServicePlanStatus? Status { get; set; }
 }
+
+/// <summary>LabServicePlan is the Schema for the LabServicePlans API. Manages a Lab Service Plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LabServicePlanList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LabServicePlan>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LabServicePlanList";
+    public const string KubeGroup = "labservices.azure.upbound.io";
+    public const string KubePluralName = "labserviceplans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LabServicePlan> Items { get; set; }
+}

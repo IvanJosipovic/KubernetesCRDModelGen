@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues
+public partial class DataCatalogTagTemplateMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues
 {
     /// <summary>The display name of the enum value.</summary>
     [JsonPropertyName("displayName")]
@@ -19,20 +25,20 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowed
 
 /// <summary>Represents an enum type.  Exactly one of 'primitive_type' or 'enum_type' must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumType
+public partial class DataCatalogTagTemplateSpecFieldsTypeEnumType
 {
     /// <summary>The set of allowed values for this enum. The display names of the values must be case-insensitively unique within this set. Currently, enum values can only be added to the list of allowed values. Deletion and renaming of enum values are not supported. Can have up to 500 allowed values.</summary>
     [JsonPropertyName("allowedValues")]
-    public IList<V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues> AllowedValues { get; set; }
+    public IList<DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues> AllowedValues { get; set; }
 }
 
 /// <summary>The type of value this tag field can contain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpecFieldsType
+public partial class DataCatalogTagTemplateSpecFieldsType
 {
     /// <summary>Represents an enum type.  Exactly one of 'primitive_type' or 'enum_type' must be set.</summary>
     [JsonPropertyName("enumType")]
-    public V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumType? EnumType { get; set; }
+    public DataCatalogTagTemplateSpecFieldsTypeEnumType? EnumType { get; set; }
 
     /// <summary>Represents primitive types - string, bool etc.  Exactly one of 'primitive_type' or 'enum_type' must be set Possible values: ["DOUBLE", "STRING", "BOOL", "TIMESTAMP"].</summary>
     [JsonPropertyName("primitiveType")]
@@ -41,7 +47,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFieldsType
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpecFields
+public partial class DataCatalogTagTemplateSpecFields
 {
     /// <summary>A description for this field.</summary>
     [JsonPropertyName("description")]
@@ -69,12 +75,12 @@ public partial class V1alpha1DataCatalogTagTemplateSpecFields
 
     /// <summary>The type of value this tag field can contain.</summary>
     [JsonPropertyName("type")]
-    public V1alpha1DataCatalogTagTemplateSpecFieldsType Type { get; set; }
+    public DataCatalogTagTemplateSpecFieldsType Type { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpecProjectRef
+public partial class DataCatalogTagTemplateSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -91,7 +97,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateSpec
+public partial class DataCatalogTagTemplateSpec
 {
     /// <summary>The display name for this template.</summary>
     [JsonPropertyName("displayName")]
@@ -99,7 +105,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpec
 
     /// <summary>Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. The change of field_id will be resulting in re-creating of field. The change of primitive_type will be resulting in re-creating of field, however if the field is a required, you cannot update it.</summary>
     [JsonPropertyName("fields")]
-    public IList<V1alpha1DataCatalogTagTemplateSpecFields> Fields { get; set; }
+    public IList<DataCatalogTagTemplateSpecFields> Fields { get; set; }
 
     /// <summary>This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.</summary>
     [JsonPropertyName("forceDelete")]
@@ -107,7 +113,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DataCatalogTagTemplateSpecProjectRef ProjectRef { get; set; }
+    public DataCatalogTagTemplateSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Template location region.</summary>
     [JsonPropertyName("region")]
@@ -124,7 +130,7 @@ public partial class V1alpha1DataCatalogTagTemplateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateStatusConditions
+public partial class DataCatalogTagTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -149,11 +155,11 @@ public partial class V1alpha1DataCatalogTagTemplateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DataCatalogTagTemplateStatus
+public partial class DataCatalogTagTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DataCatalogTagTemplateStatusConditions>? Conditions { get; set; }
+    public IList<DataCatalogTagTemplateStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of the tag template in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}.</summary>
     [JsonPropertyName("name")]
@@ -166,30 +172,25 @@ public partial class V1alpha1DataCatalogTagTemplateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataCatalogTagTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogTagTemplateSpec>, IStatus<V1alpha1DataCatalogTagTemplateStatus>
+public partial class DataCatalogTagTemplate
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataCatalogTagTemplate";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogtagtemplates";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DataCatalogTagTemplateMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DataCatalogTagTemplateSpec Spec { get; set; }
+    public DataCatalogTagTemplateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DataCatalogTagTemplateStatus? Status { get; set; }
+    public DataCatalogTagTemplateStatus? Status { get; set; }
 }

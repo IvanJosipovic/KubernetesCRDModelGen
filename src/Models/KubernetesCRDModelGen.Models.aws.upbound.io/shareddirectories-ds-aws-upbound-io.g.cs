@@ -487,3 +487,29 @@ public partial class V1beta1SharedDirectory : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1SharedDirectoryStatus? Status { get; set; }
 }
+
+/// <summary>SharedDirectory is the Schema for the SharedDirectorys API. Manages a directory in your account (directory owner) shared with another account (directory consumer).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SharedDirectoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SharedDirectory>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SharedDirectoryList";
+    public const string KubeGroup = "ds.aws.upbound.io";
+    public const string KubePluralName = "shareddirectories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SharedDirectory> Items { get; set; }
+}

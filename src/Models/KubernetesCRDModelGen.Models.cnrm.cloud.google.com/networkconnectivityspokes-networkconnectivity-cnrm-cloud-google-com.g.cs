@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkConnectivitySpokeMetadata
+{
+}
+
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
+public partial class NetworkConnectivitySpokeSpecHubRef
 {
     /// <summary>Immutable. The URI of the hub that this spoke is attached to.  Allowed value: The Google Cloud resource name of a `NetworkConnectivityHub` resource (format: `projects/{{project}}/locations/global/hubs/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecHubRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris
+public partial class NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInterconnectAttachment` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
 
 /// <summary>Immutable. A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachments
+public partial class NetworkConnectivitySpokeSpecLinkedInterconnectAttachments
 {
     /// <summary>Immutable. A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
@@ -52,12 +58,12 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttach
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("uris")]
-    public IList<V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris> Uris { get; set; }
+    public IList<NetworkConnectivitySpokeSpecLinkedInterconnectAttachmentsUris> Uris { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef
+public partial class NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef
 {
     /// <summary>The URI of the virtual machine resource  Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -74,7 +80,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances
+public partial class NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances
 {
     /// <summary>Immutable. The IP address on the VM to use for peering.</summary>
     [JsonPropertyName("ipAddress")]
@@ -82,16 +88,16 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("virtualMachineRef")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef? VirtualMachineRef { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstancesVirtualMachineRef? VirtualMachineRef { get; set; }
 }
 
 /// <summary>Immutable. The URIs of linked Router appliance resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances
+public partial class NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances
 {
     /// <summary>Immutable. The list of router appliance instances</summary>
     [JsonPropertyName("instances")]
-    public IList<V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances> Instances { get; set; }
+    public IList<NetworkConnectivitySpokeSpecLinkedRouterApplianceInstancesInstances> Instances { get; set; }
 
     /// <summary>Immutable. A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
@@ -100,7 +106,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceIns
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
+public partial class NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
 {
     /// <summary>The URI of the VPC network resource.  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -117,7 +123,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef
 
 /// <summary>Immutable. VPC network that is associated with the spoke.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
+public partial class NetworkConnectivitySpokeSpecLinkedVPCNetwork
 {
     /// <summary>Immutable. IP ranges encompassing the subnets to be excluded from peering.</summary>
     [JsonPropertyName("excludeExportRanges")]
@@ -125,12 +131,12 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("uriRef")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef UriRef { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedVPCNetworkUriRef UriRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
+public partial class NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
     [JsonPropertyName("external")]
@@ -147,7 +153,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris
 
 /// <summary>Immutable. The URIs of linked VPN tunnel resources</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
+public partial class NetworkConnectivitySpokeSpecLinkedVpnTunnels
 {
     /// <summary>Immutable. A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
@@ -155,12 +161,12 @@ public partial class V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("uris")]
-    public IList<V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris> Uris { get; set; }
+    public IList<NetworkConnectivitySpokeSpecLinkedVpnTunnelsUris> Uris { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
+public partial class NetworkConnectivitySpokeSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -177,7 +183,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeSpec
+public partial class NetworkConnectivitySpokeSpec
 {
     /// <summary>An optional description of the spoke.</summary>
     [JsonPropertyName("description")]
@@ -185,23 +191,23 @@ public partial class V1beta1NetworkConnectivitySpokeSpec
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("hubRef")]
-    public V1beta1NetworkConnectivitySpokeSpecHubRef HubRef { get; set; }
+    public NetworkConnectivitySpokeSpecHubRef HubRef { get; set; }
 
     /// <summary>Immutable. A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
     [JsonPropertyName("linkedInterconnectAttachments")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedInterconnectAttachments? LinkedInterconnectAttachments { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedInterconnectAttachments? LinkedInterconnectAttachments { get; set; }
 
     /// <summary>Immutable. The URIs of linked Router appliance resources</summary>
     [JsonPropertyName("linkedRouterApplianceInstances")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances? LinkedRouterApplianceInstances { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedRouterApplianceInstances? LinkedRouterApplianceInstances { get; set; }
 
     /// <summary>Immutable. VPC network that is associated with the spoke.</summary>
     [JsonPropertyName("linkedVPCNetwork")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedVPCNetwork? LinkedVPCNetwork { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedVPCNetwork? LinkedVPCNetwork { get; set; }
 
     /// <summary>Immutable. The URIs of linked VPN tunnel resources</summary>
     [JsonPropertyName("linkedVpnTunnels")]
-    public V1beta1NetworkConnectivitySpokeSpecLinkedVpnTunnels? LinkedVpnTunnels { get; set; }
+    public NetworkConnectivitySpokeSpecLinkedVpnTunnels? LinkedVpnTunnels { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -209,7 +215,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1NetworkConnectivitySpokeSpecProjectRef ProjectRef { get; set; }
+    public NetworkConnectivitySpokeSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -218,7 +224,7 @@ public partial class V1beta1NetworkConnectivitySpokeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeStatusConditions
+public partial class NetworkConnectivitySpokeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -243,11 +249,11 @@ public partial class V1beta1NetworkConnectivitySpokeStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkConnectivitySpokeStatus
+public partial class NetworkConnectivitySpokeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1NetworkConnectivitySpokeStatusConditions>? Conditions { get; set; }
+    public IList<NetworkConnectivitySpokeStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time the spoke was created.</summary>
     [JsonPropertyName("createTime")]
@@ -272,30 +278,25 @@ public partial class V1beta1NetworkConnectivitySpokeStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkConnectivitySpoke : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkConnectivitySpokeSpec>, IStatus<V1beta1NetworkConnectivitySpokeStatus>
+public partial class NetworkConnectivitySpoke
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkConnectivitySpoke";
-    public const string KubeGroup = "networkconnectivity.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkconnectivityspokes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkConnectivitySpokeMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1NetworkConnectivitySpokeSpec Spec { get; set; }
+    public NetworkConnectivitySpokeSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1NetworkConnectivitySpokeStatus? Status { get; set; }
+    public NetworkConnectivitySpokeStatus? Status { get; set; }
 }

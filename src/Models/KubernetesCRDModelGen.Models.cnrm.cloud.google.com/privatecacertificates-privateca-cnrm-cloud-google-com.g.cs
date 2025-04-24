@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class PrivateCACertificateMetadata
+{
+}
+
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecCaPoolRef
+public partial class PrivateCACertificateSpecCaPoolRef
 {
     /// <summary>The ca_pool for the resource  Allowed value: The Google Cloud resource name of a `PrivateCACAPool` resource (format: `projects/{{project}}/locations/{{location}}/caPools/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1PrivateCACertificateSpecCaPoolRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecCertificateAuthorityRef
+public partial class PrivateCACertificateSpecCertificateAuthorityRef
 {
     /// <summary>The certificate authority for the resource  Allowed value: The Google Cloud resource name of a `PrivateCACertificateAuthority` resource (format: `projects/{{project}}/locations/{{location}}/caPools/{{ca_pool}}/certificateAuthorities/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1PrivateCACertificateSpecCertificateAuthorityRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecCertificateTemplateRef
+public partial class PrivateCACertificateSpecCertificateTemplateRef
 {
     /// <summary>Immutable. The resource name for a CertificateTemplate used to issue this certificate, in the format `projects/*/locations/*/certificateTemplates/*`. If this is specified, the caller must have the necessary permission to use this template. If this is omitted, no template will be used. This template must be in the same location as the Certificate.  Allowed value: The `selfLink` field of a `PrivateCACertificateTemplate` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1PrivateCACertificateSpecCertificateTemplateRef
 
 /// <summary>Immutable. Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigPublicKey
+public partial class PrivateCACertificateSpecConfigPublicKey
 {
     /// <summary>Immutable. Required. The format of the public key. Possible values: KEY_FORMAT_UNSPECIFIED, PEM</summary>
     [JsonPropertyName("format")]
@@ -74,7 +80,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigPublicKey
 
 /// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigSubjectConfigSubject
+public partial class PrivateCACertificateSpecConfigSubjectConfigSubject
 {
     /// <summary>Immutable. The "common name" of the subject.</summary>
     [JsonPropertyName("commonName")]
@@ -111,7 +117,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigSubjectConfigSubject
 
 /// <summary>Immutable. Optional. The subject alternative name fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigSubjectConfigSubjectAltName
+public partial class PrivateCACertificateSpecConfigSubjectConfigSubjectAltName
 {
     /// <summary>Immutable. Contains only valid, fully-qualified host names.</summary>
     [JsonPropertyName("dnsNames")]
@@ -132,20 +138,20 @@ public partial class V1beta1PrivateCACertificateSpecConfigSubjectConfigSubjectAl
 
 /// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigSubjectConfig
+public partial class PrivateCACertificateSpecConfigSubjectConfig
 {
     /// <summary>Immutable. Required. Contains distinguished name fields such as the common name, location and organization.</summary>
     [JsonPropertyName("subject")]
-    public V1beta1PrivateCACertificateSpecConfigSubjectConfigSubject Subject { get; set; }
+    public PrivateCACertificateSpecConfigSubjectConfigSubject Subject { get; set; }
 
     /// <summary>Immutable. Optional. The subject alternative name fields.</summary>
     [JsonPropertyName("subjectAltName")]
-    public V1beta1PrivateCACertificateSpecConfigSubjectConfigSubjectAltName? SubjectAltName { get; set; }
+    public PrivateCACertificateSpecConfigSubjectConfigSubjectAltName? SubjectAltName { get; set; }
 }
 
 /// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalExtensionsObjectId
+public partial class PrivateCACertificateSpecConfigX509ConfigAdditionalExtensionsObjectId
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -154,7 +160,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalEx
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalExtensions
+public partial class PrivateCACertificateSpecConfigX509ConfigAdditionalExtensions
 {
     /// <summary>Immutable. Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
     [JsonPropertyName("critical")]
@@ -162,7 +168,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalEx
 
     /// <summary>Immutable. Required. The OID for this X.509 extension.</summary>
     [JsonPropertyName("objectId")]
-    public V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalExtensionsObjectId ObjectId { get; set; }
+    public PrivateCACertificateSpecConfigX509ConfigAdditionalExtensionsObjectId ObjectId { get; set; }
 
     /// <summary>Immutable. Required. The value of this X.509 extension.</summary>
     [JsonPropertyName("value")]
@@ -171,7 +177,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalEx
 
 /// <summary>Immutable. Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigCaOptions
+public partial class PrivateCACertificateSpecConfigX509ConfigCaOptions
 {
     /// <summary>Immutable. Optional. When true, the "CA" in Basic Constraints extension will be set to true.</summary>
     [JsonPropertyName("isCa")]
@@ -192,7 +198,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigCaOptions
 
 /// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageBaseKeyUsage
+public partial class PrivateCACertificateSpecConfigX509ConfigKeyUsageBaseKeyUsage
 {
     /// <summary>Immutable. The key may be used to sign certificates.</summary>
     [JsonPropertyName("certSign")]
@@ -233,7 +239,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageBase
 
 /// <summary>Immutable. Detailed scenarios in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageExtendedKeyUsage
+public partial class PrivateCACertificateSpecConfigX509ConfigKeyUsageExtendedKeyUsage
 {
     /// <summary>Immutable. Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
     [JsonPropertyName("clientAuth")]
@@ -262,7 +268,7 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageExte
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
+public partial class PrivateCACertificateSpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -271,24 +277,24 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageUnkn
 
 /// <summary>Immutable. Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsage
+public partial class PrivateCACertificateSpecConfigX509ConfigKeyUsage
 {
     /// <summary>Immutable. Describes high-level ways in which a key may be used.</summary>
     [JsonPropertyName("baseKeyUsage")]
-    public V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
+    public PrivateCACertificateSpecConfigX509ConfigKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
 
     /// <summary>Immutable. Detailed scenarios in which a key may be used.</summary>
     [JsonPropertyName("extendedKeyUsage")]
-    public V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
+    public PrivateCACertificateSpecConfigX509ConfigKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
 
     /// <summary>Immutable. Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.</summary>
     [JsonPropertyName("unknownExtendedKeyUsages")]
-    public IList<V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
+    public IList<PrivateCACertificateSpecConfigX509ConfigKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigPolicyIds
+public partial class PrivateCACertificateSpecConfigX509ConfigPolicyIds
 {
     /// <summary>Immutable. Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -297,11 +303,11 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509ConfigPolicyIds
 
 /// <summary>Immutable. Required. Describes how some of the technical X.509 fields in a certificate should be populated.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfigX509Config
+public partial class PrivateCACertificateSpecConfigX509Config
 {
     /// <summary>Immutable. Optional. Describes custom X.509 extensions.</summary>
     [JsonPropertyName("additionalExtensions")]
-    public IList<V1beta1PrivateCACertificateSpecConfigX509ConfigAdditionalExtensions>? AdditionalExtensions { get; set; }
+    public IList<PrivateCACertificateSpecConfigX509ConfigAdditionalExtensions>? AdditionalExtensions { get; set; }
 
     /// <summary>Immutable. Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.</summary>
     [JsonPropertyName("aiaOcspServers")]
@@ -309,37 +315,37 @@ public partial class V1beta1PrivateCACertificateSpecConfigX509Config
 
     /// <summary>Immutable. Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
     [JsonPropertyName("caOptions")]
-    public V1beta1PrivateCACertificateSpecConfigX509ConfigCaOptions? CaOptions { get; set; }
+    public PrivateCACertificateSpecConfigX509ConfigCaOptions? CaOptions { get; set; }
 
     /// <summary>Immutable. Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
-    public V1beta1PrivateCACertificateSpecConfigX509ConfigKeyUsage? KeyUsage { get; set; }
+    public PrivateCACertificateSpecConfigX509ConfigKeyUsage? KeyUsage { get; set; }
 
     /// <summary>Immutable. Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]
-    public IList<V1beta1PrivateCACertificateSpecConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
+    public IList<PrivateCACertificateSpecConfigX509ConfigPolicyIds>? PolicyIds { get; set; }
 }
 
 /// <summary>Immutable. Immutable. A description of the certificate and key that does not require X.509 or ASN.1.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecConfig
+public partial class PrivateCACertificateSpecConfig
 {
     /// <summary>Immutable. Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.</summary>
     [JsonPropertyName("publicKey")]
-    public V1beta1PrivateCACertificateSpecConfigPublicKey? PublicKey { get; set; }
+    public PrivateCACertificateSpecConfigPublicKey? PublicKey { get; set; }
 
     /// <summary>Immutable. Required. Specifies some of the values in a certificate that are related to the subject.</summary>
     [JsonPropertyName("subjectConfig")]
-    public V1beta1PrivateCACertificateSpecConfigSubjectConfig SubjectConfig { get; set; }
+    public PrivateCACertificateSpecConfigSubjectConfig SubjectConfig { get; set; }
 
     /// <summary>Immutable. Required. Describes how some of the technical X.509 fields in a certificate should be populated.</summary>
     [JsonPropertyName("x509Config")]
-    public V1beta1PrivateCACertificateSpecConfigX509Config X509Config { get; set; }
+    public PrivateCACertificateSpecConfigX509Config X509Config { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpecProjectRef
+public partial class PrivateCACertificateSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -356,23 +362,23 @@ public partial class V1beta1PrivateCACertificateSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateSpec
+public partial class PrivateCACertificateSpec
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("caPoolRef")]
-    public V1beta1PrivateCACertificateSpecCaPoolRef CaPoolRef { get; set; }
+    public PrivateCACertificateSpecCaPoolRef CaPoolRef { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("certificateAuthorityRef")]
-    public V1beta1PrivateCACertificateSpecCertificateAuthorityRef? CertificateAuthorityRef { get; set; }
+    public PrivateCACertificateSpecCertificateAuthorityRef? CertificateAuthorityRef { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("certificateTemplateRef")]
-    public V1beta1PrivateCACertificateSpecCertificateTemplateRef? CertificateTemplateRef { get; set; }
+    public PrivateCACertificateSpecCertificateTemplateRef? CertificateTemplateRef { get; set; }
 
     /// <summary>Immutable. Immutable. A description of the certificate and key that does not require X.509 or ASN.1.</summary>
     [JsonPropertyName("config")]
-    public V1beta1PrivateCACertificateSpecConfig? Config { get; set; }
+    public PrivateCACertificateSpecConfig? Config { get; set; }
 
     /// <summary>Immutable. Required. Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.</summary>
     [JsonPropertyName("lifetime")]
@@ -388,7 +394,7 @@ public partial class V1beta1PrivateCACertificateSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1PrivateCACertificateSpecProjectRef ProjectRef { get; set; }
+    public PrivateCACertificateSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -401,7 +407,7 @@ public partial class V1beta1PrivateCACertificateSpec
 
 /// <summary>Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionAuthorityKeyId
+public partial class PrivateCACertificateStatusCertificateDescriptionAuthorityKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
     [JsonPropertyName("keyId")]
@@ -410,7 +416,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionAuth
 
 /// <summary>The hash of the x.509 certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionCertFingerprint
+public partial class PrivateCACertificateStatusCertificateDescriptionCertFingerprint
 {
     /// <summary>The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.</summary>
     [JsonPropertyName("sha256Hash")]
@@ -419,7 +425,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionCert
 
 /// <summary>The public key that corresponds to an issued certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionPublicKey
+public partial class PrivateCACertificateStatusCertificateDescriptionPublicKey
 {
     /// <summary>Required. The format of the public key. Possible values: KEY_FORMAT_UNSPECIFIED, PEM</summary>
     [JsonPropertyName("format")]
@@ -432,7 +438,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionPubl
 
 /// <summary>Contains distinguished name fields such as the common name, location and / organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubject
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubject
 {
     /// <summary>The "common name" of the subject.</summary>
     [JsonPropertyName("commonName")]
@@ -469,7 +475,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
 /// <summary>Required. The OID for this X.509 extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSansObjectId
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSansObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -478,7 +484,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSans
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSans
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
     [JsonPropertyName("critical")]
@@ -486,7 +492,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
     /// <summary>Required. The OID for this X.509 extension.</summary>
     [JsonPropertyName("objectId")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSansObjectId? ObjectId { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSansObjectId? ObjectId { get; set; }
 
     /// <summary>Required. The value of this X.509 extension.</summary>
     [JsonPropertyName("value")]
@@ -495,11 +501,11 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
 /// <summary>The subject alternative name fields.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltName
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltName
 {
     /// <summary>Contains additional subject alternative name values.</summary>
     [JsonPropertyName("customSans")]
-    public IList<V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSans>? CustomSans { get; set; }
+    public IList<PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSans>? CustomSans { get; set; }
 
     /// <summary>Contains only valid, fully-qualified host names.</summary>
     [JsonPropertyName("dnsNames")]
@@ -520,7 +526,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
 /// <summary>Describes some of the values in a certificate that are related to the subject and lifetime.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescription
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectDescription
 {
     /// <summary>The serial number encoded in lowercase hexadecimal.</summary>
     [JsonPropertyName("hexSerialNumber")]
@@ -540,16 +546,16 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
     /// <summary>Contains distinguished name fields such as the common name, location and / organization.</summary>
     [JsonPropertyName("subject")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubject? Subject { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubject? Subject { get; set; }
 
     /// <summary>The subject alternative name fields.</summary>
     [JsonPropertyName("subjectAltName")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltName? SubjectAltName { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionSubjectDescriptionSubjectAltName? SubjectAltName { get; set; }
 }
 
 /// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectKeyId
+public partial class PrivateCACertificateStatusCertificateDescriptionSubjectKeyId
 {
     /// <summary>Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.</summary>
     [JsonPropertyName("keyId")]
@@ -558,7 +564,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionSubj
 
 /// <summary>Required. The OID for this X.509 extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensionsObjectId
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -567,7 +573,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensions
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
     [JsonPropertyName("critical")]
@@ -575,7 +581,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
     /// <summary>Required. The OID for this X.509 extension.</summary>
     [JsonPropertyName("objectId")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensionsObjectId? ObjectId { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensionsObjectId? ObjectId { get; set; }
 
     /// <summary>Required. The value of this X.509 extension.</summary>
     [JsonPropertyName("value")]
@@ -584,7 +590,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionCaOptions
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
     [JsonPropertyName("isCa")]
@@ -597,7 +603,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary>Describes high-level ways in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageBaseKeyUsage
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
     [JsonPropertyName("certSign")]
@@ -638,7 +644,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary>Detailed scenarios in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageExtendedKeyUsage
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
     [JsonPropertyName("clientAuth")]
@@ -667,7 +673,7 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageUnknownExtendedKeyUsages
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -676,24 +682,24 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsage
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
     [JsonPropertyName("baseKeyUsage")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
 
     /// <summary>Detailed scenarios in which a key may be used.</summary>
     [JsonPropertyName("extendedKeyUsage")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
 
     /// <summary>Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.</summary>
     [JsonPropertyName("unknownExtendedKeyUsages")]
-    public IList<V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
+    public IList<PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionPolicyIds
+public partial class PrivateCACertificateStatusCertificateDescriptionX509DescriptionPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -702,11 +708,11 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
 /// <summary>Describes some of the technical X.509 fields in a certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509Description
+public partial class PrivateCACertificateStatusCertificateDescriptionX509Description
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
     [JsonPropertyName("additionalExtensions")]
-    public IList<V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensions>? AdditionalExtensions { get; set; }
+    public IList<PrivateCACertificateStatusCertificateDescriptionX509DescriptionAdditionalExtensions>? AdditionalExtensions { get; set; }
 
     /// <summary>Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.</summary>
     [JsonPropertyName("aiaOcspServers")]
@@ -714,20 +720,20 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescriptionX509
 
     /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
     [JsonPropertyName("caOptions")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionCaOptions? CaOptions { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509DescriptionCaOptions? CaOptions { get; set; }
 
     /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsage? KeyUsage { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509DescriptionKeyUsage? KeyUsage { get; set; }
 
     /// <summary>Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]
-    public IList<V1beta1PrivateCACertificateStatusCertificateDescriptionX509DescriptionPolicyIds>? PolicyIds { get; set; }
+    public IList<PrivateCACertificateStatusCertificateDescriptionX509DescriptionPolicyIds>? PolicyIds { get; set; }
 }
 
 /// <summary>Output only. A structured description of the issued X.509 certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusCertificateDescription
+public partial class PrivateCACertificateStatusCertificateDescription
 {
     /// <summary>Describes lists of issuer CA certificate URLs that appear in the "Authority Information Access" extension in the certificate.</summary>
     [JsonPropertyName("aiaIssuingCertificateUrls")]
@@ -735,11 +741,11 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescription
 
     /// <summary>Identifies the subject_key_id of the parent certificate, per https://tools.ietf.org/html/rfc5280#section-4.2.1.1</summary>
     [JsonPropertyName("authorityKeyId")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionAuthorityKeyId? AuthorityKeyId { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionAuthorityKeyId? AuthorityKeyId { get; set; }
 
     /// <summary>The hash of the x.509 certificate.</summary>
     [JsonPropertyName("certFingerprint")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionCertFingerprint? CertFingerprint { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionCertFingerprint? CertFingerprint { get; set; }
 
     /// <summary>Describes a list of locations to obtain CRL information, i.e. the DistributionPoint.fullName described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13</summary>
     [JsonPropertyName("crlDistributionPoints")]
@@ -747,24 +753,24 @@ public partial class V1beta1PrivateCACertificateStatusCertificateDescription
 
     /// <summary>The public key that corresponds to an issued certificate.</summary>
     [JsonPropertyName("publicKey")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionPublicKey? PublicKey { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionPublicKey? PublicKey { get; set; }
 
     /// <summary>Describes some of the values in a certificate that are related to the subject and lifetime.</summary>
     [JsonPropertyName("subjectDescription")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectDescription? SubjectDescription { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionSubjectDescription? SubjectDescription { get; set; }
 
     /// <summary>Provides a means of identifiying certificates that contain a particular public key, per https://tools.ietf.org/html/rfc5280#section-4.2.1.2.</summary>
     [JsonPropertyName("subjectKeyId")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionSubjectKeyId? SubjectKeyId { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionSubjectKeyId? SubjectKeyId { get; set; }
 
     /// <summary>Describes some of the technical X.509 fields in a certificate.</summary>
     [JsonPropertyName("x509Description")]
-    public V1beta1PrivateCACertificateStatusCertificateDescriptionX509Description? X509Description { get; set; }
+    public PrivateCACertificateStatusCertificateDescriptionX509Description? X509Description { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusConditions
+public partial class PrivateCACertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -789,7 +795,7 @@ public partial class V1beta1PrivateCACertificateStatusConditions
 
 /// <summary>Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatusRevocationDetails
+public partial class PrivateCACertificateStatusRevocationDetails
 {
     /// <summary>Indicates why a Certificate was revoked. Possible values: REVOCATION_REASON_UNSPECIFIED, KEY_COMPROMISE, CERTIFICATE_AUTHORITY_COMPROMISE, AFFILIATION_CHANGED, SUPERSEDED, CESSATION_OF_OPERATION, CERTIFICATE_HOLD, PRIVILEGE_WITHDRAWN, ATTRIBUTE_AUTHORITY_COMPROMISE</summary>
     [JsonPropertyName("revocationState")]
@@ -802,15 +808,15 @@ public partial class V1beta1PrivateCACertificateStatusRevocationDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrivateCACertificateStatus
+public partial class PrivateCACertificateStatus
 {
     /// <summary>Output only. A structured description of the issued X.509 certificate.</summary>
     [JsonPropertyName("certificateDescription")]
-    public V1beta1PrivateCACertificateStatusCertificateDescription? CertificateDescription { get; set; }
+    public PrivateCACertificateStatusCertificateDescription? CertificateDescription { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1PrivateCACertificateStatusConditions>? Conditions { get; set; }
+    public IList<PrivateCACertificateStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time at which this Certificate was created.</summary>
     [JsonPropertyName("createTime")]
@@ -834,7 +840,7 @@ public partial class V1beta1PrivateCACertificateStatus
 
     /// <summary>Output only. Details regarding the revocation of this Certificate. This Certificate is considered revoked if and only if this field is present.</summary>
     [JsonPropertyName("revocationDetails")]
-    public V1beta1PrivateCACertificateStatusRevocationDetails? RevocationDetails { get; set; }
+    public PrivateCACertificateStatusRevocationDetails? RevocationDetails { get; set; }
 
     /// <summary>Output only. The time at which this Certificate was updated.</summary>
     [JsonPropertyName("updateTime")]
@@ -843,30 +849,25 @@ public partial class V1beta1PrivateCACertificateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivateCACertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateCACertificateSpec>, IStatus<V1beta1PrivateCACertificateStatus>
+public partial class PrivateCACertificate
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivateCACertificate";
-    public const string KubeGroup = "privateca.cnrm.cloud.google.com";
-    public const string KubePluralName = "privatecacertificates";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public PrivateCACertificateMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1PrivateCACertificateSpec Spec { get; set; }
+    public PrivateCACertificateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1PrivateCACertificateStatus? Status { get; set; }
+    public PrivateCACertificateStatus? Status { get; set; }
 }

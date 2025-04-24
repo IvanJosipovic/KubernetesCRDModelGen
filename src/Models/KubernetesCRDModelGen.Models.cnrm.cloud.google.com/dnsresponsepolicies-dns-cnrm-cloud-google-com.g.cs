@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicySpecGkeClusters
+public partial class DNSResponsePolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DNSResponsePolicySpecGkeClusters
 {
     /// <summary>The resource name of the cluster to bind this ManagedZone to. This should be specified in the format like 'projects/*/locations/*/clusters/*'.</summary>
     [JsonPropertyName("gkeClusterName")]
@@ -19,7 +25,7 @@ public partial class V1alpha1DNSResponsePolicySpecGkeClusters
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicySpecNetworks
+public partial class DNSResponsePolicySpecNetworks
 {
     /// <summary>The fully qualified URL of the VPC network to bind to. This should be formatted like 'https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}'.</summary>
     [JsonPropertyName("networkUrl")]
@@ -28,7 +34,7 @@ public partial class V1alpha1DNSResponsePolicySpecNetworks
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicySpecProjectRef
+public partial class DNSResponsePolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -45,7 +51,7 @@ public partial class V1alpha1DNSResponsePolicySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicySpec
+public partial class DNSResponsePolicySpec
 {
     /// <summary>The description of the response policy, such as 'My new response policy'.</summary>
     [JsonPropertyName("description")]
@@ -53,15 +59,15 @@ public partial class V1alpha1DNSResponsePolicySpec
 
     /// <summary>The list of Google Kubernetes Engine clusters that can see this zone.</summary>
     [JsonPropertyName("gkeClusters")]
-    public IList<V1alpha1DNSResponsePolicySpecGkeClusters>? GkeClusters { get; set; }
+    public IList<DNSResponsePolicySpecGkeClusters>? GkeClusters { get; set; }
 
     /// <summary>The list of network names specifying networks to which this policy is applied.</summary>
     [JsonPropertyName("networks")]
-    public IList<V1alpha1DNSResponsePolicySpecNetworks>? Networks { get; set; }
+    public IList<DNSResponsePolicySpecNetworks>? Networks { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DNSResponsePolicySpecProjectRef ProjectRef { get; set; }
+    public DNSResponsePolicySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The responsePolicyName of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -70,7 +76,7 @@ public partial class V1alpha1DNSResponsePolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyStatusConditions
+public partial class DNSResponsePolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -95,11 +101,11 @@ public partial class V1alpha1DNSResponsePolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyStatus
+public partial class DNSResponsePolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DNSResponsePolicyStatusConditions>? Conditions { get; set; }
+    public IList<DNSResponsePolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -108,30 +114,25 @@ public partial class V1alpha1DNSResponsePolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DNSResponsePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DNSResponsePolicySpec>, IStatus<V1alpha1DNSResponsePolicyStatus>
+public partial class DNSResponsePolicy
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DNSResponsePolicy";
-    public const string KubeGroup = "dns.cnrm.cloud.google.com";
-    public const string KubePluralName = "dnsresponsepolicies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DNSResponsePolicyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DNSResponsePolicySpec Spec { get; set; }
+    public DNSResponsePolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DNSResponsePolicyStatus? Status { get; set; }
+    public DNSResponsePolicyStatus? Status { get; set; }
 }

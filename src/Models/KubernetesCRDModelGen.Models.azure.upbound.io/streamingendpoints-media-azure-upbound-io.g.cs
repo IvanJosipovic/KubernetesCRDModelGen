@@ -723,3 +723,29 @@ public partial class V1beta1StreamingEndpoint : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1StreamingEndpointStatus? Status { get; set; }
 }
+
+/// <summary>StreamingEndpoint is the Schema for the StreamingEndpoints API. Manages a Streaming Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StreamingEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StreamingEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StreamingEndpointList";
+    public const string KubeGroup = "media.azure.upbound.io";
+    public const string KubePluralName = "streamingendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StreamingEndpoint> Items { get; set; }
+}

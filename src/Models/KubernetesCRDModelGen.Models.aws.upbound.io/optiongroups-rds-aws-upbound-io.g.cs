@@ -444,3 +444,29 @@ public partial class V1beta1OptionGroup : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1OptionGroupStatus? Status { get; set; }
 }
+
+/// <summary>OptionGroup is the Schema for the OptionGroups API. Provides an RDS DB option group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OptionGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OptionGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OptionGroupList";
+    public const string KubeGroup = "rds.aws.upbound.io";
+    public const string KubePluralName = "optiongroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OptionGroup> Items { get; set; }
+}

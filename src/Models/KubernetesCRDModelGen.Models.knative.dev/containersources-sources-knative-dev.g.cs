@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceSpecCeOverrides
+public partial class ContainerSourceSpecCeOverrides
 {
     /// <summary>Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.</summary>
     [JsonPropertyName("extensions")]
@@ -19,7 +19,7 @@ public partial class V1ContainerSourceSpecCeOverrides
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceSpecSinkRef
+public partial class ContainerSourceSpecSinkRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -40,11 +40,11 @@ public partial class V1ContainerSourceSpecSinkRef
 
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceSpecSink
+public partial class ContainerSourceSpecSink
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1ContainerSourceSpecSinkRef? Ref { get; set; }
+    public ContainerSourceSpecSinkRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -61,15 +61,15 @@ public partial class V1ContainerSourceSpecSink
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceSpec
+public partial class ContainerSourceSpec
 {
     /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
     [JsonPropertyName("ceOverrides")]
-    public V1ContainerSourceSpecCeOverrides? CeOverrides { get; set; }
+    public ContainerSourceSpecCeOverrides? CeOverrides { get; set; }
 
     /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
     [JsonPropertyName("sink")]
-    public V1ContainerSourceSpecSink? Sink { get; set; }
+    public ContainerSourceSpecSink? Sink { get; set; }
 
     /// <summary>A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</summary>
     [JsonPropertyName("template")]
@@ -78,7 +78,7 @@ public partial class V1ContainerSourceSpec
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceStatusAuth
+public partial class ContainerSourceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -91,7 +91,7 @@ public partial class V1ContainerSourceStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceStatusCeAttributes
+public partial class ContainerSourceStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
     [JsonPropertyName("source")]
@@ -104,7 +104,7 @@ public partial class V1ContainerSourceStatusCeAttributes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceStatusConditions
+public partial class ContainerSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -133,7 +133,7 @@ public partial class V1ContainerSourceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1ContainerSourceStatus
+public partial class ContainerSourceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -141,15 +141,15 @@ public partial class V1ContainerSourceStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1ContainerSourceStatusAuth? Auth { get; set; }
+    public ContainerSourceStatusAuth? Auth { get; set; }
 
     /// <summary>CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.</summary>
     [JsonPropertyName("ceAttributes")]
-    public IList<V1ContainerSourceStatusCeAttributes>? CeAttributes { get; set; }
+    public IList<ContainerSourceStatusCeAttributes>? CeAttributes { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1ContainerSourceStatusConditions>? Conditions { get; set; }
+    public IList<ContainerSourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -170,30 +170,13 @@ public partial class V1ContainerSourceStatus
 
 /// <summary>ContainerSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1ContainerSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1ContainerSourceSpec>, IStatus<V1ContainerSourceStatus>
+public partial class ContainerSource
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "ContainerSource";
-    public const string KubeGroup = "sources.knative.dev";
-    public const string KubePluralName = "containersources";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1ContainerSourceSpec? Spec { get; set; }
+    public ContainerSourceSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1ContainerSourceStatus? Status { get; set; }
+    public ContainerSourceStatus? Status { get; set; }
 }

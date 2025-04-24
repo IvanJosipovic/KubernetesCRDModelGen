@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkServicesEdgeCacheOriginMetadata
+{
+}
+
 /// <summary>Enable AWS Signature Version 4 origin authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authentication
+public partial class NetworkServicesEdgeCacheOriginSpecAwsV4Authentication
 {
     /// <summary>The access key ID your origin uses to identify the key.</summary>
     [JsonPropertyName("accessKeyId")]
@@ -27,7 +33,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authenticati
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd
+public partial class NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header to add.</summary>
     [JsonPropertyName("headerName")]
@@ -44,16 +50,16 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 
 /// <summary>The header actions, including adding and removing headers, for request handled by this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction
+public partial class NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction
 {
     /// <summary>Describes a header to add.  You may add a maximum of 25 request headers.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 }
 
 /// <summary>The URL rewrite configuration for request that are handled by this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite
+public partial class NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of the hostRewrite.  This value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -62,20 +68,20 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAct
 
 /// <summary>The override actions, including url rewrites and header additions, for requests that use this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAction
+public partial class NetworkServicesEdgeCacheOriginSpecOriginOverrideAction
 {
     /// <summary>The header actions, including adding and removing headers, for request handled by this origin.</summary>
     [JsonPropertyName("headerAction")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction? HeaderAction { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecOriginOverrideActionHeaderAction? HeaderAction { get; set; }
 
     /// <summary>The URL rewrite configuration for request that are handled by this origin.</summary>
     [JsonPropertyName("urlRewrite")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite? UrlRewrite { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecOriginOverrideActionUrlRewrite? UrlRewrite { get; set; }
 }
 
 /// <summary>Follow redirects from this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
+public partial class NetworkServicesEdgeCacheOriginSpecOriginRedirect
 {
     /// <summary>The set of redirect response codes that the CDN follows. Values of [RedirectConditions](https://cloud.google.com/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheOrigins#redirectconditions) are accepted.</summary>
     [JsonPropertyName("redirectConditions")]
@@ -84,7 +90,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
+public partial class NetworkServicesEdgeCacheOriginSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -101,7 +107,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef
 
 /// <summary>The connection and HTTP timeout configuration for this origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
+public partial class NetworkServicesEdgeCacheOriginSpecTimeout
 {
     /// <summary>The maximum duration to wait for a single origin connection to be established, including DNS lookup, TLS handshake and TCP/QUIC connection establishment.  Defaults to 5 seconds. The timeout must be a value between 1s and 15s.  The connectTimeout capped by the deadline set by the request's maxAttemptsTimeout.  The last connection attempt may have a smaller connectTimeout in order to adhere to the overall maxAttemptsTimeout.</summary>
     [JsonPropertyName("connectTimeout")]
@@ -122,11 +128,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
+public partial class NetworkServicesEdgeCacheOriginSpec
 {
     /// <summary>Enable AWS Signature Version 4 origin authentication.</summary>
     [JsonPropertyName("awsV4Authentication")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecAwsV4Authentication? AwsV4Authentication { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecAwsV4Authentication? AwsV4Authentication { get; set; }
 
     /// <summary>A human-readable description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -146,11 +152,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
 
     /// <summary>The override actions, including url rewrites and header additions, for requests that use this origin.</summary>
     [JsonPropertyName("originOverrideAction")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecOriginOverrideAction? OriginOverrideAction { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecOriginOverrideAction? OriginOverrideAction { get; set; }
 
     /// <summary>Follow redirects from this origin.</summary>
     [JsonPropertyName("originRedirect")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecOriginRedirect? OriginRedirect { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecOriginRedirect? OriginRedirect { get; set; }
 
     /// <summary>The port to connect to the origin on. Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.</summary>
     [JsonPropertyName("port")]
@@ -158,7 +164,7 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecProjectRef ProjectRef { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The protocol to use to connect to the configured origin. Defaults to HTTP2, and it is strongly recommended that users use HTTP2 for both security &amp; performance.  When using HTTP2 or HTTPS as the protocol, a valid, publicly-signed, unexpired TLS (SSL) certificate must be presented by the origin server. Possible values: ["HTTP2", "HTTPS", "HTTP"].</summary>
     [JsonPropertyName("protocol")]
@@ -174,12 +180,12 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginSpec
 
     /// <summary>The connection and HTTP timeout configuration for this origin.</summary>
     [JsonPropertyName("timeout")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpecTimeout? Timeout { get; set; }
+    public NetworkServicesEdgeCacheOriginSpecTimeout? Timeout { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
+public partial class NetworkServicesEdgeCacheOriginStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -204,11 +210,11 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
+public partial class NetworkServicesEdgeCacheOriginStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1NetworkServicesEdgeCacheOriginStatusConditions>? Conditions { get; set; }
+    public IList<NetworkServicesEdgeCacheOriginStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -217,30 +223,25 @@ public partial class V1alpha1NetworkServicesEdgeCacheOriginStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NetworkServicesEdgeCacheOrigin : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NetworkServicesEdgeCacheOriginSpec>, IStatus<V1alpha1NetworkServicesEdgeCacheOriginStatus>
+public partial class NetworkServicesEdgeCacheOrigin
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NetworkServicesEdgeCacheOrigin";
-    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkservicesedgecacheorigins";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkServicesEdgeCacheOriginMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1NetworkServicesEdgeCacheOriginSpec Spec { get; set; }
+    public NetworkServicesEdgeCacheOriginSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1NetworkServicesEdgeCacheOriginStatus? Status { get; set; }
+    public NetworkServicesEdgeCacheOriginStatus? Status { get; set; }
 }

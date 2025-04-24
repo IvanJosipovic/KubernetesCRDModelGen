@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudiot.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class CloudIOTDeviceMetadata
+{
+}
+
 /// <summary>A public key used to verify the signature of JSON Web Tokens (JWTs).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
+public partial class CloudIOTDeviceSpecCredentialsPublicKey
 {
     /// <summary>The format of the key. Possible values: ["RSA_PEM", "RSA_X509_PEM", "ES256_PEM", "ES256_X509_PEM"].</summary>
     [JsonPropertyName("format")]
@@ -23,7 +29,7 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentialsPublicKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceSpecCredentials
+public partial class CloudIOTDeviceSpecCredentials
 {
     /// <summary>The time at which this credential becomes invalid.</summary>
     [JsonPropertyName("expirationTime")]
@@ -31,12 +37,12 @@ public partial class V1alpha1CloudIOTDeviceSpecCredentials
 
     /// <summary>A public key used to verify the signature of JSON Web Tokens (JWTs).</summary>
     [JsonPropertyName("publicKey")]
-    public V1alpha1CloudIOTDeviceSpecCredentialsPublicKey PublicKey { get; set; }
+    public CloudIOTDeviceSpecCredentialsPublicKey PublicKey { get; set; }
 }
 
 /// <summary>Gateway-related configuration and state.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
+public partial class CloudIOTDeviceSpecGatewayConfig
 {
     /// <summary>Indicates whether the device is a gateway. Possible values: ["ASSOCIATION_ONLY", "DEVICE_AUTH_TOKEN_ONLY", "ASSOCIATION_AND_DEVICE_AUTH_TOKEN"].</summary>
     [JsonPropertyName("gatewayAuthMethod")]
@@ -57,7 +63,7 @@ public partial class V1alpha1CloudIOTDeviceSpecGatewayConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceSpec
+public partial class CloudIOTDeviceSpec
 {
     /// <summary>If a device is blocked, connections or requests from this device will fail.</summary>
     [JsonPropertyName("blocked")]
@@ -65,11 +71,11 @@ public partial class V1alpha1CloudIOTDeviceSpec
 
     /// <summary>The credentials used to authenticate this device.</summary>
     [JsonPropertyName("credentials")]
-    public IList<V1alpha1CloudIOTDeviceSpecCredentials>? Credentials { get; set; }
+    public IList<CloudIOTDeviceSpecCredentials>? Credentials { get; set; }
 
     /// <summary>Gateway-related configuration and state.</summary>
     [JsonPropertyName("gatewayConfig")]
-    public V1alpha1CloudIOTDeviceSpecGatewayConfig? GatewayConfig { get; set; }
+    public CloudIOTDeviceSpecGatewayConfig? GatewayConfig { get; set; }
 
     /// <summary>The logging verbosity for device activity. Possible values: ["NONE", "ERROR", "INFO", "DEBUG"].</summary>
     [JsonPropertyName("logLevel")]
@@ -90,7 +96,7 @@ public partial class V1alpha1CloudIOTDeviceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceStatusConditions
+public partial class CloudIOTDeviceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -115,7 +121,7 @@ public partial class V1alpha1CloudIOTDeviceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceStatusConfig
+public partial class CloudIOTDeviceStatusConfig
 {
     /// <summary>The device configuration data.</summary>
     [JsonPropertyName("binaryData")]
@@ -136,7 +142,7 @@ public partial class V1alpha1CloudIOTDeviceStatusConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
+public partial class CloudIOTDeviceStatusLastErrorStatus
 {
     /// <summary>A list of messages that carry the error details.</summary>
     [JsonPropertyName("details")]
@@ -153,7 +159,7 @@ public partial class V1alpha1CloudIOTDeviceStatusLastErrorStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceStatusState
+public partial class CloudIOTDeviceStatusState
 {
     /// <summary>The device state data.</summary>
     [JsonPropertyName("binaryData")]
@@ -166,15 +172,15 @@ public partial class V1alpha1CloudIOTDeviceStatusState
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1CloudIOTDeviceStatus
+public partial class CloudIOTDeviceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1CloudIOTDeviceStatusConditions>? Conditions { get; set; }
+    public IList<CloudIOTDeviceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.</summary>
     [JsonPropertyName("config")]
-    public IList<V1alpha1CloudIOTDeviceStatusConfig>? Config { get; set; }
+    public IList<CloudIOTDeviceStatusConfig>? Config { get; set; }
 
     /// <summary>The last time a cloud-to-device config version acknowledgment was received from the device.</summary>
     [JsonPropertyName("lastConfigAckTime")]
@@ -186,7 +192,7 @@ public partial class V1alpha1CloudIOTDeviceStatus
 
     /// <summary>The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.</summary>
     [JsonPropertyName("lastErrorStatus")]
-    public IList<V1alpha1CloudIOTDeviceStatusLastErrorStatus>? LastErrorStatus { get; set; }
+    public IList<CloudIOTDeviceStatusLastErrorStatus>? LastErrorStatus { get; set; }
 
     /// <summary>The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.</summary>
     [JsonPropertyName("lastErrorTime")]
@@ -214,35 +220,30 @@ public partial class V1alpha1CloudIOTDeviceStatus
 
     /// <summary>The state most recently received from the device.</summary>
     [JsonPropertyName("state")]
-    public IList<V1alpha1CloudIOTDeviceStatusState>? State { get; set; }
+    public IList<CloudIOTDeviceStatusState>? State { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1CloudIOTDevice : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudIOTDeviceSpec>, IStatus<V1alpha1CloudIOTDeviceStatus>
+public partial class CloudIOTDevice
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "CloudIOTDevice";
-    public const string KubeGroup = "cloudiot.cnrm.cloud.google.com";
-    public const string KubePluralName = "cloudiotdevices";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public CloudIOTDeviceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1CloudIOTDeviceSpec Spec { get; set; }
+    public CloudIOTDeviceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1CloudIOTDeviceStatus? Status { get; set; }
+    public CloudIOTDeviceStatus? Status { get; set; }
 }

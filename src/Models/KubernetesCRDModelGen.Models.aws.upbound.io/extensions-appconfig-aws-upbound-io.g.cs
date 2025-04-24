@@ -719,3 +719,29 @@ public partial class V1beta1Extension : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1ExtensionStatus? Status { get; set; }
 }
+
+/// <summary>Extension is the Schema for the Extensions API. Provides an AppConfig Extension resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ExtensionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Extension>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ExtensionList";
+    public const string KubeGroup = "appconfig.aws.upbound.io";
+    public const string KubePluralName = "extensions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Extension> Items { get; set; }
+}

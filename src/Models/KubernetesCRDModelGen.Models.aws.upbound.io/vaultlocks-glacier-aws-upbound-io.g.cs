@@ -414,3 +414,29 @@ public partial class V1beta1VaultLock : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1VaultLockStatus? Status { get; set; }
 }
+
+/// <summary>VaultLock is the Schema for the VaultLocks API. Manages a Glacier Vault Lock.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VaultLockList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VaultLock>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VaultLockList";
+    public const string KubeGroup = "glacier.aws.upbound.io";
+    public const string KubePluralName = "vaultlocks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VaultLock> Items { get; set; }
+}

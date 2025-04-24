@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securitycenter.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class SecurityCenterNotificationConfigMetadata
+{
+}
+
 /// <summary>The organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
+public partial class SecurityCenterNotificationConfigSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef
 
 /// <summary>The config for triggering streaming-based notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
+public partial class SecurityCenterNotificationConfigSpecStreamingConfig
 {
     /// <summary>Expression that defines the filter to apply across create/update events of assets or findings as specified by the event type. The expression is a list of zero or more restrictions combined via logical operators AND and OR. Parentheses are supported, and OR has higher precedence than AND.  Restrictions have the form &lt;field&gt; &lt;operator&gt; &lt;value&gt; and may have a - character in front of them to indicate negation. The fields map to those defined in the corresponding resource.  The supported operators are:  * = for all value types. * &gt;, &lt;, &gt;=, &lt;= for integer values. * :, meaning substring matching, for strings.  The supported value types are:  * string literals in quotes. * integer literals without quotes. * boolean literals true and false without quotes.  See [Filtering notifications](https://cloud.google.com/security-command-center/docs/how-to-api-filter-notifications) for information on how to write a filter.</summary>
     [JsonPropertyName("filter")]
@@ -36,7 +42,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterNotificationConfigSpec
+public partial class SecurityCenterNotificationConfigSpec
 {
     /// <summary>Immutable. This must be unique within the organization.</summary>
     [JsonPropertyName("configId")]
@@ -48,7 +54,7 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpec
 
     /// <summary>The organization that this resource belongs to.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1alpha1SecurityCenterNotificationConfigSpecOrganizationRef OrganizationRef { get; set; }
+    public SecurityCenterNotificationConfigSpecOrganizationRef OrganizationRef { get; set; }
 
     /// <summary>The Pub/Sub topic to send notifications to. Its format is "projects/[project_id]/topics/[topic]".</summary>
     [JsonPropertyName("pubsubTopic")]
@@ -60,12 +66,12 @@ public partial class V1alpha1SecurityCenterNotificationConfigSpec
 
     /// <summary>The config for triggering streaming-based notifications.</summary>
     [JsonPropertyName("streamingConfig")]
-    public V1alpha1SecurityCenterNotificationConfigSpecStreamingConfig StreamingConfig { get; set; }
+    public SecurityCenterNotificationConfigSpecStreamingConfig StreamingConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
+public partial class SecurityCenterNotificationConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -90,11 +96,11 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecurityCenterNotificationConfigStatus
+public partial class SecurityCenterNotificationConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1SecurityCenterNotificationConfigStatusConditions>? Conditions { get; set; }
+    public IList<SecurityCenterNotificationConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of this notification config, in the format 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.</summary>
     [JsonPropertyName("name")]
@@ -111,30 +117,25 @@ public partial class V1alpha1SecurityCenterNotificationConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SecurityCenterNotificationConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1SecurityCenterNotificationConfigSpec>, IStatus<V1alpha1SecurityCenterNotificationConfigStatus>
+public partial class SecurityCenterNotificationConfig
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SecurityCenterNotificationConfig";
-    public const string KubeGroup = "securitycenter.cnrm.cloud.google.com";
-    public const string KubePluralName = "securitycenternotificationconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public SecurityCenterNotificationConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1SecurityCenterNotificationConfigSpec Spec { get; set; }
+    public SecurityCenterNotificationConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1SecurityCenterNotificationConfigStatus? Status { get; set; }
+    public SecurityCenterNotificationConfigStatus? Status { get; set; }
 }

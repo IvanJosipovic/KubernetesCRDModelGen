@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecInstanceGroupManagerRef
+public partial class ComputePerInstanceConfigMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputePerInstanceConfigSpecInstanceGroupManagerRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstanceGroupManager` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecInstanceGroupManagerRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateDisk
+public partial class ComputePerInstanceConfigSpecPreservedStateDisk
 {
     /// <summary>A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are 'NEVER' and 'ON_PERMANENT_INSTANCE_DELETION'. 'NEVER' - detach the disk when the VM is deleted, but do not delete the disk. 'ON_PERMANENT_INSTANCE_DELETION' will delete the stateful disk when the VM is permanently deleted from the instance group. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
     [JsonPropertyName("deleteRule")]
@@ -48,7 +54,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateDisk
 
 /// <summary>Ip address representation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress
+public partial class ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
     [JsonPropertyName("address")]
@@ -57,7 +63,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalI
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIp
+public partial class ComputePerInstanceConfigSpecPreservedStateExternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
     [JsonPropertyName("autoDelete")]
@@ -69,12 +75,12 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalI
 
     /// <summary>Ip address representation.</summary>
     [JsonPropertyName("ipAddress")]
-    public V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress? IpAddress { get; set; }
+    public ComputePerInstanceConfigSpecPreservedStateExternalIpIpAddress? IpAddress { get; set; }
 }
 
 /// <summary>Ip address representation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress
+public partial class ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress
 {
     /// <summary>The URL of the reservation for this IP address.</summary>
     [JsonPropertyName("address")]
@@ -83,7 +89,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalI
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIp
+public partial class ComputePerInstanceConfigSpecPreservedStateInternalIp
 {
     /// <summary>These stateful IPs will never be released during autohealing, update or VM instance recreate operations. This flag is used to configure if the IP reservation should be deleted after it is no longer used by the group, e.g. when the given instance or the whole group is deleted. Default value: "NEVER" Possible values: ["NEVER", "ON_PERMANENT_INSTANCE_DELETION"].</summary>
     [JsonPropertyName("autoDelete")]
@@ -95,24 +101,24 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalI
 
     /// <summary>Ip address representation.</summary>
     [JsonPropertyName("ipAddress")]
-    public V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress? IpAddress { get; set; }
+    public ComputePerInstanceConfigSpecPreservedStateInternalIpIpAddress? IpAddress { get; set; }
 }
 
 /// <summary>The preserved state for this instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecPreservedState
+public partial class ComputePerInstanceConfigSpecPreservedState
 {
     /// <summary>Stateful disks for the instance.</summary>
     [JsonPropertyName("disk")]
-    public IList<V1alpha1ComputePerInstanceConfigSpecPreservedStateDisk>? Disk { get; set; }
+    public IList<ComputePerInstanceConfigSpecPreservedStateDisk>? Disk { get; set; }
 
     /// <summary>Preserved external IPs defined for this instance. This map is keyed with the name of the network interface.</summary>
     [JsonPropertyName("externalIp")]
-    public IList<V1alpha1ComputePerInstanceConfigSpecPreservedStateExternalIp>? ExternalIp { get; set; }
+    public IList<ComputePerInstanceConfigSpecPreservedStateExternalIp>? ExternalIp { get; set; }
 
     /// <summary>Preserved internal IPs defined for this instance. This map is keyed with the name of the network interface.</summary>
     [JsonPropertyName("internalIp")]
-    public IList<V1alpha1ComputePerInstanceConfigSpecPreservedStateInternalIp>? InternalIp { get; set; }
+    public IList<ComputePerInstanceConfigSpecPreservedStateInternalIp>? InternalIp { get; set; }
 
     /// <summary>Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.</summary>
     [JsonPropertyName("metadata")]
@@ -121,7 +127,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpecPreservedState
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpecProjectRef
+public partial class ComputePerInstanceConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -138,11 +144,11 @@ public partial class V1alpha1ComputePerInstanceConfigSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigSpec
+public partial class ComputePerInstanceConfigSpec
 {
     /// <summary></summary>
     [JsonPropertyName("instanceGroupManagerRef")]
-    public V1alpha1ComputePerInstanceConfigSpecInstanceGroupManagerRef InstanceGroupManagerRef { get; set; }
+    public ComputePerInstanceConfigSpecInstanceGroupManagerRef InstanceGroupManagerRef { get; set; }
 
     /// <summary>The minimal action to perform on the instance during an update. Default is 'NONE'. Possible values are: * REPLACE * RESTART * REFRESH * NONE.</summary>
     [JsonPropertyName("minimalAction")]
@@ -154,11 +160,11 @@ public partial class V1alpha1ComputePerInstanceConfigSpec
 
     /// <summary>The preserved state for this instance.</summary>
     [JsonPropertyName("preservedState")]
-    public V1alpha1ComputePerInstanceConfigSpecPreservedState? PreservedState { get; set; }
+    public ComputePerInstanceConfigSpecPreservedState? PreservedState { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1ComputePerInstanceConfigSpecProjectRef ProjectRef { get; set; }
+    public ComputePerInstanceConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>When true, deleting this config will immediately remove any specified state from the underlying instance. When false, deleting this config will *not* immediately remove any state from the underlying instance. State will be removed on the next instance recreation or update.</summary>
     [JsonPropertyName("removeInstanceStateOnDestroy")]
@@ -175,7 +181,7 @@ public partial class V1alpha1ComputePerInstanceConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigStatusConditions
+public partial class ComputePerInstanceConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -200,11 +206,11 @@ public partial class V1alpha1ComputePerInstanceConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputePerInstanceConfigStatus
+public partial class ComputePerInstanceConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ComputePerInstanceConfigStatusConditions>? Conditions { get; set; }
+    public IList<ComputePerInstanceConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -213,30 +219,25 @@ public partial class V1alpha1ComputePerInstanceConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComputePerInstanceConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputePerInstanceConfigSpec>, IStatus<V1alpha1ComputePerInstanceConfigStatus>
+public partial class ComputePerInstanceConfig
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComputePerInstanceConfig";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeperinstanceconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputePerInstanceConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ComputePerInstanceConfigSpec Spec { get; set; }
+    public ComputePerInstanceConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ComputePerInstanceConfigStatus? Status { get; set; }
+    public ComputePerInstanceConfigStatus? Status { get; set; }
 }

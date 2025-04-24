@@ -446,3 +446,29 @@ public partial class V1beta1ApplicationInsightsAnalyticsItem : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsAnalyticsItemStatus? Status { get; set; }
 }
+
+/// <summary>ApplicationInsightsAnalyticsItem is the Schema for the ApplicationInsightsAnalyticsItems API. Manages an Application Insights Analytics Item component.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationInsightsAnalyticsItemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsAnalyticsItem>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationInsightsAnalyticsItemList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "applicationinsightsanalyticsitems";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApplicationInsightsAnalyticsItem> Items { get; set; }
+}

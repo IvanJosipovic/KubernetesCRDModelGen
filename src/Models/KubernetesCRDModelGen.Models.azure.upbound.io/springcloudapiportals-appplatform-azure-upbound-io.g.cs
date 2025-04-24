@@ -573,3 +573,29 @@ public partial class V1beta1SpringCloudAPIPortal : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1SpringCloudAPIPortalStatus? Status { get; set; }
 }
+
+/// <summary>SpringCloudAPIPortal is the Schema for the SpringCloudAPIPortals API. Manages a Spring Cloud API Portal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudAPIPortalList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudAPIPortal>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudAPIPortalList";
+    public const string KubeGroup = "appplatform.azure.upbound.io";
+    public const string KubePluralName = "springcloudapiportals";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudAPIPortal> Items { get; set; }
+}

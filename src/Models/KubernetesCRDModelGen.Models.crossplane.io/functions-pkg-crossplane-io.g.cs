@@ -163,3 +163,29 @@ public partial class V1Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1Funct
     [JsonPropertyName("status")]
     public V1FunctionStatus? Status { get; set; }
 }
+
+/// <summary>A Function installs an OCI compatible Crossplane package, extending Crossplane with support for a new kind of composition function.  Read the Crossplane documentation for [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1FunctionList : IKubernetesObject<V1ListMeta>, IItems<V1Function>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "FunctionList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "functions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Function> Items { get; set; }
+}

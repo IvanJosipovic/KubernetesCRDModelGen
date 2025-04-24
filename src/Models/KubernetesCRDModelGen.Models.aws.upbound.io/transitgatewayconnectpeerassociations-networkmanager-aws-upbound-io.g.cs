@@ -534,3 +534,29 @@ public partial class V1beta1TransitGatewayConnectPeerAssociation : IKubernetesOb
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayConnectPeerAssociationStatus? Status { get; set; }
 }
+
+/// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Associates a transit gateway Connect peer with a device, and optionally, with a link.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TransitGatewayConnectPeerAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayConnectPeerAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TransitGatewayConnectPeerAssociationList";
+    public const string KubeGroup = "networkmanager.aws.upbound.io";
+    public const string KubePluralName = "transitgatewayconnectpeerassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TransitGatewayConnectPeerAssociation> Items { get; set; }
+}

@@ -630,3 +630,29 @@ public partial class V1beta1MaintenanceConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1MaintenanceConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>MaintenanceConfiguration is the Schema for the MaintenanceConfigurations API. Manages a Maintenance Configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MaintenanceConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MaintenanceConfigurationList";
+    public const string KubeGroup = "maintenance.azure.upbound.io";
+    public const string KubePluralName = "maintenanceconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MaintenanceConfiguration> Items { get; set; }
+}

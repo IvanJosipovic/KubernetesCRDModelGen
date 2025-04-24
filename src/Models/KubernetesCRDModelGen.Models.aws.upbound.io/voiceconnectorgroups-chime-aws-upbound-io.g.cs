@@ -417,3 +417,29 @@ public partial class V1beta1VoiceConnectorGroup : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorGroupStatus? Status { get; set; }
 }
+
+/// <summary>VoiceConnectorGroup is the Schema for the VoiceConnectorGroups API. Creates an Amazon Chime Voice Connector group under the administrator's AWS account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorGroupList";
+    public const string KubeGroup = "chime.aws.upbound.io";
+    public const string KubePluralName = "voiceconnectorgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorGroup> Items { get; set; }
+}

@@ -2712,3 +2712,29 @@ public partial class V1beta1V2Service : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1V2ServiceStatus? Status { get; set; }
 }
+
+/// <summary>V2Service is the Schema for the V2Services API. Service acts as a top-level container that manages a set of configurations and revision templates which implement a network service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1V2ServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1V2Service>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "V2ServiceList";
+    public const string KubeGroup = "cloudrun.gcp.upbound.io";
+    public const string KubePluralName = "v2services";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1V2Service> Items { get; set; }
+}

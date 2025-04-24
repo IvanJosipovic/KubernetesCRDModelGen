@@ -301,3 +301,29 @@ public partial class V1beta1WorkstationCluster : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1beta1WorkstationClusterStatus? Status { get; set; }
 }
+
+/// <summary>WorkstationCluster is the Schema for the WorkstationCluster API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkstationClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkstationCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkstationClusterList";
+    public const string KubeGroup = "workstations.cnrm.cloud.google.com";
+    public const string KubePluralName = "workstationclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkstationCluster> Items { get; set; }
+}

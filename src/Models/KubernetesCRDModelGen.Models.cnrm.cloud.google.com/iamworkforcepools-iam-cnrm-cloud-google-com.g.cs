@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IAMWorkforcePoolMetadata
+{
+}
+
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkforcePoolSpecOrganizationRef
+public partial class IAMWorkforcePoolSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1IAMWorkforcePoolSpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkforcePoolSpec
+public partial class IAMWorkforcePoolSpec
 {
     /// <summary>A user-specified description of the pool. Cannot exceed 256 characters.</summary>
     [JsonPropertyName("description")]
@@ -47,7 +53,7 @@ public partial class V1beta1IAMWorkforcePoolSpec
 
     /// <summary>Immutable. The Organization that this resource belongs to. Only one of [organizationRef] may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1beta1IAMWorkforcePoolSpecOrganizationRef OrganizationRef { get; set; }
+    public IAMWorkforcePoolSpecOrganizationRef OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -60,7 +66,7 @@ public partial class V1beta1IAMWorkforcePoolSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkforcePoolStatusConditions
+public partial class IAMWorkforcePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -85,11 +91,11 @@ public partial class V1beta1IAMWorkforcePoolStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMWorkforcePoolStatus
+public partial class IAMWorkforcePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1IAMWorkforcePoolStatusConditions>? Conditions { get; set; }
+    public IList<IAMWorkforcePoolStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -106,30 +112,25 @@ public partial class V1beta1IAMWorkforcePoolStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAMWorkforcePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMWorkforcePoolSpec>, IStatus<V1beta1IAMWorkforcePoolStatus>
+public partial class IAMWorkforcePool
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAMWorkforcePool";
-    public const string KubeGroup = "iam.cnrm.cloud.google.com";
-    public const string KubePluralName = "iamworkforcepools";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IAMWorkforcePoolMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1IAMWorkforcePoolSpec Spec { get; set; }
+    public IAMWorkforcePoolSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1IAMWorkforcePoolStatus? Status { get; set; }
+    public IAMWorkforcePoolStatus? Status { get; set; }
 }

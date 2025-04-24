@@ -326,3 +326,29 @@ public partial class V1beta1Channel : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1ChannelStatus? Status { get; set; }
 }
+
+/// <summary>Channel is the Schema for the Channels API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ChannelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Channel>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ChannelList";
+    public const string KubeGroup = "ivs.aws.upbound.io";
+    public const string KubePluralName = "channels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Channel> Items { get; set; }
+}

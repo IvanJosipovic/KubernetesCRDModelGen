@@ -310,3 +310,29 @@ public partial class V1beta2OCIRepository : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta2OCIRepositoryStatus? Status { get; set; }
 }
+
+/// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta2OCIRepository>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "OCIRepositoryList";
+    public const string KubeGroup = "source.toolkit.fluxcd.io";
+    public const string KubePluralName = "ocirepositories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2OCIRepository> Items { get; set; }
+}

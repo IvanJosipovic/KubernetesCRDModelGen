@@ -254,3 +254,29 @@ public partial class V1beta1SecurityConfiguration : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1SecurityConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>SecurityConfiguration is the Schema for the SecurityConfigurations API. Provides a resource to manage AWS EMR Security Configurations</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecurityConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecurityConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecurityConfigurationList";
+    public const string KubeGroup = "emr.aws.upbound.io";
+    public const string KubePluralName = "securityconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecurityConfiguration> Items { get; set; }
+}

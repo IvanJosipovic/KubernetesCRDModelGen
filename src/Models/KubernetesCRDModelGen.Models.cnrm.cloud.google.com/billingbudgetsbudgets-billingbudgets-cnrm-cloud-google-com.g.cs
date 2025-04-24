@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.billingbudgets.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels
+public partial class BillingBudgetsBudgetMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `MonitoringNotificationChannel` resource (format: `projects/{{project}}/notificationChannels/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNoti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
+public partial class BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
 {
     /// <summary>Optional. The name of the Pub/Sub topic where budget related messages will be published, in the form `projects/{project_id}/topics/{topic_id}`. Updates are sent at regular intervals to the topic. The topic needs to be created before the budget is created; see https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications for more details. Caller is expected to have `pubsub.topics.setIamPolicy` permission on the topic when it's set for a budget, otherwise, the API call will fail with PERMISSION_DENIED. See https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#permissions_required_for_this_task for more details on Pub/Sub roles and permissions.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef
 
 /// <summary>Optional. Rules to apply to notifications sent based on budget spend and thresholds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
+public partial class BillingBudgetsBudgetSpecAllUpdatesRule
 {
     /// <summary>Optional. When set to true, disables default notifications sent when a threshold is exceeded. Default notifications are sent to those with Billing Account Administrator and Billing Account User IAM roles for the target account.</summary>
     [JsonPropertyName("disableDefaultIamRecipients")]
@@ -52,11 +58,11 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
 
     /// <summary></summary>
     [JsonPropertyName("monitoringNotificationChannels")]
-    public IList<V1beta1BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels>? MonitoringNotificationChannels { get; set; }
+    public IList<BillingBudgetsBudgetSpecAllUpdatesRuleMonitoringNotificationChannels>? MonitoringNotificationChannels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("pubsubTopicRef")]
-    public V1beta1BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef? PubsubTopicRef { get; set; }
+    public BillingBudgetsBudgetSpecAllUpdatesRulePubsubTopicRef? PubsubTopicRef { get; set; }
 
     /// <summary>Optional. Required when NotificationsRule.pubsub_topic is set. The schema version of the notification sent to NotificationsRule.pubsub_topic. Only "1.0" is accepted. It represents the JSON schema as defined in https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.</summary>
     [JsonPropertyName("schemaVersion")]
@@ -65,7 +71,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAllUpdatesRule
 
 /// <summary>A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
+public partial class BillingBudgetsBudgetSpecAmountSpecifiedAmount
 {
     /// <summary>Immutable. The three-letter currency code defined in ISO 4217.</summary>
     [JsonPropertyName("currencyCode")]
@@ -82,7 +88,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount
 
 /// <summary>Required. Budgeted amount.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecAmount
+public partial class BillingBudgetsBudgetSpecAmount
 {
     /// <summary>Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a .</summary>
     [JsonPropertyName("lastPeriodAmount")]
@@ -90,12 +96,12 @@ public partial class V1beta1BillingBudgetsBudgetSpecAmount
 
     /// <summary>A specified amount to use as the budget. `currency_code` is optional. If specified when creating a budget, it must match the currency of the billing account. If specified when updating a budget, it must match the currency_code of the existing budget. The `currency_code` is provided on output.</summary>
     [JsonPropertyName("specifiedAmount")]
-    public V1beta1BillingBudgetsBudgetSpecAmountSpecifiedAmount? SpecifiedAmount { get; set; }
+    public BillingBudgetsBudgetSpecAmountSpecifiedAmount? SpecifiedAmount { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
+public partial class BillingBudgetsBudgetSpecBillingAccountRef
 {
     /// <summary>The billing account of the resource  Allowed value: The Google Cloud resource name of a Google Cloud Billing Account (format: `billingAccounts/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -112,7 +118,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBillingAccountRef
 
 /// <summary>Immutable. Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate
+public partial class BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate
 {
     /// <summary>Immutable. Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -129,7 +135,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndD
 
 /// <summary>Immutable. Required. The start date must be after January 1, 2017.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate
+public partial class BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate
 {
     /// <summary>Immutable. Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by itself or a year and month where the day isn't significant.</summary>
     [JsonPropertyName("day")]
@@ -146,20 +152,20 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStar
 
 /// <summary>Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
+public partial class BillingBudgetsBudgetSpecBudgetFilterCustomPeriod
 {
     /// <summary>Immutable. Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.</summary>
     [JsonPropertyName("endDate")]
-    public V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate? EndDate { get; set; }
+    public BillingBudgetsBudgetSpecBudgetFilterCustomPeriodEndDate? EndDate { get; set; }
 
     /// <summary>Immutable. Required. The start date must be after January 1, 2017.</summary>
     [JsonPropertyName("startDate")]
-    public V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate StartDate { get; set; }
+    public BillingBudgetsBudgetSpecBudgetFilterCustomPeriodStartDate StartDate { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
+public partial class BillingBudgetsBudgetSpecBudgetFilterLabels
 {
     /// <summary>Immutable. The values of the label</summary>
     [JsonPropertyName("values")]
@@ -168,7 +174,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
+public partial class BillingBudgetsBudgetSpecBudgetFilterProjects
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -185,7 +191,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
+public partial class BillingBudgetsBudgetSpecBudgetFilterSubaccounts
 {
     /// <summary></summary>
     [JsonPropertyName("external")]
@@ -202,7 +208,7 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts
 
 /// <summary>Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
+public partial class BillingBudgetsBudgetSpecBudgetFilter
 {
     /// <summary>Optional. Specifies to track usage for recurring calendar period. For example, assume that CalendarPeriod.QUARTER is set. The budget will track usage from April 1 to June 30, when the current calendar month is April, May, June. After that, it will track usage from July 1 to September 30 when the current calendar month is July, August, September, so on. Possible values: CALENDAR_PERIOD_UNSPECIFIED, MONTH, QUARTER, YEAR</summary>
     [JsonPropertyName("calendarPeriod")]
@@ -218,15 +224,15 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
 
     /// <summary>Optional. Specifies to track usage from any start date (required) to any end date (optional). This time period is static, it does not recur.</summary>
     [JsonPropertyName("customPeriod")]
-    public V1beta1BillingBudgetsBudgetSpecBudgetFilterCustomPeriod? CustomPeriod { get; set; }
+    public BillingBudgetsBudgetSpecBudgetFilterCustomPeriod? CustomPeriod { get; set; }
 
     /// <summary>Optional. A single label and value pair specifying that usage from only this set of labeled resources should be included in the budget. Currently, multiple entries or multiple values per entry are not allowed. If omitted, the report will include all labeled and unlabeled usage.</summary>
     [JsonPropertyName("labels")]
-    public IDictionary<string, V1beta1BillingBudgetsBudgetSpecBudgetFilterLabels>? Labels { get; set; }
+    public IDictionary<string, BillingBudgetsBudgetSpecBudgetFilterLabels>? Labels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("projects")]
-    public IList<V1beta1BillingBudgetsBudgetSpecBudgetFilterProjects>? Projects { get; set; }
+    public IList<BillingBudgetsBudgetSpecBudgetFilterProjects>? Projects { get; set; }
 
     /// <summary>Optional. A set of services of the form `services/{service_id}`, specifying that usage from only this set of services should be included in the budget. If omitted, the report will include usage for all the services. The service names are available through the Catalog API: https://cloud.google.com/billing/v1/how-tos/catalog-api.</summary>
     [JsonPropertyName("services")]
@@ -234,12 +240,12 @@ public partial class V1beta1BillingBudgetsBudgetSpecBudgetFilter
 
     /// <summary></summary>
     [JsonPropertyName("subaccounts")]
-    public IList<V1beta1BillingBudgetsBudgetSpecBudgetFilterSubaccounts>? Subaccounts { get; set; }
+    public IList<BillingBudgetsBudgetSpecBudgetFilterSubaccounts>? Subaccounts { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
+public partial class BillingBudgetsBudgetSpecThresholdRules
 {
     /// <summary>Optional. The type of basis used to determine if spend has passed the threshold. Behavior defaults to CURRENT_SPEND if not set. Possible values: BASIS_UNSPECIFIED, CURRENT_SPEND, FORECASTED_SPEND</summary>
     [JsonPropertyName("spendBasis")]
@@ -252,23 +258,23 @@ public partial class V1beta1BillingBudgetsBudgetSpecThresholdRules
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetSpec
+public partial class BillingBudgetsBudgetSpec
 {
     /// <summary>Optional. Rules to apply to notifications sent based on budget spend and thresholds.</summary>
     [JsonPropertyName("allUpdatesRule")]
-    public V1beta1BillingBudgetsBudgetSpecAllUpdatesRule? AllUpdatesRule { get; set; }
+    public BillingBudgetsBudgetSpecAllUpdatesRule? AllUpdatesRule { get; set; }
 
     /// <summary>Required. Budgeted amount.</summary>
     [JsonPropertyName("amount")]
-    public V1beta1BillingBudgetsBudgetSpecAmount Amount { get; set; }
+    public BillingBudgetsBudgetSpecAmount Amount { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("billingAccountRef")]
-    public V1beta1BillingBudgetsBudgetSpecBillingAccountRef BillingAccountRef { get; set; }
+    public BillingBudgetsBudgetSpecBillingAccountRef BillingAccountRef { get; set; }
 
     /// <summary>Optional. Filters that define which resources are used to compute the actual spend against the budget amount, such as projects, services, and the budget's time period, as well as other filters.</summary>
     [JsonPropertyName("budgetFilter")]
-    public V1beta1BillingBudgetsBudgetSpecBudgetFilter? BudgetFilter { get; set; }
+    public BillingBudgetsBudgetSpecBudgetFilter? BudgetFilter { get; set; }
 
     /// <summary>User data for display name in UI. The name must be less than or equal to 60 characters.</summary>
     [JsonPropertyName("displayName")]
@@ -280,12 +286,12 @@ public partial class V1beta1BillingBudgetsBudgetSpec
 
     /// <summary>Optional. Rules that trigger alerts (notifications of thresholds being crossed) when spend exceeds the specified percentages of the budget.</summary>
     [JsonPropertyName("thresholdRules")]
-    public IList<V1beta1BillingBudgetsBudgetSpecThresholdRules>? ThresholdRules { get; set; }
+    public IList<BillingBudgetsBudgetSpecThresholdRules>? ThresholdRules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetStatusConditions
+public partial class BillingBudgetsBudgetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -310,11 +316,11 @@ public partial class V1beta1BillingBudgetsBudgetStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BillingBudgetsBudgetStatus
+public partial class BillingBudgetsBudgetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1BillingBudgetsBudgetStatusConditions>? Conditions { get; set; }
+    public IList<BillingBudgetsBudgetStatusConditions>? Conditions { get; set; }
 
     /// <summary>Optional. Etag to validate that the object is unchanged for a read-modify-write operation. An empty etag will cause an update to overwrite other changes.</summary>
     [JsonPropertyName("etag")]
@@ -327,30 +333,25 @@ public partial class V1beta1BillingBudgetsBudgetStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BillingBudgetsBudget : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BillingBudgetsBudgetSpec>, IStatus<V1beta1BillingBudgetsBudgetStatus>
+public partial class BillingBudgetsBudget
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BillingBudgetsBudget";
-    public const string KubeGroup = "billingbudgets.cnrm.cloud.google.com";
-    public const string KubePluralName = "billingbudgetsbudgets";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BillingBudgetsBudgetMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1BillingBudgetsBudgetSpec Spec { get; set; }
+    public BillingBudgetsBudgetSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1BillingBudgetsBudgetStatus? Status { get; set; }
+    public BillingBudgetsBudgetStatus? Status { get; set; }
 }

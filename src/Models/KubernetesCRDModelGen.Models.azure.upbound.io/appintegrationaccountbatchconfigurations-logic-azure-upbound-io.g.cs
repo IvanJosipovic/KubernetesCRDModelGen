@@ -814,3 +814,29 @@ public partial class V1beta1AppIntegrationAccountBatchConfiguration : IKubernete
     [JsonPropertyName("status")]
     public V1beta1AppIntegrationAccountBatchConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>AppIntegrationAccountBatchConfiguration is the Schema for the AppIntegrationAccountBatchConfigurations API. Manages a Logic App Integration Account Batch Configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppIntegrationAccountBatchConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppIntegrationAccountBatchConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppIntegrationAccountBatchConfigurationList";
+    public const string KubeGroup = "logic.azure.upbound.io";
+    public const string KubePluralName = "appintegrationaccountbatchconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppIntegrationAccountBatchConfiguration> Items { get; set; }
+}

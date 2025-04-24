@@ -650,3 +650,29 @@ public partial class V1beta1AccessLevelCondition : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1AccessLevelConditionStatus? Status { get; set; }
 }
+
+/// <summary>AccessLevelCondition is the Schema for the AccessLevelConditions API. Allows configuring a single access level condition to be appended to an access level's conditions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessLevelConditionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessLevelCondition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessLevelConditionList";
+    public const string KubeGroup = "accesscontextmanager.gcp.upbound.io";
+    public const string KubePluralName = "accesslevelconditions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessLevelCondition> Items { get; set; }
+}

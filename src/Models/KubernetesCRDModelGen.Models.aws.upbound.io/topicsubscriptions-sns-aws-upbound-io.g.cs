@@ -782,3 +782,29 @@ public partial class V1beta1TopicSubscription : IKubernetesObject<V1ObjectMeta>,
     [JsonPropertyName("status")]
     public V1beta1TopicSubscriptionStatus? Status { get; set; }
 }
+
+/// <summary>TopicSubscription is the Schema for the TopicSubscriptions API. Provides a resource for subscribing to SNS topics.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TopicSubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TopicSubscription>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TopicSubscriptionList";
+    public const string KubeGroup = "sns.aws.upbound.io";
+    public const string KubePluralName = "topicsubscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TopicSubscription> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceSpec
+public partial class ApigeeInstanceMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeInstanceSpec
 {
     /// <summary>Immutable. Optional. Customer accept list represents the list of projects (id/number) on customer side that can privately connect to the service attachment. It is an optional field which the customers can provide during the instance creation. By default, the customer project associated with the Apigee organization will be included to the list.</summary>
     [JsonPropertyName("consumerAcceptList")]
@@ -51,7 +57,7 @@ public partial class V1alpha1ApigeeInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceStatusConditions
+public partial class ApigeeInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -76,11 +82,11 @@ public partial class V1alpha1ApigeeInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeInstanceStatus
+public partial class ApigeeInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ApigeeInstanceStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Hostname or IP address of the exposed Apigee endpoint used by clients to connect to the service.</summary>
     [JsonPropertyName("host")]
@@ -101,30 +107,25 @@ public partial class V1alpha1ApigeeInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ApigeeInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeInstanceSpec>, IStatus<V1alpha1ApigeeInstanceStatus>
+public partial class ApigeeInstance
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ApigeeInstance";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeinstances";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeInstanceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ApigeeInstanceSpec Spec { get; set; }
+    public ApigeeInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ApigeeInstanceStatus? Status { get; set; }
+    public ApigeeInstanceStatus? Status { get; set; }
 }

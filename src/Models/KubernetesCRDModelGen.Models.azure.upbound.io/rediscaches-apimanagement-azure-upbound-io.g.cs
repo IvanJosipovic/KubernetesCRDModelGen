@@ -512,3 +512,29 @@ public partial class V1beta1RedisCache : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1RedisCacheStatus? Status { get; set; }
 }
+
+/// <summary>RedisCache is the Schema for the RedisCaches API. Manages a API Management Redis Cache.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisCacheList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCache>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisCacheList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "rediscaches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisCache> Items { get; set; }
+}

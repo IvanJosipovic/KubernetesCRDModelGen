@@ -446,3 +446,29 @@ public partial class V1Certificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1Ce
     [JsonPropertyName("status")]
     public V1CertificateStatus? Status { get; set; }
 }
+
+/// <summary>A Certificate resource should be created to ensure an up to date and signed X.509 certificate is stored in the Kubernetes Secret resource named in `spec.secretName`.  The stored certificate will be renewed before it expires (as configured by `spec.renewBefore`).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CertificateList : IKubernetesObject<V1ListMeta>, IItems<V1Certificate>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CertificateList";
+    public const string KubeGroup = "cert-manager.io";
+    public const string KubePluralName = "certificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Certificate> Items { get; set; }
+}

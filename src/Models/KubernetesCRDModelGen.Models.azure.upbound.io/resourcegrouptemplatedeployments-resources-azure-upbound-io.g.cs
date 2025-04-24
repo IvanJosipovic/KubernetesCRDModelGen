@@ -382,3 +382,29 @@ public partial class V1beta1ResourceGroupTemplateDeployment : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1ResourceGroupTemplateDeploymentStatus? Status { get; set; }
 }
+
+/// <summary>ResourceGroupTemplateDeployment is the Schema for the ResourceGroupTemplateDeployments API. Manages a Resource Group Template Deployment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceGroupTemplateDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceGroupTemplateDeployment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceGroupTemplateDeploymentList";
+    public const string KubeGroup = "resources.azure.upbound.io";
+    public const string KubePluralName = "resourcegrouptemplatedeployments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceGroupTemplateDeployment> Items { get; set; }
+}

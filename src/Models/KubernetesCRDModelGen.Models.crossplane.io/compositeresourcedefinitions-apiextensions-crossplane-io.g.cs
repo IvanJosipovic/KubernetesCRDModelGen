@@ -391,3 +391,29 @@ public partial class V1CompositeResourceDefinition : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1CompositeResourceDefinitionStatus? Status { get; set; }
 }
+
+/// <summary>A CompositeResourceDefinition defines the schema for a new custom Kubernetes API.  Read the Crossplane documentation for [more information about CustomResourceDefinitions](https://docs.crossplane.io/latest/concepts/composite-resource-definitions).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CompositeResourceDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1CompositeResourceDefinition>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CompositeResourceDefinitionList";
+    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubePluralName = "compositeresourcedefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1CompositeResourceDefinition> Items { get; set; }
+}

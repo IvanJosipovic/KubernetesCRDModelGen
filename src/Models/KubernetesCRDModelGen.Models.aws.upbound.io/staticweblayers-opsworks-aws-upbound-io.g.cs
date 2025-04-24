@@ -1308,3 +1308,29 @@ public partial class V1beta1StaticWebLayer : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1StaticWebLayerStatus? Status { get; set; }
 }
+
+/// <summary>StaticWebLayer is the Schema for the StaticWebLayers API. Provides an OpsWorks static web server layer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StaticWebLayerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StaticWebLayer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StaticWebLayerList";
+    public const string KubeGroup = "opsworks.aws.upbound.io";
+    public const string KubePluralName = "staticweblayers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StaticWebLayer> Items { get; set; }
+}

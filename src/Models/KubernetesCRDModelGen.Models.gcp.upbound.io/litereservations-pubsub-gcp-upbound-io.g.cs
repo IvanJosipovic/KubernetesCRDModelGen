@@ -266,3 +266,29 @@ public partial class V1beta1LiteReservation : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1LiteReservationStatus? Status { get; set; }
 }
+
+/// <summary>LiteReservation is the Schema for the LiteReservations API. A named resource representing a shared pool of capacity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LiteReservationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LiteReservation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LiteReservationList";
+    public const string KubeGroup = "pubsub.gcp.upbound.io";
+    public const string KubePluralName = "litereservations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LiteReservation> Items { get; set; }
+}

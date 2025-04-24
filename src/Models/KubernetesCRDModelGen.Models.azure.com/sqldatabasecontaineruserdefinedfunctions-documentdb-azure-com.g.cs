@@ -288,3 +288,29 @@ public partial class V1api20240815storageSqlDatabaseContainerUserDefinedFunction
     [JsonPropertyName("status")]
     public V1api20240815storageSqlDatabaseContainerUserDefinedFunctionStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240815.SqlDatabaseContainerUserDefinedFunction Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}/userDefinedFunctions/{userDefinedFunctionName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240815storageSqlDatabaseContainerUserDefinedFunctionList : IKubernetesObject<V1ListMeta>, IItems<V1api20240815storageSqlDatabaseContainerUserDefinedFunction>
+{
+    public const string KubeApiVersion = "v1api20240815storage";
+    public const string KubeKind = "SqlDatabaseContainerUserDefinedFunctionList";
+    public const string KubeGroup = "documentdb.azure.com";
+    public const string KubePluralName = "sqldatabasecontaineruserdefinedfunctions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240815storageSqlDatabaseContainerUserDefinedFunction> Items { get; set; }
+}

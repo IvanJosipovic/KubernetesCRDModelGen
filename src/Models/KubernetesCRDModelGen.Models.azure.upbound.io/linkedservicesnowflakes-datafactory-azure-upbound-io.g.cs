@@ -557,3 +557,29 @@ public partial class V1beta1LinkedServiceSnowflake : IKubernetesObject<V1ObjectM
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceSnowflakeStatus? Status { get; set; }
 }
+
+/// <summary>LinkedServiceSnowflake is the Schema for the LinkedServiceSnowflakes API. Manages a Linked Service (connection) between Snowflake and Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedServiceSnowflakeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceSnowflake>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedServiceSnowflakeList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "linkedservicesnowflakes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedServiceSnowflake> Items { get; set; }
+}

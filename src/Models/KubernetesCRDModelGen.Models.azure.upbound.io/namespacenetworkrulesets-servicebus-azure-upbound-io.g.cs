@@ -601,3 +601,29 @@ public partial class V1beta1NamespaceNetworkRuleSet : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1NamespaceNetworkRuleSetStatus? Status { get; set; }
 }
+
+/// <summary>NamespaceNetworkRuleSet is the Schema for the NamespaceNetworkRuleSets API. Manages a ServiceBus Namespace Network Rule Set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NamespaceNetworkRuleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NamespaceNetworkRuleSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NamespaceNetworkRuleSetList";
+    public const string KubeGroup = "servicebus.azure.upbound.io";
+    public const string KubePluralName = "namespacenetworkrulesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NamespaceNetworkRuleSet> Items { get; set; }
+}

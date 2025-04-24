@@ -446,3 +446,29 @@ public partial class V1beta1WorkspaceCustomerManagedKey : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1WorkspaceCustomerManagedKeyStatus? Status { get; set; }
 }
+
+/// <summary>WorkspaceCustomerManagedKey is the Schema for the WorkspaceCustomerManagedKeys API. Manages a Customer Managed Key for a Databricks Workspace root DBFS. This resource has been deprecated and will be removed in future versions of provider. Please use the WorkspaceRootDbfsCustomerManagedKey resource instead.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkspaceCustomerManagedKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkspaceCustomerManagedKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkspaceCustomerManagedKeyList";
+    public const string KubeGroup = "databricks.azure.upbound.io";
+    public const string KubePluralName = "workspacecustomermanagedkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkspaceCustomerManagedKey> Items { get; set; }
+}

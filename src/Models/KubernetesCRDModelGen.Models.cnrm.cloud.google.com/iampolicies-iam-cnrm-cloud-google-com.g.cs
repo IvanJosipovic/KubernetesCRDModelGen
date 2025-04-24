@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
+public partial class IAMPolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IAMPolicySpecAuditConfigsAuditLogConfigs
 {
     /// <summary>Identities that do not cause logging for this type of permission. The format is the same as that for 'members' in IAMPolicy/IAMPolicyMember.</summary>
     [JsonPropertyName("exemptedMembers")]
@@ -23,11 +29,11 @@ public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
 
 /// <summary>Specifies the Cloud Audit Logs configuration for the IAM policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpecAuditConfigs
+public partial class IAMPolicySpecAuditConfigs
 {
     /// <summary>Required. The configuration for logging of each type of permission.</summary>
     [JsonPropertyName("auditLogConfigs")]
-    public IList<V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs> AuditLogConfigs { get; set; }
+    public IList<IAMPolicySpecAuditConfigsAuditLogConfigs> AuditLogConfigs { get; set; }
 
     /// <summary>Required. The service for which to enable Data Access audit logs. The special value 'allServices' covers all services. Note that if there are audit configs covering both 'allServices' and a specific service, then the union of the two audit configs is used for that service: the 'logTypes' specified in each 'auditLogConfig' are enabled, and the 'exemptedMembers' in each 'auditLogConfig' are exempted.</summary>
     [JsonPropertyName("service")]
@@ -36,7 +42,7 @@ public partial class V1beta1IAMPolicySpecAuditConfigs
 
 /// <summary>Optional. The condition under which the binding applies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpecBindingsCondition
+public partial class IAMPolicySpecBindingsCondition
 {
     /// <summary></summary>
     [JsonPropertyName("description")]
@@ -53,11 +59,11 @@ public partial class V1beta1IAMPolicySpecBindingsCondition
 
 /// <summary>Specifies the members to bind to an IAM role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpecBindings
+public partial class IAMPolicySpecBindings
 {
     /// <summary>Optional. The condition under which the binding applies.</summary>
     [JsonPropertyName("condition")]
-    public V1beta1IAMPolicySpecBindingsCondition? Condition { get; set; }
+    public IAMPolicySpecBindingsCondition? Condition { get; set; }
 
     /// <summary>Optional. The list of IAM users to be bound to the role.</summary>
     [JsonPropertyName("members")]
@@ -70,7 +76,7 @@ public partial class V1beta1IAMPolicySpecBindings
 
 /// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpecResourceRef
+public partial class IAMPolicySpecResourceRef
 {
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
@@ -95,24 +101,24 @@ public partial class V1beta1IAMPolicySpecResourceRef
 
 /// <summary>IAMPolicySpec defines the desired state of IAMPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicySpec
+public partial class IAMPolicySpec
 {
     /// <summary>Optional. The list of IAM audit configs.</summary>
     [JsonPropertyName("auditConfigs")]
-    public IList<V1beta1IAMPolicySpecAuditConfigs>? AuditConfigs { get; set; }
+    public IList<IAMPolicySpecAuditConfigs>? AuditConfigs { get; set; }
 
     /// <summary>Optional. The list of IAM bindings.</summary>
     [JsonPropertyName("bindings")]
-    public IList<V1beta1IAMPolicySpecBindings>? Bindings { get; set; }
+    public IList<IAMPolicySpecBindings>? Bindings { get; set; }
 
     /// <summary>Immutable. Required. The GCP resource to set the IAM policy on.</summary>
     [JsonPropertyName("resourceRef")]
-    public V1beta1IAMPolicySpecResourceRef ResourceRef { get; set; }
+    public IAMPolicySpecResourceRef ResourceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicyStatusConditions
+public partial class IAMPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -137,11 +143,11 @@ public partial class V1beta1IAMPolicyStatusConditions
 
 /// <summary>IAMPolicyStatus defines the observed state of IAMPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1IAMPolicyStatus
+public partial class IAMPolicyStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAM policy's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1IAMPolicyStatusConditions>? Conditions { get; set; }
+    public IList<IAMPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -150,30 +156,25 @@ public partial class V1beta1IAMPolicyStatus
 
 /// <summary>IAMPolicy is the Schema for the iampolicies API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAMPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMPolicySpec>, IStatus<V1beta1IAMPolicyStatus>
+public partial class IAMPolicy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAMPolicy";
-    public const string KubeGroup = "iam.cnrm.cloud.google.com";
-    public const string KubePluralName = "iampolicies";
-    /// <summary></summary>
+    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IAMPolicyMetadata? Metadata { get; set; }
 
     /// <summary>IAMPolicySpec defines the desired state of IAMPolicy</summary>
     [JsonPropertyName("spec")]
-    public V1beta1IAMPolicySpec? Spec { get; set; }
+    public IAMPolicySpec? Spec { get; set; }
 
     /// <summary>IAMPolicyStatus defines the observed state of IAMPolicy</summary>
     [JsonPropertyName("status")]
-    public V1beta1IAMPolicyStatus? Status { get; set; }
+    public IAMPolicyStatus? Status { get; set; }
 }

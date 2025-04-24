@@ -517,3 +517,29 @@ public partial class V1beta1Rule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     [JsonPropertyName("status")]
     public V1beta1RuleStatus? Status { get; set; }
 }
+
+/// <summary>Rule is the Schema for the Rules API. Provides a Route53 Resolver rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Rule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RuleList";
+    public const string KubeGroup = "route53resolver.aws.upbound.io";
+    public const string KubePluralName = "rules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Rule> Items { get; set; }
+}

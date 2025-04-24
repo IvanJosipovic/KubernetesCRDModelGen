@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceSpecCeOverrides
+public partial class PingSourceSpecCeOverrides
 {
     /// <summary>Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.</summary>
     [JsonPropertyName("extensions")]
@@ -19,7 +19,7 @@ public partial class V1PingSourceSpecCeOverrides
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceSpecSinkRef
+public partial class PingSourceSpecSinkRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -40,11 +40,11 @@ public partial class V1PingSourceSpecSinkRef
 
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceSpecSink
+public partial class PingSourceSpecSink
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public V1PingSourceSpecSinkRef? Ref { get; set; }
+    public PingSourceSpecSinkRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -61,11 +61,11 @@ public partial class V1PingSourceSpecSink
 
 /// <summary>PingSourceSpec defines the desired state of the PingSource (from the client).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceSpec
+public partial class PingSourceSpec
 {
     /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
     [JsonPropertyName("ceOverrides")]
-    public V1PingSourceSpecCeOverrides? CeOverrides { get; set; }
+    public PingSourceSpecCeOverrides? CeOverrides { get; set; }
 
     /// <summary>ContentType is the media type of `data` or `dataBase64`. Default is empty.</summary>
     [JsonPropertyName("contentType")]
@@ -85,7 +85,7 @@ public partial class V1PingSourceSpec
 
     /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
     [JsonPropertyName("sink")]
-    public V1PingSourceSpecSink? Sink { get; set; }
+    public PingSourceSpecSink? Sink { get; set; }
 
     /// <summary>Timezone modifies the actual time relative to the specified timezone. Defaults to the system time zone. More general information about time zones: https://www.iana.org/time-zones List of valid timezone values: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones</summary>
     [JsonPropertyName("timezone")]
@@ -94,7 +94,7 @@ public partial class V1PingSourceSpec
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceStatusAuth
+public partial class PingSourceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -107,7 +107,7 @@ public partial class V1PingSourceStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceStatusCeAttributes
+public partial class PingSourceStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
     [JsonPropertyName("source")]
@@ -120,7 +120,7 @@ public partial class V1PingSourceStatusCeAttributes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceStatusConditions
+public partial class PingSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -149,7 +149,7 @@ public partial class V1PingSourceStatusConditions
 
 /// <summary>PingSourceStatus defines the observed state of PingSource (from the controller).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1PingSourceStatus
+public partial class PingSourceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -157,15 +157,15 @@ public partial class V1PingSourceStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public V1PingSourceStatusAuth? Auth { get; set; }
+    public PingSourceStatusAuth? Auth { get; set; }
 
     /// <summary>CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.</summary>
     [JsonPropertyName("ceAttributes")]
-    public IList<V1PingSourceStatusCeAttributes>? CeAttributes { get; set; }
+    public IList<PingSourceStatusCeAttributes>? CeAttributes { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1PingSourceStatusConditions>? Conditions { get; set; }
+    public IList<PingSourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the "Generation" of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -186,30 +186,13 @@ public partial class V1PingSourceStatus
 
 /// <summary>PingSource describes an event source with a fixed payload produced on a specified cron schedule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1PingSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1PingSourceSpec>, IStatus<V1PingSourceStatus>
+public partial class PingSource
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "PingSource";
-    public const string KubeGroup = "sources.knative.dev";
-    public const string KubePluralName = "pingsources";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
-
     /// <summary>PingSourceSpec defines the desired state of the PingSource (from the client).</summary>
     [JsonPropertyName("spec")]
-    public V1PingSourceSpec? Spec { get; set; }
+    public PingSourceSpec? Spec { get; set; }
 
     /// <summary>PingSourceStatus defines the observed state of PingSource (from the controller).</summary>
     [JsonPropertyName("status")]
-    public V1PingSourceStatus? Status { get; set; }
+    public PingSourceStatus? Status { get; set; }
 }

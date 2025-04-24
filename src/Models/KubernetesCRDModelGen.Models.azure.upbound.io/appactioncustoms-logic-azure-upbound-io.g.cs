@@ -318,3 +318,29 @@ public partial class V1beta1AppActionCustom : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1AppActionCustomStatus? Status { get; set; }
 }
+
+/// <summary>AppActionCustom is the Schema for the AppActionCustoms API. Manages a Custom Action within a Logic App Workflow</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppActionCustomList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppActionCustom>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppActionCustomList";
+    public const string KubeGroup = "logic.azure.upbound.io";
+    public const string KubePluralName = "appactioncustoms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppActionCustom> Items { get; set; }
+}

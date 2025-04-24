@@ -444,3 +444,29 @@ public partial class V1beta1BackupPolicyDisk : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyDiskStatus? Status { get; set; }
 }
+
+/// <summary>BackupPolicyDisk is the Schema for the BackupPolicyDisks API. Manages a Backup Policy Disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupPolicyDiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyDisk>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupPolicyDiskList";
+    public const string KubeGroup = "dataprotection.azure.upbound.io";
+    public const string KubePluralName = "backuppolicydisks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupPolicyDisk> Items { get; set; }
+}

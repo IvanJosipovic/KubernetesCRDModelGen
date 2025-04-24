@@ -113,3 +113,29 @@ public partial class V1GatewayClass : IKubernetesObject<V1ObjectMeta>, ISpec<V1G
     [JsonPropertyName("status")]
     public V1GatewayClassStatus? Status { get; set; }
 }
+
+/// <summary>GatewayClass describes a class of Gateways available to the user for creating Gateway resources.  It is recommended that this resource be used as a template for Gateways. This means that a Gateway is based on the state of the GatewayClass at the time it was created and changes to the GatewayClass or associated parameters are not propagated down to existing Gateways. This recommendation is intended to limit the blast radius of changes to GatewayClass or associated parameters. If implementations choose to propagate GatewayClass changes to existing Gateways, that MUST be clearly documented by the implementation.  Whenever one or more Gateways are using a GatewayClass, implementations SHOULD add the `gateway-exists-finalizer.gateway.networking.k8s.io` finalizer on the associated GatewayClass. This ensures that a GatewayClass associated with a Gateway is not deleted while in use.  GatewayClass is a Cluster level resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1GatewayClassList : IKubernetesObject<V1ListMeta>, IItems<V1GatewayClass>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "GatewayClassList";
+    public const string KubeGroup = "gateway.networking.k8s.io";
+    public const string KubePluralName = "gatewayclasses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1GatewayClass> Items { get; set; }
+}

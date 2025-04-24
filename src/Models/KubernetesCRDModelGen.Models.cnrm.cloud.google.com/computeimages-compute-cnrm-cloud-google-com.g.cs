@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeImageMetadata
+{
+}
+
 /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecDiskRef
+public partial class ComputeImageSpecDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeImageSpecDiskRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecGuestOsFeatures
+public partial class ComputeImageSpecGuestOsFeatures
 {
     /// <summary>Immutable. The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE"].</summary>
     [JsonPropertyName("type")]
@@ -36,7 +42,7 @@ public partial class V1beta1ComputeImageSpecGuestOsFeatures
 
 /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
+public partial class ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -53,7 +59,7 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef
 
 /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef
+public partial class ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -70,20 +76,20 @@ public partial class V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccou
 
 /// <summary>Immutable. Encrypts the image using a customer-supplied encryption key.  After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecImageEncryptionKey
+public partial class ComputeImageSpecImageEncryptionKey
 {
     /// <summary>The self link of the encryption key that is stored in Google Cloud KMS.</summary>
     [JsonPropertyName("kmsKeySelfLinkRef")]
-    public V1beta1ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef? KmsKeySelfLinkRef { get; set; }
+    public ComputeImageSpecImageEncryptionKeyKmsKeySelfLinkRef? KmsKeySelfLinkRef { get; set; }
 
     /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public V1beta1ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public ComputeImageSpecImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 }
 
 /// <summary>Immutable. The parameters of the raw disk image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecRawDisk
+public partial class ComputeImageSpecRawDisk
 {
     /// <summary>Immutable. The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created. Default value: "TAR" Possible values: ["TAR"].</summary>
     [JsonPropertyName("containerType")]
@@ -100,7 +106,7 @@ public partial class V1beta1ComputeImageSpecRawDisk
 
 /// <summary>The source image used to create this image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecSourceImageRef
+public partial class ComputeImageSpecSourceImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -117,7 +123,7 @@ public partial class V1beta1ComputeImageSpecSourceImageRef
 
 /// <summary>The source snapshot used to create this image.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpecSourceSnapshotRef
+public partial class ComputeImageSpecSourceSnapshotRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSnapshot` resource.</summary>
     [JsonPropertyName("external")]
@@ -134,7 +140,7 @@ public partial class V1beta1ComputeImageSpecSourceSnapshotRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageSpec
+public partial class ComputeImageSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -142,7 +148,7 @@ public partial class V1beta1ComputeImageSpec
 
     /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
     [JsonPropertyName("diskRef")]
-    public V1beta1ComputeImageSpecDiskRef? DiskRef { get; set; }
+    public ComputeImageSpecDiskRef? DiskRef { get; set; }
 
     /// <summary>Immutable. Size of the image when restored onto a persistent disk (in GB).</summary>
     [JsonPropertyName("diskSizeGb")]
@@ -154,11 +160,11 @@ public partial class V1beta1ComputeImageSpec
 
     /// <summary>Immutable. A list of features to enable on the guest operating system. Applicable only for bootable images.</summary>
     [JsonPropertyName("guestOsFeatures")]
-    public IList<V1beta1ComputeImageSpecGuestOsFeatures>? GuestOsFeatures { get; set; }
+    public IList<ComputeImageSpecGuestOsFeatures>? GuestOsFeatures { get; set; }
 
     /// <summary>Immutable. Encrypts the image using a customer-supplied encryption key.  After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image).</summary>
     [JsonPropertyName("imageEncryptionKey")]
-    public V1beta1ComputeImageSpecImageEncryptionKey? ImageEncryptionKey { get; set; }
+    public ComputeImageSpecImageEncryptionKey? ImageEncryptionKey { get; set; }
 
     /// <summary>Immutable. Any applicable license URI.</summary>
     [JsonPropertyName("licenses")]
@@ -166,7 +172,7 @@ public partial class V1beta1ComputeImageSpec
 
     /// <summary>Immutable. The parameters of the raw disk image.</summary>
     [JsonPropertyName("rawDisk")]
-    public V1beta1ComputeImageSpecRawDisk? RawDisk { get; set; }
+    public ComputeImageSpecRawDisk? RawDisk { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -174,11 +180,11 @@ public partial class V1beta1ComputeImageSpec
 
     /// <summary>The source image used to create this image.</summary>
     [JsonPropertyName("sourceImageRef")]
-    public V1beta1ComputeImageSpecSourceImageRef? SourceImageRef { get; set; }
+    public ComputeImageSpecSourceImageRef? SourceImageRef { get; set; }
 
     /// <summary>The source snapshot used to create this image.</summary>
     [JsonPropertyName("sourceSnapshotRef")]
-    public V1beta1ComputeImageSpecSourceSnapshotRef? SourceSnapshotRef { get; set; }
+    public ComputeImageSpecSourceSnapshotRef? SourceSnapshotRef { get; set; }
 
     /// <summary>Immutable. Cloud Storage bucket storage location of the image (regional or multi-regional). Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images.</summary>
     [JsonPropertyName("storageLocations")]
@@ -187,7 +193,7 @@ public partial class V1beta1ComputeImageSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageStatusConditions
+public partial class ComputeImageStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -212,7 +218,7 @@ public partial class V1beta1ComputeImageStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeImageStatus
+public partial class ComputeImageStatus
 {
     /// <summary>Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).</summary>
     [JsonPropertyName("archiveSizeBytes")]
@@ -220,7 +226,7 @@ public partial class V1beta1ComputeImageStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeImageStatusConditions>? Conditions { get; set; }
+    public IList<ComputeImageStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -241,30 +247,25 @@ public partial class V1beta1ComputeImageStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeImage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeImageSpec>, IStatus<V1beta1ComputeImageStatus>
+public partial class ComputeImage
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeImage";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeimages";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeImageMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeImageSpec? Spec { get; set; }
+    public ComputeImageSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeImageStatus? Status { get; set; }
+    public ComputeImageStatus? Status { get; set; }
 }

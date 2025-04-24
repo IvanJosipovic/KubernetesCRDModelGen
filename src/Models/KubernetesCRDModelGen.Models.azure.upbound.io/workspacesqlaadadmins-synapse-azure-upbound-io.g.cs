@@ -410,3 +410,29 @@ public partial class V1beta1WorkspaceSQLAADAdmin : IKubernetesObject<V1ObjectMet
     [JsonPropertyName("status")]
     public V1beta1WorkspaceSQLAADAdminStatus? Status { get; set; }
 }
+
+/// <summary>WorkspaceSQLAADAdmin is the Schema for the WorkspaceSQLAADAdmins API. Manages Synapse Workspace SQL AAD Admin</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkspaceSQLAADAdminList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkspaceSQLAADAdmin>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkspaceSQLAADAdminList";
+    public const string KubeGroup = "synapse.azure.upbound.io";
+    public const string KubePluralName = "workspacesqlaadadmins";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkspaceSQLAADAdmin> Items { get; set; }
+}

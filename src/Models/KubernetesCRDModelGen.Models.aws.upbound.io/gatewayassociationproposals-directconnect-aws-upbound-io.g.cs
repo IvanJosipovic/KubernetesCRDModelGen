@@ -678,3 +678,29 @@ public partial class V1beta1GatewayAssociationProposal : IKubernetesObject<V1Obj
     [JsonPropertyName("status")]
     public V1beta1GatewayAssociationProposalStatus? Status { get; set; }
 }
+
+/// <summary>GatewayAssociationProposal is the Schema for the GatewayAssociationProposals API. Manages a Direct Connect Gateway Association Proposal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GatewayAssociationProposalList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GatewayAssociationProposal>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GatewayAssociationProposalList";
+    public const string KubeGroup = "directconnect.aws.upbound.io";
+    public const string KubePluralName = "gatewayassociationproposals";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GatewayAssociationProposal> Items { get; set; }
+}

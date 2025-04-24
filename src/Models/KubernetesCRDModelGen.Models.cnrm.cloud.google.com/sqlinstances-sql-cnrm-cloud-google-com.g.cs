@@ -844,3 +844,29 @@ public partial class V1beta1SQLInstance : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1SQLInstanceStatus? Status { get; set; }
 }
+
+/// <summary>SQLInstance is the Schema for the sql API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLInstanceList";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqlinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLInstance> Items { get; set; }
+}

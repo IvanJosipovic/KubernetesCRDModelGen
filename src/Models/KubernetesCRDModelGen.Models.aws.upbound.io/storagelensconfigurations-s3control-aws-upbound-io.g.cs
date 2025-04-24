@@ -1462,3 +1462,29 @@ public partial class V1beta1StorageLensConfiguration : IKubernetesObject<V1Objec
     [JsonPropertyName("status")]
     public V1beta1StorageLensConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>StorageLensConfiguration is the Schema for the StorageLensConfigurations API. Provides a resource to manage an S3 Storage Lens configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageLensConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageLensConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageLensConfigurationList";
+    public const string KubeGroup = "s3control.aws.upbound.io";
+    public const string KubePluralName = "storagelensconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StorageLensConfiguration> Items { get; set; }
+}

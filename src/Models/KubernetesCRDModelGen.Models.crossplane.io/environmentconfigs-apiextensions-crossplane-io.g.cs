@@ -33,3 +33,29 @@ public partial class V1alpha1EnvironmentConfig : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("data")]
     public IDictionary<string, JsonNode>? Data { get; set; }
 }
+
+/// <summary>An EnvironmentConfig contains user-defined unstructured values for use in a Composition.  Read the Crossplane documentation for [more information about EnvironmentConfigs](https://docs.crossplane.io/latest/concepts/environment-configs).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EnvironmentConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1EnvironmentConfig>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EnvironmentConfigList";
+    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubePluralName = "environmentconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1EnvironmentConfig> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serving.knative.dev;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class RouteMetadata
+{
+}
+
 /// <summary>TrafficTarget holds a single entry of the routing table for a Route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteSpecTraffic
+public partial class RouteSpecTraffic
 {
     /// <summary>ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one.  This field is never set in Route's status, only its spec.  This is mutually exclusive with RevisionName.</summary>
     [JsonPropertyName("configurationName")]
@@ -39,16 +45,16 @@ public partial class V1RouteSpecTraffic
 
 /// <summary>Spec holds the desired state of the Route (from the client).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteSpec
+public partial class RouteSpec
 {
     /// <summary>Traffic specifies how to distribute traffic over a collection of revisions and configurations.</summary>
     [JsonPropertyName("traffic")]
-    public IList<V1RouteSpecTraffic>? Traffic { get; set; }
+    public IList<RouteSpecTraffic>? Traffic { get; set; }
 }
 
 /// <summary>Address holds the information needed for a Route to be the target of an event.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteStatusAddress
+public partial class RouteStatusAddress
 {
     /// <summary>CACerts is the Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.</summary>
     [JsonPropertyName("CACerts")]
@@ -69,7 +75,7 @@ public partial class V1RouteStatusAddress
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteStatusConditions
+public partial class RouteStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -98,7 +104,7 @@ public partial class V1RouteStatusConditions
 
 /// <summary>TrafficTarget holds a single entry of the routing table for a Route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteStatusTraffic
+public partial class RouteStatusTraffic
 {
     /// <summary>ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one.  This field is never set in Route's status, only its spec.  This is mutually exclusive with RevisionName.</summary>
     [JsonPropertyName("configurationName")]
@@ -127,11 +133,11 @@ public partial class V1RouteStatusTraffic
 
 /// <summary>Status communicates the observed state of the Route (from the controller).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1RouteStatus
+public partial class RouteStatus
 {
     /// <summary>Address holds the information needed for a Route to be the target of an event.</summary>
     [JsonPropertyName("address")]
-    public V1RouteStatusAddress? Address { get; set; }
+    public RouteStatusAddress? Address { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -139,7 +145,7 @@ public partial class V1RouteStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1RouteStatusConditions>? Conditions { get; set; }
+    public IList<RouteStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -147,7 +153,7 @@ public partial class V1RouteStatus
 
     /// <summary>Traffic holds the configured traffic distribution. These entries will always contain RevisionName references. When ConfigurationName appears in the spec, this will hold the LatestReadyRevisionName that we last observed.</summary>
     [JsonPropertyName("traffic")]
-    public IList<V1RouteStatusTraffic>? Traffic { get; set; }
+    public IList<RouteStatusTraffic>? Traffic { get; set; }
 
     /// <summary>URL holds the url that will distribute traffic over the provided traffic targets. It generally has the form http[s]://{route-name}.{route-namespace}.{cluster-level-suffix}</summary>
     [JsonPropertyName("url")]
@@ -156,30 +162,25 @@ public partial class V1RouteStatus
 
 /// <summary>Route is responsible for configuring ingress over a collection of Revisions. Some of the Revisions a Route distributes traffic over may be specified by referencing the Configuration responsible for creating them; in these cases the Route is additionally responsible for monitoring the Configuration for "latest ready revision" changes, and smoothly rolling out latest revisions. See also: https://github.com/knative/serving/blob/main/docs/spec/overview.md#route</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1Route : IKubernetesObject<V1ObjectMeta>, ISpec<V1RouteSpec>, IStatus<V1RouteStatus>
+public partial class Route
 {
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "Route";
-    public const string KubeGroup = "serving.knative.dev";
-    public const string KubePluralName = "routes";
-    /// <summary></summary>
+    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public RouteMetadata? Metadata { get; set; }
 
     /// <summary>Spec holds the desired state of the Route (from the client).</summary>
     [JsonPropertyName("spec")]
-    public V1RouteSpec? Spec { get; set; }
+    public RouteSpec? Spec { get; set; }
 
     /// <summary>Status communicates the observed state of the Route (from the controller).</summary>
     [JsonPropertyName("status")]
-    public V1RouteStatus? Status { get; set; }
+    public RouteStatus? Status { get; set; }
 }

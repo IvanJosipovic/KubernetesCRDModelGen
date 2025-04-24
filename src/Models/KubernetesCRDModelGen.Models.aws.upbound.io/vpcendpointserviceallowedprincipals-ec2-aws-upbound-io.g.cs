@@ -390,3 +390,29 @@ public partial class V1beta1VPCEndpointServiceAllowedPrincipal : IKubernetesObje
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointServiceAllowedPrincipalStatus? Status { get; set; }
 }
+
+/// <summary>VPCEndpointServiceAllowedPrincipal is the Schema for the VPCEndpointServiceAllowedPrincipals API. Provides a resource to allow a principal to discover a VPC endpoint service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCEndpointServiceAllowedPrincipalList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCEndpointServiceAllowedPrincipal>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCEndpointServiceAllowedPrincipalList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "vpcendpointserviceallowedprincipals";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCEndpointServiceAllowedPrincipal> Items { get; set; }
+}

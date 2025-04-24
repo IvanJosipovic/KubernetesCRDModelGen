@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeTargetSSLProxyMetadata
+{
+}
+
 /// <summary>A reference to the ComputeBackendService resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
+public partial class ComputeTargetSSLProxySpecBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecBackendServiceRef
 
 /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
+public partial class ComputeTargetSSLProxySpecCertificateMapRef
 {
     /// <summary>Allowed value: The `name` field of a `CertificateManagerCertificateMap` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecCertificateMapRef
 
 /// <summary>A list of ComputeSSLCertificate resources that are used to authenticate connections between users and the load balancer. Currently, exactly one SSL certificate must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
+public partial class ComputeTargetSSLProxySpecSslCertificates
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLCertificate` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslCertificates
 
 /// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the TargetSslProxy resource. If not set, the ComputeTargetSSLProxy resource will not have any SSL policy configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
+public partial class ComputeTargetSSLProxySpecSslPolicyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSSLPolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -78,15 +84,15 @@ public partial class V1beta1ComputeTargetSSLProxySpecSslPolicyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxySpec
+public partial class ComputeTargetSSLProxySpec
 {
     /// <summary>A reference to the ComputeBackendService resource.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public V1beta1ComputeTargetSSLProxySpecBackendServiceRef BackendServiceRef { get; set; }
+    public ComputeTargetSSLProxySpecBackendServiceRef BackendServiceRef { get; set; }
 
     /// <summary>A reference to the CertificateMap resource uri that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. Accepted format is '//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}'.</summary>
     [JsonPropertyName("certificateMapRef")]
-    public V1beta1ComputeTargetSSLProxySpecCertificateMapRef? CertificateMapRef { get; set; }
+    public ComputeTargetSSLProxySpecCertificateMapRef? CertificateMapRef { get; set; }
 
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -102,16 +108,16 @@ public partial class V1beta1ComputeTargetSSLProxySpec
 
     /// <summary></summary>
     [JsonPropertyName("sslCertificates")]
-    public IList<V1beta1ComputeTargetSSLProxySpecSslCertificates>? SslCertificates { get; set; }
+    public IList<ComputeTargetSSLProxySpecSslCertificates>? SslCertificates { get; set; }
 
     /// <summary>A reference to the ComputeSSLPolicy resource that will be associated with the TargetSslProxy resource. If not set, the ComputeTargetSSLProxy resource will not have any SSL policy configured.</summary>
     [JsonPropertyName("sslPolicyRef")]
-    public V1beta1ComputeTargetSSLProxySpecSslPolicyRef? SslPolicyRef { get; set; }
+    public ComputeTargetSSLProxySpecSslPolicyRef? SslPolicyRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxyStatusConditions
+public partial class ComputeTargetSSLProxyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -136,11 +142,11 @@ public partial class V1beta1ComputeTargetSSLProxyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ComputeTargetSSLProxyStatus
+public partial class ComputeTargetSSLProxyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1ComputeTargetSSLProxyStatusConditions>? Conditions { get; set; }
+    public IList<ComputeTargetSSLProxyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -161,30 +167,25 @@ public partial class V1beta1ComputeTargetSSLProxyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeTargetSSLProxy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetSSLProxySpec>, IStatus<V1beta1ComputeTargetSSLProxyStatus>
+public partial class ComputeTargetSSLProxy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeTargetSSLProxy";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computetargetsslproxies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeTargetSSLProxyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1ComputeTargetSSLProxySpec Spec { get; set; }
+    public ComputeTargetSSLProxySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1ComputeTargetSSLProxyStatus? Status { get; set; }
+    public ComputeTargetSSLProxyStatus? Status { get; set; }
 }

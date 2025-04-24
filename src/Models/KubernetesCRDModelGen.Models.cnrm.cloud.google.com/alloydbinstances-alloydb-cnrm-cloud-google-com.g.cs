@@ -246,3 +246,29 @@ public partial class V1alpha1AlloyDBInstance : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1alpha1AlloyDBInstanceStatus? Status { get; set; }
 }
+
+/// <summary>AlloyDBInstance is the Schema for the AlloyDBInstance API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AlloyDBInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AlloyDBInstance>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AlloyDBInstanceList";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AlloyDBInstance> Items { get; set; }
+}

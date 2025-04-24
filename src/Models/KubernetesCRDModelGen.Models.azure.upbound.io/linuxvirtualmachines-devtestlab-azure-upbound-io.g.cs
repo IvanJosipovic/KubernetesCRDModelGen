@@ -1073,3 +1073,29 @@ public partial class V1beta1LinuxVirtualMachine : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1LinuxVirtualMachineStatus? Status { get; set; }
 }
+
+/// <summary>LinuxVirtualMachine is the Schema for the LinuxVirtualMachines API. Manages a Linux Virtual Machine within a Dev Test Lab.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinuxVirtualMachineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinuxVirtualMachine>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinuxVirtualMachineList";
+    public const string KubeGroup = "devtestlab.azure.upbound.io";
+    public const string KubePluralName = "linuxvirtualmachines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinuxVirtualMachine> Items { get; set; }
+}

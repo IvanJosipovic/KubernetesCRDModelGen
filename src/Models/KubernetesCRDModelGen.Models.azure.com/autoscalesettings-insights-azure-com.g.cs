@@ -953,3 +953,29 @@ public partial class V1api20221001storageAutoscaleSetting : IKubernetesObject<V1
     [JsonPropertyName("status")]
     public V1api20221001storageAutoscaleSettingStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20221001.AutoscaleSetting Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-10-01/autoscale_API.json - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/autoscalesettings/{autoscaleSettingName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20221001storageAutoscaleSettingList : IKubernetesObject<V1ListMeta>, IItems<V1api20221001storageAutoscaleSetting>
+{
+    public const string KubeApiVersion = "v1api20221001storage";
+    public const string KubeKind = "AutoscaleSettingList";
+    public const string KubeGroup = "insights.azure.com";
+    public const string KubePluralName = "autoscalesettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20221001storageAutoscaleSetting> Items { get; set; }
+}

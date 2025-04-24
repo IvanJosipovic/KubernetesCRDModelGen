@@ -4952,3 +4952,29 @@ public partial class V1api20220301storageVirtualMachine : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1api20220301storageVirtualMachineStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220301.VirtualMachine Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/virtualMachine.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220301storageVirtualMachineList : IKubernetesObject<V1ListMeta>, IItems<V1api20220301storageVirtualMachine>
+{
+    public const string KubeApiVersion = "v1api20220301storage";
+    public const string KubeKind = "VirtualMachineList";
+    public const string KubeGroup = "compute.azure.com";
+    public const string KubePluralName = "virtualmachines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220301storageVirtualMachine> Items { get; set; }
+}

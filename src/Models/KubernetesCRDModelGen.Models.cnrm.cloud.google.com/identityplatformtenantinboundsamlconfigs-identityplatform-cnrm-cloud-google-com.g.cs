@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfigIdpCertificates
+public partial class IdentityPlatformTenantInboundSAMLConfigMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class IdentityPlatformTenantInboundSAMLConfigSpecIdpConfigIdpCertificates
 {
     /// <summary>The x509 certificate.</summary>
     [JsonPropertyName("x509Certificate")]
@@ -19,11 +25,11 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfi
 
 /// <summary>SAML IdP configuration when the project acts as the relying party.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfig
+public partial class IdentityPlatformTenantInboundSAMLConfigSpecIdpConfig
 {
     /// <summary>The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.</summary>
     [JsonPropertyName("idpCertificates")]
-    public IList<V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfigIdpCertificates> IdpCertificates { get; set; }
+    public IList<IdentityPlatformTenantInboundSAMLConfigSpecIdpConfigIdpCertificates> IdpCertificates { get; set; }
 
     /// <summary>Unique identifier for all SAML entities.</summary>
     [JsonPropertyName("idpEntityId")]
@@ -40,7 +46,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfi
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecProjectRef
+public partial class IdentityPlatformTenantInboundSAMLConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -57,7 +63,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecProjectR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfigSpCertificates
+public partial class IdentityPlatformTenantInboundSAMLConfigSpecSpConfigSpCertificates
 {
     /// <summary>The x509 certificate.</summary>
     [JsonPropertyName("x509Certificate")]
@@ -66,7 +72,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 
 /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
+public partial class IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 {
     /// <summary>Callback URI where responses from IDP are handled. Must start with 'https://'.</summary>
     [JsonPropertyName("callbackUri")]
@@ -74,7 +80,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 
     /// <summary>The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.</summary>
     [JsonPropertyName("spCertificates")]
-    public IList<V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfigSpCertificates>? SpCertificates { get; set; }
+    public IList<IdentityPlatformTenantInboundSAMLConfigSpecSpConfigSpCertificates>? SpCertificates { get; set; }
 
     /// <summary>Unique identifier for all SAML entities.</summary>
     [JsonPropertyName("spEntityId")]
@@ -83,7 +89,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
+public partial class IdentityPlatformTenantInboundSAMLConfigSpec
 {
     /// <summary>Human friendly display name.</summary>
     [JsonPropertyName("displayName")]
@@ -95,11 +101,11 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
 
     /// <summary>SAML IdP configuration when the project acts as the relying party.</summary>
     [JsonPropertyName("idpConfig")]
-    public V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecIdpConfig IdpConfig { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigSpecIdpConfig IdpConfig { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecProjectRef ProjectRef { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -107,7 +113,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
 
     /// <summary>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an authentication assertion issued by a SAML identity provider.</summary>
     [JsonPropertyName("spConfig")]
-    public V1alpha1IdentityPlatformTenantInboundSAMLConfigSpecSpConfig SpConfig { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigSpecSpConfig SpConfig { get; set; }
 
     /// <summary>Immutable. The name of the tenant where this inbound SAML config resource exists.</summary>
     [JsonPropertyName("tenant")]
@@ -116,7 +122,7 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatusConditions
+public partial class IdentityPlatformTenantInboundSAMLConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -141,11 +147,11 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatusCondit
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus
+public partial class IdentityPlatformTenantInboundSAMLConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1IdentityPlatformTenantInboundSAMLConfigStatusConditions>? Conditions { get; set; }
+    public IList<IdentityPlatformTenantInboundSAMLConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -154,30 +160,25 @@ public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IdentityPlatformTenantInboundSAMLConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec>, IStatus<V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus>
+public partial class IdentityPlatformTenantInboundSAMLConfig
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "IdentityPlatformTenantInboundSAMLConfig";
-    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
-    public const string KubePluralName = "identityplatformtenantinboundsamlconfigs";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1IdentityPlatformTenantInboundSAMLConfigSpec Spec { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1IdentityPlatformTenantInboundSAMLConfigStatus? Status { get; set; }
+    public IdentityPlatformTenantInboundSAMLConfigStatus? Status { get; set; }
 }

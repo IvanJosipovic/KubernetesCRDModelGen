@@ -813,3 +813,29 @@ public partial class V1api20220301storageImage : IKubernetesObject<V1ObjectMeta>
     [JsonPropertyName("status")]
     public V1api20220301storageImageStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220301.Image Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/ComputeRP/stable/2022-03-01/image.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220301storageImageList : IKubernetesObject<V1ListMeta>, IItems<V1api20220301storageImage>
+{
+    public const string KubeApiVersion = "v1api20220301storage";
+    public const string KubeKind = "ImageList";
+    public const string KubeGroup = "compute.azure.com";
+    public const string KubePluralName = "images";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220301storageImage> Items { get; set; }
+}

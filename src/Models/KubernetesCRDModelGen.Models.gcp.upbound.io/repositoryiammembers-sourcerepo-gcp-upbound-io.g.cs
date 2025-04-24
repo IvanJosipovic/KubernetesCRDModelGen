@@ -477,3 +477,29 @@ public partial class V1beta1RepositoryIAMMember : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1RepositoryIAMMemberStatus? Status { get; set; }
 }
+
+/// <summary>RepositoryIAMMember is the Schema for the RepositoryIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RepositoryIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RepositoryIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RepositoryIAMMemberList";
+    public const string KubeGroup = "sourcerepo.gcp.upbound.io";
+    public const string KubePluralName = "repositoryiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RepositoryIAMMember> Items { get; set; }
+}

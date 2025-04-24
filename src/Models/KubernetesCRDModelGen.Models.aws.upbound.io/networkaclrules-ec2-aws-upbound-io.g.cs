@@ -498,3 +498,29 @@ public partial class V1beta1NetworkACLRule : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1NetworkACLRuleStatus? Status { get; set; }
 }
+
+/// <summary>NetworkACLRule is the Schema for the NetworkACLRules API. Provides an network ACL Rule resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkACLRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkACLRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkACLRuleList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "networkaclrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkACLRule> Items { get; set; }
+}

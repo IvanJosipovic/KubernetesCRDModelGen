@@ -2658,3 +2658,29 @@ public partial class V1beta1MonitorDataCollectionRule : IKubernetesObject<V1Obje
     [JsonPropertyName("status")]
     public V1beta1MonitorDataCollectionRuleStatus? Status { get; set; }
 }
+
+/// <summary>MonitorDataCollectionRule is the Schema for the MonitorDataCollectionRules API. Manages a Data Collection Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitorDataCollectionRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorDataCollectionRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitorDataCollectionRuleList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "monitordatacollectionrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MonitorDataCollectionRule> Items { get; set; }
+}

@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeGlobalNetworkEndpointGroupMetadata
+{
+}
+
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpecProjectRef
+public partial class ComputeGlobalNetworkEndpointGroupSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpec
+public partial class ComputeGlobalNetworkEndpointGroupSpec
 {
     /// <summary>Immutable. The default port used if the port number is not specified in the network endpoint.</summary>
     [JsonPropertyName("defaultPort")]
@@ -43,7 +49,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1ComputeGlobalNetworkEndpointGroupSpecProjectRef ProjectRef { get; set; }
+    public ComputeGlobalNetworkEndpointGroupSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -52,7 +58,7 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatusConditions
+public partial class ComputeGlobalNetworkEndpointGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -77,11 +83,11 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatus
+public partial class ComputeGlobalNetworkEndpointGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ComputeGlobalNetworkEndpointGroupStatusConditions>? Conditions { get; set; }
+    public IList<ComputeGlobalNetworkEndpointGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -94,30 +100,25 @@ public partial class V1alpha1ComputeGlobalNetworkEndpointGroupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComputeGlobalNetworkEndpointGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeGlobalNetworkEndpointGroupSpec>, IStatus<V1alpha1ComputeGlobalNetworkEndpointGroupStatus>
+public partial class ComputeGlobalNetworkEndpointGroup
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComputeGlobalNetworkEndpointGroup";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeglobalnetworkendpointgroups";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeGlobalNetworkEndpointGroupMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ComputeGlobalNetworkEndpointGroupSpec Spec { get; set; }
+    public ComputeGlobalNetworkEndpointGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ComputeGlobalNetworkEndpointGroupStatus? Status { get; set; }
+    public ComputeGlobalNetworkEndpointGroupStatus? Status { get; set; }
 }

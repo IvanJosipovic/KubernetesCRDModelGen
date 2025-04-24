@@ -850,3 +850,29 @@ public partial class V1beta1PointToSiteVPNGateway : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1PointToSiteVPNGatewayStatus? Status { get; set; }
 }
+
+/// <summary>PointToSiteVPNGateway is the Schema for the PointToSiteVPNGateways API. Manages a Point-to-Site VPN Gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PointToSiteVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PointToSiteVPNGateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PointToSiteVPNGatewayList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "pointtositevpngateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PointToSiteVPNGateway> Items { get; set; }
+}

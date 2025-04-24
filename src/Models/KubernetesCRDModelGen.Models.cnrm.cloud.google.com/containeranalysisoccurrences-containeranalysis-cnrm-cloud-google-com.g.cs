@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.containeranalysis.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures
+public partial class ContainerAnalysisOccurrenceMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ContainerAnalysisOccurrenceSpecAttestationSignatures
 {
     /// <summary>The identifier for the public key that verifies this signature. MUST be an RFC3986 conformant URI. * When possible, the key id should be an immutable reference, such as a cryptographic digest. Examples of valid values:  * OpenPGP V4 public key fingerprint. See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr   for more details on this scheme.     * 'openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA' * RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization):     * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU".</summary>
     [JsonPropertyName("publicKeyId")]
@@ -23,7 +29,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignature
 
 /// <summary>Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
+public partial class ContainerAnalysisOccurrenceSpecAttestation
 {
     /// <summary>The serialized payload that is verified by one or more signatures. A base64-encoded string.</summary>
     [JsonPropertyName("serializedPayload")]
@@ -31,12 +37,12 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecAttestation
 
     /// <summary>One or more signatures over serializedPayload. Verifier implementations should consider this attestation message verified if at least one signature verifies serializedPayload. See Signature in common.proto for more details on signature structure and verification.</summary>
     [JsonPropertyName("signatures")]
-    public IList<V1alpha1ContainerAnalysisOccurrenceSpecAttestationSignatures> Signatures { get; set; }
+    public IList<ContainerAnalysisOccurrenceSpecAttestationSignatures> Signatures { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
+public partial class ContainerAnalysisOccurrenceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -53,11 +59,11 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceSpec
+public partial class ContainerAnalysisOccurrenceSpec
 {
     /// <summary>Occurrence that represents a single "attestation". The authenticity of an attestation can be verified using the attached signature. If the verifier trusts the public key of the signer, then verifying the signature is sufficient to establish trust. In this circumstance, the authority to which this attestation is attached is primarily useful for lookup (how to find this attestation if you already know the authority and artifact to be verified) and intent (for which authority this attestation was intended to sign.</summary>
     [JsonPropertyName("attestation")]
-    public V1alpha1ContainerAnalysisOccurrenceSpecAttestation Attestation { get; set; }
+    public ContainerAnalysisOccurrenceSpecAttestation Attestation { get; set; }
 
     /// <summary>Immutable. The analysis note associated with this occurrence, in the form of projects/[PROJECT]/notes/[NOTE_ID]. This field can be used as a filter in list requests.</summary>
     [JsonPropertyName("noteName")]
@@ -65,7 +71,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1ContainerAnalysisOccurrenceSpecProjectRef ProjectRef { get; set; }
+    public ContainerAnalysisOccurrenceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>A description of actions that can be taken to remedy the note.</summary>
     [JsonPropertyName("remediation")]
@@ -82,7 +88,7 @@ public partial class V1alpha1ContainerAnalysisOccurrenceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
+public partial class ContainerAnalysisOccurrenceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -107,11 +113,11 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ContainerAnalysisOccurrenceStatus
+public partial class ContainerAnalysisOccurrenceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ContainerAnalysisOccurrenceStatusConditions>? Conditions { get; set; }
+    public IList<ContainerAnalysisOccurrenceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the repository was created.</summary>
     [JsonPropertyName("createTime")]
@@ -136,30 +142,25 @@ public partial class V1alpha1ContainerAnalysisOccurrenceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ContainerAnalysisOccurrence : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ContainerAnalysisOccurrenceSpec>, IStatus<V1alpha1ContainerAnalysisOccurrenceStatus>
+public partial class ContainerAnalysisOccurrence
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ContainerAnalysisOccurrence";
-    public const string KubeGroup = "containeranalysis.cnrm.cloud.google.com";
-    public const string KubePluralName = "containeranalysisoccurrences";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ContainerAnalysisOccurrenceMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ContainerAnalysisOccurrenceSpec Spec { get; set; }
+    public ContainerAnalysisOccurrenceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ContainerAnalysisOccurrenceStatus? Status { get; set; }
+    public ContainerAnalysisOccurrenceStatus? Status { get; set; }
 }

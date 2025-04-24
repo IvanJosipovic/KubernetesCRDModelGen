@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dns.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleSpecLocalDataLocalDatas
+public partial class DNSResponsePolicyRuleMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DNSResponsePolicyRuleSpecLocalDataLocalDatas
 {
     /// <summary>For example, www.example.com.</summary>
     [JsonPropertyName("name")]
@@ -31,16 +37,16 @@ public partial class V1alpha1DNSResponsePolicyRuleSpecLocalDataLocalDatas
 
 /// <summary>Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleSpecLocalData
+public partial class DNSResponsePolicyRuleSpecLocalData
 {
     /// <summary>All resource record sets for this selector, one per resource record type. The name must match the dns_name.</summary>
     [JsonPropertyName("localDatas")]
-    public IList<V1alpha1DNSResponsePolicyRuleSpecLocalDataLocalDatas> LocalDatas { get; set; }
+    public IList<DNSResponsePolicyRuleSpecLocalDataLocalDatas> LocalDatas { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleSpecProjectRef
+public partial class DNSResponsePolicyRuleSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -57,7 +63,7 @@ public partial class V1alpha1DNSResponsePolicyRuleSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleSpec
+public partial class DNSResponsePolicyRuleSpec
 {
     /// <summary>Answer this query with a behavior rather than DNS data. Acceptable values are 'behaviorUnspecified', and 'bypassResponsePolicy'.</summary>
     [JsonPropertyName("behavior")]
@@ -69,11 +75,11 @@ public partial class V1alpha1DNSResponsePolicyRuleSpec
 
     /// <summary>Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.</summary>
     [JsonPropertyName("localData")]
-    public V1alpha1DNSResponsePolicyRuleSpecLocalData? LocalData { get; set; }
+    public DNSResponsePolicyRuleSpecLocalData? LocalData { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DNSResponsePolicyRuleSpecProjectRef ProjectRef { get; set; }
+    public DNSResponsePolicyRuleSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The ruleName of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -86,7 +92,7 @@ public partial class V1alpha1DNSResponsePolicyRuleSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleStatusConditions
+public partial class DNSResponsePolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -111,11 +117,11 @@ public partial class V1alpha1DNSResponsePolicyRuleStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DNSResponsePolicyRuleStatus
+public partial class DNSResponsePolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DNSResponsePolicyRuleStatusConditions>? Conditions { get; set; }
+    public IList<DNSResponsePolicyRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -124,30 +130,25 @@ public partial class V1alpha1DNSResponsePolicyRuleStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DNSResponsePolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DNSResponsePolicyRuleSpec>, IStatus<V1alpha1DNSResponsePolicyRuleStatus>
+public partial class DNSResponsePolicyRule
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DNSResponsePolicyRule";
-    public const string KubeGroup = "dns.cnrm.cloud.google.com";
-    public const string KubePluralName = "dnsresponsepolicyrules";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DNSResponsePolicyRuleMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DNSResponsePolicyRuleSpec Spec { get; set; }
+    public DNSResponsePolicyRuleSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DNSResponsePolicyRuleStatus? Status { get; set; }
+    public DNSResponsePolicyRuleStatus? Status { get; set; }
 }

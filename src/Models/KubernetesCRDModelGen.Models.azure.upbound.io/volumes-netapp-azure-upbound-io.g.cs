@@ -1491,3 +1491,29 @@ public partial class V1beta1Volume : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     [JsonPropertyName("status")]
     public V1beta1VolumeStatus? Status { get; set; }
 }
+
+/// <summary>Volume is the Schema for the Volumes API. Manages a NetApp Volume.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VolumeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Volume>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VolumeList";
+    public const string KubeGroup = "netapp.azure.upbound.io";
+    public const string KubePluralName = "volumes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Volume> Items { get; set; }
+}

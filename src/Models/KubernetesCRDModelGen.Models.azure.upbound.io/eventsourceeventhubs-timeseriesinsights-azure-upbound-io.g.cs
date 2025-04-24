@@ -1084,3 +1084,29 @@ public partial class V1beta1EventSourceEventHub : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1EventSourceEventHubStatus? Status { get; set; }
 }
+
+/// <summary>EventSourceEventHub is the Schema for the EventSourceEventHubs API. Manages an Azure IoT Time Series Insights EventHub Event Source.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EventSourceEventHubList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventSourceEventHub>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EventSourceEventHubList";
+    public const string KubeGroup = "timeseriesinsights.azure.upbound.io";
+    public const string KubePluralName = "eventsourceeventhubs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EventSourceEventHub> Items { get; set; }
+}

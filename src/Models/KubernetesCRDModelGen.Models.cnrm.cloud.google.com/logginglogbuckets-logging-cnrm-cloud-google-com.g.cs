@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class LoggingLogBucketMetadata
+{
+}
+
 /// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketSpecBillingAccountRef
+public partial class LoggingLogBucketSpecBillingAccountRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Billing Account (format: `billingAccounts/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1LoggingLogBucketSpecBillingAccountRef
 
 /// <summary>Immutable. The Folder that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketSpecFolderRef
+public partial class LoggingLogBucketSpecFolderRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1LoggingLogBucketSpecFolderRef
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketSpecOrganizationRef
+public partial class LoggingLogBucketSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1LoggingLogBucketSpecOrganizationRef
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketSpecProjectRef
+public partial class LoggingLogBucketSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -78,11 +84,11 @@ public partial class V1beta1LoggingLogBucketSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketSpec
+public partial class LoggingLogBucketSpec
 {
     /// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("billingAccountRef")]
-    public V1beta1LoggingLogBucketSpecBillingAccountRef? BillingAccountRef { get; set; }
+    public LoggingLogBucketSpecBillingAccountRef? BillingAccountRef { get; set; }
 
     /// <summary>Describes this bucket.</summary>
     [JsonPropertyName("description")]
@@ -94,7 +100,7 @@ public partial class V1beta1LoggingLogBucketSpec
 
     /// <summary>Immutable. The Folder that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("folderRef")]
-    public V1beta1LoggingLogBucketSpecFolderRef? FolderRef { get; set; }
+    public LoggingLogBucketSpecFolderRef? FolderRef { get; set; }
 
     /// <summary>Immutable. The location of the resource. The supported locations are: global, us-central1, us-east1, us-west1, asia-east1, europe-west1.</summary>
     [JsonPropertyName("location")]
@@ -106,11 +112,11 @@ public partial class V1beta1LoggingLogBucketSpec
 
     /// <summary>Immutable. The Organization that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public V1beta1LoggingLogBucketSpecOrganizationRef? OrganizationRef { get; set; }
+    public LoggingLogBucketSpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to. Only one of [billingAccountRef, folderRef, organizationRef, projectRef] may be specified.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1LoggingLogBucketSpecProjectRef? ProjectRef { get; set; }
+    public LoggingLogBucketSpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -123,7 +129,7 @@ public partial class V1beta1LoggingLogBucketSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketStatusConditions
+public partial class LoggingLogBucketStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -148,11 +154,11 @@ public partial class V1beta1LoggingLogBucketStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LoggingLogBucketStatus
+public partial class LoggingLogBucketStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1LoggingLogBucketStatusConditions>? Conditions { get; set; }
+    public IList<LoggingLogBucketStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The creation timestamp of the bucket. This is not set for any of the default buckets.</summary>
     [JsonPropertyName("createTime")]
@@ -173,30 +179,25 @@ public partial class V1beta1LoggingLogBucketStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LoggingLogBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingLogBucketSpec>, IStatus<V1beta1LoggingLogBucketStatus>
+public partial class LoggingLogBucket
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LoggingLogBucket";
-    public const string KubeGroup = "logging.cnrm.cloud.google.com";
-    public const string KubePluralName = "logginglogbuckets";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public LoggingLogBucketMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1LoggingLogBucketSpec Spec { get; set; }
+    public LoggingLogBucketSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1LoggingLogBucketStatus? Status { get; set; }
+    public LoggingLogBucketStatus? Status { get; set; }
 }

@@ -1444,3 +1444,29 @@ public partial class V1api20241101storageFluxConfiguration : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1api20241101storageFluxConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20241101.FluxConfiguration Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations/stable/2024-11-01/fluxconfiguration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20241101storageFluxConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1api20241101storageFluxConfiguration>
+{
+    public const string KubeApiVersion = "v1api20241101storage";
+    public const string KubeKind = "FluxConfigurationList";
+    public const string KubeGroup = "kubernetesconfiguration.azure.com";
+    public const string KubePluralName = "fluxconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20241101storageFluxConfiguration> Items { get; set; }
+}

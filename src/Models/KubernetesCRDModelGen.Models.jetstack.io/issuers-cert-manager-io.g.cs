@@ -2581,3 +2581,29 @@ public partial class V1Issuer : IKubernetesObject<V1ObjectMeta>, ISpec<V1IssuerS
     [JsonPropertyName("status")]
     public V1IssuerStatus? Status { get; set; }
 }
+
+/// <summary>An Issuer represents a certificate issuing authority which can be referenced as part of `issuerRef` fields. It is scoped to a single namespace and can therefore only be referenced by resources within the same namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1IssuerList : IKubernetesObject<V1ListMeta>, IItems<V1Issuer>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "IssuerList";
+    public const string KubeGroup = "cert-manager.io";
+    public const string KubePluralName = "issuers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Issuer> Items { get; set; }
+}

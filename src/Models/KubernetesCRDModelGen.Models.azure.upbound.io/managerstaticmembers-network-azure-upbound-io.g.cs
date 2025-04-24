@@ -450,3 +450,29 @@ public partial class V1beta1ManagerStaticMember : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1ManagerStaticMemberStatus? Status { get; set; }
 }
+
+/// <summary>ManagerStaticMember is the Schema for the ManagerStaticMembers API. Manages a Network Manager Static Member.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagerStaticMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagerStaticMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagerStaticMemberList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "managerstaticmembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagerStaticMember> Items { get; set; }
+}

@@ -614,3 +614,29 @@ public partial class V1alpha1BaselineAdminNetworkPolicy : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1alpha1BaselineAdminNetworkPolicyStatus? Status { get; set; }
 }
+
+/// <summary>BaselineAdminNetworkPolicy is a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BaselineAdminNetworkPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BaselineAdminNetworkPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BaselineAdminNetworkPolicyList";
+    public const string KubeGroup = "policy.networking.k8s.io";
+    public const string KubePluralName = "baselineadminnetworkpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BaselineAdminNetworkPolicy> Items { get; set; }
+}

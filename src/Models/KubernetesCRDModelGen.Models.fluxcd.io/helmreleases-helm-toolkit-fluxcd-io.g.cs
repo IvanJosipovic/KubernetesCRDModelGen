@@ -893,3 +893,29 @@ public partial class V2HelmRelease : IKubernetesObject<V1ObjectMeta>, ISpec<V2He
     [JsonPropertyName("status")]
     public V2HelmReleaseStatus? Status { get; set; }
 }
+
+/// <summary>HelmRelease is the Schema for the helmreleases API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V2HelmReleaseList : IKubernetesObject<V1ListMeta>, IItems<V2HelmRelease>
+{
+    public const string KubeApiVersion = "v2";
+    public const string KubeKind = "HelmReleaseList";
+    public const string KubeGroup = "helm.toolkit.fluxcd.io";
+    public const string KubePluralName = "helmreleases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V2HelmRelease> Items { get; set; }
+}

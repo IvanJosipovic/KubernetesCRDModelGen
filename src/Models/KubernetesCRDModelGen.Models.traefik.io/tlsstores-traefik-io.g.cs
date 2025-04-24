@@ -94,3 +94,29 @@ public partial class V1alpha1TLSStore : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("spec")]
     public V1alpha1TLSStoreSpec Spec { get; set; }
 }
+
+/// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.3/https/tls/#certificates-stores</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1TLSStoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TLSStore>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "TLSStoreList";
+    public const string KubeGroup = "traefik.io";
+    public const string KubePluralName = "tlsstores";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1TLSStore> Items { get; set; }
+}

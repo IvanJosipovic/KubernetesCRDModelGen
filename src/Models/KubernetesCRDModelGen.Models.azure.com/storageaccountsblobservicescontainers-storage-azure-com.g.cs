@@ -467,3 +467,29 @@ public partial class V1api20230101storageStorageAccountsBlobServicesContainer : 
     [JsonPropertyName("status")]
     public V1api20230101storageStorageAccountsBlobServicesContainerStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230101.StorageAccountsBlobServicesContainer Generator information: - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default/containers/{containerName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230101storageStorageAccountsBlobServicesContainerList : IKubernetesObject<V1ListMeta>, IItems<V1api20230101storageStorageAccountsBlobServicesContainer>
+{
+    public const string KubeApiVersion = "v1api20230101storage";
+    public const string KubeKind = "StorageAccountsBlobServicesContainerList";
+    public const string KubeGroup = "storage.azure.com";
+    public const string KubePluralName = "storageaccountsblobservicescontainers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230101storageStorageAccountsBlobServicesContainer> Items { get; set; }
+}

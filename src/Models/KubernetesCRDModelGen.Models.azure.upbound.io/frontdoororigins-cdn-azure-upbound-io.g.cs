@@ -1001,3 +1001,29 @@ public partial class V1beta1FrontdoorOrigin : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1FrontdoorOriginStatus? Status { get; set; }
 }
+
+/// <summary>FrontdoorOrigin is the Schema for the FrontdoorOrigins API. Manages a Front Door (standard/premium) Origin.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FrontdoorOriginList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FrontdoorOrigin>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FrontdoorOriginList";
+    public const string KubeGroup = "cdn.azure.upbound.io";
+    public const string KubePluralName = "frontdoororigins";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FrontdoorOrigin> Items { get; set; }
+}

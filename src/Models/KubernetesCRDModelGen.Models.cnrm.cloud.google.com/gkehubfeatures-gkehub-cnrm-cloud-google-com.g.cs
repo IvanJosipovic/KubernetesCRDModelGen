@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class GKEHubFeatureMetadata
+{
+}
+
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecProjectRef
+public partial class GKEHubFeatureSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1GKEHubFeatureSpecProjectRef
 
 /// <summary>Specified if applying the default routing config to logs not specified in other configs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig
+public partial class GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig
 {
     /// <summary>The logs routing mode Possible values: MODE_UNSPECIFIED, COPY, MOVE</summary>
     [JsonPropertyName("mode")]
@@ -36,7 +42,7 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
 
 /// <summary>Specified if applying the routing config to all logs for all fleet scopes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig
+public partial class GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig
 {
     /// <summary>The logs routing mode Possible values: MODE_UNSPECIFIED, COPY, MOVE</summary>
     [JsonPropertyName("mode")]
@@ -45,29 +51,29 @@ public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
 
 /// <summary>Fleet Observability Logging-specific spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
+public partial class GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig
 {
     /// <summary>Specified if applying the default routing config to logs not specified in other configs.</summary>
     [JsonPropertyName("defaultConfig")]
-    public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig? DefaultConfig { get; set; }
+    public GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigDefaultConfig? DefaultConfig { get; set; }
 
     /// <summary>Specified if applying the routing config to all logs for all fleet scopes.</summary>
     [JsonPropertyName("fleetScopeLogsConfig")]
-    public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig? FleetScopeLogsConfig { get; set; }
+    public GKEHubFeatureSpecSpecFleetobservabilityLoggingConfigFleetScopeLogsConfig? FleetScopeLogsConfig { get; set; }
 }
 
 /// <summary>Fleet Observability spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecFleetobservability
+public partial class GKEHubFeatureSpecSpecFleetobservability
 {
     /// <summary>Fleet Observability Logging-specific spec.</summary>
     [JsonPropertyName("loggingConfig")]
-    public V1beta1GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig? LoggingConfig { get; set; }
+    public GKEHubFeatureSpecSpecFleetobservabilityLoggingConfig? LoggingConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef
+public partial class GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef
 {
     /// <summary>Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`  Allowed value: The Google Cloud resource name of a `GKEHubMembership` resource (format: `projects/{{project}}/locations/{{location}}/memberships/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -84,29 +90,29 @@ public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMember
 
 /// <summary>Multicluster Ingress-specific spec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpecMulticlusteringress
+public partial class GKEHubFeatureSpecSpecMulticlusteringress
 {
     /// <summary></summary>
     [JsonPropertyName("configMembershipRef")]
-    public V1beta1GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef ConfigMembershipRef { get; set; }
+    public GKEHubFeatureSpecSpecMulticlusteringressConfigMembershipRef ConfigMembershipRef { get; set; }
 }
 
 /// <summary>Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpecSpec
+public partial class GKEHubFeatureSpecSpec
 {
     /// <summary>Fleet Observability spec.</summary>
     [JsonPropertyName("fleetobservability")]
-    public V1beta1GKEHubFeatureSpecSpecFleetobservability? Fleetobservability { get; set; }
+    public GKEHubFeatureSpecSpecFleetobservability? Fleetobservability { get; set; }
 
     /// <summary>Multicluster Ingress-specific spec.</summary>
     [JsonPropertyName("multiclusteringress")]
-    public V1beta1GKEHubFeatureSpecSpecMulticlusteringress? Multiclusteringress { get; set; }
+    public GKEHubFeatureSpecSpecMulticlusteringress? Multiclusteringress { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureSpec
+public partial class GKEHubFeatureSpec
 {
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -114,7 +120,7 @@ public partial class V1beta1GKEHubFeatureSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1GKEHubFeatureSpecProjectRef ProjectRef { get; set; }
+    public GKEHubFeatureSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -122,12 +128,12 @@ public partial class V1beta1GKEHubFeatureSpec
 
     /// <summary>Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.</summary>
     [JsonPropertyName("spec")]
-    public V1beta1GKEHubFeatureSpecSpec? Spec { get; set; }
+    public GKEHubFeatureSpecSpec? Spec { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureStatusConditions
+public partial class GKEHubFeatureStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -152,7 +158,7 @@ public partial class V1beta1GKEHubFeatureStatusConditions
 
 /// <summary>State of the Feature resource itself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureStatusResourceState
+public partial class GKEHubFeatureStatusResourceState
 {
     /// <summary>Whether this Feature has outstanding resources that need to be cleaned up before it can be disabled.</summary>
     [JsonPropertyName("hasResources")]
@@ -165,7 +171,7 @@ public partial class V1beta1GKEHubFeatureStatusResourceState
 
 /// <summary>Output only. The "running state" of the Feature in this Hub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureStatusStateState
+public partial class GKEHubFeatureStatusStateState
 {
     /// <summary>The high-level, machine-readable status of this Feature. Possible values: CODE_UNSPECIFIED, OK, WARNING, ERROR</summary>
     [JsonPropertyName("code")]
@@ -182,20 +188,20 @@ public partial class V1beta1GKEHubFeatureStatusStateState
 
 /// <summary>Output only. The Hub-wide Feature state</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureStatusState
+public partial class GKEHubFeatureStatusState
 {
     /// <summary>Output only. The "running state" of the Feature in this Hub.</summary>
     [JsonPropertyName("state")]
-    public V1beta1GKEHubFeatureStatusStateState? State { get; set; }
+    public GKEHubFeatureStatusStateState? State { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GKEHubFeatureStatus
+public partial class GKEHubFeatureStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1GKEHubFeatureStatusConditions>? Conditions { get; set; }
+    public IList<GKEHubFeatureStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. When the Feature resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -211,11 +217,11 @@ public partial class V1beta1GKEHubFeatureStatus
 
     /// <summary>State of the Feature resource itself.</summary>
     [JsonPropertyName("resourceState")]
-    public V1beta1GKEHubFeatureStatusResourceState? ResourceState { get; set; }
+    public GKEHubFeatureStatusResourceState? ResourceState { get; set; }
 
     /// <summary>Output only. The Hub-wide Feature state</summary>
     [JsonPropertyName("state")]
-    public V1beta1GKEHubFeatureStatusState? State { get; set; }
+    public GKEHubFeatureStatusState? State { get; set; }
 
     /// <summary>Output only. When the Feature resource was last updated.</summary>
     [JsonPropertyName("updateTime")]
@@ -224,30 +230,25 @@ public partial class V1beta1GKEHubFeatureStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GKEHubFeature : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GKEHubFeatureSpec>, IStatus<V1beta1GKEHubFeatureStatus>
+public partial class GKEHubFeature
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GKEHubFeature";
-    public const string KubeGroup = "gkehub.cnrm.cloud.google.com";
-    public const string KubePluralName = "gkehubfeatures";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public GKEHubFeatureMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1GKEHubFeatureSpec Spec { get; set; }
+    public GKEHubFeatureSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1GKEHubFeatureStatus? Status { get; set; }
+    public GKEHubFeatureStatus? Status { get; set; }
 }

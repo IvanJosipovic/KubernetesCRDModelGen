@@ -6037,3 +6037,29 @@ public partial class V1alpha1Application : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("status")]
     public V1alpha1ApplicationStatus? Status { get; set; }
 }
+
+/// <summary>Application is a definition of Application resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ApplicationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Application>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ApplicationList";
+    public const string KubeGroup = "argoproj.io";
+    public const string KubePluralName = "applications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Application> Items { get; set; }
+}

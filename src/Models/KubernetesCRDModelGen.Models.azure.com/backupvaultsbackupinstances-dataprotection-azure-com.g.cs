@@ -1496,3 +1496,29 @@ public partial class V1api20231101storageBackupVaultsBackupInstance : IKubernete
     [JsonPropertyName("status")]
     public V1api20231101storageBackupVaultsBackupInstanceStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20231101.BackupVaultsBackupInstance Generator information: - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}/backupInstances/{backupInstanceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20231101storageBackupVaultsBackupInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1api20231101storageBackupVaultsBackupInstance>
+{
+    public const string KubeApiVersion = "v1api20231101storage";
+    public const string KubeKind = "BackupVaultsBackupInstanceList";
+    public const string KubeGroup = "dataprotection.azure.com";
+    public const string KubePluralName = "backupvaultsbackupinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20231101storageBackupVaultsBackupInstance> Items { get; set; }
+}

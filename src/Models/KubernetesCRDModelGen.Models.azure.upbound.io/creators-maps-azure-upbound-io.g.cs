@@ -342,3 +342,29 @@ public partial class V1beta1Creator : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     [JsonPropertyName("status")]
     public V1beta1CreatorStatus? Status { get; set; }
 }
+
+/// <summary>Creator is the Schema for the Creators API. Manages an Azure Maps Creator.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CreatorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Creator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CreatorList";
+    public const string KubeGroup = "maps.azure.upbound.io";
+    public const string KubePluralName = "creators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Creator> Items { get; set; }
+}

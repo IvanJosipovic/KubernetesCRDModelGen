@@ -461,3 +461,29 @@ public partial class V1api20210401storageSmartDetectorAlertRule : IKubernetesObj
     [JsonPropertyName("status")]
     public V1api20210401storageSmartDetectorAlertRuleStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20210401.SmartDetectorAlertRule Generator information: - Generated from: /alertsmanagement/resource-manager/Microsoft.AlertsManagement/stable/2021-04-01/SmartDetectorAlertRulesApi.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/microsoft.alertsManagement/smartDetectorAlertRules/{alertRuleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20210401storageSmartDetectorAlertRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20210401storageSmartDetectorAlertRule>
+{
+    public const string KubeApiVersion = "v1api20210401storage";
+    public const string KubeKind = "SmartDetectorAlertRuleList";
+    public const string KubeGroup = "alertsmanagement.azure.com";
+    public const string KubePluralName = "smartdetectoralertrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20210401storageSmartDetectorAlertRule> Items { get; set; }
+}

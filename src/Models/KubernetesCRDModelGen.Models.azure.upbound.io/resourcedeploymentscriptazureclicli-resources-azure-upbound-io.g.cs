@@ -872,3 +872,29 @@ public partial class V1beta1ResourceDeploymentScriptAzureCli : IKubernetesObject
     [JsonPropertyName("status")]
     public V1beta1ResourceDeploymentScriptAzureCliStatus? Status { get; set; }
 }
+
+/// <summary>ResourceDeploymentScriptAzureCli is the Schema for the ResourceDeploymentScriptAzureClis API. Manages a Resource Deployment Script of Azure Cli.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceDeploymentScriptAzureCliList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceDeploymentScriptAzureCli>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceDeploymentScriptAzureCliList";
+    public const string KubeGroup = "resources.azure.upbound.io";
+    public const string KubePluralName = "resourcedeploymentscriptazureclicli";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceDeploymentScriptAzureCli> Items { get; set; }
+}

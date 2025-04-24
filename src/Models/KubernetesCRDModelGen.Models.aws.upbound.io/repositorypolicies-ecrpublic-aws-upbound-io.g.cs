@@ -394,3 +394,29 @@ public partial class V1beta1RepositoryPolicy : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1RepositoryPolicyStatus? Status { get; set; }
 }
+
+/// <summary>RepositoryPolicy is the Schema for the RepositoryPolicys API. Provides an Elastic Container Registry Public Repository Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RepositoryPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RepositoryPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RepositoryPolicyList";
+    public const string KubeGroup = "ecrpublic.aws.upbound.io";
+    public const string KubePluralName = "repositorypolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RepositoryPolicy> Items { get; set; }
+}

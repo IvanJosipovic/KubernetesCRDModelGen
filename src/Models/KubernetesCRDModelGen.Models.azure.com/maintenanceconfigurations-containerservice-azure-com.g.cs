@@ -599,3 +599,29 @@ public partial class V1api20240901storageMaintenanceConfiguration : IKubernetesO
     [JsonPropertyName("status")]
     public V1api20240901storageMaintenanceConfigurationStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20240901.MaintenanceConfiguration Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/maintenanceConfigurations/{configName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240901storageMaintenanceConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1api20240901storageMaintenanceConfiguration>
+{
+    public const string KubeApiVersion = "v1api20240901storage";
+    public const string KubeKind = "MaintenanceConfigurationList";
+    public const string KubeGroup = "containerservice.azure.com";
+    public const string KubePluralName = "maintenanceconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240901storageMaintenanceConfiguration> Items { get; set; }
+}

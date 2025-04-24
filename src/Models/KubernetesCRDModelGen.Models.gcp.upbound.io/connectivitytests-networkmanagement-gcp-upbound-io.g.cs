@@ -1524,3 +1524,29 @@ public partial class V1beta1ConnectivityTest : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1ConnectivityTestStatus? Status { get; set; }
 }
+
+/// <summary>ConnectivityTest is the Schema for the ConnectivityTests API. A connectivity test are a static analysis of your resource configurations that enables you to evaluate connectivity to and from Google Cloud resources in your Virtual Private Cloud (VPC) network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConnectivityTestList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectivityTest>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConnectivityTestList";
+    public const string KubeGroup = "networkmanagement.gcp.upbound.io";
+    public const string KubePluralName = "connectivitytests";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConnectivityTest> Items { get; set; }
+}

@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeEndpointAttachmentSpec
+public partial class ApigeeEndpointAttachmentMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ApigeeEndpointAttachmentSpec
 {
     /// <summary>Immutable. Location of the endpoint attachment.</summary>
     [JsonPropertyName("location")]
@@ -31,7 +37,7 @@ public partial class V1alpha1ApigeeEndpointAttachmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeEndpointAttachmentStatusConditions
+public partial class ApigeeEndpointAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -56,11 +62,11 @@ public partial class V1alpha1ApigeeEndpointAttachmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ApigeeEndpointAttachmentStatus
+public partial class ApigeeEndpointAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ApigeeEndpointAttachmentStatusConditions>? Conditions { get; set; }
+    public IList<ApigeeEndpointAttachmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>State of the endpoint attachment connection to the service attachment.</summary>
     [JsonPropertyName("connectionState")]
@@ -81,30 +87,25 @@ public partial class V1alpha1ApigeeEndpointAttachmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ApigeeEndpointAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ApigeeEndpointAttachmentSpec>, IStatus<V1alpha1ApigeeEndpointAttachmentStatus>
+public partial class ApigeeEndpointAttachment
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ApigeeEndpointAttachment";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeendpointattachments";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ApigeeEndpointAttachmentMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ApigeeEndpointAttachmentSpec Spec { get; set; }
+    public ApigeeEndpointAttachmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ApigeeEndpointAttachmentStatus? Status { get; set; }
+    public ApigeeEndpointAttachmentStatus? Status { get; set; }
 }

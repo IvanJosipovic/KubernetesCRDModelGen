@@ -258,3 +258,29 @@ public partial class V1beta1SecurityCenterSetting : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1SecurityCenterSettingStatus? Status { get; set; }
 }
+
+/// <summary>SecurityCenterSetting is the Schema for the SecurityCenterSettings API. Manages the Data Access Settings for Azure Security Center.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecurityCenterSettingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecurityCenterSetting>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecurityCenterSettingList";
+    public const string KubeGroup = "security.azure.upbound.io";
+    public const string KubePluralName = "securitycentersettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecurityCenterSetting> Items { get; set; }
+}

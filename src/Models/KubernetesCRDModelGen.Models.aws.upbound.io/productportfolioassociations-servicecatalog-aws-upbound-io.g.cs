@@ -542,3 +542,29 @@ public partial class V1beta1ProductPortfolioAssociation : IKubernetesObject<V1Ob
     [JsonPropertyName("status")]
     public V1beta1ProductPortfolioAssociationStatus? Status { get; set; }
 }
+
+/// <summary>ProductPortfolioAssociation is the Schema for the ProductPortfolioAssociations API. Manages a Service Catalog Product Portfolio Association</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProductPortfolioAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProductPortfolioAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProductPortfolioAssociationList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "productportfolioassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProductPortfolioAssociation> Items { get; set; }
+}

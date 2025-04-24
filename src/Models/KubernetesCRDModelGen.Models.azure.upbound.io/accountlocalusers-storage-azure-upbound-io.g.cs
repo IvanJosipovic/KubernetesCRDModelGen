@@ -659,3 +659,29 @@ public partial class V1beta1AccountLocalUser : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1AccountLocalUserStatus? Status { get; set; }
 }
+
+/// <summary>AccountLocalUser is the Schema for the AccountLocalUsers API. Manages a Storage Account Local User.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccountLocalUserList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountLocalUser>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccountLocalUserList";
+    public const string KubeGroup = "storage.azure.upbound.io";
+    public const string KubePluralName = "accountlocalusers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccountLocalUser> Items { get; set; }
+}

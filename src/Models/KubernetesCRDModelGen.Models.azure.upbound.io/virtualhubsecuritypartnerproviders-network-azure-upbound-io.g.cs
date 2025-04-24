@@ -482,3 +482,29 @@ public partial class V1beta1VirtualHubSecurityPartnerProvider : IKubernetesObjec
     [JsonPropertyName("status")]
     public V1beta1VirtualHubSecurityPartnerProviderStatus? Status { get; set; }
 }
+
+/// <summary>VirtualHubSecurityPartnerProvider is the Schema for the VirtualHubSecurityPartnerProviders API. Manages a Security Partner Provider which could be associated to virtual hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualHubSecurityPartnerProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubSecurityPartnerProvider>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualHubSecurityPartnerProviderList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "virtualhubsecuritypartnerproviders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualHubSecurityPartnerProvider> Items { get; set; }
+}

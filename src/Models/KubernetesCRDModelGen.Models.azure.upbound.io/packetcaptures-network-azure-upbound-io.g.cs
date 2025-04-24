@@ -696,3 +696,29 @@ public partial class V1beta1PacketCapture : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("status")]
     public V1beta1PacketCaptureStatus? Status { get; set; }
 }
+
+/// <summary>PacketCapture is the Schema for the PacketCaptures API. Configures Packet Capturing against a Virtual Machine using a Network Watcher.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PacketCaptureList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PacketCapture>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PacketCaptureList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "packetcaptures";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PacketCapture> Items { get; set; }
+}

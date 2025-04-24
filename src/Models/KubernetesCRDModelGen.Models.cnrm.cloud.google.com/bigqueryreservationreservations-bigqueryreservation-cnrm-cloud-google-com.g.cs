@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class BigQueryReservationReservationMetadata
+{
+}
+
 /// <summary>The configuration parameters for the auto scaling feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
+public partial class BigQueryReservationReservationSpecAutoscale
 {
     /// <summary>The slot capacity added to this reservation when autoscale happens. Will be between [0, max_slots].</summary>
     [JsonPropertyName("currentSlots")]
@@ -23,7 +29,7 @@ public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
+public partial class BigQueryReservationReservationSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -40,11 +46,11 @@ public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryReservationReservationSpec
+public partial class BigQueryReservationReservationSpec
 {
     /// <summary>The configuration parameters for the auto scaling feature.</summary>
     [JsonPropertyName("autoscale")]
-    public V1alpha1BigQueryReservationReservationSpecAutoscale? Autoscale { get; set; }
+    public BigQueryReservationReservationSpecAutoscale? Autoscale { get; set; }
 
     /// <summary>Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.</summary>
     [JsonPropertyName("concurrency")]
@@ -68,7 +74,7 @@ public partial class V1alpha1BigQueryReservationReservationSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1BigQueryReservationReservationSpecProjectRef ProjectRef { get; set; }
+    public BigQueryReservationReservationSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -81,7 +87,7 @@ public partial class V1alpha1BigQueryReservationReservationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryReservationReservationStatusConditions
+public partial class BigQueryReservationReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -106,11 +112,11 @@ public partial class V1alpha1BigQueryReservationReservationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1BigQueryReservationReservationStatus
+public partial class BigQueryReservationReservationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1BigQueryReservationReservationStatusConditions>? Conditions { get; set; }
+    public IList<BigQueryReservationReservationStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -119,30 +125,25 @@ public partial class V1alpha1BigQueryReservationReservationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BigQueryReservationReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryReservationReservationSpec>, IStatus<V1alpha1BigQueryReservationReservationStatus>
+public partial class BigQueryReservationReservation
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BigQueryReservationReservation";
-    public const string KubeGroup = "bigqueryreservation.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigqueryreservationreservations";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public BigQueryReservationReservationMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1BigQueryReservationReservationSpec Spec { get; set; }
+    public BigQueryReservationReservationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1BigQueryReservationReservationStatus? Status { get; set; }
+    public BigQueryReservationReservationStatus? Status { get; set; }
 }

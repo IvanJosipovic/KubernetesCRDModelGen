@@ -418,3 +418,29 @@ public partial class V1beta1UserSSHKey : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("status")]
     public V1beta1UserSSHKeyStatus? Status { get; set; }
 }
+
+/// <summary>UserSSHKey is the Schema for the UserSSHKeys API. Uploads an SSH public key and associates it with the specified IAM user.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserSSHKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserSSHKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserSSHKeyList";
+    public const string KubeGroup = "iam.aws.upbound.io";
+    public const string KubePluralName = "usersshkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserSSHKey> Items { get; set; }
+}

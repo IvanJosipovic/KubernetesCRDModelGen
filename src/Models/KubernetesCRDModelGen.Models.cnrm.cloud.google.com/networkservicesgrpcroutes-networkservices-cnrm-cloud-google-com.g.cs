@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
+public partial class NetworkServicesGRPCRouteMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class NetworkServicesGRPCRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecGateways
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
+public partial class NetworkServicesGRPCRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecMeshes
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
+public partial class NetworkServicesGRPCRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef
+public partial class NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>Required. The URL of a destination service to which to route traffic. Must refer to either a BackendService or ServiceDirectoryService.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -78,11 +84,11 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsS
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
+public partial class NetworkServicesGRPCRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
     [JsonPropertyName("serviceRef")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef ServiceRef { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesActionDestinationsServiceRef ServiceRef { get; set; }
 
     /// <summary>Optional. Specifies the proportion of requests forwarded to the backend referenced by the serviceName field. This is computed as: weight/Sum(weights in this destination list). For non-zero values, there may be some epsilon from the exact proportion defined here depending on the precision an implementation supports. If only one serviceName is specified and it has a weight greater than 0, 100% of the traffic is forwarded to that backend. If weights are specified for any one service name, they need to be specified for all of them. If weights are unspecified for all services, then, traffic is distributed in equal proportions to all of them.</summary>
     [JsonPropertyName("weight")]
@@ -91,7 +97,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations
 
 /// <summary>The specification for aborting to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort
+public partial class NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -104,7 +110,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
 
 /// <summary>The specification for injecting delay to client requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay
+public partial class NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay
 {
     /// <summary>Specify a fixed delay before forwarding the request.</summary>
     [JsonPropertyName("fixedDelay")]
@@ -117,20 +123,20 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectio
 
 /// <summary>Optional. The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced on a percentage of requests before sending those requests to the destination service. Similarly requests from clients can be aborted by for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy
+public partial class NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy
 {
     /// <summary>The specification for aborting to client requests.</summary>
     [JsonPropertyName("abort")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for injecting delay to client requests.</summary>
     [JsonPropertyName("delay")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>Optional. Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
+public partial class NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
 {
     /// <summary>Specifies the allowed number of retries. This number must be &gt; 0. If not specpfied, default to 1.</summary>
     [JsonPropertyName("numRetries")]
@@ -143,19 +149,19 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy
 
 /// <summary>Required. A detailed rule defining how to route traffic. This field is required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
+public partial class NetworkServicesGRPCRouteSpecRulesAction
 {
     /// <summary>Optional. The destination services to which traffic should be forwarded. If multiple destinations are specified, traffic will be split between Backend Service(s) according to the weight field of these destinations.</summary>
     [JsonPropertyName("destinations")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecRulesActionDestinations>? Destinations { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecRulesActionDestinations>? Destinations { get; set; }
 
     /// <summary>Optional. The specification for fault injection introduced into traffic to test the resiliency of clients to destination service failure. As part of fault injection, when clients send requests to a destination, delays can be introduced on a percentage of requests before sending those requests to the destination service. Similarly requests from clients can be aborted by for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>Optional. Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesActionRetryPolicy? RetryPolicy { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Optional. Specifies the timeout for selected route. Timeout is computed from the time the request has been fully processed (i.e. end of stream) up until the response has been completely processed. Timeout includes all retries.</summary>
     [JsonPropertyName("timeout")]
@@ -164,7 +170,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
+public partial class NetworkServicesGRPCRouteSpecRulesMatchesHeaders
 {
     /// <summary>Required. The key of the header.</summary>
     [JsonPropertyName("key")]
@@ -181,7 +187,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders
 
 /// <summary>Optional. A gRPC method to match against. If this field is empty or omitted, will match all methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
+public partial class NetworkServicesGRPCRouteSpecRulesMatchesMethod
 {
     /// <summary>Optional. Specifies that matches are case sensitive. The default value is true. case_sensitive must not be used with a type of REGULAR_EXPRESSION.</summary>
     [JsonPropertyName("caseSensitive")]
@@ -202,33 +208,33 @@ public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRulesMatches
+public partial class NetworkServicesGRPCRouteSpecRulesMatches
 {
     /// <summary>Optional. Specifies a collection of headers to match.</summary>
     [JsonPropertyName("headers")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecRulesMatchesHeaders>? Headers { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecRulesMatchesHeaders>? Headers { get; set; }
 
     /// <summary>Optional. A gRPC method to match against. If this field is empty or omitted, will match all methods.</summary>
     [JsonPropertyName("method")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesMatchesMethod? Method { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesMatchesMethod? Method { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpecRules
+public partial class NetworkServicesGRPCRouteSpecRules
 {
     /// <summary>Required. A detailed rule defining how to route traffic. This field is required.</summary>
     [JsonPropertyName("action")]
-    public V1beta1NetworkServicesGRPCRouteSpecRulesAction Action { get; set; }
+    public NetworkServicesGRPCRouteSpecRulesAction Action { get; set; }
 
     /// <summary>Optional. Matches define conditions used for matching the rule against incoming gRPC requests. Each match is independent, i.e. this rule will be matched if ANY one of the matches is satisfied. If no matches field is specified, this rule will unconditionally match traffic.</summary>
     [JsonPropertyName("matches")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecRulesMatches>? Matches { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecRulesMatches>? Matches { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteSpec
+public partial class NetworkServicesGRPCRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -236,7 +242,7 @@ public partial class V1beta1NetworkServicesGRPCRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("gateways")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecGateways>? Gateways { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecGateways>? Gateways { get; set; }
 
     /// <summary>Required. Service hostnames with an optional port for which this route describes traffic. Format: [:] Hostname is the fully qualified domain name of a network host. This matches the RFC 1123 definition of a hostname with 2 notable exceptions: - IPs are not allowed. - A hostname may be prefixed with a wildcard label (*.). The wildcard label must appear by itself as the first label. Hostname can be “precise” which is a domain name without the terminating dot of a network host (e.g. “foo.example.com”) or “wildcard”, which is a domain name prefixed with a single wildcard label (e.g. *.example.com). Note that as per RFC1035 and RFC1123, a label must consist of lower case alphanumeric characters or ‘-’, and must start and end with an alphanumeric character. No other punctuation is allowed. The routes associated with a Router must have unique hostnames. If you attempt to attach multiple routes with conflicting hostnames, the configuration will be rejected. For example, while it is acceptable for routes for the hostnames "*.foo.bar.com" and "*.bar.com" to be associated with the same route, it is not possible to associate two routes both with "*.bar.com" or both with "bar.com". In the case that multiple routes match the hostname, the most specific match will be selected. For example, "foo.bar.baz.com" will take precedence over "*.bar.baz.com" and "*.bar.baz.com" will take precedence over "*.baz.com". If a port is specified, then gRPC clients must use the channel URI with the port to match this rule (i.e. "xds:///service:123"), otherwise they must supply the URI without a port (i.e. "xds:///service").</summary>
     [JsonPropertyName("hostnames")]
@@ -248,11 +254,11 @@ public partial class V1beta1NetworkServicesGRPCRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("meshes")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecMeshes>? Meshes { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecMeshes>? Meshes { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1NetworkServicesGRPCRouteSpecProjectRef ProjectRef { get; set; }
+    public NetworkServicesGRPCRouteSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -260,12 +266,12 @@ public partial class V1beta1NetworkServicesGRPCRouteSpec
 
     /// <summary>Required. A list of detailed rules defining how to route traffic. Within a single GrpcRoute, the GrpcRoute.RouteAction associated with the first matching GrpcRoute.RouteRule will be executed. At least one rule must be supplied.</summary>
     [JsonPropertyName("rules")]
-    public IList<V1beta1NetworkServicesGRPCRouteSpecRules> Rules { get; set; }
+    public IList<NetworkServicesGRPCRouteSpecRules> Rules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
+public partial class NetworkServicesGRPCRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -290,11 +296,11 @@ public partial class V1beta1NetworkServicesGRPCRouteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1NetworkServicesGRPCRouteStatus
+public partial class NetworkServicesGRPCRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1NetworkServicesGRPCRouteStatusConditions>? Conditions { get; set; }
+    public IList<NetworkServicesGRPCRouteStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -315,30 +321,25 @@ public partial class V1beta1NetworkServicesGRPCRouteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkServicesGRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesGRPCRouteSpec>, IStatus<V1beta1NetworkServicesGRPCRouteStatus>
+public partial class NetworkServicesGRPCRoute
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkServicesGRPCRoute";
-    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkservicesgrpcroutes";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public NetworkServicesGRPCRouteMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1NetworkServicesGRPCRouteSpec Spec { get; set; }
+    public NetworkServicesGRPCRouteSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1NetworkServicesGRPCRouteStatus? Status { get; set; }
+    public NetworkServicesGRPCRouteStatus? Status { get; set; }
 }

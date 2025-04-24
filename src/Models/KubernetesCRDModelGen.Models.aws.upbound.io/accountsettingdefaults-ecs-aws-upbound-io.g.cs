@@ -266,3 +266,29 @@ public partial class V1beta1AccountSettingDefault : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1AccountSettingDefaultStatus? Status { get; set; }
 }
+
+/// <summary>AccountSettingDefault is the Schema for the AccountSettingDefaults API. Provides an ECS Default account setting.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccountSettingDefaultList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountSettingDefault>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccountSettingDefaultList";
+    public const string KubeGroup = "ecs.aws.upbound.io";
+    public const string KubePluralName = "accountsettingdefaults";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccountSettingDefault> Items { get; set; }
+}

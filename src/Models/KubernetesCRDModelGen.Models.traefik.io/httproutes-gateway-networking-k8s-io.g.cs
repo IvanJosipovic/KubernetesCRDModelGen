@@ -786,3 +786,29 @@ public partial class V1HTTPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1HTTP
     [JsonPropertyName("status")]
     public V1HTTPRouteStatus? Status { get; set; }
 }
+
+/// <summary>HTTPRoute provides a way to route HTTP requests. This includes the capability to match requests by hostname, path, header, or query param. Filters can be used to specify additional processing steps. Backends specify where matching requests should be routed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1HTTPRouteList : IKubernetesObject<V1ListMeta>, IItems<V1HTTPRoute>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "HTTPRouteList";
+    public const string KubeGroup = "gateway.networking.k8s.io";
+    public const string KubePluralName = "httproutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1HTTPRoute> Items { get; set; }
+}

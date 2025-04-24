@@ -454,3 +454,29 @@ public partial class V1beta1DataSetKustoCluster : IKubernetesObject<V1ObjectMeta
     [JsonPropertyName("status")]
     public V1beta1DataSetKustoClusterStatus? Status { get; set; }
 }
+
+/// <summary>DataSetKustoCluster is the Schema for the DataSetKustoClusters API. Manages a Data Share Kusto Cluster Dataset.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataSetKustoClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetKustoCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataSetKustoClusterList";
+    public const string KubeGroup = "datashare.azure.upbound.io";
+    public const string KubePluralName = "datasetkustoclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataSetKustoCluster> Items { get; set; }
+}

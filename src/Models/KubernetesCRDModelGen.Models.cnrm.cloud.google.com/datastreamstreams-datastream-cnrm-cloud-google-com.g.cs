@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns
+public partial class DatastreamStreamMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
     [JsonPropertyName("collation")]
@@ -43,11 +49,11 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables
+public partial class DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("mysqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -56,7 +62,7 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases
+public partial class DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
     [JsonPropertyName("database")]
@@ -64,21 +70,21 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
 
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("mysqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
 /// <summary>MySQL data source objects to avoid backfilling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects
+public partial class DatastreamStreamSpecBackfillAllMysqlExcludedObjects
 {
     /// <summary>MySQL databases on the server.</summary>
     [JsonPropertyName("mysqlDatabases")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases> MysqlDatabases { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllMysqlExcludedObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns
+public partial class DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -119,11 +125,11 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
+public partial class DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("oracleColumns")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -132,11 +138,11 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas
+public partial class DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("oracleTables")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
 
     /// <summary>Schema name.</summary>
     [JsonPropertyName("schema")]
@@ -145,16 +151,16 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObject
 
 /// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjects
+public partial class DatastreamStreamSpecBackfillAllOracleExcludedObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
     [JsonPropertyName("oracleSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas> OracleSchemas { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllOracleExcludedObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
+public partial class DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -191,11 +197,11 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables
+public partial class DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("postgresqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -204,11 +210,11 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas
+public partial class DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
     [JsonPropertyName("postgresqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
 
     /// <summary>Database name.</summary>
     [JsonPropertyName("schema")]
@@ -217,33 +223,33 @@ public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedOb
 
 /// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects
+public partial class DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
     [JsonPropertyName("postgresqlSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
+    public IList<DatastreamStreamSpecBackfillAllPostgresqlExcludedObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
 /// <summary>Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecBackfillAll
+public partial class DatastreamStreamSpecBackfillAll
 {
     /// <summary>MySQL data source objects to avoid backfilling.</summary>
     [JsonPropertyName("mysqlExcludedObjects")]
-    public V1alpha1DatastreamStreamSpecBackfillAllMysqlExcludedObjects? MysqlExcludedObjects { get; set; }
+    public DatastreamStreamSpecBackfillAllMysqlExcludedObjects? MysqlExcludedObjects { get; set; }
 
     /// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
     [JsonPropertyName("oracleExcludedObjects")]
-    public V1alpha1DatastreamStreamSpecBackfillAllOracleExcludedObjects? OracleExcludedObjects { get; set; }
+    public DatastreamStreamSpecBackfillAllOracleExcludedObjects? OracleExcludedObjects { get; set; }
 
     /// <summary>PostgreSQL data source objects to avoid backfilling.</summary>
     [JsonPropertyName("postgresqlExcludedObjects")]
-    public V1alpha1DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects? PostgresqlExcludedObjects { get; set; }
+    public DatastreamStreamSpecBackfillAllPostgresqlExcludedObjects? PostgresqlExcludedObjects { get; set; }
 }
 
 /// <summary>A single target dataset to which all data will be streamed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSingleTargetDataset
+public partial class DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSingleTargetDataset
 {
     /// <summary>Dataset ID in the format projects/{project}/datasets/{dataset_id} or {project}:{dataset_id}.</summary>
     [JsonPropertyName("datasetId")]
@@ -252,7 +258,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
 
 /// <summary>Dataset template used for dynamic dataset creation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate
+public partial class DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate
 {
     /// <summary>If supplied, every created dataset will have its name prefixed by the provided value. The prefix and name will be separated by an underscore. i.e. _.</summary>
     [JsonPropertyName("datasetIdPrefix")]
@@ -269,16 +275,16 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
 
 /// <summary>Destination datasets are created so that hierarchy of the destination data objects matches the source hierarchy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets
+public partial class DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets
 {
     /// <summary>Dataset template used for dynamic dataset creation.</summary>
     [JsonPropertyName("datasetTemplate")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate DatasetTemplate { get; set; }
+    public DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasetsDatasetTemplate DatasetTemplate { get; set; }
 }
 
 /// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfig
+public partial class DatastreamStreamSpecDestinationConfigBigqueryDestinationConfig
 {
     /// <summary>The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing this field will only affect new tables created in the future, but existing tables will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
     [JsonPropertyName("dataFreshness")]
@@ -286,16 +292,16 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestin
 
     /// <summary>A single target dataset to which all data will be streamed.</summary>
     [JsonPropertyName("singleTargetDataset")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSingleTargetDataset? SingleTargetDataset { get; set; }
+    public DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSingleTargetDataset? SingleTargetDataset { get; set; }
 
     /// <summary>Destination datasets are created so that hierarchy of the destination data objects matches the source hierarchy.</summary>
     [JsonPropertyName("sourceHierarchyDatasets")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets? SourceHierarchyDatasets { get; set; }
+    public DatastreamStreamSpecDestinationConfigBigqueryDestinationConfigSourceHierarchyDatasets? SourceHierarchyDatasets { get; set; }
 }
 
 /// <summary>JSON file format configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfigJsonFileFormat
+public partial class DatastreamStreamSpecDestinationConfigGcsDestinationConfigJsonFileFormat
 {
     /// <summary>Compression of the loaded JSON file. Possible values: ["NO_COMPRESSION", "GZIP"].</summary>
     [JsonPropertyName("compression")]
@@ -308,7 +314,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestination
 
 /// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfig
+public partial class DatastreamStreamSpecDestinationConfigGcsDestinationConfig
 {
     /// <summary>AVRO file format configuration.</summary>
     [JsonPropertyName("avroFileFormat")]
@@ -324,7 +330,7 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestination
 
     /// <summary>JSON file format configuration.</summary>
     [JsonPropertyName("jsonFileFormat")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfigJsonFileFormat? JsonFileFormat { get; set; }
+    public DatastreamStreamSpecDestinationConfigGcsDestinationConfigJsonFileFormat? JsonFileFormat { get; set; }
 
     /// <summary>Path inside the Cloud Storage bucket to write data to.</summary>
     [JsonPropertyName("path")]
@@ -333,11 +339,11 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfigGcsDestination
 
 /// <summary>Destination connection profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecDestinationConfig
+public partial class DatastreamStreamSpecDestinationConfig
 {
     /// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
     [JsonPropertyName("bigqueryDestinationConfig")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigBigqueryDestinationConfig? BigqueryDestinationConfig { get; set; }
+    public DatastreamStreamSpecDestinationConfigBigqueryDestinationConfig? BigqueryDestinationConfig { get; set; }
 
     /// <summary>Immutable. Destination connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}.</summary>
     [JsonPropertyName("destinationConnectionProfile")]
@@ -345,12 +351,12 @@ public partial class V1alpha1DatastreamStreamSpecDestinationConfig
 
     /// <summary>A configuration for how data should be loaded to Cloud Storage.</summary>
     [JsonPropertyName("gcsDestinationConfig")]
-    public V1alpha1DatastreamStreamSpecDestinationConfigGcsDestinationConfig? GcsDestinationConfig { get; set; }
+    public DatastreamStreamSpecDestinationConfigGcsDestinationConfig? GcsDestinationConfig { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecProjectRef
+public partial class DatastreamStreamSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -367,7 +373,7 @@ public partial class V1alpha1DatastreamStreamSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
     [JsonPropertyName("collation")]
@@ -400,11 +406,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("mysqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -413,7 +419,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
     [JsonPropertyName("database")]
@@ -421,21 +427,21 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigEx
 
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("mysqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
 /// <summary>MySQL objects to exclude from the stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjects
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjects
 {
     /// <summary>MySQL databases on the server.</summary>
     [JsonPropertyName("mysqlDatabases")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns
 {
     /// <summary>Column collation.</summary>
     [JsonPropertyName("collation")]
@@ -468,11 +474,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables
 {
     /// <summary>MySQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("mysqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTablesMysqlColumns>? MysqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -481,7 +487,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases
 {
     /// <summary>Database name.</summary>
     [JsonPropertyName("database")]
@@ -489,29 +495,29 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIn
 
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("mysqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabasesMysqlTables>? MysqlTables { get; set; }
 }
 
 /// <summary>MySQL objects to retrieve from the source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjects
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjects
 {
     /// <summary>MySQL databases on the server.</summary>
     [JsonPropertyName("mysqlDatabases")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjectsMysqlDatabases> MysqlDatabases { get; set; }
 }
 
 /// <summary>MySQL data source configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfig
+public partial class DatastreamStreamSpecSourceConfigMysqlSourceConfig
 {
     /// <summary>MySQL objects to exclude from the stream.</summary>
     [JsonPropertyName("excludeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjects? ExcludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigMysqlSourceConfigExcludeObjects? ExcludeObjects { get; set; }
 
     /// <summary>MySQL objects to retrieve from the source.</summary>
     [JsonPropertyName("includeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjects? IncludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigMysqlSourceConfigIncludeObjects? IncludeObjects { get; set; }
 
     /// <summary>Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or set to 0), the system's default value will be used.</summary>
     [JsonPropertyName("maxConcurrentBackfillTasks")]
@@ -524,7 +530,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -565,11 +571,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("oracleColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -578,11 +584,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("oracleTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
 
     /// <summary>Schema name.</summary>
     [JsonPropertyName("schema")]
@@ -591,16 +597,16 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigE
 
 /// <summary>Oracle objects to exclude from the stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjects
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
     [JsonPropertyName("oracleSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> OracleSchemas { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -641,11 +647,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables
 {
     /// <summary>Oracle columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("oracleColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTablesOracleColumns>? OracleColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -654,11 +660,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas
 {
     /// <summary>Tables in the database.</summary>
     [JsonPropertyName("oracleTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemasOracleTables>? OracleTables { get; set; }
 
     /// <summary>Schema name.</summary>
     [JsonPropertyName("schema")]
@@ -667,16 +673,16 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigI
 
 /// <summary>Oracle objects to retrieve from the source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjects
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjects
 {
     /// <summary>Oracle schemas/databases in the database server.</summary>
     [JsonPropertyName("oracleSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> OracleSchemas { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjectsOracleSchemas> OracleSchemas { get; set; }
 }
 
 /// <summary>MySQL data source configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig
+public partial class DatastreamStreamSpecSourceConfigOracleSourceConfig
 {
     /// <summary>Configuration to drop large object values.</summary>
     [JsonPropertyName("dropLargeObjects")]
@@ -684,11 +690,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig
 
     /// <summary>Oracle objects to exclude from the stream.</summary>
     [JsonPropertyName("excludeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjects? ExcludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigOracleSourceConfigExcludeObjects? ExcludeObjects { get; set; }
 
     /// <summary>Oracle objects to retrieve from the source.</summary>
     [JsonPropertyName("includeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjects? IncludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigOracleSourceConfigIncludeObjects? IncludeObjects { get; set; }
 
     /// <summary>Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or set to 0), the system's default value will be used.</summary>
     [JsonPropertyName("maxConcurrentBackfillTasks")]
@@ -705,7 +711,7 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -742,11 +748,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("postgresqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -755,11 +761,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
     [JsonPropertyName("postgresqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
 
     /// <summary>Database name.</summary>
     [JsonPropertyName("schema")]
@@ -768,16 +774,16 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary>PostgreSQL objects to exclude from the stream.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjects
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
     [JsonPropertyName("postgresqlSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns
 {
     /// <summary>Column name.</summary>
     [JsonPropertyName("column")]
@@ -814,11 +820,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables
 {
     /// <summary>PostgreSQL columns in the schema. When unspecified as part of include/exclude objects, includes/excludes everything.</summary>
     [JsonPropertyName("postgresqlColumns")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTablesPostgresqlColumns>? PostgresqlColumns { get; set; }
 
     /// <summary>Table name.</summary>
     [JsonPropertyName("table")]
@@ -827,11 +833,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas
 {
     /// <summary>Tables in the schema.</summary>
     [JsonPropertyName("postgresqlTables")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemasPostgresqlTables>? PostgresqlTables { get; set; }
 
     /// <summary>Database name.</summary>
     [JsonPropertyName("schema")]
@@ -840,24 +846,24 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary>PostgreSQL objects to retrieve from the source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjects
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjects
 {
     /// <summary>PostgreSQL schemas on the server.</summary>
     [JsonPropertyName("postgresqlSchemas")]
-    public IList<V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
+    public IList<DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjectsPostgresqlSchemas> PostgresqlSchemas { get; set; }
 }
 
 /// <summary>PostgreSQL data source configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfig
+public partial class DatastreamStreamSpecSourceConfigPostgresqlSourceConfig
 {
     /// <summary>PostgreSQL objects to exclude from the stream.</summary>
     [JsonPropertyName("excludeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjects? ExcludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigPostgresqlSourceConfigExcludeObjects? ExcludeObjects { get; set; }
 
     /// <summary>PostgreSQL objects to retrieve from the source.</summary>
     [JsonPropertyName("includeObjects")]
-    public V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjects? IncludeObjects { get; set; }
+    public DatastreamStreamSpecSourceConfigPostgresqlSourceConfigIncludeObjects? IncludeObjects { get; set; }
 
     /// <summary>Maximum number of concurrent backfill tasks. The number should be non negative. If not set (or set to 0), the system's default value will be used.</summary>
     [JsonPropertyName("maxConcurrentBackfillTasks")]
@@ -874,19 +880,19 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceCon
 
 /// <summary>Source connection profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpecSourceConfig
+public partial class DatastreamStreamSpecSourceConfig
 {
     /// <summary>MySQL data source configuration.</summary>
     [JsonPropertyName("mysqlSourceConfig")]
-    public V1alpha1DatastreamStreamSpecSourceConfigMysqlSourceConfig? MysqlSourceConfig { get; set; }
+    public DatastreamStreamSpecSourceConfigMysqlSourceConfig? MysqlSourceConfig { get; set; }
 
     /// <summary>MySQL data source configuration.</summary>
     [JsonPropertyName("oracleSourceConfig")]
-    public V1alpha1DatastreamStreamSpecSourceConfigOracleSourceConfig? OracleSourceConfig { get; set; }
+    public DatastreamStreamSpecSourceConfigOracleSourceConfig? OracleSourceConfig { get; set; }
 
     /// <summary>PostgreSQL data source configuration.</summary>
     [JsonPropertyName("postgresqlSourceConfig")]
-    public V1alpha1DatastreamStreamSpecSourceConfigPostgresqlSourceConfig? PostgresqlSourceConfig { get; set; }
+    public DatastreamStreamSpecSourceConfigPostgresqlSourceConfig? PostgresqlSourceConfig { get; set; }
 
     /// <summary>Immutable. Source connection profile resource. Format: projects/{project}/locations/{location}/connectionProfiles/{name}.</summary>
     [JsonPropertyName("sourceConnectionProfile")]
@@ -895,11 +901,11 @@ public partial class V1alpha1DatastreamStreamSpecSourceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamSpec
+public partial class DatastreamStreamSpec
 {
     /// <summary>Backfill strategy to automatically backfill the Stream's objects. Specific objects can be excluded.</summary>
     [JsonPropertyName("backfillAll")]
-    public V1alpha1DatastreamStreamSpecBackfillAll? BackfillAll { get; set; }
+    public DatastreamStreamSpecBackfillAll? BackfillAll { get; set; }
 
     /// <summary>Backfill strategy to disable automatic backfill for the Stream's objects.</summary>
     [JsonPropertyName("backfillNone")]
@@ -915,7 +921,7 @@ public partial class V1alpha1DatastreamStreamSpec
 
     /// <summary>Destination connection profile configuration.</summary>
     [JsonPropertyName("destinationConfig")]
-    public V1alpha1DatastreamStreamSpecDestinationConfig DestinationConfig { get; set; }
+    public DatastreamStreamSpecDestinationConfig DestinationConfig { get; set; }
 
     /// <summary>Display name.</summary>
     [JsonPropertyName("displayName")]
@@ -927,7 +933,7 @@ public partial class V1alpha1DatastreamStreamSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1DatastreamStreamSpecProjectRef ProjectRef { get; set; }
+    public DatastreamStreamSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The streamId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -935,12 +941,12 @@ public partial class V1alpha1DatastreamStreamSpec
 
     /// <summary>Source connection profile configuration.</summary>
     [JsonPropertyName("sourceConfig")]
-    public V1alpha1DatastreamStreamSpecSourceConfig SourceConfig { get; set; }
+    public DatastreamStreamSpecSourceConfig SourceConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamStatusConditions
+public partial class DatastreamStreamStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -965,11 +971,11 @@ public partial class V1alpha1DatastreamStreamStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1DatastreamStreamStatus
+public partial class DatastreamStreamStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1DatastreamStreamStatusConditions>? Conditions { get; set; }
+    public IList<DatastreamStreamStatusConditions>? Conditions { get; set; }
 
     /// <summary>The stream's name.</summary>
     [JsonPropertyName("name")]
@@ -986,30 +992,25 @@ public partial class V1alpha1DatastreamStreamStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DatastreamStream : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamStreamSpec>, IStatus<V1alpha1DatastreamStreamStatus>
+public partial class DatastreamStream
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DatastreamStream";
-    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
-    public const string KubePluralName = "datastreamstreams";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public DatastreamStreamMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1DatastreamStreamSpec Spec { get; set; }
+    public DatastreamStreamSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1DatastreamStreamStatus? Status { get; set; }
+    public DatastreamStreamStatus? Status { get; set; }
 }

@@ -957,3 +957,29 @@ public partial class V1beta1Spoke : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     [JsonPropertyName("status")]
     public V1beta1SpokeStatus? Status { get; set; }
 }
+
+/// <summary>Spoke is the Schema for the Spokes API. The NetworkConnectivity Spoke resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpokeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Spoke>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpokeList";
+    public const string KubeGroup = "networkconnectivity.gcp.upbound.io";
+    public const string KubePluralName = "spokes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Spoke> Items { get; set; }
+}

@@ -622,3 +622,29 @@ public partial class V1beta1RouterInterface : IKubernetesObject<V1ObjectMeta>, I
     [JsonPropertyName("status")]
     public V1beta1RouterInterfaceStatus? Status { get; set; }
 }
+
+/// <summary>RouterInterface is the Schema for the RouterInterfaces API. Manages a Cloud Router interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouterInterfaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouterInterface>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouterInterfaceList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "routerinterfaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RouterInterface> Items { get; set; }
+}

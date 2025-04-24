@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.osconfig.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecAssignmentGroupLabels
+public partial class OSConfigGuestPolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class OSConfigGuestPolicySpecAssignmentGroupLabels
 {
     /// <summary>Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.</summary>
     [JsonPropertyName("labels")]
@@ -19,7 +25,7 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentGroupLabels
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecAssignmentInstances
+public partial class OSConfigGuestPolicySpecAssignmentInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -36,7 +42,7 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentInstances
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecAssignmentOsTypes
+public partial class OSConfigGuestPolicySpecAssignmentOsTypes
 {
     /// <summary>Targets VM instances with OS Inventory enabled and having the following OS architecture.</summary>
     [JsonPropertyName("osArchitecture")]
@@ -53,11 +59,11 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignmentOsTypes
 
 /// <summary>Specifies the VMs that are assigned this policy. This allows you to target sets or groups of VMs by different parameters such as labels, names, OS, or zones. Empty assignments will target ALL VMs underneath this policy. Conflict Management Policies that exist higher up in the resource hierarchy (closer to the Org) will override those lower down if there is a conflict. At the same level in the resource hierarchy (ie. within a project), the service will prevent the creation of multiple policies that conflict with each other. If there are multiple policies that specify the same config (eg. package, software recipe, repository, etc.), the service will ensure that no VM could potentially receive instructions from both policies. To create multiple policies that specify different versions of a package or different configs for different Operating Systems, each policy must be mutually exclusive in their targeting according to labels, OS, or other criteria. Different configs are identified for conflicts in different ways. Packages are identified by their name and the package manager(s) they target. Package repositories are identified by their unique id where applicable. Some package managers don't have a unique identifier for repositories and where that's the case, no uniqueness is validated by the service. Note that if OS Inventory is disabled, a VM will not be assigned a policy that targets by OS because the service will see this VM's OS as unknown.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecAssignment
+public partial class OSConfigGuestPolicySpecAssignment
 {
     /// <summary>Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".</summary>
     [JsonPropertyName("groupLabels")]
-    public IList<V1beta1OSConfigGuestPolicySpecAssignmentGroupLabels>? GroupLabels { get; set; }
+    public IList<OSConfigGuestPolicySpecAssignmentGroupLabels>? GroupLabels { get; set; }
 
     /// <summary>Targets VM instances whose name starts with one of these prefixes. Like labels, this is another way to group VM instances when targeting configs, for example prefix="prod-". Only supported for project-level policies.</summary>
     [JsonPropertyName("instanceNamePrefixes")]
@@ -65,11 +71,11 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignment
 
     /// <summary></summary>
     [JsonPropertyName("instances")]
-    public IList<V1beta1OSConfigGuestPolicySpecAssignmentInstances>? Instances { get; set; }
+    public IList<OSConfigGuestPolicySpecAssignmentInstances>? Instances { get; set; }
 
     /// <summary>Targets VM instances matching at least one of the following OS types. VM instances must match all supplied criteria for a given OsType to be included.</summary>
     [JsonPropertyName("osTypes")]
-    public IList<V1beta1OSConfigGuestPolicySpecAssignmentOsTypes>? OsTypes { get; set; }
+    public IList<OSConfigGuestPolicySpecAssignmentOsTypes>? OsTypes { get; set; }
 
     /// <summary>Targets instances in any of these zones. Leave empty to target instances in any zone. Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.</summary>
     [JsonPropertyName("zones")]
@@ -78,7 +84,7 @@ public partial class V1beta1OSConfigGuestPolicySpecAssignment
 
 /// <summary>An Apt Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesApt
+public partial class OSConfigGuestPolicySpecPackageRepositoriesApt
 {
     /// <summary>Type of archive files in this repository. The default behavior is DEB. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC</summary>
     [JsonPropertyName("archiveType")]
@@ -103,7 +109,7 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesApt
 
 /// <summary>A Goo Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesGoo
+public partial class OSConfigGuestPolicySpecPackageRepositoriesGoo
 {
     /// <summary>Required. The name of the repository.</summary>
     [JsonPropertyName("name")]
@@ -116,7 +122,7 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesGoo
 
 /// <summary>A Yum Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesYum
+public partial class OSConfigGuestPolicySpecPackageRepositoriesYum
 {
     /// <summary>Required. The location of the repository directory.</summary>
     [JsonPropertyName("baseUrl")]
@@ -137,7 +143,7 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesYum
 
 /// <summary>A Zypper Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper
+public partial class OSConfigGuestPolicySpecPackageRepositoriesZypper
 {
     /// <summary>Required. The location of the repository directory.</summary>
     [JsonPropertyName("baseUrl")]
@@ -158,28 +164,28 @@ public partial class V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackageRepositories
+public partial class OSConfigGuestPolicySpecPackageRepositories
 {
     /// <summary>An Apt Repository.</summary>
     [JsonPropertyName("apt")]
-    public V1beta1OSConfigGuestPolicySpecPackageRepositoriesApt? Apt { get; set; }
+    public OSConfigGuestPolicySpecPackageRepositoriesApt? Apt { get; set; }
 
     /// <summary>A Goo Repository.</summary>
     [JsonPropertyName("goo")]
-    public V1beta1OSConfigGuestPolicySpecPackageRepositoriesGoo? Goo { get; set; }
+    public OSConfigGuestPolicySpecPackageRepositoriesGoo? Goo { get; set; }
 
     /// <summary>A Yum Repository.</summary>
     [JsonPropertyName("yum")]
-    public V1beta1OSConfigGuestPolicySpecPackageRepositoriesYum? Yum { get; set; }
+    public OSConfigGuestPolicySpecPackageRepositoriesYum? Yum { get; set; }
 
     /// <summary>A Zypper Repository.</summary>
     [JsonPropertyName("zypper")]
-    public V1beta1OSConfigGuestPolicySpecPackageRepositoriesZypper? Zypper { get; set; }
+    public OSConfigGuestPolicySpecPackageRepositoriesZypper? Zypper { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecPackages
+public partial class OSConfigGuestPolicySpecPackages
 {
     /// <summary>The desired_state the agent should maintain for this package. The default is to ensure the package is installed. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED</summary>
     [JsonPropertyName("desiredState")]
@@ -196,7 +202,7 @@ public partial class V1beta1OSConfigGuestPolicySpecPackages
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef
+public partial class OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef
 {
     /// <summary>Bucket of the Google Cloud Storage object. Given an example URL: `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `my-bucket`.  Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -213,11 +219,11 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef
 
 /// <summary>A Google Cloud Storage artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs
+public partial class OSConfigGuestPolicySpecRecipesArtifactsGcs
 {
     /// <summary></summary>
     [JsonPropertyName("bucketRef")]
-    public V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef? BucketRef { get; set; }
+    public OSConfigGuestPolicySpecRecipesArtifactsGcsBucketRef? BucketRef { get; set; }
 
     /// <summary>Must be provided if allow_insecure is false. Generation number of the Google Cloud Storage object. `https://storage.googleapis.com/my-bucket/foo/bar#1234567` this value would be `1234567`.</summary>
     [JsonPropertyName("generation")]
@@ -230,7 +236,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs
 
 /// <summary>A generic remote artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote
+public partial class OSConfigGuestPolicySpecRecipesArtifactsRemote
 {
     /// <summary>Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.</summary>
     [JsonPropertyName("checksum")]
@@ -243,7 +249,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
+public partial class OSConfigGuestPolicySpecRecipesArtifacts
 {
     /// <summary>Defaults to false. When false, recipes are subject to validations based on the artifact type: Remote: A checksum must be specified, and only protocols with transport-layer security are permitted. GCS: An object generation number must be specified.</summary>
     [JsonPropertyName("allowInsecure")]
@@ -251,7 +257,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
 
     /// <summary>A Google Cloud Storage artifact.</summary>
     [JsonPropertyName("gcs")]
-    public V1beta1OSConfigGuestPolicySpecRecipesArtifactsGcs? Gcs { get; set; }
+    public OSConfigGuestPolicySpecRecipesArtifactsGcs? Gcs { get; set; }
 
     /// <summary>Required. Id of the artifact, which the installation and update steps of this recipe can reference. Artifacts in a recipe cannot have the same id.</summary>
     [JsonPropertyName("id")]
@@ -259,12 +265,12 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesArtifacts
 
     /// <summary>A generic remote artifact.</summary>
     [JsonPropertyName("remote")]
-    public V1beta1OSConfigGuestPolicySpecRecipesArtifactsRemote? Remote { get; set; }
+    public OSConfigGuestPolicySpecRecipesArtifactsRemote? Remote { get; set; }
 }
 
 /// <summary>Extracts an archive into the specified directory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsArchiveExtraction
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsArchiveExtraction
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -281,7 +287,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsArchiveExt
 
 /// <summary>Installs a deb file via dpkg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstallation
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstallation
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -290,7 +296,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstal
 
 /// <summary>Copies a file onto the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileCopy
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsFileCopy
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -311,7 +317,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileCopy
 
 /// <summary>Executes an artifact or local file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileExec
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsFileExec
 {
     /// <summary>Defaults to [0]. A list of possible return values that the program can return to indicate a success.</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -332,7 +338,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileExec
 
 /// <summary>Installs an MSI file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsMsiInstallation
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsMsiInstallation
 {
     /// <summary>Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -349,7 +355,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsMsiInstall
 
 /// <summary>Installs an rpm file via the rpm utility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsRpmInstallation
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsRpmInstallation
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -358,7 +364,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsRpmInstall
 
 /// <summary>Runs commands in a shell.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun
+public partial class OSConfigGuestPolicySpecRecipesInstallStepsScriptRun
 {
     /// <summary>Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -375,40 +381,40 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesInstallSteps
+public partial class OSConfigGuestPolicySpecRecipesInstallSteps
 {
     /// <summary>Extracts an archive into the specified directory.</summary>
     [JsonPropertyName("archiveExtraction")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsArchiveExtraction? ArchiveExtraction { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsArchiveExtraction? ArchiveExtraction { get; set; }
 
     /// <summary>Installs a deb file via dpkg.</summary>
     [JsonPropertyName("dpkgInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstallation? DpkgInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsDpkgInstallation? DpkgInstallation { get; set; }
 
     /// <summary>Copies a file onto the instance.</summary>
     [JsonPropertyName("fileCopy")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileCopy? FileCopy { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsFileCopy? FileCopy { get; set; }
 
     /// <summary>Executes an artifact or local file.</summary>
     [JsonPropertyName("fileExec")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsFileExec? FileExec { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsFileExec? FileExec { get; set; }
 
     /// <summary>Installs an MSI file.</summary>
     [JsonPropertyName("msiInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsMsiInstallation? MsiInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsMsiInstallation? MsiInstallation { get; set; }
 
     /// <summary>Installs an rpm file via the rpm utility.</summary>
     [JsonPropertyName("rpmInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsRpmInstallation? RpmInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsRpmInstallation? RpmInstallation { get; set; }
 
     /// <summary>Runs commands in a shell.</summary>
     [JsonPropertyName("scriptRun")]
-    public V1beta1OSConfigGuestPolicySpecRecipesInstallStepsScriptRun? ScriptRun { get; set; }
+    public OSConfigGuestPolicySpecRecipesInstallStepsScriptRun? ScriptRun { get; set; }
 }
 
 /// <summary>Extracts an archive into the specified directory.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtraction
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtraction
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -425,7 +431,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtr
 
 /// <summary>Installs a deb file via dpkg.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstallation
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstallation
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -434,7 +440,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstall
 
 /// <summary>Copies a file onto the instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -455,7 +461,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy
 
 /// <summary>Executes an artifact or local file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileExec
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsFileExec
 {
     /// <summary>Defaults to [0]. A list of possible return values that the program can return to indicate a success.</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -476,7 +482,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileExec
 
 /// <summary>Installs an MSI file.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstallation
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstallation
 {
     /// <summary>Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -493,7 +499,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstalla
 
 /// <summary>Installs an rpm file via the rpm utility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstallation
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstallation
 {
     /// <summary>Required. The id of the relevant artifact in the recipe.</summary>
     [JsonPropertyName("artifactId")]
@@ -502,7 +508,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstalla
 
 /// <summary>Runs commands in a shell.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun
+public partial class OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun
 {
     /// <summary>Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]</summary>
     [JsonPropertyName("allowedExitCodes")]
@@ -519,44 +525,44 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipesUpdateSteps
+public partial class OSConfigGuestPolicySpecRecipesUpdateSteps
 {
     /// <summary>Extracts an archive into the specified directory.</summary>
     [JsonPropertyName("archiveExtraction")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtraction? ArchiveExtraction { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsArchiveExtraction? ArchiveExtraction { get; set; }
 
     /// <summary>Installs a deb file via dpkg.</summary>
     [JsonPropertyName("dpkgInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstallation? DpkgInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsDpkgInstallation? DpkgInstallation { get; set; }
 
     /// <summary>Copies a file onto the instance.</summary>
     [JsonPropertyName("fileCopy")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy? FileCopy { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsFileCopy? FileCopy { get; set; }
 
     /// <summary>Executes an artifact or local file.</summary>
     [JsonPropertyName("fileExec")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsFileExec? FileExec { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsFileExec? FileExec { get; set; }
 
     /// <summary>Installs an MSI file.</summary>
     [JsonPropertyName("msiInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstallation? MsiInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsMsiInstallation? MsiInstallation { get; set; }
 
     /// <summary>Installs an rpm file via the rpm utility.</summary>
     [JsonPropertyName("rpmInstallation")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstallation? RpmInstallation { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsRpmInstallation? RpmInstallation { get; set; }
 
     /// <summary>Runs commands in a shell.</summary>
     [JsonPropertyName("scriptRun")]
-    public V1beta1OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun? ScriptRun { get; set; }
+    public OSConfigGuestPolicySpecRecipesUpdateStepsScriptRun? ScriptRun { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpecRecipes
+public partial class OSConfigGuestPolicySpecRecipes
 {
     /// <summary>Resources available to be used in the steps in the recipe.</summary>
     [JsonPropertyName("artifacts")]
-    public IList<V1beta1OSConfigGuestPolicySpecRecipesArtifacts>? Artifacts { get; set; }
+    public IList<OSConfigGuestPolicySpecRecipesArtifacts>? Artifacts { get; set; }
 
     /// <summary>Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED</summary>
     [JsonPropertyName("desiredState")]
@@ -564,7 +570,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipes
 
     /// <summary>Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.</summary>
     [JsonPropertyName("installSteps")]
-    public IList<V1beta1OSConfigGuestPolicySpecRecipesInstallSteps>? InstallSteps { get; set; }
+    public IList<OSConfigGuestPolicySpecRecipesInstallSteps>? InstallSteps { get; set; }
 
     /// <summary>Required. Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.</summary>
     [JsonPropertyName("name")]
@@ -572,7 +578,7 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipes
 
     /// <summary>Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.</summary>
     [JsonPropertyName("updateSteps")]
-    public IList<V1beta1OSConfigGuestPolicySpecRecipesUpdateSteps>? UpdateSteps { get; set; }
+    public IList<OSConfigGuestPolicySpecRecipesUpdateSteps>? UpdateSteps { get; set; }
 
     /// <summary>The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).</summary>
     [JsonPropertyName("version")]
@@ -581,11 +587,11 @@ public partial class V1beta1OSConfigGuestPolicySpecRecipes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicySpec
+public partial class OSConfigGuestPolicySpec
 {
     /// <summary>Specifies the VMs that are assigned this policy. This allows you to target sets or groups of VMs by different parameters such as labels, names, OS, or zones. Empty assignments will target ALL VMs underneath this policy. Conflict Management Policies that exist higher up in the resource hierarchy (closer to the Org) will override those lower down if there is a conflict. At the same level in the resource hierarchy (ie. within a project), the service will prevent the creation of multiple policies that conflict with each other. If there are multiple policies that specify the same config (eg. package, software recipe, repository, etc.), the service will ensure that no VM could potentially receive instructions from both policies. To create multiple policies that specify different versions of a package or different configs for different Operating Systems, each policy must be mutually exclusive in their targeting according to labels, OS, or other criteria. Different configs are identified for conflicts in different ways. Packages are identified by their name and the package manager(s) they target. Package repositories are identified by their unique id where applicable. Some package managers don't have a unique identifier for repositories and where that's the case, no uniqueness is validated by the service. Note that if OS Inventory is disabled, a VM will not be assigned a policy that targets by OS because the service will see this VM's OS as unknown.</summary>
     [JsonPropertyName("assignment")]
-    public V1beta1OSConfigGuestPolicySpecAssignment? Assignment { get; set; }
+    public OSConfigGuestPolicySpecAssignment? Assignment { get; set; }
 
     /// <summary>Description of the GuestPolicy. Length of the description is limited to 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -593,15 +599,15 @@ public partial class V1beta1OSConfigGuestPolicySpec
 
     /// <summary>List of package repository configurations assigned to the VM instance.</summary>
     [JsonPropertyName("packageRepositories")]
-    public IList<V1beta1OSConfigGuestPolicySpecPackageRepositories>? PackageRepositories { get; set; }
+    public IList<OSConfigGuestPolicySpecPackageRepositories>? PackageRepositories { get; set; }
 
     /// <summary>List of package configurations assigned to the VM instance.</summary>
     [JsonPropertyName("packages")]
-    public IList<V1beta1OSConfigGuestPolicySpecPackages>? Packages { get; set; }
+    public IList<OSConfigGuestPolicySpecPackages>? Packages { get; set; }
 
     /// <summary>Optional. A list of Recipes to install on the VM.</summary>
     [JsonPropertyName("recipes")]
-    public IList<V1beta1OSConfigGuestPolicySpecRecipes>? Recipes { get; set; }
+    public IList<OSConfigGuestPolicySpecRecipes>? Recipes { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -610,7 +616,7 @@ public partial class V1beta1OSConfigGuestPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicyStatusConditions
+public partial class OSConfigGuestPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -635,11 +641,11 @@ public partial class V1beta1OSConfigGuestPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1OSConfigGuestPolicyStatus
+public partial class OSConfigGuestPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1OSConfigGuestPolicyStatusConditions>? Conditions { get; set; }
+    public IList<OSConfigGuestPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Time this GuestPolicy was created.</summary>
     [JsonPropertyName("createTime")]
@@ -660,30 +666,25 @@ public partial class V1beta1OSConfigGuestPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OSConfigGuestPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1OSConfigGuestPolicySpec>, IStatus<V1beta1OSConfigGuestPolicyStatus>
+public partial class OSConfigGuestPolicy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OSConfigGuestPolicy";
-    public const string KubeGroup = "osconfig.cnrm.cloud.google.com";
-    public const string KubePluralName = "osconfigguestpolicies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public OSConfigGuestPolicyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1OSConfigGuestPolicySpec? Spec { get; set; }
+    public OSConfigGuestPolicySpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1OSConfigGuestPolicyStatus? Status { get; set; }
+    public OSConfigGuestPolicyStatus? Status { get; set; }
 }

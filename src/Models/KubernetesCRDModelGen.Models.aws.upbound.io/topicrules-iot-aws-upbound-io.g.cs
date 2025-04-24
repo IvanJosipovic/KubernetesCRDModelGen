@@ -4037,3 +4037,29 @@ public partial class V1beta1TopicRule : IKubernetesObject<V1ObjectMeta>, ISpec<V
     [JsonPropertyName("status")]
     public V1beta1TopicRuleStatus? Status { get; set; }
 }
+
+/// <summary>TopicRule is the Schema for the TopicRules API. Creates and manages an AWS IoT topic rule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TopicRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TopicRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TopicRuleList";
+    public const string KubeGroup = "iot.aws.upbound.io";
+    public const string KubePluralName = "topicrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TopicRule> Items { get; set; }
+}

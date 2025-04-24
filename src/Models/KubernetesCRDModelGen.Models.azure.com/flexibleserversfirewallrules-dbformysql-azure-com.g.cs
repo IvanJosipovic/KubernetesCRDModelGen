@@ -237,3 +237,29 @@ public partial class V1api20231230storageFlexibleServersFirewallRule : IKubernet
     [JsonPropertyName("status")]
     public V1api20231230storageFlexibleServersFirewallRuleStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20231230.FlexibleServersFirewallRule Generator information: - Generated from: /mysql/resource-manager/Microsoft.DBforMySQL/Firewall/stable/2023-12-30/FirewallRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforMySQL/flexibleServers/{serverName}/firewallRules/{firewallRuleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20231230storageFlexibleServersFirewallRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20231230storageFlexibleServersFirewallRule>
+{
+    public const string KubeApiVersion = "v1api20231230storage";
+    public const string KubeKind = "FlexibleServersFirewallRuleList";
+    public const string KubeGroup = "dbformysql.azure.com";
+    public const string KubePluralName = "flexibleserversfirewallrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20231230storageFlexibleServersFirewallRule> Items { get; set; }
+}

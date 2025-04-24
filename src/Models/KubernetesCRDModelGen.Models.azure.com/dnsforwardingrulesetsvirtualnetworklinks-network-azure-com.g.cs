@@ -292,3 +292,29 @@ public partial class V1api20220701storageDnsForwardingRuleSetsVirtualNetworkLink
     [JsonPropertyName("status")]
     public V1api20220701storageDnsForwardingRuleSetsVirtualNetworkLinkStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220701.DnsForwardingRuleSetsVirtualNetworkLink Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsForwardingRulesets/{dnsForwardingRulesetName}/virtualNetworkLinks/{virtualNetworkLinkName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220701storageDnsForwardingRuleSetsVirtualNetworkLinkList : IKubernetesObject<V1ListMeta>, IItems<V1api20220701storageDnsForwardingRuleSetsVirtualNetworkLink>
+{
+    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeKind = "DnsForwardingRuleSetsVirtualNetworkLinkList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "dnsforwardingrulesetsvirtualnetworklinks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220701storageDnsForwardingRuleSetsVirtualNetworkLink> Items { get; set; }
+}

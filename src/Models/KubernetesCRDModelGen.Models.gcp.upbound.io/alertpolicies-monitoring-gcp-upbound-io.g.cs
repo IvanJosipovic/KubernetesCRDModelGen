@@ -1405,3 +1405,29 @@ public partial class V1beta1AlertPolicy : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("status")]
     public V1beta1AlertPolicyStatus? Status { get; set; }
 }
+
+/// <summary>AlertPolicy is the Schema for the AlertPolicys API. A description of the conditions under which some aspect of your system is considered to be "unhealthy" and the ways to notify people or services about this state.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AlertPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AlertPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AlertPolicyList";
+    public const string KubeGroup = "monitoring.gcp.upbound.io";
+    public const string KubePluralName = "alertpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AlertPolicy> Items { get; set; }
+}

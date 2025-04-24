@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1AccessContextManagerAccessPolicySpec
+public partial class AccessContextManagerAccessPolicyMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class AccessContextManagerAccessPolicySpec
 {
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -23,7 +29,7 @@ public partial class V1beta1AccessContextManagerAccessPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1AccessContextManagerAccessPolicyStatusConditions
+public partial class AccessContextManagerAccessPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -48,11 +54,11 @@ public partial class V1beta1AccessContextManagerAccessPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1AccessContextManagerAccessPolicyStatus
+public partial class AccessContextManagerAccessPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1AccessContextManagerAccessPolicyStatusConditions>? Conditions { get; set; }
+    public IList<AccessContextManagerAccessPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Time the AccessPolicy was created in UTC.</summary>
     [JsonPropertyName("createTime")]
@@ -73,30 +79,25 @@ public partial class V1beta1AccessContextManagerAccessPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccessContextManagerAccessPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AccessContextManagerAccessPolicySpec>, IStatus<V1beta1AccessContextManagerAccessPolicyStatus>
+public partial class AccessContextManagerAccessPolicy
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccessContextManagerAccessPolicy";
-    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
-    public const string KubePluralName = "accesscontextmanageraccesspolicies";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public AccessContextManagerAccessPolicyMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1AccessContextManagerAccessPolicySpec Spec { get; set; }
+    public AccessContextManagerAccessPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1AccessContextManagerAccessPolicyStatus? Status { get; set; }
+    public AccessContextManagerAccessPolicyStatus? Status { get; set; }
 }

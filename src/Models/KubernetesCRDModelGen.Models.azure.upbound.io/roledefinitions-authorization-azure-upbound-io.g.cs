@@ -373,3 +373,29 @@ public partial class V1beta1RoleDefinition : IKubernetesObject<V1ObjectMeta>, IS
     [JsonPropertyName("status")]
     public V1beta1RoleDefinitionStatus? Status { get; set; }
 }
+
+/// <summary>RoleDefinition is the Schema for the RoleDefinitions API. Manages a custom Role Definition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RoleDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RoleDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RoleDefinitionList";
+    public const string KubeGroup = "authorization.azure.upbound.io";
+    public const string KubePluralName = "roledefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RoleDefinition> Items { get; set; }
+}

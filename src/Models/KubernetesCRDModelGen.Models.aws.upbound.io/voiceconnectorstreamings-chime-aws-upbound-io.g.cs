@@ -465,3 +465,29 @@ public partial class V1beta1VoiceConnectorStreaming : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorStreamingStatus? Status { get; set; }
 }
+
+/// <summary>VoiceConnectorStreaming is the Schema for the VoiceConnectorStreamings API. The streaming configuration associated with an Amazon Chime Voice Connector. Specifies whether media streaming is enabled for sending to Amazon Kinesis, and shows the retention period for the Amazon Kinesis data, in hours.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorStreamingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorStreaming>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorStreamingList";
+    public const string KubeGroup = "chime.aws.upbound.io";
+    public const string KubePluralName = "voiceconnectorstreamings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorStreaming> Items { get; set; }
+}

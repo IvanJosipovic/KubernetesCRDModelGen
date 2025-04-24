@@ -792,3 +792,29 @@ public partial class V1FelixConfiguration : IKubernetesObject<V1ObjectMeta>, ISp
     [JsonPropertyName("spec")]
     public V1FelixConfigurationSpec? Spec { get; set; }
 }
+
+/// <summary>Felix Configuration contains the configuration for Felix.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1FelixConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1FelixConfiguration>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "FelixConfigurationList";
+    public const string KubeGroup = "crd.projectcalico.org";
+    public const string KubePluralName = "felixconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1FelixConfiguration> Items { get; set; }
+}

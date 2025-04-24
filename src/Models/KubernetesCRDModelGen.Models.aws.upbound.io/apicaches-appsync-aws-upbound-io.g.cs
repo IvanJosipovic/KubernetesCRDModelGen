@@ -438,3 +438,29 @@ public partial class V1beta1APICache : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     [JsonPropertyName("status")]
     public V1beta1APICacheStatus? Status { get; set; }
 }
+
+/// <summary>APICache is the Schema for the APICaches API. Provides an AppSync API Cache.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1APICacheList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APICache>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "APICacheList";
+    public const string KubeGroup = "appsync.aws.upbound.io";
+    public const string KubePluralName = "apicaches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1APICache> Items { get; set; }
+}

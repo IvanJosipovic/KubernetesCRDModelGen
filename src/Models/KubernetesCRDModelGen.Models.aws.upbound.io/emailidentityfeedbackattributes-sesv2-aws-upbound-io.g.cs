@@ -250,3 +250,29 @@ public partial class V1beta1EmailIdentityFeedbackAttributes : IKubernetesObject<
     [JsonPropertyName("status")]
     public V1beta1EmailIdentityFeedbackAttributesStatus? Status { get; set; }
 }
+
+/// <summary>EmailIdentityFeedbackAttributes is the Schema for the EmailIdentityFeedbackAttributess API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EmailIdentityFeedbackAttributesList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EmailIdentityFeedbackAttributes>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EmailIdentityFeedbackAttributesList";
+    public const string KubeGroup = "sesv2.aws.upbound.io";
+    public const string KubePluralName = "emailidentityfeedbackattributes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EmailIdentityFeedbackAttributes> Items { get; set; }
+}

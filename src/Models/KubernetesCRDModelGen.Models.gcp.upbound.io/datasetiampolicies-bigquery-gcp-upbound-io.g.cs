@@ -334,3 +334,29 @@ public partial class V1beta1DatasetIAMPolicy : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("status")]
     public V1beta1DatasetIAMPolicyStatus? Status { get; set; }
 }
+
+/// <summary>DatasetIAMPolicy is the Schema for the DatasetIAMPolicys API. Collection of resources to manage IAM policy for a BigQuery dataset.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatasetIAMPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatasetIAMPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatasetIAMPolicyList";
+    public const string KubeGroup = "bigquery.gcp.upbound.io";
+    public const string KubePluralName = "datasetiampolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatasetIAMPolicy> Items { get; set; }
+}

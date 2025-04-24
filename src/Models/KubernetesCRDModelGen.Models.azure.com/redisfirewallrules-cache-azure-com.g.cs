@@ -200,3 +200,29 @@ public partial class V1api20230801storageRedisFirewallRule : IKubernetesObject<V
     [JsonPropertyName("status")]
     public V1api20230801storageRedisFirewallRuleStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20230801.RedisFirewallRule Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{cacheName}/firewallRules/{ruleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230801storageRedisFirewallRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20230801storageRedisFirewallRule>
+{
+    public const string KubeApiVersion = "v1api20230801storage";
+    public const string KubeKind = "RedisFirewallRuleList";
+    public const string KubeGroup = "cache.azure.com";
+    public const string KubePluralName = "redisfirewallrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230801storageRedisFirewallRule> Items { get; set; }
+}

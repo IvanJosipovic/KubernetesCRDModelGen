@@ -621,3 +621,29 @@ public partial class V1beta1ConfigurationRecorder : IKubernetesObject<V1ObjectMe
     [JsonPropertyName("status")]
     public V1beta1ConfigurationRecorderStatus? Status { get; set; }
 }
+
+/// <summary>ConfigurationRecorder is the Schema for the ConfigurationRecorders API. Provides an AWS Config Configuration Recorder.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConfigurationRecorderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConfigurationRecorder>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConfigurationRecorderList";
+    public const string KubeGroup = "configservice.aws.upbound.io";
+    public const string KubePluralName = "configurationrecorders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConfigurationRecorder> Items { get; set; }
+}

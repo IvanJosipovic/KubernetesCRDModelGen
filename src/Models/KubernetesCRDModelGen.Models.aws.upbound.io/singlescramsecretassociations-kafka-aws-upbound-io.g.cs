@@ -383,3 +383,29 @@ public partial class V1beta1SingleScramSecretAssociation : IKubernetesObject<V1O
     [JsonPropertyName("status")]
     public V1beta1SingleScramSecretAssociationStatus? Status { get; set; }
 }
+
+/// <summary>SingleScramSecretAssociation is the Schema for the SingleScramSecretAssociations API. Associates a single SCRAM secret with a Managed Streaming for Kafka (MSK) cluster. Warning: If this AWS MSK cluster has a ScramSecretAssociation managed resource that does not reference, select, or list this secret, the secret will be repeatedly attached and detached each time one of the resources enters its reconciliation loop. To avoid this, choose either ScramSecretAssociation or SingleScramSecretAssociation to manage credentials, not both.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SingleScramSecretAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SingleScramSecretAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SingleScramSecretAssociationList";
+    public const string KubeGroup = "kafka.aws.upbound.io";
+    public const string KubePluralName = "singlescramsecretassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SingleScramSecretAssociation> Items { get; set; }
+}

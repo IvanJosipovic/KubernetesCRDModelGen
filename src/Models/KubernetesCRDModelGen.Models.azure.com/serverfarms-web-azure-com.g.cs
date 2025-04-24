@@ -698,3 +698,29 @@ public partial class V1api20220301storageServerFarm : IKubernetesObject<V1Object
     [JsonPropertyName("status")]
     public V1api20220301storageServerFarmStatus? Status { get; set; }
 }
+
+/// <summary>Storage version of v1api20220301.ServerFarm Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/AppServicePlans.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220301storageServerFarmList : IKubernetesObject<V1ListMeta>, IItems<V1api20220301storageServerFarm>
+{
+    public const string KubeApiVersion = "v1api20220301storage";
+    public const string KubeKind = "ServerFarmList";
+    public const string KubeGroup = "web.azure.com";
+    public const string KubePluralName = "serverfarms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220301storageServerFarm> Items { get; set; }
+}

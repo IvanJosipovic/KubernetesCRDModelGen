@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorSpecLabels
+public partial class MonitoringMetricDescriptorMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class MonitoringMetricDescriptorSpecLabels
 {
     /// <summary>Immutable. A human-readable description for the label.</summary>
     [JsonPropertyName("description")]
@@ -27,7 +33,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpecLabels
 
 /// <summary>Immutable. Optional. Metadata which can be used to guide usage of the metric.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorSpecMetadata
+public partial class MonitoringMetricDescriptorSpecMetadata
 {
     /// <summary>Immutable. The delay of data points caused by ingestion. Data points older than this age are guaranteed to be ingested and available to be read, excluding data loss due to errors.</summary>
     [JsonPropertyName("ingestDelay")]
@@ -44,7 +50,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpecMetadata
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorSpecProjectRef
+public partial class MonitoringMetricDescriptorSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -61,7 +67,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorSpec
+public partial class MonitoringMetricDescriptorSpec
 {
     /// <summary>Immutable. A detailed description of the metric, which can be used in documentation.</summary>
     [JsonPropertyName("description")]
@@ -73,7 +79,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpec
 
     /// <summary>Immutable. The set of labels that can be used to describe a specific instance of this metric type. For example, the `appengine.googleapis.com/http/server/response_latencies` metric type has a label for the HTTP response code, `response_code`, so you can look at latencies for successful responses or just for responses that failed.</summary>
     [JsonPropertyName("labels")]
-    public IList<V1beta1MonitoringMetricDescriptorSpecLabels>? Labels { get; set; }
+    public IList<MonitoringMetricDescriptorSpecLabels>? Labels { get; set; }
 
     /// <summary>Immutable. Optional. The launch stage of the metric definition. Possible values: LAUNCH_STAGE_UNSPECIFIED, UNIMPLEMENTED, PRELAUNCH, EARLY_ACCESS, ALPHA, BETA, GA, DEPRECATED</summary>
     [JsonPropertyName("launchStage")]
@@ -81,7 +87,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpec
 
     /// <summary>Immutable. Optional. Metadata which can be used to guide usage of the metric.</summary>
     [JsonPropertyName("metadata")]
-    public V1beta1MonitoringMetricDescriptorSpecMetadata? Metadata { get; set; }
+    public MonitoringMetricDescriptorSpecMetadata? Metadata { get; set; }
 
     /// <summary>Immutable. Whether the metric records instantaneous values, changes to a value, etc. Some combinations of `metric_kind` and `value_type` might not be supported. Possible values: METRIC_KIND_UNSPECIFIED, GAUGE, DELTA, CUMULATIVE</summary>
     [JsonPropertyName("metricKind")]
@@ -89,7 +95,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1beta1MonitoringMetricDescriptorSpecProjectRef ProjectRef { get; set; }
+    public MonitoringMetricDescriptorSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The metric type, including its DNS name prefix. The type is not URL-encoded. All user-defined metric types have the DNS name `custom.googleapis.com` or `external.googleapis.com`. Metric types should use a natural hierarchical grouping. For example: "custom.googleapis.com/invoice/paid/amount" "external.googleapis.com/prometheus/up" "appengine.googleapis.com/http/server/response_latencies"</summary>
     [JsonPropertyName("type")]
@@ -106,7 +112,7 @@ public partial class V1beta1MonitoringMetricDescriptorSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorStatusConditions
+public partial class MonitoringMetricDescriptorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -131,11 +137,11 @@ public partial class V1beta1MonitoringMetricDescriptorStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitoringMetricDescriptorStatus
+public partial class MonitoringMetricDescriptorStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1MonitoringMetricDescriptorStatusConditions>? Conditions { get; set; }
+    public IList<MonitoringMetricDescriptorStatusConditions>? Conditions { get; set; }
 
     /// <summary>Read-only. If present, then a time series, which is identified partially by a metric type and a MonitoredResourceDescriptor, that is associated with this metric type can only be associated with one of the monitored resource types listed here.</summary>
     [JsonPropertyName("monitoredResourceTypes")]
@@ -152,30 +158,25 @@ public partial class V1beta1MonitoringMetricDescriptorStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitoringMetricDescriptor : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringMetricDescriptorSpec>, IStatus<V1beta1MonitoringMetricDescriptorStatus>
+public partial class MonitoringMetricDescriptor
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitoringMetricDescriptor";
-    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
-    public const string KubePluralName = "monitoringmetricdescriptors";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public MonitoringMetricDescriptorMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1MonitoringMetricDescriptorSpec Spec { get; set; }
+    public MonitoringMetricDescriptorSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1MonitoringMetricDescriptorStatus? Status { get; set; }
+    public MonitoringMetricDescriptorStatus? Status { get; set; }
 }

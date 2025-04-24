@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1StorageNotificationSpecBucketRef
+public partial class StorageNotificationMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class StorageNotificationSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1beta1StorageNotificationSpecBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1StorageNotificationSpecTopicRef
+public partial class StorageNotificationSpecTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,11 +50,11 @@ public partial class V1beta1StorageNotificationSpecTopicRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1StorageNotificationSpec
+public partial class StorageNotificationSpec
 {
     /// <summary></summary>
     [JsonPropertyName("bucketRef")]
-    public V1beta1StorageNotificationSpecBucketRef BucketRef { get; set; }
+    public StorageNotificationSpecBucketRef BucketRef { get; set; }
 
     /// <summary>Immutable.  A set of key/value attribute pairs to attach to each Cloud Pub/Sub message published for this notification subscription.</summary>
     [JsonPropertyName("customAttributes")]
@@ -72,12 +78,12 @@ public partial class V1beta1StorageNotificationSpec
 
     /// <summary></summary>
     [JsonPropertyName("topicRef")]
-    public V1beta1StorageNotificationSpecTopicRef TopicRef { get; set; }
+    public StorageNotificationSpecTopicRef TopicRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1StorageNotificationStatusConditions
+public partial class StorageNotificationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -102,11 +108,11 @@ public partial class V1beta1StorageNotificationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1StorageNotificationStatus
+public partial class StorageNotificationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1StorageNotificationStatusConditions>? Conditions { get; set; }
+    public IList<StorageNotificationStatusConditions>? Conditions { get; set; }
 
     /// <summary>The ID of the created notification.</summary>
     [JsonPropertyName("notificationId")]
@@ -123,30 +129,25 @@ public partial class V1beta1StorageNotificationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StorageNotification : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageNotificationSpec>, IStatus<V1beta1StorageNotificationStatus>
+public partial class StorageNotification
 {
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StorageNotification";
-    public const string KubeGroup = "storage.cnrm.cloud.google.com";
-    public const string KubePluralName = "storagenotifications";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public StorageNotificationMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1beta1StorageNotificationSpec Spec { get; set; }
+    public StorageNotificationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1beta1StorageNotificationStatus? Status { get; set; }
+    public StorageNotificationStatus? Status { get; set; }
 }

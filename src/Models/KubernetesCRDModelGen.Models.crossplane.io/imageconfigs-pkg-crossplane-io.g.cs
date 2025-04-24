@@ -206,3 +206,29 @@ public partial class V1beta1ImageConfig : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("spec")]
     public V1beta1ImageConfigSpec? Spec { get; set; }
 }
+
+/// <summary>The ImageConfig resource is used to configure settings for package images.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ImageConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ImageConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ImageConfigList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "imageconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ImageConfig> Items { get; set; }
+}

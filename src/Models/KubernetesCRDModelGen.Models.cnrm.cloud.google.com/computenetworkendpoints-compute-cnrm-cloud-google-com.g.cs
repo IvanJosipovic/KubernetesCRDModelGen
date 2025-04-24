@@ -10,7 +10,13 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
+public partial class ComputeNetworkEndpointMetadata
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class ComputeNetworkEndpointSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -27,7 +33,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
+public partial class ComputeNetworkEndpointSpecNetworkEndpointGroupRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetworkEndpointGroup` resource.</summary>
     [JsonPropertyName("external")]
@@ -44,7 +50,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
+public partial class ComputeNetworkEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -61,11 +67,11 @@ public partial class V1alpha1ComputeNetworkEndpointSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointSpec
+public partial class ComputeNetworkEndpointSpec
 {
     /// <summary></summary>
     [JsonPropertyName("instanceRef")]
-    public V1alpha1ComputeNetworkEndpointSpecInstanceRef? InstanceRef { get; set; }
+    public ComputeNetworkEndpointSpecInstanceRef? InstanceRef { get; set; }
 
     /// <summary>Immutable. IPv4 address of network endpoint. The IP address must belong to a VM in GCE (either the primary IP or as part of an aliased IP range).</summary>
     [JsonPropertyName("ipAddress")]
@@ -73,11 +79,11 @@ public partial class V1alpha1ComputeNetworkEndpointSpec
 
     /// <summary></summary>
     [JsonPropertyName("networkEndpointGroupRef")]
-    public V1alpha1ComputeNetworkEndpointSpecNetworkEndpointGroupRef NetworkEndpointGroupRef { get; set; }
+    public ComputeNetworkEndpointSpecNetworkEndpointGroupRef NetworkEndpointGroupRef { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1ComputeNetworkEndpointSpecProjectRef ProjectRef { get; set; }
+    public ComputeNetworkEndpointSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The port of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -90,7 +96,7 @@ public partial class V1alpha1ComputeNetworkEndpointSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointStatusConditions
+public partial class ComputeNetworkEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -115,11 +121,11 @@ public partial class V1alpha1ComputeNetworkEndpointStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1ComputeNetworkEndpointStatus
+public partial class ComputeNetworkEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1ComputeNetworkEndpointStatusConditions>? Conditions { get; set; }
+    public IList<ComputeNetworkEndpointStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -128,30 +134,25 @@ public partial class V1alpha1ComputeNetworkEndpointStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComputeNetworkEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkEndpointSpec>, IStatus<V1alpha1ComputeNetworkEndpointStatus>
+public partial class ComputeNetworkEndpoint
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComputeNetworkEndpoint";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computenetworkendpoints";
-    /// <summary></summary>
+    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
     [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    public string? Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public V1ObjectMeta Metadata { get; set; }
+    public ComputeNetworkEndpointMetadata? Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public V1alpha1ComputeNetworkEndpointSpec Spec { get; set; }
+    public ComputeNetworkEndpointSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public V1alpha1ComputeNetworkEndpointStatus? Status { get; set; }
+    public ComputeNetworkEndpointStatus? Status { get; set; }
 }
