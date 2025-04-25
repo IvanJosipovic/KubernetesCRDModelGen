@@ -66,7 +66,7 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSetsMatchers
     public string? PathRegex { get; set; }
 }
 
-/// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APIAccesses.</summary>
+/// <summary>OperationSet gives a name to a set of matching OpenAPI operations. This set of operations can then be referenced for granular filtering in APICatalogItems or ManagedSubscriptions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpecOperationSets
 {
@@ -74,7 +74,7 @@ public partial class V1alpha1APISpecOpenApiSpecOperationSets
     [JsonPropertyName("matchers")]
     public IList<V1alpha1APISpecOpenApiSpecOperationSetsMatchers> Matchers { get; set; }
 
-    /// <summary>Name is the name of the OperationSet to reference in APIAccesses.</summary>
+    /// <summary>Name is the name of the OperationSet to reference in APICatalogItems or ManagedSubscriptions.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 }
@@ -101,7 +101,7 @@ public partial class V1alpha1APISpecOpenApiSpecOverride
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecOpenApiSpec
 {
-    /// <summary>OperationSets defines the sets of operations to be referenced for granular filtering in APIAccesses.</summary>
+    /// <summary>OperationSets defines the sets of operations to be referenced for granular filtering in APICatalogItems or ManagedSubscriptions.</summary>
     [JsonPropertyName("operationSets")]
     public IList<V1alpha1APISpecOpenApiSpecOperationSets>? OperationSets { get; set; }
 
