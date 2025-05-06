@@ -351,6 +351,10 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -358,6 +362,10 @@ public partial class V1alpha1ApplicationOperationSyncSourceKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -750,6 +758,10 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -757,6 +769,10 @@ public partial class V1alpha1ApplicationOperationSyncSourcesKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1313,6 +1329,10 @@ public partial class V1alpha1ApplicationSpecSourceKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -1320,6 +1340,10 @@ public partial class V1alpha1ApplicationSpecSourceKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1768,6 +1792,10 @@ public partial class V1alpha1ApplicationSpecSourcesKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -1775,6 +1803,10 @@ public partial class V1alpha1ApplicationSpecSourcesKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1908,6 +1940,10 @@ public partial class V1alpha1ApplicationSpecSyncPolicyAutomated
     /// <summary>AllowEmpty allows apps have zero live resources (default: false)</summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary>Enable allows apps to explicitly control automated sync</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary>Prune specifies whether to delete resources from the cluster that are not found in the sources anymore as part of automated sync (default: false)</summary>
     [JsonPropertyName("prune")]
@@ -2336,6 +2372,10 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -2343,6 +2383,10 @@ public partial class V1alpha1ApplicationStatusHistorySourceKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2735,6 +2779,10 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -2742,6 +2790,10 @@ public partial class V1alpha1ApplicationStatusHistorySourcesKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3248,6 +3300,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -3255,6 +3311,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSourceK
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3647,6 +3707,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -3654,6 +3718,10 @@ public partial class V1alpha1ApplicationStatusOperationStateOperationSyncSources
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4205,6 +4273,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -4212,6 +4284,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourceKust
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4604,6 +4680,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -4611,6 +4691,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultSourcesKus
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4799,7 +4883,7 @@ public partial class V1alpha1ApplicationStatusOperationState
     public V1alpha1ApplicationStatusOperationStateSyncResult? SyncResult { get; set; }
 }
 
-/// <summary>HealthStatus contains information about the currently observed health state of an application or resource</summary>
+/// <summary>Health indicates the health status of the resource (e.g., Healthy, Degraded, Progressing).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResourcesHealth
 {
@@ -4816,51 +4900,51 @@ public partial class V1alpha1ApplicationStatusResourcesHealth
     public string? Status { get; set; }
 }
 
-/// <summary>ResourceStatus holds the current sync and health status of a resource TODO: describe members of this type</summary>
+/// <summary>ResourceStatus holds the current synchronization and health status of a Kubernetes resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResources
 {
-    /// <summary></summary>
+    /// <summary>Group represents the API group of the resource (e.g., "apps" for Deployments).</summary>
     [JsonPropertyName("group")]
     public string? Group { get; set; }
 
-    /// <summary>HealthStatus contains information about the currently observed health state of an application or resource</summary>
+    /// <summary>Health indicates the health status of the resource (e.g., Healthy, Degraded, Progressing).</summary>
     [JsonPropertyName("health")]
     public V1alpha1ApplicationStatusResourcesHealth? Health { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Hook is true if the resource is used as a lifecycle hook in an Argo CD application.</summary>
     [JsonPropertyName("hook")]
     public bool? Hook { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind specifies the type of the resource (e.g., "Deployment", "Service").</summary>
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Name is the unique name of the resource within the namespace.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Namespace defines the Kubernetes namespace where the resource is located.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary></summary>
+    /// <summary>RequiresDeletionConfirmation is true if the resource requires explicit user confirmation before deletion.</summary>
     [JsonPropertyName("requiresDeletionConfirmation")]
     public bool? RequiresDeletionConfirmation { get; set; }
 
-    /// <summary></summary>
+    /// <summary>RequiresPruning is true if the resource needs to be pruned (deleted) as part of synchronization.</summary>
     [JsonPropertyName("requiresPruning")]
     public bool? RequiresPruning { get; set; }
 
-    /// <summary>SyncStatusCode is a type which represents possible comparison results</summary>
+    /// <summary>Status represents the synchronization state of the resource (e.g., Synced, OutOfSync).</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary></summary>
+    /// <summary>SyncWave determines the order in which resources are applied during a sync operation. Lower values are applied first.</summary>
     [JsonPropertyName("syncWave")]
     public long? SyncWave { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Version indicates the API version of the resource (e.g., "v1", "v1beta1").</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -5369,6 +5453,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -5376,6 +5464,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourceKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5768,6 +5860,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
     [JsonPropertyName("forceCommonLabels")]
     public bool? ForceCommonLabels { get; set; }
 
+    /// <summary>IgnoreMissingComponents prevents kustomize from failing when components do not exist locally by not appending them to kustomization file</summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
     /// <summary>Images is a list of Kustomize image override specifications</summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
@@ -5775,6 +5871,10 @@ public partial class V1alpha1ApplicationStatusSyncComparedToSourcesKustomize
     /// <summary>KubeVersion specifies the Kubernetes API version to pass to Helm when templating manifests. By default, Argo CD uses the Kubernetes version of the target cluster.</summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary>LabelIncludeTemplates specifies whether to apply common labels to resource templates or not</summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary>LabelWithoutSelector specifies whether to apply common labels to resource selectors or not</summary>
     [JsonPropertyName("labelWithoutSelector")]
