@@ -179,6 +179,10 @@ public partial class V1alpha1AppProjectSpecSignatureKeys
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AppProjectSpecSyncWindows
 {
+    /// <summary>UseAndOperator use AND operator for matching applications, namespaces and clusters instead of the default OR operator</summary>
+    [JsonPropertyName("andOperator")]
+    public bool? AndOperator { get; set; }
+
     /// <summary>Applications contains a list of applications that the window will apply to</summary>
     [JsonPropertyName("applications")]
     public IList<string>? Applications { get; set; }

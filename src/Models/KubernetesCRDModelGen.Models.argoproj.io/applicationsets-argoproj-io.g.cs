@@ -393,12 +393,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -848,12 +856,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -987,6 +1003,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClusterDecisionResource
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -1529,12 +1549,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -1984,12 +2012,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSou
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -2123,6 +2159,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsClustersTemplateSpecSyn
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -2649,12 +2689,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourceKu
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3104,12 +3152,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSourcesK
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -3243,6 +3299,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitTemplateSpecSyncPoli
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -3763,12 +3823,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSourceK
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4218,12 +4286,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSources
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -4357,6 +4433,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsListTemplateSpecSyncPol
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -4887,12 +4967,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5342,12 +5430,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -5481,6 +5577,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -6023,12 +6123,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -6478,12 +6586,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -6617,6 +6733,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsCluster
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -7143,12 +7263,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -7598,12 +7726,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -7737,6 +7873,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitTemp
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -8257,12 +8397,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -8712,12 +8860,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -8851,6 +9007,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsListTem
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -9369,12 +9529,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -9824,12 +9992,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -9963,6 +10139,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPluginT
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -10832,12 +11012,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -11287,12 +11475,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -11426,6 +11622,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -11593,6 +11793,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("template")]
     public V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullRequestTemplate? Template { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("values")]
+    public IDictionary<string, string>? Values { get; set; }
 }
 
 /// <summary></summary>
@@ -12318,12 +12522,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -12773,12 +12985,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -12912,6 +13132,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsScmProv
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -13523,12 +13747,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -13978,12 +14210,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSourc
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -14117,6 +14357,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixTemplateSpecSyncP
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -14643,12 +14887,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -15098,12 +15350,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -15237,6 +15497,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusterD
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -15779,12 +16043,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -16234,12 +16506,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -16373,6 +16653,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsClusters
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -16899,12 +17183,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -17354,12 +17646,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -17493,6 +17793,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitTempl
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -18013,12 +18317,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -18468,12 +18780,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -18607,6 +18927,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsListTemp
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -19125,12 +19449,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -19580,12 +19912,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -19719,6 +20059,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPluginTe
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -20588,12 +20932,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -21043,12 +21395,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -21182,6 +21542,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -21349,6 +21713,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("template")]
     public V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequestTemplate? Template { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("values")]
+    public IDictionary<string, string>? Values { get; set; }
 }
 
 /// <summary></summary>
@@ -22074,12 +22442,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -22529,12 +22905,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -22668,6 +23052,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsScmProvi
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -23279,12 +23667,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -23734,12 +24130,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSource
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -23873,6 +24277,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeTemplateSpecSyncPo
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -24391,12 +24799,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -24846,12 +25262,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSourc
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -24985,6 +25409,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPluginTemplateSpecSyncP
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -25854,12 +26282,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -26309,12 +26745,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -26448,6 +26892,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -26615,6 +27063,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequest
     /// <summary></summary>
     [JsonPropertyName("template")]
     public V1alpha1ApplicationSetSpecGeneratorsPullRequestTemplate? Template { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("values")]
+    public IDictionary<string, string>? Values { get; set; }
 }
 
 /// <summary></summary>
@@ -27340,12 +27792,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -27795,12 +28255,20 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -27934,6 +28402,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsScmProviderTemplateSpec
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
@@ -28640,12 +29112,20 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourceKustomize
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -29095,12 +29575,20 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSourcesKustomize
     public bool? ForceCommonLabels { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("ignoreMissingComponents")]
+    public bool? IgnoreMissingComponents { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("images")]
     public IList<string>? Images { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kubeVersion")]
     public string? KubeVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labelIncludeTemplates")]
+    public bool? LabelIncludeTemplates { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelWithoutSelector")]
@@ -29234,6 +29722,10 @@ public partial class V1alpha1ApplicationSetSpecTemplateSpecSyncPolicyAutomated
     /// <summary></summary>
     [JsonPropertyName("allowEmpty")]
     public bool? AllowEmpty { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("prune")]
