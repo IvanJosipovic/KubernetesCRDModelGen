@@ -255,6 +255,23 @@ public partial class V1beta1SidecarSpecIngressPort
     public int? TargetPort { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SidecarSpecIngressTlsTlsCertificates
+{
+    /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
+    [JsonPropertyName("caCertificates")]
+    public string? CaCertificates { get; set; }
+
+    /// <summary>REQUIRED if mode is `SIMPLE` or `MUTUAL`.</summary>
+    [JsonPropertyName("privateKey")]
+    public string? PrivateKey { get; set; }
+
+    /// <summary>REQUIRED if mode is `SIMPLE` or `MUTUAL`.</summary>
+    [JsonPropertyName("serverCertificate")]
+    public string? ServerCertificate { get; set; }
+}
+
 /// <summary>Set of TLS related options that will enable TLS termination on the sidecar for requests originating from outside the mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SidecarSpecIngressTls
@@ -274,6 +291,10 @@ public partial class V1beta1SidecarSpecIngressTls
     /// <summary>For gateways running on Kubernetes, the name of the secret that holds the TLS certs including the CA certificates.</summary>
     [JsonPropertyName("credentialName")]
     public string? CredentialName { get; set; }
+
+    /// <summary>Same as CredentialName but for multiple certificates.</summary>
+    [JsonPropertyName("credentialNames")]
+    public IList<string>? CredentialNames { get; set; }
 
     /// <summary>If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.</summary>
     [JsonPropertyName("httpsRedirect")]
@@ -302,6 +323,10 @@ public partial class V1beta1SidecarSpecIngressTls
     /// <summary>A list of alternate names to verify the subject identity in the certificate presented by the client.</summary>
     [JsonPropertyName("subjectAltNames")]
     public IList<string>? SubjectAltNames { get; set; }
+
+    /// <summary>Only one of `server_certificate`, `private_key`, `ca_certificates` or `credential_name` or `credential_names` or `tls_certificates` should be specified.</summary>
+    [JsonPropertyName("tlsCertificates")]
+    public IList<V1beta1SidecarSpecIngressTlsTlsCertificates>? TlsCertificates { get; set; }
 
     /// <summary>An optional list of hex-encoded SHA-256 hashes of the authorized client certificates.</summary>
     [JsonPropertyName("verifyCertificateHash")]
