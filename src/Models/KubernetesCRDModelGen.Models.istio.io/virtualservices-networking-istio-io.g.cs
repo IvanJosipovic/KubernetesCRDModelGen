@@ -521,9 +521,17 @@ public partial class V1beta1VirtualServiceSpecHttpRetries
     [JsonPropertyName("attempts")]
     public int? Attempts { get; set; }
 
+    /// <summary>Specifies the minimum duration between retry attempts.</summary>
+    [JsonPropertyName("backoff")]
+    public string? Backoff { get; set; }
+
     /// <summary>Timeout per attempt for a given request, including the initial call and any retries.</summary>
     [JsonPropertyName("perTryTimeout")]
     public string? PerTryTimeout { get; set; }
+
+    /// <summary>Flag to specify whether the retries should ignore previously tried hosts during retry.</summary>
+    [JsonPropertyName("retryIgnorePreviousHosts")]
+    public bool? RetryIgnorePreviousHosts { get; set; }
 
     /// <summary>Specifies the conditions under which retry takes place.</summary>
     [JsonPropertyName("retryOn")]

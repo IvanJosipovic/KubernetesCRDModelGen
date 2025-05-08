@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: istio
-    app.kubernetes.io/version: 1.25.2
-    helm.sh/chart: base-1.25.2
+    app.kubernetes.io/version: 1.26.0
+    helm.sh/chart: base-1.26.0
   name: virtualservices.networking.istio.io
 spec:
   group: networking.istio.io
@@ -633,12 +633,22 @@ spec:
                           description: Number of retries to be allowed for a given request.
                           format: int32
                           type: integer
+                        backoff:
+                          description: Specifies the minimum duration between retry attempts.
+                          type: string
+                          x-kubernetes-validations:
+                          - message: must be a valid duration greater than 1ms
+                            rule: duration(self) >= duration('1ms')
                         perTryTimeout:
                           description: Timeout per attempt for a given request, including the initial call and any retries.
                           type: string
                           x-kubernetes-validations:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
+                        retryIgnorePreviousHosts:
+                          description: Flag to specify whether the retries should ignore previously tried hosts during retry.
+                          nullable: true
+                          type: boolean
                         retryOn:
                           description: Specifies the conditions under which retry takes place.
                           type: string
@@ -1571,12 +1581,22 @@ spec:
                           description: Number of retries to be allowed for a given request.
                           format: int32
                           type: integer
+                        backoff:
+                          description: Specifies the minimum duration between retry attempts.
+                          type: string
+                          x-kubernetes-validations:
+                          - message: must be a valid duration greater than 1ms
+                            rule: duration(self) >= duration('1ms')
                         perTryTimeout:
                           description: Timeout per attempt for a given request, including the initial call and any retries.
                           type: string
                           x-kubernetes-validations:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
+                        retryIgnorePreviousHosts:
+                          description: Flag to specify whether the retries should ignore previously tried hosts during retry.
+                          nullable: true
+                          type: boolean
                         retryOn:
                           description: Specifies the conditions under which retry takes place.
                           type: string
@@ -2509,12 +2529,22 @@ spec:
                           description: Number of retries to be allowed for a given request.
                           format: int32
                           type: integer
+                        backoff:
+                          description: Specifies the minimum duration between retry attempts.
+                          type: string
+                          x-kubernetes-validations:
+                          - message: must be a valid duration greater than 1ms
+                            rule: duration(self) >= duration('1ms')
                         perTryTimeout:
                           description: Timeout per attempt for a given request, including the initial call and any retries.
                           type: string
                           x-kubernetes-validations:
                           - message: must be a valid duration greater than 1ms
                             rule: duration(self) >= duration('1ms')
+                        retryIgnorePreviousHosts:
+                          description: Flag to specify whether the retries should ignore previously tried hosts during retry.
+                          nullable: true
+                          type: boolean
                         retryOn:
                           description: Specifies the conditions under which retry takes place.
                           type: string
