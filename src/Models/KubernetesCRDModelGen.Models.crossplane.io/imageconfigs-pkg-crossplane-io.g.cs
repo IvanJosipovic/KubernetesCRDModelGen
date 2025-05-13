@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpecMatchImages
 {
-    /// <summary>Prefix is the prefix that should be matched.</summary>
+    /// <summary>Prefix is the prefix that should be matched. When multiple prefix rules match an image path, the longest one takes precedence.</summary>
     [JsonPropertyName("prefix")]
     public string Prefix { get; set; }
 
@@ -46,6 +46,15 @@ public partial class V1beta1ImageConfigSpecRegistry
     /// <summary>Authentication is the authentication information for the registry.</summary>
     [JsonPropertyName("authentication")]
     public V1beta1ImageConfigSpecRegistryAuthentication? Authentication { get; set; }
+}
+
+/// <summary>RewriteImage defines how a matched image's path should be rewritten.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageConfigSpecRewriteImage
+{
+    /// <summary>Prefix is the prefix that will replace the portion of the image's path matched by the prefix in the ImageMatch. If multiple prefixes matched, the longest one will be replaced.</summary>
+    [JsonPropertyName("prefix")]
+    public string Prefix { get; set; }
 }
 
 /// <summary>Attestation defines the type of attestation to validate and optionally apply a policy decision to it. Authority block is used to verify the specified attestation types, and if Policy is specified, then it's applied only after the validation of the Attestation signature has been verified.</summary>
@@ -168,13 +177,17 @@ public partial class V1beta1ImageConfigSpecVerification
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageConfigSpec
 {
-    /// <summary>MatchImages is a list of image matching rules that should be satisfied.</summary>
+    /// <summary>MatchImages is a list of image matching rules. This ImageConfig will match an image if any one of these rules is satisfied. In the case where multiple ImageConfigs match an image for a given purpose the one with the most specific match will be used. If multiple rules of equal specificity match an arbitrary one will be selected.</summary>
     [JsonPropertyName("matchImages")]
     public IList<V1beta1ImageConfigSpecMatchImages> MatchImages { get; set; }
 
     /// <summary>Registry is the configuration for the registry.</summary>
     [JsonPropertyName("registry")]
     public V1beta1ImageConfigSpecRegistry? Registry { get; set; }
+
+    /// <summary>RewriteImage defines how a matched image's path should be rewritten.</summary>
+    [JsonPropertyName("rewriteImage")]
+    public V1beta1ImageConfigSpecRewriteImage? RewriteImage { get; set; }
 
     /// <summary>Verification contains the configuration for verifying the image.</summary>
     [JsonPropertyName("verification")]

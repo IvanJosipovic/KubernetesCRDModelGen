@@ -88,6 +88,19 @@ public partial class V1FunctionSpec
     public bool? SkipDependencyResolution { get; set; }
 }
 
+/// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1FunctionStatusAppliedImageConfigRefs
+{
+    /// <summary>Name is the name of the image config.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Reason indicates what the image config was used for.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+}
+
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionStatusConditions
@@ -121,6 +134,10 @@ public partial class V1FunctionStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionStatus
 {
+    /// <summary>AppliedImageConfigRefs records any image configs that were applied in reconciling this package, and what they were used for.</summary>
+    [JsonPropertyName("appliedImageConfigRefs")]
+    public IList<V1FunctionStatusAppliedImageConfigRefs>? AppliedImageConfigRefs { get; set; }
+
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1FunctionStatusConditions>? Conditions { get; set; }
@@ -132,6 +149,10 @@ public partial class V1FunctionStatus
     /// <summary>CurrentRevision is the name of the current package revision. It will reflect the most up to date revision, whether it has been activated or not.</summary>
     [JsonPropertyName("currentRevision")]
     public string? CurrentRevision { get; set; }
+
+    /// <summary>ResolvedPackage is the name of the package that was used for version resolution. It may be different from spec.package if the package path was rewritten using an image config.</summary>
+    [JsonPropertyName("resolvedPackage")]
+    public string? ResolvedPackage { get; set; }
 }
 
 /// <summary>A Function installs an OCI compatible Crossplane package, extending Crossplane with support for a new kind of composition function.  Read the Crossplane documentation for [more information about Functions](https://docs.crossplane.io/latest/concepts/composition-functions).</summary>

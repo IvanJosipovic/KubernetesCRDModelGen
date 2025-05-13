@@ -96,6 +96,19 @@ public partial class V1ProviderRevisionSpec
     public string? TlsServerSecretName { get; set; }
 }
 
+/// <summary>ImageConfigRef is a reference to an image config that indicates how the referenced image config was used by the package manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ProviderRevisionStatusAppliedImageConfigRefs
+{
+    /// <summary>Name is the name of the image config.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Reason indicates what the image config was used for.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+}
+
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatusConditions
@@ -175,6 +188,10 @@ public partial class V1ProviderRevisionStatusPermissionRequests
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatus
 {
+    /// <summary>AppliedImageConfigRefs records any image configs that were applied in reconciling this revision, and what they were used for.</summary>
+    [JsonPropertyName("appliedImageConfigRefs")]
+    public IList<V1ProviderRevisionStatusAppliedImageConfigRefs>? AppliedImageConfigRefs { get; set; }
+
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1ProviderRevisionStatusConditions>? Conditions { get; set; }
@@ -198,6 +215,10 @@ public partial class V1ProviderRevisionStatus
     /// <summary>PermissionRequests made by this package. The package declares that its controller needs these permissions to run. The RBAC manager is responsible for granting them.</summary>
     [JsonPropertyName("permissionRequests")]
     public IList<V1ProviderRevisionStatusPermissionRequests>? PermissionRequests { get; set; }
+
+    /// <summary>ResolvedPackage is the name of the package that was installed. It may be different from spec.image if the package path was rewritten using an image config.</summary>
+    [JsonPropertyName("resolvedImage")]
+    public string? ResolvedImage { get; set; }
 }
 
 /// <summary>A ProviderRevision represents a revision of a Provider. Crossplane creates new revisions when there are changes to a Provider.  Crossplane creates and manages ProviderRevisions. Don't directly edit ProviderRevisions.</summary>
