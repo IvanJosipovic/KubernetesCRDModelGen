@@ -19,7 +19,7 @@ spec:
         description: >-
           Middleware is the CRD implementation of a Traefik Middleware.
 
-          More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/overview/
+          More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/overview/
         properties:
           apiVersion:
             description: >-
@@ -54,7 +54,7 @@ spec:
 
                   This middleware updates the path of a request before forwarding it.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/addprefix/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/addprefix/
                 properties:
                   prefix:
                     description: >-
@@ -62,6 +62,9 @@ spec:
 
                       It should include a leading slash (/).
                     type: string
+                    x-kubernetes-validations:
+                    - message: must start with a '/'
+                      rule: self.startsWith('/')
                 type: object
               basicAuth:
                 description: >-
@@ -69,13 +72,13 @@ spec:
 
                   This middleware restricts access to your services to known users.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/basicauth/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/basicauth/
                 properties:
                   headerField:
                     description: >-
                       HeaderField defines a header field to store the authenticated user.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/basicauth/#headerfield
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/basicauth/#headerfield
                     type: string
                   realm:
                     description: >-
@@ -99,7 +102,7 @@ spec:
 
                   This middleware retries or limits the size of requests that can be forwarded to backends.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/buffering/#maxrequestbodybytes
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/buffering/#maxrequestbodybytes
                 properties:
                   maxRequestBodyBytes:
                     description: >-
@@ -139,7 +142,7 @@ spec:
 
                       It is a logical combination of functions with operators AND (&&) and OR (||).
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/buffering/#retryexpression
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/buffering/#retryexpression
                     type: string
                 type: object
               chain:
@@ -148,7 +151,7 @@ spec:
 
                   This middleware enables to define reusable combinations of other pieces of middleware.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/chain/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/chain/
                 properties:
                   middlewares:
                     description: Middlewares is the list of MiddlewareRef which composes the chain.
@@ -174,6 +177,7 @@ spec:
                     - type: integer
                     - type: string
                     description: CheckPeriod is the interval between successive checks of the circuit breaker condition (when in standby state).
+                    pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
                     x-kubernetes-int-or-string: true
                   expression:
                     description: Expression is the condition that triggers the tripped state.
@@ -189,9 +193,12 @@ spec:
                     - type: integer
                     - type: string
                     description: RecoveryDuration is the duration for which the circuit breaker will try to recover (as soon as it is in recovering state).
+                    pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
                     x-kubernetes-int-or-string: true
                   responseCode:
                     description: ResponseCode is the status code that the circuit breaker will return while it is in the open state.
+                    maximum: 599
+                    minimum: 100
                     type: integer
                 type: object
               compress:
@@ -200,7 +207,7 @@ spec:
 
                   This middleware compresses responses before sending them to the client, using gzip, brotli, or zstd compression.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/compress/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/compress/
                 properties:
                   defaultEncoding:
                     description: DefaultEncoding specifies the default encoding if the `Accept-Encoding` header is not in the request or contains a wildcard (`*`).
@@ -228,6 +235,7 @@ spec:
                       MinResponseBodyBytes defines the minimum amount of bytes a response body must have to be compressed.
 
                       Default: 1024.
+                    minimum: 0
                     type: integer
                 type: object
               contentType:
@@ -251,13 +259,13 @@ spec:
 
                   This middleware restricts access to your services to known users.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/digestauth/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/digestauth/
                 properties:
                   headerField:
                     description: >-
                       HeaderField defines a header field to store the authenticated user.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/basicauth/#headerfield
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/basicauth/#headerfield
                     type: string
                   realm:
                     description: >-
@@ -278,19 +286,23 @@ spec:
 
                   This middleware returns a custom page in lieu of the default, according to configured ranges of HTTP Status codes.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/errorpages/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/errorpages/
                 properties:
                   query:
                     description: >-
                       Query defines the URL for the error page (hosted by service).
 
                       The {status} variable can be used in order to insert the status code in the URL.
+
+                      The {originalStatus} variable can be used in order to insert the upstream status code in the URL.
+
+                      The {url} variable can be used in order to insert the escaped request URL.
                     type: string
                   service:
                     description: >-
                       Service defines the reference to a Kubernetes Service that will serve the error page.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/errorpages/#service
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/errorpages/#service
                     properties:
                       healthCheck:
                         description: Healthcheck defines health checks for ExternalName services.
@@ -435,11 +447,17 @@ spec:
                         description: >-
                           Sticky defines the sticky sessions configuration.
 
-                          More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions
+                          More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions
                         properties:
                           cookie:
                             description: Cookie defines the sticky cookie configuration.
                             properties:
+                              domain:
+                                description: >-
+                                  Domain defines the host to which the cookie will be sent.
+
+                                  More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#domaindomain-value
+                                type: string
                               httpOnly:
                                 description: HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.
                                 type: boolean
@@ -467,6 +485,10 @@ spec:
                                   SameSite defines the same site policy.
 
                                   More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+                                enum:
+                                - none
+                                - lax
+                                - strict
                                 type: string
                               secure:
                                 description: Secure defines whether the cookie can only be transmitted over an encrypted connection (i.e. HTTPS).
@@ -477,13 +499,20 @@ spec:
                         description: >-
                           Strategy defines the load balancing strategy between the servers.
 
-                          RoundRobin is the only supported value at the moment.
+                          Supported values are: wrr (Weighed round-robin) and p2c (Power of two choices).
+
+                          RoundRobin value is deprecated and supported for backward compatibility.
+                        enum:
+                        - wrr
+                        - p2c
+                        - RoundRobin
                         type: string
                       weight:
                         description: >-
                           Weight defines the weight and should only be specified when Name references a TraefikService object
 
                           (and to be precise, one that embeds a Weighted Round Robin).
+                        minimum: 0
                         type: integer
                     required:
                     - name
@@ -500,8 +529,17 @@ spec:
 
                       or a combination of the two (404,418,500-599).
                     items:
+                      pattern: ^([1-5][0-9]{2}[,-]?)+$
                       type: string
                     type: array
+                  statusRewrites:
+                    additionalProperties:
+                      type: integer
+                    description: >-
+                      StatusRewrites defines a mapping of status codes that should be returned instead of the original error status codes.
+
+                      For example: "418": 404 or "410-418": 404
+                    type: object
                 type: object
               forwardAuth:
                 description: >-
@@ -509,7 +547,7 @@ spec:
 
                   This middleware delegates the request authentication to a Service.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/forwardauth/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/forwardauth/
                 properties:
                   addAuthCookiesToResponse:
                     description: AddAuthCookiesToResponse defines the list of cookies to copy from the authentication server response to the response.
@@ -536,7 +574,7 @@ spec:
                     description: >-
                       AuthResponseHeadersRegex defines the regex to match headers to copy from the authentication server response and set on forwarded request, after stripping all headers that match the regex.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/forwardauth/#authresponseheadersregex
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/forwardauth/#authresponseheadersregex
                     type: string
                   forwardBody:
                     description: ForwardBody defines whether to send the request body to the authentication server.
@@ -545,7 +583,7 @@ spec:
                     description: >-
                       HeaderField defines a header field to store the authenticated user.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/forwardauth/#headerfield
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/forwardauth/#headerfield
                     type: string
                   maxBodySize:
                     description: MaxBodySize defines the maximum body size in bytes allowed to be forwarded to the authentication server.
@@ -553,6 +591,9 @@ spec:
                     type: integer
                   preserveLocationHeader:
                     description: PreserveLocationHeader defines whether to forward the Location header to the client as is or prefix it with the domain name of the authentication server.
+                    type: boolean
+                  preserveRequestMethod:
+                    description: PreserveRequestMethod defines whether to preserve the original request method while forwarding the request to the authentication server.
                     type: boolean
                   tls:
                     description: TLS defines the configuration used to secure the connection to the authentication server.
@@ -601,7 +642,7 @@ spec:
 
                   This middleware manages the requests and responses headers.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/headers/#customrequestheaders
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/headers/#customrequestheaders
                 properties:
                   accessControlAllowCredentials:
                     description: AccessControlAllowCredentials defines whether the request can include user credentials.
@@ -748,6 +789,7 @@ spec:
 
                       If set to 0, the header is not set.
                     format: int64
+                    minimum: 0
                     type: integer
                 type: object
               inFlightReq:
@@ -756,7 +798,7 @@ spec:
 
                   This middleware limits the number of requests being processed and served concurrently.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/inflightreq/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/inflightreq/
                 properties:
                   amount:
                     description: >-
@@ -764,6 +806,7 @@ spec:
 
                       The middleware responds with HTTP 429 Too Many Requests if there are already amount requests in progress (based on the same sourceCriterion strategy).
                     format: int64
+                    minimum: 0
                     type: integer
                   sourceCriterion:
                     description: >-
@@ -773,16 +816,17 @@ spec:
 
                       If none are set, the default is to use the requestHost.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/inflightreq/#sourcecriterion
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/inflightreq/#sourcecriterion
                     properties:
                       ipStrategy:
                         description: >-
                           IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP.
 
-                          More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ipallowlist/#ipstrategy
+                          More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ipallowlist/#ipstrategy
                         properties:
                           depth:
                             description: Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).
+                            minimum: 0
                             type: integer
                           excludedIPs:
                             description: ExcludedIPs configures Traefik to scan the X-Forwarded-For header and select the first IP not in the list.
@@ -807,16 +851,17 @@ spec:
 
                   This middleware limits allowed requests based on the client IP.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ipallowlist/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ipallowlist/
                 properties:
                   ipStrategy:
                     description: >-
                       IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ipallowlist/#ipstrategy
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ipallowlist/#ipstrategy
                     properties:
                       depth:
                         description: Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).
+                        minimum: 0
                         type: integer
                       excludedIPs:
                         description: ExcludedIPs configures Traefik to scan the X-Forwarded-For header and select the first IP not in the list.
@@ -846,10 +891,11 @@ spec:
                     description: >-
                       IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP.
 
-                      More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ipallowlist/#ipstrategy
+                      More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ipallowlist/#ipstrategy
                     properties:
                       depth:
                         description: Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).
+                        minimum: 0
                         type: integer
                       excludedIPs:
                         description: ExcludedIPs configures Traefik to scan the X-Forwarded-For header and select the first IP not in the list.
@@ -872,7 +918,7 @@ spec:
 
                   This middleware adds the selected data from the passed client TLS certificate to a header.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/passtlsclientcert/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/passtlsclientcert/
                 properties:
                   info:
                     description: Info selects the specific client certificate details you want to add to the X-Forwarded-Tls-Client-Cert-Info header.
@@ -961,7 +1007,7 @@ spec:
 
                   This middleware ensures that services will receive a fair amount of requests, and allows one to define what fair is.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ratelimit/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ratelimit/
                 properties:
                   average:
                     description: >-
@@ -973,6 +1019,7 @@ spec:
 
                       one needs to define a Period larger than a second.
                     format: int64
+                    minimum: 0
                     type: integer
                   burst:
                     description: >-
@@ -980,6 +1027,7 @@ spec:
 
                       It defaults to 1.
                     format: int64
+                    minimum: 0
                     type: integer
                   period:
                     anyOf:
@@ -990,6 +1038,98 @@ spec:
 
                       r = Average / Period. It defaults to a second.
                     x-kubernetes-int-or-string: true
+                  redis:
+                    description: Redis hold the configs of Redis as bucket in rate limiter.
+                    properties:
+                      db:
+                        description: DB defines the Redis database that will be selected after connecting to the server.
+                        type: integer
+                      dialTimeout:
+                        anyOf:
+                        - type: integer
+                        - type: string
+                        description: >-
+                          DialTimeout sets the timeout for establishing new connections.
+
+                          Default value is 5 seconds.
+                        pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
+                        x-kubernetes-int-or-string: true
+                      endpoints:
+                        description: >-
+                          Endpoints contains either a single address or a seed list of host:port addresses.
+
+                          Default value is ["localhost:6379"].
+                        items:
+                          type: string
+                        type: array
+                      maxActiveConns:
+                        description: >-
+                          MaxActiveConns defines the maximum number of connections allocated by the pool at a given time.
+
+                          Default value is 0, meaning there is no limit.
+                        type: integer
+                      minIdleConns:
+                        description: >-
+                          MinIdleConns defines the minimum number of idle connections.
+
+                          Default value is 0, and idle connections are not closed by default.
+                        type: integer
+                      poolSize:
+                        description: >-
+                          PoolSize defines the initial number of socket connections.
+
+                          If the pool runs out of available connections, additional ones will be created beyond PoolSize.
+
+                          This can be limited using MaxActiveConns.
+
+                          // Default value is 0, meaning 10 connections per every available CPU as reported by runtime.GOMAXPROCS.
+                        type: integer
+                      readTimeout:
+                        anyOf:
+                        - type: integer
+                        - type: string
+                        description: >-
+                          ReadTimeout defines the timeout for socket read operations.
+
+                          Default value is 3 seconds.
+                        pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
+                        x-kubernetes-int-or-string: true
+                      secret:
+                        description: Secret defines the name of the referenced Kubernetes Secret containing Redis credentials.
+                        type: string
+                      tls:
+                        description: >-
+                          TLS defines TLS-specific configurations, including the CA, certificate, and key,
+
+                          which can be provided as a file path or file content.
+                        properties:
+                          caSecret:
+                            description: >-
+                              CASecret is the name of the referenced Kubernetes Secret containing the CA to validate the server certificate.
+
+                              The CA certificate is extracted from key `tls.ca` or `ca.crt`.
+                            type: string
+                          certSecret:
+                            description: >-
+                              CertSecret is the name of the referenced Kubernetes Secret containing the client certificate.
+
+                              The client certificate is extracted from the keys `tls.crt` and `tls.key`.
+                            type: string
+                          insecureSkipVerify:
+                            description: InsecureSkipVerify defines whether the server certificates should be validated.
+                            type: boolean
+                        type: object
+                      writeTimeout:
+                        anyOf:
+                        - type: integer
+                        - type: string
+                        description: >-
+                          WriteTimeout defines the timeout for socket write operations.
+
+                          Default value is 3 seconds.
+                        pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
+                        x-kubernetes-int-or-string: true
+                    type: object
                   sourceCriterion:
                     description: >-
                       SourceCriterion defines what criterion is used to group requests as originating from a common source.
@@ -1002,10 +1142,11 @@ spec:
                         description: >-
                           IPStrategy holds the IP strategy configuration used by Traefik to determine the client IP.
 
-                          More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/ipallowlist/#ipstrategy
+                          More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/ipallowlist/#ipstrategy
                         properties:
                           depth:
                             description: Depth tells Traefik to use the X-Forwarded-For header and take the IP located at the depth position (starting from the right).
+                            minimum: 0
                             type: integer
                           excludedIPs:
                             description: ExcludedIPs configures Traefik to scan the X-Forwarded-For header and select the first IP not in the list.
@@ -1030,7 +1171,7 @@ spec:
 
                   This middleware redirects a request using regex matching and replacement.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/redirectregex/#regex
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/redirectregex/#regex
                 properties:
                   permanent:
                     description: Permanent defines whether the redirection is permanent (301).
@@ -1048,7 +1189,7 @@ spec:
 
                   This middleware redirects requests from a scheme/port to another.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/redirectscheme/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/redirectscheme/
                 properties:
                   permanent:
                     description: Permanent defines whether the redirection is permanent (301).
@@ -1066,7 +1207,7 @@ spec:
 
                   This middleware replaces the path of the request URL and store the original path in an X-Replaced-Path header.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/replacepath/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/replacepath/
                 properties:
                   path:
                     description: Path defines the path to use as replacement in the request URL.
@@ -1078,7 +1219,7 @@ spec:
 
                   This middleware replaces the path of a URL using regex matching and replacement.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/replacepathregex/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/replacepathregex/
                 properties:
                   regex:
                     description: Regex defines the regular expression used to match and capture the path from the request URL.
@@ -1095,10 +1236,11 @@ spec:
 
                   As soon as the server answers, the middleware stops retrying, regardless of the response status.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/retry/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/retry/
                 properties:
                   attempts:
                     description: Attempts defines how many times the request should be retried.
+                    minimum: 0
                     type: integer
                   initialInterval:
                     anyOf:
@@ -1114,6 +1256,7 @@ spec:
                       The value of initialInterval should be provided in seconds or as a valid duration format,
 
                       see https://pkg.go.dev/time#ParseDuration.
+                    pattern: ^([0-9]+(ns|us|µs|ms|s|m|h)?)+$
                     x-kubernetes-int-or-string: true
                 type: object
               stripPrefix:
@@ -1122,7 +1265,7 @@ spec:
 
                   This middleware removes the specified prefixes from the URL path.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/stripprefix/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/stripprefix/
                 properties:
                   forceSlash:
                     description: >-
@@ -1144,7 +1287,7 @@ spec:
 
                   This middleware removes the matching prefixes from the URL path.
 
-                  More info: https://doc.traefik.io/traefik/v3.3/middlewares/http/stripprefixregex/
+                  More info: https://doc.traefik.io/traefik/v3.4/middlewares/http/stripprefixregex/
                 properties:
                   regex:
                     description: Regex defines the regular expression to match the path prefix from the request URL.

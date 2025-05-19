@@ -8,6 +8,19 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>RootCA defines a reference to a Secret or a ConfigMap that holds a CA certificate. If both a Secret and a ConfigMap reference are defined, the Secret reference takes precedence.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ServersTransportTCPSpecTlsRootCAs
+{
+    /// <summary>ConfigMap defines the name of a ConfigMap that holds a CA certificate. The referenced ConfigMap must contain a certificate under either a tls.ca or a ca.crt key.</summary>
+    [JsonPropertyName("configMap")]
+    public string? ConfigMap { get; set; }
+
+    /// <summary>Secret defines the name of a Secret that holds a CA certificate. The referenced Secret must contain a certificate under either a tls.ca or a ca.crt key.</summary>
+    [JsonPropertyName("secret")]
+    public string? Secret { get; set; }
+}
+
 /// <summary>Spiffe defines the SPIFFE configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ServersTransportTCPSpecTlsSpiffe
@@ -37,7 +50,11 @@ public partial class V1alpha1ServersTransportTCPSpecTls
     [JsonPropertyName("peerCertURI")]
     public string? PeerCertURI { get; set; }
 
-    /// <summary>RootCAsSecrets defines a list of CA secret used to validate self-signed certificates.</summary>
+    /// <summary>RootCAs defines a list of CA certificate Secrets or ConfigMaps used to validate server certificates.</summary>
+    [JsonPropertyName("rootCAs")]
+    public IList<V1alpha1ServersTransportTCPSpecTlsRootCAs>? RootCAs { get; set; }
+
+    /// <summary>RootCAsSecrets defines a list of CA secret used to validate self-signed certificate. Deprecated: RootCAsSecrets is deprecated, please use the RootCAs option instead.</summary>
     [JsonPropertyName("rootCAsSecrets")]
     public IList<string>? RootCAsSecrets { get; set; }
 
@@ -71,7 +88,7 @@ public partial class V1alpha1ServersTransportTCPSpec
     public V1alpha1ServersTransportTCPSpecTls? Tls { get; set; }
 }
 
-/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#serverstransport_3</summary>
+/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#serverstransport_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransportTCP : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServersTransportTCPSpec>
@@ -97,7 +114,7 @@ public partial class V1alpha1ServersTransportTCP : IKubernetesObject<V1ObjectMet
     public V1alpha1ServersTransportTCPSpec Spec { get; set; }
 }
 
-/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#serverstransport_3</summary>
+/// <summary>ServersTransportTCP is the CRD implementation of a TCPServersTransport. If no tcpServersTransport is specified, a default one named default@internal will be used. The default@internal tcpServersTransport can be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#serverstransport_3</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1ServersTransportTCPList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ServersTransportTCP>
