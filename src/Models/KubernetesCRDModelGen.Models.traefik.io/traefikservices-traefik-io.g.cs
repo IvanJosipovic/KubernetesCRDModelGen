@@ -119,6 +119,10 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsResponseForwardin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
 {
+    /// <summary>Domain defines the host to which the cookie will be sent. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#domaindomain-value</summary>
+    [JsonPropertyName("domain")]
+    public string? Domain { get; set; }
+
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
@@ -144,7 +148,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrorsStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringMirrorsSticky
 {
@@ -205,11 +209,11 @@ public partial class V1alpha1TraefikServiceSpecMirroringMirrors
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecMirroringMirrorsSticky? Sticky { get; set; }
 
-    /// <summary>Strategy defines the load balancing strategy between the servers. RoundRobin is the only supported value at the moment.</summary>
+    /// <summary>Strategy defines the load balancing strategy between the servers. Supported values are: wrr (Weighed round-robin) and p2c (Power of two choices). RoundRobin value is deprecated and supported for backward compatibility.</summary>
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 
@@ -231,6 +235,10 @@ public partial class V1alpha1TraefikServiceSpecMirroringResponseForwarding
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
 {
+    /// <summary>Domain defines the host to which the cookie will be sent. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#domaindomain-value</summary>
+    [JsonPropertyName("domain")]
+    public string? Domain { get; set; }
+
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
@@ -256,7 +264,7 @@ public partial class V1alpha1TraefikServiceSpecMirroringStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecMirroringSticky
 {
@@ -325,11 +333,11 @@ public partial class V1alpha1TraefikServiceSpecMirroring
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecMirroringSticky? Sticky { get; set; }
 
-    /// <summary>Strategy defines the load balancing strategy between the servers. RoundRobin is the only supported value at the moment.</summary>
+    /// <summary>Strategy defines the load balancing strategy between the servers. Supported values are: wrr (Weighed round-robin) and p2c (Power of two choices). RoundRobin value is deprecated and supported for backward compatibility.</summary>
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 
@@ -400,6 +408,10 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesResponseForwardin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
 {
+    /// <summary>Domain defines the host to which the cookie will be sent. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#domaindomain-value</summary>
+    [JsonPropertyName("domain")]
+    public string? Domain { get; set; }
+
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
@@ -425,7 +437,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedServicesStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedServicesSticky
 {
@@ -482,11 +494,11 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecWeightedServicesSticky? Sticky { get; set; }
 
-    /// <summary>Strategy defines the load balancing strategy between the servers. RoundRobin is the only supported value at the moment.</summary>
+    /// <summary>Strategy defines the load balancing strategy between the servers. Supported values are: wrr (Weighed round-robin) and p2c (Power of two choices). RoundRobin value is deprecated and supported for backward compatibility.</summary>
     [JsonPropertyName("strategy")]
     public string? Strategy { get; set; }
 
@@ -499,6 +511,10 @@ public partial class V1alpha1TraefikServiceSpecWeightedServices
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
 {
+    /// <summary>Domain defines the host to which the cookie will be sent. More info: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#domaindomain-value</summary>
+    [JsonPropertyName("domain")]
+    public string? Domain { get; set; }
+
     /// <summary>HTTPOnly defines whether the cookie can be accessed by client-side APIs, such as JavaScript.</summary>
     [JsonPropertyName("httpOnly")]
     public bool? HttpOnly { get; set; }
@@ -524,7 +540,7 @@ public partial class V1alpha1TraefikServiceSpecWeightedStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
+/// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TraefikServiceSpecWeightedSticky
 {
@@ -541,7 +557,7 @@ public partial class V1alpha1TraefikServiceSpecWeighted
     [JsonPropertyName("services")]
     public IList<V1alpha1TraefikServiceSpecWeightedServices>? Services { get; set; }
 
-    /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
+    /// <summary>Sticky defines whether sticky sessions are enabled. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#stickiness-and-load-balancing</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1TraefikServiceSpecWeightedSticky? Sticky { get; set; }
 }
@@ -559,7 +575,7 @@ public partial class V1alpha1TraefikServiceSpec
     public V1alpha1TraefikServiceSpecWeighted? Weighted { get; set; }
 }
 
-/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
+/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TraefikServiceSpec>
@@ -585,7 +601,7 @@ public partial class V1alpha1TraefikService : IKubernetesObject<V1ObjectMeta>, I
     public V1alpha1TraefikServiceSpec Spec { get; set; }
 }
 
-/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.3/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
+/// <summary>TraefikService is the CRD implementation of a Traefik Service. TraefikService object allows to: - Apply weight to Services on load-balancing - Mirror traffic on services More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-traefikservice</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TraefikServiceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TraefikService>

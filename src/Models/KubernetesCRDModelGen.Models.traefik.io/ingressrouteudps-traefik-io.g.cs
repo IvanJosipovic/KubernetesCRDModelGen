@@ -50,7 +50,7 @@ public partial class V1alpha1IngressRouteUDPSpecRoutes
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteUDPSpec
 {
-    /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.3/routing/entrypoints/ Default: all.</summary>
+    /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/entrypoints/ Default: all.</summary>
     [JsonPropertyName("entryPoints")]
     public IList<string>? EntryPoints { get; set; }
 
