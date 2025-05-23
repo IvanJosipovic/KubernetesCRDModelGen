@@ -17,6 +17,44 @@ public partial class V1DatabaseSpecCluster
     public string? Name { get; set; }
 }
 
+/// <summary>ExtensionSpec configures an extension in a database</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DatabaseSpecExtensions
+{
+    /// <summary>Specifies whether an extension/schema should be present or absent in the database. If set to `present`, the extension/schema will be created if it does not exist. If set to `absent`, the extension/schema will be removed if it exists.</summary>
+    [JsonPropertyName("ensure")]
+    public string? Ensure { get; set; }
+
+    /// <summary>Name of the extension/schema</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>The name of the schema in which to install the extension's objects, in case the extension allows its contents to be relocated. If not specified (default), and the extension's control file does not specify a schema either, the current default object creation schema is used.</summary>
+    [JsonPropertyName("schema")]
+    public string? Schema { get; set; }
+
+    /// <summary>The version of the extension to install. If empty, the operator will install the default version (whatever is specified in the extension's control file)</summary>
+    [JsonPropertyName("version")]
+    public string? Version { get; set; }
+}
+
+/// <summary>SchemaSpec configures a schema in a database</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DatabaseSpecSchemas
+{
+    /// <summary>Specifies whether an extension/schema should be present or absent in the database. If set to `present`, the extension/schema will be created if it does not exist. If set to `absent`, the extension/schema will be removed if it exists.</summary>
+    [JsonPropertyName("ensure")]
+    public string? Ensure { get; set; }
+
+    /// <summary>Name of the extension/schema</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>The role name of the user who owns the schema inside PostgreSQL. It maps to the `AUTHORIZATION` parameter of `CREATE SCHEMA` and the `OWNER TO` command of `ALTER SCHEMA`.</summary>
+    [JsonPropertyName("owner")]
+    public string? Owner { get; set; }
+}
+
 /// <summary>Specification of the desired Database. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DatabaseSpec
@@ -52,6 +90,10 @@ public partial class V1DatabaseSpec
     /// <summary>Ensure the PostgreSQL database is `present` or `absent` - defaults to "present".</summary>
     [JsonPropertyName("ensure")]
     public string? Ensure { get; set; }
+
+    /// <summary>The list of extensions to be managed in the database</summary>
+    [JsonPropertyName("extensions")]
+    public IList<V1DatabaseSpecExtensions>? Extensions { get; set; }
 
     /// <summary>Maps to the `ICU_LOCALE` parameter of `CREATE DATABASE`. This setting cannot be changed. Specifies the ICU locale when the ICU provider is used. This option requires `localeProvider` to be set to `icu`. Available from PostgreSQL 15.</summary>
     [JsonPropertyName("icuLocale")]
@@ -89,6 +131,10 @@ public partial class V1DatabaseSpec
     [JsonPropertyName("owner")]
     public string Owner { get; set; }
 
+    /// <summary>The list of schemas to be managed in the database</summary>
+    [JsonPropertyName("schemas")]
+    public IList<V1DatabaseSpecSchemas>? Schemas { get; set; }
+
     /// <summary>Maps to the `TABLESPACE` parameter of `CREATE DATABASE`. Maps to the `SET TABLESPACE` command of `ALTER DATABASE`. The name of the tablespace (in PostgreSQL) that will be associated with the new database. This tablespace will be the default tablespace used for objects created in this database.</summary>
     [JsonPropertyName("tablespace")]
     public string? Tablespace { get; set; }
@@ -96,6 +142,40 @@ public partial class V1DatabaseSpec
     /// <summary>Maps to the `TEMPLATE` parameter of `CREATE DATABASE`. This setting cannot be changed. The name of the template from which to create this database.</summary>
     [JsonPropertyName("template")]
     public string? Template { get; set; }
+}
+
+/// <summary>DatabaseObjectStatus is the status of the managed database objects</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DatabaseStatusExtensions
+{
+    /// <summary>True of the object has been installed successfully in the database</summary>
+    [JsonPropertyName("applied")]
+    public bool Applied { get; set; }
+
+    /// <summary>Message is the object reconciliation message</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>The name of the object</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>DatabaseObjectStatus is the status of the managed database objects</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DatabaseStatusSchemas
+{
+    /// <summary>True of the object has been installed successfully in the database</summary>
+    [JsonPropertyName("applied")]
+    public bool Applied { get; set; }
+
+    /// <summary>Message is the object reconciliation message</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>The name of the object</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 }
 
 /// <summary>Most recently observed status of the Database. This data may not be up to date. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
@@ -106,6 +186,10 @@ public partial class V1DatabaseStatus
     [JsonPropertyName("applied")]
     public bool? Applied { get; set; }
 
+    /// <summary>Extensions is the status of the managed extensions</summary>
+    [JsonPropertyName("extensions")]
+    public IList<V1DatabaseStatusExtensions>? Extensions { get; set; }
+
     /// <summary>Message is the reconciliation output message</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
@@ -113,6 +197,10 @@ public partial class V1DatabaseStatus
     /// <summary>A sequence number representing the latest desired state that was synchronized</summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
+
+    /// <summary>Schemas is the status of the managed schemas</summary>
+    [JsonPropertyName("schemas")]
+    public IList<V1DatabaseStatusSchemas>? Schemas { get; set; }
 }
 
 /// <summary>Database is the Schema for the databases API</summary>
