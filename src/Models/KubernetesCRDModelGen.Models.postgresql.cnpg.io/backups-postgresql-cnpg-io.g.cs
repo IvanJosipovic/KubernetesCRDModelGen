@@ -417,7 +417,7 @@ public partial class V1BackupStatus
     public string? TablespaceMapFile { get; set; }
 }
 
-/// <summary>Backup is the Schema for the backups API</summary>
+/// <summary>A Backup resource is a request for a PostgreSQL backup by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1BackupSpec>, IStatus<V1BackupStatus>
@@ -447,7 +447,7 @@ public partial class V1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1BackupS
     public V1BackupStatus? Status { get; set; }
 }
 
-/// <summary>Backup is the Schema for the backups API</summary>
+/// <summary>A Backup resource is a request for a PostgreSQL backup by the user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1BackupList : IKubernetesObject<V1ListMeta>, IItems<V1Backup>

@@ -692,7 +692,7 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreData
     [JsonPropertyName("additionalCommandArgs")]
     public IList<string>? AdditionalCommandArgs { get; set; }
 
-    /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
+    /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2`, and `snappy`.</summary>
     [JsonPropertyName("compression")]
     public string? Compression { get; set; }
 
@@ -833,7 +833,7 @@ public partial class V1ClusterSpecBackupBarmanObjectStoreWal
     [JsonPropertyName("archiveAdditionalCommandArgs")]
     public IList<string>? ArchiveAdditionalCommandArgs { get; set; }
 
-    /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
+    /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2`, `lz4`, `snappy`, `xz`, and `zstd`.</summary>
     [JsonPropertyName("compression")]
     public string? Compression { get; set; }
 
@@ -1869,7 +1869,7 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreData
     [JsonPropertyName("additionalCommandArgs")]
     public IList<string>? AdditionalCommandArgs { get; set; }
 
-    /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
+    /// <summary>Compress a backup file (a tar file per tablespace) while streaming it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2`, and `snappy`.</summary>
     [JsonPropertyName("compression")]
     public string? Compression { get; set; }
 
@@ -2010,7 +2010,7 @@ public partial class V1ClusterSpecExternalClustersBarmanObjectStoreWal
     [JsonPropertyName("archiveAdditionalCommandArgs")]
     public IList<string>? ArchiveAdditionalCommandArgs { get; set; }
 
-    /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2` or `snappy`.</summary>
+    /// <summary>Compress a WAL file before sending it to the object store. Available options are empty string (no compression, default), `gzip`, `bzip2`, `lz4`, `snappy`, `xz`, and `zstd`.</summary>
     [JsonPropertyName("compression")]
     public string? Compression { get; set; }
 
@@ -2900,6 +2900,10 @@ public partial class V1ClusterSpecProbesReadiness
     [JsonPropertyName("initialDelaySeconds")]
     public int? InitialDelaySeconds { get; set; }
 
+    /// <summary>Lag limit. Used only for `streaming` strategy</summary>
+    [JsonPropertyName("maximumLag")]
+    public IntstrIntOrString? MaximumLag { get; set; }
+
     /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
     [JsonPropertyName("periodSeconds")]
     public int? PeriodSeconds { get; set; }
@@ -2915,6 +2919,10 @@ public partial class V1ClusterSpecProbesReadiness
     /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
+
+    /// <summary>The probe strategy</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary>The startup probe configuration</summary>
@@ -2929,6 +2937,10 @@ public partial class V1ClusterSpecProbesStartup
     [JsonPropertyName("initialDelaySeconds")]
     public int? InitialDelaySeconds { get; set; }
 
+    /// <summary>Lag limit. Used only for `streaming` strategy</summary>
+    [JsonPropertyName("maximumLag")]
+    public IntstrIntOrString? MaximumLag { get; set; }
+
     /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
     [JsonPropertyName("periodSeconds")]
     public int? PeriodSeconds { get; set; }
@@ -2944,6 +2956,10 @@ public partial class V1ClusterSpecProbesStartup
     /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
     [JsonPropertyName("timeoutSeconds")]
     public int? TimeoutSeconds { get; set; }
+
+    /// <summary>The probe strategy</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary>The configuration of the probes to be injected in the PostgreSQL Pods.</summary>
@@ -4166,6 +4182,10 @@ public partial class V1ClusterStatusConfigMapResourceVersion
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterStatusInstancesReportedState
 {
+    /// <summary>IP address of the instance</summary>
+    [JsonPropertyName("ip")]
+    public string? Ip { get; set; }
+
     /// <summary>indicates if an instance is the primary one</summary>
     [JsonPropertyName("isPrimary")]
     public bool IsPrimary { get; set; }
@@ -4203,6 +4223,19 @@ public partial class V1ClusterStatusManagedRolesStatus
     /// <summary>PasswordStatus gives the last transaction id and password secret version for each managed role</summary>
     [JsonPropertyName("passwordStatus")]
     public IDictionary<string, V1ClusterStatusManagedRolesStatusPasswordStatus>? PasswordStatus { get; set; }
+}
+
+/// <summary>PGDataImageInfo contains the details of the latest image that has run on the current data directory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterStatusPgDataImageInfo
+{
+    /// <summary>Image is the image name</summary>
+    [JsonPropertyName("image")]
+    public string Image { get; set; }
+
+    /// <summary>MajorVersion is the major version of the image</summary>
+    [JsonPropertyName("majorVersion")]
+    public int MajorVersion { get; set; }
 }
 
 /// <summary>PluginStatus is the status of a loaded plugin</summary>
@@ -4364,10 +4397,6 @@ public partial class V1ClusterStatus
     [JsonPropertyName("availableArchitectures")]
     public IList<V1ClusterStatusAvailableArchitectures>? AvailableArchitectures { get; set; }
 
-    /// <summary>AzurePVCUpdateEnabled shows if the PVC online upgrade is enabled for this cluster</summary>
-    [JsonPropertyName("azurePVCUpdateEnabled")]
-    public bool? AzurePVCUpdateEnabled { get; set; }
-
     /// <summary>The configuration for the CA and related certificates, initialized with defaults.</summary>
     [JsonPropertyName("certificates")]
     public V1ClusterStatusCertificates? Certificates { get; set; }
@@ -4475,6 +4504,10 @@ public partial class V1ClusterStatus
     /// <summary>OnlineUpdateEnabled shows if the online upgrade is enabled inside the cluster</summary>
     [JsonPropertyName("onlineUpdateEnabled")]
     public bool? OnlineUpdateEnabled { get; set; }
+
+    /// <summary>PGDataImageInfo contains the details of the latest image that has run on the current data directory.</summary>
+    [JsonPropertyName("pgDataImageInfo")]
+    public V1ClusterStatusPgDataImageInfo? PgDataImageInfo { get; set; }
 
     /// <summary>Current phase of the cluster</summary>
     [JsonPropertyName("phase")]
