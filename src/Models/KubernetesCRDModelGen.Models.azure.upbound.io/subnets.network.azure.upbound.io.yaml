@@ -116,13 +116,16 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   privateEndpointNetworkPolicies:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.
@@ -372,13 +375,16 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   privateEndpointNetworkPolicies:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.
@@ -644,8 +650,10 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   id:
                     description: The subnet ID.
@@ -654,6 +662,7 @@ spec:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Setting this to true will Enable the policy and setting this to false will Disable the policy. Defaults to true.
@@ -840,13 +849,16 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   privateEndpointNetworkPolicies:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Defaults to true.
@@ -1094,13 +1106,16 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   privateEndpointNetworkPolicies:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Defaults to true.
@@ -1364,8 +1379,10 @@ spec:
                       type: object
                     type: array
                   enforcePrivateLinkEndpointNetworkPolicies:
+                    description: '`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.'
                     type: boolean
                   enforcePrivateLinkServiceNetworkPolicies:
+                    description: '`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.'
                     type: boolean
                   id:
                     description: The subnet ID.
@@ -1374,6 +1391,7 @@ spec:
                     description: Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.
                     type: string
                   privateEndpointNetworkPoliciesEnabled:
+                    description: '`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.'
                     type: boolean
                   privateLinkServiceNetworkPoliciesEnabled:
                     description: Enable or Disable network policies for the private link service on the subnet. Defaults to true.
