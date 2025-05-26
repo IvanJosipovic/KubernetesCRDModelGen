@@ -162,11 +162,11 @@ public partial class V1beta1SubnetSpecForProvider
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetSpecForProviderDelegation>? Delegation { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("enforcePrivateLinkEndpointNetworkPolicies")]
     public bool? EnforcePrivateLinkEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.</summary>
     [JsonPropertyName("enforcePrivateLinkServiceNetworkPolicies")]
     public bool? EnforcePrivateLinkServiceNetworkPolicies { get; set; }
 
@@ -174,7 +174,7 @@ public partial class V1beta1SubnetSpecForProvider
     [JsonPropertyName("privateEndpointNetworkPolicies")]
     public string? PrivateEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 
@@ -257,11 +257,11 @@ public partial class V1beta1SubnetSpecInitProvider
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetSpecInitProviderDelegation>? Delegation { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("enforcePrivateLinkEndpointNetworkPolicies")]
     public bool? EnforcePrivateLinkEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.</summary>
     [JsonPropertyName("enforcePrivateLinkServiceNetworkPolicies")]
     public bool? EnforcePrivateLinkServiceNetworkPolicies { get; set; }
 
@@ -269,7 +269,7 @@ public partial class V1beta1SubnetSpecInitProvider
     [JsonPropertyName("privateEndpointNetworkPolicies")]
     public string? PrivateEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 
@@ -460,11 +460,11 @@ public partial class V1beta1SubnetStatusAtProvider
     [JsonPropertyName("delegation")]
     public IList<V1beta1SubnetStatusAtProviderDelegation>? Delegation { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkEndpointNetworkPolicies` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with privateEndpointNetworkPoliciesEnabled, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("enforcePrivateLinkEndpointNetworkPolicies")]
     public bool? EnforcePrivateLinkEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`enforcePrivateLinkServiceNetworkPolicies` will be removed in favour of the property `privateLinkServiceNetworkPoliciesEnabled` in version 2.0 of the provider. Conflicts with privateLinkServiceNetworkPoliciesEnabled.</summary>
     [JsonPropertyName("enforcePrivateLinkServiceNetworkPolicies")]
     public bool? EnforcePrivateLinkServiceNetworkPolicies { get; set; }
 
@@ -476,7 +476,7 @@ public partial class V1beta1SubnetStatusAtProvider
     [JsonPropertyName("privateEndpointNetworkPolicies")]
     public string? PrivateEndpointNetworkPolicies { get; set; }
 
-    /// <summary></summary>
+    /// <summary>`privateEndpointNetworkPoliciesEnabled` will be removed in favour of the property `privateEndpointNetworkPolicies` in version 2.0 of the provider. Conflicts with enforcePrivateLinkEndpointNetworkPolicies, privateEndpointNetworkPolicies.</summary>
     [JsonPropertyName("privateEndpointNetworkPoliciesEnabled")]
     public bool? PrivateEndpointNetworkPoliciesEnabled { get; set; }
 
