@@ -21,7 +21,7 @@ public partial class V1KustomizationSpecCommonMetadata
     public IDictionary<string, string>? Labels { get; set; }
 }
 
-/// <summary>The secret name containing the private OpenPGP keys used for decryption.</summary>
+/// <summary>The secret name containing the private OpenPGP keys used for decryption. A static credential for a cloud provider defined inside the Secret takes priority to secret-less authentication with the ServiceAccountName field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1KustomizationSpecDecryptionSecretRef
 {
@@ -38,9 +38,13 @@ public partial class V1KustomizationSpecDecryption
     [JsonPropertyName("provider")]
     public string Provider { get; set; }
 
-    /// <summary>The secret name containing the private OpenPGP keys used for decryption.</summary>
+    /// <summary>The secret name containing the private OpenPGP keys used for decryption. A static credential for a cloud provider defined inside the Secret takes priority to secret-less authentication with the ServiceAccountName field.</summary>
     [JsonPropertyName("secretRef")]
     public V1KustomizationSpecDecryptionSecretRef? SecretRef { get; set; }
+
+    /// <summary>ServiceAccountName is the name of the service account used to authenticate with KMS services from cloud providers. If a static credential for a given cloud provider is defined inside the Secret referenced by SecretRef, that static credential takes priority.</summary>
+    [JsonPropertyName("serviceAccountName")]
+    public string? ServiceAccountName { get; set; }
 }
 
 /// <summary>NamespacedObjectReference contains enough information to locate the referenced Kubernetes resource object in any namespace.</summary>
@@ -258,7 +262,7 @@ public partial class V1KustomizationSpec
     [JsonPropertyName("decryption")]
     public V1KustomizationSpecDecryption? Decryption { get; set; }
 
-    /// <summary>DeletionPolicy can be used to control garbage collection when this Kustomization is deleted. Valid values are ('MirrorPrune', 'Delete', 'Orphan'). 'MirrorPrune' mirrors the Prune field (orphan if false, delete if true). Defaults to 'MirrorPrune'.</summary>
+    /// <summary>DeletionPolicy can be used to control garbage collection when this Kustomization is deleted. Valid values are ('MirrorPrune', 'Delete', 'WaitForTermination', 'Orphan'). 'MirrorPrune' mirrors the Prune field (orphan if false, delete if true). Defaults to 'MirrorPrune'.</summary>
     [JsonPropertyName("deletionPolicy")]
     public string? DeletionPolicy { get; set; }
 

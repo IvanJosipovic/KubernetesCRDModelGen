@@ -82,6 +82,10 @@ public partial class V1beta2ImagePolicySpecPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpec
 {
+    /// <summary>DigestReflectionPolicy governs the setting of the `.status.latestRef.digest` field.  Never: The digest field will always be set to the empty string.  IfNotPresent: The digest field will be set to the digest of the elected latest image if the field is empty and the image did not change.  Always: The digest field will always be set to the digest of the elected latest image.  Default: Never.</summary>
+    [JsonPropertyName("digestReflectionPolicy")]
+    public string? DigestReflectionPolicy { get; set; }
+
     /// <summary>FilterTags enables filtering for only a subset of tags based on a set of rules. If no rules are provided, all the tags from the repository will be ordered and compared.</summary>
     [JsonPropertyName("filterTags")]
     public V1beta2ImagePolicySpecFilterTags? FilterTags { get; set; }
@@ -89,6 +93,10 @@ public partial class V1beta2ImagePolicySpec
     /// <summary>ImageRepositoryRef points at the object specifying the image being scanned</summary>
     [JsonPropertyName("imageRepositoryRef")]
     public V1beta2ImagePolicySpecImageRepositoryRef ImageRepositoryRef { get; set; }
+
+    /// <summary>Interval is the length of time to wait between refreshing the digest of the latest tag when the reflection policy is set to "Always".  Defaults to 10m.</summary>
+    [JsonPropertyName("interval")]
+    public string? Interval { get; set; }
 
     /// <summary>Policy gives the particulars of the policy to be followed in selecting the most recent image</summary>
     [JsonPropertyName("policy")]
@@ -124,6 +132,40 @@ public partial class V1beta2ImagePolicyStatusConditions
     public string Type { get; set; }
 }
 
+/// <summary>LatestRef gives the first in the list of images scanned by the image repository, when filtered and ordered according to the policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2ImagePolicyStatusLatestRef
+{
+    /// <summary>Digest is the image's digest.</summary>
+    [JsonPropertyName("digest")]
+    public string? Digest { get; set; }
+
+    /// <summary>Name is the bare image's name.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Tag is the image's tag.</summary>
+    [JsonPropertyName("tag")]
+    public string Tag { get; set; }
+}
+
+/// <summary>ObservedPreviousRef is the observed previous LatestRef. It is used to keep track of the previous and current images.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2ImagePolicyStatusObservedPreviousRef
+{
+    /// <summary>Digest is the image's digest.</summary>
+    [JsonPropertyName("digest")]
+    public string? Digest { get; set; }
+
+    /// <summary>Name is the bare image's name.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Tag is the image's tag.</summary>
+    [JsonPropertyName("tag")]
+    public string Tag { get; set; }
+}
+
 /// <summary>ImagePolicyStatus defines the observed state of ImagePolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicyStatus
@@ -132,17 +174,25 @@ public partial class V1beta2ImagePolicyStatus
     [JsonPropertyName("conditions")]
     public IList<V1beta2ImagePolicyStatusConditions>? Conditions { get; set; }
 
-    /// <summary>LatestImage gives the first in the list of images scanned by the image repository, when filtered and ordered according to the policy.</summary>
+    /// <summary>LatestImage gives the first in the list of images scanned by the image repository, when filtered and ordered according to the policy.  Deprecated: Replaced by the composite "latestRef" field.</summary>
     [JsonPropertyName("latestImage")]
     public string? LatestImage { get; set; }
+
+    /// <summary>LatestRef gives the first in the list of images scanned by the image repository, when filtered and ordered according to the policy.</summary>
+    [JsonPropertyName("latestRef")]
+    public V1beta2ImagePolicyStatusLatestRef? LatestRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 
-    /// <summary>ObservedPreviousImage is the observed previous LatestImage. It is used to keep track of the previous and current images.</summary>
+    /// <summary>ObservedPreviousImage is the observed previous LatestImage. It is used to keep track of the previous and current images.  Deprecated: Replaced by the composite "observedPreviousRef" field.</summary>
     [JsonPropertyName("observedPreviousImage")]
     public string? ObservedPreviousImage { get; set; }
+
+    /// <summary>ObservedPreviousRef is the observed previous LatestRef. It is used to keep track of the previous and current images.</summary>
+    [JsonPropertyName("observedPreviousRef")]
+    public V1beta2ImagePolicyStatusObservedPreviousRef? ObservedPreviousRef { get; set; }
 }
 
 /// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>

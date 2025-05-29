@@ -42,6 +42,10 @@ public partial class V1beta3ProviderSpec
     [JsonPropertyName("channel")]
     public string? Channel { get; set; }
 
+    /// <summary>CommitStatusExpr is a CEL expression that evaluates to a string value that can be used to generate a custom commit status message for use with eligible Provider types (github, gitlab, gitea, bitbucketserver, bitbucket, azuredevops). Supported variables are: event, provider, and alert.</summary>
+    [JsonPropertyName("commitStatusExpr")]
+    public string? CommitStatusExpr { get; set; }
+
     /// <summary>Interval at which to reconcile the Provider with its Secret references. Deprecated and not used in v1beta3.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
@@ -53,6 +57,10 @@ public partial class V1beta3ProviderSpec
     /// <summary>SecretRef specifies the Secret containing the authentication credentials for this Provider.</summary>
     [JsonPropertyName("secretRef")]
     public V1beta3ProviderSpecSecretRef? SecretRef { get; set; }
+
+    /// <summary>ServiceAccountName is the name of the service account used to authenticate with services from cloud providers. An error is thrown if a static credential is also defined inside the Secret referenced by the SecretRef.</summary>
+    [JsonPropertyName("serviceAccountName")]
+    public string? ServiceAccountName { get; set; }
 
     /// <summary>Suspend tells the controller to suspend subsequent events handling for this Provider.</summary>
     [JsonPropertyName("suspend")]
