@@ -135,6 +135,10 @@ public partial class V1GitRepositorySpec
     [JsonPropertyName("secretRef")]
     public V1GitRepositorySpecSecretRef? SecretRef { get; set; }
 
+    /// <summary>SparseCheckout specifies a list of directories to checkout when cloning the repository. If specified, only these directories are included in the Artifact produced for this GitRepository.</summary>
+    [JsonPropertyName("sparseCheckout")]
+    public IList<string>? SparseCheckout { get; set; }
+
     /// <summary>Suspend tells the controller to suspend the reconciliation of this GitRepository.</summary>
     [JsonPropertyName("suspend")]
     public bool? Suspend { get; set; }
@@ -308,6 +312,10 @@ public partial class V1GitRepositoryStatus
     /// <summary>ObservedRecurseSubmodules is the observed resource submodules configuration used to produce the current Artifact.</summary>
     [JsonPropertyName("observedRecurseSubmodules")]
     public bool? ObservedRecurseSubmodules { get; set; }
+
+    /// <summary>ObservedSparseCheckout is the observed list of directories used to produce the current Artifact.</summary>
+    [JsonPropertyName("observedSparseCheckout")]
+    public IList<string>? ObservedSparseCheckout { get; set; }
 
     /// <summary>SourceVerificationMode is the last used verification mode indicating which Git object(s) have been verified.</summary>
     [JsonPropertyName("sourceVerificationMode")]

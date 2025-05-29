@@ -254,6 +254,10 @@ public partial class V1beta2ImageUpdateAutomationStatusConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageUpdateAutomationStatusObservedPolicies
 {
+    /// <summary>Digest is the image's digest.</summary>
+    [JsonPropertyName("digest")]
+    public string? Digest { get; set; }
+
     /// <summary>Name is the bare image's name.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }

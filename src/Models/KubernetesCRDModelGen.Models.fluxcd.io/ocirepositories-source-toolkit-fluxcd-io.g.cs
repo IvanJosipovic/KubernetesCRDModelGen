@@ -8,9 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
-/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
+/// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecCertSecretRef
+public partial class V1OCIRepositorySpecCertSecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -19,7 +19,7 @@ public partial class V1beta2OCIRepositorySpecCertSecretRef
 
 /// <summary>LayerSelector specifies which layer should be extracted from the OCI artifact. When not specified, the first layer found in the artifact is selected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecLayerSelector
+public partial class V1OCIRepositorySpecLayerSelector
 {
     /// <summary>MediaType specifies the OCI media type of the layer which should be extracted from the OCI Artifact. The first layer matching this type is selected.</summary>
     [JsonPropertyName("mediaType")]
@@ -32,7 +32,7 @@ public partial class V1beta2OCIRepositorySpecLayerSelector
 
 /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecProxySecretRef
+public partial class V1OCIRepositorySpecProxySecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -41,7 +41,7 @@ public partial class V1beta2OCIRepositorySpecProxySecretRef
 
 /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecRef
+public partial class V1OCIRepositorySpecRef
 {
     /// <summary>Digest is the image digest to pull, takes precedence over SemVer. The value should be in the format 'sha256:&lt;HASH&gt;'.</summary>
     [JsonPropertyName("digest")]
@@ -62,7 +62,7 @@ public partial class V1beta2OCIRepositorySpecRef
 
 /// <summary>SecretRef contains the secret name containing the registry login credentials to resolve image metadata. The secret must be of type kubernetes.io/dockerconfigjson.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecSecretRef
+public partial class V1OCIRepositorySpecSecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -71,7 +71,7 @@ public partial class V1beta2OCIRepositorySpecSecretRef
 
 /// <summary>OIDCIdentityMatch specifies options for verifying the certificate identity, i.e. the issuer and the subject of the certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity
+public partial class V1OCIRepositorySpecVerifyMatchOIDCIdentity
 {
     /// <summary>Issuer specifies the regex pattern to match against to verify the OIDC issuer in the Fulcio certificate. The pattern must be a valid Go regular expression.</summary>
     [JsonPropertyName("issuer")]
@@ -84,7 +84,7 @@ public partial class V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity
 
 /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecVerifySecretRef
+public partial class V1OCIRepositorySpecVerifySecretRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -93,11 +93,11 @@ public partial class V1beta2OCIRepositorySpecVerifySecretRef
 
 /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpecVerify
+public partial class V1OCIRepositorySpecVerify
 {
     /// <summary>MatchOIDCIdentity specifies the identity matching criteria to use while verifying an OCI artifact which was signed using Cosign keyless signing. The artifact's identity is deemed to be verified if any of the specified matchers match against the identity.</summary>
     [JsonPropertyName("matchOIDCIdentity")]
-    public IList<V1beta2OCIRepositorySpecVerifyMatchOIDCIdentity>? MatchOIDCIdentity { get; set; }
+    public IList<V1OCIRepositorySpecVerifyMatchOIDCIdentity>? MatchOIDCIdentity { get; set; }
 
     /// <summary>Provider specifies the technology used to sign the OCI Artifact.</summary>
     [JsonPropertyName("provider")]
@@ -105,16 +105,16 @@ public partial class V1beta2OCIRepositorySpecVerify
 
     /// <summary>SecretRef specifies the Kubernetes Secret containing the trusted public keys.</summary>
     [JsonPropertyName("secretRef")]
-    public V1beta2OCIRepositorySpecVerifySecretRef? SecretRef { get; set; }
+    public V1OCIRepositorySpecVerifySecretRef? SecretRef { get; set; }
 }
 
 /// <summary>OCIRepositorySpec defines the desired state of OCIRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositorySpec
+public partial class V1OCIRepositorySpec
 {
-    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  Note: Support for the `caFile`, `certFile` and `keyFile` keys have been deprecated.</summary>
+    /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.</summary>
     [JsonPropertyName("certSecretRef")]
-    public V1beta2OCIRepositorySpecCertSecretRef? CertSecretRef { get; set; }
+    public V1OCIRepositorySpecCertSecretRef? CertSecretRef { get; set; }
 
     /// <summary>Ignore overrides the set of excluded patterns in the .sourceignore format (which is the same as .gitignore). If not provided, a default will be used, consult the documentation for your version to find out what those are.</summary>
     [JsonPropertyName("ignore")]
@@ -130,7 +130,7 @@ public partial class V1beta2OCIRepositorySpec
 
     /// <summary>LayerSelector specifies which layer should be extracted from the OCI artifact. When not specified, the first layer found in the artifact is selected.</summary>
     [JsonPropertyName("layerSelector")]
-    public V1beta2OCIRepositorySpecLayerSelector? LayerSelector { get; set; }
+    public V1OCIRepositorySpecLayerSelector? LayerSelector { get; set; }
 
     /// <summary>The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'. When not specified, defaults to 'generic'.</summary>
     [JsonPropertyName("provider")]
@@ -138,15 +138,15 @@ public partial class V1beta2OCIRepositorySpec
 
     /// <summary>ProxySecretRef specifies the Secret containing the proxy configuration to use while communicating with the container registry.</summary>
     [JsonPropertyName("proxySecretRef")]
-    public V1beta2OCIRepositorySpecProxySecretRef? ProxySecretRef { get; set; }
+    public V1OCIRepositorySpecProxySecretRef? ProxySecretRef { get; set; }
 
     /// <summary>The OCI reference to pull and monitor for changes, defaults to the latest tag.</summary>
     [JsonPropertyName("ref")]
-    public V1beta2OCIRepositorySpecRef? Ref { get; set; }
+    public V1OCIRepositorySpecRef? Ref { get; set; }
 
     /// <summary>SecretRef contains the secret name containing the registry login credentials to resolve image metadata. The secret must be of type kubernetes.io/dockerconfigjson.</summary>
     [JsonPropertyName("secretRef")]
-    public V1beta2OCIRepositorySpecSecretRef? SecretRef { get; set; }
+    public V1OCIRepositorySpecSecretRef? SecretRef { get; set; }
 
     /// <summary>ServiceAccountName is the name of the Kubernetes ServiceAccount used to authenticate the image pull if the service account has attached pull secrets. For more information: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#add-imagepullsecrets-to-a-service-account</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -166,12 +166,12 @@ public partial class V1beta2OCIRepositorySpec
 
     /// <summary>Verify contains the secret name containing the trusted public keys used to verify the signature and specifies which provider to use to check whether OCI image is authentic.</summary>
     [JsonPropertyName("verify")]
-    public V1beta2OCIRepositorySpecVerify? Verify { get; set; }
+    public V1OCIRepositorySpecVerify? Verify { get; set; }
 }
 
 /// <summary>Artifact represents the output of the last successful OCI Repository sync.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositoryStatusArtifact
+public partial class V1OCIRepositoryStatusArtifact
 {
     /// <summary>Digest is the digest of the file in the form of '&lt;algorithm&gt;:&lt;checksum&gt;'.</summary>
     [JsonPropertyName("digest")]
@@ -204,7 +204,7 @@ public partial class V1beta2OCIRepositoryStatusArtifact
 
 /// <summary>Condition contains details for one aspect of the current state of this API Resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositoryStatusConditions
+public partial class V1OCIRepositoryStatusConditions
 {
     /// <summary>lastTransitionTime is the last time the condition transitioned from one status to another. This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -233,7 +233,7 @@ public partial class V1beta2OCIRepositoryStatusConditions
 
 /// <summary>ObservedLayerSelector is the observed layer selector used for constructing the source artifact.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositoryStatusObservedLayerSelector
+public partial class V1OCIRepositoryStatusObservedLayerSelector
 {
     /// <summary>MediaType specifies the OCI media type of the layer which should be extracted from the OCI Artifact. The first layer matching this type is selected.</summary>
     [JsonPropertyName("mediaType")]
@@ -246,19 +246,15 @@ public partial class V1beta2OCIRepositoryStatusObservedLayerSelector
 
 /// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta2OCIRepositoryStatus
+public partial class V1OCIRepositoryStatus
 {
     /// <summary>Artifact represents the output of the last successful OCI Repository sync.</summary>
     [JsonPropertyName("artifact")]
-    public V1beta2OCIRepositoryStatusArtifact? Artifact { get; set; }
+    public V1OCIRepositoryStatusArtifact? Artifact { get; set; }
 
     /// <summary>Conditions holds the conditions for the OCIRepository.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta2OCIRepositoryStatusConditions>? Conditions { get; set; }
-
-    /// <summary>ContentConfigChecksum is a checksum of all the configurations related to the content of the source artifact:  - .spec.ignore  - .spec.layerSelector observed in .status.observedGeneration version of the object. This can be used to determine if the content configuration has changed and the artifact needs to be rebuilt. It has the format of `&lt;algo&gt;:&lt;checksum&gt;`, for example: `sha256:&lt;checksum&gt;`.  Deprecated: Replaced with explicit fields for observed artifact content config in the status.</summary>
-    [JsonPropertyName("contentConfigChecksum")]
-    public string? ContentConfigChecksum { get; set; }
+    public IList<V1OCIRepositoryStatusConditions>? Conditions { get; set; }
 
     /// <summary>LastHandledReconcileAt holds the value of the most recent reconcile request value, so a change of the annotation value can be detected.</summary>
     [JsonPropertyName("lastHandledReconcileAt")]
@@ -274,7 +270,7 @@ public partial class V1beta2OCIRepositoryStatus
 
     /// <summary>ObservedLayerSelector is the observed layer selector used for constructing the source artifact.</summary>
     [JsonPropertyName("observedLayerSelector")]
-    public V1beta2OCIRepositoryStatusObservedLayerSelector? ObservedLayerSelector { get; set; }
+    public V1OCIRepositoryStatusObservedLayerSelector? ObservedLayerSelector { get; set; }
 
     /// <summary>URL is the download link for the artifact output of the last OCI Repository sync.</summary>
     [JsonPropertyName("url")]
@@ -284,9 +280,9 @@ public partial class V1beta2OCIRepositoryStatus
 /// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2OCIRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta2OCIRepositorySpec>, IStatus<V1beta2OCIRepositoryStatus>
+public partial class V1OCIRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1OCIRepositorySpec>, IStatus<V1OCIRepositoryStatus>
 {
-    public const string KubeApiVersion = "v1beta2";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "OCIRepository";
     public const string KubeGroup = "source.toolkit.fluxcd.io";
     public const string KubePluralName = "ocirepositories";
@@ -304,19 +300,19 @@ public partial class V1beta2OCIRepository : IKubernetesObject<V1ObjectMeta>, ISp
 
     /// <summary>OCIRepositorySpec defines the desired state of OCIRepository</summary>
     [JsonPropertyName("spec")]
-    public V1beta2OCIRepositorySpec? Spec { get; set; }
+    public V1OCIRepositorySpec? Spec { get; set; }
 
     /// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>
     [JsonPropertyName("status")]
-    public V1beta2OCIRepositoryStatus? Status { get; set; }
+    public V1OCIRepositoryStatus? Status { get; set; }
 }
 
 /// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta2OCIRepository>
+public partial class V1OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1OCIRepository>
 {
-    public const string KubeApiVersion = "v1beta2";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "OCIRepositoryList";
     public const string KubeGroup = "source.toolkit.fluxcd.io";
     public const string KubePluralName = "ocirepositories";
@@ -334,5 +330,5 @@ public partial class V1beta2OCIRepositoryList : IKubernetesObject<V1ListMeta>, I
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta2OCIRepository> Items { get; set; }
+    public IList<V1OCIRepository> Items { get; set; }
 }
