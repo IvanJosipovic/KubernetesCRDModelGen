@@ -7,10 +7,10 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+namespace KubernetesCRDModelGen.Models.protection.crossplane.io;
 /// <summary>Reference to the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecByResourceRef
+public partial class V1beta1UsageSpecByResourceRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
@@ -19,7 +19,7 @@ public partial class V1alpha1UsageSpecByResourceRef
 
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecByResourceSelector
+public partial class V1beta1UsageSpecByResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -32,7 +32,7 @@ public partial class V1alpha1UsageSpecByResourceSelector
 
 /// <summary>By is the resource that is "using the other resource".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecBy
+public partial class V1beta1UsageSpecBy
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -44,25 +44,29 @@ public partial class V1alpha1UsageSpecBy
 
     /// <summary>Reference to the resource.</summary>
     [JsonPropertyName("resourceRef")]
-    public V1alpha1UsageSpecByResourceRef? ResourceRef { get; set; }
+    public V1beta1UsageSpecByResourceRef? ResourceRef { get; set; }
 
     /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
     [JsonPropertyName("resourceSelector")]
-    public V1alpha1UsageSpecByResourceSelector? ResourceSelector { get; set; }
+    public V1beta1UsageSpecByResourceSelector? ResourceSelector { get; set; }
 }
 
 /// <summary>Reference to the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecOfResourceRef
+public partial class V1beta1UsageSpecOfResourceRef
 {
     /// <summary>Name of the referent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
+
+    /// <summary>Namespace of the referent.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecOfResourceSelector
+public partial class V1beta1UsageSpecOfResourceSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -71,11 +75,15 @@ public partial class V1alpha1UsageSpecOfResourceSelector
     /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
     [JsonPropertyName("matchLabels")]
     public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace ensures an object in the supplied namespace is selected. Omit namespace to only match resources in the Usage's namespace.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary>Of is the resource that is "being used".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpecOf
+public partial class V1beta1UsageSpecOf
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -87,24 +95,24 @@ public partial class V1alpha1UsageSpecOf
 
     /// <summary>Reference to the resource.</summary>
     [JsonPropertyName("resourceRef")]
-    public V1alpha1UsageSpecOfResourceRef? ResourceRef { get; set; }
+    public V1beta1UsageSpecOfResourceRef? ResourceRef { get; set; }
 
     /// <summary>Selector to the resource. This field will be ignored if ResourceRef is set.</summary>
     [JsonPropertyName("resourceSelector")]
-    public V1alpha1UsageSpecOfResourceSelector? ResourceSelector { get; set; }
+    public V1beta1UsageSpecOfResourceSelector? ResourceSelector { get; set; }
 }
 
 /// <summary>UsageSpec defines the desired state of Usage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageSpec
+public partial class V1beta1UsageSpec
 {
     /// <summary>By is the resource that is "using the other resource".</summary>
     [JsonPropertyName("by")]
-    public V1alpha1UsageSpecBy? By { get; set; }
+    public V1beta1UsageSpecBy? By { get; set; }
 
     /// <summary>Of is the resource that is "being used".</summary>
     [JsonPropertyName("of")]
-    public V1alpha1UsageSpecOf Of { get; set; }
+    public V1beta1UsageSpecOf Of { get; set; }
 
     /// <summary>Reason is the reason for blocking deletion of the resource.</summary>
     [JsonPropertyName("reason")]
@@ -117,7 +125,7 @@ public partial class V1alpha1UsageSpec
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageStatusConditions
+public partial class V1beta1UsageStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -146,21 +154,21 @@ public partial class V1alpha1UsageStatusConditions
 
 /// <summary>UsageStatus defines the observed state of Usage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1UsageStatus
+public partial class V1beta1UsageStatus
 {
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1UsageStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1UsageStatusConditions>? Conditions { get; set; }
 }
 
-/// <summary>A Usage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about Usages](https://docs.crossplane.io/latest/concepts/usages).  Deprecated: Use protection.crossplane.io Usage or ClusterUsage.</summary>
+/// <summary>A Usage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1UsageSpec>, IStatus<V1alpha1UsageStatus>
+public partial class V1beta1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1UsageSpec>, IStatus<V1beta1UsageStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "Usage";
-    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubeGroup = "protection.crossplane.io";
     public const string KubePluralName = "usages";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
@@ -176,21 +184,21 @@ public partial class V1alpha1Usage : IKubernetesObject<V1ObjectMeta>, ISpec<V1al
 
     /// <summary>UsageSpec defines the desired state of Usage.</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1UsageSpec Spec { get; set; }
+    public V1beta1UsageSpec Spec { get; set; }
 
     /// <summary>UsageStatus defines the observed state of Usage.</summary>
     [JsonPropertyName("status")]
-    public V1alpha1UsageStatus? Status { get; set; }
+    public V1beta1UsageStatus? Status { get; set; }
 }
 
-/// <summary>A Usage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about Usages](https://docs.crossplane.io/latest/concepts/usages).  Deprecated: Use protection.crossplane.io Usage or ClusterUsage.</summary>
+/// <summary>A Usage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1UsageList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Usage>
+public partial class V1beta1UsageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Usage>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "UsageList";
-    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubeGroup = "protection.crossplane.io";
     public const string KubePluralName = "usages";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
@@ -206,5 +214,5 @@ public partial class V1alpha1UsageList : IKubernetesObject<V1ListMeta>, IItems<V
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1Usage> Items { get; set; }
+    public IList<V1beta1Usage> Items { get; set; }
 }

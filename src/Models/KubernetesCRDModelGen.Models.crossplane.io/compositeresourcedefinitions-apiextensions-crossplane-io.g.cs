@@ -276,6 +276,10 @@ public partial class V1CompositeResourceDefinitionSpec
     [JsonPropertyName("names")]
     public V1CompositeResourceDefinitionSpecNames Names { get; set; }
 
+    /// <summary>Scope of the defined composite resource. Namespaced composite resources are scoped to a single namespace. Cluster scoped composite resource exist outside the scope of any namespace. Neither can be claimed. Legacy cluster scoped composite resources are cluster scoped resources that can be claimed.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
+
     /// <summary>Versions is the list of all API versions of the defined composite resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.</summary>
     [JsonPropertyName("versions")]
     public IList<V1CompositeResourceDefinitionSpecVersions> Versions { get; set; }

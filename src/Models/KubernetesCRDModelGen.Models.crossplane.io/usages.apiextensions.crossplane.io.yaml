@@ -25,6 +25,8 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: AGE
       type: date
+    deprecated: true
+    deprecationWarning: apiextensions.crossplane.io Usage is deprecated; migrate to protection.crossplane.io Usage or ClusterUsage
     name: v1alpha1
     schema:
       openAPIV3Schema:
@@ -39,7 +41,10 @@ spec:
 
           Read the Crossplane documentation for
 
-          [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).
+          [more information about Usages](https://docs.crossplane.io/latest/concepts/usages).
+
+
+          Deprecated: Use protection.crossplane.io Usage or ClusterUsage.
         properties:
           apiVersion:
             description: >-
@@ -236,6 +241,8 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: AGE
       type: date
+    deprecated: true
+    deprecationWarning: apiextensions.crossplane.io Usage is deprecated; migrate to protection.crossplane.io Usage or ClusterUsage
     name: v1beta1
     schema:
       openAPIV3Schema:
@@ -250,7 +257,10 @@ spec:
 
           Read the Crossplane documentation for
 
-          [more information about Compositions](https://docs.crossplane.io/latest/concepts/usages).
+          [more information about Usages](https://docs.crossplane.io/latest/concepts/usages).
+
+
+          Deprecated: Use protection.crossplane.io Usage or ClusterUsage.
         properties:
           apiVersion:
             description: >-
