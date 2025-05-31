@@ -606,9 +606,9 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("policySyncPathPrefix")]
     public string? PolicySyncPathPrefix { get; set; }
 
-    /// <summary>ProgramRoutes specifies whether Felix should program IPIP or unencapsulated routes instead of BIRD. Felix always programs VXLAN routes. [Default: Disabled]</summary>
-    [JsonPropertyName("programRoutes")]
-    public string? ProgramRoutes { get; set; }
+    /// <summary>ProgramClusterRoutes specifies whether Felix should program IPIP routes instead of BIRD. Felix always programs VXLAN routes. [Default: Disabled]</summary>
+    [JsonPropertyName("programClusterRoutes")]
+    public string? ProgramClusterRoutes { get; set; }
 
     /// <summary>PrometheusGoMetricsEnabled disables Go runtime metrics collection, which the Prometheus client does by default, when set to false. This reduces the number of metrics reported, reducing Prometheus load. [Default: true]</summary>
     [JsonPropertyName("prometheusGoMetricsEnabled")]
