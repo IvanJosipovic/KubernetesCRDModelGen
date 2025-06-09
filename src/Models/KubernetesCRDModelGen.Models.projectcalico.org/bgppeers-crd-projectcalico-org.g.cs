@@ -39,6 +39,10 @@ public partial class V1BGPPeerSpecPassword
 public partial class V1BGPPeerSpec
 {
     /// <summary></summary>
+    [JsonPropertyName("NextHopMode")]
+    public string? NextHopMode { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("asNumber")]
     public int? AsNumber { get; set; }
 
