@@ -154,15 +154,15 @@ public partial class V1IssuerSpecAcmeSolversDns01AzureDNSClientSecretSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerSpecAcmeSolversDns01AzureDNSManagedIdentity
 {
-    /// <summary>client ID of the managed identity, can not be used at the same time as resourceID</summary>
+    /// <summary>client ID of the managed identity, cannot be used at the same time as resourceID</summary>
     [JsonPropertyName("clientID")]
     public string? ClientID { get; set; }
 
-    /// <summary>resource ID of the managed identity, can not be used at the same time as clientID Cannot be used for Azure Managed Service Identity</summary>
+    /// <summary>resource ID of the managed identity, cannot be used at the same time as clientID Cannot be used for Azure Managed Service Identity</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>tenant ID of the managed identity, can not be used at the same time as resourceID</summary>
+    /// <summary>tenant ID of the managed identity, cannot be used at the same time as resourceID</summary>
     [JsonPropertyName("tenantID")]
     public string? TenantID { get; set; }
 }
@@ -427,7 +427,7 @@ public partial class V1IssuerSpecAcmeSolversDns01Route53
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerSpecAcmeSolversDns01Webhook
 {
-    /// <summary>Additional configuration that should be passed to the webhook apiserver when challenges are processed. This can contain arbitrary JSON data. Secret values should not be specified in this stanza. If secret values are needed (e.g. credentials for a DNS service), you should use a SecretKeySelector to reference a Secret resource. For details on the schema of this field, consult the webhook provider implementation's documentation.</summary>
+    /// <summary>Additional configuration that should be passed to the webhook apiserver when challenges are processed. This can contain arbitrary JSON data. Secret values should not be specified in this stanza. If secret values are needed (e.g., credentials for a DNS service), you should use a SecretKeySelector to reference a Secret resource. For details on the schema of this field, consult the webhook provider implementation's documentation.</summary>
     [JsonPropertyName("config")]
     public JsonNode? Config { get; set; }
 
@@ -435,7 +435,7 @@ public partial class V1IssuerSpecAcmeSolversDns01Webhook
     [JsonPropertyName("groupName")]
     public string GroupName { get; set; }
 
-    /// <summary>The name of the solver to use, as defined in the webhook provider implementation. This will typically be the name of the provider, e.g. 'cloudflare'.</summary>
+    /// <summary>The name of the solver to use, as defined in the webhook provider implementation. This will typically be the name of the provider, e.g., 'cloudflare'.</summary>
     [JsonPropertyName("solverName")]
     public string SolverName { get; set; }
 }
@@ -2056,7 +2056,7 @@ public partial class V1IssuerSpecAcmeSolversHttp01Ingress
     public string? ServiceType { get; set; }
 }
 
-/// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g. `*.example.com`) using the HTTP01 challenge mechanism.</summary>
+/// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g., `*.example.com`) using the HTTP01 challenge mechanism.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1IssuerSpecAcmeSolversHttp01
 {
@@ -2094,7 +2094,7 @@ public partial class V1IssuerSpecAcmeSolvers
     [JsonPropertyName("dns01")]
     public V1IssuerSpecAcmeSolversDns01? Dns01 { get; set; }
 
-    /// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g. `*.example.com`) using the HTTP01 challenge mechanism.</summary>
+    /// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g., `*.example.com`) using the HTTP01 challenge mechanism.</summary>
     [JsonPropertyName("http01")]
     public V1IssuerSpecAcmeSolversHttp01? Http01 { get; set; }
 
@@ -2127,13 +2127,17 @@ public partial class V1IssuerSpecAcme
     [JsonPropertyName("externalAccountBinding")]
     public V1IssuerSpecAcmeExternalAccountBinding? ExternalAccountBinding { get; set; }
 
-    /// <summary>PreferredChain is the chain to use if the ACME server outputs multiple. PreferredChain is no guarantee that this one gets delivered by the ACME endpoint. For example, for Let's Encrypt's DST crosssign you would use: "DST Root CA X3" or "ISRG Root X1" for the newer Let's Encrypt root CA. This value picks the first certificate bundle in the combined set of ACME default and alternative chains that has a root-most certificate with this value as its issuer's commonname.</summary>
+    /// <summary>PreferredChain is the chain to use if the ACME server outputs multiple. PreferredChain is no guarantee that this one gets delivered by the ACME endpoint. For example, for Let's Encrypt's DST cross-sign you would use: "DST Root CA X3" or "ISRG Root X1" for the newer Let's Encrypt root CA. This value picks the first certificate bundle in the combined set of ACME default and alternative chains that has a root-most certificate with this value as its issuer's commonname.</summary>
     [JsonPropertyName("preferredChain")]
     public string? PreferredChain { get; set; }
 
     /// <summary>PrivateKey is the name of a Kubernetes Secret resource that will be used to store the automatically generated ACME account private key. Optionally, a `key` may be specified to select a specific entry within the named Secret resource. If `key` is not specified, a default of `tls.key` will be used.</summary>
     [JsonPropertyName("privateKeySecretRef")]
     public V1IssuerSpecAcmePrivateKeySecretRef PrivateKeySecretRef { get; set; }
+
+    /// <summary>Profile allows requesting a certificate profile from the ACME server. Supported profiles are listed by the server's ACME directory URL.</summary>
+    [JsonPropertyName("profile")]
+    public string? Profile { get; set; }
 
     /// <summary>Server is the URL used to access the ACME server's 'directory' endpoint. For example, for Let's Encrypt's staging endpoint, you would use: "https://acme-staging-v02.api.letsencrypt.org/directory". Only ACME v2 endpoints (i.e. RFC 8555) are supported.</summary>
     [JsonPropertyName("server")]
@@ -2380,6 +2384,10 @@ public partial class V1IssuerSpecVault
     /// <summary>Server is the connection address for the Vault server, e.g: "https://vault.example.com:8200".</summary>
     [JsonPropertyName("server")]
     public string Server { get; set; }
+
+    /// <summary>ServerName is used to verify the hostname on the returned certificates by the Vault server.</summary>
+    [JsonPropertyName("serverName")]
+    public string? ServerName { get; set; }
 }
 
 /// <summary>APITokenSecretRef is a secret key selector for the Venafi Cloud API token.</summary>
@@ -2403,7 +2411,7 @@ public partial class V1IssuerSpecVenafiCloud
     [JsonPropertyName("apiTokenSecretRef")]
     public V1IssuerSpecVenafiCloudApiTokenSecretRef ApiTokenSecretRef { get; set; }
 
-    /// <summary>URL is the base URL for Venafi Cloud. Defaults to "https://api.venafi.cloud/v1".</summary>
+    /// <summary>URL is the base URL for Venafi Cloud. Defaults to "https://api.venafi.cloud/".</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

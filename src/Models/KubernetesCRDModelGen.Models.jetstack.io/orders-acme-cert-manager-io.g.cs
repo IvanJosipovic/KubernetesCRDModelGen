@@ -49,6 +49,10 @@ public partial class V1OrderSpec
     [JsonPropertyName("issuerRef")]
     public V1OrderSpecIssuerRef IssuerRef { get; set; }
 
+    /// <summary>Profile allows requesting a certificate profile from the ACME server. Supported profiles are listed by the server's ACME directory URL.</summary>
+    [JsonPropertyName("profile")]
+    public string? Profile { get; set; }
+
     /// <summary>Certificate signing request bytes in DER encoding. This will be used when finalizing the order. This field must be set on the order.</summary>
     [JsonPropertyName("request")]
     public string Request { get; set; }
@@ -62,7 +66,7 @@ public partial class V1OrderStatusAuthorizationsChallenges
     [JsonPropertyName("token")]
     public string Token { get; set; }
 
-    /// <summary>Type is the type of challenge being offered, e.g. 'http-01', 'dns-01', 'tls-sni-01', etc. This is the raw value retrieved from the ACME server. Only 'http-01' and 'dns-01' are supported by cert-manager, other values will be ignored.</summary>
+    /// <summary>Type is the type of challenge being offered, e.g., 'http-01', 'dns-01', 'tls-sni-01', etc. This is the raw value retrieved from the ACME server. Only 'http-01' and 'dns-01' are supported by cert-manager, other values will be ignored.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 
