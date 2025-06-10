@@ -128,15 +128,15 @@ public partial class V1ChallengeSpecSolverDns01AzureDNSClientSecretSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01AzureDNSManagedIdentity
 {
-    /// <summary>client ID of the managed identity, can not be used at the same time as resourceID</summary>
+    /// <summary>client ID of the managed identity, cannot be used at the same time as resourceID</summary>
     [JsonPropertyName("clientID")]
     public string? ClientID { get; set; }
 
-    /// <summary>resource ID of the managed identity, can not be used at the same time as clientID Cannot be used for Azure Managed Service Identity</summary>
+    /// <summary>resource ID of the managed identity, cannot be used at the same time as clientID Cannot be used for Azure Managed Service Identity</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>tenant ID of the managed identity, can not be used at the same time as resourceID</summary>
+    /// <summary>tenant ID of the managed identity, cannot be used at the same time as resourceID</summary>
     [JsonPropertyName("tenantID")]
     public string? TenantID { get; set; }
 }
@@ -401,7 +401,7 @@ public partial class V1ChallengeSpecSolverDns01Route53
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverDns01Webhook
 {
-    /// <summary>Additional configuration that should be passed to the webhook apiserver when challenges are processed. This can contain arbitrary JSON data. Secret values should not be specified in this stanza. If secret values are needed (e.g. credentials for a DNS service), you should use a SecretKeySelector to reference a Secret resource. For details on the schema of this field, consult the webhook provider implementation's documentation.</summary>
+    /// <summary>Additional configuration that should be passed to the webhook apiserver when challenges are processed. This can contain arbitrary JSON data. Secret values should not be specified in this stanza. If secret values are needed (e.g., credentials for a DNS service), you should use a SecretKeySelector to reference a Secret resource. For details on the schema of this field, consult the webhook provider implementation's documentation.</summary>
     [JsonPropertyName("config")]
     public JsonNode? Config { get; set; }
 
@@ -409,7 +409,7 @@ public partial class V1ChallengeSpecSolverDns01Webhook
     [JsonPropertyName("groupName")]
     public string GroupName { get; set; }
 
-    /// <summary>The name of the solver to use, as defined in the webhook provider implementation. This will typically be the name of the provider, e.g. 'cloudflare'.</summary>
+    /// <summary>The name of the solver to use, as defined in the webhook provider implementation. This will typically be the name of the provider, e.g., 'cloudflare'.</summary>
     [JsonPropertyName("solverName")]
     public string SolverName { get; set; }
 }
@@ -2030,7 +2030,7 @@ public partial class V1ChallengeSpecSolverHttp01Ingress
     public string? ServiceType { get; set; }
 }
 
-/// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g. `*.example.com`) using the HTTP01 challenge mechanism.</summary>
+/// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g., `*.example.com`) using the HTTP01 challenge mechanism.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecSolverHttp01
 {
@@ -2068,7 +2068,7 @@ public partial class V1ChallengeSpecSolver
     [JsonPropertyName("dns01")]
     public V1ChallengeSpecSolverDns01? Dns01 { get; set; }
 
-    /// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g. `*.example.com`) using the HTTP01 challenge mechanism.</summary>
+    /// <summary>Configures cert-manager to attempt to complete authorizations by performing the HTTP01 challenge flow. It is not possible to obtain certificates for wildcard domain names (e.g., `*.example.com`) using the HTTP01 challenge mechanism.</summary>
     [JsonPropertyName("http01")]
     public V1ChallengeSpecSolverHttp01? Http01 { get; set; }
 
@@ -2085,7 +2085,7 @@ public partial class V1ChallengeSpec
     [JsonPropertyName("authorizationURL")]
     public string AuthorizationURL { get; set; }
 
-    /// <summary>dnsName is the identifier that this challenge is for, e.g. example.com. If the requested DNSName is a 'wildcard', this field MUST be set to the non-wildcard domain, e.g. for `*.example.com`, it must be `example.com`.</summary>
+    /// <summary>dnsName is the identifier that this challenge is for, e.g., example.com. If the requested DNSName is a 'wildcard', this field MUST be set to the non-wildcard domain, e.g., for `*.example.com`, it must be `example.com`.</summary>
     [JsonPropertyName("dnsName")]
     public string DnsName { get; set; }
 

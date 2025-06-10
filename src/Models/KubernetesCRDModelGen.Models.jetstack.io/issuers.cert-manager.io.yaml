@@ -9,15 +9,17 @@ metadata:
     app.kubernetes.io/name: cert-manager
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/component: crds
-    app.kubernetes.io/version: v1.17.2
+    app.kubernetes.io/version: v1.18.0
     app.kubernetes.io/managed-by: Helm
-    helm.sh/chart: cert-manager-v1.17.2
+    helm.sh/chart: cert-manager-v1.18.0
 spec:
   group: cert-manager.io
   names:
     kind: Issuer
     listKind: IssuerList
     plural: issuers
+    shortNames:
+    - iss
     singular: issuer
     categories:
     - cert-manager
@@ -213,7 +215,7 @@ spec:
 
                       endpoint.
 
-                      For example, for Let's Encrypt's DST crosssign you would use:
+                      For example, for Let's Encrypt's DST cross-sign you would use:
 
                       "DST Root CA X3" or "ISRG Root X1" for the newer Let's Encrypt root CA.
 
@@ -253,6 +255,12 @@ spec:
 
                           More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                         type: string
+                  profile:
+                    description: >-
+                      Profile allows requesting a certificate profile from the ACME server.
+
+                      Supported profiles are listed by the server's ACME directory URL.
+                    type: string
                   server:
                     description: >-
                       Server is the URL used to access the ACME server's 'directory' endpoint.
@@ -487,16 +495,16 @@ spec:
                                   type: object
                                   properties:
                                     clientID:
-                                      description: client ID of the managed identity, can not be used at the same time as resourceID
+                                      description: client ID of the managed identity, cannot be used at the same time as resourceID
                                       type: string
                                     resourceID:
                                       description: >-
-                                        resource ID of the managed identity, can not be used at the same time as clientID
+                                        resource ID of the managed identity, cannot be used at the same time as clientID
 
                                         Cannot be used for Azure Managed Service Identity
                                       type: string
                                     tenantID:
-                                      description: tenant ID of the managed identity, can not be used at the same time as resourceID
+                                      description: tenant ID of the managed identity, cannot be used at the same time as resourceID
                                       type: string
                                 resourceGroupName:
                                   description: resource group the DNS zone is located in
@@ -885,7 +893,7 @@ spec:
 
                                     Secret values should not be specified in this stanza.
 
-                                    If secret values are needed (e.g. credentials for a DNS service), you
+                                    If secret values are needed (e.g., credentials for a DNS service), you
 
                                     should use a SecretKeySelector to reference a Secret resource.
 
@@ -909,7 +917,7 @@ spec:
 
                                     implementation.
 
-                                    This will typically be the name of the provider, e.g. 'cloudflare'.
+                                    This will typically be the name of the provider, e.g., 'cloudflare'.
                                   type: string
                         http01:
                           description: >-
@@ -919,7 +927,7 @@ spec:
 
                             It is not possible to obtain certificates for wildcard domain names
 
-                            (e.g. `*.example.com`) using the HTTP01 challenge mechanism.
+                            (e.g., `*.example.com`) using the HTTP01 challenge mechanism.
                           type: object
                           properties:
                             gatewayHTTPRoute:
@@ -4566,6 +4574,12 @@ spec:
                   server:
                     description: 'Server is the connection address for the Vault server, e.g: "https://vault.example.com:8200".'
                     type: string
+                  serverName:
+                    description: >-
+                      ServerName is used to verify the hostname on the returned certificates
+
+                      by the Vault server.
+                    type: string
               venafi:
                 description: >-
                   Venafi configures this issuer to sign certificates using a Venafi TPP
@@ -4608,7 +4622,7 @@ spec:
                         description: >-
                           URL is the base URL for Venafi Cloud.
 
-                          Defaults to "https://api.venafi.cloud/v1".
+                          Defaults to "https://api.venafi.cloud/".
                         type: string
                   tpp:
                     description: >-

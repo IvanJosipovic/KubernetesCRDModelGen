@@ -97,7 +97,7 @@ public partial class V1CertificateSpecKeystoresPkcs12
     [JsonPropertyName("passwordSecretRef")]
     public V1CertificateSpecKeystoresPkcs12PasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.  If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (eg. because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
+    /// <summary>Profile specifies the key and certificate encryption algorithms and the HMAC algorithm used to create the PKCS12 keystore. Default value is `LegacyRC2` for backward compatibility.  If provided, allowed values are: `LegacyRC2`: Deprecated. Not supported by default in OpenSSL 3 or Java 20. `LegacyDES`: Less secure algorithm. Use this option for maximal compatibility. `Modern2023`: Secure algorithm. Use this option in case you have to always use secure algorithms (e.g., because of company policy). Please note that the security of the algorithm is not that important in reality, because the unencrypted certificate and private key are also stored in the Secret.</summary>
     [JsonPropertyName("profile")]
     public string? Profile { get; set; }
 }
@@ -199,7 +199,7 @@ public partial class V1CertificateSpecPrivateKey
     [JsonPropertyName("encoding")]
     public string? Encoding { get; set; }
 
-    /// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.  If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exist but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Never` for backward compatibility.</summary>
+    /// <summary>RotationPolicy controls how private keys should be regenerated when a re-issuance is being processed.  If set to `Never`, a private key will only be generated if one does not already exist in the target `spec.secretName`. If one does exist but it does not have the correct algorithm or size, a warning will be raised to await user intervention. If set to `Always`, a private key matching the specified requirements will be generated whenever a re-issuance occurs. Default is `Always`. The default was changed from `Never` to `Always` in cert-manager &gt;=v1.18.0. The new default can be disabled by setting the `--feature-gates=DefaultPrivateKeyRotationPolicyAlways=false` option on the controller component.</summary>
     [JsonPropertyName("rotationPolicy")]
     public string? RotationPolicy { get; set; }
 
@@ -262,7 +262,7 @@ public partial class V1CertificateSpecSubject
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CertificateSpec
 {
-    /// <summary>Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.  This is a Beta Feature enabled by default. It can be disabled with the `--feature-gates=AdditionalCertificateOutputFormats=false` option set on both the controller and webhook components.</summary>
+    /// <summary>Defines extra output formats of the private key and signed certificate chain to be written to this Certificate's target Secret.</summary>
     [JsonPropertyName("additionalOutputFormats")]
     public IList<V1CertificateSpecAdditionalOutputFormats>? AdditionalOutputFormats { get; set; }
 
@@ -326,7 +326,7 @@ public partial class V1CertificateSpec
     [JsonPropertyName("renewBeforePercentage")]
     public int? RenewBeforePercentage { get; set; }
 
-    /// <summary>The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single `CertificateRequest` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.  If set, revisionHistoryLimit must be a value of `1` or greater. If unset (`nil`), revisions will not be garbage collected. Default value is `nil`.</summary>
+    /// <summary>The maximum number of CertificateRequest revisions that are maintained in the Certificate's history. Each revision represents a single `CertificateRequest` created by this Certificate, either when it was created, renewed, or Spec was changed. Revisions will be removed by oldest first if the number of revisions exceeds this number.  If set, revisionHistoryLimit must be a value of `1` or greater. Default value is `1`.</summary>
     [JsonPropertyName("revisionHistoryLimit")]
     public int? RevisionHistoryLimit { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1CertificateSpec
     /// <summary>Defines annotations and labels to be copied to the Certificate's Secret. Labels and annotations on the Secret will be changed as they appear on the SecretTemplate when added or removed. SecretTemplate annotations are added in conjunction with, and cannot overwrite, the base set of annotations cert-manager sets on the Certificate's Secret.</summary>
     [JsonPropertyName("secretTemplate")]
     public V1CertificateSpecSecretTemplate? SecretTemplate { get; set; }
+
+    /// <summary>Signature algorithm to use. Allowed values for RSA keys: SHA256WithRSA, SHA384WithRSA, SHA512WithRSA. Allowed values for ECDSA keys: ECDSAWithSHA256, ECDSAWithSHA384, ECDSAWithSHA512. Allowed values for Ed25519 keys: PureEd25519.</summary>
+    [JsonPropertyName("signatureAlgorithm")]
+    public string? SignatureAlgorithm { get; set; }
 
     /// <summary>Requested set of X509 certificate subject attributes. More info: https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.6  The common name attribute is specified separately in the `commonName` field. Cannot be set if the `literalSubject` field is set.</summary>
     [JsonPropertyName("subject")]
