@@ -8,32 +8,60 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>ID of the attached environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeInstanceAttachmentMetadata
+public partial class V1beta1ApigeeInstanceAttachmentSpecEnvironmentRef
 {
+    /// <summary>A reference to an externally managed ApigeeEnvironment resource. Should be in the format "organizations/{{organizationID}}/environments/{{environmentID}}".</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The name of a ApigeeEnvironment resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a ApigeeEnvironment resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Reference to parent Apigee Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeInstanceAttachmentSpec
+public partial class V1beta1ApigeeInstanceAttachmentSpecInstanceRef
 {
-    /// <summary>Immutable. The resource ID of the environment.</summary>
-    [JsonPropertyName("environment")]
-    public string Environment { get; set; }
+    /// <summary>A reference to an externally managed ApigeeInstance resource. Should be in the format "organizations/{{organizationID}}/instances/{{instanceID}}".</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
 
-    /// <summary>Immutable. The Apigee instance associated with the Apigee environment, in the format 'organizations/{{org_name}}/instances/{{instance_name}}'.</summary>
-    [JsonPropertyName("instanceId")]
-    public string InstanceId { get; set; }
+    /// <summary>The name of a ApigeeInstance resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 
-    /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
+    /// <summary>The namespace of a ApigeeInstance resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>ApigeeInstanceAttachmentSpec defines the desired state of ApigeeInstanceAttachment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApigeeInstanceAttachmentSpec
+{
+    /// <summary>ID of the attached environment.</summary>
+    [JsonPropertyName("environmentRef")]
+    public V1beta1ApigeeInstanceAttachmentSpecEnvironmentRef EnvironmentRef { get; set; }
+
+    /// <summary>Reference to parent Apigee Instance.</summary>
+    [JsonPropertyName("instanceRef")]
+    public V1beta1ApigeeInstanceAttachmentSpecInstanceRef InstanceRef { get; set; }
+
+    /// <summary>The ApigeeInstanceAttachment name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeInstanceAttachmentStatusConditions
+public partial class V1beta1ApigeeInstanceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -56,44 +84,88 @@ public partial class ApigeeInstanceAttachmentStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeInstanceAttachmentStatus
+public partial class V1beta1ApigeeInstanceAttachmentStatusObservedState
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<ApigeeInstanceAttachmentStatusConditions>? Conditions { get; set; }
+    /// <summary>Output only. Time the attachment was created in milliseconds since epoch.</summary>
+    [JsonPropertyName("createdAt")]
+    public string? CreatedAt { get; set; }
+}
 
-    /// <summary>The name of the newly created  attachment (output parameter).</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+/// <summary>ApigeeInstanceAttachmentStatus defines the config connector machine state of ApigeeInstanceAttachment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApigeeInstanceAttachmentStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1ApigeeInstanceAttachmentStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the ApigeeInstanceAttachment resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1ApigeeInstanceAttachmentStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeInstanceAttachment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeInstanceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeInstanceAttachmentSpec>, IStatus<V1beta1ApigeeInstanceAttachmentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeInstanceAttachment";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeinstanceattachments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ApigeeInstanceAttachmentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ApigeeInstanceAttachmentSpec defines the desired state of ApigeeInstanceAttachment</summary>
     [JsonPropertyName("spec")]
-    public ApigeeInstanceAttachmentSpec Spec { get; set; }
+    public V1beta1ApigeeInstanceAttachmentSpec Spec { get; set; }
+
+    /// <summary>ApigeeInstanceAttachmentStatus defines the config connector machine state of ApigeeInstanceAttachment</summary>
+    [JsonPropertyName("status")]
+    public V1beta1ApigeeInstanceAttachmentStatus? Status { get; set; }
+}
+
+/// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeInstanceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeInstanceAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeInstanceAttachmentList";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeinstanceattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public ApigeeInstanceAttachmentStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApigeeInstanceAttachment> Items { get; set; }
 }
