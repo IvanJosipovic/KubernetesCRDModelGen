@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
 /// <summary>Settings to configure and enable allowed domains.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
+public partial class V1beta1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
 {
     /// <summary>List of trusted domains.</summary>
     [JsonPropertyName("domains")]
@@ -23,7 +23,7 @@ public partial class V1alpha1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
 
 /// <summary>Configuration to allow cross-origin requests via IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettingsCorsSettings
+public partial class V1beta1IAPSettingsSpecAccessSettingsCorsSettings
 {
     /// <summary>Configuration to allow HTTP OPTIONS calls to skip authorization. If undefined, IAP will not apply any special logic to OPTIONS requests.</summary>
     [JsonPropertyName("allowHTTPOptions")]
@@ -32,20 +32,20 @@ public partial class V1alpha1IAPSettingsSpecAccessSettingsCorsSettings
 
 /// <summary>GCIP claims and endpoint configurations for 3p identity providers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettingsGcipSettings
+public partial class V1beta1IAPSettingsSpecAccessSettingsGcipSettings
 {
     /// <summary>Login page URI associated with the GCIP tenants. Typically, all resources within the same project share the same login page, though it could be overridden at the sub resource level.</summary>
     [JsonPropertyName("loginPageURI")]
     public string? LoginPageURI { get; set; }
 
     /// <summary>GCIP tenant ids that are linked to the IAP resource. tenant_ids could be a string beginning with a number character to indicate authenticating with GCIP tenant flow, or in the format of _&lt;ProjectNumber&gt; to indicate authenticating with GCIP agent flow. If agent flow is used, tenant_ids should only contain one single element, while for tenant flow, tenant_ids can contain multiple elements.</summary>
-    [JsonPropertyName("tenantIds")]
-    public IList<string>? TenantIds { get; set; }
+    [JsonPropertyName("tenantIDs")]
+    public IList<string>? TenantIDs { get; set; }
 }
 
 /// <summary>Settings to configure IAP's OAuth behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettingsOauthSettings
+public partial class V1beta1IAPSettingsSpecAccessSettingsOauthSettings
 {
     /// <summary>Domain hint to send as hd=? parameter in OAuth request flow. Enables redirect to primary IDP by skipping Google's login screen. https://developers.google.com/identity/protocols/OpenIDConnect#hd-param Note: IAP does not verify that the id token's hd claim matches this value since access behavior is managed by IAM policies.</summary>
     [JsonPropertyName("loginHint")]
@@ -58,7 +58,7 @@ public partial class V1alpha1IAPSettingsSpecAccessSettingsOauthSettings
 
 /// <summary>Settings to configure reauthentication policies in IAP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettingsReauthSettings
+public partial class V1beta1IAPSettingsSpecAccessSettingsReauthSettings
 {
     /// <summary>Reauth session lifetime, how long before a user has to reauthenticate again.</summary>
     [JsonPropertyName("maxAge")]
@@ -75,32 +75,101 @@ public partial class V1alpha1IAPSettingsSpecAccessSettingsReauthSettings
 
 /// <summary>Top level wrapper for all access related setting in IAP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecAccessSettings
+public partial class V1beta1IAPSettingsSpecAccessSettings
 {
     /// <summary>Settings to configure and enable allowed domains.</summary>
     [JsonPropertyName("allowedDomainsSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettingsAllowedDomainsSettings? AllowedDomainsSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettingsAllowedDomainsSettings? AllowedDomainsSettings { get; set; }
 
     /// <summary>Configuration to allow cross-origin requests via IAP.</summary>
     [JsonPropertyName("corsSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettingsCorsSettings? CorsSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettingsCorsSettings? CorsSettings { get; set; }
 
     /// <summary>GCIP claims and endpoint configurations for 3p identity providers.</summary>
     [JsonPropertyName("gcipSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettingsGcipSettings? GcipSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettingsGcipSettings? GcipSettings { get; set; }
 
     /// <summary>Settings to configure IAP's OAuth behavior.</summary>
     [JsonPropertyName("oauthSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettingsOauthSettings? OauthSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettingsOauthSettings? OauthSettings { get; set; }
 
     /// <summary>Settings to configure reauthentication policies in IAP.</summary>
     [JsonPropertyName("reauthSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettingsReauthSettings? ReauthSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettingsReauthSettings? ReauthSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecAppEngineRefApplicationRef
+{
+    /// <summary>Format: projects/{projects_id}/iap_web/appengine-{app_id}</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+}
+
+/// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecAppEngineRefProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Optional. If specified, settings apply to the service</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecAppEngineRefServiceRef
+{
+    /// <summary>Format: projects/{projects_id}/iap_web/appengine-{app_id}/service/{service_id}</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+}
+
+/// <summary>Optional. If specified, settings apply to the version</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecAppEngineRefVersionRef
+{
+    /// <summary>Format: projects/{projects_id}/iap_web/appengine-{app_id}/service/{service_id}/version/{version_id}</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+}
+
+/// <summary>Project-wide App Engine service settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecAppEngineRef
+{
+    /// <summary></summary>
+    [JsonPropertyName("applicationRef")]
+    public V1beta1IAPSettingsSpecAppEngineRefApplicationRef ApplicationRef { get; set; }
+
+    /// <summary>The Project that this resource belongs to.</summary>
+    [JsonPropertyName("projectRef")]
+    public V1beta1IAPSettingsSpecAppEngineRefProjectRef ProjectRef { get; set; }
+
+    /// <summary>Optional. If specified, settings apply to the service</summary>
+    [JsonPropertyName("serviceRef")]
+    public V1beta1IAPSettingsSpecAppEngineRefServiceRef? ServiceRef { get; set; }
+
+    /// <summary>Optional. If specified, settings apply to the version</summary>
+    [JsonPropertyName("versionRef")]
+    public V1beta1IAPSettingsSpecAppEngineRefVersionRef? VersionRef { get; set; }
 }
 
 /// <summary>Customization for Access Denied page.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecApplicationSettingsAccessDeniedPageSettings
+public partial class V1beta1IAPSettingsSpecApplicationSettingsAccessDeniedPageSettings
 {
     /// <summary>The URI to be redirected to when access is denied.</summary>
     [JsonPropertyName("accessDeniedPageURI")]
@@ -117,7 +186,7 @@ public partial class V1alpha1IAPSettingsSpecApplicationSettingsAccessDeniedPageS
 
 /// <summary>Settings to configure attribute propagation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecApplicationSettingsAttributePropagationSettings
+public partial class V1beta1IAPSettingsSpecApplicationSettingsAttributePropagationSettings
 {
     /// <summary>Whether the provided attribute propagation settings should be evaluated on user requests. If set to true, attributes returned from the expression will be propagated in the set output credentials.</summary>
     [JsonPropertyName("enable")]
@@ -134,7 +203,7 @@ public partial class V1alpha1IAPSettingsSpecApplicationSettingsAttributePropagat
 
 /// <summary>Settings to configure IAP's behavior for a service mesh.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecApplicationSettingsCsmSettings
+public partial class V1beta1IAPSettingsSpecApplicationSettingsCsmSettings
 {
     /// <summary>Audience claim set in the generated RCToken. This value is not validated by IAP.</summary>
     [JsonPropertyName("rctokenAud")]
@@ -143,15 +212,15 @@ public partial class V1alpha1IAPSettingsSpecApplicationSettingsCsmSettings
 
 /// <summary>Top level wrapper for all application related settings in IAP</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpecApplicationSettings
+public partial class V1beta1IAPSettingsSpecApplicationSettings
 {
     /// <summary>Customization for Access Denied page.</summary>
     [JsonPropertyName("accessDeniedPageSettings")]
-    public V1alpha1IAPSettingsSpecApplicationSettingsAccessDeniedPageSettings? AccessDeniedPageSettings { get; set; }
+    public V1beta1IAPSettingsSpecApplicationSettingsAccessDeniedPageSettings? AccessDeniedPageSettings { get; set; }
 
     /// <summary>Settings to configure attribute propagation.</summary>
     [JsonPropertyName("attributePropagationSettings")]
-    public V1alpha1IAPSettingsSpecApplicationSettingsAttributePropagationSettings? AttributePropagationSettings { get; set; }
+    public V1beta1IAPSettingsSpecApplicationSettingsAttributePropagationSettings? AttributePropagationSettings { get; set; }
 
     /// <summary>The Domain value to set for cookies generated by IAP. This value is not validated by the API, but will be ignored at runtime if invalid.</summary>
     [JsonPropertyName("cookieDomain")]
@@ -159,24 +228,176 @@ public partial class V1alpha1IAPSettingsSpecApplicationSettings
 
     /// <summary>Settings to configure IAP's behavior for a service mesh.</summary>
     [JsonPropertyName("csmSettings")]
-    public V1alpha1IAPSettingsSpecApplicationSettingsCsmSettings? CsmSettings { get; set; }
+    public V1beta1IAPSettingsSpecApplicationSettingsCsmSettings? CsmSettings { get; set; }
+}
+
+/// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecComputeServiceRefProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Optional. If specified, settings apply to the service</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecComputeServiceRefServiceRef
+{
+    /// <summary>The value of an externally managed ComputeBackendService resource.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The name of a ComputeBackendService resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a ComputeBackendService resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Project-wide Compute service settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecComputeServiceRef
+{
+    /// <summary>The Project that this resource belongs to.</summary>
+    [JsonPropertyName("projectRef")]
+    public V1beta1IAPSettingsSpecComputeServiceRefProjectRef ProjectRef { get; set; }
+
+    /// <summary>Optional. If specified, settings apply to the region</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Optional. If specified, settings apply to the service</summary>
+    [JsonPropertyName("serviceRef")]
+    public V1beta1IAPSettingsSpecComputeServiceRefServiceRef? ServiceRef { get; set; }
+}
+
+/// <summary>Folder-level settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecFolderRef
+{
+    /// <summary>The 'name' field of a folder, when not managed by Config Connector. This field must be set when 'name' field is not set.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The 'name' field of a 'Folder' resource. This field must be set when 'external' field is not set.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The 'namespace' field of a 'Folder' resource. If unset, the namespace is defaulted to the namespace of the referencer resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Organization-level settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecOrganizationRef
+{
+    /// <summary>The 'name' field of an organization, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string External { get; set; }
+}
+
+/// <summary>Project-level settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecProjectWebRefProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Project-wide web service settings</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1IAPSettingsSpecProjectWebRef
+{
+    /// <summary>The Project that this resource belongs to.</summary>
+    [JsonPropertyName("projectRef")]
+    public V1beta1IAPSettingsSpecProjectWebRefProjectRef ProjectRef { get; set; }
 }
 
 /// <summary>IAPSettingsSpec defines the desired state of IAPSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsSpec
+public partial class V1beta1IAPSettingsSpec
 {
     /// <summary>Top level wrapper for all access related setting in IAP</summary>
     [JsonPropertyName("accessSettings")]
-    public V1alpha1IAPSettingsSpecAccessSettings? AccessSettings { get; set; }
+    public V1beta1IAPSettingsSpecAccessSettings? AccessSettings { get; set; }
+
+    /// <summary>Project-wide App Engine service settings</summary>
+    [JsonPropertyName("appEngineRef")]
+    public V1beta1IAPSettingsSpecAppEngineRef? AppEngineRef { get; set; }
 
     /// <summary>Top level wrapper for all application related settings in IAP</summary>
     [JsonPropertyName("applicationSettings")]
-    public V1alpha1IAPSettingsSpecApplicationSettings? ApplicationSettings { get; set; }
+    public V1beta1IAPSettingsSpecApplicationSettings? ApplicationSettings { get; set; }
 
-    /// <summary>Required. The resource name of the IAP protected resource. The name could have the following format: organizations/{organization_id} folders/{folder_id} projects/{projects_id} projects/{projects_id}/iap_web projects/{projects_id}/iap_web/compute projects/{projects_id}/iap_web/compute-{region} projects/{projects_id}/iap_web/compute/service/{service_id} projects/{projects_id}/iap_web/compute-{region}/service/{service_id} projects/{projects_id}/iap_web/appengine-{app_id} projects/{projects_id}/iap_web/appengine-{app_id}/service/{service_id} projects/{projects_id}/iap_web/appengine-{app_id}/service/{service_id}/version/{version_id}</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
+    /// <summary>Project-wide Compute service settings</summary>
+    [JsonPropertyName("computeServiceRef")]
+    public V1beta1IAPSettingsSpecComputeServiceRef? ComputeServiceRef { get; set; }
+
+    /// <summary>Folder-level settings</summary>
+    [JsonPropertyName("folderRef")]
+    public V1beta1IAPSettingsSpecFolderRef? FolderRef { get; set; }
+
+    /// <summary>Organization-level settings</summary>
+    [JsonPropertyName("organizationRef")]
+    public V1beta1IAPSettingsSpecOrganizationRef? OrganizationRef { get; set; }
+
+    /// <summary>Project-level settings</summary>
+    [JsonPropertyName("projectRef")]
+    public V1beta1IAPSettingsSpecProjectRef? ProjectRef { get; set; }
+
+    /// <summary>Project-wide web service settings</summary>
+    [JsonPropertyName("projectWebRef")]
+    public V1beta1IAPSettingsSpecProjectWebRef? ProjectWebRef { get; set; }
 
     /// <summary>The IAPSettings name.</summary>
     [JsonPropertyName("resourceID")]
@@ -185,7 +406,7 @@ public partial class V1alpha1IAPSettingsSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsStatusConditions
+public partial class V1beta1IAPSettingsStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -210,11 +431,11 @@ public partial class V1alpha1IAPSettingsStatusConditions
 
 /// <summary>IAPSettingsStatus defines the config connector machine state of IAPSettings</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1IAPSettingsStatus
+public partial class V1beta1IAPSettingsStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1IAPSettingsStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IAPSettingsStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the IAPSettings resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -228,9 +449,9 @@ public partial class V1alpha1IAPSettingsStatus
 /// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IAPSettings : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IAPSettingsSpec>, IStatus<V1alpha1IAPSettingsStatus>
+public partial class V1beta1IAPSettings : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAPSettingsSpec>, IStatus<V1beta1IAPSettingsStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "IAPSettings";
     public const string KubeGroup = "iap.cnrm.cloud.google.com";
     public const string KubePluralName = "iapsettings";
@@ -248,19 +469,19 @@ public partial class V1alpha1IAPSettings : IKubernetesObject<V1ObjectMeta>, ISpe
 
     /// <summary>IAPSettingsSpec defines the desired state of IAPSettings</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1IAPSettingsSpec Spec { get; set; }
+    public V1beta1IAPSettingsSpec Spec { get; set; }
 
     /// <summary>IAPSettingsStatus defines the config connector machine state of IAPSettings</summary>
     [JsonPropertyName("status")]
-    public V1alpha1IAPSettingsStatus? Status { get; set; }
+    public V1beta1IAPSettingsStatus? Status { get; set; }
 }
 
 /// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IAPSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IAPSettings>
+public partial class V1beta1IAPSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAPSettings>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "IAPSettingsList";
     public const string KubeGroup = "iap.cnrm.cloud.google.com";
     public const string KubePluralName = "iapsettings";
@@ -278,5 +499,5 @@ public partial class V1alpha1IAPSettingsList : IKubernetesObject<V1ListMeta>, II
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1IAPSettings> Items { get; set; }
+    public IList<V1beta1IAPSettings> Items { get; set; }
 }

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.securesourcemanager.cnrm.cloud.google.com;
 /// <summary>Input only. Initial configurations for the repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositorySpecInitialConfig
+public partial class V1beta1SecureSourceManagerRepositorySpecInitialConfig
 {
     /// <summary>Default branch name of the repository.</summary>
     [JsonPropertyName("defaultBranch")]
@@ -31,7 +31,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpecInitialConfig
 
 /// <summary>The name of the instance in which the repository is hosted, formatted as `projects/{project_number}/locations/{location_id}/instances/{instance_id}`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositorySpecInstanceRef
+public partial class V1beta1SecureSourceManagerRepositorySpecInstanceRef
 {
     /// <summary>A reference to an externally managed SecureSourceManagerInstance resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/instances/{{instanceID}}".</summary>
     [JsonPropertyName("external")]
@@ -48,7 +48,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpecInstanceRef
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositorySpecProjectRef
+public partial class V1beta1SecureSourceManagerRepositorySpecProjectRef
 {
     /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
@@ -69,15 +69,15 @@ public partial class V1alpha1SecureSourceManagerRepositorySpecProjectRef
 
 /// <summary>SecureSourceManagerRepositorySpec defines the desired state of SecureSourceManagerRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositorySpec
+public partial class V1beta1SecureSourceManagerRepositorySpec
 {
     /// <summary>Input only. Initial configurations for the repository.</summary>
     [JsonPropertyName("initialConfig")]
-    public V1alpha1SecureSourceManagerRepositorySpecInitialConfig? InitialConfig { get; set; }
+    public V1beta1SecureSourceManagerRepositorySpecInitialConfig? InitialConfig { get; set; }
 
     /// <summary>The name of the instance in which the repository is hosted, formatted as `projects/{project_number}/locations/{location_id}/instances/{instance_id}`</summary>
     [JsonPropertyName("instanceRef")]
-    public V1alpha1SecureSourceManagerRepositorySpecInstanceRef InstanceRef { get; set; }
+    public V1beta1SecureSourceManagerRepositorySpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>Immutable. Location of the instance.</summary>
     [JsonPropertyName("location")]
@@ -85,7 +85,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public V1alpha1SecureSourceManagerRepositorySpecProjectRef ProjectRef { get; set; }
+    public V1beta1SecureSourceManagerRepositorySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The SecureSourceManagerRepository name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
@@ -94,7 +94,7 @@ public partial class V1alpha1SecureSourceManagerRepositorySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositoryStatusConditions
+public partial class V1beta1SecureSourceManagerRepositoryStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -119,7 +119,7 @@ public partial class V1alpha1SecureSourceManagerRepositoryStatusConditions
 
 /// <summary>Output only. URIs for the repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedStateUris
+public partial class V1beta1SecureSourceManagerRepositoryStatusObservedStateUris
 {
     /// <summary>Output only. API is the URI for API access.</summary>
     [JsonPropertyName("api")]
@@ -136,8 +136,12 @@ public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedStateUri
 
 /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedState
+public partial class V1beta1SecureSourceManagerRepositoryStatusObservedState
 {
+    /// <summary>Output only. Create timestamp.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
+
     /// <summary>Output only. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.</summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
@@ -146,18 +150,22 @@ public partial class V1alpha1SecureSourceManagerRepositoryStatusObservedState
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 
+    /// <summary>Output only. Update timestamp.</summary>
+    [JsonPropertyName("updateTime")]
+    public string? UpdateTime { get; set; }
+
     /// <summary>Output only. URIs for the repository.</summary>
     [JsonPropertyName("uris")]
-    public V1alpha1SecureSourceManagerRepositoryStatusObservedStateUris? Uris { get; set; }
+    public V1beta1SecureSourceManagerRepositoryStatusObservedStateUris? Uris { get; set; }
 }
 
 /// <summary>SecureSourceManagerRepositoryStatus defines the config connector machine state of SecureSourceManagerRepository</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1SecureSourceManagerRepositoryStatus
+public partial class V1beta1SecureSourceManagerRepositoryStatus
 {
     /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1SecureSourceManagerRepositoryStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1SecureSourceManagerRepositoryStatusConditions>? Conditions { get; set; }
 
     /// <summary>A unique specifier for the SecureSourceManagerRepository resource in GCP.</summary>
     [JsonPropertyName("externalRef")]
@@ -169,15 +177,15 @@ public partial class V1alpha1SecureSourceManagerRepositoryStatus
 
     /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
     [JsonPropertyName("observedState")]
-    public V1alpha1SecureSourceManagerRepositoryStatusObservedState? ObservedState { get; set; }
+    public V1beta1SecureSourceManagerRepositoryStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary>SecureSourceManagerRepository is the Schema for the SecureSourceManagerRepository API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SecureSourceManagerRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1SecureSourceManagerRepositorySpec>, IStatus<V1alpha1SecureSourceManagerRepositoryStatus>
+public partial class V1beta1SecureSourceManagerRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SecureSourceManagerRepositorySpec>, IStatus<V1beta1SecureSourceManagerRepositoryStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "SecureSourceManagerRepository";
     public const string KubeGroup = "securesourcemanager.cnrm.cloud.google.com";
     public const string KubePluralName = "securesourcemanagerrepositories";
@@ -195,19 +203,19 @@ public partial class V1alpha1SecureSourceManagerRepository : IKubernetesObject<V
 
     /// <summary>SecureSourceManagerRepositorySpec defines the desired state of SecureSourceManagerRepository</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1SecureSourceManagerRepositorySpec Spec { get; set; }
+    public V1beta1SecureSourceManagerRepositorySpec Spec { get; set; }
 
     /// <summary>SecureSourceManagerRepositoryStatus defines the config connector machine state of SecureSourceManagerRepository</summary>
     [JsonPropertyName("status")]
-    public V1alpha1SecureSourceManagerRepositoryStatus? Status { get; set; }
+    public V1beta1SecureSourceManagerRepositoryStatus? Status { get; set; }
 }
 
 /// <summary>SecureSourceManagerRepository is the Schema for the SecureSourceManagerRepository API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SecureSourceManagerRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SecureSourceManagerRepository>
+public partial class V1beta1SecureSourceManagerRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecureSourceManagerRepository>
 {
-    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeApiVersion = "v1beta1";
     public const string KubeKind = "SecureSourceManagerRepositoryList";
     public const string KubeGroup = "securesourcemanager.cnrm.cloud.google.com";
     public const string KubePluralName = "securesourcemanagerrepositories";
@@ -225,5 +233,5 @@ public partial class V1alpha1SecureSourceManagerRepositoryList : IKubernetesObje
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1SecureSourceManagerRepository> Items { get; set; }
+    public IList<V1beta1SecureSourceManagerRepository> Items { get; set; }
 }
