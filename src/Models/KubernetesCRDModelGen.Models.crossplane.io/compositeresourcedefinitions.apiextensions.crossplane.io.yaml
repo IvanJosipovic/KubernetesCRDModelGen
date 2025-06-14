@@ -143,11 +143,15 @@ spec:
                   rule: '!has(self.singular) || self.singular == self.singular.lowerAscii()'
               connectionSecretKeys:
                 description: >-
-                  ConnectionSecretKeys is the list of keys that will be exposed to the end
+                  ConnectionSecretKeys is the list of connection secret keys the
 
-                  user of the defined kind.
+                  defined XR can publish. If the list is empty, all keys will be
 
-                  If the list is empty, all keys will be published.
+                  published. If the list isn't empty, any connection secret keys that
+
+                  don't appear in the list will be filtered out. Only LegacyCluster XRs
+
+                  support connection secrets.
                 items:
                   type: string
                 type: array
@@ -609,6 +613,8 @@ spec:
             x-kubernetes-validations:
             - message: Only LegacyCluster composite resources can offer claims
               rule: self.scope == 'LegacyCluster' || !has(self.claimNames)
+            - message: Only LegacyCluster composite resources support connection secrets
+              rule: self.scope == 'LegacyCluster' || !has(self.connectionSecretKeys)
           status:
             description: CompositeResourceDefinitionStatus shows the observed state of the definition.
             properties:
@@ -839,11 +845,20 @@ spec:
                 type: object
               connectionSecretKeys:
                 description: >-
-                  ConnectionSecretKeys is the list of keys that will be exposed to the end
+                  ConnectionSecretKeys is the list of connection secret keys the
 
-                  user of the defined kind.
+                  defined XR can publish. If the list is empty, all keys will be
 
-                  If the list is empty, all keys will be published.
+                  published. If the list isn't empty, any connection secret keys that
+
+                  don't appear in the list will be filtered out. Only LegacyCluster XRs
+
+                  support connection secrets.
+
+
+                  Deprecated: XR connection secrets aren't supported in
+
+                  apiextensions.crossplane.io/v2. Compose a secret instead.
                 items:
                   type: string
                 type: array
@@ -1299,6 +1314,8 @@ spec:
             x-kubernetes-validations:
             - message: Claims aren't supported in apiextensions.crossplane.io/v2
               rule: '!has(self.claimNames)'
+            - message: XR connection secrets aren't supported in apiextensions.crossplane.io/v2
+              rule: '!has(self.connectionSecretKeys)'
           status:
             description: CompositeResourceDefinitionStatus shows the observed state of the definition.
             properties:

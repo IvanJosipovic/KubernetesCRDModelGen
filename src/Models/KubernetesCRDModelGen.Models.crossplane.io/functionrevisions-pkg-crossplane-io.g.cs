@@ -8,15 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
-/// <summary>ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment. Deprecated: Use RuntimeConfigReference instead.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1FunctionRevisionSpecControllerConfigRef
-{
-    /// <summary>Name of the ControllerConfig.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1FunctionRevisionSpecPackagePullSecrets
@@ -50,10 +41,6 @@ public partial class V1FunctionRevisionSpec
     /// <summary>Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</summary>
     [JsonPropertyName("commonLabels")]
     public IDictionary<string, string>? CommonLabels { get; set; }
-
-    /// <summary>ControllerConfigRef references a ControllerConfig resource that will be used to configure the packaged controller Deployment. Deprecated: Use RuntimeConfigReference instead.</summary>
-    [JsonPropertyName("controllerConfigRef")]
-    public V1FunctionRevisionSpecControllerConfigRef? ControllerConfigRef { get; set; }
 
     /// <summary>DesiredState of the PackageRevision. Can be either Active or Inactive.</summary>
     [JsonPropertyName("desiredState")]
