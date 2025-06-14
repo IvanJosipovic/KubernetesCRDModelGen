@@ -240,7 +240,7 @@ public partial class V1CompositeResourceDefinitionSpec
     [JsonPropertyName("claimNames")]
     public V1CompositeResourceDefinitionSpecClaimNames? ClaimNames { get; set; }
 
-    /// <summary>ConnectionSecretKeys is the list of keys that will be exposed to the end user of the defined kind. If the list is empty, all keys will be published.</summary>
+    /// <summary>ConnectionSecretKeys is the list of connection secret keys the defined XR can publish. If the list is empty, all keys will be published. If the list isn't empty, any connection secret keys that don't appear in the list will be filtered out. Only LegacyCluster XRs support connection secrets.</summary>
     [JsonPropertyName("connectionSecretKeys")]
     public IList<string>? ConnectionSecretKeys { get; set; }
 
