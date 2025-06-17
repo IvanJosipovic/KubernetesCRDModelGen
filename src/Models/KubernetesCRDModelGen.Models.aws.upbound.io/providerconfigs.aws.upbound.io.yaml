@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: providerconfigs.aws.upbound.io
 spec:
   group: aws.upbound.io
@@ -302,7 +302,6 @@ spec:
                       client.
 
 
-
                       If the hostname is mutable the SDK API clients may modify any part of
 
                       the hostname based on the requirements of the API, (e.g. adding, or
@@ -316,7 +315,6 @@ spec:
                       for the dualstack endpoint of an S3 Accesspoint resource.
 
 
-
                       Care should be taken when providing a custom endpoint for an API. If the
 
                       endpoint hostname is mutable, and the client cannot modify the endpoint
@@ -326,7 +324,6 @@ spec:
                       behavior.
 
 
-
                       If hostname is immutable, the SDK API clients will not modify the
 
                       hostname of the URL. This may cause the API client not to function
@@ -334,7 +331,6 @@ spec:
                       correctly if the API requires the operation specific hostname values
 
                       to be used by the client.
-
 
 
                       This flag does not modify the API client's behavior if this endpoint
