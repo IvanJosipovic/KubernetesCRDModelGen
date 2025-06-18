@@ -646,6 +646,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("reportingTTL")]
     public string? ReportingTTL { get; set; }
 
+    /// <summary>RequireMTUFile specifies whether mtu file is required to start the felix. Optional as to keep the same as previous behavior. [Default: false]</summary>
+    [JsonPropertyName("requireMTUFile")]
+    public bool? RequireMTUFile { get; set; }
+
     /// <summary>RouteRefreshInterval is the period at which Felix re-checks the routes in the dataplane to ensure that no other process has accidentally broken Calico's rules. Set to 0 to disable route refresh. [Default: 90s]</summary>
     [JsonPropertyName("routeRefreshInterval")]
     public string? RouteRefreshInterval { get; set; }
