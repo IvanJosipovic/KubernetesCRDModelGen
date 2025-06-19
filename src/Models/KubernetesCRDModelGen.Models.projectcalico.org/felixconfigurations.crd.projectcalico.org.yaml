@@ -128,7 +128,12 @@ spec:
 
                   always use the BPF program (failing if not supported).
 
-                  [Default: Auto]
+
+                  /To be deprecated in future versions as conntrack map type changed to
+
+                  lru_hash and userspace cleanup is the only mode that is supported.
+
+                  [Default: Userspace]
                 enum:
                 - Auto
                 - Userspace

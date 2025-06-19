@@ -150,7 +150,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("bpfConntrackLogLevel")]
     public string? BpfConntrackLogLevel { get; set; }
 
-    /// <summary>BPFConntrackCleanupMode controls how BPF conntrack entries are cleaned up.  `Auto` will use a BPF program if supported, falling back to userspace if not.  `Userspace` will always use the userspace cleanup code.  `BPFProgram` will always use the BPF program (failing if not supported). [Default: Auto]</summary>
+    /// <summary>BPFConntrackCleanupMode controls how BPF conntrack entries are cleaned up.  `Auto` will use a BPF program if supported, falling back to userspace if not.  `Userspace` will always use the userspace cleanup code.  `BPFProgram` will always use the BPF program (failing if not supported).  /To be deprecated in future versions as conntrack map type changed to lru_hash and userspace cleanup is the only mode that is supported. [Default: Userspace]</summary>
     [JsonPropertyName("bpfConntrackMode")]
     public string? BpfConntrackMode { get; set; }
 
