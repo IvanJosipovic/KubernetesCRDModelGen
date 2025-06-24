@@ -74,6 +74,15 @@ public partial class V1alpha1ManagedSubscriptionSpecApplications
     public string AppId { get; set; }
 }
 
+/// <summary>ManagedApplicationReference references a ManagedApplication.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1ManagedSubscriptionSpecManagedApplications
+{
+    /// <summary>Name is the name of the ManagedApplication.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
 /// <summary>OperationFilter specifies the allowed operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedSubscriptionSpecOperationFilter
@@ -103,13 +112,17 @@ public partial class V1alpha1ManagedSubscriptionSpec
     [JsonPropertyName("apis")]
     public IList<V1alpha1ManagedSubscriptionSpecApis>? Apis { get; set; }
 
-    /// <summary>Applications references the Applications that will gain access to the specified APIs. Multiple ManagedSubscriptions can select the same AppID.</summary>
+    /// <summary>Applications references the Applications that will gain access to the specified APIs. Multiple ManagedSubscriptions can select the same AppID. Deprecated: Use ManagedApplications instead.</summary>
     [JsonPropertyName("applications")]
-    public IList<V1alpha1ManagedSubscriptionSpecApplications> Applications { get; set; }
+    public IList<V1alpha1ManagedSubscriptionSpecApplications>? Applications { get; set; }
 
     /// <summary>Claims specifies an expression that validate claims in order to authorize the request.</summary>
     [JsonPropertyName("claims")]
     public string? Claims { get; set; }
+
+    /// <summary>ManagedApplications references the ManagedApplications that will gain access to the specified APIs. Multiple ManagedSubscriptions can select the same ManagedApplication.</summary>
+    [JsonPropertyName("managedApplications")]
+    public IList<V1alpha1ManagedSubscriptionSpecManagedApplications>? ManagedApplications { get; set; }
 
     /// <summary>OperationFilter specifies the allowed operations on APIs and APIVersions. If not set, all operations are available. An empty OperationFilter prohibits all operations.</summary>
     [JsonPropertyName("operationFilter")]
