@@ -21,7 +21,7 @@ public partial class V1api20240801storageFlexibleServerSpecAdministratorLoginPas
     public string Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.AuthConfig Authentication configuration properties of a server</summary>
+/// <summary>Storage version of v1api20240801.AuthConfig Authentication configuration properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecAuthConfig
 {
@@ -42,7 +42,7 @@ public partial class V1api20240801storageFlexibleServerSpecAuthConfig
     public string? TenantId { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Backup Backup properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Backup Backup properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecBackup
 {
@@ -72,7 +72,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryptionGeoBack
     public string Name { get; set; }
 }
 
-/// <summary>GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for geo-backup of server.</summary>
+/// <summary>GeoBackupUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured to support geographically redundant backups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecDataEncryptionGeoBackupUserAssignedIdentityReference
 {
@@ -106,7 +106,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryptionPrimary
     public string Name { get; set; }
 }
 
-/// <summary>PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the primary server.</summary>
+/// <summary>PrimaryUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the primary storage associated to a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecDataEncryptionPrimaryUserAssignedIdentityReference
 {
@@ -127,7 +127,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryptionPrimary
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.DataEncryption Data encryption properties of a server</summary>
+/// <summary>Storage version of v1api20240801.DataEncryption Data encryption properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecDataEncryption
 {
@@ -147,7 +147,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryption
     [JsonPropertyName("geoBackupKeyURIFromConfig")]
     public V1api20240801storageFlexibleServerSpecDataEncryptionGeoBackupKeyURIFromConfig? GeoBackupKeyURIFromConfig { get; set; }
 
-    /// <summary>GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for geo-backup of server.</summary>
+    /// <summary>GeoBackupUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured to support geographically redundant backups.</summary>
     [JsonPropertyName("geoBackupUserAssignedIdentityReference")]
     public V1api20240801storageFlexibleServerSpecDataEncryptionGeoBackupUserAssignedIdentityReference? GeoBackupUserAssignedIdentityReference { get; set; }
 
@@ -163,7 +163,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryption
     [JsonPropertyName("primaryKeyURIFromConfig")]
     public V1api20240801storageFlexibleServerSpecDataEncryptionPrimaryKeyURIFromConfig? PrimaryKeyURIFromConfig { get; set; }
 
-    /// <summary>PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the primary server.</summary>
+    /// <summary>PrimaryUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data encryption of the primary storage associated to a flexible server.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityReference")]
     public V1api20240801storageFlexibleServerSpecDataEncryptionPrimaryUserAssignedIdentityReference? PrimaryUserAssignedIdentityReference { get; set; }
 
@@ -172,7 +172,7 @@ public partial class V1api20240801storageFlexibleServerSpecDataEncryption
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.HighAvailability High availability properties of a server</summary>
+/// <summary>Storage version of v1api20240801.HighAvailability High availability properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecHighAvailability
 {
@@ -223,7 +223,7 @@ public partial class V1api20240801storageFlexibleServerSpecIdentityUserAssignedI
     public V1api20240801storageFlexibleServerSpecIdentityUserAssignedIdentitiesReference? Reference { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.UserAssignedIdentity Information describing the identities associated with this application.</summary>
+/// <summary>Storage version of v1api20240801.UserAssignedIdentity Identities associated with a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecIdentity
 {
@@ -244,7 +244,7 @@ public partial class V1api20240801storageFlexibleServerSpecIdentity
     public IList<V1api20240801storageFlexibleServerSpecIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.MaintenanceWindow Maintenance window properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.MaintenanceWindow Maintenance window properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecMaintenanceWindow
 {
@@ -269,7 +269,7 @@ public partial class V1api20240801storageFlexibleServerSpecMaintenanceWindow
     public int? StartMinute { get; set; }
 }
 
-/// <summary>DelegatedSubnetResourceReference: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+/// <summary>DelegatedSubnetResourceReference: Resource identifier of the delegated subnet. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecNetworkDelegatedSubnetResourceReference
 {
@@ -290,7 +290,7 @@ public partial class V1api20240801storageFlexibleServerSpecNetworkDelegatedSubne
     public string? Name { get; set; }
 }
 
-/// <summary>PrivateDnsZoneArmResourceReference: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+/// <summary>PrivateDnsZoneArmResourceReference: Identifier of the private DNS zone. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecNetworkPrivateDnsZoneArmResourceReference
 {
@@ -311,7 +311,7 @@ public partial class V1api20240801storageFlexibleServerSpecNetworkPrivateDnsZone
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Network Network properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.Network Network properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecNetwork
 {
@@ -319,11 +319,11 @@ public partial class V1api20240801storageFlexibleServerSpecNetwork
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>DelegatedSubnetResourceReference: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+    /// <summary>DelegatedSubnetResourceReference: Resource identifier of the delegated subnet. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.</summary>
     [JsonPropertyName("delegatedSubnetResourceReference")]
     public V1api20240801storageFlexibleServerSpecNetworkDelegatedSubnetResourceReference? DelegatedSubnetResourceReference { get; set; }
 
-    /// <summary>PrivateDnsZoneArmResourceReference: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone.</summary>
+    /// <summary>PrivateDnsZoneArmResourceReference: Identifier of the private DNS zone. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone.</summary>
     [JsonPropertyName("privateDnsZoneArmResourceReference")]
     public V1api20240801storageFlexibleServerSpecNetworkPrivateDnsZoneArmResourceReference? PrivateDnsZoneArmResourceReference { get; set; }
 
@@ -456,7 +456,7 @@ public partial class V1api20240801storageFlexibleServerSpecOwner
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Replica Replica properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Replica Replica properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecReplica
 {
@@ -477,7 +477,7 @@ public partial class V1api20240801storageFlexibleServerSpecReplica
     public string? Role { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Sku Sku information related properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.Sku Compute information of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecSku
 {
@@ -494,7 +494,7 @@ public partial class V1api20240801storageFlexibleServerSpecSku
     public string? Tier { get; set; }
 }
 
-/// <summary>SourceServerResourceReference: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server</summary>
+/// <summary>SourceServerResourceReference: Identifier of the flexible server to be used as the source of the new flexible server. Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only when the target flexible server is a read replica.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecSourceServerResourceReference
 {
@@ -515,7 +515,7 @@ public partial class V1api20240801storageFlexibleServerSpecSourceServerResourceR
     public string? Name { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Storage Storage properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Storage Storage properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerSpecStorage
 {
@@ -564,7 +564,7 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("administratorLoginPassword")]
     public V1api20240801storageFlexibleServerSpecAdministratorLoginPassword? AdministratorLoginPassword { get; set; }
 
-    /// <summary>Storage version of v1api20240801.AuthConfig Authentication configuration properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.AuthConfig Authentication configuration properties of a flexible server.</summary>
     [JsonPropertyName("authConfig")]
     public V1api20240801storageFlexibleServerSpecAuthConfig? AuthConfig { get; set; }
 
@@ -576,7 +576,7 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("azureName")]
     public string? AzureName { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Backup Backup properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Backup Backup properties of a flexible server.</summary>
     [JsonPropertyName("backup")]
     public V1api20240801storageFlexibleServerSpecBackup? Backup { get; set; }
 
@@ -584,15 +584,15 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("createMode")]
     public string? CreateMode { get; set; }
 
-    /// <summary>Storage version of v1api20240801.DataEncryption Data encryption properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.DataEncryption Data encryption properties of a flexible server.</summary>
     [JsonPropertyName("dataEncryption")]
     public V1api20240801storageFlexibleServerSpecDataEncryption? DataEncryption { get; set; }
 
-    /// <summary>Storage version of v1api20240801.HighAvailability High availability properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.HighAvailability High availability properties of a flexible server.</summary>
     [JsonPropertyName("highAvailability")]
     public V1api20240801storageFlexibleServerSpecHighAvailability? HighAvailability { get; set; }
 
-    /// <summary>Storage version of v1api20240801.UserAssignedIdentity Information describing the identities associated with this application.</summary>
+    /// <summary>Storage version of v1api20240801.UserAssignedIdentity Identities associated with a flexible server.</summary>
     [JsonPropertyName("identity")]
     public V1api20240801storageFlexibleServerSpecIdentity? Identity { get; set; }
 
@@ -600,11 +600,11 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20240801.MaintenanceWindow Maintenance window properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.MaintenanceWindow Maintenance window properties of a flexible server.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public V1api20240801storageFlexibleServerSpecMaintenanceWindow? MaintenanceWindow { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Network Network properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.Network Network properties of a flexible server.</summary>
     [JsonPropertyName("network")]
     public V1api20240801storageFlexibleServerSpecNetwork? Network { get; set; }
 
@@ -624,7 +624,7 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("pointInTimeUTC")]
     public string? PointInTimeUTC { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Replica Replica properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Replica Replica properties of a flexible server.</summary>
     [JsonPropertyName("replica")]
     public V1api20240801storageFlexibleServerSpecReplica? Replica { get; set; }
 
@@ -632,15 +632,15 @@ public partial class V1api20240801storageFlexibleServerSpec
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Sku Sku information related properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.Sku Compute information of a flexible server.</summary>
     [JsonPropertyName("sku")]
     public V1api20240801storageFlexibleServerSpecSku? Sku { get; set; }
 
-    /// <summary>SourceServerResourceReference: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server</summary>
+    /// <summary>SourceServerResourceReference: Identifier of the flexible server to be used as the source of the new flexible server. Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only when the target flexible server is a read replica.</summary>
     [JsonPropertyName("sourceServerResourceReference")]
     public V1api20240801storageFlexibleServerSpecSourceServerResourceReference? SourceServerResourceReference { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Storage Storage properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Storage Storage properties of a flexible server.</summary>
     [JsonPropertyName("storage")]
     public V1api20240801storageFlexibleServerSpecStorage? Storage { get; set; }
 
@@ -653,7 +653,7 @@ public partial class V1api20240801storageFlexibleServerSpec
     public string? Version { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.AuthConfig_STATUS Authentication configuration properties of a server</summary>
+/// <summary>Storage version of v1api20240801.AuthConfig_STATUS Authentication configuration properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusAuthConfig
 {
@@ -674,7 +674,7 @@ public partial class V1api20240801storageFlexibleServerStatusAuthConfig
     public string? TenantId { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Backup_STATUS Backup properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Backup_STATUS Backup properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusBackup
 {
@@ -728,7 +728,7 @@ public partial class V1api20240801storageFlexibleServerStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.DataEncryption_STATUS Data encryption properties of a server</summary>
+/// <summary>Storage version of v1api20240801.DataEncryption_STATUS Data encryption properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusDataEncryption
 {
@@ -765,7 +765,7 @@ public partial class V1api20240801storageFlexibleServerStatusDataEncryption
     public string? Type { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.HighAvailability_STATUS High availability properties of a server</summary>
+/// <summary>Storage version of v1api20240801.HighAvailability_STATUS High availability properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusHighAvailability
 {
@@ -786,7 +786,7 @@ public partial class V1api20240801storageFlexibleServerStatusHighAvailability
     public string? State { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.UserIdentity_STATUS Describes a single user-assigned identity associated with the application.</summary>
+/// <summary>Storage version of v1api20240801.UserIdentity_STATUS User assigned managed identity associated with a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusIdentityUserAssignedIdentities
 {
@@ -803,7 +803,7 @@ public partial class V1api20240801storageFlexibleServerStatusIdentityUserAssigne
     public string? PrincipalId { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.UserAssignedIdentity_STATUS Information describing the identities associated with this application.</summary>
+/// <summary>Storage version of v1api20240801.UserAssignedIdentity_STATUS Identities associated with a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusIdentity
 {
@@ -828,7 +828,7 @@ public partial class V1api20240801storageFlexibleServerStatusIdentity
     public IDictionary<string, V1api20240801storageFlexibleServerStatusIdentityUserAssignedIdentities>? UserAssignedIdentities { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.MaintenanceWindow_STATUS Maintenance window properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.MaintenanceWindow_STATUS Maintenance window properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusMaintenanceWindow
 {
@@ -853,7 +853,7 @@ public partial class V1api20240801storageFlexibleServerStatusMaintenanceWindow
     public int? StartMinute { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Network_STATUS Network properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.Network_STATUS Network properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusNetwork
 {
@@ -887,7 +887,7 @@ public partial class V1api20240801storageFlexibleServerStatusPrivateEndpointConn
     public string? Id { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Replica_STATUS Replica properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Replica_STATUS Replica properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusReplica
 {
@@ -916,7 +916,7 @@ public partial class V1api20240801storageFlexibleServerStatusReplica
     public string? Role { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Sku_STATUS Sku information related properties of a server.</summary>
+/// <summary>Storage version of v1api20240801.Sku_STATUS Compute information of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusSku
 {
@@ -933,7 +933,7 @@ public partial class V1api20240801storageFlexibleServerStatusSku
     public string? Tier { get; set; }
 }
 
-/// <summary>Storage version of v1api20240801.Storage_STATUS Storage properties of a server</summary>
+/// <summary>Storage version of v1api20240801.Storage_STATUS Storage properties of a flexible server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServerStatusStorage
 {
@@ -1011,7 +1011,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>Storage version of v1api20240801.AuthConfig_STATUS Authentication configuration properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.AuthConfig_STATUS Authentication configuration properties of a flexible server.</summary>
     [JsonPropertyName("authConfig")]
     public V1api20240801storageFlexibleServerStatusAuthConfig? AuthConfig { get; set; }
 
@@ -1019,7 +1019,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Backup_STATUS Backup properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Backup_STATUS Backup properties of a flexible server.</summary>
     [JsonPropertyName("backup")]
     public V1api20240801storageFlexibleServerStatusBackup? Backup { get; set; }
 
@@ -1031,7 +1031,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("createMode")]
     public string? CreateMode { get; set; }
 
-    /// <summary>Storage version of v1api20240801.DataEncryption_STATUS Data encryption properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.DataEncryption_STATUS Data encryption properties of a flexible server.</summary>
     [JsonPropertyName("dataEncryption")]
     public V1api20240801storageFlexibleServerStatusDataEncryption? DataEncryption { get; set; }
 
@@ -1039,7 +1039,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("fullyQualifiedDomainName")]
     public string? FullyQualifiedDomainName { get; set; }
 
-    /// <summary>Storage version of v1api20240801.HighAvailability_STATUS High availability properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.HighAvailability_STATUS High availability properties of a flexible server.</summary>
     [JsonPropertyName("highAvailability")]
     public V1api20240801storageFlexibleServerStatusHighAvailability? HighAvailability { get; set; }
 
@@ -1047,7 +1047,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Storage version of v1api20240801.UserAssignedIdentity_STATUS Information describing the identities associated with this application.</summary>
+    /// <summary>Storage version of v1api20240801.UserAssignedIdentity_STATUS Identities associated with a flexible server.</summary>
     [JsonPropertyName("identity")]
     public V1api20240801storageFlexibleServerStatusIdentity? Identity { get; set; }
 
@@ -1055,7 +1055,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Storage version of v1api20240801.MaintenanceWindow_STATUS Maintenance window properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.MaintenanceWindow_STATUS Maintenance window properties of a flexible server.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public V1api20240801storageFlexibleServerStatusMaintenanceWindow? MaintenanceWindow { get; set; }
 
@@ -1067,7 +1067,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Network_STATUS Network properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.Network_STATUS Network properties of a flexible server.</summary>
     [JsonPropertyName("network")]
     public V1api20240801storageFlexibleServerStatusNetwork? Network { get; set; }
 
@@ -1079,7 +1079,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("privateEndpointConnections")]
     public IList<V1api20240801storageFlexibleServerStatusPrivateEndpointConnections>? PrivateEndpointConnections { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Replica_STATUS Replica properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Replica_STATUS Replica properties of a flexible server.</summary>
     [JsonPropertyName("replica")]
     public V1api20240801storageFlexibleServerStatusReplica? Replica { get; set; }
 
@@ -1091,7 +1091,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Sku_STATUS Sku information related properties of a server.</summary>
+    /// <summary>Storage version of v1api20240801.Sku_STATUS Compute information of a flexible server.</summary>
     [JsonPropertyName("sku")]
     public V1api20240801storageFlexibleServerStatusSku? Sku { get; set; }
 
@@ -1103,7 +1103,7 @@ public partial class V1api20240801storageFlexibleServerStatus
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>Storage version of v1api20240801.Storage_STATUS Storage properties of a server</summary>
+    /// <summary>Storage version of v1api20240801.Storage_STATUS Storage properties of a flexible server.</summary>
     [JsonPropertyName("storage")]
     public V1api20240801storageFlexibleServerStatusStorage? Storage { get; set; }
 

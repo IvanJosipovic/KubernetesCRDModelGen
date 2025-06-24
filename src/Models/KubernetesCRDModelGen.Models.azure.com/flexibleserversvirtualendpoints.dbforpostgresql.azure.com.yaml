@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversvirtualendpoints.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -87,12 +87,12 @@ spec:
                 minLength: 3
                 type: string
               endpointType:
-                description: 'EndpointType: The endpoint type for the virtual endpoint.'
+                description: 'EndpointType: Type of endpoint for the virtual endpoints.'
                 enum:
                 - ReadWrite
                 type: string
               members:
-                description: 'Members: List of members for a virtual endpoint'
+                description: 'Members: List of flexible servers that one of the virtual endpoints can refer to.'
                 items:
                   type: string
                 type: array
@@ -248,7 +248,7 @@ spec:
                   type: object
                 type: array
               endpointType:
-                description: 'EndpointType: The endpoint type for the virtual endpoint.'
+                description: 'EndpointType: Type of endpoint for the virtual endpoints.'
                 type: string
               id:
                 description: >-
@@ -257,7 +257,7 @@ spec:
                   "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                 type: string
               members:
-                description: 'Members: List of members for a virtual endpoint'
+                description: 'Members: List of flexible servers that one of the virtual endpoints can refer to.'
                 items:
                   type: string
                 type: array
@@ -290,7 +290,7 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               virtualEndpoints:
-                description: 'VirtualEndpoints: List of virtual endpoints for a server'
+                description: 'VirtualEndpoints: List of virtual endpoints for a flexible server.'
                 items:
                   type: string
                 type: array

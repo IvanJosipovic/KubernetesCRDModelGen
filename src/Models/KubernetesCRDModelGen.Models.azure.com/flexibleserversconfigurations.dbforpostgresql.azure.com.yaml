@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversconfigurations.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -2519,10 +2519,16 @@ spec:
                     type: string
                 type: object
               source:
-                description: 'Source: Source of the configuration. Required to update the configuration.'
+                description: >-
+                  Source: Source of the value assigned to the server parameter. Required to update the value assigned to a specific
+
+                  modifiable server parameter.
                 type: string
               value:
-                description: 'Value: Value of the configuration. Required to update the configuration.'
+                description: >-
+                  Value: Value of the server parameter (also known as configuration). Required to update the value assigned to a specific
+
+                  modifiable server parameter.
                 type: string
             required:
             - owner
@@ -2530,7 +2536,7 @@ spec:
           status:
             properties:
               allowedValues:
-                description: 'AllowedValues: Allowed values of the configuration.'
+                description: 'AllowedValues: Allowed values of the server parameter.'
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -2583,16 +2589,16 @@ spec:
                   type: object
                 type: array
               dataType:
-                description: 'DataType: Data type of the configuration.'
+                description: 'DataType: Data type of the server parameter.'
                 type: string
               defaultValue:
-                description: 'DefaultValue: Default value of the configuration.'
+                description: 'DefaultValue: Value assigned by default to the server parameter.'
                 type: string
               description:
-                description: 'Description: Description of the configuration.'
+                description: 'Description: Description of the server parameter.'
                 type: string
               documentationLink:
-                description: 'DocumentationLink: Configuration documentation link.'
+                description: 'DocumentationLink: Link pointing to the documentation of the server parameter.'
                 type: string
               id:
                 description: >-
@@ -2601,19 +2607,30 @@ spec:
                   "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                 type: string
               isConfigPendingRestart:
-                description: 'IsConfigPendingRestart: Configuration is pending restart or not.'
+                description: >-
+                  IsConfigPendingRestart: Indicates if the value assigned to the server parameter is pending a server restart for the
+
+                  value to take effect.
                 type: boolean
               isDynamicConfig:
-                description: 'IsDynamicConfig: Configuration dynamic or static.'
+                description: >-
+                  IsDynamicConfig: Indicates if it's a dynamic (true) or static (false) server parameter. Static server parameters require
+
+                  a server restart after changing the value assigned to it, for the change to take effect. Dynamic server parameters do
+
+                  not require a server restart after changing the value assigned to it, for the change to take effect.
                 type: boolean
               isReadOnly:
-                description: 'IsReadOnly: Configuration read-only or not.'
+                description: "IsReadOnly: Indicates if it's a read-only (true) or modifiable (false) server parameter."
                 type: boolean
               name:
                 description: 'Name: The name of the resource'
                 type: string
               source:
-                description: 'Source: Source of the configuration. Required to update the configuration.'
+                description: >-
+                  Source: Source of the value assigned to the server parameter. Required to update the value assigned to a specific
+
+                  modifiable server parameter.
                 type: string
               systemData:
                 description: 'SystemData: Azure Resource Manager metadata containing createdBy and modifiedBy information.'
@@ -2641,10 +2658,13 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               unit:
-                description: 'Unit: Configuration unit.'
+                description: 'Unit: Units in which the server parameter value is expressed.'
                 type: string
               value:
-                description: 'Value: Value of the configuration. Required to update the configuration.'
+                description: >-
+                  Value: Value of the server parameter (also known as configuration). Required to update the value assigned to a specific
+
+                  modifiable server parameter.
                 type: string
             type: object
         type: object

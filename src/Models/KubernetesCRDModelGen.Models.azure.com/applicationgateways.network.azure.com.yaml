@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: applicationgateways.network.azure.com
 spec:
   conversion:
@@ -2285,27 +2285,169 @@ spec:
                       items:
                         description: Path rule of URL path map of an application gateway.
                         properties:
-                          reference:
-                            description: 'Reference: Resource ID.'
+                          backendAddressPool:
+                            description: 'BackendAddressPool: Backend address pool resource of URL path map path rule.'
                             properties:
-                              armId:
-                                description: >-
-                                  ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
 
-                                  The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
 
-                                  ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                type: string
-                              group:
-                                description: Group is the Kubernetes group of the resource.
-                                type: string
-                              kind:
-                                description: Kind is the Kubernetes kind of the resource.
-                                type: string
-                              name:
-                                description: Name is the Kubernetes name of the resource.
-                                type: string
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          backendHttpSettings:
+                            description: 'BackendHttpSettings: Backend http settings resource of URL path map path rule.'
+                            properties:
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          firewallPolicy:
+                            description: 'FirewallPolicy: Reference to the FirewallPolicy resource.'
+                            properties:
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          loadDistributionPolicy:
+                            description: 'LoadDistributionPolicy: Load Distribution Policy resource of URL path map path rule.'
+                            properties:
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          name:
+                            description: 'Name: Name of the path rule that is unique within an Application Gateway.'
+                            type: string
+                          paths:
+                            description: 'Paths: Path rules of URL path map.'
+                            items:
+                              type: string
+                            type: array
+                          redirectConfiguration:
+                            description: 'RedirectConfiguration: Redirect configuration resource of URL path map path rule.'
+                            properties:
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          rewriteRuleSet:
+                            description: 'RewriteRuleSet: Rewrite rule set resource of URL path map path rule.'
+                            properties:
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
                             type: object
                         type: object
                       type: array
@@ -5702,27 +5844,233 @@ spec:
 
                               resources, allowing for full fidelity round trip conversions
                             type: object
-                          reference:
-                            description: 'Reference: Resource ID.'
+                          backendAddressPool:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
                             properties:
-                              armId:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
                                 description: >-
-                                  ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
 
-                                  The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
 
-                                  ARMID is mutually exclusive with Group, Kind, Namespace and Name.
-                                pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
-                                type: string
-                              group:
-                                description: Group is the Kubernetes group of the resource.
-                                type: string
-                              kind:
-                                description: Kind is the Kubernetes kind of the resource.
-                                type: string
-                              name:
-                                description: Name is the Kubernetes name of the resource.
-                                type: string
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          backendHttpSettings:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          firewallPolicy:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          loadDistributionPolicy:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          name:
+                            type: string
+                          paths:
+                            items:
+                              type: string
+                            type: array
+                          redirectConfiguration:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
+                            type: object
+                          rewriteRuleSet:
+                            description: >-
+                              Storage version of v1api20220701.SubResource
+
+                              Reference to another ARM resource.
+                            properties:
+                              $propertyBag:
+                                additionalProperties:
+                                  type: string
+                                description: >-
+                                  PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
+
+                                  resources, allowing for full fidelity round trip conversions
+                                type: object
+                              reference:
+                                description: 'Reference: Resource ID.'
+                                properties:
+                                  armId:
+                                    description: >-
+                                      ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
+
+                                      The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
+
+                                      ARMID is mutually exclusive with Group, Kind, Namespace and Name.
+                                    pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
+                                    type: string
+                                  group:
+                                    description: Group is the Kubernetes group of the resource.
+                                    type: string
+                                  kind:
+                                    description: Kind is the Kubernetes kind of the resource.
+                                    type: string
+                                  name:
+                                    description: Name is the Kubernetes name of the resource.
+                                    type: string
+                                type: object
                             type: object
                         type: object
                       type: array

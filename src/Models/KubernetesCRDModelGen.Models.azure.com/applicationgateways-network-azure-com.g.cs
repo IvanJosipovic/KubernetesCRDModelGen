@@ -2545,7 +2545,7 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsDefaul
 
 /// <summary>Reference: Resource ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesReference
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPoolReference
 {
     /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
     [JsonPropertyName("armId")]
@@ -2564,6 +2564,189 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     public string? Name { get; set; }
 }
 
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPool
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPoolReference? Reference { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettingsReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettings
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettingsReference? Reference { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicyReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicy
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicyReference? Reference { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicyReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicy
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicyReference? Reference { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfigurationReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfiguration
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfigurationReference? Reference { get; set; }
+}
+
+/// <summary>Reference: Resource ID.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSetReference
+{
+    /// <summary>ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}. The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level ARMID is mutually exclusive with Group, Kind, Namespace and Name.</summary>
+    [JsonPropertyName("armId")]
+    public string? ArmId { get; set; }
+
+    /// <summary>Group is the Kubernetes group of the resource.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
+    /// <summary>Kind is the Kubernetes kind of the resource.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>Name is the Kubernetes name of the resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSet
+{
+    /// <summary>PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage resources, allowing for full fidelity round trip conversions</summary>
+    [JsonPropertyName("$propertyBag")]
+    public IDictionary<string, string>? PropertyBag { get; set; }
+
+    /// <summary>Reference: Resource ID.</summary>
+    [JsonPropertyName("reference")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSetReference? Reference { get; set; }
+}
+
 /// <summary>Storage version of v1api20220701.ApplicationGatewayPathRule Path rule of URL path map of an application gateway.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRules
@@ -2572,9 +2755,37 @@ public partial class V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRu
     [JsonPropertyName("$propertyBag")]
     public IDictionary<string, string>? PropertyBag { get; set; }
 
-    /// <summary>Reference: Resource ID.</summary>
-    [JsonPropertyName("reference")]
-    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesReference? Reference { get; set; }
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("backendAddressPool")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendAddressPool? BackendAddressPool { get; set; }
+
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("backendHttpSettings")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesBackendHttpSettings? BackendHttpSettings { get; set; }
+
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("firewallPolicy")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesFirewallPolicy? FirewallPolicy { get; set; }
+
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("loadDistributionPolicy")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesLoadDistributionPolicy? LoadDistributionPolicy { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("paths")]
+    public IList<string>? Paths { get; set; }
+
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("redirectConfiguration")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRedirectConfiguration? RedirectConfiguration { get; set; }
+
+    /// <summary>Storage version of v1api20220701.SubResource Reference to another ARM resource.</summary>
+    [JsonPropertyName("rewriteRuleSet")]
+    public V1api20220701storageApplicationGatewaySpecUrlPathMapsPathRulesRewriteRuleSet? RewriteRuleSet { get; set; }
 }
 
 /// <summary>Storage version of v1api20220701.ApplicationGatewayUrlPathMap UrlPathMaps give a url path to the backend mapping information for PathBasedRouting.</summary>

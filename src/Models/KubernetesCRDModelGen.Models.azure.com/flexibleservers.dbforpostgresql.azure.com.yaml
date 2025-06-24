@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleservers.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -6484,12 +6484,19 @@ spec:
             properties:
               administratorLogin:
                 description: >-
-                  AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created
+                  AdministratorLogin: Name of the login designated as the first password based administrator assigned to your instance of
 
-                  (and is required for creation).
+                  PostgreSQL. Must be specified the first time that you enable password based authentication on a server. Once set to a
+
+                  given value, it cannot be changed for the rest of the life of a server. If you disable password based authentication on
+
+                  a server which had it enabled, this password based role isn't deleted.
                 type: string
               administratorLoginPassword:
-                description: 'AdministratorLoginPassword: The administrator login password (required for server creation).'
+                description: >-
+                  AdministratorLoginPassword: Password assigned to the administrator login. As long as password authentication is enabled,
+
+                  this password can be changed at any time.
                 properties:
                   key:
                     description: Key is the key in the Kubernetes secret being referenced
@@ -6505,26 +6512,26 @@ spec:
                 - name
                 type: object
               authConfig:
-                description: 'AuthConfig: AuthConfig properties of a server.'
+                description: 'AuthConfig: Authentication configuration properties of a flexible server.'
                 properties:
                   activeDirectoryAuth:
-                    description: 'ActiveDirectoryAuth: If Enabled, Azure Active Directory authentication is enabled.'
+                    description: 'ActiveDirectoryAuth: Indicates if the server supports Microsoft Entra authentication.'
                     enum:
                     - Disabled
                     - Enabled
                     type: string
                   passwordAuth:
-                    description: 'PasswordAuth: If Enabled, Password authentication is enabled.'
+                    description: 'PasswordAuth: Indicates if the server supports password based authentication.'
                     enum:
                     - Disabled
                     - Enabled
                     type: string
                   tenantId:
-                    description: 'TenantId: Tenant id of the server.'
+                    description: 'TenantId: Identifier of the tenant of the delegated resource.'
                     type: string
                 type: object
               availabilityZone:
-                description: 'AvailabilityZone: availability zone information of the server.'
+                description: 'AvailabilityZone: Availability zone of a flexible server.'
                 type: string
               azureName:
                 description: >-
@@ -6536,20 +6543,20 @@ spec:
                 pattern: ^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*
                 type: string
               backup:
-                description: 'Backup: Backup properties of a server.'
+                description: 'Backup: Backup properties of a flexible server.'
                 properties:
                   backupRetentionDays:
-                    description: 'BackupRetentionDays: Backup retention days for the server.'
+                    description: 'BackupRetentionDays: Backup retention days for the flexible server.'
                     type: integer
                   geoRedundantBackup:
-                    description: 'GeoRedundantBackup: A value indicating whether Geo-Redundant backup is enabled on the server.'
+                    description: 'GeoRedundantBackup: Indicates if the server is configured to create geographically redundant backups.'
                     enum:
                     - Disabled
                     - Enabled
                     type: string
                 type: object
               createMode:
-                description: 'CreateMode: The mode to create a new PostgreSQL server.'
+                description: 'CreateMode: Creation mode of a new flexible server.'
                 enum:
                 - Create
                 - Default
@@ -6560,19 +6567,34 @@ spec:
                 - Update
                 type: string
               dataEncryption:
-                description: 'DataEncryption: Data encryption properties of a server.'
+                description: 'DataEncryption: Data encryption properties of a flexible server.'
                 properties:
                   geoBackupEncryptionKeyStatus:
-                    description: 'GeoBackupEncryptionKeyStatus: Geo-backup encryption key status for Data encryption enabled server.'
+                    description: >-
+                      GeoBackupEncryptionKeyStatus: Status of key used by a flexible server configured with data encryption based on customer
+
+                      managed key, to encrypt the geographically redundant storage associated to the server when it is configured to support
+
+                      geographically redundant backups.
                     enum:
                     - Invalid
                     - Valid
                     type: string
                   geoBackupKeyURI:
-                    description: 'GeoBackupKeyURI: URI for the key in keyvault for data encryption for geo-backup of server.'
+                    description: >-
+                      GeoBackupKeyURI: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data
+
+                      encryption of the geographically redundant storage associated to a flexible server that is configured to support
+
+                      geographically redundant backups.
                     type: string
                   geoBackupKeyURIFromConfig:
-                    description: 'GeoBackupKeyURIFromConfig: URI for the key in keyvault for data encryption for geo-backup of server.'
+                    description: >-
+                      GeoBackupKeyURIFromConfig: Identifier of the user assigned managed identity used to access the key in Azure Key Vault
+
+                      for data encryption of the geographically redundant storage associated to a flexible server that is configured to
+
+                      support geographically redundant backups.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes configmap being referenced
@@ -6589,9 +6611,11 @@ spec:
                     type: object
                   geoBackupUserAssignedIdentityReference:
                     description: >-
-                      GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
+                      GeoBackupUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure
 
-                      geo-backup of server.
+                      Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured
+
+                      to support geographically redundant backups.
                     properties:
                       armId:
                         description: >-
@@ -6613,16 +6637,25 @@ spec:
                         type: string
                     type: object
                   primaryEncryptionKeyStatus:
-                    description: 'PrimaryEncryptionKeyStatus: Primary encryption key status for Data encryption enabled server.'
+                    description: >-
+                      PrimaryEncryptionKeyStatus: Status of key used by a flexible server configured with data encryption based on customer
+
+                      managed key, to encrypt the primary storage associated to the server.
                     enum:
                     - Invalid
                     - Valid
                     type: string
                   primaryKeyURI:
-                    description: 'PrimaryKeyURI: URI for the key in keyvault for data encryption of the primary server.'
+                    description: >-
+                      PrimaryKeyURI: URI of the key in Azure Key Vault used for data encryption of the primary storage associated to a
+
+                      flexible server.
                     type: string
                   primaryKeyURIFromConfig:
-                    description: 'PrimaryKeyURIFromConfig: URI for the key in keyvault for data encryption of the primary server.'
+                    description: >-
+                      PrimaryKeyURIFromConfig: URI of the key in Azure Key Vault used for data encryption of the primary storage associated to
+
+                      a flexible server.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes configmap being referenced
@@ -6639,9 +6672,9 @@ spec:
                     type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
-                      PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the
+                      PrimaryUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure
 
-                      primary server.
+                      Key Vault for data encryption of the primary storage associated to a flexible server.
                     properties:
                       armId:
                         description: >-
@@ -6663,34 +6696,37 @@ spec:
                         type: string
                     type: object
                   type:
-                    description: 'Type: Data encryption type to depict if it is System Managed vs Azure Key vault.'
+                    description: 'Type: Data encryption type used by a flexible server.'
                     enum:
                     - AzureKeyVault
                     - SystemManaged
                     type: string
                 type: object
               highAvailability:
-                description: 'HighAvailability: High availability properties of a server.'
+                description: 'HighAvailability: High availability properties of a flexible server.'
                 properties:
                   mode:
-                    description: 'Mode: The HA mode for the server.'
+                    description: 'Mode: High availability mode for a flexible server.'
                     enum:
                     - Disabled
                     - SameZone
                     - ZoneRedundant
                     type: string
                   standbyAvailabilityZone:
-                    description: 'StandbyAvailabilityZone: availability zone information of the standby.'
+                    description: >-
+                      StandbyAvailabilityZone: Availability zone associated to the standby server created when high availability is set to
+
+                      SameZone or ZoneRedundant.
                     type: string
                 type: object
               identity:
-                description: 'Identity: Describes the identity of the application.'
+                description: 'Identity: User assigned managed identities assigned to the flexible server.'
                 properties:
                   principalId:
-                    description: 'PrincipalId: the identity principal Id of the server.'
+                    description: 'PrincipalId: Identifier of the object of the service principal associated to the user assigned managed identity.'
                     type: string
                   type:
-                    description: 'Type: the types of identities associated with this resource'
+                    description: 'Type: Types of identities associated with a flexible server.'
                     enum:
                     - None
                     - SystemAssigned
@@ -6698,7 +6734,7 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: 'UserAssignedIdentities: represents user assigned identities map.'
+                    description: 'UserAssignedIdentities: Map of user assigned managed identities.'
                     items:
                       description: Information about the user assigned identity for the resource
                       properties:
@@ -6733,34 +6769,34 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               maintenanceWindow:
-                description: 'MaintenanceWindow: Maintenance window properties of a server.'
+                description: 'MaintenanceWindow: Maintenance window properties of a flexible server.'
                 properties:
                   customWindow:
-                    description: 'CustomWindow: indicates whether custom window is enabled or disabled'
+                    description: 'CustomWindow: Indicates whether custom window is enabled or disabled.'
                     type: string
                   dayOfWeek:
-                    description: 'DayOfWeek: day of week for maintenance window'
+                    description: 'DayOfWeek: Day of the week to be used for maintenance window.'
                     type: integer
                   startHour:
-                    description: 'StartHour: start hour for maintenance window'
+                    description: 'StartHour: Start hour to be used for maintenance window.'
                     type: integer
                   startMinute:
-                    description: 'StartMinute: start minute for maintenance window'
+                    description: 'StartMinute: Start minute to be used for maintenance window.'
                     type: integer
                 type: object
               network:
                 description: >-
-                  Network: Network properties of a server. This Network property is required to be passed only in case you want the server
+                  Network: Network properties of a flexible server. Only required if you want your server to be integrated into a virtual
 
-                  to be Private access server.
+                  network provided by customer.
                 properties:
                   delegatedSubnetResourceReference:
                     description: >-
-                      DelegatedSubnetResourceReference: Delegated subnet arm resource id. This is required to be passed during create, in case
+                      DelegatedSubnetResourceReference: Resource identifier of the delegated subnet. Required during creation of a new server,
 
-                      we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update
+                      in case you want the server to be integrated into your own virtual network. For an update operation, you only have to
 
-                      the value for Private DNS zone.
+                      provide this property if you want to change the value assigned for the private DNS zone.
                     properties:
                       armId:
                         description: >-
@@ -6783,11 +6819,11 @@ spec:
                     type: object
                   privateDnsZoneArmResourceReference:
                     description: >-
-                      PrivateDnsZoneArmResourceReference: Private dns zone arm resource id. This is required to be passed during create, in
+                      PrivateDnsZoneArmResourceReference: Identifier of the private DNS zone. Required during creation of a new server, in
 
-                      case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to
+                      case you want the server to be integrated into your own virtual network. For an update operation, you only have to
 
-                      update the value for Private DNS zone.
+                      provide this property if you want to change the value assigned for the private DNS zone.
                     properties:
                       armId:
                         description: >-
@@ -6809,7 +6845,7 @@ spec:
                         type: string
                     type: object
                   publicNetworkAccess:
-                    description: 'PublicNetworkAccess: public network access is enabled or not'
+                    description: 'PublicNetworkAccess: Indicates if public network access is enabled or not.'
                     enum:
                     - Disabled
                     - Enabled
@@ -6959,30 +6995,39 @@ spec:
                 type: object
               pointInTimeUTC:
                 description: >-
-                  PointInTimeUTC: Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when
+                  PointInTimeUTC: Creation time (in ISO8601 format) of the backup which you want to restore in the new flexible server.
 
-                  'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'ReviveDropped'.
+                  It's required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', or 'ReviveDropped'.
                 type: string
               replica:
-                description: >-
-                  Replica: Replica properties of a server. These Replica properties are required to be passed only in case you want to
-
-                  Promote a server.
+                description: 'Replica: Read replica properties of a flexible server. Required only in case that you want to promote a server.'
                 properties:
                   promoteMode:
-                    description: 'PromoteMode: Sets the promote mode for a replica server. This is a write only property.'
+                    description: >-
+                      PromoteMode: Type of operation to apply on the read replica. This property is write only. Standalone means that the read
+
+                      replica will be promoted to a standalone server, and will become a completely independent entity from the replication
+
+                      set. Switchover means that the read replica will roles with the primary server.
                     enum:
                     - standalone
                     - switchover
                     type: string
                   promoteOption:
-                    description: 'PromoteOption: Sets the promote options for a replica server. This is a write only property.'
+                    description: >-
+                      PromoteOption: Data synchronization option to use when processing the operation specified in the promoteMode property
+
+                      This property is write only. Planned means that the operation will wait for data in the read replica to be fully
+
+                      synchronized with its source server before it initiates the operation. Forced means that the operation will not wait for
+
+                      data in the read replica to be synchronized with its source server before it initiates the operation.
                     enum:
                     - forced
                     - planned
                     type: string
                   role:
-                    description: 'Role: Used to indicate role of the server in replication set.'
+                    description: 'Role: Role of the server in a replication set.'
                     enum:
                     - AsyncReplica
                     - GeoAsyncReplica
@@ -6991,7 +7036,7 @@ spec:
                     type: string
                 type: object
               replicationRole:
-                description: 'ReplicationRole: Replication role of the server'
+                description: 'ReplicationRole: Role of the server in a replication set.'
                 enum:
                 - AsyncReplica
                 - GeoAsyncReplica
@@ -6999,13 +7044,13 @@ spec:
                 - Primary
                 type: string
               sku:
-                description: 'Sku: The SKU (pricing tier) of the server.'
+                description: 'Sku: Compute tier and size of a flexible server.'
                 properties:
                   name:
-                    description: 'Name: The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.'
+                    description: 'Name: Name by which is known a given compute size assigned to a flexible server.'
                     type: string
                   tier:
-                    description: 'Tier: The tier of the particular SKU, e.g. Burstable.'
+                    description: 'Tier: Tier of the compute assigned to a flexible server.'
                     enum:
                     - Burstable
                     - GeneralPurpose
@@ -7017,9 +7062,11 @@ spec:
                 type: object
               sourceServerResourceReference:
                 description: >-
-                  SourceServerResourceReference: The source server resource ID to restore from. It's required when 'createMode' is
+                  SourceServerResourceReference: Identifier of the flexible server to be used as the source of the new flexible server.
 
-                  'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server
+                  Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is
+
+                  returned only when the target flexible server is a read replica.
                 properties:
                   armId:
                     description: >-
@@ -7041,25 +7088,28 @@ spec:
                     type: string
                 type: object
               storage:
-                description: 'Storage: Storage properties of a server.'
+                description: 'Storage: Storage properties of a flexible server.'
                 properties:
                   autoGrow:
-                    description: 'AutoGrow: Flag to enable / disable Storage Auto grow for flexible server.'
+                    description: >-
+                      AutoGrow: Flag to enable or disable the automatic growth of storage size of a flexible server when available space is
+
+                      nearing zero and conditions allow for automatically growing storage size.
                     enum:
                     - Disabled
                     - Enabled
                     type: string
                   iops:
-                    description: 'Iops: Storage tier IOPS quantity. This property is required to be set for storage Type PremiumV2_LRS'
+                    description: 'Iops: Maximum IOPS supported for storage. Required when type of storage is PremiumV2_LRS.'
                     type: integer
                   storageSizeGB:
-                    description: 'StorageSizeGB: Max storage allowed for a server.'
+                    description: 'StorageSizeGB: Size of storage assigned to a flexible server.'
                     type: integer
                   throughput:
-                    description: 'Throughput: Storage throughput for the server. This is required to be set for storage Type PremiumV2_LRS'
+                    description: 'Throughput: Maximum throughput supported for storage. Required when type of storage is PremiumV2_LRS.'
                     type: integer
                   tier:
-                    description: 'Tier: Name of storage tier for IOPS.'
+                    description: 'Tier: Storage tier of a flexible server.'
                     enum:
                     - P1
                     - P10
@@ -7078,9 +7128,9 @@ spec:
                     type: string
                   type:
                     description: >-
-                      Type: Storage type for the server. Allowed values are Premium_LRS and PremiumV2_LRS, and default is Premium_LRS if not
+                      Type: Type of storage assigned to a flexible server. Allowed values are Premium_LRS or PremiumV2_LRS. If not specified,
 
-                      specified
+                      it defaults to Premium_LRS.
                     enum:
                     - PremiumV2_LRS
                     - Premium_LRS
@@ -7092,7 +7142,7 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               version:
-                description: 'Version: PostgreSQL Server version.'
+                description: 'Version: Major version of PostgreSQL database engine.'
                 enum:
                 - 11
                 - 12
@@ -7109,37 +7159,41 @@ spec:
             properties:
               administratorLogin:
                 description: >-
-                  AdministratorLogin: The administrator's login name of a server. Can only be specified when the server is being created
+                  AdministratorLogin: Name of the login designated as the first password based administrator assigned to your instance of
 
-                  (and is required for creation).
+                  PostgreSQL. Must be specified the first time that you enable password based authentication on a server. Once set to a
+
+                  given value, it cannot be changed for the rest of the life of a server. If you disable password based authentication on
+
+                  a server which had it enabled, this password based role isn't deleted.
                 type: string
               authConfig:
-                description: 'AuthConfig: AuthConfig properties of a server.'
+                description: 'AuthConfig: Authentication configuration properties of a flexible server.'
                 properties:
                   activeDirectoryAuth:
-                    description: 'ActiveDirectoryAuth: If Enabled, Azure Active Directory authentication is enabled.'
+                    description: 'ActiveDirectoryAuth: Indicates if the server supports Microsoft Entra authentication.'
                     type: string
                   passwordAuth:
-                    description: 'PasswordAuth: If Enabled, Password authentication is enabled.'
+                    description: 'PasswordAuth: Indicates if the server supports password based authentication.'
                     type: string
                   tenantId:
-                    description: 'TenantId: Tenant id of the server.'
+                    description: 'TenantId: Identifier of the tenant of the delegated resource.'
                     type: string
                 type: object
               availabilityZone:
-                description: 'AvailabilityZone: availability zone information of the server.'
+                description: 'AvailabilityZone: Availability zone of a flexible server.'
                 type: string
               backup:
-                description: 'Backup: Backup properties of a server.'
+                description: 'Backup: Backup properties of a flexible server.'
                 properties:
                   backupRetentionDays:
-                    description: 'BackupRetentionDays: Backup retention days for the server.'
+                    description: 'BackupRetentionDays: Backup retention days for the flexible server.'
                     type: integer
                   earliestRestoreDate:
-                    description: 'EarliestRestoreDate: The earliest restore point time (ISO8601 format) for server.'
+                    description: 'EarliestRestoreDate: Earliest restore point time (ISO8601 format) for a flexible server.'
                     type: string
                   geoRedundantBackup:
-                    description: 'GeoRedundantBackup: A value indicating whether Geo-Redundant backup is enabled on the server.'
+                    description: 'GeoRedundantBackup: Indicates if the server is configured to create geographically redundant backups.'
                     type: string
                 type: object
               conditions:
@@ -7193,53 +7247,74 @@ spec:
                   type: object
                 type: array
               createMode:
-                description: 'CreateMode: The mode to create a new PostgreSQL server.'
+                description: 'CreateMode: Creation mode of a new flexible server.'
                 type: string
               dataEncryption:
-                description: 'DataEncryption: Data encryption properties of a server.'
+                description: 'DataEncryption: Data encryption properties of a flexible server.'
                 properties:
                   geoBackupEncryptionKeyStatus:
-                    description: 'GeoBackupEncryptionKeyStatus: Geo-backup encryption key status for Data encryption enabled server.'
+                    description: >-
+                      GeoBackupEncryptionKeyStatus: Status of key used by a flexible server configured with data encryption based on customer
+
+                      managed key, to encrypt the geographically redundant storage associated to the server when it is configured to support
+
+                      geographically redundant backups.
                     type: string
                   geoBackupKeyURI:
-                    description: 'GeoBackupKeyURI: URI for the key in keyvault for data encryption for geo-backup of server.'
+                    description: >-
+                      GeoBackupKeyURI: Identifier of the user assigned managed identity used to access the key in Azure Key Vault for data
+
+                      encryption of the geographically redundant storage associated to a flexible server that is configured to support
+
+                      geographically redundant backups.
                     type: string
                   geoBackupUserAssignedIdentityId:
                     description: >-
-                      GeoBackupUserAssignedIdentityId: Resource Id for the User assigned identity to be used for data encryption for
+                      GeoBackupUserAssignedIdentityId: Identifier of the user assigned managed identity used to access the key in Azure Key
 
-                      geo-backup of server.
+                      Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured to
+
+                      support geographically redundant backups.
                     type: string
                   primaryEncryptionKeyStatus:
-                    description: 'PrimaryEncryptionKeyStatus: Primary encryption key status for Data encryption enabled server.'
+                    description: >-
+                      PrimaryEncryptionKeyStatus: Status of key used by a flexible server configured with data encryption based on customer
+
+                      managed key, to encrypt the primary storage associated to the server.
                     type: string
                   primaryKeyURI:
-                    description: 'PrimaryKeyURI: URI for the key in keyvault for data encryption of the primary server.'
+                    description: >-
+                      PrimaryKeyURI: URI of the key in Azure Key Vault used for data encryption of the primary storage associated to a
+
+                      flexible server.
                     type: string
                   primaryUserAssignedIdentityId:
                     description: >-
-                      PrimaryUserAssignedIdentityId: Resource Id for the User assigned identity to be used for data encryption of the primary
+                      PrimaryUserAssignedIdentityId: Identifier of the user assigned managed identity used to access the key in Azure Key
 
-                      server.
+                      Vault for data encryption of the primary storage associated to a flexible server.
                     type: string
                   type:
-                    description: 'Type: Data encryption type to depict if it is System Managed vs Azure Key vault.'
+                    description: 'Type: Data encryption type used by a flexible server.'
                     type: string
                 type: object
               fullyQualifiedDomainName:
-                description: 'FullyQualifiedDomainName: The fully qualified domain name of a server.'
+                description: 'FullyQualifiedDomainName: Fully qualified domain name of a flexible server.'
                 type: string
               highAvailability:
-                description: 'HighAvailability: High availability properties of a server.'
+                description: 'HighAvailability: High availability properties of a flexible server.'
                 properties:
                   mode:
-                    description: 'Mode: The HA mode for the server.'
+                    description: 'Mode: High availability mode for a flexible server.'
                     type: string
                   standbyAvailabilityZone:
-                    description: 'StandbyAvailabilityZone: availability zone information of the standby.'
+                    description: >-
+                      StandbyAvailabilityZone: Availability zone associated to the standby server created when high availability is set to
+
+                      SameZone or ZoneRedundant.
                     type: string
                   state:
-                    description: 'State: A state of a HA server that is visible to user.'
+                    description: 'State: Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant.'
                     type: string
                 type: object
               id:
@@ -7249,90 +7324,90 @@ spec:
                   "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                 type: string
               identity:
-                description: 'Identity: Describes the identity of the application.'
+                description: 'Identity: User assigned managed identities assigned to the flexible server.'
                 properties:
                   principalId:
-                    description: 'PrincipalId: the identity principal Id of the server.'
+                    description: 'PrincipalId: Identifier of the object of the service principal associated to the user assigned managed identity.'
                     type: string
                   tenantId:
-                    description: 'TenantId: Tenant id of the server.'
+                    description: 'TenantId: Identifier of the tenant of a flexible server.'
                     type: string
                   type:
-                    description: 'Type: the types of identities associated with this resource'
+                    description: 'Type: Types of identities associated with a flexible server.'
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: Describes a single user-assigned identity associated with the application.
+                      description: User assigned managed identity associated with a flexible server.
                       properties:
                         clientId:
-                          description: 'ClientId: the client identifier of the Service Principal which this identity represents.'
+                          description: 'ClientId: Identifier of the client of the service principal associated to the user assigned managed identity.'
                           type: string
                         principalId:
-                          description: 'PrincipalId: the object identifier of the Service Principal which this identity represents.'
+                          description: 'PrincipalId: Identifier of the object of the service principal associated to the user assigned managed identity.'
                           type: string
                       type: object
-                    description: 'UserAssignedIdentities: represents user assigned identities map.'
+                    description: 'UserAssignedIdentities: Map of user assigned managed identities.'
                     type: object
                 type: object
               location:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               maintenanceWindow:
-                description: 'MaintenanceWindow: Maintenance window properties of a server.'
+                description: 'MaintenanceWindow: Maintenance window properties of a flexible server.'
                 properties:
                   customWindow:
-                    description: 'CustomWindow: indicates whether custom window is enabled or disabled'
+                    description: 'CustomWindow: Indicates whether custom window is enabled or disabled.'
                     type: string
                   dayOfWeek:
-                    description: 'DayOfWeek: day of week for maintenance window'
+                    description: 'DayOfWeek: Day of the week to be used for maintenance window.'
                     type: integer
                   startHour:
-                    description: 'StartHour: start hour for maintenance window'
+                    description: 'StartHour: Start hour to be used for maintenance window.'
                     type: integer
                   startMinute:
-                    description: 'StartMinute: start minute for maintenance window'
+                    description: 'StartMinute: Start minute to be used for maintenance window.'
                     type: integer
                 type: object
               minorVersion:
-                description: 'MinorVersion: The minor version of the server.'
+                description: 'MinorVersion: Minor version of PostgreSQL database engine.'
                 type: string
               name:
                 description: 'Name: The name of the resource'
                 type: string
               network:
                 description: >-
-                  Network: Network properties of a server. This Network property is required to be passed only in case you want the server
+                  Network: Network properties of a flexible server. Only required if you want your server to be integrated into a virtual
 
-                  to be Private access server.
+                  network provided by customer.
                 properties:
                   delegatedSubnetResourceId:
                     description: >-
-                      DelegatedSubnetResourceId: Delegated subnet arm resource id. This is required to be passed during create, in case we
+                      DelegatedSubnetResourceId: Resource identifier of the delegated subnet. Required during creation of a new server, in
 
-                      want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the
+                      case you want the server to be integrated into your own virtual network. For an update operation, you only have to
 
-                      value for Private DNS zone.
+                      provide this property if you want to change the value assigned for the private DNS zone.
                     type: string
                   privateDnsZoneArmResourceId:
                     description: >-
-                      PrivateDnsZoneArmResourceId: Private dns zone arm resource id. This is required to be passed during create, in case we
+                      PrivateDnsZoneArmResourceId: Identifier of the private DNS zone. Required during creation of a new server, in case you
 
-                      want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the
+                      want the server to be integrated into your own virtual network. For an update operation, you only have to provide this
 
-                      value for Private DNS zone.
+                      property if you want to change the value assigned for the private DNS zone.
                     type: string
                   publicNetworkAccess:
-                    description: 'PublicNetworkAccess: public network access is enabled or not'
+                    description: 'PublicNetworkAccess: Indicates if public network access is enabled or not.'
                     type: string
                 type: object
               pointInTimeUTC:
                 description: >-
-                  PointInTimeUTC: Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when
+                  PointInTimeUTC: Creation time (in ISO8601 format) of the backup which you want to restore in the new flexible server.
 
-                  'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'ReviveDropped'.
+                  It's required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', or 'ReviveDropped'.
                 type: string
               privateEndpointConnections:
-                description: 'PrivateEndpointConnections: List of private endpoint connections associated with the specified resource.'
+                description: 'PrivateEndpointConnections: List of private endpoint connections associated with the specified flexible server.'
                 items:
                   description: The private endpoint connection resource.
                   properties:
@@ -7345,78 +7420,94 @@ spec:
                   type: object
                 type: array
               replica:
-                description: >-
-                  Replica: Replica properties of a server. These Replica properties are required to be passed only in case you want to
-
-                  Promote a server.
+                description: 'Replica: Read replica properties of a flexible server. Required only in case that you want to promote a server.'
                 properties:
                   capacity:
-                    description: 'Capacity: Replicas allowed for a server.'
+                    description: 'Capacity: Maximum number of read replicas allowed for a flexible server.'
                     type: integer
                   promoteMode:
-                    description: 'PromoteMode: Sets the promote mode for a replica server. This is a write only property.'
+                    description: >-
+                      PromoteMode: Type of operation to apply on the read replica. This property is write only. Standalone means that the read
+
+                      replica will be promoted to a standalone server, and will become a completely independent entity from the replication
+
+                      set. Switchover means that the read replica will roles with the primary server.
                     type: string
                   promoteOption:
-                    description: 'PromoteOption: Sets the promote options for a replica server. This is a write only property.'
+                    description: >-
+                      PromoteOption: Data synchronization option to use when processing the operation specified in the promoteMode property
+
+                      This property is write only. Planned means that the operation will wait for data in the read replica to be fully
+
+                      synchronized with its source server before it initiates the operation. Forced means that the operation will not wait for
+
+                      data in the read replica to be synchronized with its source server before it initiates the operation.
                     type: string
                   replicationState:
                     description: >-
-                      ReplicationState: Gets the replication state of a replica server. This property is returned only for replicas api call.
+                      ReplicationState: Indicates the replication state of a read replica. This property is returned only when the target
 
-                      Supported values are Active, Catchup, Provisioning, Updating, Broken, Reconfiguring
+                      flexible server is a read replica. Possible  values are Active, Broken, Catchup, Provisioning, Reconfiguring, and
+
+                      Updating
                     type: string
                   role:
-                    description: 'Role: Used to indicate role of the server in replication set.'
+                    description: 'Role: Role of the server in a replication set.'
                     type: string
                 type: object
               replicaCapacity:
-                description: 'ReplicaCapacity: Replicas allowed for a server.'
+                description: 'ReplicaCapacity: Maximum number of read replicas allowed for a flexible server.'
                 type: integer
               replicationRole:
-                description: 'ReplicationRole: Replication role of the server'
+                description: 'ReplicationRole: Role of the server in a replication set.'
                 type: string
               sku:
-                description: 'Sku: The SKU (pricing tier) of the server.'
+                description: 'Sku: Compute tier and size of a flexible server.'
                 properties:
                   name:
-                    description: 'Name: The name of the sku, typically, tier + family + cores, e.g. Standard_D4s_v3.'
+                    description: 'Name: Name by which is known a given compute size assigned to a flexible server.'
                     type: string
                   tier:
-                    description: 'Tier: The tier of the particular SKU, e.g. Burstable.'
+                    description: 'Tier: Tier of the compute assigned to a flexible server.'
                     type: string
                 type: object
               sourceServerResourceId:
                 description: >-
-                  SourceServerResourceId: The source server resource ID to restore from. It's required when 'createMode' is
+                  SourceServerResourceId: Identifier of the flexible server to be used as the source of the new flexible server. Required
 
-                  'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server
+                  when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only
+
+                  when the target flexible server is a read replica.
                 type: string
               state:
-                description: 'State: A state of a server that is visible to user.'
+                description: 'State: Possible states of a flexible server.'
                 type: string
               storage:
-                description: 'Storage: Storage properties of a server.'
+                description: 'Storage: Storage properties of a flexible server.'
                 properties:
                   autoGrow:
-                    description: 'AutoGrow: Flag to enable / disable Storage Auto grow for flexible server.'
+                    description: >-
+                      AutoGrow: Flag to enable or disable the automatic growth of storage size of a flexible server when available space is
+
+                      nearing zero and conditions allow for automatically growing storage size.
                     type: string
                   iops:
-                    description: 'Iops: Storage tier IOPS quantity. This property is required to be set for storage Type PremiumV2_LRS'
+                    description: 'Iops: Maximum IOPS supported for storage. Required when type of storage is PremiumV2_LRS.'
                     type: integer
                   storageSizeGB:
-                    description: 'StorageSizeGB: Max storage allowed for a server.'
+                    description: 'StorageSizeGB: Size of storage assigned to a flexible server.'
                     type: integer
                   throughput:
-                    description: 'Throughput: Storage throughput for the server. This is required to be set for storage Type PremiumV2_LRS'
+                    description: 'Throughput: Maximum throughput supported for storage. Required when type of storage is PremiumV2_LRS.'
                     type: integer
                   tier:
-                    description: 'Tier: Name of storage tier for IOPS.'
+                    description: 'Tier: Storage tier of a flexible server.'
                     type: string
                   type:
                     description: >-
-                      Type: Storage type for the server. Allowed values are Premium_LRS and PremiumV2_LRS, and default is Premium_LRS if not
+                      Type: Type of storage assigned to a flexible server. Allowed values are Premium_LRS or PremiumV2_LRS. If not specified,
 
-                      specified
+                      it defaults to Premium_LRS.
                     type: string
                 type: object
               systemData:
@@ -7450,7 +7541,7 @@ spec:
                 description: 'Type: The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"'
                 type: string
               version:
-                description: 'Version: PostgreSQL Server version.'
+                description: 'Version: Major version of PostgreSQL database engine.'
                 type: string
             type: object
         type: object
@@ -7543,7 +7634,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.AuthConfig
 
-                  Authentication configuration properties of a server
+                  Authentication configuration properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7572,7 +7663,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Backup
 
-                  Backup properties of a server
+                  Backup properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7593,7 +7684,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.DataEncryption
 
-                  Data encryption properties of a server
+                  Data encryption properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7628,9 +7719,11 @@ spec:
                     type: object
                   geoBackupUserAssignedIdentityReference:
                     description: >-
-                      GeoBackupUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption for
+                      GeoBackupUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure
 
-                      geo-backup of server.
+                      Key Vault for data encryption of the geographically redundant storage associated to a flexible server that is configured
+
+                      to support geographically redundant backups.
                     properties:
                       armId:
                         description: >-
@@ -7676,9 +7769,9 @@ spec:
                     type: object
                   primaryUserAssignedIdentityReference:
                     description: >-
-                      PrimaryUserAssignedIdentityReference: Resource Id for the User assigned identity to be used for data encryption of the
+                      PrimaryUserAssignedIdentityReference: Identifier of the user assigned managed identity used to access the key in Azure
 
-                      primary server.
+                      Key Vault for data encryption of the primary storage associated to a flexible server.
                     properties:
                       armId:
                         description: >-
@@ -7706,7 +7799,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.HighAvailability
 
-                  High availability properties of a server
+                  High availability properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7725,7 +7818,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.UserAssignedIdentity
 
-                  Information describing the identities associated with this application.
+                  Identities associated with a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7785,7 +7878,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.MaintenanceWindow
 
-                  Maintenance window properties of a server.
+                  Maintenance window properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7808,7 +7901,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Network
 
-                  Network properties of a server.
+                  Network properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -7820,11 +7913,11 @@ spec:
                     type: object
                   delegatedSubnetResourceReference:
                     description: >-
-                      DelegatedSubnetResourceReference: Delegated subnet arm resource id. This is required to be passed during create, in case
+                      DelegatedSubnetResourceReference: Resource identifier of the delegated subnet. Required during creation of a new server,
 
-                      we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update
+                      in case you want the server to be integrated into your own virtual network. For an update operation, you only have to
 
-                      the value for Private DNS zone.
+                      provide this property if you want to change the value assigned for the private DNS zone.
                     properties:
                       armId:
                         description: >-
@@ -7847,11 +7940,11 @@ spec:
                     type: object
                   privateDnsZoneArmResourceReference:
                     description: >-
-                      PrivateDnsZoneArmResourceReference: Private dns zone arm resource id. This is required to be passed during create, in
+                      PrivateDnsZoneArmResourceReference: Identifier of the private DNS zone. Required during creation of a new server, in
 
-                      case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to
+                      case you want the server to be integrated into your own virtual network. For an update operation, you only have to
 
-                      update the value for Private DNS zone.
+                      provide this property if you want to change the value assigned for the private DNS zone.
                     properties:
                       armId:
                         description: >-
@@ -8051,7 +8144,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Replica
 
-                  Replica properties of a server
+                  Replica properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8074,7 +8167,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Sku
 
-                  Sku information related properties of a server.
+                  Compute information of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8091,9 +8184,11 @@ spec:
                 type: object
               sourceServerResourceReference:
                 description: >-
-                  SourceServerResourceReference: The source server resource ID to restore from. It's required when 'createMode' is
+                  SourceServerResourceReference: Identifier of the flexible server to be used as the source of the new flexible server.
 
-                  'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server
+                  Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is
+
+                  returned only when the target flexible server is a read replica.
                 properties:
                   armId:
                     description: >-
@@ -8118,7 +8213,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Storage
 
-                  Storage properties of a server
+                  Storage properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8167,7 +8262,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.AuthConfig_STATUS
 
-                  Authentication configuration properties of a server
+                  Authentication configuration properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8190,7 +8285,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Backup_STATUS
 
-                  Backup properties of a server
+                  Backup properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8262,7 +8357,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.DataEncryption_STATUS
 
-                  Data encryption properties of a server
+                  Data encryption properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8293,7 +8388,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.HighAvailability_STATUS
 
-                  High availability properties of a server
+                  High availability properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8316,7 +8411,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.UserAssignedIdentity_STATUS
 
-                  Information describing the identities associated with this application.
+                  Identities associated with a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8337,7 +8432,7 @@ spec:
                       description: >-
                         Storage version of v1api20240801.UserIdentity_STATUS
 
-                        Describes a single user-assigned identity associated with the application.
+                        User assigned managed identity associated with a flexible server.
                       properties:
                         $propertyBag:
                           additionalProperties:
@@ -8360,7 +8455,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.MaintenanceWindow_STATUS
 
-                  Maintenance window properties of a server.
+                  Maintenance window properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8387,7 +8482,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Network_STATUS
 
-                  Network properties of a server.
+                  Network properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8429,7 +8524,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Replica_STATUS
 
-                  Replica properties of a server
+                  Replica properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8458,7 +8553,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Sku_STATUS
 
-                  Sku information related properties of a server.
+                  Compute information of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:
@@ -8481,7 +8576,7 @@ spec:
                 description: >-
                   Storage version of v1api20240801.Storage_STATUS
 
-                  Storage properties of a server
+                  Storage properties of a flexible server.
                 properties:
                   $propertyBag:
                     additionalProperties:

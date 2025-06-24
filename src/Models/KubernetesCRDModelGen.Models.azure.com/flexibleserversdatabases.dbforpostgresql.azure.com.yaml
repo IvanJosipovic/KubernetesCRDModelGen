@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversdatabases.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -2247,11 +2247,11 @@ spec:
                 pattern: ^[-\w\._]+$
                 type: string
               charset:
-                description: 'Charset: The charset of the database.'
+                description: 'Charset: Character set of the database.'
                 pattern: ^[a-zA-Z]+\w*$
                 type: string
               collation:
-                description: 'Collation: The collation of the database.'
+                description: 'Collation: Collation of the database.'
                 pattern: ^[a-zA-Z\-]+([. ]|\w)*$
                 type: string
               operatorSpec:
@@ -2356,10 +2356,10 @@ spec:
           status:
             properties:
               charset:
-                description: 'Charset: The charset of the database.'
+                description: 'Charset: Character set of the database.'
                 type: string
               collation:
-                description: 'Collation: The collation of the database.'
+                description: 'Collation: Collation of the database.'
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
