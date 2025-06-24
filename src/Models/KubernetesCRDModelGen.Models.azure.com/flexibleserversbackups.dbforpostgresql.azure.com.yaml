@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversbackups.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -188,10 +188,10 @@ spec:
           status:
             properties:
               backupType:
-                description: 'BackupType: Backup type.'
+                description: 'BackupType: Type of backup.'
                 type: string
               completedTime:
-                description: 'CompletedTime: Backup completed time (ISO8601 format).'
+                description: 'CompletedTime: Time(ISO8601 format) at which the backup was completed.'
                 type: string
               conditions:
                 description: 'Conditions: The observed state of the resource'
@@ -253,7 +253,7 @@ spec:
                 description: 'Name: The name of the resource'
                 type: string
               source:
-                description: 'Source: Backup source'
+                description: 'Source: Source of the backup.'
                 type: string
               systemData:
                 description: 'SystemData: Azure Resource Manager metadata containing createdBy and modifiedBy information.'

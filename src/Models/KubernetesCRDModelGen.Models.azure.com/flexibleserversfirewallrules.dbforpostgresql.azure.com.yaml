@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversfirewallrules.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -2259,7 +2259,7 @@ spec:
                 pattern: ^[-\w\._]+$
                 type: string
               endIpAddress:
-                description: 'EndIpAddress: The end IP address of the server firewall rule. Must be IPv4 format.'
+                description: 'EndIpAddress: IP address defining the end of the range of addresses of a firewall rule. Must be expressed in IPv4 format.'
                 pattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$
                 type: string
               operatorSpec:
@@ -2359,7 +2359,10 @@ spec:
                     type: string
                 type: object
               startIpAddress:
-                description: 'StartIpAddress: The start IP address of the server firewall rule. Must be IPv4 format.'
+                description: >-
+                  StartIpAddress: IP address defining the start of the range of addresses of a firewall rule. Must be expressed in IPv4
+
+                  format.
                 pattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$
                 type: string
             required:
@@ -2420,7 +2423,7 @@ spec:
                   type: object
                 type: array
               endIpAddress:
-                description: 'EndIpAddress: The end IP address of the server firewall rule. Must be IPv4 format.'
+                description: 'EndIpAddress: IP address defining the end of the range of addresses of a firewall rule. Must be expressed in IPv4 format.'
                 type: string
               id:
                 description: >-
@@ -2432,7 +2435,10 @@ spec:
                 description: 'Name: The name of the resource'
                 type: string
               startIpAddress:
-                description: 'StartIpAddress: The start IP address of the server firewall rule. Must be IPv4 format.'
+                description: >-
+                  StartIpAddress: IP address defining the start of the range of addresses of a firewall rule. Must be expressed in IPv4
+
+                  format.
                 type: string
               systemData:
                 description: 'SystemData: Azure Resource Manager metadata containing createdBy and modifiedBy information.'

@@ -3,10 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cert-manager.io/inject-ca-from: azureserviceoperator-system/azureserviceoperator-serving-cert
-    controller-gen.kubebuilder.io/version: v0.16.3
+    controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.13.0
+    app.kubernetes.io/version: v2.14.0
   name: flexibleserversadvancedthreatprotectionsettings.dbforpostgresql.azure.com
 spec:
   conversion:
@@ -176,9 +176,9 @@ spec:
                 type: object
               state:
                 description: >-
-                  State: Specifies the state of the Threat Protection, whether it is enabled or disabled or a state has not been applied
+                  State: Specifies the state of the advanced threat protection, whether it is enabled, disabled, or a state has not been
 
-                  yet on the specific server.
+                  applied yet on the flexible server.
                 enum:
                 - Disabled
                 - Enabled
@@ -240,7 +240,7 @@ spec:
                   type: object
                 type: array
               creationTime:
-                description: 'CreationTime: Specifies the UTC creation time of the policy.'
+                description: 'CreationTime: Specifies the creation time (UTC) of the policy.'
                 type: string
               id:
                 description: >-
@@ -253,9 +253,9 @@ spec:
                 type: string
               state:
                 description: >-
-                  State: Specifies the state of the Threat Protection, whether it is enabled or disabled or a state has not been applied
+                  State: Specifies the state of the advanced threat protection, whether it is enabled, disabled, or a state has not been
 
-                  yet on the specific server.
+                  applied yet on the flexible server.
                 type: string
               systemData:
                 description: 'SystemData: Azure Resource Manager metadata containing createdBy and modifiedBy information.'
