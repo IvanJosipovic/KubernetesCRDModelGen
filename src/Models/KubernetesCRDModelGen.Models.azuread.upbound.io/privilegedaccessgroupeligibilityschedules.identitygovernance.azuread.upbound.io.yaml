@@ -3,18 +3,18 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.14.0
-  name: policydefinitions.authorization.azure.upbound.io
+  name: privilegedaccessgroupeligibilityschedules.identitygovernance.azuread.upbound.io
 spec:
-  group: authorization.azure.upbound.io
+  group: identitygovernance.azuread.upbound.io
   names:
     categories:
     - crossplane
     - managed
-    - azure
-    kind: PolicyDefinition
-    listKind: PolicyDefinitionList
-    plural: policydefinitions
-    singular: policydefinition
+    - azuread
+    kind: PrivilegedAccessGroupEligibilitySchedule
+    listKind: PrivilegedAccessGroupEligibilityScheduleList
+    plural: privilegedaccessgroupeligibilityschedules
+    singular: privilegedaccessgroupeligibilityschedule
   scope: Cluster
   versions:
   - additionalPrinterColumns:
@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: PolicyDefinition is the Schema for the PolicyDefinitions API. Manages a policy rule definition. Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.
+        description: PrivilegedAccessGroupEligibilitySchedule is the Schema for the PrivilegedAccessGroupEligibilitySchedules API.
         properties:
           apiVersion:
             description: >-
@@ -60,7 +60,7 @@ spec:
           metadata:
             type: object
           spec:
-            description: PolicyDefinitionSpec defines the desired state of PolicyDefinition
+            description: PrivilegedAccessGroupEligibilityScheduleSpec defines the desired state of PrivilegedAccessGroupEligibilitySchedule
             properties:
               deletionPolicy:
                 default: Delete
@@ -84,17 +84,32 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  description:
-                    description: The description of the policy definition.
+                  assignmentType:
+                    description: >-
+                      The type of assignment to the group. Can be either member or owner.
+
+                      The ID of the assignment to the group
                     type: string
-                  displayName:
-                    description: The display name of the policy definition.
+                  duration:
+                    description: >-
+                      The duration that this assignment is valid for, formatted as an ISO8601 duration (e.g. P30D for 30 days, PT3H for three hours).
+
+                      The duration of the assignment, formatted as an ISO8601 duration string (e.g. P3D for 3 days)
                     type: string
-                  managementGroupId:
-                    description: The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
+                  expirationDate:
+                    description: >-
+                      01-01T01:02:03Z).
+
+                      The date that this assignment expires, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
                     type: string
-                  managementGroupIdRef:
-                    description: Reference to a ManagementGroup in management to populate managementGroupId.
+                  groupId:
+                    description: >-
+                      The Object ID of the Azure AD group to which the principal will be assigned.
+
+                      The ID of the Group representing the scope of the assignment
+                    type: string
+                  groupIdRef:
+                    description: Reference to a Group in groups to populate groupId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -133,8 +148,8 @@ spec:
                     required:
                     - name
                     type: object
-                  managementGroupIdSelector:
-                    description: Selector for a ManagementGroup in management to populate managementGroupId.
+                  groupIdSelector:
+                    description: Selector for a Group in groups to populate groupId.
                     properties:
                       matchControllerRef:
                         description: >-
@@ -179,20 +194,127 @@ spec:
                             type: string
                         type: object
                     type: object
-                  metadata:
-                    description: The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.
+                  justification:
+                    description: >-
+                      The justification for this assignment. May be required by the role policy.
+
+                      The justification for the assignment
                     type: string
-                  mode:
-                    description: The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.
+                  permanentAssignment:
+                    description: >-
+                      Is this assigment permanently valid.
+
+                      Is the assignment permanent
+                    type: boolean
+                  principalId:
+                    description: >-
+                      The Object ID of the principal to be assigned to the above group. Can be either a user or a group.
+
+                      The ID of the Principal assigned to the schedule
                     type: string
-                  parameters:
-                    description: Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.
+                  principalIdRef:
+                    description: Reference to a User in users to populate principalId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  principalIdSelector:
+                    description: Selector for a User in users to populate principalId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  startDate:
+                    description: >-
+                      01-01T01:02:03Z). If not provided, the assignment is immediately valid.
+
+                      The date that this assignment starts, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
                     type: string
-                  policyRule:
-                    description: The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.
+                  ticketNumber:
+                    description: >-
+                      The ticket number in the ticket system approving this assignment. May be required by the role policy.
+
+                      The ticket number authorising the assignment
                     type: string
-                  policyType:
-                    description: The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.
+                  ticketSystem:
+                    description: >-
+                      The ticket system containing the ticket number approving this assignment. May be required by the role policy.
+
+                      The ticket system authorising the assignment
                     type: string
                 type: object
               initProvider:
@@ -217,17 +339,32 @@ spec:
 
                   autoscaler.
                 properties:
-                  description:
-                    description: The description of the policy definition.
+                  assignmentType:
+                    description: >-
+                      The type of assignment to the group. Can be either member or owner.
+
+                      The ID of the assignment to the group
                     type: string
-                  displayName:
-                    description: The display name of the policy definition.
+                  duration:
+                    description: >-
+                      The duration that this assignment is valid for, formatted as an ISO8601 duration (e.g. P30D for 30 days, PT3H for three hours).
+
+                      The duration of the assignment, formatted as an ISO8601 duration string (e.g. P3D for 3 days)
                     type: string
-                  managementGroupId:
-                    description: The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
+                  expirationDate:
+                    description: >-
+                      01-01T01:02:03Z).
+
+                      The date that this assignment expires, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
                     type: string
-                  managementGroupIdRef:
-                    description: Reference to a ManagementGroup in management to populate managementGroupId.
+                  groupId:
+                    description: >-
+                      The Object ID of the Azure AD group to which the principal will be assigned.
+
+                      The ID of the Group representing the scope of the assignment
+                    type: string
+                  groupIdRef:
+                    description: Reference to a Group in groups to populate groupId.
                     properties:
                       name:
                         description: Name of the referenced object.
@@ -266,8 +403,8 @@ spec:
                     required:
                     - name
                     type: object
-                  managementGroupIdSelector:
-                    description: Selector for a ManagementGroup in management to populate managementGroupId.
+                  groupIdSelector:
+                    description: Selector for a Group in groups to populate groupId.
                     properties:
                       matchControllerRef:
                         description: >-
@@ -312,20 +449,127 @@ spec:
                             type: string
                         type: object
                     type: object
-                  metadata:
-                    description: The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.
+                  justification:
+                    description: >-
+                      The justification for this assignment. May be required by the role policy.
+
+                      The justification for the assignment
                     type: string
-                  mode:
-                    description: The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.
+                  permanentAssignment:
+                    description: >-
+                      Is this assigment permanently valid.
+
+                      Is the assignment permanent
+                    type: boolean
+                  principalId:
+                    description: >-
+                      The Object ID of the principal to be assigned to the above group. Can be either a user or a group.
+
+                      The ID of the Principal assigned to the schedule
                     type: string
-                  parameters:
-                    description: Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.
+                  principalIdRef:
+                    description: Reference to a User in users to populate principalId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  principalIdSelector:
+                    description: Selector for a User in users to populate principalId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  startDate:
+                    description: >-
+                      01-01T01:02:03Z). If not provided, the assignment is immediately valid.
+
+                      The date that this assignment starts, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
                     type: string
-                  policyRule:
-                    description: The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.
+                  ticketNumber:
+                    description: >-
+                      The ticket number in the ticket system approving this assignment. May be required by the role policy.
+
+                      The ticket number authorising the assignment
                     type: string
-                  policyType:
-                    description: The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.
+                  ticketSystem:
+                    description: >-
+                      The ticket system containing the ticket number approving this assignment. May be required by the role policy.
+
+                      The ticket system authorising the assignment
                     type: string
                 type: object
               managementPolicies:
@@ -537,49 +781,82 @@ spec:
             - forProvider
             type: object
             x-kubernetes-validations:
-            - message: spec.forProvider.displayName is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.displayName) || (has(self.initProvider) && has(self.initProvider.displayName))"
-            - message: spec.forProvider.mode is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.mode) || (has(self.initProvider) && has(self.initProvider.mode))"
-            - message: spec.forProvider.policyType is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.policyType) || (has(self.initProvider) && has(self.initProvider.policyType))"
+            - message: spec.forProvider.assignmentType is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.assignmentType) || (has(self.initProvider) && has(self.initProvider.assignmentType))"
           status:
-            description: PolicyDefinitionStatus defines the observed state of PolicyDefinition.
+            description: PrivilegedAccessGroupEligibilityScheduleStatus defines the observed state of PrivilegedAccessGroupEligibilitySchedule.
             properties:
               atProvider:
                 properties:
-                  description:
-                    description: The description of the policy definition.
+                  assignmentType:
+                    description: >-
+                      The type of assignment to the group. Can be either member or owner.
+
+                      The ID of the assignment to the group
                     type: string
-                  displayName:
-                    description: The display name of the policy definition.
+                  duration:
+                    description: >-
+                      The duration that this assignment is valid for, formatted as an ISO8601 duration (e.g. P30D for 30 days, PT3H for three hours).
+
+                      The duration of the assignment, formatted as an ISO8601 duration string (e.g. P3D for 3 days)
+                    type: string
+                  expirationDate:
+                    description: >-
+                      01-01T01:02:03Z).
+
+                      The date that this assignment expires, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
+                    type: string
+                  groupId:
+                    description: >-
+                      The Object ID of the Azure AD group to which the principal will be assigned.
+
+                      The ID of the Group representing the scope of the assignment
                     type: string
                   id:
-                    description: The ID of the Policy Definition.
+                    description: (String) The ID of this request.
                     type: string
-                  managementGroupId:
-                    description: The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.
+                  justification:
+                    description: >-
+                      The justification for this assignment. May be required by the role policy.
+
+                      The justification for the assignment
                     type: string
-                  metadata:
-                    description: The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.
+                  permanentAssignment:
+                    description: >-
+                      Is this assigment permanently valid.
+
+                      Is the assignment permanent
+                    type: boolean
+                  principalId:
+                    description: >-
+                      The Object ID of the principal to be assigned to the above group. Can be either a user or a group.
+
+                      The ID of the Principal assigned to the schedule
                     type: string
-                  mode:
-                    description: The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.
+                  startDate:
+                    description: >-
+                      01-01T01:02:03Z). If not provided, the assignment is immediately valid.
+
+                      The date that this assignment starts, formatted as an RFC3339 date string in UTC (e.g. 2018-01-01T01:02:03Z)
                     type: string
-                  parameters:
-                    description: Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.
+                  status:
+                    description: >-
+                      (String) The provisioning status of this request.
+
+                      The status of the schedule
                     type: string
-                  policyRule:
-                    description: The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.
+                  ticketNumber:
+                    description: >-
+                      The ticket number in the ticket system approving this assignment. May be required by the role policy.
+
+                      The ticket number authorising the assignment
                     type: string
-                  policyType:
-                    description: The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.
+                  ticketSystem:
+                    description: >-
+                      The ticket system containing the ticket number approving this assignment. May be required by the role policy.
+
+                      The ticket system authorising the assignment
                     type: string
-                  roleDefinitionIds:
-                    description: A list of role definition id extracted from policy_rule required for remediation.
-                    items:
-                      type: string
-                    type: array
                 type: object
               conditions:
                 description: Conditions of the resource.
