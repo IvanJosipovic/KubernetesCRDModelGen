@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRefPolicy
+public partial class V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -23,7 +23,7 @@ public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRefP
 
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRef
+public partial class V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -31,12 +31,12 @@ public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRefPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSelectorPolicy
+public partial class V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -49,7 +49,7 @@ public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSele
 
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSelector
+public partial class V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -61,57 +61,103 @@ public partial class V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSele
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecForProvider
+public partial class V1beta1PolicySetDefinitionSpecForProviderPolicyDefinitionGroup
 {
-    /// <summary>The description of the policy definition.</summary>
+    /// <summary>The ID of a resource that contains additional metadata about this policy definition group.</summary>
+    [JsonPropertyName("additionalMetadataResourceId")]
+    public string? AdditionalMetadataResourceId { get; set; }
+
+    /// <summary>The category of this policy definition group.</summary>
+    [JsonPropertyName("category")]
+    public string? Category { get; set; }
+
+    /// <summary>The description of this policy definition group.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The display name of the policy definition.</summary>
+    /// <summary>The display name of this policy definition group.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</summary>
+    /// <summary>The name of this policy definition group.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionSpecForProviderPolicyDefinitionReference
+{
+    /// <summary>Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.</summary>
+    [JsonPropertyName("parameterValues")]
+    public string? ParameterValues { get; set; }
+
+    /// <summary>The ID of the policy definition that will be included in this policy set definition.</summary>
+    [JsonPropertyName("policyDefinitionId")]
+    public string? PolicyDefinitionId { get; set; }
+
+    /// <summary>A list of names of the policy definition groups that this policy definition reference belongs to.</summary>
+    [JsonPropertyName("policyGroupNames")]
+    public IList<string>? PolicyGroupNames { get; set; }
+
+    /// <summary>A unique ID within this policy set definition for this policy definition reference.</summary>
+    [JsonPropertyName("referenceId")]
+    public string? ReferenceId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionSpecForProvider
+{
+    /// <summary>The description of the policy set definition.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The display name of the policy set definition.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The id of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managementGroupId")]
     public string? ManagementGroupId { get; set; }
 
     /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
     [JsonPropertyName("managementGroupIdRef")]
-    public V1beta1PolicyDefinitionSpecForProviderManagementGroupIdRef? ManagementGroupIdRef { get; set; }
+    public V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdRef? ManagementGroupIdRef { get; set; }
 
     /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
     [JsonPropertyName("managementGroupIdSelector")]
-    public V1beta1PolicyDefinitionSpecForProviderManagementGroupIdSelector? ManagementGroupIdSelector { get; set; }
+    public V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdSelector? ManagementGroupIdSelector { get; set; }
 
-    /// <summary>The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.</summary>
+    /// <summary>The metadata for the policy set definition. This is a JSON object representing additional metadata that should be stored with the policy definition.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.</summary>
-    [JsonPropertyName("mode")]
-    public string? Mode { get; set; }
-
-    /// <summary>Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.</summary>
+    /// <summary>Parameters for the policy set definition. This field is a JSON object that allows you to parameterize your policy definition.</summary>
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 
-    /// <summary>The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.</summary>
-    [JsonPropertyName("policyRule")]
-    public string? PolicyRule { get; set; }
+    /// <summary>One or more policy_definition_group blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionGroup")]
+    public IList<V1beta1PolicySetDefinitionSpecForProviderPolicyDefinitionGroup>? PolicyDefinitionGroup { get; set; }
 
-    /// <summary>The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
+    /// <summary>One or more policy_definition_reference blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionReference")]
+    public IList<V1beta1PolicySetDefinitionSpecForProviderPolicyDefinitionReference>? PolicyDefinitionReference { get; set; }
+
+    /// <summary>The policy set type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRefPolicy
+public partial class V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -124,7 +170,7 @@ public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRef
 
 /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRef
+public partial class V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -132,12 +178,12 @@ public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRefPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSelectorPolicy
+public partial class V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -150,7 +196,7 @@ public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSel
 
 /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSelector
+public partial class V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -162,57 +208,103 @@ public partial class V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSel
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionSpecInitProviderPolicyDefinitionGroup
+{
+    /// <summary>The ID of a resource that contains additional metadata about this policy definition group.</summary>
+    [JsonPropertyName("additionalMetadataResourceId")]
+    public string? AdditionalMetadataResourceId { get; set; }
+
+    /// <summary>The category of this policy definition group.</summary>
+    [JsonPropertyName("category")]
+    public string? Category { get; set; }
+
+    /// <summary>The description of this policy definition group.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The display name of this policy definition group.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The name of this policy definition group.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionSpecInitProviderPolicyDefinitionReference
+{
+    /// <summary>Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.</summary>
+    [JsonPropertyName("parameterValues")]
+    public string? ParameterValues { get; set; }
+
+    /// <summary>The ID of the policy definition that will be included in this policy set definition.</summary>
+    [JsonPropertyName("policyDefinitionId")]
+    public string? PolicyDefinitionId { get; set; }
+
+    /// <summary>A list of names of the policy definition groups that this policy definition reference belongs to.</summary>
+    [JsonPropertyName("policyGroupNames")]
+    public IList<string>? PolicyGroupNames { get; set; }
+
+    /// <summary>A unique ID within this policy set definition for this policy definition reference.</summary>
+    [JsonPropertyName("referenceId")]
+    public string? ReferenceId { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecInitProvider
+public partial class V1beta1PolicySetDefinitionSpecInitProvider
 {
-    /// <summary>The description of the policy definition.</summary>
+    /// <summary>The description of the policy set definition.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The display name of the policy definition.</summary>
+    /// <summary>The display name of the policy set definition.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</summary>
+    /// <summary>The id of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managementGroupId")]
     public string? ManagementGroupId { get; set; }
 
     /// <summary>Reference to a ManagementGroup in management to populate managementGroupId.</summary>
     [JsonPropertyName("managementGroupIdRef")]
-    public V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdRef? ManagementGroupIdRef { get; set; }
+    public V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdRef? ManagementGroupIdRef { get; set; }
 
     /// <summary>Selector for a ManagementGroup in management to populate managementGroupId.</summary>
     [JsonPropertyName("managementGroupIdSelector")]
-    public V1beta1PolicyDefinitionSpecInitProviderManagementGroupIdSelector? ManagementGroupIdSelector { get; set; }
+    public V1beta1PolicySetDefinitionSpecInitProviderManagementGroupIdSelector? ManagementGroupIdSelector { get; set; }
 
-    /// <summary>The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.</summary>
+    /// <summary>The metadata for the policy set definition. This is a JSON object representing additional metadata that should be stored with the policy definition.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.</summary>
-    [JsonPropertyName("mode")]
-    public string? Mode { get; set; }
-
-    /// <summary>Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.</summary>
+    /// <summary>Parameters for the policy set definition. This field is a JSON object that allows you to parameterize your policy definition.</summary>
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 
-    /// <summary>The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.</summary>
-    [JsonPropertyName("policyRule")]
-    public string? PolicyRule { get; set; }
+    /// <summary>One or more policy_definition_group blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionGroup")]
+    public IList<V1beta1PolicySetDefinitionSpecInitProviderPolicyDefinitionGroup>? PolicyDefinitionGroup { get; set; }
 
-    /// <summary>The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
+    /// <summary>One or more policy_definition_reference blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionReference")]
+    public IList<V1beta1PolicySetDefinitionSpecInitProviderPolicyDefinitionReference>? PolicyDefinitionReference { get; set; }
+
+    /// <summary>The policy set type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecProviderConfigRefPolicy
+public partial class V1beta1PolicySetDefinitionSpecProviderConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -225,7 +317,7 @@ public partial class V1beta1PolicyDefinitionSpecProviderConfigRefPolicy
 
 /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecProviderConfigRef
+public partial class V1beta1PolicySetDefinitionSpecProviderConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -233,12 +325,12 @@ public partial class V1beta1PolicyDefinitionSpecProviderConfigRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecProviderConfigRefPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfigRefPolicy
+public partial class V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToConfigRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -251,7 +343,7 @@ public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfig
 
 /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfigRef
+public partial class V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToConfigRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -259,12 +351,12 @@ public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfig
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
+    public V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Metadata is the metadata for connection secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToMetadata
+public partial class V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToMetadata
 {
     /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
     [JsonPropertyName("annotations")]
@@ -281,15 +373,15 @@ public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsToMetada
 
 /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsTo
+public partial class V1beta1PolicySetDefinitionSpecPublishConnectionDetailsTo
 {
     /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
     [JsonPropertyName("configRef")]
-    public V1beta1PolicyDefinitionSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
+    public V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
 
     /// <summary>Metadata is the metadata for connection secret.</summary>
     [JsonPropertyName("metadata")]
-    public V1beta1PolicyDefinitionSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
+    public V1beta1PolicySetDefinitionSpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
 
     /// <summary>Name is the name of the connection secret.</summary>
     [JsonPropertyName("name")]
@@ -298,7 +390,7 @@ public partial class V1beta1PolicyDefinitionSpecPublishConnectionDetailsTo
 
 /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpecWriteConnectionSecretToRef
+public partial class V1beta1PolicySetDefinitionSpecWriteConnectionSecretToRef
 {
     /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
@@ -309,9 +401,9 @@ public partial class V1beta1PolicyDefinitionSpecWriteConnectionSecretToRef
     public string Namespace { get; set; }
 }
 
-/// <summary>PolicyDefinitionSpec defines the desired state of PolicyDefinition</summary>
+/// <summary>PolicySetDefinitionSpec defines the desired state of PolicySetDefinition</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionSpec
+public partial class V1beta1PolicySetDefinitionSpec
 {
     /// <summary>DeletionPolicy specifies what will happen to the underlying external when this managed resource is deleted - either "Delete" or "Orphan" the external resource. This field is planned to be deprecated in favor of the ManagementPolicies field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223</summary>
     [JsonPropertyName("deletionPolicy")]
@@ -319,11 +411,11 @@ public partial class V1beta1PolicyDefinitionSpec
 
     /// <summary></summary>
     [JsonPropertyName("forProvider")]
-    public V1beta1PolicyDefinitionSpecForProvider ForProvider { get; set; }
+    public V1beta1PolicySetDefinitionSpecForProvider ForProvider { get; set; }
 
     /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
     [JsonPropertyName("initProvider")]
-    public V1beta1PolicyDefinitionSpecInitProvider? InitProvider { get; set; }
+    public V1beta1PolicySetDefinitionSpecInitProvider? InitProvider { get; set; }
 
     /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. This field is planned to replace the DeletionPolicy field in a future release. Currently, both could be set independently and non-default values would be honored if the feature flag is enabled. If both are custom, the DeletionPolicy field will be ignored. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
     [JsonPropertyName("managementPolicies")]
@@ -331,65 +423,107 @@ public partial class V1beta1PolicyDefinitionSpec
 
     /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
     [JsonPropertyName("providerConfigRef")]
-    public V1beta1PolicyDefinitionSpecProviderConfigRef? ProviderConfigRef { get; set; }
+    public V1beta1PolicySetDefinitionSpecProviderConfigRef? ProviderConfigRef { get; set; }
 
     /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
     [JsonPropertyName("publishConnectionDetailsTo")]
-    public V1beta1PolicyDefinitionSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
+    public V1beta1PolicySetDefinitionSpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
 
     /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
     [JsonPropertyName("writeConnectionSecretToRef")]
-    public V1beta1PolicyDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+    public V1beta1PolicySetDefinitionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionStatusAtProvider
+public partial class V1beta1PolicySetDefinitionStatusAtProviderPolicyDefinitionGroup
 {
-    /// <summary>The description of the policy definition.</summary>
+    /// <summary>The ID of a resource that contains additional metadata about this policy definition group.</summary>
+    [JsonPropertyName("additionalMetadataResourceId")]
+    public string? AdditionalMetadataResourceId { get; set; }
+
+    /// <summary>The category of this policy definition group.</summary>
+    [JsonPropertyName("category")]
+    public string? Category { get; set; }
+
+    /// <summary>The description of this policy definition group.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The display name of the policy definition.</summary>
+    /// <summary>The display name of this policy definition group.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>The ID of the Policy Definition.</summary>
+    /// <summary>The name of this policy definition group.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionStatusAtProviderPolicyDefinitionReference
+{
+    /// <summary>Parameter values for the referenced policy rule. This field is a JSON string that allows you to assign parameters to this policy rule.</summary>
+    [JsonPropertyName("parameterValues")]
+    public string? ParameterValues { get; set; }
+
+    /// <summary>The ID of the policy definition that will be included in this policy set definition.</summary>
+    [JsonPropertyName("policyDefinitionId")]
+    public string? PolicyDefinitionId { get; set; }
+
+    /// <summary>A list of names of the policy definition groups that this policy definition reference belongs to.</summary>
+    [JsonPropertyName("policyGroupNames")]
+    public IList<string>? PolicyGroupNames { get; set; }
+
+    /// <summary>A unique ID within this policy set definition for this policy definition reference.</summary>
+    [JsonPropertyName("referenceId")]
+    public string? ReferenceId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySetDefinitionStatusAtProvider
+{
+    /// <summary>The description of the policy set definition.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>The display name of the policy set definition.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
+
+    /// <summary>The ID of the Policy Set Definition.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The id of the Management Group where this policy should be defined. Changing this forces a new resource to be created.</summary>
+    /// <summary>The id of the Management Group where this policy set definition should be defined. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managementGroupId")]
     public string? ManagementGroupId { get; set; }
 
-    /// <summary>The metadata for the policy definition. This is a JSON string representing additional metadata that should be stored with the policy definition.</summary>
+    /// <summary>The metadata for the policy set definition. This is a JSON object representing additional metadata that should be stored with the policy definition.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>The policy resource manager mode that allows you to specify which resource types will be evaluated. Possible values are All, Indexed, Microsoft.ContainerService.Data, Microsoft.CustomerLockbox.Data, Microsoft.DataCatalog.Data, Microsoft.KeyVault.Data, Microsoft.Kubernetes.Data, Microsoft.MachineLearningServices.Data, Microsoft.Network.Data and Microsoft.Synapse.Data.</summary>
-    [JsonPropertyName("mode")]
-    public string? Mode { get; set; }
-
-    /// <summary>Parameters for the policy definition. This field is a JSON string that allows you to parameterize your policy definition.</summary>
+    /// <summary>Parameters for the policy set definition. This field is a JSON object that allows you to parameterize your policy definition.</summary>
     [JsonPropertyName("parameters")]
     public string? Parameters { get; set; }
 
-    /// <summary>The policy rule for the policy definition. This is a JSON string representing the rule that contains an if and a then block.</summary>
-    [JsonPropertyName("policyRule")]
-    public string? PolicyRule { get; set; }
+    /// <summary>One or more policy_definition_group blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionGroup")]
+    public IList<V1beta1PolicySetDefinitionStatusAtProviderPolicyDefinitionGroup>? PolicyDefinitionGroup { get; set; }
 
-    /// <summary>The policy type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
+    /// <summary>One or more policy_definition_reference blocks as defined below.</summary>
+    [JsonPropertyName("policyDefinitionReference")]
+    public IList<V1beta1PolicySetDefinitionStatusAtProviderPolicyDefinitionReference>? PolicyDefinitionReference { get; set; }
+
+    /// <summary>The policy set type. Possible values are BuiltIn, Custom, NotSpecified and Static. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policyType")]
     public string? PolicyType { get; set; }
-
-    /// <summary>A list of role definition id extracted from policy_rule required for remediation.</summary>
-    [JsonPropertyName("roleDefinitionIds")]
-    public IList<string>? RoleDefinitionIds { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionStatusConditions
+public partial class V1beta1PolicySetDefinitionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -416,32 +550,32 @@ public partial class V1beta1PolicyDefinitionStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>PolicyDefinitionStatus defines the observed state of PolicyDefinition.</summary>
+/// <summary>PolicySetDefinitionStatus defines the observed state of PolicySetDefinition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PolicyDefinitionStatus
+public partial class V1beta1PolicySetDefinitionStatus
 {
     /// <summary></summary>
     [JsonPropertyName("atProvider")]
-    public V1beta1PolicyDefinitionStatusAtProvider? AtProvider { get; set; }
+    public V1beta1PolicySetDefinitionStatusAtProvider? AtProvider { get; set; }
 
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1beta1PolicyDefinitionStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1PolicySetDefinitionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
     [JsonPropertyName("observedGeneration")]
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>PolicyDefinition is the Schema for the PolicyDefinitions API. Manages a policy rule definition. Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.</summary>
+/// <summary>PolicySetDefinition is the Schema for the PolicySetDefinitions API. Manages a policy set definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PolicyDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PolicyDefinitionSpec>, IStatus<V1beta1PolicyDefinitionStatus>
+public partial class V1beta1PolicySetDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PolicySetDefinitionSpec>, IStatus<V1beta1PolicySetDefinitionStatus>
 {
     public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PolicyDefinition";
+    public const string KubeKind = "PolicySetDefinition";
     public const string KubeGroup = "authorization.azure.upbound.io";
-    public const string KubePluralName = "policydefinitions";
+    public const string KubePluralName = "policysetdefinitions";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -454,24 +588,24 @@ public partial class V1beta1PolicyDefinition : IKubernetesObject<V1ObjectMeta>, 
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>PolicyDefinitionSpec defines the desired state of PolicyDefinition</summary>
+    /// <summary>PolicySetDefinitionSpec defines the desired state of PolicySetDefinition</summary>
     [JsonPropertyName("spec")]
-    public V1beta1PolicyDefinitionSpec Spec { get; set; }
+    public V1beta1PolicySetDefinitionSpec Spec { get; set; }
 
-    /// <summary>PolicyDefinitionStatus defines the observed state of PolicyDefinition.</summary>
+    /// <summary>PolicySetDefinitionStatus defines the observed state of PolicySetDefinition.</summary>
     [JsonPropertyName("status")]
-    public V1beta1PolicyDefinitionStatus? Status { get; set; }
+    public V1beta1PolicySetDefinitionStatus? Status { get; set; }
 }
 
-/// <summary>PolicyDefinition is the Schema for the PolicyDefinitions API. Manages a policy rule definition. Policy definitions do not take effect until they are assigned to a scope using a Policy Assignment.</summary>
+/// <summary>PolicySetDefinition is the Schema for the PolicySetDefinitions API. Manages a policy set definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PolicyDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicyDefinition>
+public partial class V1beta1PolicySetDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicySetDefinition>
 {
     public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PolicyDefinitionList";
+    public const string KubeKind = "PolicySetDefinitionList";
     public const string KubeGroup = "authorization.azure.upbound.io";
-    public const string KubePluralName = "policydefinitions";
+    public const string KubePluralName = "policysetdefinitions";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -486,5 +620,5 @@ public partial class V1beta1PolicyDefinitionList : IKubernetesObject<V1ListMeta>
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1PolicyDefinition> Items { get; set; }
+    public IList<V1beta1PolicySetDefinition> Items { get; set; }
 }
