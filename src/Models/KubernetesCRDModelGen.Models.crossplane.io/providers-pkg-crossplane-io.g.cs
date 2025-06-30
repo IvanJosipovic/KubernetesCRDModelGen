@@ -46,7 +46,7 @@ public partial class V1ProviderSpec
     [JsonPropertyName("ignoreCrossplaneConstraints")]
     public bool? IgnoreCrossplaneConstraints { get; set; }
 
-    /// <summary>Package is the name of the package that is being requested.</summary>
+    /// <summary>Package is the name of the package that is being requested. must be a fully qualified image name, including the registry, repository, and tag. for example, "registry.example.com/repo/package:tag".</summary>
     [JsonPropertyName("package")]
     public string Package { get; set; }
 
