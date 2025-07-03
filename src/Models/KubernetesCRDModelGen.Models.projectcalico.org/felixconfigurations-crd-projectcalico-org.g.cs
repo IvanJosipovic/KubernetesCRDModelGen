@@ -134,6 +134,10 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("awsSrcDstCheck")]
     public string? AwsSrcDstCheck { get; set; }
 
+    /// <summary>BPFAttachType controls how are the BPF programs at the network interfaces attached. By default `tcx` is used where available to enable easier coexistence with 3rd party programs. `tc` can force the legacy method of attaching via a qdisc. `tcx` falls back to `tc` if `tcx` is not available. [Default: tcx]</summary>
+    [JsonPropertyName("bpfAttachType")]
+    public string? BpfAttachType { get; set; }
+
     /// <summary>BPFCTLBLogFilter specifies, what is logged by connect time load balancer when BPFLogLevel is debug. Currently has to be specified as 'all' when BPFLogFilters is set to see CTLB logs. [Default: unset - means logs are emitted when BPFLogLevel id debug and BPFLogFilters not set.]</summary>
     [JsonPropertyName("bpfCTLBLogFilter")]
     public string? BpfCTLBLogFilter { get; set; }
