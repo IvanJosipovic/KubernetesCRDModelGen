@@ -693,6 +693,10 @@ public partial class V1HTTPRouteSpecRules
     [JsonPropertyName("matches")]
     public IList<V1HTTPRouteSpecRulesMatches>? Matches { get; set; }
 
+    /// <summary>Name is the name of the route rule. This name MUST be unique within a Route if it is set.  Support: Extended</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>Timeouts defines the timeouts that can be configured for an HTTP request.  Support: Extended</summary>
     [JsonPropertyName("timeouts")]
     public V1HTTPRouteSpecRulesTimeouts? Timeouts { get; set; }
