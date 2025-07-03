@@ -498,6 +498,10 @@ public partial class V1GRPCRouteSpecRules
     /// <summary>Matches define conditions used for matching the rule against incoming gRPC requests. Each match is independent, i.e. this rule will be matched if **any** one of the matches is satisfied.  For example, take the following matches configuration:  ``` matches: - method:     service: foo.bar   headers:     values:       version: 2 - method:     service: foo.bar.v2 ```  For a request to match against this rule, it MUST satisfy EITHER of the two conditions:  - service of foo.bar AND contains the header `version: 2` - service of foo.bar.v2  See the documentation for GRPCRouteMatch on how to specify multiple match conditions to be ANDed together.  If no matches are specified, the implementation MUST match every gRPC request.  Proxy or Load Balancer routing configuration generated from GRPCRoutes MUST prioritize rules based on the following criteria, continuing on ties. Merging MUST not be done between GRPCRoutes and HTTPRoutes. Precedence MUST be given to the rule with the largest number of:  * Characters in a matching non-wildcard hostname. * Characters in a matching hostname. * Characters in a matching service. * Characters in a matching method. * Header matches.  If ties still exist across multiple Routes, matching precedence MUST be determined in order of the following criteria, continuing on ties:  * The oldest Route based on creation timestamp. * The Route appearing first in alphabetical order by   "{namespace}/{name}".  If ties still exist within the Route that has been given precedence, matching precedence MUST be granted to the first matching rule meeting the above criteria.</summary>
     [JsonPropertyName("matches")]
     public IList<V1GRPCRouteSpecRulesMatches>? Matches { get; set; }
+
+    /// <summary>Name is the name of the route rule. This name MUST be unique within a Route if it is set.  Support: Extended</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary>Spec defines the desired state of GRPCRoute.</summary>

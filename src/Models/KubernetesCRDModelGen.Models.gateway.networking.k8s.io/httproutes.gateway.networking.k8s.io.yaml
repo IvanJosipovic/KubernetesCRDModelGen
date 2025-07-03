@@ -2979,6 +2979,16 @@ spec:
                         type: object
                       maxItems: 64
                       type: array
+                    name:
+                      description: >-
+                        Name is the name of the route rule. This name MUST be unique within a Route if it is set.
+
+
+                        Support: Extended
+                      maxLength: 253
+                      minLength: 1
+                      pattern: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$
+                      type: string
                     timeouts:
                       description: >-
                         Timeouts defines the timeouts that can be configured for an HTTP request.
@@ -6404,6 +6414,16 @@ spec:
                         type: object
                       maxItems: 64
                       type: array
+                    name:
+                      description: >-
+                        Name is the name of the route rule. This name MUST be unique within a Route if it is set.
+
+
+                        Support: Extended
+                      maxLength: 253
+                      minLength: 1
+                      pattern: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$
+                      type: string
                     timeouts:
                       description: >-
                         Timeouts defines the timeouts that can be configured for an HTTP request.
