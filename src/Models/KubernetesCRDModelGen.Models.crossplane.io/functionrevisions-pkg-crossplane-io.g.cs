@@ -181,6 +181,14 @@ public partial class V1FunctionRevisionStatus
     /// <summary>ResolvedPackage is the name of the package that was installed. It may be different from spec.image if the package path was rewritten using an image config.</summary>
     [JsonPropertyName("resolvedImage")]
     public string? ResolvedImage { get; set; }
+
+    /// <summary>TLSClientSecretName is the name of the TLS Secret that stores client certificates of the Provider.</summary>
+    [JsonPropertyName("tlsClientSecretName")]
+    public string? TlsClientSecretName { get; set; }
+
+    /// <summary>TLSServerSecretName is the name of the TLS Secret that stores server certificates of the Provider.</summary>
+    [JsonPropertyName("tlsServerSecretName")]
+    public string? TlsServerSecretName { get; set; }
 }
 
 /// <summary>A FunctionRevision represents a revision of a Function. Crossplane creates new revisions when there are changes to the Function.  Crossplane creates and manages FunctionRevisions. Don't directly edit FunctionRevisions.</summary>
