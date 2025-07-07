@@ -146,7 +146,7 @@ public partial class V1ProviderRevisionStatusObjectRefs
     public string? Uid { get; set; }
 }
 
-/// <summary>PackageRevisionStatus represents the observed state of a PackageRevision.</summary>
+/// <summary>ProviderRevisionStatus represents the observed state of a ProviderRevision.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderRevisionStatus
 {
@@ -177,6 +177,14 @@ public partial class V1ProviderRevisionStatus
     /// <summary>ResolvedPackage is the name of the package that was installed. It may be different from spec.image if the package path was rewritten using an image config.</summary>
     [JsonPropertyName("resolvedImage")]
     public string? ResolvedImage { get; set; }
+
+    /// <summary>TLSClientSecretName is the name of the TLS Secret that stores client certificates of the Provider.</summary>
+    [JsonPropertyName("tlsClientSecretName")]
+    public string? TlsClientSecretName { get; set; }
+
+    /// <summary>TLSServerSecretName is the name of the TLS Secret that stores server certificates of the Provider.</summary>
+    [JsonPropertyName("tlsServerSecretName")]
+    public string? TlsServerSecretName { get; set; }
 }
 
 /// <summary>A ProviderRevision represents a revision of a Provider. Crossplane creates new revisions when there are changes to a Provider.  Crossplane creates and manages ProviderRevisions. Don't directly edit ProviderRevisions.</summary>
@@ -204,7 +212,7 @@ public partial class V1ProviderRevision : IKubernetesObject<V1ObjectMeta>, ISpec
     [JsonPropertyName("spec")]
     public V1ProviderRevisionSpec? Spec { get; set; }
 
-    /// <summary>PackageRevisionStatus represents the observed state of a PackageRevision.</summary>
+    /// <summary>ProviderRevisionStatus represents the observed state of a ProviderRevision.</summary>
     [JsonPropertyName("status")]
     public V1ProviderRevisionStatus? Status { get; set; }
 }
