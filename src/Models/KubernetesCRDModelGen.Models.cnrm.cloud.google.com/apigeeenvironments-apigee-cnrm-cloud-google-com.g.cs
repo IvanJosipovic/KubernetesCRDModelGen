@@ -8,36 +8,30 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>Reference to parent Apigee Organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironmentMetadata
+public partial class V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef
 {
-}
-
-/// <summary>Immutable.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironmentSpecApigeeOrganizationRef
-{
-    /// <summary>The apigee organization for the resource  Allowed value: The Google Cloud resource name of an `ApigeeOrganization` resource (format: `organizations/{{name}}`).</summary>
+    /// <summary>A reference to an externally managed ApigeeOrganization resource. Should be in the format "organizations/{{organizationID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The name of a ApigeeOrganization resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The namespace of a ApigeeOrganization resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ApigeeEnvironmentSpec defines the desired state of ApigeeEnvironment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironmentSpec
+public partial class V1beta1ApigeeEnvironmentSpec
 {
-    /// <summary>Immutable.</summary>
+    /// <summary>Reference to parent Apigee Organization.</summary>
     [JsonPropertyName("apigeeOrganizationRef")]
-    public ApigeeEnvironmentSpecApigeeOrganizationRef ApigeeOrganizationRef { get; set; }
+    public V1beta1ApigeeEnvironmentSpecApigeeOrganizationRef ApigeeOrganizationRef { get; set; }
 
     /// <summary>Optional. Description of the environment.</summary>
     [JsonPropertyName("description")]
@@ -51,14 +45,14 @@ public partial class ApigeeEnvironmentSpec
     [JsonPropertyName("properties")]
     public IDictionary<string, string>? Properties { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>The ApigeeEnvironment name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironmentStatusConditions
+public partial class V1beta1ApigeeEnvironmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -81,17 +75,27 @@ public partial class ApigeeEnvironmentStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironmentStatus
+public partial class V1beta1ApigeeEnvironmentStatusObservedState
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+}
+
+/// <summary>ApigeeEnvironmentStatus defines the config connector machine state of ApigeeEnvironment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApigeeEnvironmentStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ApigeeEnvironmentStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ApigeeEnvironmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Creation time of this environment as milliseconds since epoch.</summary>
     [JsonPropertyName("createdAt")]
     public long? CreatedAt { get; set; }
+
+    /// <summary>A unique specifier for the ApigeeEnvironment resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>Output only. Last modification time of this environment as milliseconds since epoch.</summary>
     [JsonPropertyName("lastModifiedAt")]
@@ -99,34 +103,69 @@ public partial class ApigeeEnvironmentStatus
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
-    /// <summary>Output only. State of the environment. Values other than ACTIVE means the resource is not ready to use. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING</summary>
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1ApigeeEnvironmentStatusObservedState? ObservedState { get; set; }
+
+    /// <summary>Output only. State of the environment. Values other than ACTIVE means the resource is not ready to use.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ApigeeEnvironment is the Schema for the ApigeeEnvironment API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApigeeEnvironment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeEnvironment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ApigeeEnvironmentSpec>, IStatus<V1beta1ApigeeEnvironmentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeEnvironment";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeenvironments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ApigeeEnvironmentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ApigeeEnvironmentSpec defines the desired state of ApigeeEnvironment</summary>
     [JsonPropertyName("spec")]
-    public ApigeeEnvironmentSpec Spec { get; set; }
+    public V1beta1ApigeeEnvironmentSpec Spec { get; set; }
+
+    /// <summary>ApigeeEnvironmentStatus defines the config connector machine state of ApigeeEnvironment</summary>
+    [JsonPropertyName("status")]
+    public V1beta1ApigeeEnvironmentStatus? Status { get; set; }
+}
+
+/// <summary>ApigeeEnvironment is the Schema for the ApigeeEnvironment API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeEnvironmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeEnvironment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeEnvironmentList";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeenvironments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public ApigeeEnvironmentStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApigeeEnvironment> Items { get; set; }
 }

@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigSpecAuditLogConfigs
+public partial class V1beta1IAMAuditConfigSpecAuditLogConfigs
 {
     /// <summary>Identities that do not cause logging for this type of permission. The format is the same as that for 'members' in IAMPolicy/IAMPolicyMember.</summary>
     [JsonPropertyName("exemptedMembers")]
@@ -29,17 +23,17 @@ public partial class IAMAuditConfigSpecAuditLogConfigs
 
 /// <summary>Immutable. Required. The GCP resource to set the IAMAuditConfig on (e.g. project).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigSpecResourceRef
+public partial class V1beta1IAMAuditConfigSpecResourceRef
 {
-    /// <summary></summary>
+    /// <summary>APIVersion of the referenced resource</summary>
     [JsonPropertyName("apiVersion")]
     public string? ApiVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The external name of the referenced resource</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Kind of the referenced resource</summary>
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 
@@ -54,15 +48,15 @@ public partial class IAMAuditConfigSpecResourceRef
 
 /// <summary>IAMAuditConfigSpec defines the desired state of IAMAuditConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigSpec
+public partial class V1beta1IAMAuditConfigSpec
 {
     /// <summary>Required. The configuration for logging of each type of permission.</summary>
     [JsonPropertyName("auditLogConfigs")]
-    public IList<IAMAuditConfigSpecAuditLogConfigs> AuditLogConfigs { get; set; }
+    public IList<V1beta1IAMAuditConfigSpecAuditLogConfigs> AuditLogConfigs { get; set; }
 
     /// <summary>Immutable. Required. The GCP resource to set the IAMAuditConfig on (e.g. project).</summary>
     [JsonPropertyName("resourceRef")]
-    public IAMAuditConfigSpecResourceRef ResourceRef { get; set; }
+    public V1beta1IAMAuditConfigSpecResourceRef ResourceRef { get; set; }
 
     /// <summary>Immutable. Required. The service for which to enable Data Access audit logs. The special value 'allServices' covers all services. Note that if there are audit configs covering both 'allServices' and a specific service, then the union of the two audit configs is used for that service: the 'logTypes' specified in each 'auditLogConfig' are enabled, and the 'exemptedMembers' in each 'auditLogConfig' are exempted.</summary>
     [JsonPropertyName("service")]
@@ -71,7 +65,7 @@ public partial class IAMAuditConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigStatusConditions
+public partial class V1beta1IAMAuditConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +90,11 @@ public partial class IAMAuditConfigStatusConditions
 
 /// <summary>IAMAuditConfigStatus defines the observed state of IAMAuditConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfigStatus
+public partial class V1beta1IAMAuditConfigStatus
 {
     /// <summary>Conditions represent the latest available observations of the IAMAuditConfig's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IAMAuditConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IAMAuditConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -109,25 +103,56 @@ public partial class IAMAuditConfigStatus
 
 /// <summary>IAMAuditConfig is the schema for the IAM audit logging API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMAuditConfig
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMAuditConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMAuditConfigSpec>, IStatus<V1beta1IAMAuditConfigStatus>
 {
-    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMAuditConfig";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamauditconfigs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IAMAuditConfigMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary>IAMAuditConfigSpec defines the desired state of IAMAuditConfig.</summary>
     [JsonPropertyName("spec")]
-    public IAMAuditConfigSpec? Spec { get; set; }
+    public V1beta1IAMAuditConfigSpec? Spec { get; set; }
 
     /// <summary>IAMAuditConfigStatus defines the observed state of IAMAuditConfig.</summary>
     [JsonPropertyName("status")]
-    public IAMAuditConfigStatus? Status { get; set; }
+    public V1beta1IAMAuditConfigStatus? Status { get; set; }
+}
+
+/// <summary>IAMAuditConfig is the schema for the IAM audit logging API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMAuditConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMAuditConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMAuditConfigList";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamauditconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAMAuditConfig> Items { get; set; }
 }

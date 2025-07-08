@@ -8,19 +8,19 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>ApigeeOrganizationRef is a reference to a ApigeeOrganization resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeEnvgroupSpecOrganizationRef
 {
-    /// <summary>The ApigeeOrganization selfLink, when not managed by Config Connector.</summary>
+    /// <summary>A reference to an externally managed ApigeeOrganization resource. Should be in the format "organizations/{{organizationID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of an `ApigeeOrganization` resource.</summary>
+    /// <summary>The name of a ApigeeOrganization resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of an `ApigeeOrganization` resource.</summary>
+    /// <summary>The namespace of a ApigeeOrganization resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -33,7 +33,7 @@ public partial class V1beta1ApigeeEnvgroupSpec
     [JsonPropertyName("hostnames")]
     public IList<string>? Hostnames { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ApigeeOrganizationRef is a reference to a ApigeeOrganization resource.</summary>
     [JsonPropertyName("organizationRef")]
     public V1beta1ApigeeEnvgroupSpecOrganizationRef OrganizationRef { get; set; }
 

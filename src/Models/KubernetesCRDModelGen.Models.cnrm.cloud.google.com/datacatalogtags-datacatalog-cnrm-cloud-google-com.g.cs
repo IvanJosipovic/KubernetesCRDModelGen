@@ -8,77 +8,106 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>Required. Reference to the DataCatalogEntry that owns this Tag. The entry must be in the same project and location as the tag.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTagMetadata
+public partial class V1alpha1DataCatalogTagSpecEntryRef
 {
+    /// <summary>A reference to an externally managed DataCatalogEntry resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/entrys/{{entryID}}".</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The name of a DataCatalogEntry resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a DataCatalogEntry resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>The value of a tag field with an enum type.   This value must be one of the allowed values listed in this enum.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DataCatalogTagSpecFieldsEnumValue
+{
+    /// <summary>The display name of the enum value.</summary>
+    [JsonPropertyName("displayName")]
+    public string? DisplayName { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTagSpecFields
+public partial class V1alpha1DataCatalogTagSpecFields
 {
-    /// <summary>Holds the value for a tag field with boolean type.</summary>
+    /// <summary>The value of a tag field with a boolean type.</summary>
     [JsonPropertyName("boolValue")]
     public bool? BoolValue { get; set; }
 
-    /// <summary>The display name of this field.</summary>
-    [JsonPropertyName("displayName")]
-    public string? DisplayName { get; set; }
-
-    /// <summary>Holds the value for a tag field with double type.</summary>
+    /// <summary>The value of a tag field with a double type.</summary>
     [JsonPropertyName("doubleValue")]
     public double? DoubleValue { get; set; }
 
-    /// <summary>The display name of the enum value.</summary>
+    /// <summary>The value of a tag field with an enum type.   This value must be one of the allowed values listed in this enum.</summary>
     [JsonPropertyName("enumValue")]
-    public string? EnumValue { get; set; }
+    public V1alpha1DataCatalogTagSpecFieldsEnumValue? EnumValue { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("fieldName")]
-    public string FieldName { get; set; }
+    /// <summary>The value of a tag field with a rich text type.   The maximum length is 10 MiB as this value holds HTML descriptions  including encoded images. The maximum length of the text without images  is 100 KiB.</summary>
+    [JsonPropertyName("richtextValue")]
+    public string? RichtextValue { get; set; }
 
-    /// <summary>The order of this field with respect to other fields in this tag. For example, a higher value can indicate a more important field. The value can be negative. Multiple fields can have the same order, and field orders within a tag do not have to be sequential.</summary>
-    [JsonPropertyName("order")]
-    public int? Order { get; set; }
-
-    /// <summary>Holds the value for a tag field with string type.</summary>
+    /// <summary>The value of a tag field with a string type.   The maximum length is 2000 UTF-8 characters.</summary>
     [JsonPropertyName("stringValue")]
     public string? StringValue { get; set; }
 
-    /// <summary>Holds the value for a tag field with timestamp type.</summary>
+    /// <summary>The value of a tag field with a timestamp type.</summary>
     [JsonPropertyName("timestampValue")]
     public string? TimestampValue { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Required. The resource name of the tag template this tag uses.   This field cannot be modified after creation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTagSpec
+public partial class V1alpha1DataCatalogTagSpecTemplateRef
 {
-    /// <summary>Resources like Entry can have schemas associated with them. This scope allows users to attach tags to an individual column based on that schema.  For attaching a tag to a nested column, use '.' to separate the column names. Example: 'outer_column.inner_column'.</summary>
+    /// <summary>A reference to an externally managed DataCatalogTagTemplate resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/tagTemplates/{{tagTemplateID}}".</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The name of a DataCatalogTagTemplate resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a DataCatalogTagTemplate resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>DataCatalogTagSpec defines the desired state of DataCatalogTag</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DataCatalogTagSpec
+{
+    /// <summary>Resources like entry can have schemas associated with them. This scope  allows you to attach tags to an individual column based on that schema.   To attach a tag to a nested column, separate column names with a dot  (`.`). Example: `column.nested_column`.</summary>
     [JsonPropertyName("column")]
     public string? Column { get; set; }
 
-    /// <summary>This maps the ID of a tag field to the value of and additional information about that field. Valid field IDs are defined by the tag's template. A tag must have at least 1 field and at most 500 fields.</summary>
+    /// <summary>Required. Reference to the DataCatalogEntry that owns this Tag. The entry must be in the same project and location as the tag.</summary>
+    [JsonPropertyName("entryRef")]
+    public V1alpha1DataCatalogTagSpecEntryRef EntryRef { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("fields")]
-    public IList<DataCatalogTagSpecFields> Fields { get; set; }
+    public IDictionary<string, V1alpha1DataCatalogTagSpecFields>? Fields { get; set; }
 
-    /// <summary>Immutable. The name of the parent this tag is attached to. This can be the name of an entry or an entry group. If an entry group, the tag will be attached to all entries in that group.</summary>
-    [JsonPropertyName("parent")]
-    public string? Parent { get; set; }
-
-    /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
+    /// <summary>The DataCatalogTag name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Immutable. The resource name of the tag template that this tag uses. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId} This field cannot be modified after creation.</summary>
-    [JsonPropertyName("template")]
-    public string Template { get; set; }
+    /// <summary>Required. The resource name of the tag template this tag uses.   This field cannot be modified after creation.</summary>
+    [JsonPropertyName("templateRef")]
+    public V1alpha1DataCatalogTagSpecTemplateRef TemplateRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTagStatusConditions
+public partial class V1alpha1DataCatalogTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -101,48 +130,92 @@ public partial class DataCatalogTagStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTagStatus
+public partial class V1alpha1DataCatalogTagStatusObservedState
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<DataCatalogTagStatusConditions>? Conditions { get; set; }
+    /// <summary>Output only. Denotes the transfer status of the Tag Template.</summary>
+    [JsonPropertyName("dataplexTransferStatus")]
+    public string? DataplexTransferStatus { get; set; }
 
-    /// <summary>The resource name of the tag in URL format. Example: projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/entries/{entryId}/tags/{tag_id} or projects/{project_id}/locations/{location}/entrygroups/{entryGroupId}/tags/{tag_id} where tag_id is a system-generated identifier. Note that this Tag may not actually be stored in the location in this name.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>Output only. The display name of the tag template.</summary>
+    [JsonPropertyName("templateDisplayName")]
+    public string? TemplateDisplayName { get; set; }
+}
+
+/// <summary>DataCatalogTagStatus defines the config connector machine state of DataCatalogTag</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DataCatalogTagStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1alpha1DataCatalogTagStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the DataCatalogTag resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
-    /// <summary>The display name of the tag template.</summary>
-    [JsonPropertyName("templateDisplayname")]
-    public string? TemplateDisplayname { get; set; }
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1DataCatalogTagStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DataCatalogTag is the Schema for the DataCatalogTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogTag
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataCatalogTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogTagSpec>, IStatus<V1alpha1DataCatalogTagStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataCatalogTag";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogtags";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataCatalogTagMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>DataCatalogTagSpec defines the desired state of DataCatalogTag</summary>
     [JsonPropertyName("spec")]
-    public DataCatalogTagSpec Spec { get; set; }
+    public V1alpha1DataCatalogTagSpec Spec { get; set; }
+
+    /// <summary>DataCatalogTagStatus defines the config connector machine state of DataCatalogTag</summary>
+    [JsonPropertyName("status")]
+    public V1alpha1DataCatalogTagStatus? Status { get; set; }
+}
+
+/// <summary>DataCatalogTag is the Schema for the DataCatalogTag API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataCatalogTagList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataCatalogTag>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataCatalogTagList";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogtags";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public DataCatalogTagStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataCatalogTag> Items { get; set; }
 }

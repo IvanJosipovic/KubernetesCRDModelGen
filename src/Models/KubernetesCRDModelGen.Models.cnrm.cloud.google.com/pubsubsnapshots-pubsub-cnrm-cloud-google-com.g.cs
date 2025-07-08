@@ -33,15 +33,15 @@ public partial class V1alpha1PubSubSnapshotSpecProjectRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubSnapshotSpecPubSubSubscriptionRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/subscriptions/[subscription_id]`.</summary>
+    /// <summary>A reference to an externally managed PubSubSubscription resource. Should be in the format "projects/{{projectID}}/subscriptions/{{subscriptionID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `PubSubSubscription` resource.</summary>
+    /// <summary>The name of a PubSubSubscription resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `PubSubSubscription` resource.</summary>
+    /// <summary>The namespace of a PubSubSubscription resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -50,15 +50,15 @@ public partial class V1alpha1PubSubSnapshotSpecPubSubSubscriptionRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubSnapshotSpecTopicRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/topics/[topic_id]`.</summary>
+    /// <summary>A reference to an externally managed PubSubTopic resource. Should be in the format "projects/{{projectID}}/topics/{{topicID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The name of a PubSubTopic resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The namespace of a PubSubTopic resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }

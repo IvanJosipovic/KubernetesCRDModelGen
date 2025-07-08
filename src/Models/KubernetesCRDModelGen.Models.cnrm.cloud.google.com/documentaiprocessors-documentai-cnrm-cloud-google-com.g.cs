@@ -8,61 +8,76 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>The [KMS key](https://cloud.google.com/security-key-management) used for encryption and decryption in CMEK scenarios.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorMetadata
+public partial class V1alpha1DocumentAIProcessorSpecKmsKeyRef
 {
-}
-
-/// <summary>The project that this resource belongs to.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorSpecProjectRef
-{
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
+    /// <summary>A reference to an externally managed KMSCryptoKey. Should be in the format `projects/[kms_project_id]/locations/[region]/keyRings/[key_ring_id]/cryptoKeys/[key]`.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The `name` of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorSpec
+public partial class V1alpha1DocumentAIProcessorSpecProjectRef
 {
-    /// <summary>Immutable. The display name. Must be unique.</summary>
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>DocumentAIProcessorSpec defines the desired state of DocumentAIProcessor</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DocumentAIProcessorSpec
+{
+    /// <summary>The display name of the processor.</summary>
     [JsonPropertyName("displayName")]
-    public string DisplayName { get; set; }
+    public string? DisplayName { get; set; }
 
-    /// <summary>Immutable. The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.</summary>
-    [JsonPropertyName("kmsKeyName")]
-    public string? KmsKeyName { get; set; }
+    /// <summary>The [KMS key](https://cloud.google.com/security-key-management) used for encryption and decryption in CMEK scenarios.</summary>
+    [JsonPropertyName("kmsKeyRef")]
+    public V1alpha1DocumentAIProcessorSpecKmsKeyRef? KmsKeyRef { get; set; }
 
-    /// <summary>Immutable. The location of the resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>The project that this resource belongs to.</summary>
+    /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DocumentAIProcessorSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1DocumentAIProcessorSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
+    /// <summary>The GCP resource identifier. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Immutable. The type of processor. For possible types see the [official list](https://cloud.google.com/document-ai/docs/reference/rest/v1/projects.locations/fetchProcessorTypes#google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes).</summary>
+    /// <summary>The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see [FetchProcessorTypes][google.cloud.documentai.v1.DocumentProcessorService.FetchProcessorTypes].</summary>
     [JsonPropertyName("type")]
-    public string Type { get; set; }
+    public string? Type { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorStatusConditions
+public partial class V1alpha1DocumentAIProcessorStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -87,42 +102,119 @@ public partial class DocumentAIProcessorStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorStatus
+public partial class V1alpha1DocumentAIProcessorStatusObservedStateProcessorVersionAliases
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<DocumentAIProcessorStatusConditions>? Conditions { get; set; }
+    /// <summary>The alias in the form of `processor_version` resource name.</summary>
+    [JsonPropertyName("alias")]
+    public string? Alias { get; set; }
 
-    /// <summary>The resource name of the processor.</summary>
+    /// <summary>The resource name of aliased processor version.</summary>
+    [JsonPropertyName("processorVersion")]
+    public string? ProcessorVersion { get; set; }
+}
+
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DocumentAIProcessorStatusObservedState
+{
+    /// <summary>The time the processor was created.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
+
+    /// <summary>The default processor version.</summary>
+    [JsonPropertyName("defaultProcessorVersion")]
+    public string? DefaultProcessorVersion { get; set; }
+
+    /// <summary>Output only. Immutable. The resource name of the processor. Format: `projects/{project}/locations/{location}/processors/{processor}`</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
-    [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    /// <summary>Output only. Immutable. The http endpoint that can be called to invoke processing.</summary>
+    [JsonPropertyName("processEndpoint")]
+    public string? ProcessEndpoint { get; set; }
+
+    /// <summary>Output only. The processor version aliases.</summary>
+    [JsonPropertyName("processorVersionAliases")]
+    public IList<V1alpha1DocumentAIProcessorStatusObservedStateProcessorVersionAliases>? ProcessorVersionAliases { get; set; }
+
+    /// <summary>Output only. The state of the processor.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DocumentAIProcessorStatus defines the config connector machine state of DocumentAIProcessor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessor
+public partial class V1alpha1DocumentAIProcessorStatus
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
-    [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1alpha1DocumentAIProcessorStatusConditions>? Conditions { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary>A unique specifier for the DocumentAIProcessor resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
+
+    /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1DocumentAIProcessorStatusObservedState? ObservedState { get; set; }
+}
+
+/// <summary>DocumentAIProcessor is the Schema for the DocumentAIProcessor API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DocumentAIProcessor : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DocumentAIProcessorSpec>, IStatus<V1alpha1DocumentAIProcessorStatus>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DocumentAIProcessor";
+    public const string KubeGroup = "documentai.cnrm.cloud.google.com";
+    public const string KubePluralName = "documentaiprocessors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DocumentAIProcessorMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>DocumentAIProcessorSpec defines the desired state of DocumentAIProcessor</summary>
     [JsonPropertyName("spec")]
-    public DocumentAIProcessorSpec Spec { get; set; }
+    public V1alpha1DocumentAIProcessorSpec Spec { get; set; }
+
+    /// <summary>DocumentAIProcessorStatus defines the config connector machine state of DocumentAIProcessor</summary>
+    [JsonPropertyName("status")]
+    public V1alpha1DocumentAIProcessorStatus? Status { get; set; }
+}
+
+/// <summary>DocumentAIProcessor is the Schema for the DocumentAIProcessor API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DocumentAIProcessorList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DocumentAIProcessor>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DocumentAIProcessorList";
+    public const string KubeGroup = "documentai.cnrm.cloud.google.com";
+    public const string KubePluralName = "documentaiprocessors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public DocumentAIProcessorStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DocumentAIProcessor> Items { get; set; }
 }

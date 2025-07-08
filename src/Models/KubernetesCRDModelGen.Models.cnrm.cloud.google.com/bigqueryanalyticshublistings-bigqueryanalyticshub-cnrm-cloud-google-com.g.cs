@@ -76,15 +76,15 @@ public partial class V1beta1BigQueryAnalyticsHubListingSpecPublisher
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryAnalyticsHubListingSpecSourceBigQueryDatasetSourceDatasetRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/datasets/[dataset_id]`.</summary>
+    /// <summary>A reference to an externally managed BigQueryDataset resource. Should be in the format "projects/&lt;projectID&gt;/datasets/&lt;datasetID&gt;".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `BigQueryDataset` resource.</summary>
+    /// <summary>The name of a BigQueryDataset resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `BigQueryDataset` resource.</summary>
+    /// <summary>The namespace of a BigQueryDataset resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
