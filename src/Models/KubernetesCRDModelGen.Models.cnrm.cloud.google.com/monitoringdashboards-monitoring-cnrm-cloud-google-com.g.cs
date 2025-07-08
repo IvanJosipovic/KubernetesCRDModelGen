@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsAlertChartAlertPolicyRef
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -100,19 +100,19 @@ public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsInc
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>MonitoringAlertPolicyRef defines the resource reference to MonitoringAlertPolicy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecColumnLayoutColumnsWidgetsIncidentListPolicyRefs
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -1596,15 +1596,15 @@ public partial class V1beta1MonitoringDashboardSpecDashboardFilters
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsAlertChartAlertPolicyRef
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -1684,19 +1684,19 @@ public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentList
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>MonitoringAlertPolicyRef defines the resource reference to MonitoringAlertPolicy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecGridLayoutWidgetsIncidentListPolicyRefs
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -3150,15 +3150,15 @@ public partial class V1beta1MonitoringDashboardSpecGridLayout
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetAlertChartAlertPolicyRef
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -3238,19 +3238,19 @@ public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncide
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>MonitoringAlertPolicyRef defines the resource reference to MonitoringAlertPolicy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecMosaicLayoutTilesWidgetIncidentListPolicyRefs
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -4750,15 +4750,15 @@ public partial class V1beta1MonitoringDashboardSpecProjectRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsAlertChartAlertPolicyRef
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -4838,19 +4838,19 @@ public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentL
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>MonitoringAlertPolicyRef defines the resource reference to MonitoringAlertPolicy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitoringDashboardSpecRowLayoutRowsWidgetsIncidentListPolicyRefs
 {
-    /// <summary>The MonitoringAlertPolicy link in the form "projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[ALERT_POLICY_ID]", when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed MonitoringAlertPolicy resource. Should be in the format "projects/{{projectID}}/alertPolicies/{{alertPolicyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The name of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `MonitoringAlertPolicy` resource.</summary>
+    /// <summary>The namespace of a MonitoringAlertPolicy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }

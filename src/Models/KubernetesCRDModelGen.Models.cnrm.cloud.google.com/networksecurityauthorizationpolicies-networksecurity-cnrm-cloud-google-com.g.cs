@@ -8,32 +8,30 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicyMetadata
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpecProjectRef
 {
-}
-
-/// <summary>Immutable. The Project that this resource belongs to.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpecProjectRef
-{
-    /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary>Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases.</summary>
+/// <summary>Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpecRulesDestinationsHttpHeaderMatch
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpecRulesDestinationsHttpHeaderMatch
 {
     /// <summary>Required. The name of the HTTP header to match. For matching against the HTTP request's authority, use a headerMatch with the header name ":authority". For matching a request's method, use the headerName ":method".</summary>
     [JsonPropertyName("headerName")]
@@ -46,56 +44,56 @@ public partial class NetworkSecurityAuthorizationPolicySpecRulesDestinationsHttp
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpecRulesDestinations
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpecRulesDestinations
 {
-    /// <summary>Required. List of host names to match. Matched against HOST header in http requests. Each host can be an exact match, or a prefix match (example, “mydomain.*”) or a suffix match (example, *.myorg.com”) or a presence(any) match “*”.</summary>
+    /// <summary>Required. List of host names to match. Matched against the ":authority" header in http requests. At least one host should match. Each host can be an exact match, or a prefix match (example "mydomain.*") or a suffix match (example "*.myorg.com") or a presence (any) match "*".</summary>
     [JsonPropertyName("hosts")]
     public IList<string> Hosts { get; set; }
 
-    /// <summary>Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases.</summary>
+    /// <summary>Optional. Match against key:value pair in http header. Provides a flexible match based on HTTP headers, for potentially advanced use cases. At least one header should match. Avoid using header matches to make authorization decisions unless there is a strong guarantee that requests arrive through a trusted client or proxy.</summary>
     [JsonPropertyName("httpHeaderMatch")]
-    public NetworkSecurityAuthorizationPolicySpecRulesDestinationsHttpHeaderMatch? HttpHeaderMatch { get; set; }
+    public V1beta1NetworkSecurityAuthorizationPolicySpecRulesDestinationsHttpHeaderMatch? HttpHeaderMatch { get; set; }
 
-    /// <summary>Optional. A list of HTTP methods to match. Should not be set for gRPC services.</summary>
+    /// <summary>Optional. A list of HTTP methods to match. At least one method should match. Should not be set for gRPC services.</summary>
     [JsonPropertyName("methods")]
     public IList<string>? Methods { get; set; }
 
-    /// <summary>Required. List of destination ports to match.</summary>
+    /// <summary>Required. List of destination ports to match. At least one port should match.</summary>
     [JsonPropertyName("ports")]
-    public IList<long> Ports { get; set; }
+    public IList<int> Ports { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpecRulesSources
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpecRulesSources
 {
-    /// <summary>Optional. List of CIDR ranges to match based on source IP address. Single IP (e.g., "1.2.3.4") and CIDR (e.g., "1.2.3.0/24") are supported.</summary>
+    /// <summary>Optional. List of CIDR ranges to match based on source IP address. At least one IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g., "1.2.3.0/24") are supported. Authorization based on source IP alone should be avoided. The IP addresses of any load balancers or proxies should be considered untrusted.</summary>
     [JsonPropertyName("ipBlocks")]
     public IList<string>? IpBlocks { get; set; }
 
-    /// <summary>Optional. List of peer identities to match for authorization. Each peer can be an exact match, or a prefix match (example, “namespace/*”) or a suffix match (example, */service-account”) or a presence match “*”.</summary>
+    /// <summary>Optional. List of peer identities to match for authorization. At least one principal should match. Each peer can be an exact match, or a prefix match (example, "namespace/*") or a suffix match (example, "*/service-account") or a presence match "*". Authorization based on the principal name without certificate validation (configured by ServerTlsPolicy resource) is considered insecure.</summary>
     [JsonPropertyName("principals")]
     public IList<string>? Principals { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpecRules
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpecRules
 {
-    /// <summary>Optional. List of attributes for the traffic destination. If not set, the action specified in the ‘action’ field will be applied without any rule checks for the destination.</summary>
+    /// <summary>Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the 'action' field will be applied without any rule checks for the destination.</summary>
     [JsonPropertyName("destinations")]
-    public IList<NetworkSecurityAuthorizationPolicySpecRulesDestinations>? Destinations { get; set; }
+    public IList<V1beta1NetworkSecurityAuthorizationPolicySpecRulesDestinations>? Destinations { get; set; }
 
-    /// <summary>Optional. List of attributes for the traffic source. If not set, the action specified in the ‘action’ field will be applied without any rule checks for the source.</summary>
+    /// <summary>Optional. List of attributes for the traffic source. All of the sources must match. A source is a match if both principals and ip_blocks match. If not set, the action specified in the 'action' field will be applied without any rule checks for the source.</summary>
     [JsonPropertyName("sources")]
-    public IList<NetworkSecurityAuthorizationPolicySpecRulesSources>? Sources { get; set; }
+    public IList<V1beta1NetworkSecurityAuthorizationPolicySpecRulesSources>? Sources { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>NetworkSecurityAuthorizationPolicySpec defines the desired state of NetworkSecurityAuthorizationPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicySpec
+public partial class V1beta1NetworkSecurityAuthorizationPolicySpec
 {
-    /// <summary>Required. The action to take when a rule match is found. Possible values are "ALLOW" or "DENY". Possible values: ACTION_UNSPECIFIED, ALLOW, DENY</summary>
+    /// <summary>Required. The action to take when a rule match is found. Possible values are "ALLOW" or "DENY".</summary>
     [JsonPropertyName("action")]
     public string Action { get; set; }
 
@@ -103,26 +101,26 @@ public partial class NetworkSecurityAuthorizationPolicySpec
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Immutable. The location for the resource</summary>
+    /// <summary>Immutable.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>Immutable. The Project that this resource belongs to.</summary>
+    /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public NetworkSecurityAuthorizationPolicySpecProjectRef ProjectRef { get; set; }
+    public V1beta1NetworkSecurityAuthorizationPolicySpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>The NetworkSecurityAuthorizationPolicy name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Optional. List of rules to match. If not set, the action specified in the ‘action’ field will be applied without any additional rule checks.</summary>
+    /// <summary>Optional. List of rules to match. Note that at least one of the rules must match in order for the action specified in the 'action' field to be taken. A rule is a match if there is a matching source and destination. If left blank, the action specified in the `action` field will be applied on every request.</summary>
     [JsonPropertyName("rules")]
-    public IList<NetworkSecurityAuthorizationPolicySpecRules>? Rules { get; set; }
+    public IList<V1beta1NetworkSecurityAuthorizationPolicySpecRules>? Rules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicyStatusConditions
+public partial class V1beta1NetworkSecurityAuthorizationPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -145,48 +143,83 @@ public partial class NetworkSecurityAuthorizationPolicyStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>NetworkSecurityAuthorizationPolicyStatus defines the config connector machine state of NetworkSecurityAuthorizationPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicyStatus
+public partial class V1beta1NetworkSecurityAuthorizationPolicyStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<NetworkSecurityAuthorizationPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1NetworkSecurityAuthorizationPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
+    /// <summary>A unique specifier for the NetworkSecurityAuthorizationPolicy resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
+
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was updated.</summary>
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>NetworkSecurityAuthorizationPolicy is the Schema for the NetworkSecurityAuthorizationPolicy API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkSecurityAuthorizationPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkSecurityAuthorizationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkSecurityAuthorizationPolicySpec>, IStatus<V1beta1NetworkSecurityAuthorizationPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkSecurityAuthorizationPolicy";
+    public const string KubeGroup = "networksecurity.cnrm.cloud.google.com";
+    public const string KubePluralName = "networksecurityauthorizationpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public NetworkSecurityAuthorizationPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>NetworkSecurityAuthorizationPolicySpec defines the desired state of NetworkSecurityAuthorizationPolicy</summary>
     [JsonPropertyName("spec")]
-    public NetworkSecurityAuthorizationPolicySpec Spec { get; set; }
+    public V1beta1NetworkSecurityAuthorizationPolicySpec Spec { get; set; }
+
+    /// <summary>NetworkSecurityAuthorizationPolicyStatus defines the config connector machine state of NetworkSecurityAuthorizationPolicy</summary>
+    [JsonPropertyName("status")]
+    public V1beta1NetworkSecurityAuthorizationPolicyStatus? Status { get; set; }
+}
+
+/// <summary>NetworkSecurityAuthorizationPolicy is the Schema for the NetworkSecurityAuthorizationPolicy API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkSecurityAuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkSecurityAuthorizationPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkSecurityAuthorizationPolicyList";
+    public const string KubeGroup = "networksecurity.cnrm.cloud.google.com";
+    public const string KubePluralName = "networksecurityauthorizationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public NetworkSecurityAuthorizationPolicyStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkSecurityAuthorizationPolicy> Items { get; set; }
 }

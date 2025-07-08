@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.bigquerydatatransfer.cnrm.cloud.google.co
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDataTransferConfigSpecDatasetRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/datasets/[dataset_id]`.</summary>
+    /// <summary>A reference to an externally managed BigQueryDataset resource. Should be in the format "projects/&lt;projectID&gt;/datasets/&lt;datasetID&gt;".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `BigQueryDataset` resource.</summary>
+    /// <summary>The name of a BigQueryDataset resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `BigQueryDataset` resource.</summary>
+    /// <summary>The namespace of a BigQueryDataset resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -85,15 +85,15 @@ public partial class V1beta1BigQueryDataTransferConfigSpecProjectRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDataTransferConfigSpecPubSubTopicRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/topics/[topic_id]`.</summary>
+    /// <summary>A reference to an externally managed PubSubTopic resource. Should be in the format "projects/{{projectID}}/topics/{{topicID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The name of a PubSubTopic resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The namespace of a PubSubTopic resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -119,15 +119,15 @@ public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDataTransferConfigSpecScheduleOptionsV2EventDrivenSchedulePubSubSubscriptionRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/subscriptions/[subscription_id]`.</summary>
+    /// <summary>A reference to an externally managed PubSubSubscription resource. Should be in the format "projects/{{projectID}}/subscriptions/{{subscriptionID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `PubSubSubscription` resource.</summary>
+    /// <summary>The name of a PubSubSubscription resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `PubSubSubscription` resource.</summary>
+    /// <summary>The namespace of a PubSubSubscription resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -212,7 +212,7 @@ public partial class V1beta1BigQueryDataTransferConfigSpec
 
     /// <summary>The BigQuery target dataset id.</summary>
     [JsonPropertyName("datasetRef")]
-    public V1beta1BigQueryDataTransferConfigSpecDatasetRef DatasetRef { get; set; }
+    public V1beta1BigQueryDataTransferConfigSpecDatasetRef? DatasetRef { get; set; }
 
     /// <summary>Is this config disabled. When set to true, no runs will be scheduled for this transfer config.</summary>
     [JsonPropertyName("disabled")]

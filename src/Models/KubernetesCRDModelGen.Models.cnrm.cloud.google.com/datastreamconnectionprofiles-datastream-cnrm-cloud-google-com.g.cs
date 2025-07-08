@@ -8,112 +8,51 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>BigQuery Connection Profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileMetadata
+public partial class V1alpha1DatastreamConnectionProfileSpecBigQueryProfile
 {
 }
 
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+/// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SSH tunnel. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFromSecretKeyRef
+public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivitySecretRef
 {
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
+    /// <summary>The `metadata.name` field of a Kubernetes `Secret`</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
-}
 
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Immutable. SSH password.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPassword
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPasswordValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Immutable. SSH private key.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKey
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKeyValueFrom? ValueFrom { get; set; }
+    /// <summary>The `metadata.namespace` field of a Kubernetes `Secret`.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary>Forward SSH tunnel connectivity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecForwardSshConnectivity
+public partial class V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivity
 {
-    /// <summary>Hostname for the SSH tunnel.</summary>
+    /// <summary>Required. Hostname for the SSH tunnel.</summary>
     [JsonPropertyName("hostname")]
     public string Hostname { get; set; }
 
-    /// <summary>Immutable. SSH password.</summary>
-    [JsonPropertyName("password")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPassword? Password { get; set; }
-
-    /// <summary>Port for the SSH tunnel.</summary>
+    /// <summary>Port for the SSH tunnel, default value is 22.</summary>
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 
-    /// <summary>Immutable. SSH private key.</summary>
+    /// <summary>Input only. SSH private key.</summary>
     [JsonPropertyName("privateKey")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivityPrivateKey? PrivateKey { get; set; }
+    public string? PrivateKey { get; set; }
 
-    /// <summary>Username for the SSH tunnel.</summary>
-    [JsonPropertyName("username")]
-    public string Username { get; set; }
+    /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SSH tunnel. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivitySecretRef SecretRef { get; set; }
 }
 
-/// <summary>Cloud Storage bucket profile.</summary>
+/// <summary>Cloud Storage ConnectionProfile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecGcsProfile
+public partial class V1alpha1DatastreamConnectionProfileSpecGcsProfile
 {
-    /// <summary>The Cloud Storage bucket name.</summary>
+    /// <summary>Required. The Cloud Storage bucket name.</summary>
     [JsonPropertyName("bucket")]
     public string Bucket { get; set; }
 
@@ -122,402 +61,331 @@ public partial class DatastreamConnectionProfileSpecGcsProfile
     public string? RootPath { get; set; }
 }
 
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
+/// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the MySQL connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfilePasswordValueFromSecretKeyRef
+public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSecretRef
 {
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
+    /// <summary>The `metadata.name` field of a Kubernetes `Secret`</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
-}
 
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfilePasswordValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecMysqlProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Password for the MySQL connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfilePassword
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecMysqlProfilePasswordValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificate
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificateValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Immutable. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'clientKey' and the 'caCertificate' fields are mandatory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificate
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificateValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Immutable. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKey
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKeyValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>SSL configuration for the MySQL connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfileSslConfig
-{
-    /// <summary>Immutable. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
-    [JsonPropertyName("caCertificate")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigCaCertificate? CaCertificate { get; set; }
-
-    /// <summary>Indicates whether the clientKey field is set.</summary>
-    [JsonPropertyName("caCertificateSet")]
-    public bool? CaCertificateSet { get; set; }
-
-    /// <summary>Immutable. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'clientKey' and the 'caCertificate' fields are mandatory.</summary>
-    [JsonPropertyName("clientCertificate")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientCertificate? ClientCertificate { get; set; }
-
-    /// <summary>Indicates whether the clientCertificate field is set.</summary>
-    [JsonPropertyName("clientCertificateSet")]
-    public bool? ClientCertificateSet { get; set; }
-
-    /// <summary>Immutable. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.</summary>
-    [JsonPropertyName("clientKey")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfigClientKey? ClientKey { get; set; }
-
-    /// <summary>Indicates whether the clientKey field is set.</summary>
-    [JsonPropertyName("clientKeySet")]
-    public bool? ClientKeySet { get; set; }
-}
-
-/// <summary>MySQL database profile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecMysqlProfile
-{
-    /// <summary>Hostname for the MySQL connection.</summary>
-    [JsonPropertyName("hostname")]
-    public string Hostname { get; set; }
-
-    /// <summary>Password for the MySQL connection.</summary>
-    [JsonPropertyName("password")]
-    public DatastreamConnectionProfileSpecMysqlProfilePassword Password { get; set; }
-
-    /// <summary>Port for the MySQL connection.</summary>
-    [JsonPropertyName("port")]
-    public int? Port { get; set; }
-
-    /// <summary>SSL configuration for the MySQL connection.</summary>
-    [JsonPropertyName("sslConfig")]
-    public DatastreamConnectionProfileSpecMysqlProfileSslConfig? SslConfig { get; set; }
-
-    /// <summary>Username for the MySQL connection.</summary>
-    [JsonPropertyName("username")]
-    public string Username { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecOracleProfilePasswordValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecOracleProfilePasswordValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecOracleProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Password for the Oracle connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecOracleProfilePassword
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecOracleProfilePasswordValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>Oracle database profile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecOracleProfile
-{
-    /// <summary>Connection string attributes.</summary>
-    [JsonPropertyName("connectionAttributes")]
-    public IDictionary<string, string>? ConnectionAttributes { get; set; }
-
-    /// <summary>Database for the Oracle connection.</summary>
-    [JsonPropertyName("databaseService")]
-    public string DatabaseService { get; set; }
-
-    /// <summary>Hostname for the Oracle connection.</summary>
-    [JsonPropertyName("hostname")]
-    public string Hostname { get; set; }
-
-    /// <summary>Password for the Oracle connection.</summary>
-    [JsonPropertyName("password")]
-    public DatastreamConnectionProfileSpecOracleProfilePassword Password { get; set; }
-
-    /// <summary>Port for the Oracle connection.</summary>
-    [JsonPropertyName("port")]
-    public int? Port { get; set; }
-
-    /// <summary>Username for the Oracle connection.</summary>
-    [JsonPropertyName("username")]
-    public string Username { get; set; }
-}
-
-/// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFromSecretKeyRef
-{
-    /// <summary>Key that identifies the value to be extracted.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the Secret to extract a value from.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFrom
-{
-    /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
-    [JsonPropertyName("secretKeyRef")]
-    public DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
-}
-
-/// <summary>Password for the PostgreSQL connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecPostgresqlProfilePassword
-{
-    /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
-    [JsonPropertyName("value")]
-    public string? Value { get; set; }
-
-    /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
-    [JsonPropertyName("valueFrom")]
-    public DatastreamConnectionProfileSpecPostgresqlProfilePasswordValueFrom? ValueFrom { get; set; }
-}
-
-/// <summary>PostgreSQL database profile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecPostgresqlProfile
-{
-    /// <summary>Database for the PostgreSQL connection.</summary>
-    [JsonPropertyName("database")]
-    public string Database { get; set; }
-
-    /// <summary>Hostname for the PostgreSQL connection.</summary>
-    [JsonPropertyName("hostname")]
-    public string Hostname { get; set; }
-
-    /// <summary>Password for the PostgreSQL connection.</summary>
-    [JsonPropertyName("password")]
-    public DatastreamConnectionProfileSpecPostgresqlProfilePassword Password { get; set; }
-
-    /// <summary>Port for the PostgreSQL connection.</summary>
-    [JsonPropertyName("port")]
-    public int? Port { get; set; }
-
-    /// <summary>Username for the PostgreSQL connection.</summary>
-    [JsonPropertyName("username")]
-    public string Username { get; set; }
-}
-
-/// <summary>Private connectivity.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecPrivateConnectivity
-{
-    /// <summary>A reference to a private connection resource. Format: 'projects/{project}/locations/{location}/privateConnections/{name}'.</summary>
-    [JsonPropertyName("privateConnection")]
-    public string PrivateConnection { get; set; }
-}
-
-/// <summary>The project that this resource belongs to.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpecProjectRef
-{
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
-    [JsonPropertyName("external")]
-    public string? External { get; set; }
-
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `metadata.namespace` field of a Kubernetes `Secret`.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>SSL configuration for the MySQL connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileSpec
+public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfileSslConfig
 {
-    /// <summary>BigQuery warehouse profile.</summary>
-    [JsonPropertyName("bigqueryProfile")]
-    public JsonNode? BigqueryProfile { get; set; }
+    /// <summary>Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
+    [JsonPropertyName("caCertificate")]
+    public string? CaCertificate { get; set; }
 
-    /// <summary>Display name.</summary>
+    /// <summary>Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.</summary>
+    [JsonPropertyName("clientCertificate")]
+    public string? ClientCertificate { get; set; }
+
+    /// <summary>Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.</summary>
+    [JsonPropertyName("clientKey")]
+    public string? ClientKey { get; set; }
+}
+
+/// <summary>MySQL ConnectionProfile configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecMySQLProfile
+{
+    /// <summary>Required. Hostname for the MySQL connection.</summary>
+    [JsonPropertyName("hostname")]
+    public string Hostname { get; set; }
+
+    /// <summary>Port for the MySQL connection, default value is 3306.</summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the MySQL connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecMySQLProfileSecretRef SecretRef { get; set; }
+
+    /// <summary>SSL configuration for the MySQL connection.</summary>
+    [JsonPropertyName("sslConfig")]
+    public V1alpha1DatastreamConnectionProfileSpecMySQLProfileSslConfig? SslConfig { get; set; }
+}
+
+/// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigOracleSSLConfig
+{
+    /// <summary>Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
+    [JsonPropertyName("caCertificate")]
+    public string? CaCertificate { get; set; }
+}
+
+/// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle ASM connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigSecretRef
+{
+    /// <summary>The `metadata.name` field of a Kubernetes `Secret`</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a Kubernetes `Secret`.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Optional. Configuration for Oracle ASM connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfig
+{
+    /// <summary>Required. ASM service name for the Oracle ASM connection.</summary>
+    [JsonPropertyName("asmService")]
+    public string AsmService { get; set; }
+
+    /// <summary>Optional. Connection string attributes</summary>
+    [JsonPropertyName("connectionAttributes")]
+    public IDictionary<string, string>? ConnectionAttributes { get; set; }
+
+    /// <summary>Required. Hostname for the Oracle ASM connection.</summary>
+    [JsonPropertyName("hostname")]
+    public string Hostname { get; set; }
+
+    /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+    [JsonPropertyName("oracleSSLConfig")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigOracleSSLConfig? OracleSSLConfig { get; set; }
+
+    /// <summary>Required. Port for the Oracle ASM connection.</summary>
+    [JsonPropertyName("port")]
+    public int Port { get; set; }
+
+    /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle ASM connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfigSecretRef SecretRef { get; set; }
+}
+
+/// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleSSLConfig
+{
+    /// <summary>Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.</summary>
+    [JsonPropertyName("caCertificate")]
+    public string? CaCertificate { get; set; }
+}
+
+/// <summary>Optional. A reference to a Secret Manager resource name storing the Oracle connection password. Mutually exclusive with the `secretRef` field.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretManagerSecretRef
+{
+    /// <summary> If provided must be in the format `projects/*/secrets/*`.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The `name` field of a `SecretManagerSecret` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a `SecretManagerSecret` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretRef
+{
+    /// <summary>The `metadata.name` field of a Kubernetes `Secret`</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a Kubernetes `Secret`.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Oracle ConnectionProfile configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecOracleProfile
+{
+    /// <summary>Connection string attributes</summary>
+    [JsonPropertyName("connectionAttributes")]
+    public IDictionary<string, string>? ConnectionAttributes { get; set; }
+
+    /// <summary>Required. Database for the Oracle connection.</summary>
+    [JsonPropertyName("databaseService")]
+    public string DatabaseService { get; set; }
+
+    /// <summary>Required. Hostname for the Oracle connection.</summary>
+    [JsonPropertyName("hostname")]
+    public string Hostname { get; set; }
+
+    /// <summary>Optional. Configuration for Oracle ASM connection.</summary>
+    [JsonPropertyName("oracleASMConfig")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleASMConfig? OracleASMConfig { get; set; }
+
+    /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+    [JsonPropertyName("oracleSSLConfig")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileOracleSSLConfig? OracleSSLConfig { get; set; }
+
+    /// <summary>Port for the Oracle connection, default value is 1521.</summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary>Optional. A reference to a Secret Manager resource name storing the Oracle connection password. Mutually exclusive with the `secretRef` field.</summary>
+    [JsonPropertyName("secretManagerSecretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretManagerSecretRef? SecretManagerSecretRef { get; set; }
+
+    /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the Oracle connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfileSecretRef SecretRef { get; set; }
+}
+
+/// <summary>Required. A reference to a private connection resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivityPrivateConnectionRef
+{
+    /// <summary>A reference to an externally managed DatastreamPrivateConnection resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/privateConnections/{{privateconnectionID}}".</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The name of a DatastreamPrivateConnection resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a DatastreamPrivateConnection resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>Private connectivity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity
+{
+    /// <summary>Required. A reference to a private connection resource.</summary>
+    [JsonPropertyName("privateConnectionRef")]
+    public V1alpha1DatastreamConnectionProfileSpecPrivateConnectivityPrivateConnectionRef PrivateConnectionRef { get; set; }
+}
+
+/// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
+    [JsonPropertyName("external")]
+    public string? External { get; set; }
+
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SQLServer connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfileSecretRef
+{
+    /// <summary>The `metadata.name` field of a Kubernetes `Secret`</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>The `metadata.namespace` field of a Kubernetes `Secret`.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+}
+
+/// <summary>SQLServer Connection Profile configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecSqlServerProfile
+{
+    /// <summary>Required. Database for the SQLServer connection.</summary>
+    [JsonPropertyName("database")]
+    public string Database { get; set; }
+
+    /// <summary>Required. Hostname for the SQLServer connection.</summary>
+    [JsonPropertyName("hostname")]
+    public string Hostname { get; set; }
+
+    /// <summary>Port for the SQLServer connection, default value is 1433.</summary>
+    [JsonPropertyName("port")]
+    public int? Port { get; set; }
+
+    /// <summary>The Kubernetes Secret object that stores the "username" and "password" information for the SQLServer connection. The Secret type has to be `kubernetes.io/basic-auth`.</summary>
+    [JsonPropertyName("secretRef")]
+    public V1alpha1DatastreamConnectionProfileSpecSqlServerProfileSecretRef SecretRef { get; set; }
+}
+
+/// <summary>Static Service IP connectivity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpecStaticServiceIPConnectivity
+{
+}
+
+/// <summary>DatastreamConnectionProfileSpec defines the desired state of DatastreamConnectionProfile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileSpec
+{
+    /// <summary>BigQuery Connection Profile configuration.</summary>
+    [JsonPropertyName("bigQueryProfile")]
+    public V1alpha1DatastreamConnectionProfileSpecBigQueryProfile? BigQueryProfile { get; set; }
+
+    /// <summary>Required. Display name.</summary>
     [JsonPropertyName("displayName")]
     public string DisplayName { get; set; }
 
     /// <summary>Forward SSH tunnel connectivity.</summary>
-    [JsonPropertyName("forwardSshConnectivity")]
-    public DatastreamConnectionProfileSpecForwardSshConnectivity? ForwardSshConnectivity { get; set; }
+    [JsonPropertyName("forwardSSHConnectivity")]
+    public V1alpha1DatastreamConnectionProfileSpecForwardSSHConnectivity? ForwardSSHConnectivity { get; set; }
 
-    /// <summary>Cloud Storage bucket profile.</summary>
+    /// <summary>Cloud Storage ConnectionProfile configuration.</summary>
     [JsonPropertyName("gcsProfile")]
-    public DatastreamConnectionProfileSpecGcsProfile? GcsProfile { get; set; }
+    public V1alpha1DatastreamConnectionProfileSpecGcsProfile? GcsProfile { get; set; }
 
-    /// <summary>Immutable. The name of the location this connection profile is located in.</summary>
+    /// <summary>Labels.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Immutable.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>MySQL database profile.</summary>
-    [JsonPropertyName("mysqlProfile")]
-    public DatastreamConnectionProfileSpecMysqlProfile? MysqlProfile { get; set; }
+    /// <summary>MySQL ConnectionProfile configuration.</summary>
+    [JsonPropertyName("mySQLProfile")]
+    public V1alpha1DatastreamConnectionProfileSpecMySQLProfile? MySQLProfile { get; set; }
 
-    /// <summary>Oracle database profile.</summary>
+    /// <summary>Oracle ConnectionProfile configuration.</summary>
     [JsonPropertyName("oracleProfile")]
-    public DatastreamConnectionProfileSpecOracleProfile? OracleProfile { get; set; }
-
-    /// <summary>PostgreSQL database profile.</summary>
-    [JsonPropertyName("postgresqlProfile")]
-    public DatastreamConnectionProfileSpecPostgresqlProfile? PostgresqlProfile { get; set; }
+    public V1alpha1DatastreamConnectionProfileSpecOracleProfile? OracleProfile { get; set; }
 
     /// <summary>Private connectivity.</summary>
     [JsonPropertyName("privateConnectivity")]
-    public DatastreamConnectionProfileSpecPrivateConnectivity? PrivateConnectivity { get; set; }
+    public V1alpha1DatastreamConnectionProfileSpecPrivateConnectivity? PrivateConnectivity { get; set; }
 
-    /// <summary>The project that this resource belongs to.</summary>
+    /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DatastreamConnectionProfileSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1DatastreamConnectionProfileSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The connectionProfileId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>The DatastreamConnectionProfile name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
+
+    /// <summary>SQLServer Connection Profile configuration.</summary>
+    [JsonPropertyName("sqlServerProfile")]
+    public V1alpha1DatastreamConnectionProfileSpecSqlServerProfile? SqlServerProfile { get; set; }
+
+    /// <summary>Static Service IP connectivity.</summary>
+    [JsonPropertyName("staticServiceIPConnectivity")]
+    public V1alpha1DatastreamConnectionProfileSpecStaticServiceIPConnectivity? StaticServiceIPConnectivity { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileStatusConditions
+public partial class V1alpha1DatastreamConnectionProfileStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -540,44 +408,144 @@ public partial class DatastreamConnectionProfileStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>SSL configuration for the MySQL connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfileStatus
+public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfileSslConfig
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<DatastreamConnectionProfileStatusConditions>? Conditions { get; set; }
+    /// <summary>Output only. Indicates whether the ca_certificate field is set.</summary>
+    [JsonPropertyName("caCertificateSet")]
+    public bool? CaCertificateSet { get; set; }
 
-    /// <summary>The resource's name.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>Output only. Indicates whether the client_certificate field is set.</summary>
+    [JsonPropertyName("clientCertificateSet")]
+    public bool? ClientCertificateSet { get; set; }
+
+    /// <summary>Output only. Indicates whether the client_key field is set.</summary>
+    [JsonPropertyName("clientKeySet")]
+    public bool? ClientKeySet { get; set; }
+}
+
+/// <summary>MySQL ConnectionProfile configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfile
+{
+    /// <summary>SSL configuration for the MySQL connection.</summary>
+    [JsonPropertyName("sslConfig")]
+    public V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfileSslConfig? SslConfig { get; set; }
+}
+
+/// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfileOracleSSLConfig
+{
+    /// <summary>Output only. Indicates whether the ca_certificate field has been set for this Connection-Profile.</summary>
+    [JsonPropertyName("caCertificateSet")]
+    public bool? CaCertificateSet { get; set; }
+}
+
+/// <summary>Oracle ConnectionProfile configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfile
+{
+    /// <summary>Optional. SSL configuration for the Oracle connection.</summary>
+    [JsonPropertyName("oracleSSLConfig")]
+    public V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfileOracleSSLConfig? OracleSSLConfig { get; set; }
+}
+
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileStatusObservedState
+{
+    /// <summary>Output only. The create time of the resource.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
+
+    /// <summary>MySQL ConnectionProfile configuration.</summary>
+    [JsonPropertyName("mySQLProfile")]
+    public V1alpha1DatastreamConnectionProfileStatusObservedStateMySQLProfile? MySQLProfile { get; set; }
+
+    /// <summary>Oracle ConnectionProfile configuration.</summary>
+    [JsonPropertyName("oracleProfile")]
+    public V1alpha1DatastreamConnectionProfileStatusObservedStateOracleProfile? OracleProfile { get; set; }
+
+    /// <summary>Output only. The update time of the resource.</summary>
+    [JsonPropertyName("updateTime")]
+    public string? UpdateTime { get; set; }
+}
+
+/// <summary>DatastreamConnectionProfileStatus defines the config connector machine state of DatastreamConnectionProfile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DatastreamConnectionProfileStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1alpha1DatastreamConnectionProfileStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the DatastreamConnectionProfile resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1DatastreamConnectionProfileStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastreamConnectionProfile
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastreamConnectionProfile : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastreamConnectionProfileSpec>, IStatus<V1alpha1DatastreamConnectionProfileStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastreamConnectionProfile";
+    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastreamconnectionprofiles";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DatastreamConnectionProfileMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>DatastreamConnectionProfileSpec defines the desired state of DatastreamConnectionProfile</summary>
     [JsonPropertyName("spec")]
-    public DatastreamConnectionProfileSpec Spec { get; set; }
+    public V1alpha1DatastreamConnectionProfileSpec Spec { get; set; }
+
+    /// <summary>DatastreamConnectionProfileStatus defines the config connector machine state of DatastreamConnectionProfile</summary>
+    [JsonPropertyName("status")]
+    public V1alpha1DatastreamConnectionProfileStatus? Status { get; set; }
+}
+
+/// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastreamConnectionProfileList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastreamConnectionProfile>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastreamConnectionProfileList";
+    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastreamconnectionprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public DatastreamConnectionProfileStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DatastreamConnectionProfile> Items { get; set; }
 }

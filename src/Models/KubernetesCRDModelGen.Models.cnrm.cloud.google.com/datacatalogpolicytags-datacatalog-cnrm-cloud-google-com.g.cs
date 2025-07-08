@@ -8,49 +8,43 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>PolicyTagRef defines the resource reference to DataCatalogPolicyTag, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagMetadata
+public partial class V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef
 {
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagSpecParentPolicyTagRef
-{
-    /// <summary>Allowed value: The `name` field of a `DataCatalogPolicyTag` resource.</summary>
+    /// <summary>A reference to an externally managed DataCatalogPolicyTag resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/taxonomies/{{taxonomyID}}/policytags/{{policytagID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The name of a DataCatalogPolicyTag resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The namespace of a DataCatalogPolicyTag resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>TaxonomyRef defines the resource reference to DataCatalogTaxonomy, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagSpecTaxonomyRef
+public partial class V1beta1DataCatalogPolicyTagSpecTaxonomyRef
 {
-    /// <summary>Allowed value: The `name` field of a `DataCatalogTaxonomy` resource.</summary>
+    /// <summary>A reference to an externally managed DataCatalogTaxonomy resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/taxonomies/{{taxonomyID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The name of a DataCatalogTaxonomy resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The namespace of a DataCatalogTaxonomy resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DataCatalogPolicyTagSpec defines the desired state of DataCatalogPolicyTag</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagSpec
+public partial class V1beta1DataCatalogPolicyTagSpec
 {
     /// <summary>Description of this policy tag. It must: contain only unicode characters, tabs, newlines, carriage returns and page breaks; and be at most 2000 bytes long when encoded in UTF-8. If not set, defaults to an empty description. If not set, defaults to an empty description.</summary>
     [JsonPropertyName("description")]
@@ -60,22 +54,22 @@ public partial class DataCatalogPolicyTagSpec
     [JsonPropertyName("displayName")]
     public string DisplayName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>PolicyTagRef defines the resource reference to DataCatalogPolicyTag, which "External" field holds the GCP identifier for the KRM object.</summary>
     [JsonPropertyName("parentPolicyTagRef")]
-    public DataCatalogPolicyTagSpecParentPolicyTagRef? ParentPolicyTagRef { get; set; }
+    public V1beta1DataCatalogPolicyTagSpecParentPolicyTagRef? ParentPolicyTagRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary></summary>
+    /// <summary>TaxonomyRef defines the resource reference to DataCatalogTaxonomy, which "External" field holds the GCP identifier for the KRM object.</summary>
     [JsonPropertyName("taxonomyRef")]
-    public DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
+    public V1beta1DataCatalogPolicyTagSpecTaxonomyRef TaxonomyRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagStatusConditions
+public partial class V1beta1DataCatalogPolicyTagStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -98,17 +92,27 @@ public partial class DataCatalogPolicyTagStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTagStatus
+public partial class V1beta1DataCatalogPolicyTagStatusObservedState
+{
+}
+
+/// <summary>DataCatalogPolicyTagStatus defines the config connector machine state of DataCatalogPolicyTag</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataCatalogPolicyTagStatus
 {
     /// <summary>Resource names of child policy tags of this policy tag.</summary>
     [JsonPropertyName("childPolicyTags")]
     public IList<string>? ChildPolicyTags { get; set; }
 
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DataCatalogPolicyTagStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1DataCatalogPolicyTagStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the DataCatalogPolicyTag resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>Resource name of this policy tag, whose format is: "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}".</summary>
     [JsonPropertyName("name")]
@@ -116,30 +120,65 @@ public partial class DataCatalogPolicyTagStatus
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1beta1DataCatalogPolicyTagStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DataCatalogPolicyTag is the Schema for the DataCatalogPolicyTag API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogPolicyTag
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataCatalogPolicyTag : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataCatalogPolicyTagSpec>, IStatus<V1beta1DataCatalogPolicyTagStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataCatalogPolicyTag";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogpolicytags";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataCatalogPolicyTagMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>DataCatalogPolicyTagSpec defines the desired state of DataCatalogPolicyTag</summary>
     [JsonPropertyName("spec")]
-    public DataCatalogPolicyTagSpec Spec { get; set; }
+    public V1beta1DataCatalogPolicyTagSpec Spec { get; set; }
+
+    /// <summary>DataCatalogPolicyTagStatus defines the config connector machine state of DataCatalogPolicyTag</summary>
+    [JsonPropertyName("status")]
+    public V1beta1DataCatalogPolicyTagStatus? Status { get; set; }
+}
+
+/// <summary>DataCatalogPolicyTag is the Schema for the DataCatalogPolicyTag API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataCatalogPolicyTagList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataCatalogPolicyTag>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataCatalogPolicyTagList";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogpolicytags";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public DataCatalogPolicyTagStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataCatalogPolicyTag> Items { get; set; }
 }

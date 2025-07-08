@@ -48,7 +48,7 @@ public partial class StorageBucketSpecCors
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class StorageBucketSpecCustomPlacementConfig
 {
-    /// <summary>Immutable. The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions. Note: If any of the data_locations changes, it will recreate the bucket.</summary>
+    /// <summary>The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions.</summary>
     [JsonPropertyName("dataLocations")]
     public IList<string> DataLocations { get; set; }
 }
@@ -243,7 +243,7 @@ public partial class StorageBucketSpec
     [JsonPropertyName("lifecycleRule")]
     public IList<StorageBucketSpecLifecycleRule>? LifecycleRule { get; set; }
 
-    /// <summary>Immutable. The Google Cloud Storage location.</summary>
+    /// <summary>The Google Cloud Storage location.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 

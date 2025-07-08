@@ -8,86 +8,89 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>Optional. The configuration parameters for the auto scaling feature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationMetadata
+public partial class V1alpha1BigQueryReservationReservationSpecAutoscale
 {
-}
-
-/// <summary>The configuration parameters for the auto scaling feature.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationSpecAutoscale
-{
-    /// <summary>The slot capacity added to this reservation when autoscale happens. Will be between [0, max_slots].</summary>
-    [JsonPropertyName("currentSlots")]
-    public int? CurrentSlots { get; set; }
-
     /// <summary>Number of slots to be scaled when needed.</summary>
     [JsonPropertyName("maxSlots")]
-    public int? MaxSlots { get; set; }
+    public long? MaxSlots { get; set; }
 }
 
-/// <summary>The project that this resource belongs to.</summary>
+/// <summary>Optional. This field is only set for reservations using the managed disaster recovery feature. Users can set this to create a failover reservation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationSpecProjectRef
+public partial class V1alpha1BigQueryReservationReservationSpecFailover
 {
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
+    /// <summary>Users can update this field to convert a non-failover reservation to a failover reservation (by setting a specific region value) or convert a failover reservation to a non-failover reservation (by removing spec.failover). However, changes from one region to another region will be ignored by the controller. Additionally, if the value of this field changes during manual failover by the API, the controller will not attempt to revert these changes.  Note: This field is only available for ENTERPRISE_PLUS edition reservations. Immutable.</summary>
+    [JsonPropertyName("secondaryLocation")]
+    public string SecondaryLocation { get; set; }
+}
+
+/// <summary>The Project that this resource belongs to.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1BigQueryReservationReservationSpecProjectRef
+{
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>BigQueryReservationReservationSpec defines the desired state of BigQueryReservationReservation</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationSpec
+public partial class V1alpha1BigQueryReservationReservationSpec
 {
-    /// <summary>The configuration parameters for the auto scaling feature.</summary>
+    /// <summary>Optional. The configuration parameters for the auto scaling feature.</summary>
     [JsonPropertyName("autoscale")]
-    public BigQueryReservationReservationSpecAutoscale? Autoscale { get; set; }
+    public V1alpha1BigQueryReservationReservationSpecAutoscale? Autoscale { get; set; }
 
-    /// <summary>Maximum number of queries that are allowed to run concurrently in this reservation. This is a soft limit due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency will be automatically set based on the reservation size.</summary>
+    /// <summary>Job concurrency target which sets a soft upper bound on the number of jobs that can run concurrently in this reservation. This is a soft target due to asynchronous nature of the system and various optimizations for small queries. Default value is 0 which means that concurrency target will be automatically computed by the system. NOTE: this field is exposed as target job concurrency in the Information Schema, DDL and BigQuery CLI.</summary>
     [JsonPropertyName("concurrency")]
-    public int? Concurrency { get; set; }
+    public long? Concurrency { get; set; }
 
-    /// <summary>Immutable. The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
+    /// <summary>Immutable. Optional. Edition of the reservation. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
 
-    /// <summary>If false, any query using this reservation will use idle slots from other reservations within the same admin project. If true, a query using this reservation will execute with the slot capacity specified above at most.</summary>
+    /// <summary>Optional. This field is only set for reservations using the managed disaster recovery feature. Users can set this to create a failover reservation.</summary>
+    [JsonPropertyName("failover")]
+    public V1alpha1BigQueryReservationReservationSpecFailover? Failover { get; set; }
+
+    /// <summary>If false, any query or pipeline job using this reservation will use idle slots from other reservations within the same admin project. If true, a query or pipeline job using this reservation will execute with the slot capacity specified in the slot_capacity field at most.</summary>
     [JsonPropertyName("ignoreIdleSlots")]
     public bool? IgnoreIdleSlots { get; set; }
 
-    /// <summary>Immutable. The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is US.</summary>
+    /// <summary>Immutable. You can configure spec.secondaryLocation to enable the reservation fail-over to a secondary location, in which case the primary location could be different from the spec.location.</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.</summary>
-    [JsonPropertyName("multiRegionAuxiliary")]
-    public bool? MultiRegionAuxiliary { get; set; }
-
-    /// <summary>The project that this resource belongs to.</summary>
+    /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public BigQueryReservationReservationSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1BigQueryReservationReservationSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
+    /// <summary>Immutable. Optional. The BigQuery Reservation ID used for resource creation or acquisition. It must only contain lower case alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its maximum length is 64 characters. For creation: If specified, this value is used as the Reservation ID. If not provided, a UUID will be generated and assigned as the Reservation ID. For acquisition: This field must be provided to identify the Reservation resource to acquire.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
-    /// <summary>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</summary>
+    /// <summary>Optional. Baseline slots available to this reservation. A slot is a unit of  computational power in BigQuery, and serves as the unit of parallelism.   Queries using this reservation might use more slots during runtime if  ignore_idle_slots is set to false, or autoscaling is enabled.</summary>
     [JsonPropertyName("slotCapacity")]
-    public int SlotCapacity { get; set; }
+    public long? SlotCapacity { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationStatusConditions
+public partial class V1alpha1BigQueryReservationReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -112,38 +115,116 @@ public partial class BigQueryReservationReservationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservationStatus
+public partial class V1alpha1BigQueryReservationReservationStatusObservedStateAutoscale
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<BigQueryReservationReservationStatusConditions>? Conditions { get; set; }
-
-    /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
-    [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    /// <summary>The slot capacity added to this reservation when autoscale happens. Will be between [0, max_slots]. Note: after users reduce max_slots, it may take a while before it can be propagated, so current_slots may stay in the original value and could be larger than max_slots for that brief period (less than one minute)</summary>
+    [JsonPropertyName("currentSlots")]
+    public long? CurrentSlots { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationReservation
+public partial class V1alpha1BigQueryReservationReservationStatusObservedStateFailover
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
-    [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    /// <summary>The location where the reservation was originally created. This is set only during the failover reservation's creation. All billing charges for the failover reservation will be applied to this location.</summary>
+    [JsonPropertyName("originalPrimaryLocation")]
+    public string? OriginalPrimaryLocation { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary>The current location of the reservation's primary replica. This field is only set for reservations using the managed disaster recovery feature.</summary>
+    [JsonPropertyName("primaryLocation")]
+    public string? PrimaryLocation { get; set; }
+
+    /// <summary>The current location of the reservation's secondary replica. This field is only set for reservations using the managed disaster recovery feature. Users can set this in create reservation calls to create a failover reservation or in update reservation calls to convert a non-failover reservation to a failover reservation(or vice versa).</summary>
+    [JsonPropertyName("secondaryLocation")]
+    public string? SecondaryLocation { get; set; }
+}
+
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1BigQueryReservationReservationStatusObservedState
+{
+    /// <summary></summary>
+    [JsonPropertyName("autoscale")]
+    public V1alpha1BigQueryReservationReservationStatusObservedStateAutoscale? Autoscale { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("failover")]
+    public V1alpha1BigQueryReservationReservationStatusObservedStateFailover? Failover { get; set; }
+}
+
+/// <summary>BigQueryReservationReservationStatus defines the config connector machine state of BigQueryReservationReservation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1BigQueryReservationReservationStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1alpha1BigQueryReservationReservationStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the BigQueryReservationReservation resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
+
+    /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1BigQueryReservationReservationStatusObservedState? ObservedState { get; set; }
+}
+
+/// <summary>BigQueryReservationReservation is the Schema for the BigQueryReservationReservation API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryReservationReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryReservationReservationSpec>, IStatus<V1alpha1BigQueryReservationReservationStatus>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryReservationReservation";
+    public const string KubeGroup = "bigqueryreservation.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryreservationreservations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigQueryReservationReservationMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>BigQueryReservationReservationSpec defines the desired state of BigQueryReservationReservation</summary>
     [JsonPropertyName("spec")]
-    public BigQueryReservationReservationSpec Spec { get; set; }
+    public V1alpha1BigQueryReservationReservationSpec Spec { get; set; }
+
+    /// <summary>BigQueryReservationReservationStatus defines the config connector machine state of BigQueryReservationReservation</summary>
+    [JsonPropertyName("status")]
+    public V1alpha1BigQueryReservationReservationStatus? Status { get; set; }
+}
+
+/// <summary>BigQueryReservationReservation is the Schema for the BigQueryReservationReservation API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryReservationReservationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigQueryReservationReservation>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryReservationReservationList";
+    public const string KubeGroup = "bigqueryreservation.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryreservationreservations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public BigQueryReservationReservationStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigQueryReservationReservation> Items { get; set; }
 }

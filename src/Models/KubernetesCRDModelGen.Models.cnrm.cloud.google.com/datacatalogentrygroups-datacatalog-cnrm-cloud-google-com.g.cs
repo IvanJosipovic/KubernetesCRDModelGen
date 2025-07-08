@@ -8,61 +8,59 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
-/// <summary></summary>
+/// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroupMetadata
+public partial class V1alpha1DataCatalogEntryGroupSpecProjectRef
 {
-}
-
-/// <summary>The project that this resource belongs to.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroupSpecProjectRef
-{
-    /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
+    /// <summary>The `projectID` field of a project, when not managed by Config Connector.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The kind of the Project resource; optional but must be `Project` if provided.</summary>
+    [JsonPropertyName("kind")]
+    public string? Kind { get; set; }
+
+    /// <summary>The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The `namespace` field of a `Project` resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroupSpec
+public partial class V1alpha1DataCatalogEntryGroupSpec
 {
-    /// <summary>Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.</summary>
+    /// <summary>Entry group description. Can consist of several sentences or paragraphs that describe the entry group contents. Default value is an empty string.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A short name to identify the entry group, for example, "analytics data - jan 2011".</summary>
+    /// <summary>A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
-    /// <summary>Immutable. The id of the entry group to create. The id must begin with a letter or underscore, contain only English letters, numbers and underscores, and be at most 64 characters.</summary>
-    [JsonPropertyName("entryGroupId")]
-    public string EntryGroupId { get; set; }
+    /// <summary></summary>
+    [JsonPropertyName("location")]
+    public string Location { get; set; }
 
-    /// <summary>The project that this resource belongs to.</summary>
+    /// <summary>The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DataCatalogEntryGroupSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1DataCatalogEntryGroupSpecProjectRef ProjectRef { get; set; }
 
-    /// <summary>Immutable. EntryGroup location region.</summary>
-    [JsonPropertyName("region")]
-    public string? Region { get; set; }
-
-    /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
+    /// <summary>The DataCatalogEntryGroup name. If not given, the metadata.name will be used.</summary>
     [JsonPropertyName("resourceID")]
-    public string? ResourceID { get; set; }
+    public string ResourceID { get; set; }
+
+    /// <summary>Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However, new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it cannot be unset.</summary>
+    [JsonPropertyName("transferredToDataplex")]
+    public bool? TransferredToDataplex { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroupStatusConditions
+public partial class V1alpha1DataCatalogEntryGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -85,44 +83,101 @@ public partial class DataCatalogEntryGroupStatusConditions
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Output only. Timestamps of the entry group. Default value is empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroupStatus
+public partial class V1alpha1DataCatalogEntryGroupStatusObservedStateDataCatalogTimestamps
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
-    [JsonPropertyName("conditions")]
-    public IList<DataCatalogEntryGroupStatusConditions>? Conditions { get; set; }
+    /// <summary>Creation timestamp of the resource within the given system.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
 
-    /// <summary>The resource name of the entry group in URL format. Example: projects/{project}/locations/{location}/entryGroups/{entryGroupId}.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>Timestamp of the last modification of the resource or its metadata within  a given system.   Note: Depending on the source system, not every modification updates this  timestamp.  For example, BigQuery timestamps every metadata modification but not data  or permission changes.</summary>
+    [JsonPropertyName("updateTime")]
+    public string? UpdateTime { get; set; }
+}
+
+/// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DataCatalogEntryGroupStatusObservedState
+{
+    /// <summary>Output only. Timestamps of the entry group. Default value is empty.</summary>
+    [JsonPropertyName("dataCatalogTimestamps")]
+    public V1alpha1DataCatalogEntryGroupStatusObservedStateDataCatalogTimestamps? DataCatalogTimestamps { get; set; }
+}
+
+/// <summary>DataCatalogEntryGroupStatus defines the config connector machine state of DataCatalogEntryGroup</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1DataCatalogEntryGroupStatus
+{
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1alpha1DataCatalogEntryGroupStatusConditions>? Conditions { get; set; }
+
+    /// <summary>A unique specifier for the DataCatalogEntryGroup resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>ObservedState is the state of the resource as most recently observed in GCP.</summary>
+    [JsonPropertyName("observedState")]
+    public V1alpha1DataCatalogEntryGroupStatusObservedState? ObservedState { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>DataCatalogEntryGroup is the Schema for the DataCatalogEntryGroup API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataCatalogEntryGroup
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataCatalogEntryGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DataCatalogEntryGroupSpec>, IStatus<V1alpha1DataCatalogEntryGroupStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataCatalogEntryGroup";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogentrygroups";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataCatalogEntryGroupMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DataCatalogEntryGroupSpec Spec { get; set; }
+    public V1alpha1DataCatalogEntryGroupSpec Spec { get; set; }
+
+    /// <summary>DataCatalogEntryGroupStatus defines the config connector machine state of DataCatalogEntryGroup</summary>
+    [JsonPropertyName("status")]
+    public V1alpha1DataCatalogEntryGroupStatus? Status { get; set; }
+}
+
+/// <summary>DataCatalogEntryGroup is the Schema for the DataCatalogEntryGroup API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataCatalogEntryGroupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataCatalogEntryGroup>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataCatalogEntryGroupList";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogentrygroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public DataCatalogEntryGroupStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataCatalogEntryGroup> Items { get; set; }
 }

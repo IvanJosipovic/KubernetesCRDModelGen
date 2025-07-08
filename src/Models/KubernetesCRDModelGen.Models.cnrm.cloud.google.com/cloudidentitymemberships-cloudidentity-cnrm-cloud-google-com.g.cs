@@ -8,47 +8,41 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudidentity.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipMetadata
-{
-}
-
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecGroupRef
+public partial class V1beta1CloudIdentityMembershipSpecGroupRef
 {
-    /// <summary>The group for the resource  Allowed value: The Google Cloud resource name of a `CloudIdentityGroup` resource (format: `groups/{{name}}`).</summary>
+    /// <summary>A reference to an externally managed CloudIdentityGroup resource. Should be in the format "groups/{{groupID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
+    /// <summary>The name of a CloudIdentityGroup resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/</summary>
+    /// <summary>The namespace of a CloudIdentityGroup resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
 /// <summary>Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecMemberKey
+public partial class V1beta1CloudIdentityMembershipSpecMemberKey
 {
-    /// <summary>The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
+    /// <summary>Immutable. The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
     [JsonPropertyName("id")]
-    public string? Id { get; set; }
+    public string Id { get; set; }
 
-    /// <summary>The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}`.</summary>
+    /// <summary>Immutable. The namespace in which the entity exists. If not specified, the `EntityKey` represents a Google-managed entity such as a Google user or a Google Group. If specified, the `EntityKey` represents an external-identity-mapped group. The namespace must correspond to an identity source created in Admin Console and must be in the form of `identitysources/{identity_source_id}`.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary>Immutable. Required. Immutable. The `EntityKey` of the member.</summary>
+/// <summary>Required. Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecPreferredMemberKey
+public partial class V1beta1CloudIdentityMembershipSpecPreferredMemberKey
 {
-    /// <summary>Immutable. The ID of the entity. For Google-managed entities, the `id` must be the email address of a group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
+    /// <summary>Immutable. The ID of the entity. For Google-managed entities, the `id` must be the email address of an existing group or user. For external-identity-mapped entities, the `id` must be a string conforming to the Identity Source's requirements. Must be unique within a `namespace`.</summary>
     [JsonPropertyName("id")]
     public string Id { get; set; }
 
@@ -59,7 +53,7 @@ public partial class CloudIdentityMembershipSpecPreferredMemberKey
 
 /// <summary>The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecRolesExpiryDetail
+public partial class V1beta1CloudIdentityMembershipSpecRolesExpiryDetail
 {
     /// <summary>The time at which the `MembershipRole` will expire.</summary>
     [JsonPropertyName("expireTime")]
@@ -68,67 +62,67 @@ public partial class CloudIdentityMembershipSpecRolesExpiryDetail
 
 /// <summary>Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation
+public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation
 {
-    /// <summary>Output only. The current state of the restriction Possible values: ENCRYPTION_STATE_UNSPECIFIED, UNSUPPORTED_BY_DEVICE, ENCRYPTED, NOT_ENCRYPTED</summary>
+    /// <summary>Output only. The current state of the restriction</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
 
 /// <summary>Evaluations of restrictions applied to parent group on this membership.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecRolesRestrictionEvaluations
+public partial class V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluations
 {
     /// <summary>Evaluation of the member restriction applied to this membership. Empty if the user lacks permission to view the restriction evaluation.</summary>
     [JsonPropertyName("memberRestrictionEvaluation")]
-    public CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation? MemberRestrictionEvaluation { get; set; }
+    public V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluationsMemberRestrictionEvaluation? MemberRestrictionEvaluation { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpecRoles
+public partial class V1beta1CloudIdentityMembershipSpecRoles
 {
     /// <summary>The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.</summary>
     [JsonPropertyName("expiryDetail")]
-    public CloudIdentityMembershipSpecRolesExpiryDetail? ExpiryDetail { get; set; }
+    public V1beta1CloudIdentityMembershipSpecRolesExpiryDetail? ExpiryDetail { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
     /// <summary>Evaluations of restrictions applied to parent group on this membership.</summary>
     [JsonPropertyName("restrictionEvaluations")]
-    public CloudIdentityMembershipSpecRolesRestrictionEvaluations? RestrictionEvaluations { get; set; }
+    public V1beta1CloudIdentityMembershipSpecRolesRestrictionEvaluations? RestrictionEvaluations { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>CloudIdentityMembershipSpec defines the desired state of CloudIdentityMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipSpec
+public partial class V1beta1CloudIdentityMembershipSpec
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("groupRef")]
-    public CloudIdentityMembershipSpecGroupRef GroupRef { get; set; }
+    public V1beta1CloudIdentityMembershipSpecGroupRef GroupRef { get; set; }
 
     /// <summary>Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
     [JsonPropertyName("memberKey")]
-    public CloudIdentityMembershipSpecMemberKey? MemberKey { get; set; }
+    public V1beta1CloudIdentityMembershipSpecMemberKey? MemberKey { get; set; }
 
-    /// <summary>Immutable. Required. Immutable. The `EntityKey` of the member.</summary>
+    /// <summary>Required. Immutable. The `EntityKey` of the member. Either `member_key` or `preferred_member_key` must be set when calling MembershipsService.CreateMembership but not both; both shall be set when returned.</summary>
     [JsonPropertyName("preferredMemberKey")]
-    public CloudIdentityMembershipSpecPreferredMemberKey PreferredMemberKey { get; set; }
+    public V1beta1CloudIdentityMembershipSpecPreferredMemberKey PreferredMemberKey { get; set; }
 
-    /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
+    /// <summary>Immutable. Optional. The service-generated name of the resource. Format: {membershipID}. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
     public string? ResourceID { get; set; }
 
     /// <summary>The `MembershipRole`s that apply to the `Membership`. If unspecified, defaults to a single `MembershipRole` with `name` `MEMBER`. Must not contain duplicate `MembershipRole`s with the same `name`.</summary>
     [JsonPropertyName("roles")]
-    public IList<CloudIdentityMembershipSpecRoles> Roles { get; set; }
+    public IList<V1beta1CloudIdentityMembershipSpecRoles> Roles { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipStatusConditions
+public partial class V1beta1CloudIdentityMembershipStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -153,7 +147,7 @@ public partial class CloudIdentityMembershipStatusConditions
 
 /// <summary>Output only. The display name of this member, if available</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipStatusDisplayName
+public partial class V1beta1CloudIdentityMembershipStatusDisplayName
 {
     /// <summary>Output only. Member's family name</summary>
     [JsonPropertyName("familyName")]
@@ -168,13 +162,13 @@ public partial class CloudIdentityMembershipStatusDisplayName
     public string? GivenName { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>CloudIdentityMembershipStatus defines the config connector machine state of CloudIdentityMembership</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembershipStatus
+public partial class V1beta1CloudIdentityMembershipStatus
 {
-    /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
+    /// <summary>Conditions represent the latest available observations of the object's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<CloudIdentityMembershipStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1CloudIdentityMembershipStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time when the `Membership` was created.</summary>
     [JsonPropertyName("createTime")]
@@ -186,11 +180,15 @@ public partial class CloudIdentityMembershipStatus
 
     /// <summary>Output only. The display name of this member, if available</summary>
     [JsonPropertyName("displayName")]
-    public CloudIdentityMembershipStatusDisplayName? DisplayName { get; set; }
+    public V1beta1CloudIdentityMembershipStatusDisplayName? DisplayName { get; set; }
+
+    /// <summary>A unique Config Connector specifier for the resource in GCP.</summary>
+    [JsonPropertyName("externalRef")]
+    public string? ExternalRef { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
-    public int? ObservedGeneration { get; set; }
+    public long? ObservedGeneration { get; set; }
 
     /// <summary>Output only. The type of the membership. Possible values: OWNER_TYPE_UNSPECIFIED, OWNER_TYPE_CUSTOMER, OWNER_TYPE_PARTNER</summary>
     [JsonPropertyName("type")]
@@ -201,27 +199,58 @@ public partial class CloudIdentityMembershipStatus
     public string? UpdateTime { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>CloudIdentityMembership is the Schema for the CloudIdentityMembership API</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudIdentityMembership
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudIdentityMembership : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudIdentityMembershipSpec>, IStatus<V1beta1CloudIdentityMembershipStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudIdentityMembership";
+    public const string KubeGroup = "cloudidentity.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudidentitymemberships";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public CloudIdentityMembershipMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary></summary>
+    /// <summary>CloudIdentityMembershipSpec defines the desired state of CloudIdentityMembership</summary>
     [JsonPropertyName("spec")]
-    public CloudIdentityMembershipSpec Spec { get; set; }
+    public V1beta1CloudIdentityMembershipSpec Spec { get; set; }
+
+    /// <summary>CloudIdentityMembershipStatus defines the config connector machine state of CloudIdentityMembership</summary>
+    [JsonPropertyName("status")]
+    public V1beta1CloudIdentityMembershipStatus? Status { get; set; }
+}
+
+/// <summary>CloudIdentityMembership is the Schema for the CloudIdentityMembership API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudIdentityMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudIdentityMembership>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudIdentityMembershipList";
+    public const string KubeGroup = "cloudidentity.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudidentitymemberships";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("status")]
-    public CloudIdentityMembershipStatus? Status { get; set; }
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CloudIdentityMembership> Items { get; set; }
 }

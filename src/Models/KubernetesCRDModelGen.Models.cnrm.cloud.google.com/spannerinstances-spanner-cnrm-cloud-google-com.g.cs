@@ -67,13 +67,21 @@ public partial class V1beta1SpannerInstanceSpec
     [JsonPropertyName("config")]
     public string Config { get; set; }
 
+    /// <summary>Optional. Controls the default backup schedule behavior for new databases within the instance. By default, a backup schedule is created automatically when a new database is created in a new instance.  Note that the `AUTOMATIC` value isn't permitted for free instances, as backups and backup schedules aren't supported for free instances.  In the `GetInstance` or `ListInstances` response, if the value of `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner doesn't create a default backup schedule for new databases in the instance.</summary>
+    [JsonPropertyName("defaultBackupScheduleType")]
+    public string? DefaultBackupScheduleType { get; set; }
+
     /// <summary>The descriptive name for this instance as it appears in UIs. Must be unique per project and between 4 and 30 characters in length.</summary>
     [JsonPropertyName("displayName")]
     public string DisplayName { get; set; }
 
-    /// <summary>Optional. The `Edition` of the current instance. Currently accepted values are EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS</summary>
+    /// <summary>Optional. The `Edition` of the current instance. Currently accepted values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS. If edition is unspecified, it has automatically upgraded to the lowest edition that matches your usage pattern.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
+
+    /// <summary>Cloud Labels are a flexible and lightweight mechanism for organizing cloud resources into groups that reflect a customer's organizational needs and deployment strategies. Cloud Labels can be used to filter collections of resources. They can be used to control how resource metrics are aggregated. And they can be used as arguments to policy management rules (e.g. route, firewall, load balancing, etc.).    - Label keys must be between 1 and 63 characters long and must conform to     the following regular expression: `[a-z][a-z0-9_-]{0,62}`.   - Label values must be between 0 and 63 characters long and must conform     to the regular expression `[a-z0-9_-]{0,63}`.   - No more than 64 labels can be associated with a given resource.  See https://goo.gl/xmQnxf for more information on and examples of labels.  If you plan to use labels in your own code, please note that additional characters may be allowed in the future. And so you are advised to use an internal label representation, such as JSON, which doesn't rely upon specific characters being disallowed.  For example, representing labels as the string:  name + "_" + value  would prove problematic if we were to allow "_" in a future release.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("numNodes")]

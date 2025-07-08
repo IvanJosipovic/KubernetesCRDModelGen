@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecBackendServiceRef
 {
-    /// <summary>The ComputeBackendService selflink in the form "projects/{{project}}/global/backendServices/{{name}}" or "projects/{{project}}/regions/{{region}}/backendServices/{{name}}" when not managed by Config Connector.</summary>
+    /// <summary>The value of an externally managed ComputeBackendService resource.</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `ComputeBackendService` resource.</summary>
+    /// <summary>The name of a ComputeBackendService resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `ComputeBackendService` resource.</summary>
+    /// <summary>The namespace of a ComputeBackendService resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }

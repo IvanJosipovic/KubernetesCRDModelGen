@@ -126,15 +126,15 @@ public partial class V1beta1BigQueryConnectionConnectionSpecCloudSQL
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecCloudSpannerDatabaseRef
 {
-    /// <summary>The Spanner Database selfLink, when not managed by Config Connector.</summary>
+    /// <summary>A reference to an externally managed SpannerDatabase resource. Should be in the format "projects/{{projectID}}/instances/{{instanceID}}/databases/{{databaseID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a `SpannerDatabase` resource.</summary>
+    /// <summary>The name of a SpannerDatabase resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a `SpannerDatabase` resource.</summary>
+    /// <summary>The namespace of a SpannerDatabase resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -193,9 +193,17 @@ public partial class V1beta1BigQueryConnectionConnectionSpecProjectRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServiceMetastoreServiceRef
 {
-    /// <summary>The self-link of an existing Dataproc Metastore service , when not managed by Config Connector.</summary>
+    /// <summary>A reference to an externally managed MetastoreService resource. Should be in the format "projects/{{projectID}}/locations/{{location}}/services/{{serviceID}}".</summary>
     [JsonPropertyName("external")]
-    public string External { get; set; }
+    public string? External { get; set; }
+
+    /// <summary>The name of a MetastoreService resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The namespace of a MetastoreService resource.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary>Optional. Dataproc Metastore Service configuration for the connection.</summary>
@@ -211,15 +219,15 @@ public partial class V1beta1BigQueryConnectionConnectionSpecSparkMetastoreServic
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecSparkSparkHistoryServerDataprocClusterRef
 {
-    /// <summary>The self-link of an existing Dataproc Cluster to act as a Spark History Server for the connection , when not managed by Config Connector.</summary>
+    /// <summary>A reference to an externally managed DataprocCluster resource. Should be in the format "projects/{{projectID}}/regions/{{region}}/clusters/{{clusterName}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `name` field of a Dataproc Cluster.</summary>
+    /// <summary>The name of a DataprocCluster resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `namespace` field of a Dataproc Cluster.</summary>
+    /// <summary>The namespace of a DataprocCluster resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }

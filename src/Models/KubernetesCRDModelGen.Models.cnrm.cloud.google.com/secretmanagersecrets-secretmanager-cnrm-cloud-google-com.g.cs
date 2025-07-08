@@ -121,19 +121,19 @@ public partial class V1beta1SecretManagerSecretSpecRotation
     public string? RotationPeriod { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>PubSubTopicRef defines the resource reference to PubSubTopic, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
 {
-    /// <summary>If provided must be in the format `projects/[project_id]/topics/[topic_id]`.</summary>
+    /// <summary>A reference to an externally managed PubSubTopic resource. Should be in the format "projects/{{projectID}}/topics/{{topicID}}".</summary>
     [JsonPropertyName("external")]
     public string? External { get; set; }
 
-    /// <summary>The `metadata.name` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The name of a PubSubTopic resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The `metadata.namespace` field of a `PubSubTopic` resource.</summary>
+    /// <summary>The namespace of a PubSubTopic resource.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -142,7 +142,7 @@ public partial class V1beta1SecretManagerSecretSpecTopicsTopicRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecTopics
 {
-    /// <summary></summary>
+    /// <summary>PubSubTopicRef defines the resource reference to PubSubTopic, which "External" field holds the GCP identifier for the KRM object.</summary>
     [JsonPropertyName("topicRef")]
     public V1beta1SecretManagerSecretSpecTopicsTopicRef TopicRef { get; set; }
 }
@@ -158,6 +158,10 @@ public partial class V1beta1SecretManagerSecretSpec
     /// <summary>Optional. Timestamp in UTC when the [Secret][google.cloud.secretmanager.v1.Secret] is scheduled to expire. This is always provided on output, regardless of what was sent on input.</summary>
     [JsonPropertyName("expireTime")]
     public string? ExpireTime { get; set; }
+
+    /// <summary>The labels assigned to this Secret.  Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}][\p{Ll}\p{Lo}\p{N}_-]{0,62}`  Label values must be between 0 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: `[\p{Ll}\p{Lo}\p{N}_-]{0,63}`  No more than 64 labels can be assigned to a given resource.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
 
     /// <summary>Optional. Immutable. The replication policy of the secret data attached to  the [Secret][google.cloud.secretmanager.v1.Secret].   The replication policy cannot be changed after the Secret has been created.</summary>
     [JsonPropertyName("replication")]
