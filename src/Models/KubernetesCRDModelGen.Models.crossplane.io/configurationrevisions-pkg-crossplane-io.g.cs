@@ -125,6 +125,10 @@ public partial class V1ConfigurationRevisionStatus
     [JsonPropertyName("appliedImageConfigRefs")]
     public IList<V1ConfigurationRevisionStatusAppliedImageConfigRefs>? AppliedImageConfigRefs { get; set; }
 
+    /// <summary>Capabilities of this package. Capabilities are opaque strings that may be meaningful to package consumers.</summary>
+    [JsonPropertyName("capabilities")]
+    public IList<string>? Capabilities { get; set; }
+
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1ConfigurationRevisionStatusConditions>? Conditions { get; set; }
