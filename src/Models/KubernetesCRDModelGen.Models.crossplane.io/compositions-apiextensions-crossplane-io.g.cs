@@ -34,7 +34,7 @@ public partial class V1CompositionSpecPipelineCredentialsSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>FunctionCredentials are optional credentials that a Composition Function needs to run.</summary>
+/// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineCredentials
 {
@@ -51,7 +51,7 @@ public partial class V1CompositionSpecPipelineCredentials
     public string Source { get; set; }
 }
 
-/// <summary>FunctionRef is a reference to the Composition Function this step should execute.</summary>
+/// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipelineFunctionRef
 {
@@ -60,19 +60,19 @@ public partial class V1CompositionSpecPipelineFunctionRef
     public string Name { get; set; }
 }
 
-/// <summary>A PipelineStep in a Composition Function pipeline.</summary>
+/// <summary>A PipelineStep in a function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipeline
 {
-    /// <summary>Credentials are optional credentials that the Composition Function needs.</summary>
+    /// <summary>Credentials are optional credentials that the function needs.</summary>
     [JsonPropertyName("credentials")]
     public IList<V1CompositionSpecPipelineCredentials>? Credentials { get; set; }
 
-    /// <summary>FunctionRef is a reference to the Composition Function this step should execute.</summary>
+    /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
     [JsonPropertyName("functionRef")]
     public V1CompositionSpecPipelineFunctionRef FunctionRef { get; set; }
 
-    /// <summary>Input is an optional, arbitrary Kubernetes resource (i.e. a resource with an apiVersion and kind) that will be passed to the Composition Function as the 'input' of its RunFunctionRequest.</summary>
+    /// <summary>Input is an optional, arbitrary Kubernetes resource (i.e. a resource with an apiVersion and kind) that will be passed to the function as the 'input' of its RunFunctionRequest.</summary>
     [JsonPropertyName("input")]
     public JsonNode? Input { get; set; }
 
@@ -89,7 +89,7 @@ public partial class V1CompositionSpec
     [JsonPropertyName("compositeTypeRef")]
     public V1CompositionSpecCompositeTypeRef CompositeTypeRef { get; set; }
 
-    /// <summary>Mode controls what type or "mode" of Composition will be used.  "Pipeline" indicates that a Composition specifies a pipeline of Composition Functions, each of which is responsible for producing composed resources that Crossplane should create or update.</summary>
+    /// <summary>Mode controls what type or "mode" of Composition will be used.  "Pipeline" indicates that a Composition specifies a pipeline of functions, each of which is responsible for producing composed resources that Crossplane should create or update.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
