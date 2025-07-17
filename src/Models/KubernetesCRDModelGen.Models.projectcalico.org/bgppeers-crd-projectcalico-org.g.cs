@@ -91,6 +91,10 @@ public partial class V1BGPPeerSpec
     public string? ReachableBy { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("reversePeering")]
+    public string? ReversePeering { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("sourceAddress")]
     public string? SourceAddress { get; set; }
 
