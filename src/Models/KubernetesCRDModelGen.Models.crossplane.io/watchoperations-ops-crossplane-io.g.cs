@@ -8,9 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+/// <summary>Standard object metadata.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1WatchOperationSpecOperationTemplateMetadata
+{
+}
+
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipelineCredentialsSecretRef
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentialsSecretRef
 {
     /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
@@ -23,7 +29,7 @@ public partial class V1alpha1OperationSpecPipelineCredentialsSecretRef
 
 /// <summary>FunctionCredentials are optional credentials that a function needs to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipelineCredentials
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentials
 {
     /// <summary>Name of this set of credentials.</summary>
     [JsonPropertyName("name")]
@@ -31,7 +37,7 @@ public partial class V1alpha1OperationSpecPipelineCredentials
 
     /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
     [JsonPropertyName("secretRef")]
-    public V1alpha1OperationSpecPipelineCredentialsSecretRef? SecretRef { get; set; }
+    public V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentialsSecretRef? SecretRef { get; set; }
 
     /// <summary>Source of the function credentials.</summary>
     [JsonPropertyName("source")]
@@ -40,7 +46,7 @@ public partial class V1alpha1OperationSpecPipelineCredentials
 
 /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipelineFunctionRef
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineFunctionRef
 {
     /// <summary>Name of the referenced function.</summary>
     [JsonPropertyName("name")]
@@ -49,7 +55,7 @@ public partial class V1alpha1OperationSpecPipelineFunctionRef
 
 /// <summary>RequiredResourceSelector selects resources that should be fetched before a pipeline step runs.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipelineRequirementsRequiredResources
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirementsRequiredResources
 {
     /// <summary>APIVersion of resources to select.</summary>
     [JsonPropertyName("apiVersion")]
@@ -78,24 +84,24 @@ public partial class V1alpha1OperationSpecPipelineRequirementsRequiredResources
 
 /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipelineRequirements
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirements
 {
     /// <summary>RequiredResources that will be fetched before this pipeline step is called for the first time.</summary>
     [JsonPropertyName("requiredResources")]
-    public IList<V1alpha1OperationSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
+    public IList<V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
 }
 
 /// <summary>A PipelineStep in an operation function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpecPipeline
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpecPipeline
 {
     /// <summary>Credentials are optional credentials that the operation function needs.</summary>
     [JsonPropertyName("credentials")]
-    public IList<V1alpha1OperationSpecPipelineCredentials>? Credentials { get; set; }
+    public IList<V1alpha1WatchOperationSpecOperationTemplateSpecPipelineCredentials>? Credentials { get; set; }
 
     /// <summary>FunctionRef is a reference to the function this step should execute.</summary>
     [JsonPropertyName("functionRef")]
-    public V1alpha1OperationSpecPipelineFunctionRef FunctionRef { get; set; }
+    public V1alpha1WatchOperationSpecOperationTemplateSpecPipelineFunctionRef FunctionRef { get; set; }
 
     /// <summary>Input is an optional, arbitrary Kubernetes resource (i.e. a resource with an apiVersion and kind) that will be passed to the unction as the 'input' of its RunFunctionRequest.</summary>
     [JsonPropertyName("input")]
@@ -103,16 +109,16 @@ public partial class V1alpha1OperationSpecPipeline
 
     /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
     [JsonPropertyName("requirements")]
-    public V1alpha1OperationSpecPipelineRequirements? Requirements { get; set; }
+    public V1alpha1WatchOperationSpecOperationTemplateSpecPipelineRequirements? Requirements { get; set; }
 
     /// <summary>Step name. Must be unique within its Pipeline.</summary>
     [JsonPropertyName("step")]
     public string Step { get; set; }
 }
 
-/// <summary>OperationSpec specifies desired state of an operation.</summary>
+/// <summary>Spec is the specification of the Operation to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationSpec
+public partial class V1alpha1WatchOperationSpecOperationTemplateSpec
 {
     /// <summary>Mode controls what type or "mode" of operation will be used.  "Pipeline" indicates that an Operation specifies a pipeline of functions, each of which is responsible for implementing its logic.</summary>
     [JsonPropertyName("mode")]
@@ -120,37 +126,75 @@ public partial class V1alpha1OperationSpec
 
     /// <summary>Pipeline is a list of operation function steps that will be used when this operation runs.</summary>
     [JsonPropertyName("pipeline")]
-    public IList<V1alpha1OperationSpecPipeline> Pipeline { get; set; }
+    public IList<V1alpha1WatchOperationSpecOperationTemplateSpecPipeline> Pipeline { get; set; }
 
     /// <summary>RetryLimit configures how many times the operation may fail. When the failure limit is exceeded, the operation will not be retried.</summary>
     [JsonPropertyName("retryLimit")]
     public long? RetryLimit { get; set; }
 }
 
-/// <summary>An AppliedResourceRef is a reference to a resource an Operation applied.</summary>
+/// <summary>OperationTemplate is the template for the Operation to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationStatusAppliedResourceRefs
+public partial class V1alpha1WatchOperationSpecOperationTemplate
 {
-    /// <summary>APIVersion of the applied resource.</summary>
+    /// <summary>Standard object metadata.</summary>
+    [JsonPropertyName("metadata")]
+    public V1alpha1WatchOperationSpecOperationTemplateMetadata? Metadata { get; set; }
+
+    /// <summary>Spec is the specification of the Operation to be created.</summary>
+    [JsonPropertyName("spec")]
+    public V1alpha1WatchOperationSpecOperationTemplateSpec Spec { get; set; }
+}
+
+/// <summary>Watch specifies the resource to watch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1WatchOperationSpecWatch
+{
+    /// <summary>APIVersion of the resource to watch.</summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
 
-    /// <summary>Kind of the applied resource.</summary>
+    /// <summary>Kind of the resource to watch.</summary>
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
 
-    /// <summary>Name of the applied resource.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
+    /// <summary>MatchLabels selects resources by label. If empty, all resources of the specified kind are watched.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
 
-    /// <summary>Namespace of the applied resource.</summary>
+    /// <summary>Namespace selects resources in a specific namespace. If empty, all namespaces are watched. Only applicable for namespaced resources.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
+/// <summary>WatchOperationSpec specifies the desired state of a WatchOperation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1WatchOperationSpec
+{
+    /// <summary>ConcurrencyPolicy specifies how to treat concurrent executions of an operation.</summary>
+    [JsonPropertyName("concurrencyPolicy")]
+    public string? ConcurrencyPolicy { get; set; }
+
+    /// <summary>FailedHistoryLimit is the number of failed Operations to retain.</summary>
+    [JsonPropertyName("failedHistoryLimit")]
+    public int? FailedHistoryLimit { get; set; }
+
+    /// <summary>OperationTemplate is the template for the Operation to be created.</summary>
+    [JsonPropertyName("operationTemplate")]
+    public V1alpha1WatchOperationSpecOperationTemplate OperationTemplate { get; set; }
+
+    /// <summary>SuccessfulHistoryLimit is the number of successful Operations to retain.</summary>
+    [JsonPropertyName("successfulHistoryLimit")]
+    public int? SuccessfulHistoryLimit { get; set; }
+
+    /// <summary>Watch specifies the resource to watch.</summary>
+    [JsonPropertyName("watch")]
+    public V1alpha1WatchOperationSpecWatch Watch { get; set; }
+}
+
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationStatusConditions
+public partial class V1alpha1WatchOperationStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -177,49 +221,49 @@ public partial class V1alpha1OperationStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>PipelineStepStatus represents the status of an individual pipeline step.</summary>
+/// <summary>A RunningOperationRef is a reference to a running operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationStatusPipeline
+public partial class V1alpha1WatchOperationStatusRunningOperationRefs
 {
-    /// <summary>Output of this step.</summary>
-    [JsonPropertyName("output")]
-    public JsonNode? Output { get; set; }
-
-    /// <summary>Step name. Unique within its Pipeline.</summary>
-    [JsonPropertyName("step")]
-    public string Step { get; set; }
+    /// <summary>Name of the active operation.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 }
 
-/// <summary>OperationStatus represents the observed state of an operation.</summary>
+/// <summary>WatchOperationStatus represents the observed state of a WatchOperation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1OperationStatus
+public partial class V1alpha1WatchOperationStatus
 {
-    /// <summary>AppliedResourceRefs references all resources the Operation applied.</summary>
-    [JsonPropertyName("appliedResourceRefs")]
-    public IList<V1alpha1OperationStatusAppliedResourceRefs>? AppliedResourceRefs { get; set; }
-
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1OperationStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1WatchOperationStatusConditions>? Conditions { get; set; }
 
-    /// <summary>Number of operation failures.</summary>
-    [JsonPropertyName("failures")]
-    public long? Failures { get; set; }
+    /// <summary>LastScheduleTime is the last time the WatchOperation created an Operation.</summary>
+    [JsonPropertyName("lastScheduleTime")]
+    public string? LastScheduleTime { get; set; }
 
-    /// <summary>Pipeline represents the output of the pipeline steps that this operation ran.</summary>
-    [JsonPropertyName("pipeline")]
-    public IList<V1alpha1OperationStatusPipeline>? Pipeline { get; set; }
+    /// <summary>LastSuccessfulTime is the last time the WatchOperation successfully completed an Operation.</summary>
+    [JsonPropertyName("lastSuccessfulTime")]
+    public string? LastSuccessfulTime { get; set; }
+
+    /// <summary>RunningOperationRefs is a list of currently running Operations.</summary>
+    [JsonPropertyName("runningOperationRefs")]
+    public IList<V1alpha1WatchOperationStatusRunningOperationRefs>? RunningOperationRefs { get; set; }
+
+    /// <summary>WatchingResources is the number of resources this WatchOperation is currently watching.</summary>
+    [JsonPropertyName("watchingResources")]
+    public long? WatchingResources { get; set; }
 }
 
-/// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
+/// <summary>A WatchOperation creates Operations when watched resources change.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1Operation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1OperationSpec>, IStatus<V1alpha1OperationStatus>
+public partial class V1alpha1WatchOperation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1WatchOperationSpec>, IStatus<V1alpha1WatchOperationStatus>
 {
     public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "Operation";
+    public const string KubeKind = "WatchOperation";
     public const string KubeGroup = "ops.crossplane.io";
-    public const string KubePluralName = "operations";
+    public const string KubePluralName = "watchoperations";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -232,24 +276,24 @@ public partial class V1alpha1Operation : IKubernetesObject<V1ObjectMeta>, ISpec<
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>OperationSpec specifies desired state of an operation.</summary>
+    /// <summary>WatchOperationSpec specifies the desired state of a WatchOperation.</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1OperationSpec? Spec { get; set; }
+    public V1alpha1WatchOperationSpec? Spec { get; set; }
 
-    /// <summary>OperationStatus represents the observed state of an operation.</summary>
+    /// <summary>WatchOperationStatus represents the observed state of a WatchOperation.</summary>
     [JsonPropertyName("status")]
-    public V1alpha1OperationStatus? Status { get; set; }
+    public V1alpha1WatchOperationStatus? Status { get; set; }
 }
 
-/// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
+/// <summary>A WatchOperation creates Operations when watched resources change.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1OperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Operation>
+public partial class V1alpha1WatchOperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WatchOperation>
 {
     public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "OperationList";
+    public const string KubeKind = "WatchOperationList";
     public const string KubeGroup = "ops.crossplane.io";
-    public const string KubePluralName = "operations";
+    public const string KubePluralName = "watchoperations";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -264,5 +308,5 @@ public partial class V1alpha1OperationList : IKubernetesObject<V1ListMeta>, IIte
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1Operation> Items { get; set; }
+    public IList<V1alpha1WatchOperation> Items { get; set; }
 }
