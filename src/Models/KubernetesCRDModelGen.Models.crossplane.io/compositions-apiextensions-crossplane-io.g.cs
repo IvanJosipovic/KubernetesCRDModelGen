@@ -60,6 +60,44 @@ public partial class V1CompositionSpecPipelineFunctionRef
     public string Name { get; set; }
 }
 
+/// <summary>RequiredResourceSelector selects a required resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1CompositionSpecPipelineRequirementsRequiredResources
+{
+    /// <summary>APIVersion of the required resource.</summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary>Kind of the required resource.</summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary>MatchLabels specifies the set of labels to match for finding the required resource. When specified, Name is ignored.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Name of the required resource.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Namespace of the required resource if it is namespaced.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>RequirementName is the unique name to identify this required resource in the Required Resources map in the function request.</summary>
+    [JsonPropertyName("requirementName")]
+    public string RequirementName { get; set; }
+}
+
+/// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1CompositionSpecPipelineRequirements
+{
+    /// <summary>RequiredResources is a list of resources that must be fetched before this function is called.</summary>
+    [JsonPropertyName("requiredResources")]
+    public IList<V1CompositionSpecPipelineRequirementsRequiredResources>? RequiredResources { get; set; }
+}
+
 /// <summary>A PipelineStep in a function pipeline.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionSpecPipeline
@@ -75,6 +113,10 @@ public partial class V1CompositionSpecPipeline
     /// <summary>Input is an optional, arbitrary Kubernetes resource (i.e. a resource with an apiVersion and kind) that will be passed to the function as the 'input' of its RunFunctionRequest.</summary>
     [JsonPropertyName("input")]
     public JsonNode? Input { get; set; }
+
+    /// <summary>Requirements are resource requirements that will be satisfied before this pipeline step is called for the first time. This allows pre-populating required resources without requiring a function to request them first.</summary>
+    [JsonPropertyName("requirements")]
+    public V1CompositionSpecPipelineRequirements? Requirements { get; set; }
 
     /// <summary>Step name. Must be unique within its Pipeline.</summary>
     [JsonPropertyName("step")]
