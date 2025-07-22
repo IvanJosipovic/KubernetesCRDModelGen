@@ -51,6 +51,10 @@ public partial class V1BGPPeerSpec
     public bool? KeepOriginalNextHop { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("localASNumber")]
+    public int? LocalASNumber { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("localWorkloadSelector")]
     public string? LocalWorkloadSelector { get; set; }
 
