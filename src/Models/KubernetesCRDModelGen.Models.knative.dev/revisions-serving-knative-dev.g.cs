@@ -112,7 +112,7 @@ public partial class RevisionSpecContainersEnvFromSecretRef
     public bool? Optional { get; set; }
 }
 
-/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class RevisionSpecContainersEnvFrom
 {
@@ -120,7 +120,7 @@ public partial class RevisionSpecContainersEnvFrom
     [JsonPropertyName("configMapRef")]
     public RevisionSpecContainersEnvFromConfigMapRef? ConfigMapRef { get; set; }
 
-    /// <summary>An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.</summary>
+    /// <summary>Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -945,6 +945,10 @@ public partial class RevisionSpecVolumes
     /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-hostpath</summary>
     [JsonPropertyName("hostPath")]
     public JsonNode? HostPath { get; set; }
+
+    /// <summary>This is accessible behind a feature flag - kubernetes.podspec-volumes-image</summary>
+    [JsonPropertyName("image")]
+    public JsonNode? Image { get; set; }
 
     /// <summary>name of the volume. Must be a DNS_LABEL and unique within the pod. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names</summary>
     [JsonPropertyName("name")]
