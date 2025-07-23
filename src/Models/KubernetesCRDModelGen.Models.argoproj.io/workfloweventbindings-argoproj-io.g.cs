@@ -1122,6 +1122,29 @@ public partial class V1alpha1WorkflowEventBindingSpecSubmitArguments
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecSubmitMetadata
 {
+    /// <summary></summary>
+    [JsonPropertyName("annotations")]
+    public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("finalizers")]
+    public IList<string>? Finalizers { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("generateName")]
+    public string? GenerateName { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
 }
 
 /// <summary></summary>
