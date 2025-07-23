@@ -302,6 +302,10 @@ public partial class IntegrationSourceSpec
     /// <summary></summary>
     [JsonPropertyName("aws")]
     public IntegrationSourceSpecAws? Aws { get; set; }
+
+    /// <summary>A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</summary>
+    [JsonPropertyName("template")]
+    public JsonNode? Template { get; set; }
 }
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
