@@ -205,7 +205,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersions
     [JsonPropertyName("additionalPrinterColumns")]
     public IList<V2alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrinterColumns>? AdditionalPrinterColumns { get; set; }
 
-    /// <summary>Voldemort indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.</summary>
+    /// <summary>Deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.</summary>
     [JsonPropertyName("deprecated")]
     public bool? Deprecated { get; set; }
 
