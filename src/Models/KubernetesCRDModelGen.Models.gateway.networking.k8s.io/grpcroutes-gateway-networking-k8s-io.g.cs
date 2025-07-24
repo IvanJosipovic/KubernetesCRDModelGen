@@ -628,7 +628,7 @@ public partial class V1GRPCRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1GRPC
 
     /// <summary>Spec defines the desired state of GRPCRoute.</summary>
     [JsonPropertyName("spec")]
-    public V1GRPCRouteSpec? Spec { get; set; }
+    public V1GRPCRouteSpec Spec { get; set; }
 
     /// <summary>Status defines the current state of GRPCRoute.</summary>
     [JsonPropertyName("status")]
