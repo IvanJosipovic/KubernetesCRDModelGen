@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.upbound.io;
-/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderAutomatedBackupPolicy
 {
@@ -28,6 +28,10 @@ public partial class V1beta1TableSpecForProviderColumnFamily
     /// <summary>The name of the column family.</summary>
     [JsonPropertyName("family")]
     public string? Family { get; set; }
+
+    /// <summary>The type of the column family.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -90,7 +94,7 @@ public partial class V1beta1TableSpecForProviderInstanceNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProvider
 {
-    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
     [JsonPropertyName("automatedBackupPolicy")]
     public V1beta1TableSpecForProviderAutomatedBackupPolicy? AutomatedBackupPolicy { get; set; }
 
@@ -122,12 +126,16 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("rowKeySchema")]
+    public string? RowKeySchema { get; set; }
+
     /// <summary>A list of predefined keys to split the table on.</summary>
     [JsonPropertyName("splitKeys")]
     public IList<string>? SplitKeys { get; set; }
 }
 
-/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderAutomatedBackupPolicy
 {
@@ -147,13 +155,17 @@ public partial class V1beta1TableSpecInitProviderColumnFamily
     /// <summary>The name of the column family.</summary>
     [JsonPropertyName("family")]
     public string? Family { get; set; }
+
+    /// <summary>The type of the column family.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProvider
 {
-    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
     [JsonPropertyName("automatedBackupPolicy")]
     public V1beta1TableSpecInitProviderAutomatedBackupPolicy? AutomatedBackupPolicy { get; set; }
 
@@ -172,6 +184,10 @@ public partial class V1beta1TableSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("rowKeySchema")]
+    public string? RowKeySchema { get; set; }
 
     /// <summary>A list of predefined keys to split the table on.</summary>
     [JsonPropertyName("splitKeys")]
@@ -310,7 +326,7 @@ public partial class V1beta1TableSpec
     public V1beta1TableSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+/// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderAutomatedBackupPolicy
 {
@@ -330,13 +346,17 @@ public partial class V1beta1TableStatusAtProviderColumnFamily
     /// <summary>The name of the column family.</summary>
     [JsonPropertyName("family")]
     public string? Family { get; set; }
+
+    /// <summary>The type of the column family.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProvider
 {
-    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.</summary>
+    /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
     [JsonPropertyName("automatedBackupPolicy")]
     public V1beta1TableStatusAtProviderAutomatedBackupPolicy? AutomatedBackupPolicy { get; set; }
 
@@ -363,6 +383,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("rowKeySchema")]
+    public string? RowKeySchema { get; set; }
 
     /// <summary>A list of predefined keys to split the table on.</summary>
     [JsonPropertyName("splitKeys")]

@@ -98,6 +98,23 @@ public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRawKeySecr
     public string Namespace { get; set; }
 }
 
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKey
@@ -109,6 +126,10 @@ public partial class V1beta1RegionDiskSpecForProviderDiskEncryptionKey
     /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("rawKeySecretRef")]
     public V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1RegionDiskSpecForProviderDiskEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -189,9 +210,21 @@ public partial class V1beta1RegionDiskSpecForProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskSpecForProvider
 {
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>The access mode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1RegionDiskSpecForProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -348,6 +381,23 @@ public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRawKeySec
     public string Namespace { get; set; }
 }
 
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKey
@@ -359,6 +409,10 @@ public partial class V1beta1RegionDiskSpecInitProviderDiskEncryptionKey
     /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("rawKeySecretRef")]
     public V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1RegionDiskSpecInitProviderDiskEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -439,9 +493,21 @@ public partial class V1beta1RegionDiskSpecInitProviderSourceSnapshotEncryptionKe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskSpecInitProvider
 {
+    /// <summary>The access mode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
     /// <summary>A nested object resource Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1RegionDiskSpecInitProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -684,9 +750,21 @@ public partial class V1beta1RegionDiskStatusAtProviderSourceSnapshotEncryptionKe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskStatusAtProvider
 {
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>The access mode of the disk. For example:</summary>
+    [JsonPropertyName("accessMode")]
+    public string? AccessMode { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1RegionDiskStatusAtProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -699,6 +777,10 @@ public partial class V1beta1RegionDiskStatusAtProvider
     /// <summary>Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later. Structure is documented below.</summary>
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1RegionDiskStatusAtProviderDiskEncryptionKey>? DiskEncryptionKey { get; set; }
+
+    /// <summary>The unique identifier for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("diskId")]
+    public string? DiskId { get; set; }
 
     /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]

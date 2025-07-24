@@ -84,9 +84,6 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  certificateId:
-                    description: The unique identifier for the resource.
-                    type: number
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -148,9 +145,6 @@ spec:
 
                   autoscaler.
                 properties:
-                  certificateId:
-                    description: The unique identifier for the resource.
-                    type: number
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -595,9 +589,6 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  certificateId:
-                    description: The unique identifier for the resource.
-                    type: number
                   description:
                     description: An optional description of this resource.
                     type: string
@@ -657,9 +648,6 @@ spec:
 
                   autoscaler.
                 properties:
-                  certificateId:
-                    description: The unique identifier for the resource.
-                    type: number
                   description:
                     description: An optional description of this resource.
                     type: string

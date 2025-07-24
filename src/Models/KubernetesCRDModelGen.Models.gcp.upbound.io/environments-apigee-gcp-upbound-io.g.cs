@@ -10,6 +10,28 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderClientIpResolutionConfigHeaderIndexAlgorithm
+{
+    /// <summary>The index of the ip in the header. Positive indices 0, 1, 2, 3 chooses indices from the left (first ips). Negative indices -1, -2, -3 chooses indices from the right (last ips).</summary>
+    [JsonPropertyName("ipHeaderIndex")]
+    public double? IpHeaderIndex { get; set; }
+
+    /// <summary>The name of the header to extract the client ip from. We are currently only supporting the X-Forwarded-For header.</summary>
+    [JsonPropertyName("ipHeaderName")]
+    public string? IpHeaderName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderClientIpResolutionConfig
+{
+    /// <summary>Resolves the client ip based on a custom header. Structure is documented below.</summary>
+    [JsonPropertyName("headerIndexAlgorithm")]
+    public IList<V1beta1EnvironmentSpecForProviderClientIpResolutionConfigHeaderIndexAlgorithm>? HeaderIndexAlgorithm { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderNodeConfig
 {
     /// <summary>The maximum total number of gateway nodes that the is reserved for all instances that has the specified environment. If not specified, the default is determined by the recommended maximum number of nodes for that gateway.</summary>
@@ -79,11 +101,37 @@ public partial class V1beta1EnvironmentSpecForProviderOrgIdSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderPropertiesProperty
+{
+    /// <summary>The property key.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The property value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderProperties
+{
+    /// <summary>List of all properties in the object. Structure is documented below.</summary>
+    [JsonPropertyName("property")]
+    public IList<V1beta1EnvironmentSpecForProviderPropertiesProperty>? Property { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProvider
 {
     /// <summary>Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed. Possible values are: API_PROXY_TYPE_UNSPECIFIED, PROGRAMMABLE, CONFIGURABLE.</summary>
     [JsonPropertyName("apiProxyType")]
     public string? ApiProxyType { get; set; }
+
+    /// <summary>The algorithm to resolve IP. This will affect Analytics, API Security, and other features that use the client ip. To remove a client ip resolution config, update the field to an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see: https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution Structure is documented below.</summary>
+    [JsonPropertyName("clientIpResolutionConfig")]
+    public IList<V1beta1EnvironmentSpecForProviderClientIpResolutionConfig>? ClientIpResolutionConfig { get; set; }
 
     /// <summary>Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be prevented from performing a subset of actions within the environment, including: Managing the deployment of API proxy or shared flow revisions; Creating, updating, or deleting resource files; Creating, updating, or deleting target servers. Possible values are: DEPLOYMENT_TYPE_UNSPECIFIED, PROXY, ARCHIVE.</summary>
     [JsonPropertyName("deploymentType")]
@@ -117,9 +165,35 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("orgIdSelector")]
     public V1beta1EnvironmentSpecForProviderOrgIdSelector? OrgIdSelector { get; set; }
 
+    /// <summary>Key-value pairs that may be used for customizing the environment. Structure is documented below.</summary>
+    [JsonPropertyName("properties")]
+    public IList<V1beta1EnvironmentSpecForProviderProperties>? Properties { get; set; }
+
     /// <summary>Types that can be selected for an Environment. Each of the types are limited by capability and capacity. Refer to Apigee's public documentation to understand about each of these types in details. An Apigee org can support heterogeneous Environments. Possible values are: ENVIRONMENT_TYPE_UNSPECIFIED, BASE, INTERMEDIATE, COMPREHENSIVE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderClientIpResolutionConfigHeaderIndexAlgorithm
+{
+    /// <summary>The index of the ip in the header. Positive indices 0, 1, 2, 3 chooses indices from the left (first ips). Negative indices -1, -2, -3 chooses indices from the right (last ips).</summary>
+    [JsonPropertyName("ipHeaderIndex")]
+    public double? IpHeaderIndex { get; set; }
+
+    /// <summary>The name of the header to extract the client ip from. We are currently only supporting the X-Forwarded-For header.</summary>
+    [JsonPropertyName("ipHeaderName")]
+    public string? IpHeaderName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderClientIpResolutionConfig
+{
+    /// <summary>Resolves the client ip based on a custom header. Structure is documented below.</summary>
+    [JsonPropertyName("headerIndexAlgorithm")]
+    public IList<V1beta1EnvironmentSpecInitProviderClientIpResolutionConfigHeaderIndexAlgorithm>? HeaderIndexAlgorithm { get; set; }
 }
 
 /// <summary></summary>
@@ -135,6 +209,28 @@ public partial class V1beta1EnvironmentSpecInitProviderNodeConfig
     public string? MinNodeCount { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderPropertiesProperty
+{
+    /// <summary>The property key.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The property value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderProperties
+{
+    /// <summary>List of all properties in the object. Structure is documented below.</summary>
+    [JsonPropertyName("property")]
+    public IList<V1beta1EnvironmentSpecInitProviderPropertiesProperty>? Property { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProvider
@@ -142,6 +238,10 @@ public partial class V1beta1EnvironmentSpecInitProvider
     /// <summary>Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed. Possible values are: API_PROXY_TYPE_UNSPECIFIED, PROGRAMMABLE, CONFIGURABLE.</summary>
     [JsonPropertyName("apiProxyType")]
     public string? ApiProxyType { get; set; }
+
+    /// <summary>The algorithm to resolve IP. This will affect Analytics, API Security, and other features that use the client ip. To remove a client ip resolution config, update the field to an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see: https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution Structure is documented below.</summary>
+    [JsonPropertyName("clientIpResolutionConfig")]
+    public IList<V1beta1EnvironmentSpecInitProviderClientIpResolutionConfig>? ClientIpResolutionConfig { get; set; }
 
     /// <summary>Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be prevented from performing a subset of actions within the environment, including: Managing the deployment of API proxy or shared flow revisions; Creating, updating, or deleting resource files; Creating, updating, or deleting target servers. Possible values are: DEPLOYMENT_TYPE_UNSPECIFIED, PROXY, ARCHIVE.</summary>
     [JsonPropertyName("deploymentType")]
@@ -162,6 +262,10 @@ public partial class V1beta1EnvironmentSpecInitProvider
     /// <summary>NodeConfig for setting the min/max number of nodes associated with the environment. Structure is documented below.</summary>
     [JsonPropertyName("nodeConfig")]
     public IList<V1beta1EnvironmentSpecInitProviderNodeConfig>? NodeConfig { get; set; }
+
+    /// <summary>Key-value pairs that may be used for customizing the environment. Structure is documented below.</summary>
+    [JsonPropertyName("properties")]
+    public IList<V1beta1EnvironmentSpecInitProviderProperties>? Properties { get; set; }
 
     /// <summary>Types that can be selected for an Environment. Each of the types are limited by capability and capacity. Refer to Apigee's public documentation to understand about each of these types in details. An Apigee org can support heterogeneous Environments. Possible values are: ENVIRONMENT_TYPE_UNSPECIFIED, BASE, INTERMEDIATE, COMPREHENSIVE.</summary>
     [JsonPropertyName("type")]
@@ -302,6 +406,28 @@ public partial class V1beta1EnvironmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderClientIpResolutionConfigHeaderIndexAlgorithm
+{
+    /// <summary>The index of the ip in the header. Positive indices 0, 1, 2, 3 chooses indices from the left (first ips). Negative indices -1, -2, -3 chooses indices from the right (last ips).</summary>
+    [JsonPropertyName("ipHeaderIndex")]
+    public double? IpHeaderIndex { get; set; }
+
+    /// <summary>The name of the header to extract the client ip from. We are currently only supporting the X-Forwarded-For header.</summary>
+    [JsonPropertyName("ipHeaderName")]
+    public string? IpHeaderName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderClientIpResolutionConfig
+{
+    /// <summary>Resolves the client ip based on a custom header. Structure is documented below.</summary>
+    [JsonPropertyName("headerIndexAlgorithm")]
+    public IList<V1beta1EnvironmentStatusAtProviderClientIpResolutionConfigHeaderIndexAlgorithm>? HeaderIndexAlgorithm { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderNodeConfig
 {
     /// <summary>(Output) The current total number of gateway nodes that each environment currently has across all instances.</summary>
@@ -319,11 +445,37 @@ public partial class V1beta1EnvironmentStatusAtProviderNodeConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderPropertiesProperty
+{
+    /// <summary>The property key.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The property value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderProperties
+{
+    /// <summary>List of all properties in the object. Structure is documented below.</summary>
+    [JsonPropertyName("property")]
+    public IList<V1beta1EnvironmentStatusAtProviderPropertiesProperty>? Property { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProvider
 {
     /// <summary>Optional. API Proxy type supported by the environment. The type can be set when creating the Environment and cannot be changed. Possible values are: API_PROXY_TYPE_UNSPECIFIED, PROGRAMMABLE, CONFIGURABLE.</summary>
     [JsonPropertyName("apiProxyType")]
     public string? ApiProxyType { get; set; }
+
+    /// <summary>The algorithm to resolve IP. This will affect Analytics, API Security, and other features that use the client ip. To remove a client ip resolution config, update the field to an empty value. Example: '{ "clientIpResolutionConfig" = {} }' For more information, see: https://cloud.google.com/apigee/docs/api-platform/system-administration/client-ip-resolution Structure is documented below.</summary>
+    [JsonPropertyName("clientIpResolutionConfig")]
+    public IList<V1beta1EnvironmentStatusAtProviderClientIpResolutionConfig>? ClientIpResolutionConfig { get; set; }
 
     /// <summary>Optional. Deployment type supported by the environment. The deployment type can be set when creating the environment and cannot be changed. When you enable archive deployment, you will be prevented from performing a subset of actions within the environment, including: Managing the deployment of API proxy or shared flow revisions; Creating, updating, or deleting resource files; Creating, updating, or deleting target servers. Possible values are: DEPLOYMENT_TYPE_UNSPECIFIED, PROXY, ARCHIVE.</summary>
     [JsonPropertyName("deploymentType")]
@@ -352,6 +504,10 @@ public partial class V1beta1EnvironmentStatusAtProvider
     /// <summary>The Apigee Organization associated with the Apigee environment, in the format organizations/{{org_name}}.</summary>
     [JsonPropertyName("orgId")]
     public string? OrgId { get; set; }
+
+    /// <summary>Key-value pairs that may be used for customizing the environment. Structure is documented below.</summary>
+    [JsonPropertyName("properties")]
+    public IList<V1beta1EnvironmentStatusAtProviderProperties>? Properties { get; set; }
 
     /// <summary>Types that can be selected for an Environment. Each of the types are limited by capability and capacity. Refer to Apigee's public documentation to understand about each of these types in details. An Apigee org can support heterogeneous Environments. Possible values are: ENVIRONMENT_TYPE_UNSPECIFIED, BASE, INTERMEDIATE, COMPREHENSIVE.</summary>
     [JsonPropertyName("type")]

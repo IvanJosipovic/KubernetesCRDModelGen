@@ -63,6 +63,10 @@ public partial class V1beta1ManagedZoneSpecForProviderDnssecConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderForwardingConfigTargetNameServers
 {
+    /// <summary>Fully qualified domain name for the forwarding target.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
     [JsonPropertyName("forwardingPath")]
     public string? ForwardingPath { get; set; }
@@ -426,6 +430,10 @@ public partial class V1beta1ManagedZoneSpecInitProviderDnssecConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecInitProviderForwardingConfigTargetNameServers
 {
+    /// <summary>Fully qualified domain name for the forwarding target.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
     [JsonPropertyName("forwardingPath")]
     public string? ForwardingPath { get; set; }
@@ -921,6 +929,10 @@ public partial class V1beta1ManagedZoneStatusAtProviderDnssecConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneStatusAtProviderForwardingConfigTargetNameServers
 {
+    /// <summary>Fully qualified domain name for the forwarding target.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
     /// <summary>Forwarding path for this TargetNameServer. If unset or default Cloud DNS will make forwarding decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go to the Internet. When set to private, Cloud DNS will always send queries through VPC for this target Possible values are: default, private.</summary>
     [JsonPropertyName("forwardingPath")]
     public string? ForwardingPath { get; set; }

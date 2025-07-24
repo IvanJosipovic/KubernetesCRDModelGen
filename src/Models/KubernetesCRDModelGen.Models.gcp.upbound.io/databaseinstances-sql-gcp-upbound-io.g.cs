@@ -58,6 +58,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
     [JsonPropertyName("caCertificate")]
     public string? CaCertificate { get; set; }
 
+    /// <summary>Specifies if the replica is a cascadable replica. If true, instance must be in different region from primary.</summary>
+    [JsonPropertyName("cascadableReplica")]
+    public bool? CascadableReplica { get; set; }
+
     /// <summary>PEM representation of the replica's x509 certificate.</summary>
     [JsonPropertyName("clientCertificate")]
     public string? ClientCertificate { get; set; }
@@ -97,6 +101,15 @@ public partial class V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration
     /// <summary>True if the master's common name value is checked during the SSL handshake.</summary>
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecForProviderReplicationCluster
+{
+    /// <summary>project:your-instance". You can also set this field to "your-instance", but cloud SQL backend will convert it to the aforementioned standard format.</summary>
+    [JsonPropertyName("failoverDrReplicaName")]
+    public string? FailoverDrReplicaName { get; set; }
 }
 
 /// <summary></summary>
@@ -195,6 +208,32 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsBackupConfigu
     /// <summary>The number of days of transaction logs we retain for point in time restore, from 1-7. For PostgreSQL Enterprise Plus instances, the number of days of retained transaction logs can be set from 1 to 35.</summary>
     [JsonPropertyName("transactionLogRetentionDays")]
     public double? TransactionLogRetentionDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfigFlags
+{
+    /// <summary>A name for this whitelist entry.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>A CIDR notation IPv4 or IPv6 address that is allowed to access this instance. Must be set even if other two attributes are not for the whitelist to become active.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfig
+{
+    /// <summary>:  True if the manager connection pooling configuration is enabled.</summary>
+    [JsonPropertyName("connectionPoolingEnabled")]
+    public bool? ConnectionPoolingEnabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flags")]
+    public IList<V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
 }
 
 /// <summary></summary>
@@ -336,11 +375,28 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfigPscAutoConnections
+{
+    /// <summary>"The consumer network of this consumer endpoint. This must be a resource path that includes both the host project and the network name. For example, projects/project1/global/networks/network1. The consumer host project of this network might be different from the consumer service project."</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>The project ID of consumer service project of this consumer endpoint.</summary>
+    [JsonPropertyName("consumerServiceProjectId")]
+    public string? ConsumerServiceProjectId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
+
+    /// <summary>A comma-separated list of networks or a comma-separated list of network-project pairs. Each project in this list is represented by a project number (numeric) or by a project ID (alphanumeric). This allows Private Service Connect connections to be created automatically for the specified networks.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfigPscAutoConnections>? PscAutoConnections { get; set; }
 
     /// <summary>Whether PSC connectivity is enabled for this instance.</summary>
     [JsonPropertyName("pscEnabled")]
@@ -358,6 +414,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     /// <summary></summary>
     [JsonPropertyName("authorizedNetworks")]
     public IList<V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationAuthorizedNetworks>? AuthorizedNetworks { get; set; }
+
+    /// <summary>The custom subject alternative names for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("customSubjectAlternativeNames")]
+    public IList<string>? CustomSubjectAlternativeNames { get; set; }
 
     /// <summary>Whether Google Cloud services such as BigQuery are allowed to access data in this Cloud SQL instance over a private IP connection. SQLSERVER database type is not supported.</summary>
     [JsonPropertyName("enablePrivatePathForGoogleCloudServices")]
@@ -383,13 +443,13 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurati
     [JsonPropertyName("pscConfig")]
     public IList<V1beta1DatabaseInstanceSpecForProviderSettingsIpConfigurationPscConfig>? PscConfig { get; set; }
 
-    /// <summary>Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.</summary>
-    [JsonPropertyName("requireSsl")]
-    public bool? RequireSsl { get; set; }
-
     /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
     [JsonPropertyName("serverCaMode")]
     public string? ServerCaMode { get; set; }
+
+    /// <summary>The resource name of the server CA pool for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("serverCaPool")]
+    public string? ServerCaPool { get; set; }
 
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
@@ -504,6 +564,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettings
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("connectionPoolConfig")]
+    public IList<V1beta1DatabaseInstanceSpecForProviderSettingsConnectionPoolConfig>? ConnectionPoolConfig { get; set; }
+
     /// <summary>Specifies if connections must use Cloud SQL connectors.</summary>
     [JsonPropertyName("connectorEnforcement")]
     public string? ConnectorEnforcement { get; set; }
@@ -576,6 +640,10 @@ public partial class V1beta1DatabaseInstanceSpecForProviderSettings
     [JsonPropertyName("pricingPlan")]
     public string? PricingPlan { get; set; }
 
+    /// <summary>When this parameter is set to true, Cloud SQL retains backups of the instance even after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the backup or the project. The AUTOMATED backup will be retained based on the backups retention setting.</summary>
+    [JsonPropertyName("retainBackupsOnDelete")]
+    public bool? RetainBackupsOnDelete { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("sqlServerAuditConfig")]
     public IList<V1beta1DatabaseInstanceSpecForProviderSettingsSqlServerAuditConfig>? SqlServerAuditConfig { get; set; }
@@ -601,11 +669,11 @@ public partial class V1beta1DatabaseInstanceSpecForProvider
     [JsonPropertyName("clone")]
     public IList<V1beta1DatabaseInstanceSpecForProviderClone>? Clone { get; set; }
 
-    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
+    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, MYSQL_8_4, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, POSTGRES_16, POSTGRES_17, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
     [JsonPropertyName("databaseVersion")]
     public string? DatabaseVersion { get; set; }
 
-    /// <summary>Defaults to true.</summary>
+    /// <summary>When the field is set to false, deleting the instance is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -632,6 +700,14 @@ public partial class V1beta1DatabaseInstanceSpecForProvider
     /// <summary>The configuration for replication. The configuration is detailed below. Valid only for MySQL instances.</summary>
     [JsonPropertyName("replicaConfiguration")]
     public IList<V1beta1DatabaseInstanceSpecForProviderReplicaConfiguration>? ReplicaConfiguration { get; set; }
+
+    /// <summary>List of replica names. Can be updated.</summary>
+    [JsonPropertyName("replicaNames")]
+    public IList<string>? ReplicaNames { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("replicationCluster")]
+    public IList<V1beta1DatabaseInstanceSpecForProviderReplicationCluster>? ReplicationCluster { get; set; }
 
     /// <summary>The context needed to restore the database to a backup run. The configuration is detailed below. Adding or modifying this block during resource creation/update will trigger the restore action after the resource is created/updated.</summary>
     [JsonPropertyName("restoreBackupContext")]
@@ -696,6 +772,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     [JsonPropertyName("caCertificate")]
     public string? CaCertificate { get; set; }
 
+    /// <summary>Specifies if the replica is a cascadable replica. If true, instance must be in different region from primary.</summary>
+    [JsonPropertyName("cascadableReplica")]
+    public bool? CascadableReplica { get; set; }
+
     /// <summary>PEM representation of the replica's x509 certificate.</summary>
     [JsonPropertyName("clientCertificate")]
     public string? ClientCertificate { get; set; }
@@ -735,6 +815,15 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration
     /// <summary>True if the master's common name value is checked during the SSL handshake.</summary>
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecInitProviderReplicationCluster
+{
+    /// <summary>project:your-instance". You can also set this field to "your-instance", but cloud SQL backend will convert it to the aforementioned standard format.</summary>
+    [JsonPropertyName("failoverDrReplicaName")]
+    public string? FailoverDrReplicaName { get; set; }
 }
 
 /// <summary></summary>
@@ -833,6 +922,32 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsBackupConfig
     /// <summary>The number of days of transaction logs we retain for point in time restore, from 1-7. For PostgreSQL Enterprise Plus instances, the number of days of retained transaction logs can be set from 1 to 35.</summary>
     [JsonPropertyName("transactionLogRetentionDays")]
     public double? TransactionLogRetentionDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfigFlags
+{
+    /// <summary>A name for this whitelist entry.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>A CIDR notation IPv4 or IPv6 address that is allowed to access this instance. Must be set even if other two attributes are not for the whitelist to become active.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfig
+{
+    /// <summary>:  True if the manager connection pooling configuration is enabled.</summary>
+    [JsonPropertyName("connectionPoolingEnabled")]
+    public bool? ConnectionPoolingEnabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flags")]
+    public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
 }
 
 /// <summary></summary>
@@ -974,11 +1089,28 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfigPscAutoConnections
+{
+    /// <summary>"The consumer network of this consumer endpoint. This must be a resource path that includes both the host project and the network name. For example, projects/project1/global/networks/network1. The consumer host project of this network might be different from the consumer service project."</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>The project ID of consumer service project of this consumer endpoint.</summary>
+    [JsonPropertyName("consumerServiceProjectId")]
+    public string? ConsumerServiceProjectId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
+
+    /// <summary>A comma-separated list of networks or a comma-separated list of network-project pairs. Each project in this list is represented by a project number (numeric) or by a project ID (alphanumeric). This allows Private Service Connect connections to be created automatically for the specified networks.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfigPscAutoConnections>? PscAutoConnections { get; set; }
 
     /// <summary>Whether PSC connectivity is enabled for this instance.</summary>
     [JsonPropertyName("pscEnabled")]
@@ -996,6 +1128,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     /// <summary></summary>
     [JsonPropertyName("authorizedNetworks")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationAuthorizedNetworks>? AuthorizedNetworks { get; set; }
+
+    /// <summary>The custom subject alternative names for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("customSubjectAlternativeNames")]
+    public IList<string>? CustomSubjectAlternativeNames { get; set; }
 
     /// <summary>Whether Google Cloud services such as BigQuery are allowed to access data in this Cloud SQL instance over a private IP connection. SQLSERVER database type is not supported.</summary>
     [JsonPropertyName("enablePrivatePathForGoogleCloudServices")]
@@ -1021,13 +1157,13 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurat
     [JsonPropertyName("pscConfig")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsIpConfigurationPscConfig>? PscConfig { get; set; }
 
-    /// <summary>Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.</summary>
-    [JsonPropertyName("requireSsl")]
-    public bool? RequireSsl { get; set; }
-
     /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
     [JsonPropertyName("serverCaMode")]
     public string? ServerCaMode { get; set; }
+
+    /// <summary>The resource name of the server CA pool for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("serverCaPool")]
+    public string? ServerCaPool { get; set; }
 
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
@@ -1142,6 +1278,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("connectionPoolConfig")]
+    public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsConnectionPoolConfig>? ConnectionPoolConfig { get; set; }
+
     /// <summary>Specifies if connections must use Cloud SQL connectors.</summary>
     [JsonPropertyName("connectorEnforcement")]
     public string? ConnectorEnforcement { get; set; }
@@ -1214,6 +1354,10 @@ public partial class V1beta1DatabaseInstanceSpecInitProviderSettings
     [JsonPropertyName("pricingPlan")]
     public string? PricingPlan { get; set; }
 
+    /// <summary>When this parameter is set to true, Cloud SQL retains backups of the instance even after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the backup or the project. The AUTOMATED backup will be retained based on the backups retention setting.</summary>
+    [JsonPropertyName("retainBackupsOnDelete")]
+    public bool? RetainBackupsOnDelete { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("sqlServerAuditConfig")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderSettingsSqlServerAuditConfig>? SqlServerAuditConfig { get; set; }
@@ -1239,11 +1383,11 @@ public partial class V1beta1DatabaseInstanceSpecInitProvider
     [JsonPropertyName("clone")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderClone>? Clone { get; set; }
 
-    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
+    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, MYSQL_8_4, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, POSTGRES_16, POSTGRES_17, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
     [JsonPropertyName("databaseVersion")]
     public string? DatabaseVersion { get; set; }
 
-    /// <summary>Defaults to true.</summary>
+    /// <summary>When the field is set to false, deleting the instance is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -1270,6 +1414,14 @@ public partial class V1beta1DatabaseInstanceSpecInitProvider
     /// <summary>The configuration for replication. The configuration is detailed below. Valid only for MySQL instances.</summary>
     [JsonPropertyName("replicaConfiguration")]
     public IList<V1beta1DatabaseInstanceSpecInitProviderReplicaConfiguration>? ReplicaConfiguration { get; set; }
+
+    /// <summary>List of replica names. Can be updated.</summary>
+    [JsonPropertyName("replicaNames")]
+    public IList<string>? ReplicaNames { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("replicationCluster")]
+    public IList<V1beta1DatabaseInstanceSpecInitProviderReplicationCluster>? ReplicationCluster { get; set; }
 
     /// <summary>The context needed to restore the database to a backup run. The configuration is detailed below. Adding or modifying this block during resource creation/update will trigger the restore action after the resource is created/updated.</summary>
     [JsonPropertyName("restoreBackupContext")]
@@ -1443,6 +1595,23 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderClone
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceStatusAtProviderDnsNames
+{
+    /// <summary>The connection type of the DNS name. Can be either PUBLIC, PRIVATE_SERVICES_ACCESS, or PRIVATE_SERVICE_CONNECT.</summary>
+    [JsonPropertyName("connectionType")]
+    public string? ConnectionType { get; set; }
+
+    /// <summary>The scope that the DNS name applies to.</summary>
+    [JsonPropertyName("dnsScope")]
+    public string? DnsScope { get; set; }
+
+    /// <summary>A name for this whitelist entry.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderIpAddress
 {
     /// <summary>The IPv4 address assigned.</summary>
@@ -1465,6 +1634,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
     /// <summary>PEM representation of the trusted CA's x509 certificate.</summary>
     [JsonPropertyName("caCertificate")]
     public string? CaCertificate { get; set; }
+
+    /// <summary>Specifies if the replica is a cascadable replica. If true, instance must be in different region from primary.</summary>
+    [JsonPropertyName("cascadableReplica")]
+    public bool? CascadableReplica { get; set; }
 
     /// <summary>PEM representation of the replica's x509 certificate.</summary>
     [JsonPropertyName("clientCertificate")]
@@ -1501,6 +1674,19 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration
     /// <summary>True if the master's common name value is checked during the SSL handshake.</summary>
     [JsonPropertyName("verifyServerCertificate")]
     public bool? VerifyServerCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceStatusAtProviderReplicationCluster
+{
+    /// <summary>only field that indicates whether the replica is a DR replica.</summary>
+    [JsonPropertyName("drReplica")]
+    public bool? DrReplica { get; set; }
+
+    /// <summary>project:your-instance". You can also set this field to "your-instance", but cloud SQL backend will convert it to the aforementioned standard format.</summary>
+    [JsonPropertyName("failoverDrReplicaName")]
+    public string? FailoverDrReplicaName { get; set; }
 }
 
 /// <summary></summary>
@@ -1586,6 +1772,32 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsBackupConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfigFlags
+{
+    /// <summary>A name for this whitelist entry.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>A CIDR notation IPv4 or IPv6 address that is allowed to access this instance. Must be set even if other two attributes are not for the whitelist to become active.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfig
+{
+    /// <summary>:  True if the manager connection pooling configuration is enabled.</summary>
+    [JsonPropertyName("connectionPoolingEnabled")]
+    public bool? ConnectionPoolingEnabled { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("flags")]
+    public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfigFlags>? Flags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsDataCacheConfig
 {
     /// <summary>Whether data cache is enabled for the instance. Defaults to false. Can be used with MYSQL and PostgreSQL only.</summary>
@@ -1667,11 +1879,28 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfigPscAutoConnections
+{
+    /// <summary>"The consumer network of this consumer endpoint. This must be a resource path that includes both the host project and the network name. For example, projects/project1/global/networks/network1. The consumer host project of this network might be different from the consumer service project."</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>The project ID of consumer service project of this consumer endpoint.</summary>
+    [JsonPropertyName("consumerServiceProjectId")]
+    public string? ConsumerServiceProjectId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfig
 {
     /// <summary>List of consumer projects that are allow-listed for PSC connections to this instance. This instance can be connected to with PSC from any network in these projects. Each consumer project in this list may be represented by a project number (numeric) or by a project id (alphanumeric).</summary>
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
+
+    /// <summary>A comma-separated list of networks or a comma-separated list of network-project pairs. Each project in this list is represented by a project number (numeric) or by a project ID (alphanumeric). This allows Private Service Connect connections to be created automatically for the specified networks.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfigPscAutoConnections>? PscAutoConnections { get; set; }
 
     /// <summary>Whether PSC connectivity is enabled for this instance.</summary>
     [JsonPropertyName("pscEnabled")]
@@ -1690,6 +1919,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("authorizedNetworks")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationAuthorizedNetworks>? AuthorizedNetworks { get; set; }
 
+    /// <summary>The custom subject alternative names for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("customSubjectAlternativeNames")]
+    public IList<string>? CustomSubjectAlternativeNames { get; set; }
+
     /// <summary>Whether Google Cloud services such as BigQuery are allowed to access data in this Cloud SQL instance over a private IP connection. SQLSERVER database type is not supported.</summary>
     [JsonPropertyName("enablePrivatePathForGoogleCloudServices")]
     public bool? EnablePrivatePathForGoogleCloudServices { get; set; }
@@ -1706,13 +1939,13 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurat
     [JsonPropertyName("pscConfig")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsIpConfigurationPscConfig>? PscConfig { get; set; }
 
-    /// <summary>Whether SSL connections over IP are enforced or not. To change this field, also set the corresponding value in ssl_mode.</summary>
-    [JsonPropertyName("requireSsl")]
-    public bool? RequireSsl { get; set; }
-
     /// <summary>Specify how the server certificate's Certificate Authority is hosted. Supported value is GOOGLE_MANAGED_INTERNAL_CA.</summary>
     [JsonPropertyName("serverCaMode")]
     public string? ServerCaMode { get; set; }
+
+    /// <summary>The resource name of the server CA pool for an instance with CUSTOMER_MANAGED_CAS_CA as the server_ca_mode.</summary>
+    [JsonPropertyName("serverCaPool")]
+    public string? ServerCaPool { get; set; }
 
     /// <summary>Specify how SSL connection should be enforced in DB connections. This field provides more SSL enforcment options compared to require_ssl. To change this field, also set the correspoding value in require_ssl.</summary>
     [JsonPropertyName("sslMode")]
@@ -1827,6 +2060,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("connectionPoolConfig")]
+    public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsConnectionPoolConfig>? ConnectionPoolConfig { get; set; }
+
     /// <summary>Specifies if connections must use Cloud SQL connectors.</summary>
     [JsonPropertyName("connectorEnforcement")]
     public string? ConnectorEnforcement { get; set; }
@@ -1899,6 +2136,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProviderSettings
     [JsonPropertyName("pricingPlan")]
     public string? PricingPlan { get; set; }
 
+    /// <summary>When this parameter is set to true, Cloud SQL retains backups of the instance even after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the backup or the project. The AUTOMATED backup will be retained based on the backups retention setting.</summary>
+    [JsonPropertyName("retainBackupsOnDelete")]
+    public bool? RetainBackupsOnDelete { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("sqlServerAuditConfig")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderSettingsSqlServerAuditConfig>? SqlServerAuditConfig { get; set; }
@@ -1936,7 +2177,7 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     [JsonPropertyName("connectionName")]
     public string? ConnectionName { get; set; }
 
-    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
+    /// <summary>The MySQL, PostgreSQL or SQL Server version to use. Supported values include MYSQL_5_6, MYSQL_5_7, MYSQL_8_0, MYSQL_8_4, POSTGRES_9_6,POSTGRES_10, POSTGRES_11, POSTGRES_12, POSTGRES_13, POSTGRES_14, POSTGRES_15, POSTGRES_16, POSTGRES_17, SQLSERVER_2017_STANDARD, SQLSERVER_2017_ENTERPRISE, SQLSERVER_2017_EXPRESS, SQLSERVER_2017_WEB. SQLSERVER_2019_STANDARD, SQLSERVER_2019_ENTERPRISE, SQLSERVER_2019_EXPRESS, SQLSERVER_2019_WEB. Database Version Policies includes an up-to-date reference of supported versions.</summary>
     [JsonPropertyName("databaseVersion")]
     public string? DatabaseVersion { get; set; }
 
@@ -1947,6 +2188,10 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     /// <summary>The name of the instance. This is done because after a name is used, it cannot be reused for up to one week.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
+
+    /// <summary>The list of DNS names used by this instance. Different connection types for an instance may have different DNS names. DNS names can apply to an individual instance or a cluster of instances.</summary>
+    [JsonPropertyName("dnsNames")]
+    public IList<V1beta1DatabaseInstanceStatusAtProviderDnsNames>? DnsNames { get; set; }
 
     /// <summary>The full path to the encryption key used for the CMEK disk encryption. The provided key must be in the same region as the SQL instance.  In order to use this feature, a special kind of service account must be created and granted permission on this key.  This step can currently only be done manually, please see this step. That service account needs the Cloud KMS &gt; Cloud KMS CryptoKey Encrypter/Decrypter role on your key - please see this step.</summary>
     [JsonPropertyName("encryptionKeyName")]
@@ -1999,6 +2244,14 @@ public partial class V1beta1DatabaseInstanceStatusAtProvider
     /// <summary>The configuration for replication. The configuration is detailed below. Valid only for MySQL instances.</summary>
     [JsonPropertyName("replicaConfiguration")]
     public IList<V1beta1DatabaseInstanceStatusAtProviderReplicaConfiguration>? ReplicaConfiguration { get; set; }
+
+    /// <summary>List of replica names. Can be updated.</summary>
+    [JsonPropertyName("replicaNames")]
+    public IList<string>? ReplicaNames { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("replicationCluster")]
+    public IList<V1beta1DatabaseInstanceStatusAtProviderReplicationCluster>? ReplicationCluster { get; set; }
 
     /// <summary>The context needed to restore the database to a backup run. The configuration is detailed below. Adding or modifying this block during resource creation/update will trigger the restore action after the resource is created/updated.</summary>
     [JsonPropertyName("restoreBackupContext")]

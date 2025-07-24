@@ -41,13 +41,13 @@ public partial class V1beta1ReservationSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.</summary>
-    [JsonPropertyName("multiRegionAuxiliary")]
-    public bool? MultiRegionAuxiliary { get; set; }
-
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The current location of the reservation's secondary replica. This field is only set for reservations using the managed disaster recovery feature. Users can set this in create reservation calls to create a failover reservation or in update reservation calls to convert a non-failover reservation to a failover reservation(or vice versa).</summary>
+    [JsonPropertyName("secondaryLocation")]
+    public string? SecondaryLocation { get; set; }
 
     /// <summary>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</summary>
     [JsonPropertyName("slotCapacity")]
@@ -83,9 +83,9 @@ public partial class V1beta1ReservationSpecInitProvider
     [JsonPropertyName("ignoreIdleSlots")]
     public bool? IgnoreIdleSlots { get; set; }
 
-    /// <summary>Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.</summary>
-    [JsonPropertyName("multiRegionAuxiliary")]
-    public bool? MultiRegionAuxiliary { get; set; }
+    /// <summary>The current location of the reservation's secondary replica. This field is only set for reservations using the managed disaster recovery feature. Users can set this in create reservation calls to create a failover reservation or in update reservation calls to convert a non-failover reservation to a failover reservation(or vice versa).</summary>
+    [JsonPropertyName("secondaryLocation")]
+    public string? SecondaryLocation { get; set; }
 
     /// <summary>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</summary>
     [JsonPropertyName("slotCapacity")]
@@ -239,6 +239,36 @@ public partial class V1beta1ReservationStatusAtProviderAutoscale
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ReservationStatusAtProviderReplicationStatusError
+{
+    /// <summary>(Output) The status code, which should be an enum value of google.rpc.Code.</summary>
+    [JsonPropertyName("code")]
+    public double? Code { get; set; }
+
+    /// <summary>(Output) A developer-facing error message, which should be in English.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ReservationStatusAtProviderReplicationStatus
+{
+    /// <summary>(Output) The last error encountered while trying to replicate changes from the primary to the secondary. This field is only available if the replication has not succeeded since. Structure is documented below.</summary>
+    [JsonPropertyName("error")]
+    public IList<V1beta1ReservationStatusAtProviderReplicationStatusError>? Error { get; set; }
+
+    /// <summary>(Output) The time at which the last error was encountered while trying to replicate changes from the primary to the secondary. This field is only available if the replication has not succeeded since.</summary>
+    [JsonPropertyName("lastErrorTime")]
+    public string? LastErrorTime { get; set; }
+
+    /// <summary>(Output) A timestamp corresponding to the last change on the primary that was successfully replicated to the secondary.</summary>
+    [JsonPropertyName("lastReplicationTime")]
+    public string? LastReplicationTime { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReservationStatusAtProvider
 {
     /// <summary>The configuration parameters for the auto scaling feature. Structure is documented below.</summary>
@@ -265,13 +295,25 @@ public partial class V1beta1ReservationStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Applicable only for reservations located within one of the BigQuery multi-regions (US or EU). If set to true, this reservation is placed in the organization's secondary region which is designated for disaster recovery purposes. If false, this reservation is placed in the organization's default region.</summary>
-    [JsonPropertyName("multiRegionAuxiliary")]
-    public bool? MultiRegionAuxiliary { get; set; }
+    /// <summary>The location where the reservation was originally created. This is set only during the failover reservation's creation. All billing charges for the failover reservation will be applied to this location.</summary>
+    [JsonPropertyName("originalPrimaryLocation")]
+    public string? OriginalPrimaryLocation { get; set; }
+
+    /// <summary>The current location of the reservation's primary replica. This field is only set for reservations using the managed disaster recovery feature.</summary>
+    [JsonPropertyName("primaryLocation")]
+    public string? PrimaryLocation { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The Disaster Recovery(DR) replication status of the reservation. This is only available for the primary replicas of DR/failover reservations and provides information about the both the staleness of the secondary and the last error encountered while trying to replicate changes from the primary to the secondary. If this field is blank, it means that the reservation is either not a DR reservation or the reservation is a DR secondary or that any replication operations on the reservation have succeeded. Structure is documented below.</summary>
+    [JsonPropertyName("replicationStatus")]
+    public IList<V1beta1ReservationStatusAtProviderReplicationStatus>? ReplicationStatus { get; set; }
+
+    /// <summary>The current location of the reservation's secondary replica. This field is only set for reservations using the managed disaster recovery feature. Users can set this in create reservation calls to create a failover reservation or in update reservation calls to convert a non-failover reservation to a failover reservation(or vice versa).</summary>
+    [JsonPropertyName("secondaryLocation")]
+    public string? SecondaryLocation { get; set; }
 
     /// <summary>Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.</summary>
     [JsonPropertyName("slotCapacity")]

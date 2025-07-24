@@ -1443,7 +1443,7 @@ spec:
                     description: >-
                       The runtime in which the function is going to run.
 
-                      Eg. "nodejs16", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
+                      Eg. "nodejs20", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
                     type: string
                   secretEnvironmentVariables:
                     description: Secret environment variables configuration. Structure is documented below.
@@ -1807,7 +1807,7 @@ spec:
                     description: >-
                       The runtime in which the function is going to run.
 
-                      Eg. "nodejs16", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
+                      Eg. "nodejs20", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
                     type: string
                   secretEnvironmentVariables:
                     description: Secret environment variables configuration. Structure is documented below.
@@ -2374,7 +2374,7 @@ spec:
                     description: >-
                       The runtime in which the function is going to run.
 
-                      Eg. "nodejs16", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
+                      Eg. "nodejs20", "python39", "dotnet3", "go116", "java11", "ruby30", "php74", etc. Check the official doc for the up-to-date list.
                     type: string
                   secretEnvironmentVariables:
                     description: Secret environment variables configuration. Structure is documented below.

@@ -212,6 +212,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.
@@ -307,6 +309,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.
@@ -602,6 +606,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.
@@ -895,6 +901,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.
@@ -984,6 +992,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.
@@ -1273,6 +1283,8 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  rowAffinity:
+                    type: boolean
                   singleClusterRouting:
                     description: >-
                       Use a single-cluster routing policy.

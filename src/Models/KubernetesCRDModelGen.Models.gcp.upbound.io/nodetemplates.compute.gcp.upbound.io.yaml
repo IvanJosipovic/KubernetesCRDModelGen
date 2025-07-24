@@ -84,6 +84,29 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -95,6 +118,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   nodeAffinityLabels:
                     additionalProperties:
                       type: string
@@ -205,6 +248,29 @@ spec:
 
                   autoscaler.
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -216,6 +282,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   nodeAffinityLabels:
                     additionalProperties:
                       type: string
@@ -509,6 +595,29 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -523,6 +632,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}
                     type: string
@@ -754,6 +883,29 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -765,6 +917,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   nodeAffinityLabels:
                     additionalProperties:
                       type: string
@@ -871,6 +1043,29 @@ spec:
 
                   autoscaler.
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -882,6 +1077,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   nodeAffinityLabels:
                     additionalProperties:
                       type: string
@@ -1171,6 +1386,29 @@ spec:
             properties:
               atProvider:
                 properties:
+                  accelerators:
+                    description: >-
+                      List of the type and count of accelerator cards attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorCount:
+                          description: >-
+                            The number of the guest accelerator cards exposed to this
+
+                            node template.
+                          type: number
+                        acceleratorType:
+                          description: >-
+                            Full or partial URL of the accelerator type resource to expose
+
+                            to this node template.
+                          type: string
+                      type: object
+                    type: array
                   cpuOvercommitType:
                     description: >-
                       CPU overcommit.
@@ -1185,6 +1423,26 @@ spec:
                   description:
                     description: An optional textual description of the resource.
                     type: string
+                  disks:
+                    description: >-
+                      List of the type, size and count of disks attached to the
+
+                      node template
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        diskCount:
+                          description: Specifies the number of such disks.
+                          type: number
+                        diskSizeGb:
+                          description: Specifies the size of the disk in base-2 GB.
+                          type: number
+                        diskType:
+                          description: 'Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.'
+                          type: string
+                      type: object
+                    type: array
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}
                     type: string

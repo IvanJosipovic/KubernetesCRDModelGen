@@ -136,7 +136,7 @@ public partial class V1beta1NodePoolSpecForProviderNetworkConfigAdditionalPodNet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNetworkConfigNetworkPerformanceConfig
 {
-    /// <summary></summary>
+    /// <summary>Specifies the total network bandwidth tier for the NodePool. Valid values include: "TIER_1" and "TIER_UNSPECIFIED".</summary>
     [JsonPropertyName("totalEgressBandwidthTier")]
     public string? TotalEgressBandwidthTier { get; set; }
 }
@@ -196,6 +196,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigAdvancedMachineFeat
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
@@ -204,6 +208,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigAdvancedMachineFeat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigConfidentialNodes
 {
+    /// <summary></summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -257,6 +265,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigContainerdConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary></summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -350,6 +362,18 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigHostMaintenancePoli
 public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
 
@@ -362,6 +386,22 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
     public string? CpuManagerPolicy { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -372,11 +412,28 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecForProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1NodePoolSpecForProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sysctls")]
@@ -536,6 +593,15 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecForProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -584,6 +650,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfig
     public IList<V1beta1NodePoolSpecForProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1NodePoolSpecForProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
@@ -627,6 +697,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -634,6 +708,10 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfig
     /// <summary></summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
@@ -696,12 +774,20 @@ public partial class V1beta1NodePoolSpecForProviderNodeConfig
     public bool? Spot { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("taint")]
     public IList<V1beta1NodePoolSpecForProviderNodeConfigTaint>? Taint { get; set; }
+
+    /// <summary>Parameters used in creating the node pool. See google_container_cluster for schema.</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1NodePoolSpecForProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("workloadMetadataConfig")]
@@ -930,7 +1016,7 @@ public partial class V1beta1NodePoolSpecInitProviderNetworkConfigAdditionalPodNe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNetworkConfigNetworkPerformanceConfig
 {
-    /// <summary></summary>
+    /// <summary>Specifies the total network bandwidth tier for the NodePool. Valid values include: "TIER_1" and "TIER_UNSPECIFIED".</summary>
     [JsonPropertyName("totalEgressBandwidthTier")]
     public string? TotalEgressBandwidthTier { get; set; }
 }
@@ -990,6 +1076,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigAdvancedMachineFea
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
@@ -998,6 +1088,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigAdvancedMachineFea
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigConfidentialNodes
 {
+    /// <summary></summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -1051,6 +1145,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigContainerdConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary></summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -1144,6 +1242,18 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigHostMaintenancePol
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
 
@@ -1156,6 +1266,22 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
     public string? CpuManagerPolicy { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -1166,11 +1292,28 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecInitProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1NodePoolSpecInitProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sysctls")]
@@ -1330,6 +1473,15 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecInitProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -1378,6 +1530,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfig
     public IList<V1beta1NodePoolSpecInitProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1NodePoolSpecInitProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
@@ -1421,6 +1577,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -1428,6 +1588,10 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfig
     /// <summary></summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
@@ -1490,12 +1654,20 @@ public partial class V1beta1NodePoolSpecInitProviderNodeConfig
     public bool? Spot { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("taint")]
     public IList<V1beta1NodePoolSpecInitProviderNodeConfigTaint>? Taint { get; set; }
+
+    /// <summary>Parameters used in creating the node pool. See google_container_cluster for schema.</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1NodePoolSpecInitProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("workloadMetadataConfig")]
@@ -1840,7 +2012,7 @@ public partial class V1beta1NodePoolStatusAtProviderNetworkConfigAdditionalPodNe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNetworkConfigNetworkPerformanceConfig
 {
-    /// <summary></summary>
+    /// <summary>Specifies the total network bandwidth tier for the NodePool. Valid values include: "TIER_1" and "TIER_UNSPECIFIED".</summary>
     [JsonPropertyName("totalEgressBandwidthTier")]
     public string? TotalEgressBandwidthTier { get; set; }
 }
@@ -1900,6 +2072,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigAdvancedMachineFea
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 }
@@ -1908,6 +2084,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigAdvancedMachineFea
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigConfidentialNodes
 {
+    /// <summary></summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Makes nodes obtainable through the ProvisioningRequest API exclusively.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -1978,6 +2158,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigEffectiveTaints
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary></summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -2071,6 +2255,18 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigHostMaintenancePol
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
 {
     /// <summary></summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
 
@@ -2083,6 +2279,22 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
     public string? CpuManagerPolicy { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -2093,11 +2305,28 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolStatusAtProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigLinuxNodeConfig
 {
     /// <summary></summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1NodePoolStatusAtProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sysctls")]
@@ -2201,6 +2430,15 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolStatusAtProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary>The Kubernetes version for the nodes in this pool. Note that if this field and auto_upgrade are both specified, they will fight each other for what the node version should be, so setting both is highly discouraged.</summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary></summary>
@@ -2253,6 +2491,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfig
     public IList<V1beta1NodePoolStatusAtProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1NodePoolStatusAtProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
@@ -2296,6 +2538,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -2303,6 +2549,10 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfig
     /// <summary></summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
@@ -2357,12 +2607,20 @@ public partial class V1beta1NodePoolStatusAtProviderNodeConfig
     public bool? Spot { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("taint")]
     public IList<V1beta1NodePoolStatusAtProviderNodeConfigTaint>? Taint { get; set; }
+
+    /// <summary>Parameters used in creating the node pool. See google_container_cluster for schema.</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1NodePoolStatusAtProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("workloadMetadataConfig")]

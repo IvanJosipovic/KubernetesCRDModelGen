@@ -132,6 +132,10 @@ public partial class V1beta1RegionTargetHTTPSProxySpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (600 seconds) will be used. For Regioanl HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 600 seconds.</summary>
+    [JsonPropertyName("httpKeepAliveTimeoutSec")]
+    public double? HttpKeepAliveTimeoutSec { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -296,6 +300,10 @@ public partial class V1beta1RegionTargetHTTPSProxySpecInitProvider
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (600 seconds) will be used. For Regioanl HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 600 seconds.</summary>
+    [JsonPropertyName("httpKeepAliveTimeoutSec")]
+    public double? HttpKeepAliveTimeoutSec { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -481,6 +489,10 @@ public partial class V1beta1RegionTargetHTTPSProxyStatusAtProvider
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keepalive is not specified, a default value (600 seconds) will be used. For Regioanl HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 600 seconds.</summary>
+    [JsonPropertyName("httpKeepAliveTimeoutSec")]
+    public double? HttpKeepAliveTimeoutSec { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/targetHttpsProxies/{{name}}</summary>
     [JsonPropertyName("id")]

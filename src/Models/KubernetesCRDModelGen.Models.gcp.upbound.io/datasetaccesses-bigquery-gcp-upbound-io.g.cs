@@ -8,6 +8,27 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetAccessSpecForProviderCondition
+{
+    /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderDatasetDatasetDatasetIdRefPolicy
@@ -568,6 +589,10 @@ public partial class V1beta1DatasetAccessSpecForProviderView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProvider
 {
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetAccessSpecForProviderCondition>? Condition { get; set; }
+
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]
     public IList<V1beta1DatasetAccessSpecForProviderDataset>? Dataset { get; set; }
@@ -627,6 +652,27 @@ public partial class V1beta1DatasetAccessSpecForProvider
     /// <summary>A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation. Structure is documented below.</summary>
     [JsonPropertyName("view")]
     public IList<V1beta1DatasetAccessSpecForProviderView>? View { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetAccessSpecInitProviderCondition
+{
+    /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1189,6 +1235,10 @@ public partial class V1beta1DatasetAccessSpecInitProviderView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecInitProvider
 {
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetAccessSpecInitProviderCondition>? Condition { get; set; }
+
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]
     public IList<V1beta1DatasetAccessSpecInitProviderDataset>? Dataset { get; set; }
@@ -1384,6 +1434,27 @@ public partial class V1beta1DatasetAccessSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetAccessStatusAtProviderCondition
+{
+    /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessStatusAtProviderDatasetDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1449,6 +1520,10 @@ public partial class V1beta1DatasetAccessStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("apiUpdatedMember")]
     public bool? ApiUpdatedMember { get; set; }
+
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetAccessStatusAtProviderCondition>? Condition { get; set; }
 
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]

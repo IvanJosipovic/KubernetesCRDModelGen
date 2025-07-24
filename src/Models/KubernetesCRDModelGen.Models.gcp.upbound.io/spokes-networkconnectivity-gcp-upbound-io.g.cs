@@ -64,10 +64,70 @@ public partial class V1beta1SpokeSpecForProviderHubSelector
     public V1beta1SpokeSpecForProviderHubSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachments
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -75,6 +135,163 @@ public partial class V1beta1SpokeSpecForProviderLinkedInterconnectAttachments
     /// <summary>The URIs of linked interconnect attachment resources</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+
+    /// <summary>References to InterconnectAttachment in compute to populate uris.</summary>
+    [JsonPropertyName("urisRefs")]
+    public IList<V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisRefs>? UrisRefs { get; set; }
+
+    /// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
+    [JsonPropertyName("urisSelector")]
+    public V1beta1SpokeSpecForProviderLinkedInterconnectAttachmentsUrisSelector? UrisSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedProducerVpcNetwork
+{
+    /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
+    [JsonPropertyName("excludeExportRanges")]
+    public IList<string>? ExcludeExportRanges { get; set; }
+
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
+    /// <summary>The URI of the Service Consumer VPC that the Producer VPC is peered with.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.</summary>
+    [JsonPropertyName("peering")]
+    public string? Peering { get; set; }
+
+    /// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
+    [JsonPropertyName("peeringRef")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringRef? PeeringRef { get; set; }
+
+    /// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
+    [JsonPropertyName("peeringSelector")]
+    public V1beta1SpokeSpecForProviderLinkedProducerVpcNetworkPeeringSelector? PeeringSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -158,7 +375,11 @@ public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesIn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedRouterApplianceInstances
 {
-    /// <summary>The list of router appliance instances</summary>
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
+    /// <summary>The list of router appliance instances Structure is documented below.</summary>
     [JsonPropertyName("instances")]
     public IList<V1beta1SpokeSpecForProviderLinkedRouterApplianceInstancesInstances>? Instances { get; set; }
 
@@ -231,6 +452,10 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
     [JsonPropertyName("excludeExportRanges")]
     public IList<string>? ExcludeExportRanges { get; set; }
 
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
     /// <summary>The URI of the VPC network resource.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
@@ -244,10 +469,70 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpcNetwork
     public V1beta1SpokeSpecForProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -255,6 +540,14 @@ public partial class V1beta1SpokeSpecForProviderLinkedVpnTunnels
     /// <summary>The URIs of linked VPN tunnel resources.</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+
+    /// <summary>References to VPNTunnel in compute to populate uris.</summary>
+    [JsonPropertyName("urisRefs")]
+    public IList<V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisRefs>? UrisRefs { get; set; }
+
+    /// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
+    [JsonPropertyName("urisSelector")]
+    public V1beta1SpokeSpecForProviderLinkedVpnTunnelsUrisSelector? UrisSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -264,6 +557,10 @@ public partial class V1beta1SpokeSpecForProvider
     /// <summary>An optional description of the spoke.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>The name of the group that this spoke is associated with.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
 
     /// <summary>Immutable. The URI of the hub that this spoke is attached to.</summary>
     [JsonPropertyName("hub")]
@@ -284,6 +581,10 @@ public partial class V1beta1SpokeSpecForProvider
     /// <summary>A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
     [JsonPropertyName("linkedInterconnectAttachments")]
     public IList<V1beta1SpokeSpecForProviderLinkedInterconnectAttachments>? LinkedInterconnectAttachments { get; set; }
+
+    /// <summary>Producer VPC network that is associated with the spoke. Structure is documented below.</summary>
+    [JsonPropertyName("linkedProducerVpcNetwork")]
+    public IList<V1beta1SpokeSpecForProviderLinkedProducerVpcNetwork>? LinkedProducerVpcNetwork { get; set; }
 
     /// <summary>The URIs of linked Router appliance resources</summary>
     [JsonPropertyName("linkedRouterApplianceInstances")]
@@ -366,10 +667,70 @@ public partial class V1beta1SpokeSpecInitProviderHubSelector
     public V1beta1SpokeSpecInitProviderHubSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -377,6 +738,163 @@ public partial class V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments
     /// <summary>The URIs of linked interconnect attachment resources</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+
+    /// <summary>References to InterconnectAttachment in compute to populate uris.</summary>
+    [JsonPropertyName("urisRefs")]
+    public IList<V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisRefs>? UrisRefs { get; set; }
+
+    /// <summary>Selector for a list of InterconnectAttachment in compute to populate uris.</summary>
+    [JsonPropertyName("urisSelector")]
+    public V1beta1SpokeSpecInitProviderLinkedInterconnectAttachmentsUrisSelector? UrisSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Network in compute to populate network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedProducerVpcNetwork
+{
+    /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
+    [JsonPropertyName("excludeExportRanges")]
+    public IList<string>? ExcludeExportRanges { get; set; }
+
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
+    /// <summary>The URI of the Service Consumer VPC that the Producer VPC is peered with.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>Reference to a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkRef")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkRef? NetworkRef { get; set; }
+
+    /// <summary>Selector for a Network in compute to populate network.</summary>
+    [JsonPropertyName("networkSelector")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.</summary>
+    [JsonPropertyName("peering")]
+    public string? Peering { get; set; }
+
+    /// <summary>Reference to a Connection in servicenetworking to populate peering.</summary>
+    [JsonPropertyName("peeringRef")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringRef? PeeringRef { get; set; }
+
+    /// <summary>Selector for a Connection in servicenetworking to populate peering.</summary>
+    [JsonPropertyName("peeringSelector")]
+    public V1beta1SpokeSpecInitProviderLinkedProducerVpcNetworkPeeringSelector? PeeringSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -460,7 +978,11 @@ public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesI
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstances
 {
-    /// <summary>The list of router appliance instances</summary>
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
+    /// <summary>The list of router appliance instances Structure is documented below.</summary>
     [JsonPropertyName("instances")]
     public IList<V1beta1SpokeSpecInitProviderLinkedRouterApplianceInstancesInstances>? Instances { get; set; }
 
@@ -533,6 +1055,10 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
     [JsonPropertyName("excludeExportRanges")]
     public IList<string>? ExcludeExportRanges { get; set; }
 
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
     /// <summary>The URI of the VPC network resource.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
@@ -546,10 +1072,70 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpcNetwork
     public V1beta1SpokeSpecInitProviderLinkedVpcNetworkUriSelector? UriSelector { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -557,6 +1143,14 @@ public partial class V1beta1SpokeSpecInitProviderLinkedVpnTunnels
     /// <summary>The URIs of linked VPN tunnel resources.</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+
+    /// <summary>References to VPNTunnel in compute to populate uris.</summary>
+    [JsonPropertyName("urisRefs")]
+    public IList<V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisRefs>? UrisRefs { get; set; }
+
+    /// <summary>Selector for a list of VPNTunnel in compute to populate uris.</summary>
+    [JsonPropertyName("urisSelector")]
+    public V1beta1SpokeSpecInitProviderLinkedVpnTunnelsUrisSelector? UrisSelector { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -566,6 +1160,10 @@ public partial class V1beta1SpokeSpecInitProvider
     /// <summary>An optional description of the spoke.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>The name of the group that this spoke is associated with.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
 
     /// <summary>Immutable. The URI of the hub that this spoke is attached to.</summary>
     [JsonPropertyName("hub")]
@@ -586,6 +1184,10 @@ public partial class V1beta1SpokeSpecInitProvider
     /// <summary>A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
     [JsonPropertyName("linkedInterconnectAttachments")]
     public IList<V1beta1SpokeSpecInitProviderLinkedInterconnectAttachments>? LinkedInterconnectAttachments { get; set; }
+
+    /// <summary>Producer VPC network that is associated with the spoke. Structure is documented below.</summary>
+    [JsonPropertyName("linkedProducerVpcNetwork")]
+    public IList<V1beta1SpokeSpecInitProviderLinkedProducerVpcNetwork>? LinkedProducerVpcNetwork { get; set; }
 
     /// <summary>The URIs of linked Router appliance resources</summary>
     [JsonPropertyName("linkedRouterApplianceInstances")]
@@ -748,6 +1350,10 @@ public partial class V1beta1SpokeSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -755,6 +1361,31 @@ public partial class V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments
     /// <summary>The URIs of linked interconnect attachment resources</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeStatusAtProviderLinkedProducerVpcNetwork
+{
+    /// <summary>IP ranges encompassing the subnets to be excluded from peering.</summary>
+    [JsonPropertyName("excludeExportRanges")]
+    public IList<string>? ExcludeExportRanges { get; set; }
+
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
+    /// <summary>The URI of the Service Consumer VPC that the Producer VPC is peered with.</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+
+    /// <summary>The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.</summary>
+    [JsonPropertyName("peering")]
+    public string? Peering { get; set; }
+
+    /// <summary>(Output) The URI of the Producer VPC.</summary>
+    [JsonPropertyName("producerNetwork")]
+    public string? ProducerNetwork { get; set; }
 }
 
 /// <summary></summary>
@@ -774,7 +1405,11 @@ public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesI
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstances
 {
-    /// <summary>The list of router appliance instances</summary>
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
+    /// <summary>The list of router appliance instances Structure is documented below.</summary>
     [JsonPropertyName("instances")]
     public IList<V1beta1SpokeStatusAtProviderLinkedRouterApplianceInstancesInstances>? Instances { get; set; }
 
@@ -791,6 +1426,10 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
     [JsonPropertyName("excludeExportRanges")]
     public IList<string>? ExcludeExportRanges { get; set; }
 
+    /// <summary>IP ranges allowed to be included from peering.</summary>
+    [JsonPropertyName("includeExportRanges")]
+    public IList<string>? IncludeExportRanges { get; set; }
+
     /// <summary>The URI of the VPC network resource.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
@@ -800,6 +1439,10 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpcNetwork
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
 {
+    /// <summary>IP ranges allowed to be included during import from hub (does not control transit connectivity). The only allowed value for now is "ALL_IPV4_RANGES".</summary>
+    [JsonPropertyName("includeImportRanges")]
+    public IList<string>? IncludeImportRanges { get; set; }
+
     /// <summary>A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.</summary>
     [JsonPropertyName("siteToSiteDataTransfer")]
     public bool? SiteToSiteDataTransfer { get; set; }
@@ -807,6 +1450,23 @@ public partial class V1beta1SpokeStatusAtProviderLinkedVpnTunnels
     /// <summary>The URIs of linked VPN tunnel resources.</summary>
     [JsonPropertyName("uris")]
     public IList<string>? Uris { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SpokeStatusAtProviderReasons
+{
+    /// <summary>The code associated with this reason.</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Human-readable details about this reason.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>Additional information provided by the user in the RejectSpoke call.</summary>
+    [JsonPropertyName("userDetails")]
+    public string? UserDetails { get; set; }
 }
 
 /// <summary></summary>
@@ -825,6 +1485,10 @@ public partial class V1beta1SpokeStatusAtProvider
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 
+    /// <summary>The name of the group that this spoke is associated with.</summary>
+    [JsonPropertyName("group")]
+    public string? Group { get; set; }
+
     /// <summary>Immutable. The URI of the hub that this spoke is attached to.</summary>
     [JsonPropertyName("hub")]
     public string? Hub { get; set; }
@@ -840,6 +1504,10 @@ public partial class V1beta1SpokeStatusAtProvider
     /// <summary>A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.</summary>
     [JsonPropertyName("linkedInterconnectAttachments")]
     public IList<V1beta1SpokeStatusAtProviderLinkedInterconnectAttachments>? LinkedInterconnectAttachments { get; set; }
+
+    /// <summary>Producer VPC network that is associated with the spoke. Structure is documented below.</summary>
+    [JsonPropertyName("linkedProducerVpcNetwork")]
+    public IList<V1beta1SpokeStatusAtProviderLinkedProducerVpcNetwork>? LinkedProducerVpcNetwork { get; set; }
 
     /// <summary>The URIs of linked Router appliance resources</summary>
     [JsonPropertyName("linkedRouterApplianceInstances")]
@@ -864,6 +1532,10 @@ public partial class V1beta1SpokeStatusAtProvider
     /// <summary>The project for the resource</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The reasons for the current state in the lifecycle Structure is documented below.</summary>
+    [JsonPropertyName("reasons")]
+    public IList<V1beta1SpokeStatusAtProviderReasons>? Reasons { get; set; }
 
     /// <summary>Output only. The current lifecycle state of this spoke. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING</summary>
     [JsonPropertyName("state")]

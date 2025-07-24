@@ -50,6 +50,19 @@ public partial class V1beta1RouterSpecForProviderBgp
     public double? KeepaliveInterval { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterSpecForProviderMd5AuthenticationKeys
+{
+    /// <summary>Value of the key used for MD5 authentication.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name used to identify the key. Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterSpecForProviderNetworkRefPolicy
@@ -122,6 +135,10 @@ public partial class V1beta1RouterSpecForProvider
     [JsonPropertyName("encryptedInterconnectRouter")]
     public bool? EncryptedInterconnectRouter { get; set; }
 
+    /// <summary>Keys used for MD5 authentication. Structure is documented below.</summary>
+    [JsonPropertyName("md5AuthenticationKeys")]
+    public IList<V1beta1RouterSpecForProviderMd5AuthenticationKeys>? Md5AuthenticationKeys { get; set; }
+
     /// <summary>A reference to the network to which this router belongs.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
@@ -183,6 +200,19 @@ public partial class V1beta1RouterSpecInitProviderBgp
     /// <summary>The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.</summary>
     [JsonPropertyName("keepaliveInterval")]
     public double? KeepaliveInterval { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterSpecInitProviderMd5AuthenticationKeys
+{
+    /// <summary>Value of the key used for MD5 authentication.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name used to identify the key. Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -256,6 +286,10 @@ public partial class V1beta1RouterSpecInitProvider
     /// <summary>Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).</summary>
     [JsonPropertyName("encryptedInterconnectRouter")]
     public bool? EncryptedInterconnectRouter { get; set; }
+
+    /// <summary>Keys used for MD5 authentication. Structure is documented below.</summary>
+    [JsonPropertyName("md5AuthenticationKeys")]
+    public IList<V1beta1RouterSpecInitProviderMd5AuthenticationKeys>? Md5AuthenticationKeys { get; set; }
 
     /// <summary>A reference to the network to which this router belongs.</summary>
     [JsonPropertyName("network")]
@@ -450,6 +484,19 @@ public partial class V1beta1RouterStatusAtProviderBgp
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterStatusAtProviderMd5AuthenticationKeys
+{
+    /// <summary>Value of the key used for MD5 authentication.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>Name used to identify the key. Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterStatusAtProvider
 {
     /// <summary>BGP information specific to this router. Structure is documented below.</summary>
@@ -471,6 +518,10 @@ public partial class V1beta1RouterStatusAtProvider
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/routers/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Keys used for MD5 authentication. Structure is documented below.</summary>
+    [JsonPropertyName("md5AuthenticationKeys")]
+    public IList<V1beta1RouterStatusAtProviderMd5AuthenticationKeys>? Md5AuthenticationKeys { get; set; }
 
     /// <summary>A reference to the network to which this router belongs.</summary>
     [JsonPropertyName("network")]

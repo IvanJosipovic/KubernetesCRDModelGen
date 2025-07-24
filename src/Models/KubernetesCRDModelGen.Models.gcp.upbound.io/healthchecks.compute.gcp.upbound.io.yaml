@@ -1654,7 +1654,7 @@ spec:
                     type: string
                   grpcHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -1693,7 +1693,7 @@ spec:
                     type: number
                   http2HealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -1750,7 +1750,7 @@ spec:
                     type: object
                   httpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -1807,7 +1807,7 @@ spec:
                     type: object
                   httpsHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -1899,7 +1899,7 @@ spec:
                     type: array
                   sslHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -1952,7 +1952,7 @@ spec:
                     type: object
                   tcpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2054,7 +2054,7 @@ spec:
                     type: string
                   grpcHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2093,7 +2093,7 @@ spec:
                     type: number
                   http2HealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2150,7 +2150,7 @@ spec:
                     type: object
                   httpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2207,7 +2207,7 @@ spec:
                     type: object
                   httpsHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2299,7 +2299,7 @@ spec:
                     type: array
                   sslHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2352,7 +2352,7 @@ spec:
                     type: object
                   tcpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2648,7 +2648,7 @@ spec:
                     type: string
                   grpcHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2687,7 +2687,7 @@ spec:
                     type: number
                   http2HealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2744,7 +2744,7 @@ spec:
                     type: object
                   httpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2801,7 +2801,7 @@ spec:
                     type: object
                   httpsHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2899,7 +2899,7 @@ spec:
                     type: array
                   sslHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -2952,7 +2952,7 @@ spec:
                     type: object
                   tcpHealthCheck:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:

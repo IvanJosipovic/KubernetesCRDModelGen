@@ -76,7 +76,7 @@ public partial class V1beta1ProjectSpecForProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
-    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is PREVENT.</summary>
     [JsonPropertyName("deletionPolicy")]
     public string? DeletionPolicy { get; set; }
 
@@ -108,9 +108,9 @@ public partial class V1beta1ProjectSpecForProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
-    [JsonPropertyName("skipDelete")]
-    public bool? SkipDelete { get; set; }
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -181,7 +181,7 @@ public partial class V1beta1ProjectSpecInitProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
-    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is PREVENT.</summary>
     [JsonPropertyName("deletionPolicy")]
     public string? DeletionPolicy { get; set; }
 
@@ -213,9 +213,9 @@ public partial class V1beta1ProjectSpecInitProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
-    [JsonPropertyName("skipDelete")]
-    public bool? SkipDelete { get; set; }
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -362,7 +362,7 @@ public partial class V1beta1ProjectStatusAtProvider
     [JsonPropertyName("billingAccount")]
     public string? BillingAccount { get; set; }
 
-    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is DELETE.</summary>
+    /// <summary>The deletion policy for the Project. Setting ABANDON allows the resource to be abandoned rather than deleted, i.e. Possible values are: "PREVENT", "ABANDON", "DELETE". Default value is PREVENT.</summary>
     [JsonPropertyName("deletionPolicy")]
     public string? DeletionPolicy { get; set; }
 
@@ -398,9 +398,9 @@ public partial class V1beta1ProjectStatusAtProvider
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
-    /// <summary>skip_delete is deprecated and will be removed in 6.0.0. Please use deletion_policy instead. A skip_delete value of false can be changed to a deletion_policy value of DELETE and a skip_delete value of true to a deletion_policy value of ABANDON for equivalent behavior.</summary>
-    [JsonPropertyName("skipDelete")]
-    public bool? SkipDelete { get; set; }
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
     [JsonPropertyName("terraformLabels")]

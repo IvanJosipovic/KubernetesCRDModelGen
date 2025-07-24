@@ -8,62 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfiguration
@@ -71,14 +15,6 @@ public partial class V1beta1JobSpecForProviderCopyDestinationEncryptionConfigura
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
-
-    /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
-    [JsonPropertyName("kmsKeyNameRef")]
-    public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef? KmsKeyNameRef { get; set; }
-
-    /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
-    [JsonPropertyName("kmsKeyNameSelector")]
-    public V1beta1JobSpecForProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1115,62 +1051,6 @@ public partial class V1beta1JobSpecForProvider
     public IList<V1beta1JobSpecForProviderQuery>? Query { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfiguration
@@ -1178,14 +1058,6 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigur
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
-
-    /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
-    [JsonPropertyName("kmsKeyNameRef")]
-    public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameRef? KmsKeyNameRef { get; set; }
-
-    /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
-    [JsonPropertyName("kmsKeyNameSelector")]
-    public V1beta1JobSpecInitProviderCopyDestinationEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>

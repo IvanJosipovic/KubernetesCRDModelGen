@@ -211,6 +211,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -256,6 +261,95 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        healthCheck:
+                          description: Specifies the health check (used with external endpoints).
+                          type: string
+                        healthCheckRef:
+                          description: Reference to a HealthCheck in compute to populate healthCheck.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        healthCheckSelector:
+                          description: Selector for a HealthCheck in compute to populate healthCheck.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                         primaryBackup:
                           description: >-
                             The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -277,6 +371,11 @@ spec:
                                         Structure is document below.
                                       items:
                                         properties:
+                                          externalEndpoints:
+                                            description: The list of external endpoint addresses to health check.
+                                            items:
+                                              type: string
+                                            type: array
                                           internalLoadBalancers:
                                             description: >-
                                               The list of internal load balancers to health check.
@@ -332,6 +431,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -730,6 +834,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -941,6 +1050,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -986,6 +1100,95 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        healthCheck:
+                          description: Specifies the health check (used with external endpoints).
+                          type: string
+                        healthCheckRef:
+                          description: Reference to a HealthCheck in compute to populate healthCheck.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        healthCheckSelector:
+                          description: Selector for a HealthCheck in compute to populate healthCheck.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                         primaryBackup:
                           description: >-
                             The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -1007,6 +1210,11 @@ spec:
                                         Structure is document below.
                                       items:
                                         properties:
+                                          externalEndpoints:
+                                            description: The list of external endpoint addresses to health check.
+                                            items:
+                                              type: string
+                                            type: array
                                           internalLoadBalancers:
                                             description: >-
                                               The list of internal load balancers to health check.
@@ -1062,6 +1270,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -1460,6 +1673,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -1784,6 +2002,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -1829,6 +2052,9 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        healthCheck:
+                          description: Specifies the health check (used with external endpoints).
+                          type: string
                         primaryBackup:
                           description: >-
                             The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -1850,6 +2076,11 @@ spec:
                                         Structure is document below.
                                       items:
                                         properties:
+                                          externalEndpoints:
+                                            description: The list of external endpoint addresses to health check.
+                                            items:
+                                              type: string
+                                            type: array
                                           internalLoadBalancers:
                                             description: >-
                                               The list of internal load balancers to health check.
@@ -1905,6 +2136,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -1959,6 +2195,11 @@ spec:
                                   Structure is document below.
                                 items:
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -2279,6 +2520,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.
@@ -2323,6 +2569,95 @@ spec:
                               type: array
                           type: object
                         type: array
+                      healthCheck:
+                        description: Specifies the health check (used with external endpoints).
+                        type: string
+                      healthCheckRef:
+                        description: Reference to a HealthCheck in compute to populate healthCheck.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      healthCheckSelector:
+                        description: Selector for a HealthCheck in compute to populate healthCheck.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                       primaryBackup:
                         description: >-
                           The configuration for a failover policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -2342,6 +2677,11 @@ spec:
 
                                     Structure is documented below.
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -2395,6 +2735,11 @@ spec:
 
                               Structure is documented below.
                             properties:
+                              externalEndpoints:
+                                description: The list of external endpoint addresses to health check.
+                                items:
+                                  type: string
+                                type: array
                               internalLoadBalancers:
                                 description: >-
                                   The list of internal load balancers to health check.
@@ -2790,6 +3135,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.
@@ -2997,6 +3347,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.
@@ -3041,6 +3396,95 @@ spec:
                               type: array
                           type: object
                         type: array
+                      healthCheck:
+                        description: Specifies the health check (used with external endpoints).
+                        type: string
+                      healthCheckRef:
+                        description: Reference to a HealthCheck in compute to populate healthCheck.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      healthCheckSelector:
+                        description: Selector for a HealthCheck in compute to populate healthCheck.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                       primaryBackup:
                         description: >-
                           The configuration for a failover policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -3060,6 +3504,11 @@ spec:
 
                                     Structure is documented below.
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -3113,6 +3562,11 @@ spec:
 
                               Structure is documented below.
                             properties:
+                              externalEndpoints:
+                                description: The list of external endpoint addresses to health check.
+                                items:
+                                  type: string
+                                type: array
                               internalLoadBalancers:
                                 description: >-
                                   The list of internal load balancers to health check.
@@ -3508,6 +3962,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.
@@ -3828,6 +4287,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.
@@ -3872,6 +4336,9 @@ spec:
                               type: array
                           type: object
                         type: array
+                      healthCheck:
+                        description: Specifies the health check (used with external endpoints).
+                        type: string
                       primaryBackup:
                         description: >-
                           The configuration for a failover policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy.
@@ -3891,6 +4358,11 @@ spec:
 
                                     Structure is documented below.
                                   properties:
+                                    externalEndpoints:
+                                      description: The list of external endpoint addresses to health check.
+                                      items:
+                                        type: string
+                                      type: array
                                     internalLoadBalancers:
                                       description: >-
                                         The list of internal load balancers to health check.
@@ -3944,6 +4416,11 @@ spec:
 
                               Structure is documented below.
                             properties:
+                              externalEndpoints:
+                                description: The list of external endpoint addresses to health check.
+                                items:
+                                  type: string
+                                type: array
                               internalLoadBalancers:
                                 description: >-
                                   The list of internal load balancers to health check.
@@ -3995,6 +4472,11 @@ spec:
 
                                 Structure is documented below.
                               properties:
+                                externalEndpoints:
+                                  description: The list of external endpoint addresses to health check.
+                                  items:
+                                    type: string
+                                  type: array
                                 internalLoadBalancers:
                                   description: >-
                                     The list of internal load balancers to health check.

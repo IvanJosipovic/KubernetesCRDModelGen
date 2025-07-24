@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  activate:
+                    description: Flag that specifies whether the reserved NAT address should be activate.
+                    type: boolean
                   instanceId:
                     description: >-
                       The Apigee instance associated with the Apigee environment,
@@ -198,6 +201,10 @@ spec:
                   for example because of an external controller is managing them, like an
 
                   autoscaler.
+                properties:
+                  activate:
+                    description: Flag that specifies whether the reserved NAT address should be activate.
+                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -412,6 +419,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  activate:
+                    description: Flag that specifies whether the reserved NAT address should be activate.
+                    type: boolean
                   id:
                     description: an identifier for the resource with format {{instance_id}}/natAddresses/{{name}}
                     type: string

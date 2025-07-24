@@ -470,6 +470,10 @@ public partial class V1beta1NetworkEndpointGroupStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The uniquely generated identifier for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("generatedId")]
+    public double? GeneratedId { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/zones/{{zone}}/networkEndpointGroups/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

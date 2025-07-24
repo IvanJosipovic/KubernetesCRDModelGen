@@ -86,7 +86,7 @@ spec:
                 properties:
                   encryptionSpec:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -232,7 +232,7 @@ spec:
                 properties:
                   encryptionSpec:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:
@@ -574,7 +574,7 @@ spec:
                 properties:
                   encryptionSpec:
                     description: >-
-                      A nested object resource
+                      A nested object resource.
 
                       Structure is documented below.
                     properties:

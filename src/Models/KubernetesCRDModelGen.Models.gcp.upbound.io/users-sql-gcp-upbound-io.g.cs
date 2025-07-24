@@ -134,11 +134,19 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1UserSpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
+    /// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. Don't set this field for CLOUD_IAM_USER and CLOUD_IAM_SERVICE_ACCOUNT user types for any Cloud SQL instance. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>The version of the password_wo. For more info see updating write-only attributes.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_GROUP" or "CLOUD_IAM_SERVICE_ACCOUNT".</summary>
+    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_SERVICE_ACCOUNT", "CLOUD_IAM_GROUP", "CLOUD_IAM_GROUP_USER" and "CLOUD_IAM_GROUP_SERVICE_ACCOUNT" for Postgres and MySQL.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -269,11 +277,19 @@ public partial class V1beta1UserSpecInitProvider
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1UserSpecInitProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
+    /// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. Don't set this field for CLOUD_IAM_USER and CLOUD_IAM_SERVICE_ACCOUNT user types for any Cloud SQL instance. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>The version of the password_wo. For more info see updating write-only attributes.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_GROUP" or "CLOUD_IAM_SERVICE_ACCOUNT".</summary>
+    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_SERVICE_ACCOUNT", "CLOUD_IAM_GROUP", "CLOUD_IAM_GROUP_USER" and "CLOUD_IAM_GROUP_SERVICE_ACCOUNT" for Postgres and MySQL.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -485,6 +501,14 @@ public partial class V1beta1UserStatusAtProvider
     [JsonPropertyName("passwordPolicy")]
     public IList<V1beta1UserStatusAtProviderPasswordPolicy>? PasswordPolicy { get; set; }
 
+    /// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT. Don't set this field for CLOUD_IAM_USER and CLOUD_IAM_SERVICE_ACCOUNT user types for any Cloud SQL instance. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>The version of the password_wo. For more info see updating write-only attributes.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -493,7 +517,7 @@ public partial class V1beta1UserStatusAtProvider
     [JsonPropertyName("sqlServerUserDetails")]
     public IList<V1beta1UserStatusAtProviderSqlServerUserDetails>? SqlServerUserDetails { get; set; }
 
-    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_GROUP" or "CLOUD_IAM_SERVICE_ACCOUNT".</summary>
+    /// <summary>The user type. It determines the method to authenticate the user during login. The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", "CLOUD_IAM_SERVICE_ACCOUNT", "CLOUD_IAM_GROUP", "CLOUD_IAM_GROUP_USER" and "CLOUD_IAM_GROUP_SERVICE_ACCOUNT" for Postgres and MySQL.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

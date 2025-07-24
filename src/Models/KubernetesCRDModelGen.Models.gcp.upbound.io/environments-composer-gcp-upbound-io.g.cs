@@ -10,6 +10,19 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.composer.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig
+{
+    /// <summary>How many days data should be retained for.</summary>
+    [JsonPropertyName("retentionDays")]
+    public double? RetentionDays { get; set; }
+
+    /// <summary>Retention can be either enabled or disabled. Values for retention_mode are RETENTION_MODE_ENABLED to enable retention and RETENTION_MODE_DISABLED to disable retention.</summary>
+    [JsonPropertyName("retentionMode")]
+    public string? RetentionMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -21,6 +34,10 @@ public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigT
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigDataRetentionConfig
 {
+    /// <summary>The retention policy for airflow metadata database. Structure is documented below.</summary>
+    [JsonPropertyName("airflowMetadataRetentionConfig")]
+    public IList<V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig>? AirflowMetadataRetentionConfig { get; set; }
+
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
     [JsonPropertyName("taskLogsRetentionConfig")]
     public IList<V1beta1EnvironmentSpecForProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
@@ -288,6 +305,14 @@ public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfigSubnetwork
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigNodeConfig
 {
+    /// <summary>/20 IPv4 cidr range that will be used by Composer internal components. Cannot be updated.</summary>
+    [JsonPropertyName("composerInternalIpv4CidrBlock")]
+    public string? ComposerInternalIpv4CidrBlock { get; set; }
+
+    /// <summary>PSC (Private Service Connect) Network entry point. Customers can pre-create the Network Attachment and point Cloud Composer environment to use. It is possible to share network attachment among many environments, provided enough IP addresses are available.</summary>
+    [JsonPropertyName("composerNetworkAttachment")]
+    public string? ComposerNetworkAttachment { get; set; }
+
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -422,17 +447,30 @@ public partial class V1beta1EnvironmentSpecForProviderConfigRecoveryConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderConfigSoftwareConfigCloudDataLineageIntegration
+{
+    /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
     [JsonPropertyName("airflowConfigOverrides")]
     public IDictionary<string, string>? AirflowConfigOverrides { get; set; }
 
+    /// <summary>The configuration for Cloud Data Lineage integration. Structure is documented below.</summary>
+    [JsonPropertyName("cloudDataLineageIntegration")]
+    public IList<V1beta1EnvironmentSpecForProviderConfigSoftwareConfigCloudDataLineageIntegration>? CloudDataLineageIntegration { get; set; }
+
     /// <summary>Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names:</summary>
     [JsonPropertyName("envVariables")]
     public IDictionary<string, string>? EnvVariables { get; set; }
 
-    /// <summary></summary>
+    /// <summary>In Composer 1, use a specific Composer 1 version in this parameter. If omitted, the default is the latest version of Composer 2.</summary>
     [JsonPropertyName("imageVersion")]
     public string? ImageVersion { get; set; }
 
@@ -447,6 +485,10 @@ public partial class V1beta1EnvironmentSpecForProviderConfigSoftwareConfig
     /// <summary>The number of schedulers for Airflow.</summary>
     [JsonPropertyName("schedulerCount")]
     public double? SchedulerCount { get; set; }
+
+    /// <summary>Web server plugins configuration. Can be either 'ENABLED' or 'DISABLED'. Defaults to 'ENABLED'.</summary>
+    [JsonPropertyName("webServerPluginsMode")]
+    public string? WebServerPluginsMode { get; set; }
 }
 
 /// <summary></summary>
@@ -482,6 +524,27 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWebServerNetworkAcce
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigDagProcessor
+{
+    /// <summary>The number of Airflow triggerers.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The number of CPUs for a single Airflow worker.</summary>
+    [JsonPropertyName("cpu")]
+    public double? Cpu { get; set; }
+
+    /// <summary>The amount of memory (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("memoryGb")]
+    public double? MemoryGb { get; set; }
+
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("storageGb")]
+    public double? StorageGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -496,7 +559,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigSched
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -530,7 +593,7 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWebSe
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -551,11 +614,11 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWorke
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go above this number, even if a lower number of workers can handle the load.</summary>
+    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go below this number, even if a lower number of workers can handle the load.</summary>
     [JsonPropertyName("minCount")]
     public double? MinCount { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -564,6 +627,10 @@ public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigWorke
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecForProviderConfigWorkloadsConfig
 {
+    /// <summary>Configuration for resources used by DAG processor.</summary>
+    [JsonPropertyName("dagProcessor")]
+    public IList<V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigDagProcessor>? DagProcessor { get; set; }
+
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
     [JsonPropertyName("scheduler")]
     public IList<V1beta1EnvironmentSpecForProviderConfigWorkloadsConfigScheduler>? Scheduler { get; set; }
@@ -592,6 +659,14 @@ public partial class V1beta1EnvironmentSpecForProviderConfig
     /// <summary>The configuration settings for Cloud SQL instance used internally by Apache Airflow software.</summary>
     [JsonPropertyName("databaseConfig")]
     public IList<V1beta1EnvironmentSpecForProviderConfigDatabaseConfig>? DatabaseConfig { get; set; }
+
+    /// <summary>If true, builds performed during operations that install Python packages have only private connectivity to Google services. If false, the builds also have access to the internet.</summary>
+    [JsonPropertyName("enablePrivateBuildsOnly")]
+    public bool? EnablePrivateBuildsOnly { get; set; }
+
+    /// <summary>If true, a private Composer environment will be created.</summary>
+    [JsonPropertyName("enablePrivateEnvironment")]
+    public bool? EnablePrivateEnvironment { get; set; }
 
     /// <summary>The encryption options for the Cloud Composer environment and its dependencies.</summary>
     [JsonPropertyName("encryptionConfig")]
@@ -746,6 +821,19 @@ public partial class V1beta1EnvironmentSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig
+{
+    /// <summary>How many days data should be retained for.</summary>
+    [JsonPropertyName("retentionDays")]
+    public double? RetentionDays { get; set; }
+
+    /// <summary>Retention can be either enabled or disabled. Values for retention_mode are RETENTION_MODE_ENABLED to enable retention and RETENTION_MODE_DISABLED to disable retention.</summary>
+    [JsonPropertyName("retentionMode")]
+    public string? RetentionMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -757,6 +845,10 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfig
 {
+    /// <summary>The retention policy for airflow metadata database. Structure is documented below.</summary>
+    [JsonPropertyName("airflowMetadataRetentionConfig")]
+    public IList<V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig>? AirflowMetadataRetentionConfig { get; set; }
+
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
     [JsonPropertyName("taskLogsRetentionConfig")]
     public IList<V1beta1EnvironmentSpecInitProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
@@ -1024,6 +1116,14 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfigSubnetwor
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigNodeConfig
 {
+    /// <summary>/20 IPv4 cidr range that will be used by Composer internal components. Cannot be updated.</summary>
+    [JsonPropertyName("composerInternalIpv4CidrBlock")]
+    public string? ComposerInternalIpv4CidrBlock { get; set; }
+
+    /// <summary>PSC (Private Service Connect) Network entry point. Customers can pre-create the Network Attachment and point Cloud Composer environment to use. It is possible to share network attachment among many environments, provided enough IP addresses are available.</summary>
+    [JsonPropertyName("composerNetworkAttachment")]
+    public string? ComposerNetworkAttachment { get; set; }
+
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -1158,17 +1258,30 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigRecoveryConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderConfigSoftwareConfigCloudDataLineageIntegration
+{
+    /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
     [JsonPropertyName("airflowConfigOverrides")]
     public IDictionary<string, string>? AirflowConfigOverrides { get; set; }
 
+    /// <summary>The configuration for Cloud Data Lineage integration. Structure is documented below.</summary>
+    [JsonPropertyName("cloudDataLineageIntegration")]
+    public IList<V1beta1EnvironmentSpecInitProviderConfigSoftwareConfigCloudDataLineageIntegration>? CloudDataLineageIntegration { get; set; }
+
     /// <summary>Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names:</summary>
     [JsonPropertyName("envVariables")]
     public IDictionary<string, string>? EnvVariables { get; set; }
 
-    /// <summary></summary>
+    /// <summary>In Composer 1, use a specific Composer 1 version in this parameter. If omitted, the default is the latest version of Composer 2.</summary>
     [JsonPropertyName("imageVersion")]
     public string? ImageVersion { get; set; }
 
@@ -1183,6 +1296,10 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigSoftwareConfig
     /// <summary>The number of schedulers for Airflow.</summary>
     [JsonPropertyName("schedulerCount")]
     public double? SchedulerCount { get; set; }
+
+    /// <summary>Web server plugins configuration. Can be either 'ENABLED' or 'DISABLED'. Defaults to 'ENABLED'.</summary>
+    [JsonPropertyName("webServerPluginsMode")]
+    public string? WebServerPluginsMode { get; set; }
 }
 
 /// <summary></summary>
@@ -1218,6 +1335,27 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWebServerNetworkAcc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigDagProcessor
+{
+    /// <summary>The number of Airflow triggerers.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The number of CPUs for a single Airflow worker.</summary>
+    [JsonPropertyName("cpu")]
+    public double? Cpu { get; set; }
+
+    /// <summary>The amount of memory (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("memoryGb")]
+    public double? MemoryGb { get; set; }
+
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("storageGb")]
+    public double? StorageGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -1232,7 +1370,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigSche
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1266,7 +1404,7 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWebS
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1287,11 +1425,11 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWork
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go above this number, even if a lower number of workers can handle the load.</summary>
+    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go below this number, even if a lower number of workers can handle the load.</summary>
     [JsonPropertyName("minCount")]
     public double? MinCount { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1300,6 +1438,10 @@ public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigWork
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfig
 {
+    /// <summary>Configuration for resources used by DAG processor.</summary>
+    [JsonPropertyName("dagProcessor")]
+    public IList<V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigDagProcessor>? DagProcessor { get; set; }
+
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
     [JsonPropertyName("scheduler")]
     public IList<V1beta1EnvironmentSpecInitProviderConfigWorkloadsConfigScheduler>? Scheduler { get; set; }
@@ -1328,6 +1470,14 @@ public partial class V1beta1EnvironmentSpecInitProviderConfig
     /// <summary>The configuration settings for Cloud SQL instance used internally by Apache Airflow software.</summary>
     [JsonPropertyName("databaseConfig")]
     public IList<V1beta1EnvironmentSpecInitProviderConfigDatabaseConfig>? DatabaseConfig { get; set; }
+
+    /// <summary>If true, builds performed during operations that install Python packages have only private connectivity to Google services. If false, the builds also have access to the internet.</summary>
+    [JsonPropertyName("enablePrivateBuildsOnly")]
+    public bool? EnablePrivateBuildsOnly { get; set; }
+
+    /// <summary>If true, a private Composer environment will be created.</summary>
+    [JsonPropertyName("enablePrivateEnvironment")]
+    public bool? EnablePrivateEnvironment { get; set; }
 
     /// <summary>The encryption options for the Cloud Composer environment and its dependencies.</summary>
     [JsonPropertyName("encryptionConfig")]
@@ -1610,6 +1760,19 @@ public partial class V1beta1EnvironmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig
+{
+    /// <summary>How many days data should be retained for.</summary>
+    [JsonPropertyName("retentionDays")]
+    public double? RetentionDays { get; set; }
+
+    /// <summary>Retention can be either enabled or disabled. Values for retention_mode are RETENTION_MODE_ENABLED to enable retention and RETENTION_MODE_DISABLED to disable retention.</summary>
+    [JsonPropertyName("retentionMode")]
+    public string? RetentionMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigTaskLogsRetentionConfig
 {
     /// <summary>The mode of storage for Airflow workers task logs. Values for storage mode are CLOUD_LOGGING_ONLY to only store logs in cloud logging and CLOUD_LOGGING_AND_CLOUD_STORAGE to store logs in cloud logging and cloud storage.</summary>
@@ -1621,6 +1784,10 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfig
 {
+    /// <summary>The retention policy for airflow metadata database. Structure is documented below.</summary>
+    [JsonPropertyName("airflowMetadataRetentionConfig")]
+    public IList<V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigAirflowMetadataRetentionConfig>? AirflowMetadataRetentionConfig { get; set; }
+
     /// <summary>The configuration setting for Task Logs. Structure is documented below.</summary>
     [JsonPropertyName("taskLogsRetentionConfig")]
     public IList<V1beta1EnvironmentStatusAtProviderConfigDataRetentionConfigTaskLogsRetentionConfig>? TaskLogsRetentionConfig { get; set; }
@@ -1720,6 +1887,14 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfigIpAllocat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigNodeConfig
 {
+    /// <summary>/20 IPv4 cidr range that will be used by Composer internal components. Cannot be updated.</summary>
+    [JsonPropertyName("composerInternalIpv4CidrBlock")]
+    public string? ComposerInternalIpv4CidrBlock { get; set; }
+
+    /// <summary>PSC (Private Service Connect) Network entry point. Customers can pre-create the Network Attachment and point Cloud Composer environment to use. It is possible to share network attachment among many environments, provided enough IP addresses are available.</summary>
+    [JsonPropertyName("composerNetworkAttachment")]
+    public string? ComposerNetworkAttachment { get; set; }
+
     /// <summary>The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
@@ -1830,17 +2005,30 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigRecoveryConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderConfigSoftwareConfigCloudDataLineageIntegration
+{
+    /// <summary>When enabled, Cloud Composer periodically saves snapshots of your environment to a Cloud Storage bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigSoftwareConfig
 {
     /// <summary>Apache Airflow configuration properties to override. Property keys contain the section and property names, separated by a hyphen, for example "core-dags_are_paused_at_creation".</summary>
     [JsonPropertyName("airflowConfigOverrides")]
     public IDictionary<string, string>? AirflowConfigOverrides { get; set; }
 
+    /// <summary>The configuration for Cloud Data Lineage integration. Structure is documented below.</summary>
+    [JsonPropertyName("cloudDataLineageIntegration")]
+    public IList<V1beta1EnvironmentStatusAtProviderConfigSoftwareConfigCloudDataLineageIntegration>? CloudDataLineageIntegration { get; set; }
+
     /// <summary>Additional environment variables to provide to the Apache Airflow scheduler, worker, and webserver processes. Environment variable names must match the regular expression [a-zA-Z_][a-zA-Z0-9_]*. They cannot specify Apache Airflow software configuration overrides (they cannot match the regular expression AIRFLOW__[A-Z0-9_]+__[A-Z0-9_]+), and they cannot match any of the following reserved names:</summary>
     [JsonPropertyName("envVariables")]
     public IDictionary<string, string>? EnvVariables { get; set; }
 
-    /// <summary></summary>
+    /// <summary>In Composer 1, use a specific Composer 1 version in this parameter. If omitted, the default is the latest version of Composer 2.</summary>
     [JsonPropertyName("imageVersion")]
     public string? ImageVersion { get; set; }
 
@@ -1855,6 +2043,10 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigSoftwareConfig
     /// <summary>The number of schedulers for Airflow.</summary>
     [JsonPropertyName("schedulerCount")]
     public double? SchedulerCount { get; set; }
+
+    /// <summary>Web server plugins configuration. Can be either 'ENABLED' or 'DISABLED'. Defaults to 'ENABLED'.</summary>
+    [JsonPropertyName("webServerPluginsMode")]
+    public string? WebServerPluginsMode { get; set; }
 }
 
 /// <summary></summary>
@@ -1890,6 +2082,27 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWebServerNetworkAcc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigDagProcessor
+{
+    /// <summary>The number of Airflow triggerers.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>The number of CPUs for a single Airflow worker.</summary>
+    [JsonPropertyName("cpu")]
+    public double? Cpu { get; set; }
+
+    /// <summary>The amount of memory (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("memoryGb")]
+    public double? MemoryGb { get; set; }
+
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
+    [JsonPropertyName("storageGb")]
+    public double? StorageGb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigScheduler
 {
     /// <summary>The number of Airflow triggerers.</summary>
@@ -1904,7 +2117,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigSche
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1938,7 +2151,7 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWebS
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1959,11 +2172,11 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWork
     [JsonPropertyName("memoryGb")]
     public double? MemoryGb { get; set; }
 
-    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go above this number, even if a lower number of workers can handle the load.</summary>
+    /// <summary>The minimum number of Airflow workers that the environment can run. The number of workers in the environment does not go below this number, even if a lower number of workers can handle the load.</summary>
     [JsonPropertyName("minCount")]
     public double? MinCount { get; set; }
 
-    /// <summary>The amount of storage (GB) for the Airflow web server.</summary>
+    /// <summary>The amount of storage (GB) for a single Airflow worker.</summary>
     [JsonPropertyName("storageGb")]
     public double? StorageGb { get; set; }
 }
@@ -1972,6 +2185,10 @@ public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigWork
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfig
 {
+    /// <summary>Configuration for resources used by DAG processor.</summary>
+    [JsonPropertyName("dagProcessor")]
+    public IList<V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigDagProcessor>? DagProcessor { get; set; }
+
     /// <summary>Configuration for resources used by Airflow schedulers.</summary>
     [JsonPropertyName("scheduler")]
     public IList<V1beta1EnvironmentStatusAtProviderConfigWorkloadsConfigScheduler>? Scheduler { get; set; }
@@ -2008,6 +2225,14 @@ public partial class V1beta1EnvironmentStatusAtProviderConfig
     /// <summary>The configuration settings for Cloud SQL instance used internally by Apache Airflow software.</summary>
     [JsonPropertyName("databaseConfig")]
     public IList<V1beta1EnvironmentStatusAtProviderConfigDatabaseConfig>? DatabaseConfig { get; set; }
+
+    /// <summary>If true, builds performed during operations that install Python packages have only private connectivity to Google services. If false, the builds also have access to the internet.</summary>
+    [JsonPropertyName("enablePrivateBuildsOnly")]
+    public bool? EnablePrivateBuildsOnly { get; set; }
+
+    /// <summary>If true, a private Composer environment will be created.</summary>
+    [JsonPropertyName("enablePrivateEnvironment")]
+    public bool? EnablePrivateEnvironment { get; set; }
 
     /// <summary>The encryption options for the Cloud Composer environment and its dependencies.</summary>
     [JsonPropertyName("encryptionConfig")]

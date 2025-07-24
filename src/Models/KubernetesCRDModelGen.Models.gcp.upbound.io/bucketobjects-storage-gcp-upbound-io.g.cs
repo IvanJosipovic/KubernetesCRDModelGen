@@ -179,6 +179,10 @@ public partial class V1beta1BucketObjectSpecForProvider
     [JsonPropertyName("source")]
     public string? Source { get; set; }
 
+    /// <summary>User-provided md5hash to trigger replacement of object in storage bucket, Must be Base 64 MD5 hash of the object data. The usual way to set this is filemd5("file.zip"), where "file.zip" is the local filename</summary>
+    [JsonPropertyName("sourceMd5Hash")]
+    public string? SourceMd5Hash { get; set; }
+
     /// <summary>The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.</summary>
     [JsonPropertyName("storageClass")]
     public string? StorageClass { get; set; }
@@ -337,6 +341,10 @@ public partial class V1beta1BucketObjectSpecInitProvider
     /// <summary>A path to the data you want to upload. Must be defined if content is not.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
+
+    /// <summary>User-provided md5hash to trigger replacement of object in storage bucket, Must be Base 64 MD5 hash of the object data. The usual way to set this is filemd5("file.zip"), where "file.zip" is the local filename</summary>
+    [JsonPropertyName("sourceMd5Hash")]
+    public string? SourceMd5Hash { get; set; }
 
     /// <summary>The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.</summary>
     [JsonPropertyName("storageClass")]
@@ -565,6 +573,10 @@ public partial class V1beta1BucketObjectStatusAtProvider
     [JsonPropertyName("md5hash")]
     public string? Md5hash { get; set; }
 
+    /// <summary>(Computed) Hex value of md5hash`</summary>
+    [JsonPropertyName("md5hexhash")]
+    public string? Md5hexhash { get; set; }
+
     /// <summary>(Computed) A url reference to download this object.</summary>
     [JsonPropertyName("mediaLink")]
     public string? MediaLink { get; set; }
@@ -592,6 +604,10 @@ public partial class V1beta1BucketObjectStatusAtProvider
     /// <summary>A path to the data you want to upload. Must be defined if content is not.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
+
+    /// <summary>User-provided md5hash to trigger replacement of object in storage bucket, Must be Base 64 MD5 hash of the object data. The usual way to set this is filemd5("file.zip"), where "file.zip" is the local filename</summary>
+    [JsonPropertyName("sourceMd5Hash")]
+    public string? SourceMd5Hash { get; set; }
 
     /// <summary>The StorageClass of the new bucket object. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE. If not provided, this defaults to the bucket's default storage class or to a standard class.</summary>
     [JsonPropertyName("storageClass")]

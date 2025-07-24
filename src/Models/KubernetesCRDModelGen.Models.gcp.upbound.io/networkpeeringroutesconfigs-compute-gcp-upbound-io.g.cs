@@ -128,9 +128,17 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecForProvider
     [JsonPropertyName("exportCustomRoutes")]
     public bool? ExportCustomRoutes { get; set; }
 
+    /// <summary>Whether subnet routes with public IP range are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.</summary>
+    [JsonPropertyName("exportSubnetRoutesWithPublicIp")]
+    public bool? ExportSubnetRoutesWithPublicIp { get; set; }
+
     /// <summary>Whether to import the custom routes to the peer network.</summary>
     [JsonPropertyName("importCustomRoutes")]
     public bool? ImportCustomRoutes { get; set; }
+
+    /// <summary>Whether subnet routes with public IP range are imported. IPv4 special-use ranges are always imported from peers and are not controlled by this field.</summary>
+    [JsonPropertyName("importSubnetRoutesWithPublicIp")]
+    public bool? ImportSubnetRoutesWithPublicIp { get; set; }
 
     /// <summary>The name of the primary network for the peering.</summary>
     [JsonPropertyName("network")]
@@ -281,9 +289,17 @@ public partial class V1beta1NetworkPeeringRoutesConfigSpecInitProvider
     [JsonPropertyName("exportCustomRoutes")]
     public bool? ExportCustomRoutes { get; set; }
 
+    /// <summary>Whether subnet routes with public IP range are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.</summary>
+    [JsonPropertyName("exportSubnetRoutesWithPublicIp")]
+    public bool? ExportSubnetRoutesWithPublicIp { get; set; }
+
     /// <summary>Whether to import the custom routes to the peer network.</summary>
     [JsonPropertyName("importCustomRoutes")]
     public bool? ImportCustomRoutes { get; set; }
+
+    /// <summary>Whether subnet routes with public IP range are imported. IPv4 special-use ranges are always imported from peers and are not controlled by this field.</summary>
+    [JsonPropertyName("importSubnetRoutesWithPublicIp")]
+    public bool? ImportSubnetRoutesWithPublicIp { get; set; }
 
     /// <summary>The name of the primary network for the peering.</summary>
     [JsonPropertyName("network")]
@@ -454,6 +470,10 @@ public partial class V1beta1NetworkPeeringRoutesConfigStatusAtProvider
     [JsonPropertyName("exportCustomRoutes")]
     public bool? ExportCustomRoutes { get; set; }
 
+    /// <summary>Whether subnet routes with public IP range are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.</summary>
+    [JsonPropertyName("exportSubnetRoutesWithPublicIp")]
+    public bool? ExportSubnetRoutesWithPublicIp { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -461,6 +481,10 @@ public partial class V1beta1NetworkPeeringRoutesConfigStatusAtProvider
     /// <summary>Whether to import the custom routes to the peer network.</summary>
     [JsonPropertyName("importCustomRoutes")]
     public bool? ImportCustomRoutes { get; set; }
+
+    /// <summary>Whether subnet routes with public IP range are imported. IPv4 special-use ranges are always imported from peers and are not controlled by this field.</summary>
+    [JsonPropertyName("importSubnetRoutesWithPublicIp")]
+    public bool? ImportSubnetRoutesWithPublicIp { get; set; }
 
     /// <summary>The name of the primary network for the peering.</summary>
     [JsonPropertyName("network")]

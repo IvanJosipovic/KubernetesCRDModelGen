@@ -87,6 +87,9 @@ spec:
                   description:
                     description: An optional description of the spoke.
                     type: string
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -186,6 +189,14 @@ spec:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -194,14 +205,311 @@ spec:
                           items:
                             type: string
                           type: array
+                        urisRefs:
+                          description: References to InterconnectAttachment in compute to populate uris.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        urisSelector:
+                          description: Selector for a list of InterconnectAttachment in compute to populate uris.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    type: array
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        excludeExportRanges:
+                          description: IP ranges encompassing the subnets to be excluded from peering.
+                          items:
+                            type: string
+                          type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
+                        network:
+                          description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                          type: string
+                        networkRef:
+                          description: Reference to a Network in compute to populate network.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        networkSelector:
+                          description: Selector for a Network in compute to populate network.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                        peering:
+                          description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                          type: string
+                        peeringRef:
+                          description: Reference to a Connection in servicenetworking to populate peering.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        peeringSelector:
+                          description: Selector for a Connection in servicenetworking to populate peering.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                       type: object
                     type: array
                   linkedRouterApplianceInstances:
                     description: The URIs of linked Router appliance resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         instances:
-                          description: The list of router appliance instances
+                          description: >-
+                            The list of router appliance instances
+
+                            Structure is documented below.
                           items:
                             properties:
                               ipAddress:
@@ -312,6 +620,11 @@ spec:
                           items:
                             type: string
                           type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
@@ -407,6 +720,14 @@ spec:
                     description: The URIs of linked VPN tunnel resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -415,6 +736,95 @@ spec:
                           items:
                             type: string
                           type: array
+                        urisRefs:
+                          description: References to VPNTunnel in compute to populate uris.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        urisSelector:
+                          description: Selector for a list of VPNTunnel in compute to populate uris.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                       type: object
                     type: array
                   location:
@@ -452,6 +862,9 @@ spec:
                   description:
                     description: An optional description of the spoke.
                     type: string
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -551,6 +964,14 @@ spec:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -559,14 +980,311 @@ spec:
                           items:
                             type: string
                           type: array
+                        urisRefs:
+                          description: References to InterconnectAttachment in compute to populate uris.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        urisSelector:
+                          description: Selector for a list of InterconnectAttachment in compute to populate uris.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                      type: object
+                    type: array
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        excludeExportRanges:
+                          description: IP ranges encompassing the subnets to be excluded from peering.
+                          items:
+                            type: string
+                          type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
+                        network:
+                          description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                          type: string
+                        networkRef:
+                          description: Reference to a Network in compute to populate network.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        networkSelector:
+                          description: Selector for a Network in compute to populate network.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
+                        peering:
+                          description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                          type: string
+                        peeringRef:
+                          description: Reference to a Connection in servicenetworking to populate peering.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        peeringSelector:
+                          description: Selector for a Connection in servicenetworking to populate peering.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                       type: object
                     type: array
                   linkedRouterApplianceInstances:
                     description: The URIs of linked Router appliance resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         instances:
-                          description: The list of router appliance instances
+                          description: >-
+                            The list of router appliance instances
+
+                            Structure is documented below.
                           items:
                             properties:
                               ipAddress:
@@ -677,6 +1395,11 @@ spec:
                           items:
                             type: string
                           type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
@@ -772,6 +1495,14 @@ spec:
                     description: The URIs of linked VPN tunnel resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -780,6 +1511,95 @@ spec:
                           items:
                             type: string
                           type: array
+                        urisRefs:
+                          description: References to VPNTunnel in compute to populate uris.
+                          items:
+                            description: A Reference to a named object.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          type: array
+                        urisSelector:
+                          description: Selector for a list of VPNTunnel in compute to populate uris.
+                          properties:
+                            matchControllerRef:
+                              description: >-
+                                MatchControllerRef ensures an object with the same controller reference
+
+                                as the selecting object is selected.
+                              type: boolean
+                            matchLabels:
+                              additionalProperties:
+                                type: string
+                              description: MatchLabels ensures an object with matching labels is selected.
+                              type: object
+                            policy:
+                              description: Policies for selection.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          type: object
                       type: object
                     type: array
                   location:
@@ -1021,6 +1841,9 @@ spec:
                       type: string
                     type: object
                     x-kubernetes-map-type: granular
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -1037,6 +1860,14 @@ spec:
                     description: A collection of VLAN attachment resources. These resources should be redundant attachments that all advertise the same prefixes to Google Cloud. Alternatively, in active/passive configurations, all attachments should be capable of advertising the same prefixes.
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -1047,12 +1878,54 @@ spec:
                           type: array
                       type: object
                     type: array
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        excludeExportRanges:
+                          description: IP ranges encompassing the subnets to be excluded from peering.
+                          items:
+                            type: string
+                          type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
+                        network:
+                          description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                          type: string
+                        peering:
+                          description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                          type: string
+                        producerNetwork:
+                          description: >-
+                            (Output)
+
+                            The URI of the Producer VPC.
+                          type: string
+                      type: object
+                    type: array
                   linkedRouterApplianceInstances:
                     description: The URIs of linked Router appliance resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         instances:
-                          description: The list of router appliance instances
+                          description: >-
+                            The list of router appliance instances
+
+                            Structure is documented below.
                           items:
                             properties:
                               ipAddress:
@@ -1077,6 +1950,11 @@ spec:
                           items:
                             type: string
                           type: array
+                        includeExportRanges:
+                          description: IP ranges allowed to be included from peering.
+                          items:
+                            type: string
+                          type: array
                         uri:
                           description: The URI of the VPC network resource.
                           type: string
@@ -1086,6 +1964,14 @@ spec:
                     description: The URIs of linked VPN tunnel resources
                     items:
                       properties:
+                        includeImportRanges:
+                          description: >-
+                            IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                            The only allowed value for now is "ALL_IPV4_RANGES".
+                          items:
+                            type: string
+                          type: array
                         siteToSiteDataTransfer:
                           description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                           type: boolean
@@ -1105,6 +1991,24 @@ spec:
                   project:
                     description: The project for the resource
                     type: string
+                  reasons:
+                    description: >-
+                      The reasons for the current state in the lifecycle
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        code:
+                          description: The code associated with this reason.
+                          type: string
+                        message:
+                          description: Human-readable details about this reason.
+                          type: string
+                        userDetails:
+                          description: Additional information provided by the user in the RejectSpoke call.
+                          type: string
+                      type: object
+                    type: array
                   state:
                     description: 'Output only. The current lifecycle state of this spoke. Possible values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING'
                     type: string
@@ -1257,6 +2161,9 @@ spec:
                   description:
                     description: An optional description of the spoke.
                     type: string
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -1363,6 +2270,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -1371,6 +2286,290 @@ spec:
                         items:
                           type: string
                         type: array
+                      urisRefs:
+                        description: References to InterconnectAttachment in compute to populate uris.
+                        items:
+                          description: A Reference to a named object.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        type: array
+                      urisSelector:
+                        description: Selector for a list of InterconnectAttachment in compute to populate uris.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
+                    type: object
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    properties:
+                      excludeExportRanges:
+                        description: IP ranges encompassing the subnets to be excluded from peering.
+                        items:
+                          type: string
+                        type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
+                      network:
+                        description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                        type: string
+                      networkRef:
+                        description: Reference to a Network in compute to populate network.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      networkSelector:
+                        description: Selector for a Network in compute to populate network.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
+                      peering:
+                        description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                        type: string
+                      peeringRef:
+                        description: Reference to a Connection in servicenetworking to populate peering.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      peeringSelector:
+                        description: Selector for a Connection in servicenetworking to populate peering.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   linkedRouterApplianceInstances:
                     description: >-
@@ -1378,6 +2577,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       instances:
                         description: >-
                           The list of router appliance instances
@@ -1494,6 +2701,11 @@ spec:
                         items:
                           type: string
                         type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
                       uri:
                         description: The URI of the VPC network resource.
                         type: string
@@ -1590,6 +2802,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -1598,6 +2818,95 @@ spec:
                         items:
                           type: string
                         type: array
+                      urisRefs:
+                        description: References to VPNTunnel in compute to populate uris.
+                        items:
+                          description: A Reference to a named object.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        type: array
+                      urisSelector:
+                        description: Selector for a list of VPNTunnel in compute to populate uris.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   location:
                     description: The location for the resource
@@ -1637,6 +2946,9 @@ spec:
                   description:
                     description: An optional description of the spoke.
                     type: string
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -1743,6 +3055,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -1751,6 +3071,290 @@ spec:
                         items:
                           type: string
                         type: array
+                      urisRefs:
+                        description: References to InterconnectAttachment in compute to populate uris.
+                        items:
+                          description: A Reference to a named object.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        type: array
+                      urisSelector:
+                        description: Selector for a list of InterconnectAttachment in compute to populate uris.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
+                    type: object
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    properties:
+                      excludeExportRanges:
+                        description: IP ranges encompassing the subnets to be excluded from peering.
+                        items:
+                          type: string
+                        type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
+                      network:
+                        description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                        type: string
+                      networkRef:
+                        description: Reference to a Network in compute to populate network.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      networkSelector:
+                        description: Selector for a Network in compute to populate network.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
+                      peering:
+                        description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                        type: string
+                      peeringRef:
+                        description: Reference to a Connection in servicenetworking to populate peering.
+                        properties:
+                          name:
+                            description: Name of the referenced object.
+                            type: string
+                          policy:
+                            description: Policies for referencing.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        required:
+                        - name
+                        type: object
+                      peeringSelector:
+                        description: Selector for a Connection in servicenetworking to populate peering.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   linkedRouterApplianceInstances:
                     description: >-
@@ -1758,6 +3362,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       instances:
                         description: >-
                           The list of router appliance instances
@@ -1874,6 +3486,11 @@ spec:
                         items:
                           type: string
                         type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
                       uri:
                         description: The URI of the VPC network resource.
                         type: string
@@ -1970,6 +3587,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -1978,6 +3603,95 @@ spec:
                         items:
                           type: string
                         type: array
+                      urisRefs:
+                        description: References to VPNTunnel in compute to populate uris.
+                        items:
+                          description: A Reference to a named object.
+                          properties:
+                            name:
+                              description: Name of the referenced object.
+                              type: string
+                            policy:
+                              description: Policies for referencing.
+                              properties:
+                                resolution:
+                                  default: Required
+                                  description: >-
+                                    Resolution specifies whether resolution of this reference is required.
+
+                                    The default is 'Required', which means the reconcile will fail if the
+
+                                    reference cannot be resolved. 'Optional' means this reference will be
+
+                                    a no-op if it cannot be resolved.
+                                  enum:
+                                  - Required
+                                  - Optional
+                                  type: string
+                                resolve:
+                                  description: >-
+                                    Resolve specifies when this reference should be resolved. The default
+
+                                    is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                    the corresponding field is not present. Use 'Always' to resolve the
+
+                                    reference on every reconcile.
+                                  enum:
+                                  - Always
+                                  - IfNotPresent
+                                  type: string
+                              type: object
+                          required:
+                          - name
+                          type: object
+                        type: array
+                      urisSelector:
+                        description: Selector for a list of VPNTunnel in compute to populate uris.
+                        properties:
+                          matchControllerRef:
+                            description: >-
+                              MatchControllerRef ensures an object with the same controller reference
+
+                              as the selecting object is selected.
+                            type: boolean
+                          matchLabels:
+                            additionalProperties:
+                              type: string
+                            description: MatchLabels ensures an object with matching labels is selected.
+                            type: object
+                          policy:
+                            description: Policies for selection.
+                            properties:
+                              resolution:
+                                default: Required
+                                description: >-
+                                  Resolution specifies whether resolution of this reference is required.
+
+                                  The default is 'Required', which means the reconcile will fail if the
+
+                                  reference cannot be resolved. 'Optional' means this reference will be
+
+                                  a no-op if it cannot be resolved.
+                                enum:
+                                - Required
+                                - Optional
+                                type: string
+                              resolve:
+                                description: >-
+                                  Resolve specifies when this reference should be resolved. The default
+
+                                  is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                  the corresponding field is not present. Use 'Always' to resolve the
+
+                                  reference on every reconcile.
+                                enum:
+                                - Always
+                                - IfNotPresent
+                                type: string
+                            type: object
+                        type: object
                     type: object
                   location:
                     description: The location for the resource
@@ -2221,6 +3935,9 @@ spec:
                       type: string
                     type: object
                     x-kubernetes-map-type: granular
+                  group:
+                    description: The name of the group that this spoke is associated with.
+                    type: string
                   hub:
                     description: Immutable. The URI of the hub that this spoke is attached to.
                     type: string
@@ -2244,6 +3961,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -2253,12 +3978,49 @@ spec:
                           type: string
                         type: array
                     type: object
+                  linkedProducerVpcNetwork:
+                    description: >-
+                      Producer VPC network that is associated with the spoke.
+
+                      Structure is documented below.
+                    properties:
+                      excludeExportRanges:
+                        description: IP ranges encompassing the subnets to be excluded from peering.
+                        items:
+                          type: string
+                        type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
+                      network:
+                        description: The URI of the Service Consumer VPC that the Producer VPC is peered with.
+                        type: string
+                      peering:
+                        description: The name of the VPC peering between the Service Consumer VPC and the Producer VPC (defined in the Tenant project) which is added to the NCC hub. This peering must be in ACTIVE state.
+                        type: string
+                      producerNetwork:
+                        description: >-
+                          (Output)
+
+                          The URI of the Producer VPC.
+                        type: string
+                    type: object
                   linkedRouterApplianceInstances:
                     description: >-
                       The URIs of linked Router appliance resources
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       instances:
                         description: >-
                           The list of router appliance instances
@@ -2289,6 +4051,11 @@ spec:
                         items:
                           type: string
                         type: array
+                      includeExportRanges:
+                        description: IP ranges allowed to be included from peering.
+                        items:
+                          type: string
+                        type: array
                       uri:
                         description: The URI of the VPC network resource.
                         type: string
@@ -2299,6 +4066,14 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      includeImportRanges:
+                        description: >-
+                          IP ranges allowed to be included during import from hub (does not control transit connectivity).
+
+                          The only allowed value for now is "ALL_IPV4_RANGES".
+                        items:
+                          type: string
+                        type: array
                       siteToSiteDataTransfer:
                         description: A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
                         type: boolean
@@ -2320,6 +4095,24 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  reasons:
+                    description: >-
+                      The reasons for the current state in the lifecycle
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        code:
+                          description: The code associated with this reason.
+                          type: string
+                        message:
+                          description: Human-readable details about this reason.
+                          type: string
+                        userDetails:
+                          description: Additional information provided by the user in the RejectSpoke call.
+                          type: string
+                      type: object
+                    type: array
                   state:
                     description: Output only. The current lifecycle state of this spoke.
                     type: string

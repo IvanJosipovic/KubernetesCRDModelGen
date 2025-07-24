@@ -117,13 +117,19 @@ spec:
 
                       while there is no matching traffic (in seconds). If an HTTP keepalive is
 
-                      not specified, a default value (610 seconds) will be used. For Global
+                      not specified, a default value will be used. For Global
 
-                      external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+                      external HTTP(S) load balancer, the default value is 610 seconds, the
 
-                      the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+                      minimum allowed value is 5 seconds and the maximum allowed value is 1200
 
-                      load balancer (classic), this option is not available publicly.
+                      seconds. For cross-region internal HTTP(S) load balancer, the default
+
+                      value is 600 seconds, the minimum allowed value is 5 seconds, and the
+
+                      maximum allowed value is 600 seconds. For Global external HTTP(S) load
+
+                      balancer (classic), this option is not available publicly.
                     type: number
                   project:
                     description: >-
@@ -170,6 +176,14 @@ spec:
                       loadBalancingScheme consult ServerTlsPolicy documentation.
 
                       If left blank, communications are not encrypted.
+
+                      If you remove this field from your configuration at the same time as
+
+                      deleting or recreating a referenced ServerTlsPolicy resource, you will
+
+                      receive a resourceInUseByAnotherResource error. Use lifecycle.create_before_destroy
+
+                      within the ServerTlsPolicy resource to avoid this.
                     type: string
                   sslCertificates:
                     description: >-
@@ -288,7 +302,7 @@ spec:
 
                       This applies to TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3).
 
-                      Possible values are: STRICT, PERMISSIVE, DISABLED.
+                      Possible values are: STRICT, PERMISSIVE, UNRESTRICTED, DISABLED.
                     type: string
                   urlMap:
                     description: >-
@@ -438,13 +452,19 @@ spec:
 
                       while there is no matching traffic (in seconds). If an HTTP keepalive is
 
-                      not specified, a default value (610 seconds) will be used. For Global
+                      not specified, a default value will be used. For Global
 
-                      external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+                      external HTTP(S) load balancer, the default value is 610 seconds, the
 
-                      the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+                      minimum allowed value is 5 seconds and the maximum allowed value is 1200
 
-                      load balancer (classic), this option is not available publicly.
+                      seconds. For cross-region internal HTTP(S) load balancer, the default
+
+                      value is 600 seconds, the minimum allowed value is 5 seconds, and the
+
+                      maximum allowed value is 600 seconds. For Global external HTTP(S) load
+
+                      balancer (classic), this option is not available publicly.
                     type: number
                   project:
                     description: >-
@@ -491,6 +511,14 @@ spec:
                       loadBalancingScheme consult ServerTlsPolicy documentation.
 
                       If left blank, communications are not encrypted.
+
+                      If you remove this field from your configuration at the same time as
+
+                      deleting or recreating a referenced ServerTlsPolicy resource, you will
+
+                      receive a resourceInUseByAnotherResource error. Use lifecycle.create_before_destroy
+
+                      within the ServerTlsPolicy resource to avoid this.
                     type: string
                   sslCertificates:
                     description: >-
@@ -609,7 +637,7 @@ spec:
 
                       This applies to TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3).
 
-                      Possible values are: STRICT, PERMISSIVE, DISABLED.
+                      Possible values are: STRICT, PERMISSIVE, UNRESTRICTED, DISABLED.
                     type: string
                   urlMap:
                     description: >-
@@ -947,19 +975,37 @@ spec:
                   description:
                     description: An optional description of this resource.
                     type: string
+                  fingerprint:
+                    description: >-
+                      Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
+
+                      This field will be ignored when inserting a TargetHttpsProxy. An up-to-date fingerprint must be provided in order to
+
+                      patch the TargetHttpsProxy; otherwise, the request will fail with error 412 conditionNotMet.
+
+                      To see the latest fingerprint, make a get() request to retrieve the TargetHttpsProxy.
+
+                      A base64-encoded string.
+                    type: string
                   httpKeepAliveTimeoutSec:
                     description: >-
                       Specifies how long to keep a connection open, after completing a response,
 
                       while there is no matching traffic (in seconds). If an HTTP keepalive is
 
-                      not specified, a default value (610 seconds) will be used. For Global
+                      not specified, a default value will be used. For Global
 
-                      external HTTP(S) load balancer, the minimum allowed value is 5 seconds and
+                      external HTTP(S) load balancer, the default value is 610 seconds, the
 
-                      the maximum allowed value is 1200 seconds. For Global external HTTP(S)
+                      minimum allowed value is 5 seconds and the maximum allowed value is 1200
 
-                      load balancer (classic), this option is not available publicly.
+                      seconds. For cross-region internal HTTP(S) load balancer, the default
+
+                      value is 600 seconds, the minimum allowed value is 5 seconds, and the
+
+                      maximum allowed value is 600 seconds. For Global external HTTP(S) load
+
+                      balancer (classic), this option is not available publicly.
                     type: number
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/targetHttpsProxies/{{name}}
@@ -1015,6 +1061,14 @@ spec:
                       loadBalancingScheme consult ServerTlsPolicy documentation.
 
                       If left blank, communications are not encrypted.
+
+                      If you remove this field from your configuration at the same time as
+
+                      deleting or recreating a referenced ServerTlsPolicy resource, you will
+
+                      receive a resourceInUseByAnotherResource error. Use lifecycle.create_before_destroy
+
+                      within the ServerTlsPolicy resource to avoid this.
                     type: string
                   sslCertificates:
                     description: >-
@@ -1044,7 +1098,7 @@ spec:
 
                       This applies to TLS 1.3 connections over TCP (HTTP/2) as well as over UDP (QUIC/h3).
 
-                      Possible values are: STRICT, PERMISSIVE, DISABLED.
+                      Possible values are: STRICT, PERMISSIVE, UNRESTRICTED, DISABLED.
                     type: string
                   urlMap:
                     description: >-

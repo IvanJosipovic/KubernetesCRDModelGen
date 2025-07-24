@@ -215,6 +215,9 @@ spec:
                         port:
                           description: Port for the MySQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         sslConfig:
                           description: >-
                             SSL configuration for the MySQL connection.
@@ -299,8 +302,6 @@ spec:
                         username:
                           description: Username for the MySQL connection.
                           type: string
-                      required:
-                      - passwordSecretRef
                       type: object
                     type: array
                   oracleProfile:
@@ -345,11 +346,12 @@ spec:
                         port:
                           description: Port for the Oracle connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the Oracle connection.
                           type: string
-                      required:
-                      - passwordSecretRef
                       type: object
                     type: array
                   postgresqlProfile:
@@ -560,6 +562,9 @@ spec:
                         port:
                           description: Port for the PostgreSQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the PostgreSQL connection.
                           type: string
@@ -649,8 +654,6 @@ spec:
                                   type: string
                               type: object
                           type: object
-                      required:
-                      - passwordSecretRef
                       type: object
                     type: array
                   privateConnectivity:
@@ -965,6 +968,9 @@ spec:
                         port:
                           description: Port for the SQL Server connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the SQL Server connection.
                           type: string
@@ -1186,9 +1192,32 @@ spec:
                         hostname:
                           description: Hostname for the MySQL connection.
                           type: string
+                        passwordSecretRef:
+                          description: >-
+                            Password for the MySQL connection.
+
+                            Note: This property is sensitive and will not be displayed in the plan.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         port:
                           description: Port for the MySQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         sslConfig:
                           description: >-
                             SSL configuration for the MySQL connection.
@@ -1294,9 +1323,32 @@ spec:
                         hostname:
                           description: Hostname for the Oracle connection.
                           type: string
+                        passwordSecretRef:
+                          description: >-
+                            Password for the Oracle connection.
+
+                            Note: This property is sensitive and will not be displayed in the plan.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         port:
                           description: Port for the Oracle connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the Oracle connection.
                           type: string
@@ -1487,9 +1539,32 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        passwordSecretRef:
+                          description: >-
+                            Password for the PostgreSQL connection.
+
+                            Note: This property is sensitive and will not be displayed in the plan.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         port:
                           description: Port for the PostgreSQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the PostgreSQL connection.
                           type: string
@@ -1893,6 +1968,9 @@ spec:
                         port:
                           description: Port for the SQL Server connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the SQL Server connection.
                           type: string
@@ -1982,8 +2060,6 @@ spec:
                                   type: string
                               type: object
                           type: object
-                      required:
-                      - passwordSecretRef
                       type: object
                     type: array
                 type: object
@@ -2282,6 +2358,9 @@ spec:
                         port:
                           description: Port for the MySQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         sslConfig:
                           description: >-
                             SSL configuration for the MySQL connection.
@@ -2339,6 +2418,9 @@ spec:
                         port:
                           description: Port for the Oracle connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the Oracle connection.
                           type: string
@@ -2360,6 +2442,9 @@ spec:
                         port:
                           description: Port for the PostgreSQL connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the PostgreSQL connection.
                           type: string
@@ -2399,6 +2484,9 @@ spec:
                         port:
                           description: Port for the SQL Server connection.
                           type: number
+                        secretManagerStoredPassword:
+                          description: A reference to a Secret Manager resource name storing the user's password.
+                          type: string
                         username:
                           description: Username for the SQL Server connection.
                           type: string
@@ -2671,6 +2759,9 @@ spec:
                       port:
                         description: Port for the MySQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       sslConfig:
                         description: >-
                           SSL configuration for the MySQL connection.
@@ -2795,6 +2886,9 @@ spec:
                       port:
                         description: Port for the Oracle connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the Oracle connection.
                         type: string
@@ -3006,6 +3100,9 @@ spec:
                       port:
                         description: Port for the PostgreSQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the PostgreSQL connection.
                         type: string
@@ -3405,6 +3502,9 @@ spec:
                       port:
                         description: Port for the SQL Server connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the SQL Server connection.
                         type: string
@@ -3641,6 +3741,9 @@ spec:
                       port:
                         description: Port for the MySQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       sslConfig:
                         description: >-
                           SSL configuration for the MySQL connection.
@@ -3723,8 +3826,6 @@ spec:
                       username:
                         description: Username for the MySQL connection.
                         type: string
-                    required:
-                    - passwordSecretRef
                     type: object
                   oracleProfile:
                     description: >-
@@ -3767,11 +3868,12 @@ spec:
                       port:
                         description: Port for the Oracle connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the Oracle connection.
                         type: string
-                    required:
-                    - passwordSecretRef
                     type: object
                   postgresqlProfile:
                     description: >-
@@ -3980,6 +4082,9 @@ spec:
                       port:
                         description: Port for the PostgreSQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the PostgreSQL connection.
                         type: string
@@ -4069,8 +4174,6 @@ spec:
                                 type: string
                             type: object
                         type: object
-                    required:
-                    - passwordSecretRef
                     type: object
                   privateConnectivity:
                     description: >-
@@ -4381,6 +4484,9 @@ spec:
                       port:
                         description: Port for the SQL Server connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the SQL Server connection.
                         type: string
@@ -4470,8 +4576,6 @@ spec:
                                 type: string
                             type: object
                         type: object
-                    required:
-                    - passwordSecretRef
                     type: object
                 type: object
               managementPolicies:
@@ -4762,6 +4866,9 @@ spec:
                       port:
                         description: Port for the MySQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       sslConfig:
                         description: >-
                           SSL configuration for the MySQL connection.
@@ -4815,6 +4922,9 @@ spec:
                       port:
                         description: Port for the Oracle connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the Oracle connection.
                         type: string
@@ -4834,6 +4944,9 @@ spec:
                       port:
                         description: Port for the PostgreSQL connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the PostgreSQL connection.
                         type: string
@@ -4869,6 +4982,9 @@ spec:
                       port:
                         description: Port for the SQL Server connection.
                         type: number
+                      secretManagerStoredPassword:
+                        description: A reference to a Secret Manager resource name storing the user's password.
+                        type: string
                       username:
                         description: Username for the SQL Server connection.
                         type: string

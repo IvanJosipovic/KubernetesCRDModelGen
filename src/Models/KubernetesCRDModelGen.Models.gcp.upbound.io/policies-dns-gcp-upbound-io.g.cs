@@ -30,6 +30,24 @@ public partial class V1beta1PolicySpecForProviderAlternativeNameServerConfig
     public IList<V1beta1PolicySpecForProviderAlternativeNameServerConfigTargetNameServers>? TargetNameServers { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySpecForProviderDns64ConfigScope
+{
+    /// <summary>Controls whether DNS64 is enabled globally at the network level.</summary>
+    [JsonPropertyName("allQueries")]
+    public bool? AllQueries { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySpecForProviderDns64Config
+{
+    /// <summary>The scope to which DNS64 config will be applied to. Structure is documented below.</summary>
+    [JsonPropertyName("scope")]
+    public IList<V1beta1PolicySpecForProviderDns64ConfigScope>? Scope { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderNetworksNetworkRefPolicy
@@ -115,6 +133,10 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Configurations related to DNS64 for this Policy. Structure is documented below.</summary>
+    [JsonPropertyName("dns64Config")]
+    public IList<V1beta1PolicySpecForProviderDns64Config>? Dns64Config { get; set; }
+
     /// <summary>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</summary>
     [JsonPropertyName("enableInboundForwarding")]
     public bool? EnableInboundForwarding { get; set; }
@@ -152,6 +174,24 @@ public partial class V1beta1PolicySpecInitProviderAlternativeNameServerConfig
     /// <summary>Sets an alternative name server for the associated networks. When specified, all DNS queries are forwarded to a name server that you choose. Names such as .internal are not available when an alternative name server is specified. Structure is documented below.</summary>
     [JsonPropertyName("targetNameServers")]
     public IList<V1beta1PolicySpecInitProviderAlternativeNameServerConfigTargetNameServers>? TargetNameServers { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySpecInitProviderDns64ConfigScope
+{
+    /// <summary>Controls whether DNS64 is enabled globally at the network level.</summary>
+    [JsonPropertyName("allQueries")]
+    public bool? AllQueries { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicySpecInitProviderDns64Config
+{
+    /// <summary>The scope to which DNS64 config will be applied to. Structure is documented below.</summary>
+    [JsonPropertyName("scope")]
+    public IList<V1beta1PolicySpecInitProviderDns64ConfigScope>? Scope { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -238,6 +278,10 @@ public partial class V1beta1PolicySpecInitProvider
     /// <summary>A textual description field.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Configurations related to DNS64 for this Policy. Structure is documented below.</summary>
+    [JsonPropertyName("dns64Config")]
+    public IList<V1beta1PolicySpecInitProviderDns64Config>? Dns64Config { get; set; }
 
     /// <summary>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</summary>
     [JsonPropertyName("enableInboundForwarding")]
@@ -412,6 +456,24 @@ public partial class V1beta1PolicyStatusAtProviderAlternativeNameServerConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicyStatusAtProviderDns64ConfigScope
+{
+    /// <summary>Controls whether DNS64 is enabled globally at the network level.</summary>
+    [JsonPropertyName("allQueries")]
+    public bool? AllQueries { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PolicyStatusAtProviderDns64Config
+{
+    /// <summary>The scope to which DNS64 config will be applied to. Structure is documented below.</summary>
+    [JsonPropertyName("scope")]
+    public IList<V1beta1PolicyStatusAtProviderDns64ConfigScope>? Scope { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderNetworks
 {
     /// <summary>The id or fully qualified URL of the VPC network to forward queries to. This should be formatted like projects/{project}/global/networks/{network} or https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}</summary>
@@ -430,6 +492,10 @@ public partial class V1beta1PolicyStatusAtProvider
     /// <summary>A textual description field.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Configurations related to DNS64 for this Policy. Structure is documented below.</summary>
+    [JsonPropertyName("dns64Config")]
+    public IList<V1beta1PolicyStatusAtProviderDns64Config>? Dns64Config { get; set; }
 
     /// <summary>Allows networks bound to this policy to receive DNS queries sent by VMs or applications over VPN connections. When enabled, a virtual IP address will be allocated from each of the sub-networks that are bound to this policy.</summary>
     [JsonPropertyName("enableInboundForwarding")]

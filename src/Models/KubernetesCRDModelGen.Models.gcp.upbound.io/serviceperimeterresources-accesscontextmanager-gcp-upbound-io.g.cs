@@ -298,6 +298,14 @@ public partial class V1beta1ServicePerimeterResourceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicePerimeterResourceStatusAtProvider
 {
+    /// <summary>The name of the Access Policy this resource belongs to.</summary>
+    [JsonPropertyName("accessPolicyId")]
+    public string? AccessPolicyId { get; set; }
+
+    /// <summary>The perimeter etag is internally used to prevent overwriting the list of perimeter resources on PATCH calls. It is retrieved from the same GET perimeter API call that's used to get the current list of resources. The resource to add or remove is merged into that list and then this etag is sent with the PATCH call along with the updated resource list.</summary>
+    [JsonPropertyName("etag")]
+    public string? Etag { get; set; }
+
     /// <summary>an identifier for the resource with format {{perimeter_name}}/{{resource}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

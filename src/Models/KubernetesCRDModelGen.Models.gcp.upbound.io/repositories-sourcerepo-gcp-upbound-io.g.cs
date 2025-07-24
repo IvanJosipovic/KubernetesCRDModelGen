@@ -157,6 +157,10 @@ public partial class V1beta1RepositorySpecForProviderPubsubConfigs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecForProvider
 {
+    /// <summary>If set to true, skip repository creation if a repository with the same name already exists.</summary>
+    [JsonPropertyName("createIgnoreAlreadyExists")]
+    public bool? CreateIgnoreAlreadyExists { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -315,6 +319,10 @@ public partial class V1beta1RepositorySpecInitProviderPubsubConfigs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositorySpecInitProvider
 {
+    /// <summary>If set to true, skip repository creation if a repository with the same name already exists.</summary>
+    [JsonPropertyName("createIgnoreAlreadyExists")]
+    public bool? CreateIgnoreAlreadyExists { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -477,6 +485,10 @@ public partial class V1beta1RepositoryStatusAtProviderPubsubConfigs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryStatusAtProvider
 {
+    /// <summary>If set to true, skip repository creation if a repository with the same name already exists.</summary>
+    [JsonPropertyName("createIgnoreAlreadyExists")]
+    public bool? CreateIgnoreAlreadyExists { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/repos/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

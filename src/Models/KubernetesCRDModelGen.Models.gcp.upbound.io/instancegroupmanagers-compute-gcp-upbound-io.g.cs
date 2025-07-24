@@ -115,13 +115,99 @@ public partial class V1beta1InstanceGroupManagerSpecForProviderInstanceLifecycle
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecForProviderNamedPort
 {
-    /// <summary>The name of the port.</summary>
+    /// <summary>The name which the port will be mapped to.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The port number.</summary>
+    /// <summary>The port number to map the name to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderResourcePolicies
+{
+    /// <summary>The URL of the workload policy that is specified for this managed instance group. It can be a full or partial URL.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public string? WorkloadPolicy { get; set; }
+
+    /// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
+    [JsonPropertyName("workloadPolicyRef")]
+    public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicyRef? WorkloadPolicyRef { get; set; }
+
+    /// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
+    [JsonPropertyName("workloadPolicySelector")]
+    public V1beta1InstanceGroupManagerSpecForProviderResourcePoliciesWorkloadPolicySelector? WorkloadPolicySelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecForProviderStandbyPolicy
+{
+    /// <summary>- Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.</summary>
+    [JsonPropertyName("initialDelaySec")]
+    public double? InitialDelaySec { get; set; }
+
+    /// <summary>- Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. Valid options are: MANUAL, SCALE_OUT_POOL. If MANUAL(default), you have full control over which VMs are stopped and suspended in the MIG. If SCALE_OUT_POOL, the MIG uses the VMs from the standby pools to accelerate the scale out by resuming or starting them and then automatically replenishes the standby pool with new VMs to maintain the target sizes.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -386,6 +472,14 @@ public partial class V1beta1InstanceGroupManagerSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<V1beta1InstanceGroupManagerSpecForProviderResourcePolicies>? ResourcePolicies { get; set; }
+
+    /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
+    [JsonPropertyName("standbyPolicy")]
+    public IList<V1beta1InstanceGroupManagerSpecForProviderStandbyPolicy>? StandbyPolicy { get; set; }
+
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation.</summary>
     [JsonPropertyName("statefulDisk")]
     public IList<V1beta1InstanceGroupManagerSpecForProviderStatefulDisk>? StatefulDisk { get; set; }
@@ -414,7 +508,15 @@ public partial class V1beta1InstanceGroupManagerSpecForProvider
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
 
-    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
+
+    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
     [JsonPropertyName("updatePolicy")]
     public IList<V1beta1InstanceGroupManagerSpecForProviderUpdatePolicy>? UpdatePolicy { get; set; }
 
@@ -542,13 +644,99 @@ public partial class V1beta1InstanceGroupManagerSpecInitProviderInstanceLifecycl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerSpecInitProviderNamedPort
 {
-    /// <summary>The name of the port.</summary>
+    /// <summary>The name which the port will be mapped to.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The port number.</summary>
+    /// <summary>The port number to map the name to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies
+{
+    /// <summary>The URL of the workload policy that is specified for this managed instance group. It can be a full or partial URL.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public string? WorkloadPolicy { get; set; }
+
+    /// <summary>Reference to a ResourcePolicy in compute to populate workloadPolicy.</summary>
+    [JsonPropertyName("workloadPolicyRef")]
+    public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicyRef? WorkloadPolicyRef { get; set; }
+
+    /// <summary>Selector for a ResourcePolicy in compute to populate workloadPolicy.</summary>
+    [JsonPropertyName("workloadPolicySelector")]
+    public V1beta1InstanceGroupManagerSpecInitProviderResourcePoliciesWorkloadPolicySelector? WorkloadPolicySelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerSpecInitProviderStandbyPolicy
+{
+    /// <summary>- Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.</summary>
+    [JsonPropertyName("initialDelaySec")]
+    public double? InitialDelaySec { get; set; }
+
+    /// <summary>- Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. Valid options are: MANUAL, SCALE_OUT_POOL. If MANUAL(default), you have full control over which VMs are stopped and suspended in the MIG. If SCALE_OUT_POOL, the MIG uses the VMs from the standby pools to accelerate the scale out by resuming or starting them and then automatically replenishes the standby pool with new VMs to maintain the target sizes.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -813,6 +1001,14 @@ public partial class V1beta1InstanceGroupManagerSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<V1beta1InstanceGroupManagerSpecInitProviderResourcePolicies>? ResourcePolicies { get; set; }
+
+    /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
+    [JsonPropertyName("standbyPolicy")]
+    public IList<V1beta1InstanceGroupManagerSpecInitProviderStandbyPolicy>? StandbyPolicy { get; set; }
+
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation.</summary>
     [JsonPropertyName("statefulDisk")]
     public IList<V1beta1InstanceGroupManagerSpecInitProviderStatefulDisk>? StatefulDisk { get; set; }
@@ -841,7 +1037,15 @@ public partial class V1beta1InstanceGroupManagerSpecInitProvider
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
 
-    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
+
+    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
     [JsonPropertyName("updatePolicy")]
     public IList<V1beta1InstanceGroupManagerSpecInitProviderUpdatePolicy>? UpdatePolicy { get; set; }
 
@@ -1033,13 +1237,35 @@ public partial class V1beta1InstanceGroupManagerStatusAtProviderInstanceLifecycl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceGroupManagerStatusAtProviderNamedPort
 {
-    /// <summary>The name of the port.</summary>
+    /// <summary>The name which the port will be mapped to.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The port number.</summary>
+    /// <summary>The port number to map the name to.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerStatusAtProviderResourcePolicies
+{
+    /// <summary>The URL of the workload policy that is specified for this managed instance group. It can be a full or partial URL.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public string? WorkloadPolicy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceGroupManagerStatusAtProviderStandbyPolicy
+{
+    /// <summary>- Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.</summary>
+    [JsonPropertyName("initialDelaySec")]
+    public double? InitialDelaySec { get; set; }
+
+    /// <summary>- Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. Valid options are: MANUAL, SCALE_OUT_POOL. If MANUAL(default), you have full control over which VMs are stopped and suspended in the MIG. If SCALE_OUT_POOL, the MIG uses the VMs from the standby pools to accelerate the scale out by resuming or starting them and then automatically replenishes the standby pool with new VMs to maintain the target sizes.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -1229,7 +1455,7 @@ public partial class V1beta1InstanceGroupManagerStatusAtProvider
     [JsonPropertyName("baseInstanceName")]
     public string? BaseInstanceName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
     public string? CreationTimestamp { get; set; }
 
@@ -1248,6 +1474,10 @@ public partial class V1beta1InstanceGroupManagerStatusAtProvider
     /// <summary>The full URL of the instance group created by the manager.</summary>
     [JsonPropertyName("instanceGroup")]
     public string? InstanceGroup { get; set; }
+
+    /// <summary>an identifier for the resource with format projects/{{project}}/zones/{{zone}}/instanceGroupManagers/{{name}}</summary>
+    [JsonPropertyName("instanceGroupManagerId")]
+    public double? InstanceGroupManagerId { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("instanceLifecyclePolicy")]
@@ -1269,9 +1499,17 @@ public partial class V1beta1InstanceGroupManagerStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>Resource policies for this managed instance group. Structure is documented below.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<V1beta1InstanceGroupManagerStatusAtProviderResourcePolicies>? ResourcePolicies { get; set; }
+
     /// <summary>The URL of the created resource.</summary>
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
+
+    /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
+    [JsonPropertyName("standbyPolicy")]
+    public IList<V1beta1InstanceGroupManagerStatusAtProviderStandbyPolicy>? StandbyPolicy { get; set; }
 
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation.</summary>
     [JsonPropertyName("statefulDisk")]
@@ -1297,7 +1535,15 @@ public partial class V1beta1InstanceGroupManagerStatusAtProvider
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
 
-    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
+
+    /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API.</summary>
     [JsonPropertyName("updatePolicy")]
     public IList<V1beta1InstanceGroupManagerStatusAtProviderUpdatePolicy>? UpdatePolicy { get; set; }
 

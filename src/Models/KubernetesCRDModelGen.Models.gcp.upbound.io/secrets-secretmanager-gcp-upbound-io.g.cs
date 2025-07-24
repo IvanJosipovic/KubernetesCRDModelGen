@@ -100,6 +100,10 @@ public partial class V1beta1SecretSpecForProvider
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
 
+    /// <summary>Defaults to false.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z". Only one of expire_time or ttl can be provided.</summary>
     [JsonPropertyName("expireTime")]
     public string? ExpireTime { get; set; }
@@ -228,6 +232,10 @@ public partial class V1beta1SecretSpecInitProvider
     /// <summary>Custom metadata about the secret. Annotations are distinct from various forms of labels. Annotations exist to allow client tools to store their own state information without requiring a database. Annotation keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, begin and end with an alphanumeric character ([a-z0-9A-Z]), and may have dashes (-), underscores (_), dots (.), and alphanumerics in between these symbols. The total size of annotation keys and values must be less than 16KiB. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
+
+    /// <summary>Defaults to false.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>Timestamp in UTC when the Secret is scheduled to expire. This is always provided on output, regardless of what was sent on input. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z". Only one of expire_time or ttl can be provided.</summary>
     [JsonPropertyName("expireTime")]
@@ -493,6 +501,10 @@ public partial class V1beta1SecretStatusAtProvider
     /// <summary>The time at which the Secret was created.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
+
+    /// <summary>Defaults to false.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("effectiveAnnotations")]

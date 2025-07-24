@@ -84,7 +84,7 @@ public partial class V1beta1TagValueSpecForProvider
     [JsonPropertyName("parentSelector")]
     public V1beta1TagValueSpecForProviderParentSelector? ParentSelector { get; set; }
 
-    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -165,7 +165,7 @@ public partial class V1beta1TagValueSpecInitProvider
     [JsonPropertyName("parentSelector")]
     public V1beta1TagValueSpecInitProviderParentSelector? ParentSelector { get; set; }
 
-    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -330,7 +330,7 @@ public partial class V1beta1TagValueStatusAtProvider
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. User-assigned short name for TagValue. The short name should be unique for TagValues within the same parent TagKey. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 

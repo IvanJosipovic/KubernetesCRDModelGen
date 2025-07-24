@@ -100,6 +100,32 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAutoHealing
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicyInstanceSelections
+{
+    /// <summary>, A list of full machine-type names, e.g. "n1-standard-16".</summary>
+    [JsonPropertyName("machineTypes")]
+    public IList<string>? MachineTypes { get; set; }
+
+    /// <summary>, Name of the instance selection, e.g. instance_selection_with_n1_machines_types. Instance selection names must be unique within the flexibility policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>, Preference of this instance selection. Lower number means higher preference. Managed instance group will first try to create a VM based on the machine-type with lowest rank and fallback to next rank based on availability. Machine types and instance selections with the same rank have the same preference.</summary>
+    [JsonPropertyName("rank")]
+    public double? Rank { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicy
+{
+    /// <summary>, Named instance selections configuring properties that the group will use when creating new VMs. One can specify multiple instance selection to allow managed instance group to create VMs from multiple types of machines, based on preference and availability. Structure is documented below.</summary>
+    [JsonPropertyName("instanceSelections")]
+    public IList<V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -382,6 +408,10 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
     [JsonPropertyName("distributionPolicyZones")]
     public IList<string>? DistributionPolicyZones { get; set; }
 
+    /// <summary>The flexibility policy for managed instance group. Instance flexibility allows managed instance group to create VMs from multiple types of machines. Instance flexibility configuration on managed instance group overrides instance template configuration. Structure is documented below.</summary>
+    [JsonPropertyName("instanceFlexibilityPolicy")]
+    public IList<V1beta1RegionInstanceGroupManagerSpecForProviderInstanceFlexibilityPolicy>? InstanceFlexibilityPolicy { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("instanceLifecyclePolicy")]
     public IList<V1beta1RegionInstanceGroupManagerSpecForProviderInstanceLifecyclePolicy>? InstanceLifecyclePolicy { get; set; }
@@ -433,6 +463,14 @@ public partial class V1beta1RegionInstanceGroupManagerSpecForProvider
     /// <summary>The target number of running instances for this managed instance group. This value will fight with autoscaler settings when set, and generally shouldn't be set when using one. If a value is required, such as to specify a creation-time target size for the MIG, lifecycle. Defaults to 0.</summary>
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
+
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
 
     /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
     [JsonPropertyName("updatePolicy")]
@@ -543,6 +581,32 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderAutoHealin
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicyInstanceSelections
+{
+    /// <summary>, A list of full machine-type names, e.g. "n1-standard-16".</summary>
+    [JsonPropertyName("machineTypes")]
+    public IList<string>? MachineTypes { get; set; }
+
+    /// <summary>, Name of the instance selection, e.g. instance_selection_with_n1_machines_types. Instance selection names must be unique within the flexibility policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>, Preference of this instance selection. Lower number means higher preference. Managed instance group will first try to create a VM based on the machine-type with lowest rank and fallback to next rank based on availability. Machine types and instance selections with the same rank have the same preference.</summary>
+    [JsonPropertyName("rank")]
+    public double? Rank { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicy
+{
+    /// <summary>, Named instance selections configuring properties that the group will use when creating new VMs. One can specify multiple instance selection to allow managed instance group to create VMs from multiple types of machines, based on preference and availability. Structure is documented below.</summary>
+    [JsonPropertyName("instanceSelections")]
+    public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -565,6 +629,19 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderNamedPort
     /// <summary>The port number.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerSpecInitProviderStandbyPolicy
+{
+    /// <summary>- Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.</summary>
+    [JsonPropertyName("initialDelaySec")]
+    public double? InitialDelaySec { get; set; }
+
+    /// <summary>- Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. Valid options are: MANUAL, SCALE_OUT_POOL. If MANUAL(default), you have full control over which VMs are stopped and suspended in the MIG. If SCALE_OUT_POOL, the MIG uses the VMs from the standby pools to accelerate the scale out by resuming or starting them and then automatically replenishes the standby pool with new VMs to maintain the target sizes.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -825,6 +902,10 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
     [JsonPropertyName("distributionPolicyZones")]
     public IList<string>? DistributionPolicyZones { get; set; }
 
+    /// <summary>The flexibility policy for managed instance group. Instance flexibility allows managed instance group to create VMs from multiple types of machines. Instance flexibility configuration on managed instance group overrides instance template configuration. Structure is documented below.</summary>
+    [JsonPropertyName("instanceFlexibilityPolicy")]
+    public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceFlexibilityPolicy>? InstanceFlexibilityPolicy { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("instanceLifecyclePolicy")]
     public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderInstanceLifecyclePolicy>? InstanceLifecyclePolicy { get; set; }
@@ -848,6 +929,10 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
     /// <summary>The region where the managed instance group resides. If not provided, the provider region is used.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
+
+    /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
+    [JsonPropertyName("standbyPolicy")]
+    public IList<V1beta1RegionInstanceGroupManagerSpecInitProviderStandbyPolicy>? StandbyPolicy { get; set; }
 
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the update_policy.</summary>
     [JsonPropertyName("statefulDisk")]
@@ -876,6 +961,14 @@ public partial class V1beta1RegionInstanceGroupManagerSpecInitProvider
     /// <summary>The target number of running instances for this managed instance group. This value will fight with autoscaler settings when set, and generally shouldn't be set when using one. If a value is required, such as to specify a creation-time target size for the MIG, lifecycle. Defaults to 0.</summary>
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
+
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
 
     /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
     [JsonPropertyName("updatePolicy")]
@@ -1054,6 +1147,32 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderAutoHealin
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicyInstanceSelections
+{
+    /// <summary>, A list of full machine-type names, e.g. "n1-standard-16".</summary>
+    [JsonPropertyName("machineTypes")]
+    public IList<string>? MachineTypes { get; set; }
+
+    /// <summary>, Name of the instance selection, e.g. instance_selection_with_n1_machines_types. Instance selection names must be unique within the flexibility policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>, Preference of this instance selection. Lower number means higher preference. Managed instance group will first try to create a VM based on the machine-type with lowest rank and fallback to next rank based on availability. Machine types and instance selections with the same rank have the same preference.</summary>
+    [JsonPropertyName("rank")]
+    public double? Rank { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicy
+{
+    /// <summary>, Named instance selections configuring properties that the group will use when creating new VMs. One can specify multiple instance selection to allow managed instance group to create VMs from multiple types of machines, based on preference and availability. Structure is documented below.</summary>
+    [JsonPropertyName("instanceSelections")]
+    public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicyInstanceSelections>? InstanceSelections { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceLifecyclePolicy
 {
     /// <summary>, Default behavior for all instance or health check failures. Valid options are: REPAIR, DO_NOTHING. If DO_NOTHING then instances will not be repaired. If REPAIR (default), then failed instances will be repaired.</summary>
@@ -1076,6 +1195,19 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderNamedPort
     /// <summary>The port number.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionInstanceGroupManagerStatusAtProviderStandbyPolicy
+{
+    /// <summary>- Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.</summary>
+    [JsonPropertyName("initialDelaySec")]
+    public double? InitialDelaySec { get; set; }
+
+    /// <summary>- Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. Valid options are: MANUAL, SCALE_OUT_POOL. If MANUAL(default), you have full control over which VMs are stopped and suspended in the MIG. If SCALE_OUT_POOL, the MIG uses the VMs from the standby pools to accelerate the scale out by resuming or starting them and then automatically replenishes the standby pool with new VMs to maintain the target sizes.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -1293,9 +1425,17 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>The flexibility policy for managed instance group. Instance flexibility allows managed instance group to create VMs from multiple types of machines. Instance flexibility configuration on managed instance group overrides instance template configuration. Structure is documented below.</summary>
+    [JsonPropertyName("instanceFlexibilityPolicy")]
+    public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderInstanceFlexibilityPolicy>? InstanceFlexibilityPolicy { get; set; }
+
     /// <summary>The full URL of the instance group created by the manager.</summary>
     [JsonPropertyName("instanceGroup")]
     public string? InstanceGroup { get; set; }
+
+    /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/instanceGroupManagers/{{name}}</summary>
+    [JsonPropertyName("instanceGroupManagerId")]
+    public double? InstanceGroupManagerId { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("instanceLifecyclePolicy")]
@@ -1325,6 +1465,10 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 
+    /// <summary>The standby policy for stopped and suspended instances. Structure is documented below. For more information, see the official documentation.</summary>
+    [JsonPropertyName("standbyPolicy")]
+    public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStandbyPolicy>? StandbyPolicy { get; set; }
+
     /// <summary>Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the official documentation. Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the update_policy.</summary>
     [JsonPropertyName("statefulDisk")]
     public IList<V1beta1RegionInstanceGroupManagerStatusAtProviderStatefulDisk>? StatefulDisk { get; set; }
@@ -1348,6 +1492,14 @@ public partial class V1beta1RegionInstanceGroupManagerStatusAtProvider
     /// <summary>The target number of running instances for this managed instance group. This value will fight with autoscaler settings when set, and generally shouldn't be set when using one. If a value is required, such as to specify a creation-time target size for the MIG, lifecycle. Defaults to 0.</summary>
     [JsonPropertyName("targetSize")]
     public double? TargetSize { get; set; }
+
+    /// <summary>The target number of stopped instances for this managed instance group.</summary>
+    [JsonPropertyName("targetStoppedSize")]
+    public double? TargetStoppedSize { get; set; }
+
+    /// <summary>The target number of suspended instances for this managed instance group.</summary>
+    [JsonPropertyName("targetSuspendedSize")]
+    public double? TargetSuspendedSize { get; set; }
 
     /// <summary>The update policy for this managed instance group. Structure is documented below. For more information, see the official documentation and API</summary>
     [JsonPropertyName("updatePolicy")]

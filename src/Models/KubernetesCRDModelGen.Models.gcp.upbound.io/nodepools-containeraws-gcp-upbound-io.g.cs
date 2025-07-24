@@ -214,6 +214,27 @@ public partial class V1beta1NodePoolSpecForProviderConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecForProviderKubeletConfig
+{
+    /// <summary>Whether or not to enable CPU CFS quota. Defaults to true.</summary>
+    [JsonPropertyName("cpuCfsQuota")]
+    public bool? CpuCfsQuota { get; set; }
+
+    /// <summary>Optional. The CPU CFS quota period to use for the node. Defaults to "100ms".</summary>
+    [JsonPropertyName("cpuCfsQuotaPeriod")]
+    public string? CpuCfsQuotaPeriod { get; set; }
+
+    /// <summary>The CpuManagerPolicy to use for the node. Defaults to "none".</summary>
+    [JsonPropertyName("cpuManagerPolicy")]
+    public string? CpuManagerPolicy { get; set; }
+
+    /// <summary>Optional. The maximum number of PIDs in each pod running on the node. The limit scales automatically based on underlying machine size if left unset.</summary>
+    [JsonPropertyName("podPidsLimit")]
+    public double? PodPidsLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -279,6 +300,10 @@ public partial class V1beta1NodePoolSpecForProvider
     /// <summary>The configuration of the node pool.</summary>
     [JsonPropertyName("config")]
     public IList<V1beta1NodePoolSpecForProviderConfig>? Config { get; set; }
+
+    /// <summary>The kubelet configuration for the node pool.</summary>
+    [JsonPropertyName("kubeletConfig")]
+    public IList<V1beta1NodePoolSpecForProviderKubeletConfig>? KubeletConfig { get; set; }
 
     /// <summary>The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -459,6 +484,27 @@ public partial class V1beta1NodePoolSpecInitProviderConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolSpecInitProviderKubeletConfig
+{
+    /// <summary>Whether or not to enable CPU CFS quota. Defaults to true.</summary>
+    [JsonPropertyName("cpuCfsQuota")]
+    public bool? CpuCfsQuota { get; set; }
+
+    /// <summary>Optional. The CPU CFS quota period to use for the node. Defaults to "100ms".</summary>
+    [JsonPropertyName("cpuCfsQuotaPeriod")]
+    public string? CpuCfsQuotaPeriod { get; set; }
+
+    /// <summary>The CpuManagerPolicy to use for the node. Defaults to "none".</summary>
+    [JsonPropertyName("cpuManagerPolicy")]
+    public string? CpuManagerPolicy { get; set; }
+
+    /// <summary>Optional. The maximum number of PIDs in each pod running on the node. The limit scales automatically based on underlying machine size if left unset.</summary>
+    [JsonPropertyName("podPidsLimit")]
+    public double? PodPidsLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecInitProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -512,6 +558,10 @@ public partial class V1beta1NodePoolSpecInitProvider
     /// <summary>The configuration of the node pool.</summary>
     [JsonPropertyName("config")]
     public IList<V1beta1NodePoolSpecInitProviderConfig>? Config { get; set; }
+
+    /// <summary>The kubelet configuration for the node pool.</summary>
+    [JsonPropertyName("kubeletConfig")]
+    public IList<V1beta1NodePoolSpecInitProviderKubeletConfig>? KubeletConfig { get; set; }
 
     /// <summary>The Management configuration for this node pool.</summary>
     [JsonPropertyName("management")]
@@ -820,6 +870,27 @@ public partial class V1beta1NodePoolStatusAtProviderConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodePoolStatusAtProviderKubeletConfig
+{
+    /// <summary>Whether or not to enable CPU CFS quota. Defaults to true.</summary>
+    [JsonPropertyName("cpuCfsQuota")]
+    public bool? CpuCfsQuota { get; set; }
+
+    /// <summary>Optional. The CPU CFS quota period to use for the node. Defaults to "100ms".</summary>
+    [JsonPropertyName("cpuCfsQuotaPeriod")]
+    public string? CpuCfsQuotaPeriod { get; set; }
+
+    /// <summary>The CpuManagerPolicy to use for the node. Defaults to "none".</summary>
+    [JsonPropertyName("cpuManagerPolicy")]
+    public string? CpuManagerPolicy { get; set; }
+
+    /// <summary>Optional. The maximum number of PIDs in each pod running on the node. The limit scales automatically based on underlying machine size if left unset.</summary>
+    [JsonPropertyName("podPidsLimit")]
+    public double? PodPidsLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolStatusAtProviderManagement
 {
     /// <summary>Optional. Whether or not the nodes will be automatically repaired.</summary>
@@ -893,6 +964,10 @@ public partial class V1beta1NodePoolStatusAtProvider
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{location}}/awsClusters/{{cluster}}/awsNodePools/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The kubelet configuration for the node pool.</summary>
+    [JsonPropertyName("kubeletConfig")]
+    public IList<V1beta1NodePoolStatusAtProviderKubeletConfig>? KubeletConfig { get; set; }
 
     /// <summary>The location for the resource</summary>
     [JsonPropertyName("location")]

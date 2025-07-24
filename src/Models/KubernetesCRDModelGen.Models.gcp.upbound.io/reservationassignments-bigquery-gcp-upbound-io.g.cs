@@ -72,7 +72,7 @@ public partial class V1beta1ReservationAssignmentSpecForProvider
     [JsonPropertyName("assignee")]
     public string? Assignee { get; set; }
 
-    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY</summary>
+    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY, CONTINUOUS</summary>
     [JsonPropertyName("jobType")]
     public string? JobType { get; set; }
 
@@ -105,7 +105,7 @@ public partial class V1beta1ReservationAssignmentSpecInitProvider
     [JsonPropertyName("assignee")]
     public string? Assignee { get; set; }
 
-    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY</summary>
+    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY, CONTINUOUS</summary>
     [JsonPropertyName("jobType")]
     public string? JobType { get; set; }
 
@@ -262,7 +262,7 @@ public partial class V1beta1ReservationAssignmentStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY</summary>
+    /// <summary>Types of job, which could be specified when using the reservation. Possible values: JOB_TYPE_UNSPECIFIED, PIPELINE, QUERY, CONTINUOUS</summary>
     [JsonPropertyName("jobType")]
     public string? JobType { get; set; }
 

@@ -20,7 +20,7 @@ public partial class V1beta1FirewallPolicySpecForProvider
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
+    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. This field is not applicable to network firewall policies. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -37,7 +37,7 @@ public partial class V1beta1FirewallPolicySpecInitProvider
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
 
-    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
+    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. This field is not applicable to network firewall policies. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -190,7 +190,7 @@ public partial class V1beta1FirewallPolicyStatusAtProvider
     [JsonPropertyName("fingerprint")]
     public string? Fingerprint { get; set; }
 
-    /// <summary>an identifier for the resource with format locations/global/firewallPolicies/{{name}}</summary>
+    /// <summary>The unique identifier for the resource. This identifier is defined by the server.</summary>
     [JsonPropertyName("firewallPolicyId")]
     public string? FirewallPolicyId { get; set; }
 
@@ -218,7 +218,7 @@ public partial class V1beta1FirewallPolicyStatusAtProvider
     [JsonPropertyName("selfLinkWithId")]
     public string? SelfLinkWithId { get; set; }
 
-    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
+    /// <summary>User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. This field is not applicable to network firewall policies. This name must be set on creation and cannot be changed. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -269,7 +269,7 @@ public partial class V1beta1FirewallPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Creates a hierarchical firewall policy</summary>
+/// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Hierarchical firewall policy rules let you create and enforce a consistent firewall policy across your organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FirewallPolicySpec>, IStatus<V1beta1FirewallPolicyStatus>
@@ -299,7 +299,7 @@ public partial class V1beta1FirewallPolicy : IKubernetesObject<V1ObjectMeta>, IS
     public V1beta1FirewallPolicyStatus? Status { get; set; }
 }
 
-/// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Creates a hierarchical firewall policy</summary>
+/// <summary>FirewallPolicy is the Schema for the FirewallPolicys API. Hierarchical firewall policy rules let you create and enforce a consistent firewall policy across your organization.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FirewallPolicy>

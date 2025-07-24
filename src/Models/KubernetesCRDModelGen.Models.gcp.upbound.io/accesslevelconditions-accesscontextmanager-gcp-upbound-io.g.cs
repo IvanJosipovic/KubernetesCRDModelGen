@@ -542,6 +542,10 @@ public partial class V1beta1AccessLevelConditionStatusAtProvider
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
 
+    /// <summary>The name of the Access Policy this resource belongs to.</summary>
+    [JsonPropertyName("accessPolicyId")]
+    public string? AccessPolicyId { get; set; }
+
     /// <summary>Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed. Structure is documented below.</summary>
     [JsonPropertyName("devicePolicy")]
     public IList<V1beta1AccessLevelConditionStatusAtProviderDevicePolicy>? DevicePolicy { get; set; }

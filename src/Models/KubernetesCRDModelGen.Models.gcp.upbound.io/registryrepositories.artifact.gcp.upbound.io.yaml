@@ -299,6 +299,104 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        commonRepository:
+                          description: >-
+                            Specific settings for an Artifact Registory remote repository.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                                type: string
+                              uriRef:
+                                description: Reference to a RegistryRepository in artifact to populate uri.
+                                properties:
+                                  name:
+                                    description: Name of the referenced object.
+                                    type: string
+                                  policy:
+                                    description: Policies for referencing.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                required:
+                                - name
+                                type: object
+                              uriSelector:
+                                description: Selector for a RegistryRepository in artifact to populate uri.
+                                properties:
+                                  matchControllerRef:
+                                    description: >-
+                                      MatchControllerRef ensures an object with the same controller reference
+
+                                      as the selecting object is selected.
+                                    type: boolean
+                                  matchLabels:
+                                    additionalProperties:
+                                      type: string
+                                    description: MatchLabels ensures an object with matching labels is selected.
+                                    type: object
+                                  policy:
+                                    description: Policies for selection.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                type: object
+                            type: object
+                          type: array
                         description:
                           description: The description of the remote source.
                           type: string
@@ -676,6 +774,21 @@ spec:
                                 type: object
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        enablementConfig:
+                          description: >-
+                            This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                            Possible values are: INHERITED, DISABLED.
+                          type: string
                       type: object
                     type: array
                 type: object
@@ -913,6 +1026,104 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        commonRepository:
+                          description: >-
+                            Specific settings for an Artifact Registory remote repository.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                                type: string
+                              uriRef:
+                                description: Reference to a RegistryRepository in artifact to populate uri.
+                                properties:
+                                  name:
+                                    description: Name of the referenced object.
+                                    type: string
+                                  policy:
+                                    description: Policies for referencing.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                required:
+                                - name
+                                type: object
+                              uriSelector:
+                                description: Selector for a RegistryRepository in artifact to populate uri.
+                                properties:
+                                  matchControllerRef:
+                                    description: >-
+                                      MatchControllerRef ensures an object with the same controller reference
+
+                                      as the selecting object is selected.
+                                    type: boolean
+                                  matchLabels:
+                                    additionalProperties:
+                                      type: string
+                                    description: MatchLabels ensures an object with matching labels is selected.
+                                    type: object
+                                  policy:
+                                    description: Policies for selection.
+                                    properties:
+                                      resolution:
+                                        default: Required
+                                        description: >-
+                                          Resolution specifies whether resolution of this reference is required.
+
+                                          The default is 'Required', which means the reconcile will fail if the
+
+                                          reference cannot be resolved. 'Optional' means this reference will be
+
+                                          a no-op if it cannot be resolved.
+                                        enum:
+                                        - Required
+                                        - Optional
+                                        type: string
+                                      resolve:
+                                        description: >-
+                                          Resolve specifies when this reference should be resolved. The default
+
+                                          is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                          the corresponding field is not present. Use 'Always' to resolve the
+
+                                          reference on every reconcile.
+                                        enum:
+                                        - Always
+                                        - IfNotPresent
+                                        type: string
+                                    type: object
+                                type: object
+                            type: object
+                          type: array
                         description:
                           description: The description of the remote source.
                           type: string
@@ -1290,6 +1501,21 @@ spec:
                                 type: object
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        enablementConfig:
+                          description: >-
+                            This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                            Possible values are: INHERITED, DISABLED.
+                          type: string
                       type: object
                     type: array
                 type: object
@@ -1742,6 +1968,18 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        commonRepository:
+                          description: >-
+                            Specific settings for an Artifact Registory remote repository.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: The description of the remote source.
                           type: string
@@ -1959,6 +2197,33 @@ spec:
                                 type: string
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        enablementConfig:
+                          description: >-
+                            This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                            Possible values are: INHERITED, DISABLED.
+                          type: string
+                        enablementState:
+                          description: >-
+                            (Output)
+
+                            This field returns whether scanning is active for this repository.
+                          type: string
+                        enablementStateReason:
+                          description: >-
+                            (Output)
+
+                            This provides an explanation for the state of scanning on this repository.
+                          type: string
                       type: object
                     type: array
                 type: object
@@ -2227,7 +2492,18 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   location:
-                    description: The name of the location this repository is located in.
+                    description: >-
+                      The name of the repository's location. In addition to specific regions,
+
+                      special values for multi-region locations are asia, europe, and us.
+
+                      See here,
+
+                      or use the
+
+                      google_artifact_registry_locations
+
+                      data source for possible values.
                     type: string
                   mavenConfig:
                     description: >-
@@ -2297,6 +2573,102 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      commonRepository:
+                        description: >-
+                          Specific settings for an Artifact Registory remote repository.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                            type: string
+                          uriRef:
+                            description: Reference to a RegistryRepository in artifact to populate uri.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          uriSelector:
+                            description: Selector for a RegistryRepository in artifact to populate uri.
+                            properties:
+                              matchControllerRef:
+                                description: >-
+                                  MatchControllerRef ensures an object with the same controller reference
+
+                                  as the selecting object is selected.
+                                type: boolean
+                              matchLabels:
+                                additionalProperties:
+                                  type: string
+                                description: MatchLabels ensures an object with matching labels is selected.
+                                type: object
+                              policy:
+                                description: Policies for selection.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            type: object
+                        type: object
                       description:
                         description: The description of the remote source.
                         type: string
@@ -2314,7 +2686,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2337,7 +2709,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2360,7 +2732,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2383,7 +2755,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2648,6 +3020,19 @@ spec:
                               type: object
                           type: object
                         type: array
+                    type: object
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    properties:
+                      enablementConfig:
+                        description: >-
+                          This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                          Possible values are: INHERITED, DISABLED.
+                        type: string
                     type: object
                 type: object
               initProvider:
@@ -2871,6 +3256,102 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      commonRepository:
+                        description: >-
+                          Specific settings for an Artifact Registory remote repository.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                            type: string
+                          uriRef:
+                            description: Reference to a RegistryRepository in artifact to populate uri.
+                            properties:
+                              name:
+                                description: Name of the referenced object.
+                                type: string
+                              policy:
+                                description: Policies for referencing.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            required:
+                            - name
+                            type: object
+                          uriSelector:
+                            description: Selector for a RegistryRepository in artifact to populate uri.
+                            properties:
+                              matchControllerRef:
+                                description: >-
+                                  MatchControllerRef ensures an object with the same controller reference
+
+                                  as the selecting object is selected.
+                                type: boolean
+                              matchLabels:
+                                additionalProperties:
+                                  type: string
+                                description: MatchLabels ensures an object with matching labels is selected.
+                                type: object
+                              policy:
+                                description: Policies for selection.
+                                properties:
+                                  resolution:
+                                    default: Required
+                                    description: >-
+                                      Resolution specifies whether resolution of this reference is required.
+
+                                      The default is 'Required', which means the reconcile will fail if the
+
+                                      reference cannot be resolved. 'Optional' means this reference will be
+
+                                      a no-op if it cannot be resolved.
+                                    enum:
+                                    - Required
+                                    - Optional
+                                    type: string
+                                  resolve:
+                                    description: >-
+                                      Resolve specifies when this reference should be resolved. The default
+
+                                      is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                                      the corresponding field is not present. Use 'Always' to resolve the
+
+                                      reference on every reconcile.
+                                    enum:
+                                    - Always
+                                    - IfNotPresent
+                                    type: string
+                                type: object
+                            type: object
+                        type: object
                       description:
                         description: The description of the remote source.
                         type: string
@@ -2888,7 +3369,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2911,7 +3392,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2934,7 +3415,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -2957,7 +3438,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -3222,6 +3703,19 @@ spec:
                               type: object
                           type: object
                         type: array
+                    type: object
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    properties:
+                      enablementConfig:
+                        description: >-
+                          This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                          Possible values are: INHERITED, DISABLED.
+                        type: string
                     type: object
                 type: object
               managementPolicies:
@@ -3584,7 +4078,18 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   location:
-                    description: The name of the location this repository is located in.
+                    description: >-
+                      The name of the repository's location. In addition to specific regions,
+
+                      special values for multi-region locations are asia, europe, and us.
+
+                      See here,
+
+                      or use the
+
+                      google_artifact_registry_locations
+
+                      data source for possible values.
                     type: string
                   mavenConfig:
                     description: >-
@@ -3660,6 +4165,16 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      commonRepository:
+                        description: >-
+                          Specific settings for an Artifact Registory remote repository.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: Specific uri to the registry, e.g. "https://registry-1.docker.io"
+                            type: string
+                        type: object
                       description:
                         description: The description of the remote source.
                         type: string
@@ -3677,7 +4192,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -3700,7 +4215,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -3723,7 +4238,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -3746,7 +4261,7 @@ spec:
                         properties:
                           customRepository:
                             description: >-
-                              Settings for a remote repository with a custom uri.
+                              [Deprecated, please use commonRepository instead] Settings for a remote repository with a custom uri.
 
                               Structure is documented below.
                             properties:
@@ -3851,6 +4366,31 @@ spec:
                               type: string
                           type: object
                         type: array
+                    type: object
+                  vulnerabilityScanningConfig:
+                    description: >-
+                      Configuration for vulnerability scanning of artifacts stored in this repository.
+
+                      Structure is documented below.
+                    properties:
+                      enablementConfig:
+                        description: >-
+                          This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository.
+
+                          Possible values are: INHERITED, DISABLED.
+                        type: string
+                      enablementState:
+                        description: >-
+                          (Output)
+
+                          This field returns whether scanning is active for this repository.
+                        type: string
+                      enablementStateReason:
+                        description: >-
+                          (Output)
+
+                          This provides an explanation for the state of scanning on this repository.
+                        type: string
                     type: object
                 type: object
               conditions:

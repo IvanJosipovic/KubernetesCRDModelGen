@@ -136,7 +136,7 @@ public partial class V1beta1NetworkFirewallPolicyAssociationSpecForProvider
     [JsonPropertyName("attachmentTargetSelector")]
     public V1beta1NetworkFirewallPolicyAssociationSpecForProviderAttachmentTargetSelector? AttachmentTargetSelector { get; set; }
 
-    /// <summary>The firewall policy ID of the association.</summary>
+    /// <summary>The firewall policy of the resource.</summary>
     [JsonPropertyName("firewallPolicy")]
     public string? FirewallPolicy { get; set; }
 
@@ -148,7 +148,7 @@ public partial class V1beta1NetworkFirewallPolicyAssociationSpecForProvider
     [JsonPropertyName("firewallPolicySelector")]
     public V1beta1NetworkFirewallPolicyAssociationSpecForProviderFirewallPolicySelector? FirewallPolicySelector { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
@@ -225,7 +225,7 @@ public partial class V1beta1NetworkFirewallPolicyAssociationSpecInitProvider
     [JsonPropertyName("attachmentTargetSelector")]
     public V1beta1NetworkFirewallPolicyAssociationSpecInitProviderAttachmentTargetSelector? AttachmentTargetSelector { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
@@ -370,7 +370,7 @@ public partial class V1beta1NetworkFirewallPolicyAssociationStatusAtProvider
     [JsonPropertyName("attachmentTarget")]
     public string? AttachmentTarget { get; set; }
 
-    /// <summary>The firewall policy ID of the association.</summary>
+    /// <summary>The firewall policy of the resource.</summary>
     [JsonPropertyName("firewallPolicy")]
     public string? FirewallPolicy { get; set; }
 
@@ -378,7 +378,7 @@ public partial class V1beta1NetworkFirewallPolicyAssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 

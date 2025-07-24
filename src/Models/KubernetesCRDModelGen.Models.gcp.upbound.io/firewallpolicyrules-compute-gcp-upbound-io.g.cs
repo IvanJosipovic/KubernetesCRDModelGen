@@ -77,6 +77,79 @@ public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchLayer4Configs
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Reference to a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameRef")]
+    public V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameRef? NameRef { get; set; }
+
+    /// <summary>Selector for a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameSelector")]
+    public V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyRuleSpecForProviderMatch
@@ -121,9 +194,86 @@ public partial class V1beta1FirewallPolicyRuleSpecForProviderMatch
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("srcSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleSpecForProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
+
     /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Reference to a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameRef")]
+    public V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameRef? NameRef { get; set; }
+
+    /// <summary>Selector for a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameSelector")]
+    public V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTagsNameSelector? NameSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -177,6 +327,10 @@ public partial class V1beta1FirewallPolicyRuleSpecForProvider
     /// <summary>A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.</summary>
     [JsonPropertyName("targetResources")]
     public IList<string>? TargetResources { get; set; }
+
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target secure tags allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("targetSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleSpecForProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
     /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule.</summary>
     [JsonPropertyName("targetServiceAccounts")]
@@ -256,6 +410,79 @@ public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchLayer4Configs
     public IList<string>? Ports { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Reference to a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameRef")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameRef? NameRef { get; set; }
+
+    /// <summary>Selector for a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameSelector")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatch
@@ -300,9 +527,86 @@ public partial class V1beta1FirewallPolicyRuleSpecInitProviderMatch
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("srcSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleSpecInitProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
+
     /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a TagValue in tags to populate name.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Reference to a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameRef")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameRef? NameRef { get; set; }
+
+    /// <summary>Selector for a TagValue in tags to populate name.</summary>
+    [JsonPropertyName("nameSelector")]
+    public V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTagsNameSelector? NameSelector { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -356,6 +660,10 @@ public partial class V1beta1FirewallPolicyRuleSpecInitProvider
     /// <summary>A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.</summary>
     [JsonPropertyName("targetResources")]
     public IList<string>? TargetResources { get; set; }
+
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target secure tags allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("targetSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleSpecInitProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
     /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule.</summary>
     [JsonPropertyName("targetServiceAccounts")]
@@ -513,6 +821,19 @@ public partial class V1beta1FirewallPolicyRuleStatusAtProviderMatchLayer4Configs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleStatusAtProviderMatchSrcSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>(Output) State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallPolicyRuleStatusAtProviderMatch
 {
     /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
@@ -555,9 +876,26 @@ public partial class V1beta1FirewallPolicyRuleStatusAtProviderMatch
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("srcSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleStatusAtProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
+
     /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FirewallPolicyRuleStatusAtProviderTargetSecureTags
+{
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>(Output) State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
 }
 
 /// <summary></summary>
@@ -615,6 +953,10 @@ public partial class V1beta1FirewallPolicyRuleStatusAtProvider
     /// <summary>A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.</summary>
     [JsonPropertyName("targetResources")]
     public IList<string>? TargetResources { get; set; }
+
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target secure tags allowed is 256. Structure is documented below.</summary>
+    [JsonPropertyName("targetSecureTags")]
+    public IList<V1beta1FirewallPolicyRuleStatusAtProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
     /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule.</summary>
     [JsonPropertyName("targetServiceAccounts")]

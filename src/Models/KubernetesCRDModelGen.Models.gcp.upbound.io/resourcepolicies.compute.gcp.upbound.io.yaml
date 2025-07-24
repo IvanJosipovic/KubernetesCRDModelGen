@@ -124,6 +124,9 @@ spec:
 
                             Possible values are: COLLOCATED.
                           type: string
+                        gpuTopology:
+                          description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+                          type: string
                         vmCount:
                           description: >-
                             Number of VMs in this placement group. Google does not recommend that you use this field
@@ -329,6 +332,35 @@ spec:
                           type: array
                       type: object
                     type: array
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorTopology:
+                          description: >-
+                            The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if max topology distance is set.
+                          type: string
+                        maxTopologyDistance:
+                          description: >-
+                            The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if accelerator topology is set.
+
+                            Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                          type: string
+                        type:
+                          description: >-
+                            The type of workload policy.
+
+                            Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                          type: string
+                      type: object
+                    type: array
                 required:
                 - region
                 type: object
@@ -393,6 +425,9 @@ spec:
                             attached.
 
                             Possible values are: COLLOCATED.
+                          type: string
+                        gpuTopology:
+                          description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
                           type: string
                         vmCount:
                           description: >-
@@ -594,6 +629,35 @@ spec:
                                 x-kubernetes-list-type: set
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorTopology:
+                          description: >-
+                            The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if max topology distance is set.
+                          type: string
+                        maxTopologyDistance:
+                          description: >-
+                            The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if accelerator topology is set.
+
+                            Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                          type: string
+                        type:
+                          description: >-
+                            The type of workload policy.
+
+                            Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                          type: string
                       type: object
                     type: array
                 type: object
@@ -850,6 +914,9 @@ spec:
 
                             Possible values are: COLLOCATED.
                           type: string
+                        gpuTopology:
+                          description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+                          type: string
                         vmCount:
                           description: >-
                             Number of VMs in this placement group. Google does not recommend that you use this field
@@ -1059,6 +1126,35 @@ spec:
                                 x-kubernetes-list-type: set
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        acceleratorTopology:
+                          description: >-
+                            The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if max topology distance is set.
+                          type: string
+                        maxTopologyDistance:
+                          description: >-
+                            The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                            and cannot be set if accelerator topology is set.
+
+                            Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                          type: string
+                        type:
+                          description: >-
+                            The type of workload policy.
+
+                            Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                          type: string
                       type: object
                     type: array
                 type: object
@@ -1232,6 +1328,9 @@ spec:
 
                           Possible values are: COLLOCATED.
                         type: string
+                      gpuTopology:
+                        description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+                        type: string
                       vmCount:
                         description: >-
                           Number of VMs in this placement group. Google does not recommend that you use this field
@@ -1416,6 +1515,33 @@ spec:
                             x-kubernetes-list-type: set
                         type: object
                     type: object
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    properties:
+                      acceleratorTopology:
+                        description: >-
+                          The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if max topology distance is set.
+                        type: string
+                      maxTopologyDistance:
+                        description: >-
+                          The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if accelerator topology is set.
+
+                          Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                        type: string
+                      type:
+                        description: >-
+                          The type of workload policy.
+
+                          Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                        type: string
+                    type: object
                 required:
                 - region
                 type: object
@@ -1477,6 +1603,9 @@ spec:
                           attached.
 
                           Possible values are: COLLOCATED.
+                        type: string
+                      gpuTopology:
+                        description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
                         type: string
                       vmCount:
                         description: >-
@@ -1658,6 +1787,33 @@ spec:
                             type: array
                             x-kubernetes-list-type: set
                         type: object
+                    type: object
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    properties:
+                      acceleratorTopology:
+                        description: >-
+                          The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if max topology distance is set.
+                        type: string
+                      maxTopologyDistance:
+                        description: >-
+                          The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if accelerator topology is set.
+
+                          Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                        type: string
+                      type:
+                        description: >-
+                          The type of workload policy.
+
+                          Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                        type: string
                     type: object
                 type: object
               managementPolicies:
@@ -1910,6 +2066,9 @@ spec:
 
                           Possible values are: COLLOCATED.
                         type: string
+                      gpuTopology:
+                        description: Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+                        type: string
                       vmCount:
                         description: >-
                           Number of VMs in this placement group. Google does not recommend that you use this field
@@ -2099,6 +2258,33 @@ spec:
                             type: array
                             x-kubernetes-list-type: set
                         type: object
+                    type: object
+                  workloadPolicy:
+                    description: >-
+                      Represents the workload policy.
+
+                      Structure is documented below.
+                    properties:
+                      acceleratorTopology:
+                        description: >-
+                          The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if max topology distance is set.
+                        type: string
+                      maxTopologyDistance:
+                        description: >-
+                          The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT
+
+                          and cannot be set if accelerator topology is set.
+
+                          Possible values are: BLOCK, CLUSTER, SUBBLOCK.
+                        type: string
+                      type:
+                        description: >-
+                          The type of workload policy.
+
+                          Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.
+                        type: string
                     type: object
                 type: object
               conditions:

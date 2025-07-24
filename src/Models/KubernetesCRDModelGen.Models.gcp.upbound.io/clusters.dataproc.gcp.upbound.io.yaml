@@ -268,6 +268,15 @@ spec:
                             instances, applicable to all instances in the cluster. Structure defined below.
                           items:
                             properties:
+                              confidentialInstanceConfig:
+                                description: Confidential Instance Config for clusters using Confidential VMs
+                                items:
+                                  properties:
+                                    enableConfidentialCompute:
+                                      description: Defines whether the instance should have confidential compute enabled.
+                                      type: boolean
+                                  type: object
+                                type: array
                               internalIpOnly:
                                 description: >-
                                   By default, clusters are not restricted to internal IP addresses,
@@ -690,6 +699,18 @@ spec:
                                             type: array
                                           rank:
                                             description: Preference of this instance selection. A lower number means higher preference. Dataproc will first try to create a VM based on the machine-type with priority rank and fallback to next rank based on availability. Machine types and instance selections with the same priority have the same preference.
+                                            type: number
+                                        type: object
+                                      type: array
+                                    provisioningModelMix:
+                                      description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                      items:
+                                        properties:
+                                          standardCapacityBase:
+                                            description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                            type: number
+                                          standardCapacityPercentAboveBase:
+                                            description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
                                             type: number
                                         type: object
                                       type: array
@@ -1431,6 +1452,15 @@ spec:
                             instances, applicable to all instances in the cluster. Structure defined below.
                           items:
                             properties:
+                              confidentialInstanceConfig:
+                                description: Confidential Instance Config for clusters using Confidential VMs
+                                items:
+                                  properties:
+                                    enableConfidentialCompute:
+                                      description: Defines whether the instance should have confidential compute enabled.
+                                      type: boolean
+                                  type: object
+                                type: array
                               internalIpOnly:
                                 description: >-
                                   By default, clusters are not restricted to internal IP addresses,
@@ -1853,6 +1883,18 @@ spec:
                                             type: array
                                           rank:
                                             description: Preference of this instance selection. A lower number means higher preference. Dataproc will first try to create a VM based on the machine-type with priority rank and fallback to next rank based on availability. Machine types and instance selections with the same priority have the same preference.
+                                            type: number
+                                        type: object
+                                      type: array
+                                    provisioningModelMix:
+                                      description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                      items:
+                                        properties:
+                                          standardCapacityBase:
+                                            description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                            type: number
+                                          standardCapacityPercentAboveBase:
+                                            description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
                                             type: number
                                         type: object
                                       type: array
@@ -2819,6 +2861,15 @@ spec:
                             instances, applicable to all instances in the cluster. Structure defined below.
                           items:
                             properties:
+                              confidentialInstanceConfig:
+                                description: Confidential Instance Config for clusters using Confidential VMs
+                                items:
+                                  properties:
+                                    enableConfidentialCompute:
+                                      description: Defines whether the instance should have confidential compute enabled.
+                                      type: boolean
+                                  type: object
+                                type: array
                               internalIpOnly:
                                 description: >-
                                   By default, clusters are not restricted to internal IP addresses,
@@ -3179,6 +3230,18 @@ spec:
                                             description: The name of a Compute Engine machine type.
                                             type: string
                                           vmCount:
+                                            type: number
+                                        type: object
+                                      type: array
+                                    provisioningModelMix:
+                                      description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                      items:
+                                        properties:
+                                          standardCapacityBase:
+                                            description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                            type: number
+                                          standardCapacityPercentAboveBase:
+                                            description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
                                             type: number
                                         type: object
                                       type: array
@@ -4060,6 +4123,13 @@ spec:
 
                           instances, applicable to all instances in the cluster. Structure defined below.
                         properties:
+                          confidentialInstanceConfig:
+                            description: Confidential Instance Config for clusters using Confidential VMs
+                            properties:
+                              enableConfidentialCompute:
+                                description: Defines whether the instance should have confidential compute enabled.
+                                type: boolean
+                            type: object
                           internalIpOnly:
                             description: >-
                               By default, clusters are not restricted to internal IP addresses,
@@ -4466,6 +4536,16 @@ spec:
                                       type: number
                                   type: object
                                 type: array
+                              provisioningModelMix:
+                                description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                properties:
+                                  standardCapacityBase:
+                                    description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                    type: number
+                                  standardCapacityPercentAboveBase:
+                                    description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
+                                    type: number
+                                type: object
                             type: object
                           numInstances:
                             description: >-
@@ -5157,6 +5237,13 @@ spec:
 
                           instances, applicable to all instances in the cluster. Structure defined below.
                         properties:
+                          confidentialInstanceConfig:
+                            description: Confidential Instance Config for clusters using Confidential VMs
+                            properties:
+                              enableConfidentialCompute:
+                                description: Defines whether the instance should have confidential compute enabled.
+                                type: boolean
+                            type: object
                           internalIpOnly:
                             description: >-
                               By default, clusters are not restricted to internal IP addresses,
@@ -5563,6 +5650,16 @@ spec:
                                       type: number
                                   type: object
                                 type: array
+                              provisioningModelMix:
+                                description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                properties:
+                                  standardCapacityBase:
+                                    description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                    type: number
+                                  standardCapacityPercentAboveBase:
+                                    description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
+                                    type: number
+                                type: object
                             type: object
                           numInstances:
                             description: >-
@@ -6479,6 +6576,13 @@ spec:
 
                           instances, applicable to all instances in the cluster. Structure defined below.
                         properties:
+                          confidentialInstanceConfig:
+                            description: Confidential Instance Config for clusters using Confidential VMs
+                            properties:
+                              enableConfidentialCompute:
+                                description: Defines whether the instance should have confidential compute enabled.
+                                type: boolean
+                            type: object
                           internalIpOnly:
                             description: >-
                               By default, clusters are not restricted to internal IP addresses,
@@ -6823,6 +6927,16 @@ spec:
                                       type: number
                                   type: object
                                 type: array
+                              provisioningModelMix:
+                                description: Defines how the Group selects the provisioning model to ensure required reliability.
+                                properties:
+                                  standardCapacityBase:
+                                    description: The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.
+                                    type: number
+                                  standardCapacityPercentAboveBase:
+                                    description: The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.
+                                    type: number
+                                type: object
                             type: object
                           instanceNames:
                             description: >-

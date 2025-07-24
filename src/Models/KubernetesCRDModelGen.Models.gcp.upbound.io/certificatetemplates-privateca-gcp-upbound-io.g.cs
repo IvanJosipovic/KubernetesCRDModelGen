@@ -98,13 +98,21 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesAd
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesCaOptions
 {
-    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.</summary>
     [JsonPropertyName("isCa")]
     public bool? IsCa { get; set; }
 
-    /// <summary>Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.</summary>
     [JsonPropertyName("maxIssuerPathLength")]
     public double? MaxIssuerPathLength { get; set; }
+
+    /// <summary>Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate. If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false. Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.</summary>
+    [JsonPropertyName("nullCa")]
+    public bool? NullCa { get; set; }
+
+    /// <summary>Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0. if both max_issuer_path_length and zero_max_issuer_path_length are unset, the max path length will be omitted from the CA certificate.</summary>
+    [JsonPropertyName("zeroMaxIssuerPathLength")]
+    public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
 /// <summary></summary>
@@ -205,6 +213,47 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesKe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesNameConstraints
+{
+    /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
+    [JsonPropertyName("critical")]
+    public bool? Critical { get; set; }
+
+    /// <summary>Contains excluded DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("excludedDnsNames")]
+    public IList<string>? ExcludedDnsNames { get; set; }
+
+    /// <summary>Contains the excluded email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("excludedEmailAddresses")]
+    public IList<string>? ExcludedEmailAddresses { get; set; }
+
+    /// <summary>Contains the excluded IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("excludedIpRanges")]
+    public IList<string>? ExcludedIpRanges { get; set; }
+
+    /// <summary>Contains the excluded URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("excludedUris")]
+    public IList<string>? ExcludedUris { get; set; }
+
+    /// <summary>Contains permitted DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("permittedDnsNames")]
+    public IList<string>? PermittedDnsNames { get; set; }
+
+    /// <summary>Contains the permitted email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("permittedEmailAddresses")]
+    public IList<string>? PermittedEmailAddresses { get; set; }
+
+    /// <summary>Contains the permitted IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("permittedIpRanges")]
+    public IList<string>? PermittedIpRanges { get; set; }
+
+    /// <summary>Contains the permitted URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("permittedUris")]
+    public IList<string>? PermittedUris { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -231,6 +280,10 @@ public partial class V1beta1CertificateTemplateSpecForProviderPredefinedValues
     /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
     public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesKeyUsage>? KeyUsage { get; set; }
+
+    /// <summary>Describes the X.509 name constraints extension. Structure is documented below.</summary>
+    [JsonPropertyName("nameConstraints")]
+    public IList<V1beta1CertificateTemplateSpecForProviderPredefinedValuesNameConstraints>? NameConstraints { get; set; }
 
     /// <summary>Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]
@@ -360,13 +413,21 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesA
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesCaOptions
 {
-    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.</summary>
     [JsonPropertyName("isCa")]
     public bool? IsCa { get; set; }
 
-    /// <summary>Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.</summary>
     [JsonPropertyName("maxIssuerPathLength")]
     public double? MaxIssuerPathLength { get; set; }
+
+    /// <summary>Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate. If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false. Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.</summary>
+    [JsonPropertyName("nullCa")]
+    public bool? NullCa { get; set; }
+
+    /// <summary>Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0. if both max_issuer_path_length and zero_max_issuer_path_length are unset, the max path length will be omitted from the CA certificate.</summary>
+    [JsonPropertyName("zeroMaxIssuerPathLength")]
+    public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
 /// <summary></summary>
@@ -467,6 +528,47 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesK
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesNameConstraints
+{
+    /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
+    [JsonPropertyName("critical")]
+    public bool? Critical { get; set; }
+
+    /// <summary>Contains excluded DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("excludedDnsNames")]
+    public IList<string>? ExcludedDnsNames { get; set; }
+
+    /// <summary>Contains the excluded email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("excludedEmailAddresses")]
+    public IList<string>? ExcludedEmailAddresses { get; set; }
+
+    /// <summary>Contains the excluded IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("excludedIpRanges")]
+    public IList<string>? ExcludedIpRanges { get; set; }
+
+    /// <summary>Contains the excluded URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("excludedUris")]
+    public IList<string>? ExcludedUris { get; set; }
+
+    /// <summary>Contains permitted DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("permittedDnsNames")]
+    public IList<string>? PermittedDnsNames { get; set; }
+
+    /// <summary>Contains the permitted email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("permittedEmailAddresses")]
+    public IList<string>? PermittedEmailAddresses { get; set; }
+
+    /// <summary>Contains the permitted IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("permittedIpRanges")]
+    public IList<string>? PermittedIpRanges { get; set; }
+
+    /// <summary>Contains the permitted URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("permittedUris")]
+    public IList<string>? PermittedUris { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -493,6 +595,10 @@ public partial class V1beta1CertificateTemplateSpecInitProviderPredefinedValues
     /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
     public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesKeyUsage>? KeyUsage { get; set; }
+
+    /// <summary>Describes the X.509 name constraints extension. Structure is documented below.</summary>
+    [JsonPropertyName("nameConstraints")]
+    public IList<V1beta1CertificateTemplateSpecInitProviderPredefinedValuesNameConstraints>? NameConstraints { get; set; }
 
     /// <summary>Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]
@@ -754,13 +860,21 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesA
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesCaOptions
 {
-    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.</summary>
     [JsonPropertyName("isCa")]
     public bool? IsCa { get; set; }
 
-    /// <summary>Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.</summary>
+    /// <summary>Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.</summary>
     [JsonPropertyName("maxIssuerPathLength")]
     public double? MaxIssuerPathLength { get; set; }
+
+    /// <summary>Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate. If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false. Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.</summary>
+    [JsonPropertyName("nullCa")]
+    public bool? NullCa { get; set; }
+
+    /// <summary>Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0. if both max_issuer_path_length and zero_max_issuer_path_length are unset, the max path length will be omitted from the CA certificate.</summary>
+    [JsonPropertyName("zeroMaxIssuerPathLength")]
+    public bool? ZeroMaxIssuerPathLength { get; set; }
 }
 
 /// <summary></summary>
@@ -861,6 +975,47 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesK
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesNameConstraints
+{
+    /// <summary>Indicates whether or not the name constraints are marked critical.</summary>
+    [JsonPropertyName("critical")]
+    public bool? Critical { get; set; }
+
+    /// <summary>Contains excluded DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("excludedDnsNames")]
+    public IList<string>? ExcludedDnsNames { get; set; }
+
+    /// <summary>Contains the excluded email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("excludedEmailAddresses")]
+    public IList<string>? ExcludedEmailAddresses { get; set; }
+
+    /// <summary>Contains the excluded IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("excludedIpRanges")]
+    public IList<string>? ExcludedIpRanges { get; set; }
+
+    /// <summary>Contains the excluded URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("excludedUris")]
+    public IList<string>? ExcludedUris { get; set; }
+
+    /// <summary>Contains permitted DNS names. Any DNS name that can be constructed by simply adding zero or more labels to the left-hand side of the name satisfies the name constraint. For example, example.com, www.example.com, www.sub.example.com would satisfy example.com while example1.com does not.</summary>
+    [JsonPropertyName("permittedDnsNames")]
+    public IList<string>? PermittedDnsNames { get; set; }
+
+    /// <summary>Contains the permitted email addresses. The value can be a particular email address, a hostname to indicate all email addresses on that host or a domain with a leading period (e.g. .example.com) to indicate all email addresses in that domain.</summary>
+    [JsonPropertyName("permittedEmailAddresses")]
+    public IList<string>? PermittedEmailAddresses { get; set; }
+
+    /// <summary>Contains the permitted IP ranges. For IPv4 addresses, the ranges are expressed using CIDR notation as specified in RFC 4632. For IPv6 addresses, the ranges are expressed in similar encoding as IPv4 addresses.</summary>
+    [JsonPropertyName("permittedIpRanges")]
+    public IList<string>? PermittedIpRanges { get; set; }
+
+    /// <summary>Contains the permitted URIs that apply to the host part of the name. The value can be a hostname or a domain with a leading period (like .example.com)</summary>
+    [JsonPropertyName("permittedUris")]
+    public IList<string>? PermittedUris { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
@@ -887,6 +1042,10 @@ public partial class V1beta1CertificateTemplateStatusAtProviderPredefinedValues
     /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
     public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesKeyUsage>? KeyUsage { get; set; }
+
+    /// <summary>Describes the X.509 name constraints extension. Structure is documented below.</summary>
+    [JsonPropertyName("nameConstraints")]
+    public IList<V1beta1CertificateTemplateStatusAtProviderPredefinedValuesNameConstraints>? NameConstraints { get; set; }
 
     /// <summary>Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]

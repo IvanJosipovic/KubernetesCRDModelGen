@@ -19,6 +19,10 @@ public partial class V1beta1ExternalVPNGatewaySpecForProviderInterface
     /// <summary>IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
+
+    /// <summary>IPv6 address of the interface in the external VPN gateway. This IPv6 address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine. Must specify an IPv6 address (not IPV4-mapped) using any format described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).</summary>
+    [JsonPropertyName("ipv6Address")]
+    public string? Ipv6Address { get; set; }
 }
 
 /// <summary></summary>
@@ -57,6 +61,10 @@ public partial class V1beta1ExternalVPNGatewaySpecInitProviderInterface
     /// <summary>IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
+
+    /// <summary>IPv6 address of the interface in the external VPN gateway. This IPv6 address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine. Must specify an IPv6 address (not IPV4-mapped) using any format described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).</summary>
+    [JsonPropertyName("ipv6Address")]
+    public string? Ipv6Address { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -227,6 +235,10 @@ public partial class V1beta1ExternalVPNGatewayStatusAtProviderInterface
     /// <summary>IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
+
+    /// <summary>IPv6 address of the interface in the external VPN gateway. This IPv6 address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine. Must specify an IPv6 address (not IPV4-mapped) using any format described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).</summary>
+    [JsonPropertyName("ipv6Address")]
+    public string? Ipv6Address { get; set; }
 }
 
 /// <summary></summary>

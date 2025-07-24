@@ -29,6 +29,10 @@ public partial class V1beta1ResourcePolicySpecForProviderGroupPlacementPolicy
     [JsonPropertyName("collocation")]
     public string? Collocation { get; set; }
 
+    /// <summary>Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.</summary>
+    [JsonPropertyName("gpuTopology")]
+    public string? GpuTopology { get; set; }
+
     /// <summary>Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.</summary>
     [JsonPropertyName("vmCount")]
     public double? VmCount { get; set; }
@@ -195,6 +199,23 @@ public partial class V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ResourcePolicySpecForProviderWorkloadPolicy
+{
+    /// <summary>The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if max topology distance is set.</summary>
+    [JsonPropertyName("acceleratorTopology")]
+    public string? AcceleratorTopology { get; set; }
+
+    /// <summary>The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if accelerator topology is set. Possible values are: BLOCK, CLUSTER, SUBBLOCK.</summary>
+    [JsonPropertyName("maxTopologyDistance")]
+    public string? MaxTopologyDistance { get; set; }
+
+    /// <summary>The type of workload policy. Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecForProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -224,6 +245,10 @@ public partial class V1beta1ResourcePolicySpecForProvider
     /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
     [JsonPropertyName("snapshotSchedulePolicy")]
     public IList<V1beta1ResourcePolicySpecForProviderSnapshotSchedulePolicy>? SnapshotSchedulePolicy { get; set; }
+
+    /// <summary>Represents the workload policy. Structure is documented below.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public IList<V1beta1ResourcePolicySpecForProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
 
 /// <summary></summary>
@@ -246,6 +271,10 @@ public partial class V1beta1ResourcePolicySpecInitProviderGroupPlacementPolicy
     /// <summary>Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are: COLLOCATED.</summary>
     [JsonPropertyName("collocation")]
     public string? Collocation { get; set; }
+
+    /// <summary>Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.</summary>
+    [JsonPropertyName("gpuTopology")]
+    public string? GpuTopology { get; set; }
 
     /// <summary>Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.</summary>
     [JsonPropertyName("vmCount")]
@@ -411,6 +440,23 @@ public partial class V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicySnapshotProperties>? SnapshotProperties { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ResourcePolicySpecInitProviderWorkloadPolicy
+{
+    /// <summary>The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if max topology distance is set.</summary>
+    [JsonPropertyName("acceleratorTopology")]
+    public string? AcceleratorTopology { get; set; }
+
+    /// <summary>The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if accelerator topology is set. Possible values are: BLOCK, CLUSTER, SUBBLOCK.</summary>
+    [JsonPropertyName("maxTopologyDistance")]
+    public string? MaxTopologyDistance { get; set; }
+
+    /// <summary>The type of workload policy. Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicySpecInitProvider
@@ -438,6 +484,10 @@ public partial class V1beta1ResourcePolicySpecInitProvider
     /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
     [JsonPropertyName("snapshotSchedulePolicy")]
     public IList<V1beta1ResourcePolicySpecInitProviderSnapshotSchedulePolicy>? SnapshotSchedulePolicy { get; set; }
+
+    /// <summary>Represents the workload policy. Structure is documented below.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public IList<V1beta1ResourcePolicySpecInitProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -592,6 +642,10 @@ public partial class V1beta1ResourcePolicyStatusAtProviderGroupPlacementPolicy
     /// <summary>Collocation specifies whether to place VMs inside the same availability domain on the same low-latency network. Specify COLLOCATED to enable collocation. Can only be specified with vm_count. If compute instances are created with a COLLOCATED policy, then exactly vm_count instances must be created at the same time with the resource policy attached. Possible values are: COLLOCATED.</summary>
     [JsonPropertyName("collocation")]
     public string? Collocation { get; set; }
+
+    /// <summary>Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.</summary>
+    [JsonPropertyName("gpuTopology")]
+    public string? GpuTopology { get; set; }
 
     /// <summary>Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.</summary>
     [JsonPropertyName("vmCount")]
@@ -759,6 +813,23 @@ public partial class V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy
+{
+    /// <summary>The accelerator topology. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if max topology distance is set.</summary>
+    [JsonPropertyName("acceleratorTopology")]
+    public string? AcceleratorTopology { get; set; }
+
+    /// <summary>The maximum topology distance. This field can be set only when the workload policy type is HIGH_THROUGHPUT and cannot be set if accelerator topology is set. Possible values are: BLOCK, CLUSTER, SUBBLOCK.</summary>
+    [JsonPropertyName("maxTopologyDistance")]
+    public string? MaxTopologyDistance { get; set; }
+
+    /// <summary>The type of workload policy. Possible values are: HIGH_AVAILABILITY, HIGH_THROUGHPUT.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourcePolicyStatusAtProvider
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
@@ -796,6 +867,10 @@ public partial class V1beta1ResourcePolicyStatusAtProvider
     /// <summary>Policy for creating snapshots of persistent disks. Structure is documented below.</summary>
     [JsonPropertyName("snapshotSchedulePolicy")]
     public IList<V1beta1ResourcePolicyStatusAtProviderSnapshotSchedulePolicy>? SnapshotSchedulePolicy { get; set; }
+
+    /// <summary>Represents the workload policy. Structure is documented below.</summary>
+    [JsonPropertyName("workloadPolicy")]
+    public IList<V1beta1ResourcePolicyStatusAtProviderWorkloadPolicy>? WorkloadPolicy { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

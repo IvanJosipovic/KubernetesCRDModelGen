@@ -147,6 +147,15 @@ public partial class V1beta1DiskSpecForProviderGuestOsFeatures
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DiskSpecForProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecForProviderSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -183,13 +192,25 @@ public partial class V1beta1DiskSpecForProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecForProvider
 {
-    /// <summary>The accessMode of the disk. For example:</summary>
+    /// <summary>The access mode of the disk. For example:</summary>
     [JsonPropertyName("accessMode")]
     public string? AccessMode { get; set; }
 
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>The architecture of the disk. Values include X86_64, ARM64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskSpecForProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -218,6 +239,10 @@ public partial class V1beta1DiskSpecForProvider
     /// <summary>Any applicable license URI.</summary>
     [JsonPropertyName("licenses")]
     public IList<string>? Licenses { get; set; }
+
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public IList<V1beta1DiskSpecForProviderParams>? Params { get; set; }
 
     /// <summary>Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.</summary>
     [JsonPropertyName("physicalBlockSizeBytes")]
@@ -251,11 +276,19 @@ public partial class V1beta1DiskSpecForProvider
     [JsonPropertyName("sourceImageEncryptionKey")]
     public IList<V1beta1DiskSpecForProviderSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
 
+    /// <summary>The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:</summary>
+    [JsonPropertyName("sourceInstantSnapshot")]
+    public string? SourceInstantSnapshot { get; set; }
+
     /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
     [JsonPropertyName("sourceSnapshotEncryptionKey")]
     public IList<V1beta1DiskSpecForProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.</summary>
+    [JsonPropertyName("sourceStorageObject")]
+    public string? SourceStorageObject { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 
@@ -407,6 +440,15 @@ public partial class V1beta1DiskSpecInitProviderGuestOsFeatures
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DiskSpecInitProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecInitProviderSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -443,13 +485,25 @@ public partial class V1beta1DiskSpecInitProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecInitProvider
 {
-    /// <summary>The accessMode of the disk. For example:</summary>
+    /// <summary>The access mode of the disk. For example:</summary>
     [JsonPropertyName("accessMode")]
     public string? AccessMode { get; set; }
 
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>The architecture of the disk. Values include X86_64, ARM64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskSpecInitProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -478,6 +532,10 @@ public partial class V1beta1DiskSpecInitProvider
     /// <summary>Any applicable license URI.</summary>
     [JsonPropertyName("licenses")]
     public IList<string>? Licenses { get; set; }
+
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public IList<V1beta1DiskSpecInitProviderParams>? Params { get; set; }
 
     /// <summary>Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.</summary>
     [JsonPropertyName("physicalBlockSizeBytes")]
@@ -511,11 +569,19 @@ public partial class V1beta1DiskSpecInitProvider
     [JsonPropertyName("sourceImageEncryptionKey")]
     public IList<V1beta1DiskSpecInitProviderSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
 
+    /// <summary>The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:</summary>
+    [JsonPropertyName("sourceInstantSnapshot")]
+    public string? SourceInstantSnapshot { get; set; }
+
     /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
     [JsonPropertyName("sourceSnapshotEncryptionKey")]
     public IList<V1beta1DiskSpecInitProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.</summary>
+    [JsonPropertyName("sourceStorageObject")]
+    public string? SourceStorageObject { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 
@@ -693,6 +759,15 @@ public partial class V1beta1DiskStatusAtProviderGuestOsFeatures
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DiskStatusAtProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskStatusAtProviderSourceImageEncryptionKey
 {
     /// <summary>The self link of the encryption key used to encrypt the disk. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
@@ -737,13 +812,25 @@ public partial class V1beta1DiskStatusAtProviderSourceSnapshotEncryptionKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskStatusAtProvider
 {
-    /// <summary>The accessMode of the disk. For example:</summary>
+    /// <summary>The access mode of the disk. For example:</summary>
     [JsonPropertyName("accessMode")]
     public string? AccessMode { get; set; }
 
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>The architecture of the disk. Values include X86_64, ARM64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
     public IList<V1beta1DiskStatusAtProviderAsyncPrimaryDisk>? AsyncPrimaryDisk { get; set; }
+
+    /// <summary>If set to true, a snapshot of the disk will be created before it is destroyed. If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation. The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroy")]
+    public bool? CreateSnapshotBeforeDestroy { get; set; }
+
+    /// <summary>This will set a custom name prefix for the snapshot that's created when the disk is deleted.</summary>
+    [JsonPropertyName("createSnapshotBeforeDestroyPrefix")]
+    public string? CreateSnapshotBeforeDestroyPrefix { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -801,6 +888,10 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("licenses")]
     public IList<string>? Licenses { get; set; }
 
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public IList<V1beta1DiskStatusAtProviderParams>? Params { get; set; }
+
     /// <summary>Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the error message will list the supported values for the caller's project.</summary>
     [JsonPropertyName("physicalBlockSizeBytes")]
     public double? PhysicalBlockSizeBytes { get; set; }
@@ -845,6 +936,14 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("sourceImageId")]
     public string? SourceImageId { get; set; }
 
+    /// <summary>The source instant snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For example, the following are valid values:</summary>
+    [JsonPropertyName("sourceInstantSnapshot")]
+    public string? SourceInstantSnapshot { get; set; }
+
+    /// <summary>The unique ID of the instant snapshot used to create this disk. This value identifies the exact instant snapshot that was used to create this persistent disk. For example, if you created the persistent disk from an instant snapshot that was later deleted and recreated under the same name, the source instant snapshot ID would identify the exact version of the instant snapshot that was used.</summary>
+    [JsonPropertyName("sourceInstantSnapshotId")]
+    public string? SourceInstantSnapshotId { get; set; }
+
     /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
     [JsonPropertyName("sourceSnapshotEncryptionKey")]
     public IList<V1beta1DiskStatusAtProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
@@ -853,7 +952,11 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("sourceSnapshotId")]
     public string? SourceSnapshotId { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The full Google Cloud Storage URI where the disk image is stored. This file must be a gzip-compressed tarball whose name ends in .tar.gz or virtual machine disk whose name ends in vmdk. Valid URIs may start with gs:// or https://storage.googleapis.com/. This flag is not optimized for creating multiple disks from a source storage object. To create many disks from a source storage object, use gcloud compute images import instead.</summary>
+    [JsonPropertyName("sourceStorageObject")]
+    public string? SourceStorageObject { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 

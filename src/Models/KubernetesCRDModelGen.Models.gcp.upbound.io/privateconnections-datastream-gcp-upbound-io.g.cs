@@ -8,6 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.gcp.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PrivateConnectionSpecForProviderPscInterfaceConfig
+{
+    /// <summary>Fully qualified name of the network attachment that Datastream will connect to. Format: projects/{project}/regions/{region}/networkAttachments/{name} To get Datastream project for the accepted list: gcloud datastream private-connections create [PC ID] --location=[LOCATION] --network-attachment=[NA URI] --validate-only --display-name=[ANY STRING] Add Datastream project to the attachment accepted list: gcloud compute network-attachments update [NA URI] --region=[NA region] --producer-accept-list=[TP from prev command]</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderVpcPeeringConfigVpcRefPolicy
@@ -109,9 +118,22 @@ public partial class V1beta1PrivateConnectionSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>The PSC Interface configuration is used to create PSC Interface between Datastream and the consumer's PSC. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfig")]
+    public IList<V1beta1PrivateConnectionSpecForProviderPscInterfaceConfig>? PscInterfaceConfig { get; set; }
+
     /// <summary>The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC. Structure is documented below.</summary>
     [JsonPropertyName("vpcPeeringConfig")]
     public IList<V1beta1PrivateConnectionSpecForProviderVpcPeeringConfig>? VpcPeeringConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PrivateConnectionSpecInitProviderPscInterfaceConfig
+{
+    /// <summary>Fully qualified name of the network attachment that Datastream will connect to. Format: projects/{project}/regions/{region}/networkAttachments/{name} To get Datastream project for the accepted list: gcloud datastream private-connections create [PC ID] --location=[LOCATION] --network-attachment=[NA URI] --validate-only --display-name=[ANY STRING] Add Datastream project to the attachment accepted list: gcloud compute network-attachments update [NA URI] --region=[NA region] --producer-accept-list=[TP from prev command]</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -210,6 +232,10 @@ public partial class V1beta1PrivateConnectionSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The PSC Interface configuration is used to create PSC Interface between Datastream and the consumer's PSC. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfig")]
+    public IList<V1beta1PrivateConnectionSpecInitProviderPscInterfaceConfig>? PscInterfaceConfig { get; set; }
 
     /// <summary>The VPC Peering configuration is used to create VPC peering between Datastream and the consumer's VPC. Structure is documented below.</summary>
     [JsonPropertyName("vpcPeeringConfig")]
@@ -363,6 +389,15 @@ public partial class V1beta1PrivateConnectionStatusAtProviderError
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PrivateConnectionStatusAtProviderPscInterfaceConfig
+{
+    /// <summary>Fully qualified name of the network attachment that Datastream will connect to. Format: projects/{project}/regions/{region}/networkAttachments/{name} To get Datastream project for the accepted list: gcloud datastream private-connections create [PC ID] --location=[LOCATION] --network-attachment=[NA URI] --validate-only --display-name=[ANY STRING] Add Datastream project to the attachment accepted list: gcloud compute network-attachments update [NA URI] --region=[NA region] --producer-accept-list=[TP from prev command]</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionStatusAtProviderVpcPeeringConfig
 {
     /// <summary>A free subnet for peering. (CIDR of /29)</summary>
@@ -413,6 +448,10 @@ public partial class V1beta1PrivateConnectionStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The PSC Interface configuration is used to create PSC Interface between Datastream and the consumer's PSC. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfig")]
+    public IList<V1beta1PrivateConnectionStatusAtProviderPscInterfaceConfig>? PscInterfaceConfig { get; set; }
 
     /// <summary>State of the PrivateConnection.</summary>
     [JsonPropertyName("state")]

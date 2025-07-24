@@ -8,20 +8,20 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOpsConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -30,16 +30,16 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPlatformConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -48,7 +48,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -57,11 +57,11 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfigMonetizationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
 {
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
     [JsonPropertyName("advancedApiOpsConfig")]
     public V1beta1AddonsConfigSpecForProviderAddonsConfigAdvancedApiOpsConfig? AdvancedApiOpsConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
     [JsonPropertyName("apiSecurityConfig")]
     public V1beta1AddonsConfigSpecForProviderAddonsConfigApiSecurityConfig? ApiSecurityConfig { get; set; }
 
@@ -69,7 +69,7 @@ public partial class V1beta1AddonsConfigSpecForProviderAddonsConfig
     [JsonPropertyName("connectorsPlatformConfig")]
     public V1beta1AddonsConfigSpecForProviderAddonsConfigConnectorsPlatformConfig? ConnectorsPlatformConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
     [JsonPropertyName("integrationConfig")]
     public V1beta1AddonsConfigSpecForProviderAddonsConfigIntegrationConfig? IntegrationConfig { get; set; }
 
@@ -155,20 +155,20 @@ public partial class V1beta1AddonsConfigSpecForProvider
     public V1beta1AddonsConfigSpecForProviderOrgSelector? OrgSelector { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiOpsConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -177,16 +177,16 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPlatformConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -195,7 +195,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetizationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -204,11 +204,11 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfigMonetization
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
 {
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
     [JsonPropertyName("advancedApiOpsConfig")]
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigAdvancedApiOpsConfig? AdvancedApiOpsConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
     [JsonPropertyName("apiSecurityConfig")]
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigApiSecurityConfig? ApiSecurityConfig { get; set; }
 
@@ -216,7 +216,7 @@ public partial class V1beta1AddonsConfigSpecInitProviderAddonsConfig
     [JsonPropertyName("connectorsPlatformConfig")]
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigConnectorsPlatformConfig? ConnectorsPlatformConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
     [JsonPropertyName("integrationConfig")]
     public V1beta1AddonsConfigSpecInitProviderAddonsConfigIntegrationConfig? IntegrationConfig { get; set; }
 
@@ -434,24 +434,24 @@ public partial class V1beta1AddonsConfigSpec
     public V1beta1AddonsConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiOpsConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>(Output) Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>(Output) Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.</summary>
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
@@ -460,20 +460,20 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPlatformConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>(Output) Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>(Output) Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.</summary>
     [JsonPropertyName("expiresAt")]
     public string? ExpiresAt { get; set; }
 }
 
-/// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+/// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -482,7 +482,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetizationConfig
 {
-    /// <summary>Flag that specifies whether the Advanced API Ops add-on is enabled.</summary>
+    /// <summary>Flag that specifies whether the Monetization add-on is enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -491,11 +491,11 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfigMonetization
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
 {
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Advanced API Ops add-on. Structure is documented below.</summary>
     [JsonPropertyName("advancedApiOpsConfig")]
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigAdvancedApiOpsConfig? AdvancedApiOpsConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the API Security add-on. Structure is documented below.</summary>
     [JsonPropertyName("apiSecurityConfig")]
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigApiSecurityConfig? ApiSecurityConfig { get; set; }
 
@@ -503,7 +503,7 @@ public partial class V1beta1AddonsConfigStatusAtProviderAddonsConfig
     [JsonPropertyName("connectorsPlatformConfig")]
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigConnectorsPlatformConfig? ConnectorsPlatformConfig { get; set; }
 
-    /// <summary>Configuration for the Monetization add-on. Structure is documented below.</summary>
+    /// <summary>Configuration for the Integration add-on. Structure is documented below.</summary>
     [JsonPropertyName("integrationConfig")]
     public V1beta1AddonsConfigStatusAtProviderAddonsConfigIntegrationConfig? IntegrationConfig { get; set; }
 

@@ -45,6 +45,10 @@ public partial class V1beta1InstanceSpecForProviderCluster
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 
+    /// <summary>The node scaling factor for this cluster. One of "NodeScalingFactor1X" or "NodeScalingFactor2X". Defaults to "NodeScalingFactor1X". If "NodeScalingFactor2X" is specified, then num_nodes, min_nodes, and max_nodes would need to be specified in increments of 2. This value cannot be updated after the cluster is created.</summary>
+    [JsonPropertyName("nodeScalingFactor")]
+    public string? NodeScalingFactor { get; set; }
+
     /// <summary>The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates nodes based on your data footprint and optimized for 50% storage utilization.</summary>
     [JsonPropertyName("numNodes")]
     public double? NumNodes { get; set; }
@@ -66,7 +70,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("cluster")]
     public IList<V1beta1InstanceSpecForProviderCluster>? Cluster { get; set; }
 
-    /// <summary></summary>
+    /// <summary>When the field is set to false, deleting the instance is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -128,6 +132,10 @@ public partial class V1beta1InstanceSpecInitProviderCluster
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
 
+    /// <summary>The node scaling factor for this cluster. One of "NodeScalingFactor1X" or "NodeScalingFactor2X". Defaults to "NodeScalingFactor1X". If "NodeScalingFactor2X" is specified, then num_nodes, min_nodes, and max_nodes would need to be specified in increments of 2. This value cannot be updated after the cluster is created.</summary>
+    [JsonPropertyName("nodeScalingFactor")]
+    public string? NodeScalingFactor { get; set; }
+
     /// <summary>The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates nodes based on your data footprint and optimized for 50% storage utilization.</summary>
     [JsonPropertyName("numNodes")]
     public double? NumNodes { get; set; }
@@ -149,7 +157,7 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("cluster")]
     public IList<V1beta1InstanceSpecInitProviderCluster>? Cluster { get; set; }
 
-    /// <summary></summary>
+    /// <summary>When the field is set to false, deleting the instance is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -342,6 +350,10 @@ public partial class V1beta1InstanceStatusAtProviderCluster
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the cloudkms.cryptoKeyEncrypterDecrypter role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+
+    /// <summary>The node scaling factor for this cluster. One of "NodeScalingFactor1X" or "NodeScalingFactor2X". Defaults to "NodeScalingFactor1X". If "NodeScalingFactor2X" is specified, then num_nodes, min_nodes, and max_nodes would need to be specified in increments of 2. This value cannot be updated after the cluster is created.</summary>
+    [JsonPropertyName("nodeScalingFactor")]
+    public string? NodeScalingFactor { get; set; }
 
     /// <summary>The number of nodes in the cluster. If no value is set, Cloud Bigtable automatically allocates nodes based on your data footprint and optimized for 50% storage utilization.</summary>
     [JsonPropertyName("numNodes")]

@@ -36,6 +36,44 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecForProviderAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecForProviderAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -45,6 +83,23 @@ public partial class V1beta1AgentSpecForProviderAdvancedSettings
     /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
     [JsonPropertyName("dtmfSettings")]
     public IList<V1beta1AgentSpecForProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1AgentSpecForProviderAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1AgentSpecForProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecForProviderGenAppBuilderSettings
+{
+    /// <summary>The full name of the Gen App Builder engine related to this agent if there is one. Format: projects/{Project ID}/locations/{Location ID}/collections/{Collection ID}/engines/{Engine ID}</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
 }
 
 /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -132,6 +187,10 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("defaultLanguageCode")]
     public string? DefaultLanguageCode { get; set; }
 
+    /// <summary>Otherwise, the chat engine will persist.</summary>
+    [JsonPropertyName("deleteChatEngineOnDestroy")]
+    public bool? DeleteChatEngineOnDestroy { get; set; }
+
     /// <summary>The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -147,6 +206,10 @@ public partial class V1beta1AgentSpecForProvider
     /// <summary>Determines whether this agent should log conversation queries.</summary>
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
+
+    /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
+    [JsonPropertyName("genAppBuilderSettings")]
+    public IList<V1beta1AgentSpecForProviderGenAppBuilderSettings>? GenAppBuilderSettings { get; set; }
 
     /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
     [JsonPropertyName("gitIntegrationSettings")]
@@ -209,6 +272,44 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecInitProviderAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecInitProviderAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecInitProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -218,6 +319,23 @@ public partial class V1beta1AgentSpecInitProviderAdvancedSettings
     /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
     [JsonPropertyName("dtmfSettings")]
     public IList<V1beta1AgentSpecInitProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1AgentSpecInitProviderAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1AgentSpecInitProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecInitProviderGenAppBuilderSettings
+{
+    /// <summary>The full name of the Gen App Builder engine related to this agent if there is one. Format: projects/{Project ID}/locations/{Location ID}/collections/{Collection ID}/engines/{Engine ID}</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
 }
 
 /// <summary>The access token used to authenticate the access to the GitHub repository. Note: This property is sensitive and will not be displayed in the plan.</summary>
@@ -305,6 +423,10 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("defaultLanguageCode")]
     public string? DefaultLanguageCode { get; set; }
 
+    /// <summary>Otherwise, the chat engine will persist.</summary>
+    [JsonPropertyName("deleteChatEngineOnDestroy")]
+    public bool? DeleteChatEngineOnDestroy { get; set; }
+
     /// <summary>The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -320,6 +442,10 @@ public partial class V1beta1AgentSpecInitProvider
     /// <summary>Determines whether this agent should log conversation queries.</summary>
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
+
+    /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
+    [JsonPropertyName("genAppBuilderSettings")]
+    public IList<V1beta1AgentSpecInitProviderGenAppBuilderSettings>? GenAppBuilderSettings { get; set; }
 
     /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
     [JsonPropertyName("gitIntegrationSettings")]
@@ -514,6 +640,44 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentStatusAtProviderAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentStatusAtProviderAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderAdvancedSettings
 {
     /// <summary>If present, incoming audio is exported by Dialogflow to the configured Google Cloud Storage destination. Exposed at the following levels:</summary>
@@ -523,6 +687,23 @@ public partial class V1beta1AgentStatusAtProviderAdvancedSettings
     /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
     [JsonPropertyName("dtmfSettings")]
     public IList<V1beta1AgentStatusAtProviderAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1AgentStatusAtProviderAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1AgentStatusAtProviderAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentStatusAtProviderGenAppBuilderSettings
+{
+    /// <summary>The full name of the Gen App Builder engine related to this agent if there is one. Format: projects/{Project ID}/locations/{Location ID}/collections/{Collection ID}/engines/{Engine ID}</summary>
+    [JsonPropertyName("engine")]
+    public string? Engine { get; set; }
 }
 
 /// <summary></summary>
@@ -589,6 +770,10 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("defaultLanguageCode")]
     public string? DefaultLanguageCode { get; set; }
 
+    /// <summary>Otherwise, the chat engine will persist.</summary>
+    [JsonPropertyName("deleteChatEngineOnDestroy")]
+    public bool? DeleteChatEngineOnDestroy { get; set; }
+
     /// <summary>The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -604,6 +789,10 @@ public partial class V1beta1AgentStatusAtProvider
     /// <summary>Determines whether this agent should log conversation queries.</summary>
     [JsonPropertyName("enableStackdriverLogging")]
     public bool? EnableStackdriverLogging { get; set; }
+
+    /// <summary>Gen App Builder-related agent-level settings. Structure is documented below.</summary>
+    [JsonPropertyName("genAppBuilderSettings")]
+    public IList<V1beta1AgentStatusAtProviderGenAppBuilderSettings>? GenAppBuilderSettings { get; set; }
 
     /// <summary>Git integration settings for this agent. Structure is documented below.</summary>
     [JsonPropertyName("gitIntegrationSettings")]

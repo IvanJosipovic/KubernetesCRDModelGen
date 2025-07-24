@@ -120,6 +120,14 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        notificationPrompts:
+                          description: >-
+                            Control when notifications will be sent out.
+
+                            Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                          items:
+                            type: string
+                          type: array
                         notificationRateLimit:
                           description: >-
                             Required for alert policies with a LogMatch condition.
@@ -645,6 +653,14 @@ spec:
 
                                   valid Prometheus label name.
                                 type: string
+                              disableMetricValidation:
+                                description: >-
+                                  Whether to disable metric existence validation for this condition.
+
+                                  Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                  name of the non-existent metric in the alerting policy condition.
+                                type: boolean
                               duration:
                                 description: >-
                                   The amount of time that a time series must
@@ -730,6 +746,174 @@ spec:
 
                                   in the future. This field is optional.
                                 type: string
+                            type: object
+                          type: array
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              booleanTest:
+                                description: >-
+                                  A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    column:
+                                      description: >-
+                                        The name of the column containing the boolean value. If the value in a row is
+
+                                        NULL, that row is ignored.
+                                      type: string
+                                  type: object
+                                type: array
+                              daily:
+                                description: >-
+                                  Used to schedule the query to run every so many days.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    executionTime:
+                                      description: >-
+                                        The time of day (in UTC) at which the query should run. If left
+
+                                        unspecified, the server picks an arbitrary time of day and runs
+
+                                        the query at the same time each day.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          hours:
+                                            description: >-
+                                              Hours of a day in 24 hour format. Must be greater than or equal
+
+                                              to 0 and typically must be less than or equal to 23. An API may
+
+                                              choose to allow the value "24:00:00" for scenarios like business
+
+                                              closing time.
+                                            type: number
+                                          minutes:
+                                            description: >-
+                                              Minutes of an hour. Must be greater than or equal to 0 and
+
+                                              less than or equal to 59.
+                                            type: number
+                                          nanos:
+                                            description: >-
+                                              Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                              equal to 0 and less than or equal to 999,999,999.
+                                            type: number
+                                          seconds:
+                                            description: >-
+                                              Seconds of a minute. Must be greater than or equal to 0 and
+
+                                              typically must be less than or equal to 59. An API may allow the
+
+                                              value 60 if it allows leap-seconds.
+                                            type: number
+                                        type: object
+                                      type: array
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              hourly:
+                                description: >-
+                                  Used to schedule the query to run every so many hours.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    minuteOffset:
+                                      description: >-
+                                        The number of minutes after the hour (in UTC) to run the query.
+
+                                        Must be greater than or equal to 0 minutes and less than or equal to
+
+                                        59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                      type: number
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              minutes:
+                                description: >-
+                                  Minutes of an hour. Must be greater than or equal to 0 and
+
+                                  less than or equal to 59.
+                                items:
+                                  properties:
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              query:
+                                description: >-
+                                  The Log Analytics SQL query to run, as a string.  The query must
+
+                                  conform to the required shape. Specifically, the query must not try to
+
+                                  filter the input by time.  A filter will automatically be applied
+
+                                  to filter the input so that the query receives all rows received
+
+                                  since the last time the query was run.
+                                type: string
+                              rowCountTest:
+                                description: >-
+                                  A test that checks if the number of rows in the result set violates some threshold.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    comparison:
+                                      description: >-
+                                        The comparison to apply between the time
+
+                                        series (indicated by filter and aggregation)
+
+                                        and the threshold (indicated by
+
+                                        threshold_value). The comparison is applied
+
+                                        on each time series, with the time series on
+
+                                        the left-hand side and the threshold on the
+
+                                        right-hand side. Only COMPARISON_LT and
+
+                                        COMPARISON_GT are supported currently.
+
+                                        Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                      type: string
+                                    threshold:
+                                      description: The value against which to compare the row count.
+                                      type: number
+                                  type: object
+                                type: array
                             type: object
                           type: array
                         conditionThreshold:
@@ -1526,6 +1710,14 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        notificationPrompts:
+                          description: >-
+                            Control when notifications will be sent out.
+
+                            Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                          items:
+                            type: string
+                          type: array
                         notificationRateLimit:
                           description: >-
                             Required for alert policies with a LogMatch condition.
@@ -2051,6 +2243,14 @@ spec:
 
                                   valid Prometheus label name.
                                 type: string
+                              disableMetricValidation:
+                                description: >-
+                                  Whether to disable metric existence validation for this condition.
+
+                                  Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                  name of the non-existent metric in the alerting policy condition.
+                                type: boolean
                               duration:
                                 description: >-
                                   The amount of time that a time series must
@@ -2136,6 +2336,174 @@ spec:
 
                                   in the future. This field is optional.
                                 type: string
+                            type: object
+                          type: array
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              booleanTest:
+                                description: >-
+                                  A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    column:
+                                      description: >-
+                                        The name of the column containing the boolean value. If the value in a row is
+
+                                        NULL, that row is ignored.
+                                      type: string
+                                  type: object
+                                type: array
+                              daily:
+                                description: >-
+                                  Used to schedule the query to run every so many days.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    executionTime:
+                                      description: >-
+                                        The time of day (in UTC) at which the query should run. If left
+
+                                        unspecified, the server picks an arbitrary time of day and runs
+
+                                        the query at the same time each day.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          hours:
+                                            description: >-
+                                              Hours of a day in 24 hour format. Must be greater than or equal
+
+                                              to 0 and typically must be less than or equal to 23. An API may
+
+                                              choose to allow the value "24:00:00" for scenarios like business
+
+                                              closing time.
+                                            type: number
+                                          minutes:
+                                            description: >-
+                                              Minutes of an hour. Must be greater than or equal to 0 and
+
+                                              less than or equal to 59.
+                                            type: number
+                                          nanos:
+                                            description: >-
+                                              Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                              equal to 0 and less than or equal to 999,999,999.
+                                            type: number
+                                          seconds:
+                                            description: >-
+                                              Seconds of a minute. Must be greater than or equal to 0 and
+
+                                              typically must be less than or equal to 59. An API may allow the
+
+                                              value 60 if it allows leap-seconds.
+                                            type: number
+                                        type: object
+                                      type: array
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              hourly:
+                                description: >-
+                                  Used to schedule the query to run every so many hours.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    minuteOffset:
+                                      description: >-
+                                        The number of minutes after the hour (in UTC) to run the query.
+
+                                        Must be greater than or equal to 0 minutes and less than or equal to
+
+                                        59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                      type: number
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              minutes:
+                                description: >-
+                                  Minutes of an hour. Must be greater than or equal to 0 and
+
+                                  less than or equal to 59.
+                                items:
+                                  properties:
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              query:
+                                description: >-
+                                  The Log Analytics SQL query to run, as a string.  The query must
+
+                                  conform to the required shape. Specifically, the query must not try to
+
+                                  filter the input by time.  A filter will automatically be applied
+
+                                  to filter the input so that the query receives all rows received
+
+                                  since the last time the query was run.
+                                type: string
+                              rowCountTest:
+                                description: >-
+                                  A test that checks if the number of rows in the result set violates some threshold.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    comparison:
+                                      description: >-
+                                        The comparison to apply between the time
+
+                                        series (indicated by filter and aggregation)
+
+                                        and the threshold (indicated by
+
+                                        threshold_value). The comparison is applied
+
+                                        on each time series, with the time series on
+
+                                        the left-hand side and the threshold on the
+
+                                        right-hand side. Only COMPARISON_LT and
+
+                                        COMPARISON_GT are supported currently.
+
+                                        Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                      type: string
+                                    threshold:
+                                      description: The value against which to compare the row count.
+                                      type: number
+                                  type: object
+                                type: array
                             type: object
                           type: array
                         conditionThreshold:
@@ -3130,6 +3498,14 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        notificationPrompts:
+                          description: >-
+                            Control when notifications will be sent out.
+
+                            Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                          items:
+                            type: string
+                          type: array
                         notificationRateLimit:
                           description: >-
                             Required for alert policies with a LogMatch condition.
@@ -3655,6 +4031,14 @@ spec:
 
                                   valid Prometheus label name.
                                 type: string
+                              disableMetricValidation:
+                                description: >-
+                                  Whether to disable metric existence validation for this condition.
+
+                                  Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                  name of the non-existent metric in the alerting policy condition.
+                                type: boolean
                               duration:
                                 description: >-
                                   The amount of time that a time series must
@@ -3740,6 +4124,174 @@ spec:
 
                                   in the future. This field is optional.
                                 type: string
+                            type: object
+                          type: array
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              booleanTest:
+                                description: >-
+                                  A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    column:
+                                      description: >-
+                                        The name of the column containing the boolean value. If the value in a row is
+
+                                        NULL, that row is ignored.
+                                      type: string
+                                  type: object
+                                type: array
+                              daily:
+                                description: >-
+                                  Used to schedule the query to run every so many days.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    executionTime:
+                                      description: >-
+                                        The time of day (in UTC) at which the query should run. If left
+
+                                        unspecified, the server picks an arbitrary time of day and runs
+
+                                        the query at the same time each day.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          hours:
+                                            description: >-
+                                              Hours of a day in 24 hour format. Must be greater than or equal
+
+                                              to 0 and typically must be less than or equal to 23. An API may
+
+                                              choose to allow the value "24:00:00" for scenarios like business
+
+                                              closing time.
+                                            type: number
+                                          minutes:
+                                            description: >-
+                                              Minutes of an hour. Must be greater than or equal to 0 and
+
+                                              less than or equal to 59.
+                                            type: number
+                                          nanos:
+                                            description: >-
+                                              Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                              equal to 0 and less than or equal to 999,999,999.
+                                            type: number
+                                          seconds:
+                                            description: >-
+                                              Seconds of a minute. Must be greater than or equal to 0 and
+
+                                              typically must be less than or equal to 59. An API may allow the
+
+                                              value 60 if it allows leap-seconds.
+                                            type: number
+                                        type: object
+                                      type: array
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              hourly:
+                                description: >-
+                                  Used to schedule the query to run every so many hours.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    minuteOffset:
+                                      description: >-
+                                        The number of minutes after the hour (in UTC) to run the query.
+
+                                        Must be greater than or equal to 0 minutes and less than or equal to
+
+                                        59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                      type: number
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              minutes:
+                                description: >-
+                                  Minutes of an hour. Must be greater than or equal to 0 and
+
+                                  less than or equal to 59.
+                                items:
+                                  properties:
+                                    periodicity:
+                                      description: >-
+                                        Number of minutes between runs. The interval must be greater than or
+
+                                        equal to 5 minutes and less than or equal to 1440 minutes.
+                                      type: number
+                                  type: object
+                                type: array
+                              query:
+                                description: >-
+                                  The Log Analytics SQL query to run, as a string.  The query must
+
+                                  conform to the required shape. Specifically, the query must not try to
+
+                                  filter the input by time.  A filter will automatically be applied
+
+                                  to filter the input so that the query receives all rows received
+
+                                  since the last time the query was run.
+                                type: string
+                              rowCountTest:
+                                description: >-
+                                  A test that checks if the number of rows in the result set violates some threshold.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    comparison:
+                                      description: >-
+                                        The comparison to apply between the time
+
+                                        series (indicated by filter and aggregation)
+
+                                        and the threshold (indicated by
+
+                                        threshold_value). The comparison is applied
+
+                                        on each time series, with the time series on
+
+                                        the left-hand side and the threshold on the
+
+                                        right-hand side. Only COMPARISON_LT and
+
+                                        COMPARISON_GT are supported currently.
+
+                                        Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                      type: string
+                                    threshold:
+                                      description: The value against which to compare the row count.
+                                      type: number
+                                  type: object
+                                type: array
                             type: object
                           type: array
                         conditionThreshold:
@@ -4696,6 +5248,14 @@ spec:
                               type: string
                           type: object
                         type: array
+                      notificationPrompts:
+                        description: >-
+                          Control when notifications will be sent out.
+
+                          Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                        items:
+                          type: string
+                        type: array
                       notificationRateLimit:
                         description: >-
                           Required for alert policies with a LogMatch condition.
@@ -5134,11 +5694,15 @@ spec:
                               type: string
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             trigger:
                               description: >-
@@ -5210,6 +5774,14 @@ spec:
 
                                 valid Prometheus label name.
                               type: string
+                            disableMetricValidation:
+                              description: >-
+                                Whether to disable metric existence validation for this condition.
+
+                                Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                name of the non-existent metric in the alerting policy condition.
+                              type: boolean
                             duration:
                               description: >-
                                 The amount of time that a time series must
@@ -5264,20 +5836,26 @@ spec:
 
                                 Label values can be templatized by using variables. The only available
 
-                                variable names are the names of the labels in the PromQL result, including
+                                variable names are the names of the labels in the PromQL result,
 
-                                "name" and "value". "labels" may be empty. This field is intended to be
+                                although label names beginning with __ (two "_") are reserved for
 
-                                used for organizing and identifying the AlertPolicy
+                                internal use. "labels" may be empty. This field is intended to be used
+
+                                for organizing and identifying the AlertPolicy.
                               type: object
                               x-kubernetes-map-type: granular
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             ruleGroup:
                               description: >-
@@ -5295,6 +5873,160 @@ spec:
 
                                 in the future. This field is optional.
                               type: string
+                          type: object
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          properties:
+                            booleanTest:
+                              description: >-
+                                A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                Structure is documented below.
+                              properties:
+                                column:
+                                  description: >-
+                                    The name of the column containing the boolean value. If the value in a row is
+
+                                    NULL, that row is ignored.
+                                  type: string
+                              type: object
+                            daily:
+                              description: >-
+                                Used to schedule the query to run every so many days.
+
+                                Structure is documented below.
+                              properties:
+                                executionTime:
+                                  description: >-
+                                    The time of day (in UTC) at which the query should run. If left
+
+                                    unspecified, the server picks an arbitrary time of day and runs
+
+                                    the query at the same time each day.
+
+                                    Structure is documented below.
+                                  properties:
+                                    hours:
+                                      description: >-
+                                        Hours of a day in 24 hour format. Must be greater than or equal
+
+                                        to 0 and typically must be less than or equal to 23. An API may
+
+                                        choose to allow the value "24:00:00" for scenarios like business
+
+                                        closing time.
+                                      type: number
+                                    minutes:
+                                      description: >-
+                                        Minutes of an hour. Must be greater than or equal to 0 and
+
+                                        less than or equal to 59.
+                                      type: number
+                                    nanos:
+                                      description: >-
+                                        Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                        equal to 0 and less than or equal to 999,999,999.
+                                      type: number
+                                    seconds:
+                                      description: >-
+                                        Seconds of a minute. Must be greater than or equal to 0 and
+
+                                        typically must be less than or equal to 59. An API may allow the
+
+                                        value 60 if it allows leap-seconds.
+                                      type: number
+                                  type: object
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            hourly:
+                              description: >-
+                                Used to schedule the query to run every so many hours.
+
+                                Structure is documented below.
+                              properties:
+                                minuteOffset:
+                                  description: >-
+                                    The number of minutes after the hour (in UTC) to run the query.
+
+                                    Must be greater than or equal to 0 minutes and less than or equal to
+
+                                    59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                  type: number
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            minutes:
+                              description: >-
+                                Minutes of an hour. Must be greater than or equal to 0 and
+
+                                less than or equal to 59.
+                              properties:
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            query:
+                              description: >-
+                                The Log Analytics SQL query to run, as a string.  The query must
+
+                                conform to the required shape. Specifically, the query must not try to
+
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
+                              type: string
+                            rowCountTest:
+                              description: >-
+                                A test that checks if the number of rows in the result set violates some threshold.
+
+                                Structure is documented below.
+                              properties:
+                                comparison:
+                                  description: >-
+                                    The comparison to apply between the time
+
+                                    series (indicated by filter and aggregation)
+
+                                    and the threshold (indicated by
+
+                                    threshold_value). The comparison is applied
+
+                                    on each time series, with the time series on
+
+                                    the left-hand side and the threshold on the
+
+                                    right-hand side. Only COMPARISON_LT and
+
+                                    COMPARISON_GT are supported currently.
+
+                                    Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                  type: string
+                                threshold:
+                                  description: The value against which to compare the row count.
+                                  type: number
+                              type: object
                           type: object
                         conditionThreshold:
                           description: >-
@@ -6081,6 +6813,14 @@ spec:
                               type: string
                           type: object
                         type: array
+                      notificationPrompts:
+                        description: >-
+                          Control when notifications will be sent out.
+
+                          Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                        items:
+                          type: string
+                        type: array
                       notificationRateLimit:
                         description: >-
                           Required for alert policies with a LogMatch condition.
@@ -6519,11 +7259,15 @@ spec:
                               type: string
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             trigger:
                               description: >-
@@ -6595,6 +7339,14 @@ spec:
 
                                 valid Prometheus label name.
                               type: string
+                            disableMetricValidation:
+                              description: >-
+                                Whether to disable metric existence validation for this condition.
+
+                                Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                name of the non-existent metric in the alerting policy condition.
+                              type: boolean
                             duration:
                               description: >-
                                 The amount of time that a time series must
@@ -6649,20 +7401,26 @@ spec:
 
                                 Label values can be templatized by using variables. The only available
 
-                                variable names are the names of the labels in the PromQL result, including
+                                variable names are the names of the labels in the PromQL result,
 
-                                "name" and "value". "labels" may be empty. This field is intended to be
+                                although label names beginning with __ (two "_") are reserved for
 
-                                used for organizing and identifying the AlertPolicy
+                                internal use. "labels" may be empty. This field is intended to be used
+
+                                for organizing and identifying the AlertPolicy.
                               type: object
                               x-kubernetes-map-type: granular
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             ruleGroup:
                               description: >-
@@ -6680,6 +7438,160 @@ spec:
 
                                 in the future. This field is optional.
                               type: string
+                          type: object
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          properties:
+                            booleanTest:
+                              description: >-
+                                A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                Structure is documented below.
+                              properties:
+                                column:
+                                  description: >-
+                                    The name of the column containing the boolean value. If the value in a row is
+
+                                    NULL, that row is ignored.
+                                  type: string
+                              type: object
+                            daily:
+                              description: >-
+                                Used to schedule the query to run every so many days.
+
+                                Structure is documented below.
+                              properties:
+                                executionTime:
+                                  description: >-
+                                    The time of day (in UTC) at which the query should run. If left
+
+                                    unspecified, the server picks an arbitrary time of day and runs
+
+                                    the query at the same time each day.
+
+                                    Structure is documented below.
+                                  properties:
+                                    hours:
+                                      description: >-
+                                        Hours of a day in 24 hour format. Must be greater than or equal
+
+                                        to 0 and typically must be less than or equal to 23. An API may
+
+                                        choose to allow the value "24:00:00" for scenarios like business
+
+                                        closing time.
+                                      type: number
+                                    minutes:
+                                      description: >-
+                                        Minutes of an hour. Must be greater than or equal to 0 and
+
+                                        less than or equal to 59.
+                                      type: number
+                                    nanos:
+                                      description: >-
+                                        Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                        equal to 0 and less than or equal to 999,999,999.
+                                      type: number
+                                    seconds:
+                                      description: >-
+                                        Seconds of a minute. Must be greater than or equal to 0 and
+
+                                        typically must be less than or equal to 59. An API may allow the
+
+                                        value 60 if it allows leap-seconds.
+                                      type: number
+                                  type: object
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            hourly:
+                              description: >-
+                                Used to schedule the query to run every so many hours.
+
+                                Structure is documented below.
+                              properties:
+                                minuteOffset:
+                                  description: >-
+                                    The number of minutes after the hour (in UTC) to run the query.
+
+                                    Must be greater than or equal to 0 minutes and less than or equal to
+
+                                    59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                  type: number
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            minutes:
+                              description: >-
+                                Minutes of an hour. Must be greater than or equal to 0 and
+
+                                less than or equal to 59.
+                              properties:
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            query:
+                              description: >-
+                                The Log Analytics SQL query to run, as a string.  The query must
+
+                                conform to the required shape. Specifically, the query must not try to
+
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
+                              type: string
+                            rowCountTest:
+                              description: >-
+                                A test that checks if the number of rows in the result set violates some threshold.
+
+                                Structure is documented below.
+                              properties:
+                                comparison:
+                                  description: >-
+                                    The comparison to apply between the time
+
+                                    series (indicated by filter and aggregation)
+
+                                    and the threshold (indicated by
+
+                                    threshold_value). The comparison is applied
+
+                                    on each time series, with the time series on
+
+                                    the left-hand side and the threshold on the
+
+                                    right-hand side. Only COMPARISON_LT and
+
+                                    COMPARISON_GT are supported currently.
+
+                                    Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                  type: string
+                                threshold:
+                                  description: The value against which to compare the row count.
+                                  type: number
+                              type: object
                           type: object
                         conditionThreshold:
                           description: >-
@@ -7664,6 +8576,14 @@ spec:
                               type: string
                           type: object
                         type: array
+                      notificationPrompts:
+                        description: >-
+                          Control when notifications will be sent out.
+
+                          Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.
+                        items:
+                          type: string
+                        type: array
                       notificationRateLimit:
                         description: >-
                           Required for alert policies with a LogMatch condition.
@@ -8102,11 +9022,15 @@ spec:
                               type: string
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             trigger:
                               description: >-
@@ -8178,6 +9102,14 @@ spec:
 
                                 valid Prometheus label name.
                               type: string
+                            disableMetricValidation:
+                              description: >-
+                                Whether to disable metric existence validation for this condition.
+
+                                Users with the monitoring.alertPolicyViewer role are able to see the
+
+                                name of the non-existent metric in the alerting policy condition.
+                              type: boolean
                             duration:
                               description: >-
                                 The amount of time that a time series must
@@ -8232,20 +9164,26 @@ spec:
 
                                 Label values can be templatized by using variables. The only available
 
-                                variable names are the names of the labels in the PromQL result, including
+                                variable names are the names of the labels in the PromQL result,
 
-                                "name" and "value". "labels" may be empty. This field is intended to be
+                                although label names beginning with __ (two "_") are reserved for
 
-                                used for organizing and identifying the AlertPolicy
+                                internal use. "labels" may be empty. This field is intended to be used
+
+                                for organizing and identifying the AlertPolicy.
                               type: object
                               x-kubernetes-map-type: granular
                             query:
                               description: >-
-                                The PromQL expression to evaluate. Every evaluation cycle this
+                                The Log Analytics SQL query to run, as a string.  The query must
 
-                                expression is evaluated at the current time, and all resultant time
+                                conform to the required shape. Specifically, the query must not try to
 
-                                series become pending/firing alerts. This field must not be empty.
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
                               type: string
                             ruleGroup:
                               description: >-
@@ -8263,6 +9201,160 @@ spec:
 
                                 in the future. This field is optional.
                               type: string
+                          type: object
+                        conditionSql:
+                          description: >-
+                            A condition that allows alerting policies to be defined using GoogleSQL.
+
+                            SQL conditions examine a sliding window of logs using GoogleSQL.
+
+                            Alert policies with SQL conditions may incur additional billing.
+
+                            Structure is documented below.
+                          properties:
+                            booleanTest:
+                              description: >-
+                                A test that uses an alerting result in a boolean column produced by the SQL query.
+
+                                Structure is documented below.
+                              properties:
+                                column:
+                                  description: >-
+                                    The name of the column containing the boolean value. If the value in a row is
+
+                                    NULL, that row is ignored.
+                                  type: string
+                              type: object
+                            daily:
+                              description: >-
+                                Used to schedule the query to run every so many days.
+
+                                Structure is documented below.
+                              properties:
+                                executionTime:
+                                  description: >-
+                                    The time of day (in UTC) at which the query should run. If left
+
+                                    unspecified, the server picks an arbitrary time of day and runs
+
+                                    the query at the same time each day.
+
+                                    Structure is documented below.
+                                  properties:
+                                    hours:
+                                      description: >-
+                                        Hours of a day in 24 hour format. Must be greater than or equal
+
+                                        to 0 and typically must be less than or equal to 23. An API may
+
+                                        choose to allow the value "24:00:00" for scenarios like business
+
+                                        closing time.
+                                      type: number
+                                    minutes:
+                                      description: >-
+                                        Minutes of an hour. Must be greater than or equal to 0 and
+
+                                        less than or equal to 59.
+                                      type: number
+                                    nanos:
+                                      description: >-
+                                        Fractions of seconds, in nanoseconds. Must be greater than or
+
+                                        equal to 0 and less than or equal to 999,999,999.
+                                      type: number
+                                    seconds:
+                                      description: >-
+                                        Seconds of a minute. Must be greater than or equal to 0 and
+
+                                        typically must be less than or equal to 59. An API may allow the
+
+                                        value 60 if it allows leap-seconds.
+                                      type: number
+                                  type: object
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            hourly:
+                              description: >-
+                                Used to schedule the query to run every so many hours.
+
+                                Structure is documented below.
+                              properties:
+                                minuteOffset:
+                                  description: >-
+                                    The number of minutes after the hour (in UTC) to run the query.
+
+                                    Must be greater than or equal to 0 minutes and less than or equal to
+
+                                    59 minutes.  If left unspecified, then an arbitrary offset is used.
+                                  type: number
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            minutes:
+                              description: >-
+                                Minutes of an hour. Must be greater than or equal to 0 and
+
+                                less than or equal to 59.
+                              properties:
+                                periodicity:
+                                  description: >-
+                                    Number of minutes between runs. The interval must be greater than or
+
+                                    equal to 5 minutes and less than or equal to 1440 minutes.
+                                  type: number
+                              type: object
+                            query:
+                              description: >-
+                                The Log Analytics SQL query to run, as a string.  The query must
+
+                                conform to the required shape. Specifically, the query must not try to
+
+                                filter the input by time.  A filter will automatically be applied
+
+                                to filter the input so that the query receives all rows received
+
+                                since the last time the query was run.
+                              type: string
+                            rowCountTest:
+                              description: >-
+                                A test that checks if the number of rows in the result set violates some threshold.
+
+                                Structure is documented below.
+                              properties:
+                                comparison:
+                                  description: >-
+                                    The comparison to apply between the time
+
+                                    series (indicated by filter and aggregation)
+
+                                    and the threshold (indicated by
+
+                                    threshold_value). The comparison is applied
+
+                                    on each time series, with the time series on
+
+                                    the left-hand side and the threshold on the
+
+                                    right-hand side. Only COMPARISON_LT and
+
+                                    COMPARISON_GT are supported currently.
+
+                                    Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.
+                                  type: string
+                                threshold:
+                                  description: The value against which to compare the row count.
+                                  type: number
+                              type: object
                           type: object
                         conditionThreshold:
                           description: >-

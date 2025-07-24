@@ -62,6 +62,62 @@ public partial class V1beta1BucketSpecForProviderEncryption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecForProviderHierarchicalNamespace
+{
+    /// <summary>Enables hierarchical namespace for the bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecForProviderIpFilterPublicNetworkSource
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecForProviderIpFilterVpcNetworkSources
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+
+    /// <summary>Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecForProviderIpFilter
+{
+    /// <summary>While set true, allows all service agents to access the bucket regardless of the IP filter configuration.</summary>
+    [JsonPropertyName("allowAllServiceAgentAccess")]
+    public bool? AllowAllServiceAgentAccess { get; set; }
+
+    /// <summary>While set true, allows cross-org VPCs in the bucket's IP filter configuration.</summary>
+    [JsonPropertyName("allowCrossOrgVpcs")]
+    public bool? AllowCrossOrgVpcs { get; set; }
+
+    /// <summary>The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+
+    /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
+    [JsonPropertyName("publicNetworkSource")]
+    public IList<V1beta1BucketSpecForProviderIpFilterPublicNetworkSource>? PublicNetworkSource { get; set; }
+
+    /// <summary>The list of VPC networks that can access the bucket. Structure is documented below.</summary>
+    [JsonPropertyName("vpcNetworkSources")]
+    public IList<V1beta1BucketSpecForProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProviderLifecycleRuleAction
 {
     /// <summary>The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.</summary>
@@ -108,10 +164,6 @@ public partial class V1beta1BucketSpecForProviderLifecycleRuleCondition
     /// <summary>One or more matching name suffixes to satisfy this condition.</summary>
     [JsonPropertyName("matchesSuffix")]
     public IList<string>? MatchesSuffix { get; set; }
-
-    /// <summary>While set true, age value will be omitted. Note Required to set true when age is unset in the config file.</summary>
-    [JsonPropertyName("noAge")]
-    public bool? NoAge { get; set; }
 
     /// <summary>Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.</summary>
     [JsonPropertyName("noncurrentTimeBefore")]
@@ -244,6 +296,14 @@ public partial class V1beta1BucketSpecForProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
+    /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
+    [JsonPropertyName("hierarchicalNamespace")]
+    public IList<V1beta1BucketSpecForProviderHierarchicalNamespace>? HierarchicalNamespace { get; set; }
+
+    /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
+    [JsonPropertyName("ipFilter")]
+    public IList<V1beta1BucketSpecForProviderIpFilter>? IpFilter { get; set; }
+
     /// <summary>A map of key/value label pairs to assign to the bucket.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
@@ -355,6 +415,62 @@ public partial class V1beta1BucketSpecInitProviderEncryption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecInitProviderHierarchicalNamespace
+{
+    /// <summary>Enables hierarchical namespace for the bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecInitProviderIpFilterPublicNetworkSource
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecInitProviderIpFilterVpcNetworkSources
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+
+    /// <summary>Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketSpecInitProviderIpFilter
+{
+    /// <summary>While set true, allows all service agents to access the bucket regardless of the IP filter configuration.</summary>
+    [JsonPropertyName("allowAllServiceAgentAccess")]
+    public bool? AllowAllServiceAgentAccess { get; set; }
+
+    /// <summary>While set true, allows cross-org VPCs in the bucket's IP filter configuration.</summary>
+    [JsonPropertyName("allowCrossOrgVpcs")]
+    public bool? AllowCrossOrgVpcs { get; set; }
+
+    /// <summary>The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+
+    /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
+    [JsonPropertyName("publicNetworkSource")]
+    public IList<V1beta1BucketSpecInitProviderIpFilterPublicNetworkSource>? PublicNetworkSource { get; set; }
+
+    /// <summary>The list of VPC networks that can access the bucket. Structure is documented below.</summary>
+    [JsonPropertyName("vpcNetworkSources")]
+    public IList<V1beta1BucketSpecInitProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProviderLifecycleRuleAction
 {
     /// <summary>The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.</summary>
@@ -401,10 +517,6 @@ public partial class V1beta1BucketSpecInitProviderLifecycleRuleCondition
     /// <summary>One or more matching name suffixes to satisfy this condition.</summary>
     [JsonPropertyName("matchesSuffix")]
     public IList<string>? MatchesSuffix { get; set; }
-
-    /// <summary>While set true, age value will be omitted. Note Required to set true when age is unset in the config file.</summary>
-    [JsonPropertyName("noAge")]
-    public bool? NoAge { get; set; }
 
     /// <summary>Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.</summary>
     [JsonPropertyName("noncurrentTimeBefore")]
@@ -536,6 +648,14 @@ public partial class V1beta1BucketSpecInitProvider
     /// <summary>When deleting a bucket, this boolean option will delete all contained objects.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
+
+    /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
+    [JsonPropertyName("hierarchicalNamespace")]
+    public IList<V1beta1BucketSpecInitProviderHierarchicalNamespace>? HierarchicalNamespace { get; set; }
+
+    /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
+    [JsonPropertyName("ipFilter")]
+    public IList<V1beta1BucketSpecInitProviderIpFilter>? IpFilter { get; set; }
 
     /// <summary>A map of key/value label pairs to assign to the bucket.</summary>
     [JsonPropertyName("labels")]
@@ -780,6 +900,62 @@ public partial class V1beta1BucketStatusAtProviderEncryption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketStatusAtProviderHierarchicalNamespace
+{
+    /// <summary>Enables hierarchical namespace for the bucket.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketStatusAtProviderIpFilterPublicNetworkSource
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketStatusAtProviderIpFilterVpcNetworkSources
+{
+    /// <summary>The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.</summary>
+    [JsonPropertyName("allowedIpCidrRanges")]
+    public IList<string>? AllowedIpCidrRanges { get; set; }
+
+    /// <summary>Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME</summary>
+    [JsonPropertyName("network")]
+    public string? Network { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BucketStatusAtProviderIpFilter
+{
+    /// <summary>While set true, allows all service agents to access the bucket regardless of the IP filter configuration.</summary>
+    [JsonPropertyName("allowAllServiceAgentAccess")]
+    public bool? AllowAllServiceAgentAccess { get; set; }
+
+    /// <summary>While set true, allows cross-org VPCs in the bucket's IP filter configuration.</summary>
+    [JsonPropertyName("allowCrossOrgVpcs")]
+    public bool? AllowCrossOrgVpcs { get; set; }
+
+    /// <summary>The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
+
+    /// <summary>The public network IP address ranges that can access the bucket and its data. Structure is documented below.</summary>
+    [JsonPropertyName("publicNetworkSource")]
+    public IList<V1beta1BucketStatusAtProviderIpFilterPublicNetworkSource>? PublicNetworkSource { get; set; }
+
+    /// <summary>The list of VPC networks that can access the bucket. Structure is documented below.</summary>
+    [JsonPropertyName("vpcNetworkSources")]
+    public IList<V1beta1BucketStatusAtProviderIpFilterVpcNetworkSources>? VpcNetworkSources { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProviderLifecycleRuleAction
 {
     /// <summary>The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.</summary>
@@ -826,10 +1002,6 @@ public partial class V1beta1BucketStatusAtProviderLifecycleRuleCondition
     /// <summary>One or more matching name suffixes to satisfy this condition.</summary>
     [JsonPropertyName("matchesSuffix")]
     public IList<string>? MatchesSuffix { get; set; }
-
-    /// <summary>While set true, age value will be omitted. Note Required to set true when age is unset in the config file.</summary>
-    [JsonPropertyName("noAge")]
-    public bool? NoAge { get; set; }
 
     /// <summary>Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.</summary>
     [JsonPropertyName("noncurrentTimeBefore")]
@@ -970,9 +1142,17 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
+    /// <summary>The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.</summary>
+    [JsonPropertyName("hierarchicalNamespace")]
+    public IList<V1beta1BucketStatusAtProviderHierarchicalNamespace>? HierarchicalNamespace { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.</summary>
+    [JsonPropertyName("ipFilter")]
+    public IList<V1beta1BucketStatusAtProviderIpFilter>? IpFilter { get; set; }
 
     /// <summary>A map of key/value label pairs to assign to the bucket.</summary>
     [JsonPropertyName("labels")]
@@ -1030,9 +1210,17 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 
+    /// <summary>(Computed) The creation time of the bucket in RFC 3339 format.</summary>
+    [JsonPropertyName("timeCreated")]
+    public string? TimeCreated { get; set; }
+
     /// <summary>Enables Uniform bucket-level access access to a bucket.</summary>
     [JsonPropertyName("uniformBucketLevelAccess")]
     public bool? UniformBucketLevelAccess { get; set; }
+
+    /// <summary>(Computed) The time at which the bucket's metadata or IAM policy was last updated, in RFC 3339 format.</summary>
+    [JsonPropertyName("updated")]
+    public string? Updated { get; set; }
 
     /// <summary>The base URL of the bucket, in the format gs://&lt;bucket-name&gt;.</summary>
     [JsonPropertyName("url")]

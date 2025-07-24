@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.pubsub.gcp.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKinesis
 {
-    /// <summary>AWS role ARN to be used for Federated Identity authentication with Kinesis. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
     [JsonPropertyName("awsRoleArn")]
     public string? AwsRoleArn { get; set; }
 
@@ -20,7 +20,7 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKi
     [JsonPropertyName("consumerArn")]
     public string? ConsumerArn { get; set; }
 
-    /// <summary>The GCP service account to be used for Federated Identity authentication with Kinesis (via a AssumeRoleWithWebIdentity call for the provided role). The awsRoleArn must be set up with accounts.google.com:sub equals to this service account number.</summary>
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
     [JsonPropertyName("gcpServiceAccount")]
     public string? GcpServiceAccount { get; set; }
 
@@ -31,11 +31,169 @@ public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsMsk
+{
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    [JsonPropertyName("awsRoleArn")]
+    public string? AwsRoleArn { get; set; }
+
+    /// <summary>ARN that uniquely identifies the MSK cluster.</summary>
+    [JsonPropertyName("clusterArn")]
+    public string? ClusterArn { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsAzureEventHubs
+{
+    /// <summary>The Azure event hub client ID to use for ingestion.</summary>
+    [JsonPropertyName("clientId")]
+    public string? ClientId { get; set; }
+
+    /// <summary>The Azure event hub to ingest data from.</summary>
+    [JsonPropertyName("eventHub")]
+    public string? EventHub { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>The Azure event hub namespace to ingest data from.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>The name of the resource group within an Azure subscription.</summary>
+    [JsonPropertyName("resourceGroup")]
+    public string? ResourceGroup { get; set; }
+
+    /// <summary>The Azure event hub subscription ID to use for ingestion.</summary>
+    [JsonPropertyName("subscriptionId")]
+    public string? SubscriptionId { get; set; }
+
+    /// <summary>The Azure event hub tenant ID to use for ingestion.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageTextFormat
+{
+    /// <summary>The delimiter to use when using the 'text' format. Each line of text as specified by the delimiter will be set to the 'data' field of a Pub/Sub message. When unset, '\n' is used.</summary>
+    [JsonPropertyName("delimiter")]
+    public string? Delimiter { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorage
+{
+    /// <summary>Configuration for reading Cloud Storage data in Avro binary format. The bytes of each object will be set to the data field of a Pub/Sub message.</summary>
+    [JsonPropertyName("avroFormat")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageAvroFormat>? AvroFormat { get; set; }
+
+    /// <summary>Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See the bucket naming requirements: https://cloud.google.com/storage/docs/buckets#naming.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>Glob pattern used to match objects that will be ingested. If unset, all objects will be ingested. See the supported patterns: https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob</summary>
+    [JsonPropertyName("matchGlob")]
+    public string? MatchGlob { get; set; }
+
+    /// <summary>The timestamp set in RFC3339 text format. If set, only objects with a larger or equal timestamp will be ingested. Unset by default, meaning all objects will be ingested.</summary>
+    [JsonPropertyName("minimumObjectCreateTime")]
+    public string? MinimumObjectCreateTime { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data written via Cloud Storage subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The data and attributes fields of the originally exported Pub/Sub message will be restored when publishing.</summary>
+    [JsonPropertyName("pubsubAvroFormat")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat>? PubsubAvroFormat { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data in text format. Each line of text as specified by the delimiter will be set to the data field of a Pub/Sub message. Structure is documented below.</summary>
+    [JsonPropertyName("textFormat")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsConfluentCloud
+{
+    /// <summary>The Confluent Cloud bootstrap server. The format is url:port.</summary>
+    [JsonPropertyName("bootstrapServer")]
+    public string? BootstrapServer { get; set; }
+
+    /// <summary>The Confluent Cloud cluster ID.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Identity pool ID to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("identityPoolId")]
+    public string? IdentityPoolId { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettingsPlatformLogsSettings
+{
+    /// <summary>The minimum severity level of Platform Logs that will be written. If unspecified, no Platform Logs will be written. Default value is SEVERITY_UNSPECIFIED. Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.</summary>
+    [JsonPropertyName("severity")]
+    public string? Severity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProviderIngestionDataSourceSettings
 {
     /// <summary>Settings for ingestion from Amazon Kinesis Data Streams. Structure is documented below.</summary>
     [JsonPropertyName("awsKinesis")]
     public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsKinesis>? AwsKinesis { get; set; }
+
+    /// <summary>Settings for ingestion from Amazon Managed Streaming for Apache Kafka. Structure is documented below.</summary>
+    [JsonPropertyName("awsMsk")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsAwsMsk>? AwsMsk { get; set; }
+
+    /// <summary>Settings for ingestion from Azure Event Hubs. Structure is documented below.</summary>
+    [JsonPropertyName("azureEventHubs")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsAzureEventHubs>? AzureEventHubs { get; set; }
+
+    /// <summary>Settings for ingestion from Cloud Storage. Structure is documented below.</summary>
+    [JsonPropertyName("cloudStorage")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsCloudStorage>? CloudStorage { get; set; }
+
+    /// <summary>Settings for ingestion from Confluent Cloud. Structure is documented below.</summary>
+    [JsonPropertyName("confluentCloud")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsConfluentCloud>? ConfluentCloud { get; set; }
+
+    /// <summary>Settings for Platform Logs regarding ingestion to Pub/Sub. If unset, no Platform Logs will be generated.' Structure is documented below.</summary>
+    [JsonPropertyName("platformLogsSettings")]
+    public IList<V1beta1TopicSpecForProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -101,6 +259,36 @@ public partial class V1beta1TopicSpecForProviderMessageStoragePolicy
     /// <summary>A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.</summary>
     [JsonPropertyName("allowedPersistenceRegions")]
     public IList<string>? AllowedPersistenceRegions { get; set; }
+
+    /// <summary>If true, allowedPersistenceRegions is also used to enforce in-transit guarantees for messages. That is, Pub/Sub will fail topics.publish operations on this topic and subscribe operations on any subscription attached to this topic in any region that is not in allowedPersistenceRegions.</summary>
+    [JsonPropertyName("enforceInTransit")]
+    public bool? EnforceInTransit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecForProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1TopicSpecForProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -148,6 +336,10 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("messageStoragePolicy")]
     public IList<V1beta1TopicSpecForProviderMessageStoragePolicy>? MessageStoragePolicy { get; set; }
 
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1TopicSpecForProviderMessageTransforms>? MessageTransforms { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -161,7 +353,7 @@ public partial class V1beta1TopicSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsKinesis
 {
-    /// <summary>AWS role ARN to be used for Federated Identity authentication with Kinesis. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
     [JsonPropertyName("awsRoleArn")]
     public string? AwsRoleArn { get; set; }
 
@@ -169,7 +361,7 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsK
     [JsonPropertyName("consumerArn")]
     public string? ConsumerArn { get; set; }
 
-    /// <summary>The GCP service account to be used for Federated Identity authentication with Kinesis (via a AssumeRoleWithWebIdentity call for the provided role). The awsRoleArn must be set up with accounts.google.com:sub equals to this service account number.</summary>
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
     [JsonPropertyName("gcpServiceAccount")]
     public string? GcpServiceAccount { get; set; }
 
@@ -180,11 +372,169 @@ public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsK
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsMsk
+{
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    [JsonPropertyName("awsRoleArn")]
+    public string? AwsRoleArn { get; set; }
+
+    /// <summary>ARN that uniquely identifies the MSK cluster.</summary>
+    [JsonPropertyName("clusterArn")]
+    public string? ClusterArn { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAzureEventHubs
+{
+    /// <summary>The Azure event hub client ID to use for ingestion.</summary>
+    [JsonPropertyName("clientId")]
+    public string? ClientId { get; set; }
+
+    /// <summary>The Azure event hub to ingest data from.</summary>
+    [JsonPropertyName("eventHub")]
+    public string? EventHub { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>The Azure event hub namespace to ingest data from.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>The name of the resource group within an Azure subscription.</summary>
+    [JsonPropertyName("resourceGroup")]
+    public string? ResourceGroup { get; set; }
+
+    /// <summary>The Azure event hub subscription ID to use for ingestion.</summary>
+    [JsonPropertyName("subscriptionId")]
+    public string? SubscriptionId { get; set; }
+
+    /// <summary>The Azure event hub tenant ID to use for ingestion.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageTextFormat
+{
+    /// <summary>The delimiter to use when using the 'text' format. Each line of text as specified by the delimiter will be set to the 'data' field of a Pub/Sub message. When unset, '\n' is used.</summary>
+    [JsonPropertyName("delimiter")]
+    public string? Delimiter { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorage
+{
+    /// <summary>Configuration for reading Cloud Storage data in Avro binary format. The bytes of each object will be set to the data field of a Pub/Sub message.</summary>
+    [JsonPropertyName("avroFormat")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageAvroFormat>? AvroFormat { get; set; }
+
+    /// <summary>Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See the bucket naming requirements: https://cloud.google.com/storage/docs/buckets#naming.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>Glob pattern used to match objects that will be ingested. If unset, all objects will be ingested. See the supported patterns: https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob</summary>
+    [JsonPropertyName("matchGlob")]
+    public string? MatchGlob { get; set; }
+
+    /// <summary>The timestamp set in RFC3339 text format. If set, only objects with a larger or equal timestamp will be ingested. Unset by default, meaning all objects will be ingested.</summary>
+    [JsonPropertyName("minimumObjectCreateTime")]
+    public string? MinimumObjectCreateTime { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data written via Cloud Storage subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The data and attributes fields of the originally exported Pub/Sub message will be restored when publishing.</summary>
+    [JsonPropertyName("pubsubAvroFormat")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat>? PubsubAvroFormat { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data in text format. Each line of text as specified by the delimiter will be set to the data field of a Pub/Sub message. Structure is documented below.</summary>
+    [JsonPropertyName("textFormat")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsConfluentCloud
+{
+    /// <summary>The Confluent Cloud bootstrap server. The format is url:port.</summary>
+    [JsonPropertyName("bootstrapServer")]
+    public string? BootstrapServer { get; set; }
+
+    /// <summary>The Confluent Cloud cluster ID.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Identity pool ID to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("identityPoolId")]
+    public string? IdentityPoolId { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettingsPlatformLogsSettings
+{
+    /// <summary>The minimum severity level of Platform Logs that will be written. If unspecified, no Platform Logs will be written. Default value is SEVERITY_UNSPECIFIED. Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.</summary>
+    [JsonPropertyName("severity")]
+    public string? Severity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProviderIngestionDataSourceSettings
 {
     /// <summary>Settings for ingestion from Amazon Kinesis Data Streams. Structure is documented below.</summary>
     [JsonPropertyName("awsKinesis")]
     public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsKinesis>? AwsKinesis { get; set; }
+
+    /// <summary>Settings for ingestion from Amazon Managed Streaming for Apache Kafka. Structure is documented below.</summary>
+    [JsonPropertyName("awsMsk")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAwsMsk>? AwsMsk { get; set; }
+
+    /// <summary>Settings for ingestion from Azure Event Hubs. Structure is documented below.</summary>
+    [JsonPropertyName("azureEventHubs")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsAzureEventHubs>? AzureEventHubs { get; set; }
+
+    /// <summary>Settings for ingestion from Cloud Storage. Structure is documented below.</summary>
+    [JsonPropertyName("cloudStorage")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsCloudStorage>? CloudStorage { get; set; }
+
+    /// <summary>Settings for ingestion from Confluent Cloud. Structure is documented below.</summary>
+    [JsonPropertyName("confluentCloud")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsConfluentCloud>? ConfluentCloud { get; set; }
+
+    /// <summary>Settings for Platform Logs regarding ingestion to Pub/Sub. If unset, no Platform Logs will be generated.' Structure is documented below.</summary>
+    [JsonPropertyName("platformLogsSettings")]
+    public IList<V1beta1TopicSpecInitProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -250,6 +600,36 @@ public partial class V1beta1TopicSpecInitProviderMessageStoragePolicy
     /// <summary>A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.</summary>
     [JsonPropertyName("allowedPersistenceRegions")]
     public IList<string>? AllowedPersistenceRegions { get; set; }
+
+    /// <summary>If true, allowedPersistenceRegions is also used to enforce in-transit guarantees for messages. That is, Pub/Sub will fail topics.publish operations on this topic and subscribe operations on any subscription attached to this topic in any region that is not in allowedPersistenceRegions.</summary>
+    [JsonPropertyName("enforceInTransit")]
+    public bool? EnforceInTransit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicSpecInitProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1TopicSpecInitProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -296,6 +676,10 @@ public partial class V1beta1TopicSpecInitProvider
     /// <summary>Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect. Structure is documented below.</summary>
     [JsonPropertyName("messageStoragePolicy")]
     public IList<V1beta1TopicSpecInitProviderMessageStoragePolicy>? MessageStoragePolicy { get; set; }
+
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1TopicSpecInitProviderMessageTransforms>? MessageTransforms { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -442,7 +826,7 @@ public partial class V1beta1TopicSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsKinesis
 {
-    /// <summary>AWS role ARN to be used for Federated Identity authentication with Kinesis. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
     [JsonPropertyName("awsRoleArn")]
     public string? AwsRoleArn { get; set; }
 
@@ -450,7 +834,7 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsK
     [JsonPropertyName("consumerArn")]
     public string? ConsumerArn { get; set; }
 
-    /// <summary>The GCP service account to be used for Federated Identity authentication with Kinesis (via a AssumeRoleWithWebIdentity call for the provided role). The awsRoleArn must be set up with accounts.google.com:sub equals to this service account number.</summary>
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
     [JsonPropertyName("gcpServiceAccount")]
     public string? GcpServiceAccount { get; set; }
 
@@ -461,11 +845,169 @@ public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsK
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsMsk
+{
+    /// <summary>AWS role ARN to be used for Federated Identity authentication with MSK. Check the Pub/Sub docs for how to set up this role and the required permissions that need to be attached to it.</summary>
+    [JsonPropertyName("awsRoleArn")]
+    public string? AwsRoleArn { get; set; }
+
+    /// <summary>ARN that uniquely identifies the MSK cluster.</summary>
+    [JsonPropertyName("clusterArn")]
+    public string? ClusterArn { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAzureEventHubs
+{
+    /// <summary>The Azure event hub client ID to use for ingestion.</summary>
+    [JsonPropertyName("clientId")]
+    public string? ClientId { get; set; }
+
+    /// <summary>The Azure event hub to ingest data from.</summary>
+    [JsonPropertyName("eventHub")]
+    public string? EventHub { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>The Azure event hub namespace to ingest data from.</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>The name of the resource group within an Azure subscription.</summary>
+    [JsonPropertyName("resourceGroup")]
+    public string? ResourceGroup { get; set; }
+
+    /// <summary>The Azure event hub subscription ID to use for ingestion.</summary>
+    [JsonPropertyName("subscriptionId")]
+    public string? SubscriptionId { get; set; }
+
+    /// <summary>The Azure event hub tenant ID to use for ingestion.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageTextFormat
+{
+    /// <summary>The delimiter to use when using the 'text' format. Each line of text as specified by the delimiter will be set to the 'data' field of a Pub/Sub message. When unset, '\n' is used.</summary>
+    [JsonPropertyName("delimiter")]
+    public string? Delimiter { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorage
+{
+    /// <summary>Configuration for reading Cloud Storage data in Avro binary format. The bytes of each object will be set to the data field of a Pub/Sub message.</summary>
+    [JsonPropertyName("avroFormat")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageAvroFormat>? AvroFormat { get; set; }
+
+    /// <summary>Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See the bucket naming requirements: https://cloud.google.com/storage/docs/buckets#naming.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>Glob pattern used to match objects that will be ingested. If unset, all objects will be ingested. See the supported patterns: https://cloud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-prefixes-using-glob</summary>
+    [JsonPropertyName("matchGlob")]
+    public string? MatchGlob { get; set; }
+
+    /// <summary>The timestamp set in RFC3339 text format. If set, only objects with a larger or equal timestamp will be ingested. Unset by default, meaning all objects will be ingested.</summary>
+    [JsonPropertyName("minimumObjectCreateTime")]
+    public string? MinimumObjectCreateTime { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data written via Cloud Storage subscriptions(See https://cloud.google.com/pubsub/docs/cloudstorage). The data and attributes fields of the originally exported Pub/Sub message will be restored when publishing.</summary>
+    [JsonPropertyName("pubsubAvroFormat")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStoragePubsubAvroFormat>? PubsubAvroFormat { get; set; }
+
+    /// <summary>Configuration for reading Cloud Storage data in text format. Each line of text as specified by the delimiter will be set to the data field of a Pub/Sub message. Structure is documented below.</summary>
+    [JsonPropertyName("textFormat")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorageTextFormat>? TextFormat { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsConfluentCloud
+{
+    /// <summary>The Confluent Cloud bootstrap server. The format is url:port.</summary>
+    [JsonPropertyName("bootstrapServer")]
+    public string? BootstrapServer { get; set; }
+
+    /// <summary>The Confluent Cloud cluster ID.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
+    /// <summary>The GCP service account to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("gcpServiceAccount")]
+    public string? GcpServiceAccount { get; set; }
+
+    /// <summary>Identity pool ID to be used for Federated Identity authentication with Confluent Cloud.</summary>
+    [JsonPropertyName("identityPoolId")]
+    public string? IdentityPoolId { get; set; }
+
+    /// <summary>Name of the Confluent Cloud topic that Pub/Sub will import from.</summary>
+    [JsonPropertyName("topic")]
+    public string? Topic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettingsPlatformLogsSettings
+{
+    /// <summary>The minimum severity level of Platform Logs that will be written. If unspecified, no Platform Logs will be written. Default value is SEVERITY_UNSPECIFIED. Possible values are: SEVERITY_UNSPECIFIED, DISABLED, DEBUG, INFO, WARNING, ERROR.</summary>
+    [JsonPropertyName("severity")]
+    public string? Severity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProviderIngestionDataSourceSettings
 {
     /// <summary>Settings for ingestion from Amazon Kinesis Data Streams. Structure is documented below.</summary>
     [JsonPropertyName("awsKinesis")]
     public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsKinesis>? AwsKinesis { get; set; }
+
+    /// <summary>Settings for ingestion from Amazon Managed Streaming for Apache Kafka. Structure is documented below.</summary>
+    [JsonPropertyName("awsMsk")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAwsMsk>? AwsMsk { get; set; }
+
+    /// <summary>Settings for ingestion from Azure Event Hubs. Structure is documented below.</summary>
+    [JsonPropertyName("azureEventHubs")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsAzureEventHubs>? AzureEventHubs { get; set; }
+
+    /// <summary>Settings for ingestion from Cloud Storage. Structure is documented below.</summary>
+    [JsonPropertyName("cloudStorage")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsCloudStorage>? CloudStorage { get; set; }
+
+    /// <summary>Settings for ingestion from Confluent Cloud. Structure is documented below.</summary>
+    [JsonPropertyName("confluentCloud")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsConfluentCloud>? ConfluentCloud { get; set; }
+
+    /// <summary>Settings for Platform Logs regarding ingestion to Pub/Sub. If unset, no Platform Logs will be generated.' Structure is documented below.</summary>
+    [JsonPropertyName("platformLogsSettings")]
+    public IList<V1beta1TopicStatusAtProviderIngestionDataSourceSettingsPlatformLogsSettings>? PlatformLogsSettings { get; set; }
 }
 
 /// <summary></summary>
@@ -475,6 +1017,36 @@ public partial class V1beta1TopicStatusAtProviderMessageStoragePolicy
     /// <summary>A list of IDs of GCP regions where messages that are published to the topic may be persisted in storage. Messages published by publishers running in non-allowed GCP regions (or running outside of GCP altogether) will be routed for storage in one of the allowed regions. An empty list means that no regions are allowed, and is not a valid configuration.</summary>
     [JsonPropertyName("allowedPersistenceRegions")]
     public IList<string>? AllowedPersistenceRegions { get; set; }
+
+    /// <summary>If true, allowedPersistenceRegions is also used to enforce in-transit guarantees for messages. That is, Pub/Sub will fail topics.publish operations on this topic and subscribe operations on any subscription attached to this topic in any region that is not in allowedPersistenceRegions.</summary>
+    [JsonPropertyName("enforceInTransit")]
+    public bool? EnforceInTransit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TopicStatusAtProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1TopicStatusAtProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -521,6 +1093,10 @@ public partial class V1beta1TopicStatusAtProvider
     /// <summary>Policy constraining the set of Google Cloud Platform regions where messages published to the topic may be stored. If not present, then no constraints are in effect. Structure is documented below.</summary>
     [JsonPropertyName("messageStoragePolicy")]
     public IList<V1beta1TopicStatusAtProviderMessageStoragePolicy>? MessageStoragePolicy { get; set; }
+
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1TopicStatusAtProviderMessageTransforms>? MessageTransforms { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]

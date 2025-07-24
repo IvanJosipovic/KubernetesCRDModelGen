@@ -17,12 +17,58 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFe
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("visibleCoreCount")]
     public double? VisibleCoreCount { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDiskDiskEncryptionKeyRsaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -33,13 +79,21 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderAttachedDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("diskEncryptionKeyRaw")]
-    public string? DiskEncryptionKeyRaw { get; set; }
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderAttachedDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderAttachedDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("diskEncryptionKeySha256")]
-    public string? DiskEncryptionKeySha256 { get; set; }
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -71,10 +125,141 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncry
     public string Namespace { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncryptionKeyRsaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParams
 {
+    /// <summary></summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -100,8 +285,24 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializ
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("storagePool")]
@@ -128,9 +329,29 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderBootDisk
     [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
     public V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
 
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceFromTemplateSpecForProviderBootDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceFromTemplateSpecForProviderBootDiskInitializeParams>? InitializeParams { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -169,6 +390,19 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderGuestAccelerator
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecForProviderInstanceEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
 }
 
 /// <summary></summary>
@@ -367,6 +601,10 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderNetworkInterface
     public string? Network { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("networkIp")]
     public string? NetworkIp { get; set; }
 
@@ -512,6 +750,10 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
     public bool? AutomaticRestart { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
@@ -546,6 +788,10 @@ public partial class V1beta1InstanceFromTemplateSpecForProviderScheduling
     /// <summary></summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -704,6 +950,14 @@ public partial class V1beta1InstanceFromTemplateSpecForProvider
     public string? Hostname { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecForProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -797,12 +1051,58 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAdvancedMachineF
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("visibleCoreCount")]
     public double? VisibleCoreCount { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDiskDiskEncryptionKeyRsaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -813,13 +1113,21 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderAttachedDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("diskEncryptionKeyRaw")]
-    public string? DiskEncryptionKeyRaw { get; set; }
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderAttachedDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderAttachedDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("diskEncryptionKeySha256")]
-    public string? DiskEncryptionKeySha256 { get; set; }
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -851,10 +1159,141 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncr
     public string Namespace { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncryptionKeyRsaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParams
 {
+    /// <summary></summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -880,8 +1319,24 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitiali
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("storagePool")]
@@ -908,9 +1363,29 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderBootDisk
     [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
     public V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
 
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceFromTemplateSpecInitProviderBootDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceFromTemplateSpecInitProviderBootDiskInitializeParams>? InitializeParams { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -949,6 +1424,19 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderGuestAccelerator
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateSpecInitProviderInstanceEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
 }
 
 /// <summary></summary>
@@ -1147,6 +1635,10 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderNetworkInterface
     public string? Network { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("networkIp")]
     public string? NetworkIp { get; set; }
 
@@ -1292,6 +1784,10 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
     public bool? AutomaticRestart { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
@@ -1326,6 +1822,10 @@ public partial class V1beta1InstanceFromTemplateSpecInitProviderScheduling
     /// <summary></summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -1482,6 +1982,14 @@ public partial class V1beta1InstanceFromTemplateSpecInitProvider
     /// <summary>A unique name for the resource, required by GCE. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateSpecInitProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labels")]
@@ -1709,8 +2217,20 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAdvancedMachineF
     public bool? EnableNestedVirtualization { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("visibleCoreCount")]
@@ -1726,12 +2246,16 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
     public string? DeviceName { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("diskEncryptionKeyRaw")]
-    public string? DiskEncryptionKeyRaw { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("diskEncryptionKeySha256")]
     public string? DiskEncryptionKeySha256 { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -1748,8 +2272,46 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderAttachedDisk
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParams
 {
+    /// <summary></summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -1775,8 +2337,24 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitiali
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("storagePool")]
@@ -1804,8 +2382,24 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderBootDisk
     public string? DiskEncryptionKeySha256 { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceFromTemplateStatusAtProviderBootDiskInitializeParams>? InitializeParams { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeySelfLink")]
@@ -1844,6 +2438,23 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderGuestAccelerator
     /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceFromTemplateStatusAtProviderInstanceEncryptionKey
+{
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
 }
 
 /// <summary></summary>
@@ -1936,6 +2547,10 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderNetworkInterface
     /// <summary></summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("networkIp")]
@@ -2067,6 +2682,10 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
     public bool? AutomaticRestart { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
@@ -2101,6 +2720,10 @@ public partial class V1beta1InstanceFromTemplateStatusAtProviderScheduling
     /// <summary></summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -2183,6 +2806,10 @@ public partial class V1beta1InstanceFromTemplateStatusAtProvider
     public string? CpuPlatform { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("creationTimestamp")]
+    public string? CreationTimestamp { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("currentStatus")]
     public string? CurrentStatus { get; set; }
 
@@ -2219,8 +2846,16 @@ public partial class V1beta1InstanceFromTemplateStatusAtProvider
     public string? Id { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceFromTemplateStatusAtProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labelFingerprint")]

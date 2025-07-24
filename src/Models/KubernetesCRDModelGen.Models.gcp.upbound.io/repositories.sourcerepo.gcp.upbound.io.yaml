@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  createIgnoreAlreadyExists:
+                    description: If set to true, skip repository creation if a repository with the same name already exists.
+                    type: boolean
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -312,6 +315,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  createIgnoreAlreadyExists:
+                    description: If set to true, skip repository creation if a repository with the same name already exists.
+                    type: boolean
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -731,6 +737,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  createIgnoreAlreadyExists:
+                    description: If set to true, skip repository creation if a repository with the same name already exists.
+                    type: boolean
                   id:
                     description: an identifier for the resource with format projects/{{project}}/repos/{{name}}
                     type: string

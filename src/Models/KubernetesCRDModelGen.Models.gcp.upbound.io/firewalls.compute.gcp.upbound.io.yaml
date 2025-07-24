@@ -1455,7 +1455,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:
@@ -1492,7 +1492,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:
@@ -1828,7 +1828,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:
@@ -1865,7 +1865,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:
@@ -2392,7 +2392,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:
@@ -2432,7 +2432,7 @@ spec:
 
                             applies to connections through any port.
 
-                            Example inputs include: ["22"], ["80","443"], and
+                            Example inputs include: [22], [80, 443], and
 
                             ["12345-12349"].
                           items:

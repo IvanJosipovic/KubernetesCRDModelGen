@@ -529,6 +529,53 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesCsi
+{
+    /// <summary>Unique name representing the type of file system to be created. Cloud Run supports the following values:</summary>
+    [JsonPropertyName("driver")]
+    public string? Driver { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Driver-specific attributes. The following options are supported for available drivers:</summary>
+    [JsonPropertyName("volumeAttributes")]
+    public IDictionary<string, string>? VolumeAttributes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesEmptyDir
+{
+    /// <summary>The medium on which the data is stored. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesNfs
+{
+    /// <summary>Path exported by the NFS server</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>IP address or hostname of the NFS server</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -629,9 +676,21 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumesSecret
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderTemplateSpecVolumes
 {
+    /// <summary>A filesystem specified by the Container Storage Interface (CSI). Structure is documented below.</summary>
+    [JsonPropertyName("csi")]
+    public IList<V1beta1ServiceSpecForProviderTemplateSpecVolumesCsi>? Csi { get; set; }
+
+    /// <summary>Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs). Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1ServiceSpecForProviderTemplateSpecVolumesEmptyDir>? EmptyDir { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>A filesystem backed by a Network File System share. This filesystem requires the run.googleapis.com/execution-environment annotation to be unset or set to "gen2" Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1ServiceSpecForProviderTemplateSpecVolumesNfs>? Nfs { get; set; }
 
     /// <summary>The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -649,6 +708,10 @@ public partial class V1beta1ServiceSpecForProviderTemplateSpec
     /// <summary>Containers defines the unit of execution for this Revision. Structure is documented below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1ServiceSpecForProviderTemplateSpecContainers>? Containers { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Use the following node selector keys to configure features on a Revision:</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IDictionary<string, string>? NodeSelector { get; set; }
 
     /// <summary>Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -1247,6 +1310,53 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesCsi
+{
+    /// <summary>Unique name representing the type of file system to be created. Cloud Run supports the following values:</summary>
+    [JsonPropertyName("driver")]
+    public string? Driver { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Driver-specific attributes. The following options are supported for available drivers:</summary>
+    [JsonPropertyName("volumeAttributes")]
+    public IDictionary<string, string>? VolumeAttributes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesEmptyDir
+{
+    /// <summary>The medium on which the data is stored. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesNfs
+{
+    /// <summary>Path exported by the NFS server</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>IP address or hostname of the NFS server</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -1347,9 +1457,21 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumesSecret
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderTemplateSpecVolumes
 {
+    /// <summary>A filesystem specified by the Container Storage Interface (CSI). Structure is documented below.</summary>
+    [JsonPropertyName("csi")]
+    public IList<V1beta1ServiceSpecInitProviderTemplateSpecVolumesCsi>? Csi { get; set; }
+
+    /// <summary>Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs). Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1ServiceSpecInitProviderTemplateSpecVolumesEmptyDir>? EmptyDir { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>A filesystem backed by a Network File System share. This filesystem requires the run.googleapis.com/execution-environment annotation to be unset or set to "gen2" Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1ServiceSpecInitProviderTemplateSpecVolumesNfs>? Nfs { get; set; }
 
     /// <summary>The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -1367,6 +1489,10 @@ public partial class V1beta1ServiceSpecInitProviderTemplateSpec
     /// <summary>Containers defines the unit of execution for this Revision. Structure is documented below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1ServiceSpecInitProviderTemplateSpecContainers>? Containers { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Use the following node selector keys to configure features on a Revision:</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IDictionary<string, string>? NodeSelector { get; set; }
 
     /// <summary>Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -2084,6 +2210,53 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesCsi
+{
+    /// <summary>Unique name representing the type of file system to be created. Cloud Run supports the following values:</summary>
+    [JsonPropertyName("driver")]
+    public string? Driver { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Driver-specific attributes. The following options are supported for available drivers:</summary>
+    [JsonPropertyName("volumeAttributes")]
+    public IDictionary<string, string>? VolumeAttributes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesEmptyDir
+{
+    /// <summary>The medium on which the data is stored. The default is "" which means to use the node's default medium. Must be an empty string (default) or Memory.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesNfs
+{
+    /// <summary>Path exported by the NFS server</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount the NFS volume as read only in all mounts. Defaults to false.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>IP address or hostname of the NFS server</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecretItems
 {
     /// <summary>A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version.</summary>
@@ -2120,9 +2293,21 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumesSecret
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderTemplateSpecVolumes
 {
+    /// <summary>A filesystem specified by the Container Storage Interface (CSI). Structure is documented below.</summary>
+    [JsonPropertyName("csi")]
+    public IList<V1beta1ServiceStatusAtProviderTemplateSpecVolumesCsi>? Csi { get; set; }
+
+    /// <summary>Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs). Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1ServiceStatusAtProviderTemplateSpecVolumesEmptyDir>? EmptyDir { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>A filesystem backed by a Network File System share. This filesystem requires the run.googleapis.com/execution-environment annotation to be unset or set to "gen2" Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1ServiceStatusAtProviderTemplateSpecVolumesNfs>? Nfs { get; set; }
 
     /// <summary>The secret's value will be presented as the content of a file whose name is defined in the item path. If no items are defined, the name of the file is the secret_name. Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -2140,6 +2325,10 @@ public partial class V1beta1ServiceStatusAtProviderTemplateSpec
     /// <summary>Containers defines the unit of execution for this Revision. Structure is documented below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1ServiceStatusAtProviderTemplateSpecContainers>? Containers { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Use the following node selector keys to configure features on a Revision:</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IDictionary<string, string>? NodeSelector { get; set; }
 
     /// <summary>Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.</summary>
     [JsonPropertyName("serviceAccountName")]

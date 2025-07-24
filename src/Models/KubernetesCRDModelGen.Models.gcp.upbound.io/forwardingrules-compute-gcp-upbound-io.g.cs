@@ -345,6 +345,10 @@ public partial class V1beta1ForwardingRuleSpecForProvider
     [JsonPropertyName("ipAddressSelector")]
     public V1beta1ForwardingRuleSpecForProviderIpAddressSelector? IpAddressSelector { get; set; }
 
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
+
     /// <summary>The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in Load balancing features. A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or backend service with UNSPECIFIED protocol. A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP, L3_DEFAULT.</summary>
     [JsonPropertyName("ipProtocol")]
     public string? IpProtocol { get; set; }
@@ -779,6 +783,10 @@ public partial class V1beta1ForwardingRuleSpecInitProvider
     [JsonPropertyName("ipAddressSelector")]
     public V1beta1ForwardingRuleSpecInitProviderIpAddressSelector? IpAddressSelector { get; set; }
 
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
+
     /// <summary>The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in Load balancing features. A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or backend service with UNSPECIFIED protocol. A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP, L3_DEFAULT.</summary>
     [JsonPropertyName("ipProtocol")]
     public string? IpProtocol { get; set; }
@@ -1064,6 +1072,10 @@ public partial class V1beta1ForwardingRuleStatusAtProvider
     /// <summary>IP address for which this forwarding rule accepts traffic. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the referenced target or backendService. While creating a forwarding rule, specifying an IPAddress is required under the following circumstances:</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
+
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
 
     /// <summary>The IP protocol to which this rule applies. For protocol forwarding, valid options are TCP, UDP, ESP, AH, SCTP, ICMP and L3_DEFAULT. The valid IP protocols are different for different load balancing products as described in Load balancing features. A Forwarding Rule with protocol L3_DEFAULT can attach with target instance or backend service with UNSPECIFIED protocol. A forwarding rule with "L3_DEFAULT" IPProtocal cannot be attached to a backend service with TCP or UDP. Possible values are: TCP, UDP, ESP, AH, SCTP, ICMP, L3_DEFAULT.</summary>
     [JsonPropertyName("ipProtocol")]

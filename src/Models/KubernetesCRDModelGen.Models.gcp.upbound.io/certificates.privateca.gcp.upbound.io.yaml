@@ -3202,7 +3202,7 @@ spec:
                           Structure is documented below.
                         properties:
                           keyId:
-                            description: The value of the KeyId in lowercase hexidecimal.
+                            description: The value of the KeyId in lowercase hexadecimal.
                             type: string
                         type: object
                       x509Config:
@@ -3942,7 +3942,7 @@ spec:
                           Structure is documented below.
                         properties:
                           keyId:
-                            description: The value of the KeyId in lowercase hexidecimal.
+                            description: The value of the KeyId in lowercase hexadecimal.
                             type: string
                         type: object
                       x509Config:
@@ -4505,7 +4505,7 @@ spec:
                           items:
                             properties:
                               keyId:
-                                description: The value of the KeyId in lowercase hexidecimal.
+                                description: The value of the KeyId in lowercase hexadecimal.
                                 type: string
                             type: object
                           type: array
@@ -4701,7 +4701,7 @@ spec:
                           items:
                             properties:
                               keyId:
-                                description: The value of the KeyId in lowercase hexidecimal.
+                                description: The value of the KeyId in lowercase hexadecimal.
                                 type: string
                             type: object
                           type: array
@@ -5103,7 +5103,7 @@ spec:
                           Structure is documented below.
                         properties:
                           keyId:
-                            description: The value of the KeyId in lowercase hexidecimal.
+                            description: The value of the KeyId in lowercase hexadecimal.
                             type: string
                         type: object
                       x509Config:

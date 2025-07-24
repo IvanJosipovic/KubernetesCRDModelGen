@@ -109,9 +109,9 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
@@ -119,7 +119,7 @@ spec:
 
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -135,6 +135,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -335,6 +359,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -470,12 +500,18 @@ spec:
                                 type: number
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 type: number
                             type: object
                           type: array
+                        requestCoalescing:
+                          description: >-
+                            If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                            to the origin.
+                          type: boolean
                         serveWhileStale:
                           description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                           type: number
@@ -593,31 +629,16 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                               path:
                                 description: Path to set for the cookie.
                                 type: string
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 items:
                                   properties:
                                     nanos:
@@ -662,6 +683,41 @@ spec:
                           type: number
                       type: object
                     type: array
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -689,6 +745,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   healthChecks:
                     description: >-
                       The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
@@ -797,11 +893,16 @@ spec:
                     type: object
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     items:
                       properties:
+                        enabled:
+                          description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                          type: boolean
                         oauth2ClientId:
                           description: OAuth2 Client ID for IAP
                           type: string
@@ -825,10 +926,14 @@ spec:
                           - name
                           - namespace
                           type: object
-                      required:
-                      - oauth2ClientSecretSecretRef
                       type: object
                     type: array
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
+                    type: string
                   loadBalancingScheme:
                     description: >-
                       Indicates whether the backend service will be used with internal or
@@ -876,22 +981,7 @@ spec:
                                   by a locally installed custom policy implementation.
                                 type: string
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -903,22 +993,7 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -942,6 +1017,26 @@ spec:
                         enable:
                           description: Whether to enable logging for the load balancer traffic served by this backend service.
                           type: boolean
+                        optionalFields:
+                          description: >-
+                            This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                            was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                            For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                            For example: orca_load_report, tls.protocol
+                          items:
+                            type: string
+                          type: array
+                        optionalMode:
+                          description: >-
+                            Specifies the optional logging mode for the load balancer traffic.
+
+                            Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                            Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                          type: string
                         sampleRate:
                           description: >-
                             This field can only be specified if logging is enabled for this backend service. The value of
@@ -952,6 +1047,36 @@ spec:
 
                             The default value is 1.0.
                           type: number
+                      type: object
+                    type: array
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        nanos:
+                          description: >-
+                            Span of time that's a fraction of a second at nanosecond resolution.
+
+                            Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                            Must be from 0 to 999,999,999 inclusive.
+                          type: number
+                        seconds:
+                          description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                          type: string
                       type: object
                     type: array
                   outlierDetection:
@@ -1123,15 +1248,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -1140,7 +1265,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -1226,13 +1351,57 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        name:
+                          description: Name of the cookie.
+                          type: string
+                        path:
+                          description: Path to set for the cookie.
+                          type: string
+                        ttl:
+                          description: >-
+                            Lifetime of the cookie.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              nanos:
+                                description: >-
+                                  Span of time that's a fraction of a second at nanosecond
+
+                                  resolution. Durations less than one second are represented
+
+                                  with a 0 seconds field and a positive nanos field. Must
+
+                                  be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: >-
+                                  Span of time at a resolution of a second.
+
+                                  Must be from 0 to 315,576,000,000 inclusive.
+                                type: number
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 type: object
               initProvider:
@@ -1282,9 +1451,9 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
@@ -1292,7 +1461,7 @@ spec:
 
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -1308,6 +1477,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -1508,6 +1701,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -1643,12 +1842,18 @@ spec:
                                 type: number
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 type: number
                             type: object
                           type: array
+                        requestCoalescing:
+                          description: >-
+                            If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                            to the origin.
+                          type: boolean
                         serveWhileStale:
                           description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                           type: number
@@ -1766,31 +1971,16 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                               path:
                                 description: Path to set for the cookie.
                                 type: string
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 items:
                                   properties:
                                     nanos:
@@ -1835,6 +2025,41 @@ spec:
                           type: number
                       type: object
                     type: array
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -1862,6 +2087,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   healthChecks:
                     description: >-
                       The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
@@ -1970,16 +2235,47 @@ spec:
                     type: object
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     items:
                       properties:
+                        enabled:
+                          description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                          type: boolean
                         oauth2ClientId:
                           description: OAuth2 Client ID for IAP
                           type: string
+                        oauth2ClientSecretSecretRef:
+                          description: >-
+                            OAuth2 Client Secret for IAP
+
+                            Note: This property is sensitive and will not be displayed in the plan.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                       type: object
                     type: array
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
+                    type: string
                   loadBalancingScheme:
                     description: >-
                       Indicates whether the backend service will be used with internal or
@@ -2027,22 +2323,7 @@ spec:
                                   by a locally installed custom policy implementation.
                                 type: string
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -2054,22 +2335,7 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -2093,6 +2359,26 @@ spec:
                         enable:
                           description: Whether to enable logging for the load balancer traffic served by this backend service.
                           type: boolean
+                        optionalFields:
+                          description: >-
+                            This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                            was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                            For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                            For example: orca_load_report, tls.protocol
+                          items:
+                            type: string
+                          type: array
+                        optionalMode:
+                          description: >-
+                            Specifies the optional logging mode for the load balancer traffic.
+
+                            Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                            Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                          type: string
                         sampleRate:
                           description: >-
                             This field can only be specified if logging is enabled for this backend service. The value of
@@ -2103,6 +2389,36 @@ spec:
 
                             The default value is 1.0.
                           type: number
+                      type: object
+                    type: array
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        nanos:
+                          description: >-
+                            Span of time that's a fraction of a second at nanosecond resolution.
+
+                            Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                            Must be from 0 to 999,999,999 inclusive.
+                          type: number
+                        seconds:
+                          description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                          type: string
                       type: object
                     type: array
                   outlierDetection:
@@ -2274,15 +2590,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -2291,7 +2607,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -2377,13 +2693,57 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        name:
+                          description: Name of the cookie.
+                          type: string
+                        path:
+                          description: Path to set for the cookie.
+                          type: string
+                        ttl:
+                          description: >-
+                            Lifetime of the cookie.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              nanos:
+                                description: >-
+                                  Span of time that's a fraction of a second at nanosecond
+
+                                  resolution. Durations less than one second are represented
+
+                                  with a 0 seconds field and a positive nanos field. Must
+
+                                  be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: >-
+                                  Span of time at a resolution of a second.
+
+                                  Must be from 0 to 315,576,000,000 inclusive.
+                                type: number
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 type: object
               managementPolicies:
@@ -2624,9 +2984,9 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
@@ -2634,7 +2994,7 @@ spec:
 
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -2650,6 +3010,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -2764,6 +3148,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -2899,12 +3289,18 @@ spec:
                                 type: number
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 type: number
                             type: object
                           type: array
+                        requestCoalescing:
+                          description: >-
+                            If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                            to the origin.
+                          type: boolean
                         serveWhileStale:
                           description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                           type: number
@@ -3022,31 +3418,16 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                               path:
                                 description: Path to set for the cookie.
                                 type: string
                               ttl:
                                 description: >-
-                                  The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                  Lifetime of the cookie.
 
-                                  (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                  Structure is documented below.
                                 items:
                                   properties:
                                     nanos:
@@ -3094,6 +3475,41 @@ spec:
                   creationTimestamp:
                     description: Creation timestamp in RFC3339 text format.
                     type: string
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -3121,6 +3537,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   fingerprint:
                     description: >-
                       Fingerprint of this resource. A hash of the contents stored in this
@@ -3149,11 +3605,16 @@ spec:
                     x-kubernetes-list-type: set
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     items:
                       properties:
+                        enabled:
+                          description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                          type: boolean
                         oauth2ClientId:
                           description: OAuth2 Client ID for IAP
                           type: string
@@ -3161,6 +3622,12 @@ spec:
                     type: array
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/backendServices/{{name}}
+                    type: string
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
                     type: string
                   loadBalancingScheme:
                     description: >-
@@ -3209,22 +3676,7 @@ spec:
                                   by a locally installed custom policy implementation.
                                 type: string
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -3236,22 +3688,7 @@ spec:
                           items:
                             properties:
                               name:
-                                description: >-
-                                  The name of a locality load balancer policy to be used. The value
-
-                                  should be one of the predefined ones as supported by localityLbPolicy,
-
-                                  although at the moment only ROUND_ROBIN is supported.
-
-                                  This field should only be populated when the customPolicy field is not
-
-                                  used.
-
-                                  Note that specifying the same policy more than once for a backend is
-
-                                  not a valid configuration and will be rejected.
-
-                                  The possible values are:
+                                description: Name of the cookie.
                                 type: string
                             type: object
                           type: array
@@ -3275,6 +3712,26 @@ spec:
                         enable:
                           description: Whether to enable logging for the load balancer traffic served by this backend service.
                           type: boolean
+                        optionalFields:
+                          description: >-
+                            This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                            was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                            For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                            For example: orca_load_report, tls.protocol
+                          items:
+                            type: string
+                          type: array
+                        optionalMode:
+                          description: >-
+                            Specifies the optional logging mode for the load balancer traffic.
+
+                            Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                            Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                          type: string
                         sampleRate:
                           description: >-
                             This field can only be specified if logging is enabled for this backend service. The value of
@@ -3285,6 +3742,36 @@ spec:
 
                             The default value is 1.0.
                           type: number
+                      type: object
+                    type: array
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        nanos:
+                          description: >-
+                            Span of time that's a fraction of a second at nanosecond resolution.
+
+                            Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                            Must be from 0 to 999,999,999 inclusive.
+                          type: number
+                        seconds:
+                          description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                          type: string
                       type: object
                     type: array
                   outlierDetection:
@@ -3456,15 +3943,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -3473,7 +3960,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -3540,13 +4027,57 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        name:
+                          description: Name of the cookie.
+                          type: string
+                        path:
+                          description: Path to set for the cookie.
+                          type: string
+                        ttl:
+                          description: >-
+                            Lifetime of the cookie.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              nanos:
+                                description: >-
+                                  Span of time that's a fraction of a second at nanosecond
+
+                                  resolution. Durations less than one second are represented
+
+                                  with a 0 seconds field and a positive nanos field. Must
+
+                                  be from 0 to 999,999,999 inclusive.
+                                type: number
+                              seconds:
+                                description: >-
+                                  Span of time at a resolution of a second.
+
+                                  Must be from 0 to 315,576,000,000 inclusive.
+                                type: number
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   timeoutSec:
                     description: >-
-                      How many seconds to wait for the backend before considering it a
+                      The backend service timeout has a different meaning depending on the type of load balancer.
 
-                      failed request. Default is 30 seconds. Valid range is [1, 86400].
+                      For more information see, Backend service settings.
+
+                      The default is 30 seconds.
+
+                      The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.
                     type: number
                 type: object
               conditions:
@@ -3707,19 +4238,17 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
                             for an explanation of load balancing modes.
 
-                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
-
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -3735,6 +4264,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -3935,6 +4488,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -4067,12 +4626,18 @@ spec:
                               type: number
                             ttl:
                               description: >-
-                                The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                Lifetime of the cookie.
 
-                                (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                Structure is documented below.
                               type: number
                           type: object
                         type: array
+                      requestCoalescing:
+                        description: >-
+                          If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                          to the origin.
+                        type: boolean
                       serveWhileStale:
                         description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                         type: number
@@ -4185,31 +4750,16 @@ spec:
                           Structure is documented below.
                         properties:
                           name:
-                            description: >-
-                              The name of a locality load balancer policy to be used. The value
-
-                              should be one of the predefined ones as supported by localityLbPolicy,
-
-                              although at the moment only ROUND_ROBIN is supported.
-
-                              This field should only be populated when the customPolicy field is not
-
-                              used.
-
-                              Note that specifying the same policy more than once for a backend is
-
-                              not a valid configuration and will be rejected.
-
-                              The possible values are:
+                            description: Name of the cookie.
                             type: string
                           path:
                             description: Path to set for the cookie.
                             type: string
                           ttl:
                             description: >-
-                              The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                              Lifetime of the cookie.
 
-                              (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                              Structure is documented below.
                             properties:
                               nanos:
                                 description: >-
@@ -4250,6 +4800,41 @@ spec:
                           Defaults to 1024.
                         type: number
                     type: object
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -4277,6 +4862,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   healthChecks:
                     description: >-
                       The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
@@ -4385,10 +5010,15 @@ spec:
                     type: object
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     properties:
+                      enabled:
+                        description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                        type: boolean
                       oauth2ClientId:
                         description: OAuth2 Client ID for IAP
                         type: string
@@ -4413,6 +5043,12 @@ spec:
                         - namespace
                         type: object
                     type: object
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
+                    type: string
                   loadBalancingScheme:
                     description: >-
                       Indicates whether the backend service will be used with internal or
@@ -4459,22 +5095,7 @@ spec:
                                 by a locally installed custom policy implementation.
                               type: string
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                         policy:
@@ -4484,22 +5105,7 @@ spec:
                             Structure is documented below.
                           properties:
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                       type: object
@@ -4521,6 +5127,26 @@ spec:
                       enable:
                         description: Whether to enable logging for the load balancer traffic served by this backend service.
                         type: boolean
+                      optionalFields:
+                        description: >-
+                          This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                          was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                          For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                          For example: orca_load_report, tls.protocol
+                        items:
+                          type: string
+                        type: array
+                      optionalMode:
+                        description: >-
+                          Specifies the optional logging mode for the load balancer traffic.
+
+                          Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                          Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                        type: string
                       sampleRate:
                         description: >-
                           This field can only be specified if logging is enabled for this backend service. The value of
@@ -4532,6 +5158,34 @@ spec:
                           The default value is 1.0.
                         type: number
                     type: object
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    properties:
+                      nanos:
+                        description: >-
+                          Span of time that's a fraction of a second at nanosecond resolution.
+
+                          Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                          Must be from 0 to 999,999,999 inclusive.
+                        type: number
+                      seconds:
+                        description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                        type: string
+                    type: object
                   outlierDetection:
                     description: >-
                       Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -4539,10 +5193,6 @@ spec:
                       Applicable backend service types can be a global backend service with the
 
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.
-
-                      From version 6.0.
-
-                      Default values are enforce by GCP without providing them.
 
                       Structure is documented below.
                     properties:
@@ -4699,15 +5349,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -4716,7 +5366,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -4798,8 +5448,44 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    properties:
+                      name:
+                        description: Name of the cookie.
+                        type: string
+                      path:
+                        description: Path to set for the cookie.
+                        type: string
+                      ttl:
+                        description: >-
+                          Lifetime of the cookie.
+
+                          Structure is documented below.
+                        properties:
+                          nanos:
+                            description: >-
+                              Span of time that's a fraction of a second at nanosecond
+
+                              resolution. Durations less than one second are represented
+
+                              with a 0 seconds field and a positive nanos field. Must
+
+                              be from 0 to 999,999,999 inclusive.
+                            type: number
+                          seconds:
+                            description: >-
+                              Span of time at a resolution of a second.
+
+                              Must be from 0 to 315,576,000,000 inclusive.
+                            type: number
+                        type: object
+                    type: object
                   timeoutSec:
                     description: >-
                       The backend service timeout has a different meaning depending on the type of load balancer.
@@ -4858,19 +5544,17 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
                             for an explanation of load balancing modes.
 
-                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
-
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -4886,6 +5570,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -5086,6 +5794,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -5218,12 +5932,18 @@ spec:
                               type: number
                             ttl:
                               description: >-
-                                The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                Lifetime of the cookie.
 
-                                (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                Structure is documented below.
                               type: number
                           type: object
                         type: array
+                      requestCoalescing:
+                        description: >-
+                          If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                          to the origin.
+                        type: boolean
                       serveWhileStale:
                         description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                         type: number
@@ -5336,31 +6056,16 @@ spec:
                           Structure is documented below.
                         properties:
                           name:
-                            description: >-
-                              The name of a locality load balancer policy to be used. The value
-
-                              should be one of the predefined ones as supported by localityLbPolicy,
-
-                              although at the moment only ROUND_ROBIN is supported.
-
-                              This field should only be populated when the customPolicy field is not
-
-                              used.
-
-                              Note that specifying the same policy more than once for a backend is
-
-                              not a valid configuration and will be rejected.
-
-                              The possible values are:
+                            description: Name of the cookie.
                             type: string
                           path:
                             description: Path to set for the cookie.
                             type: string
                           ttl:
                             description: >-
-                              The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                              Lifetime of the cookie.
 
-                              (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                              Structure is documented below.
                             properties:
                               nanos:
                                 description: >-
@@ -5401,6 +6106,41 @@ spec:
                           Defaults to 1024.
                         type: number
                     type: object
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -5428,6 +6168,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   healthChecks:
                     description: >-
                       The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource
@@ -5536,10 +6316,15 @@ spec:
                     type: object
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     properties:
+                      enabled:
+                        description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                        type: boolean
                       oauth2ClientId:
                         description: OAuth2 Client ID for IAP
                         type: string
@@ -5563,9 +6348,13 @@ spec:
                         - name
                         - namespace
                         type: object
-                    required:
-                    - oauth2ClientSecretSecretRef
                     type: object
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
+                    type: string
                   loadBalancingScheme:
                     description: >-
                       Indicates whether the backend service will be used with internal or
@@ -5612,22 +6401,7 @@ spec:
                                 by a locally installed custom policy implementation.
                               type: string
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                         policy:
@@ -5637,22 +6411,7 @@ spec:
                             Structure is documented below.
                           properties:
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                       type: object
@@ -5674,6 +6433,26 @@ spec:
                       enable:
                         description: Whether to enable logging for the load balancer traffic served by this backend service.
                         type: boolean
+                      optionalFields:
+                        description: >-
+                          This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                          was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                          For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                          For example: orca_load_report, tls.protocol
+                        items:
+                          type: string
+                        type: array
+                      optionalMode:
+                        description: >-
+                          Specifies the optional logging mode for the load balancer traffic.
+
+                          Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                          Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                        type: string
                       sampleRate:
                         description: >-
                           This field can only be specified if logging is enabled for this backend service. The value of
@@ -5685,6 +6464,34 @@ spec:
                           The default value is 1.0.
                         type: number
                     type: object
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    properties:
+                      nanos:
+                        description: >-
+                          Span of time that's a fraction of a second at nanosecond resolution.
+
+                          Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                          Must be from 0 to 999,999,999 inclusive.
+                        type: number
+                      seconds:
+                        description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                        type: string
+                    type: object
                   outlierDetection:
                     description: >-
                       Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -5692,10 +6499,6 @@ spec:
                       Applicable backend service types can be a global backend service with the
 
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.
-
-                      From version 6.0.
-
-                      Default values are enforce by GCP without providing them.
 
                       Structure is documented below.
                     properties:
@@ -5852,15 +6655,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -5869,7 +6672,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -5951,8 +6754,44 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    properties:
+                      name:
+                        description: Name of the cookie.
+                        type: string
+                      path:
+                        description: Path to set for the cookie.
+                        type: string
+                      ttl:
+                        description: >-
+                          Lifetime of the cookie.
+
+                          Structure is documented below.
+                        properties:
+                          nanos:
+                            description: >-
+                              Span of time that's a fraction of a second at nanosecond
+
+                              resolution. Durations less than one second are represented
+
+                              with a 0 seconds field and a positive nanos field. Must
+
+                              be from 0 to 999,999,999 inclusive.
+                            type: number
+                          seconds:
+                            description: >-
+                              Span of time at a resolution of a second.
+
+                              Must be from 0 to 315,576,000,000 inclusive.
+                            type: number
+                        type: object
+                    type: object
                   timeoutSec:
                     description: >-
                       The backend service timeout has a different meaning depending on the type of load balancer.
@@ -6202,19 +7041,17 @@ spec:
 
                             For global HTTP(S) or TCP/SSL load balancing, the default is
 
-                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S))
+                            UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)),
 
-                            and CONNECTION (for TCP/SSL).
+                            CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL).
 
                             See the Backend Services Overview
 
                             for an explanation of load balancing modes.
 
-                            From version 6.0.0 default value will be UTILIZATION to match default GCP value.
-
                             Default value is UTILIZATION.
 
-                            Possible values are: UTILIZATION, RATE, CONNECTION.
+                            Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.
                           type: string
                         capacityScaler:
                           description: >-
@@ -6230,6 +7067,30 @@ spec:
 
                             0% of its available Capacity. Valid range is [0.0,1.0].
                           type: number
+                        customMetrics:
+                          description: >-
+                            The set of custom metrics that are used for CUSTOM_METRICS BalancingMode.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              dryRun:
+                                description: >-
+                                  If true, the metric data is collected and reported to Cloud
+
+                                  Monitoring, but is not used for load balancing.
+                                type: boolean
+                              maxUtilization:
+                                description: >-
+                                  Optional parameter to define a target utilization for the Custom Metrics
+
+                                  balancing mode. The valid range is [0.0, 1.0].
+                                type: number
+                              name:
+                                description: Name of the cookie.
+                                type: string
+                            type: object
+                          type: array
                         description:
                           description: >-
                             An optional description of this resource.
@@ -6344,6 +7205,12 @@ spec:
 
                             CPU utilization target for the group. Valid range is [0.0, 1.0].
                           type: number
+                        preference:
+                          description: >-
+                            This field indicates whether this backend should be fully utilized before sending traffic to backends
+
+                            with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:
+                          type: string
                       type: object
                     type: array
                   cdnPolicy:
@@ -6476,12 +7343,18 @@ spec:
                               type: number
                             ttl:
                               description: >-
-                                The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                                Lifetime of the cookie.
 
-                                (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                                Structure is documented below.
                               type: number
                           type: object
                         type: array
+                      requestCoalescing:
+                        description: >-
+                          If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests
+
+                          to the origin.
+                        type: boolean
                       serveWhileStale:
                         description: Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
                         type: number
@@ -6594,31 +7467,16 @@ spec:
                           Structure is documented below.
                         properties:
                           name:
-                            description: >-
-                              The name of a locality load balancer policy to be used. The value
-
-                              should be one of the predefined ones as supported by localityLbPolicy,
-
-                              although at the moment only ROUND_ROBIN is supported.
-
-                              This field should only be populated when the customPolicy field is not
-
-                              used.
-
-                              Note that specifying the same policy more than once for a backend is
-
-                              not a valid configuration and will be rejected.
-
-                              The possible values are:
+                            description: Name of the cookie.
                             type: string
                           path:
                             description: Path to set for the cookie.
                             type: string
                           ttl:
                             description: >-
-                              The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s
+                              Lifetime of the cookie.
 
-                              (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
+                              Structure is documented below.
                             properties:
                               nanos:
                                 description: >-
@@ -6662,6 +7520,41 @@ spec:
                   creationTimestamp:
                     description: Creation timestamp in RFC3339 text format.
                     type: string
+                  customMetrics:
+                    description: >-
+                      List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        dryRun:
+                          description: >-
+                            If true, the metric data is collected and reported to Cloud
+
+                            Monitoring, but is not used for load balancing.
+                          type: boolean
+                        name:
+                          description: >-
+                            Name of a custom utilization signal. The name must be 1-64 characters
+
+                            long and match the regular expression a-z? which
+
+                            means the first character must be a lowercase letter, and all following
+
+                            characters must be a dash, period, underscore, lowercase letter, or
+
+                            digit, except the last character, which cannot be a dash, period, or
+
+                            underscore. For usage guidelines, see Custom Metrics balancing mode. This
+
+                            field can only be used for a global or regional backend service with the
+
+                            loadBalancingScheme set to EXTERNAL_MANAGED,
+
+                            INTERNAL_MANAGED INTERNAL_SELF_MANAGED.
+                          type: string
+                      type: object
+                    type: array
                   customRequestHeaders:
                     description: >-
                       Headers that the HTTP/S load balancer should add to proxied
@@ -6689,6 +7582,46 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendService.
                     type: boolean
+                  externalManagedMigrationState:
+                    description: >-
+                      Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and
+
+                      TEST_ALL_TRAFFIC.
+
+                      To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to
+
+                      PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be
+
+                      changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate
+
+                      traffic by percentage using externalManagedMigrationTestingPercentage.
+
+                      Rolling back a migration requires the states to be set in reverse order. So changing the
+
+                      scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at
+
+                      the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic
+
+                      back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+
+                      Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.
+                    type: string
+                  externalManagedMigrationTestingPercentage:
+                    description: >-
+                      Determines the fraction of requests that should be processed by the Global external
+
+                      Application Load Balancer.
+
+                      The value of this field must be in the range [0, 100].
+
+                      Session affinity options will slightly affect this routing behavior, for more details,
+
+                      see: Session Affinity.
+
+                      This value can only be set if the loadBalancingScheme in the backend service is set to
+
+                      EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.
+                    type: number
                   fingerprint:
                     description: >-
                       Fingerprint of this resource. A hash of the contents stored in this
@@ -6717,16 +7650,27 @@ spec:
                     x-kubernetes-list-type: set
                   iap:
                     description: >-
-                      Settings for enabling Cloud Identity Aware Proxy
+                      Settings for enabling Cloud Identity Aware Proxy.
+
+                      If OAuth client is not set, the Google-managed OAuth client is used.
 
                       Structure is documented below.
                     properties:
+                      enabled:
+                        description: Whether the serving infrastructure will authenticate and authorize all incoming requests.
+                        type: boolean
                       oauth2ClientId:
                         description: OAuth2 Client ID for IAP
                         type: string
                     type: object
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/backendServices/{{name}}
+                    type: string
+                  ipAddressSelectionPolicy:
+                    description: >-
+                      Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC).
+
+                      Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.
                     type: string
                   loadBalancingScheme:
                     description: >-
@@ -6774,22 +7718,7 @@ spec:
                                 by a locally installed custom policy implementation.
                               type: string
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                         policy:
@@ -6799,22 +7728,7 @@ spec:
                             Structure is documented below.
                           properties:
                             name:
-                              description: >-
-                                The name of a locality load balancer policy to be used. The value
-
-                                should be one of the predefined ones as supported by localityLbPolicy,
-
-                                although at the moment only ROUND_ROBIN is supported.
-
-                                This field should only be populated when the customPolicy field is not
-
-                                used.
-
-                                Note that specifying the same policy more than once for a backend is
-
-                                not a valid configuration and will be rejected.
-
-                                The possible values are:
+                              description: Name of the cookie.
                               type: string
                           type: object
                       type: object
@@ -6836,6 +7750,26 @@ spec:
                       enable:
                         description: Whether to enable logging for the load balancer traffic served by this backend service.
                         type: boolean
+                      optionalFields:
+                        description: >-
+                          This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode"
+
+                          was set to CUSTOM. Contains a list of optional fields you want to include in the logs.
+
+                          For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
+
+                          For example: orca_load_report, tls.protocol
+                        items:
+                          type: string
+                        type: array
+                      optionalMode:
+                        description: >-
+                          Specifies the optional logging mode for the load balancer traffic.
+
+                          Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+
+                          Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.
+                        type: string
                       sampleRate:
                         description: >-
                           This field can only be specified if logging is enabled for this backend service. The value of
@@ -6847,6 +7781,34 @@ spec:
                           The default value is 1.0.
                         type: number
                     type: object
+                  maxStreamDuration:
+                    description: >-
+                      Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the
+
+                      beginning of the stream until the response has been completely processed, including all retries. A stream that
+
+                      does not complete in this duration is closed.
+
+                      If not specified, there will be no timeout limit, i.e. the maximum duration is infinite.
+
+                      This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service.
+
+                      This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
+
+                      Structure is documented below.
+                    properties:
+                      nanos:
+                        description: >-
+                          Span of time that's a fraction of a second at nanosecond resolution.
+
+                          Durations less than one second are represented with a 0 seconds field and a positive nanos field.
+
+                          Must be from 0 to 999,999,999 inclusive.
+                        type: number
+                      seconds:
+                        description: Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)
+                        type: string
+                    type: object
                   outlierDetection:
                     description: >-
                       Settings controlling eviction of unhealthy hosts from the load balancing pool.
@@ -6854,10 +7816,6 @@ spec:
                       Applicable backend service types can be a global backend service with the
 
                       loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.
-
-                      From version 6.0.
-
-                      Default values are enforce by GCP without providing them.
 
                       Structure is documented below.
                     properties:
@@ -7014,15 +7972,15 @@ spec:
                     description: >-
                       The protocol this BackendService uses to communicate with backends.
 
-                      The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer
+                      The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP
 
-                      types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”,
+                      or GRPC. Refer to the documentation for the load balancers or for Traffic Director
 
-                      the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing
+                      for more information. Must be set to GRPC when the backend service is referenced
 
-                      with TCP/UDP/L3_DEFAULT Forwarding Rule protocol.
+                      by a URL map that is bound to target gRPC proxy.
 
-                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.
+                      Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.
                     type: string
                   securityPolicy:
                     description: The security policy associated with this backend service.
@@ -7031,7 +7989,7 @@ spec:
                     description: >-
                       The security settings that apply to this backend service. This field is applicable to either
 
-                      a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and
+                      a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and
 
                       load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the
 
@@ -7094,8 +8052,44 @@ spec:
 
                       not applicable if the protocol is UDP.
 
-                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.
+                      Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.
                     type: string
+                  strongSessionAffinityCookie:
+                    description: >-
+                      Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
+
+                      Structure is documented below.
+                    properties:
+                      name:
+                        description: Name of the cookie.
+                        type: string
+                      path:
+                        description: Path to set for the cookie.
+                        type: string
+                      ttl:
+                        description: >-
+                          Lifetime of the cookie.
+
+                          Structure is documented below.
+                        properties:
+                          nanos:
+                            description: >-
+                              Span of time that's a fraction of a second at nanosecond
+
+                              resolution. Durations less than one second are represented
+
+                              with a 0 seconds field and a positive nanos field. Must
+
+                              be from 0 to 999,999,999 inclusive.
+                            type: number
+                          seconds:
+                            description: >-
+                              Span of time at a resolution of a second.
+
+                              Must be from 0 to 315,576,000,000 inclusive.
+                            type: number
+                        type: object
+                    type: object
                   timeoutSec:
                     description: >-
                       The backend service timeout has a different meaning depending on the type of load balancer.

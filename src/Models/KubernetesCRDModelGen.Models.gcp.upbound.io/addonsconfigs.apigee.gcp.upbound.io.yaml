@@ -92,22 +92,22 @@ spec:
                     properties:
                       advancedApiOpsConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Advanced API Ops add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       apiSecurityConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the API Security add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       connectorsPlatformConfig:
@@ -117,17 +117,17 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       integrationConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Integration add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       monetizationConfig:
@@ -137,7 +137,7 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                     type: object
@@ -261,22 +261,22 @@ spec:
                     properties:
                       advancedApiOpsConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Advanced API Ops add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       apiSecurityConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the API Security add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       connectorsPlatformConfig:
@@ -286,17 +286,17 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       integrationConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Integration add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       monetizationConfig:
@@ -306,7 +306,7 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                     type: object
@@ -621,28 +621,28 @@ spec:
                     properties:
                       advancedApiOpsConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Advanced API Ops add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       apiSecurityConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the API Security add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                           expiresAt:
                             description: >-
                               (Output)
 
-                              Flag that specifies whether the Advanced API Ops add-on is enabled.
+                              Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
                             type: string
                         type: object
                       connectorsPlatformConfig:
@@ -652,23 +652,23 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                           expiresAt:
                             description: >-
                               (Output)
 
-                              Flag that specifies whether the Advanced API Ops add-on is enabled.
+                              Time at which the Connectors Platform add-on expires in milliseconds since epoch. If unspecified, the add-on will never expire.
                             type: string
                         type: object
                       integrationConfig:
                         description: >-
-                          Configuration for the Monetization add-on.
+                          Configuration for the Integration add-on.
 
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                       monetizationConfig:
@@ -678,7 +678,7 @@ spec:
                           Structure is documented below.
                         properties:
                           enabled:
-                            description: Flag that specifies whether the Advanced API Ops add-on is enabled.
+                            description: Flag that specifies whether the Monetization add-on is enabled.
                             type: boolean
                         type: object
                     type: object

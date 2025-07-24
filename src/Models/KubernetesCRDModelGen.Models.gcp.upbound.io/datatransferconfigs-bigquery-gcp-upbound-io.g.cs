@@ -73,6 +73,79 @@ public partial class V1beta1DataTransferConfigSpecForProviderEmailPreferences
     public bool? EnableFailureEmail { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecForProviderEncryptionConfiguration
+{
+    /// <summary>The name of the KMS key used for encrypting BigQuery data.</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+
+    /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
+    [JsonPropertyName("kmsKeyNameRef")]
+    public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameRef? KmsKeyNameRef { get; set; }
+
+    /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
+    [JsonPropertyName("kmsKeyNameSelector")]
+    public V1beta1DataTransferConfigSpecForProviderEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
@@ -90,7 +163,7 @@ public partial class V1beta1DataTransferConfigSpecForProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
-/// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef
 {
@@ -111,9 +184,17 @@ public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecForProviderSensitiveParams
 {
-    /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
     [JsonPropertyName("secretAccessKeySecretRef")]
-    public V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
+    public V1beta1DataTransferConfigSpecForProviderSensitiveParamsSecretAccessKeySecretRef? SecretAccessKeySecretRef { get; set; }
+
+    /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretAccessKeyWo")]
+    public string? SecretAccessKeyWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretAccessKeyWoVersion")]
+    public double? SecretAccessKeyWoVersion { get; set; }
 }
 
 /// <summary></summary>
@@ -151,6 +232,10 @@ public partial class V1beta1DataTransferConfigSpecForProvider
     /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
     [JsonPropertyName("emailPreferences")]
     public IList<V1beta1DataTransferConfigSpecForProviderEmailPreferences>? EmailPreferences { get; set; }
+
+    /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public IList<V1beta1DataTransferConfigSpecForProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
     /// <summary>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is US.</summary>
     [JsonPropertyName("location")]
@@ -250,6 +335,79 @@ public partial class V1beta1DataTransferConfigSpecInitProviderEmailPreferences
     public bool? EnableFailureEmail { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderEncryptionConfiguration
+{
+    /// <summary>The name of the KMS key used for encrypting BigQuery data.</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+
+    /// <summary>Reference to a CryptoKey in kms to populate kmsKeyName.</summary>
+    [JsonPropertyName("kmsKeyNameRef")]
+    public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameRef? KmsKeyNameRef { get; set; }
+
+    /// <summary>Selector for a CryptoKey in kms to populate kmsKeyName.</summary>
+    [JsonPropertyName("kmsKeyNameSelector")]
+    public V1beta1DataTransferConfigSpecInitProviderEncryptionConfigurationKmsKeyNameSelector? KmsKeyNameSelector { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
@@ -267,10 +425,38 @@ public partial class V1beta1DataTransferConfigSpecInitProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParamsSecretAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigSpecInitProviderSensitiveParams
 {
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("secretAccessKeySecretRef")]
+    public V1beta1DataTransferConfigSpecInitProviderSensitiveParamsSecretAccessKeySecretRef? SecretAccessKeySecretRef { get; set; }
+
+    /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretAccessKeyWo")]
+    public string? SecretAccessKeyWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretAccessKeyWoVersion")]
+    public double? SecretAccessKeyWoVersion { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -308,6 +494,10 @@ public partial class V1beta1DataTransferConfigSpecInitProvider
     /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
     [JsonPropertyName("emailPreferences")]
     public IList<V1beta1DataTransferConfigSpecInitProviderEmailPreferences>? EmailPreferences { get; set; }
+
+    /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public IList<V1beta1DataTransferConfigSpecInitProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
     /// <summary>The geographic location where the transfer config should reside. Examples: US, EU, asia-northeast1. The default value is US.</summary>
     [JsonPropertyName("location")]
@@ -485,6 +675,15 @@ public partial class V1beta1DataTransferConfigStatusAtProviderEmailPreferences
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataTransferConfigStatusAtProviderEncryptionConfiguration
+{
+    /// <summary>The name of the KMS key used for encrypting BigQuery data.</summary>
+    [JsonPropertyName("kmsKeyName")]
+    public string? KmsKeyName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
 {
     /// <summary>If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using transferConfigs.startManualRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.</summary>
@@ -500,30 +699,17 @@ public partial class V1beta1DataTransferConfigStatusAtProviderScheduleOptions
     public string? StartTime { get; set; }
 }
 
-/// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParamsSecretAccessKeySecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataTransferConfigStatusAtProviderSensitiveParams
 {
-    /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is sensitive and will not be displayed in the plan.</summary>
-    [JsonPropertyName("secretAccessKeySecretRef")]
-    public V1beta1DataTransferConfigStatusAtProviderSensitiveParamsSecretAccessKeySecretRef SecretAccessKeySecretRef { get; set; }
+    /// <summary>The Secret Access Key of the AWS account transferring data from. Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretAccessKeyWo")]
+    public string? SecretAccessKeyWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretAccessKeyWoVersion")]
+    public double? SecretAccessKeyWoVersion { get; set; }
 }
 
 /// <summary></summary>
@@ -553,6 +739,10 @@ public partial class V1beta1DataTransferConfigStatusAtProvider
     /// <summary>Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config. Structure is documented below.</summary>
     [JsonPropertyName("emailPreferences")]
     public IList<V1beta1DataTransferConfigStatusAtProviderEmailPreferences>? EmailPreferences { get; set; }
+
+    /// <summary>Represents the encryption configuration for a transfer. Structure is documented below.</summary>
+    [JsonPropertyName("encryptionConfiguration")]
+    public IList<V1beta1DataTransferConfigStatusAtProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
     /// <summary>an identifier for the resource with format {{name}}</summary>
     [JsonPropertyName("id")]

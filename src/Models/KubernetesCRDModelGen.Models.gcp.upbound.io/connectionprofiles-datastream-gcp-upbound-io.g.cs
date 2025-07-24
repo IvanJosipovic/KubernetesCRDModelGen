@@ -181,11 +181,15 @@ public partial class V1beta1ConnectionProfileSpecForProviderMysqlProfile
 
     /// <summary>Password for the MySQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1ConnectionProfileSpecForProviderMysqlProfilePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1ConnectionProfileSpecForProviderMysqlProfilePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>Port for the MySQL connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>SSL configuration for the MySQL connection. Structure is documented below.</summary>
     [JsonPropertyName("sslConfig")]
@@ -231,11 +235,15 @@ public partial class V1beta1ConnectionProfileSpecForProviderOracleProfile
 
     /// <summary>Password for the Oracle connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1ConnectionProfileSpecForProviderOracleProfilePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1ConnectionProfileSpecForProviderOracleProfilePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>Port for the Oracle connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the Oracle connection.</summary>
     [JsonPropertyName("username")]
@@ -457,11 +465,15 @@ public partial class V1beta1ConnectionProfileSpecForProviderPostgresqlProfile
 
     /// <summary>Password for the PostgreSQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1ConnectionProfileSpecForProviderPostgresqlProfilePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1ConnectionProfileSpecForProviderPostgresqlProfilePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>Port for the PostgreSQL connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the PostgreSQL connection.</summary>
     [JsonPropertyName("username")]
@@ -770,6 +782,10 @@ public partial class V1beta1ConnectionProfileSpecForProviderSqlServerProfile
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
+
     /// <summary>Username for the SQL Server connection.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
@@ -918,6 +934,23 @@ public partial class V1beta1ConnectionProfileSpecInitProviderGcsProfile
     public string? RootPath { get; set; }
 }
 
+/// <summary>Password for the MySQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionProfileSpecInitProviderMysqlProfilePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>PEM-encoded certificate of the CA that signed the source database server's certificate. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionProfileSpecInitProviderMysqlProfileSslConfigCaCertificateSecretRef
@@ -994,9 +1027,17 @@ public partial class V1beta1ConnectionProfileSpecInitProviderMysqlProfile
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
 
+    /// <summary>Password for the MySQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ConnectionProfileSpecInitProviderMysqlProfilePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>Port for the MySQL connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>SSL configuration for the MySQL connection. Structure is documented below.</summary>
     [JsonPropertyName("sslConfig")]
@@ -1005,6 +1046,23 @@ public partial class V1beta1ConnectionProfileSpecInitProviderMysqlProfile
     /// <summary>Username for the MySQL connection.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
+}
+
+/// <summary>Password for the Oracle connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionProfileSpecInitProviderOracleProfilePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1023,9 +1081,17 @@ public partial class V1beta1ConnectionProfileSpecInitProviderOracleProfile
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
 
+    /// <summary>Password for the Oracle connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ConnectionProfileSpecInitProviderOracleProfilePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>Port for the Oracle connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the Oracle connection.</summary>
     [JsonPropertyName("username")]
@@ -1144,6 +1210,23 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHo
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Password for the PostgreSQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfilePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileUsernameRefPolicy
@@ -1228,9 +1311,17 @@ public partial class V1beta1ConnectionProfileSpecInitProviderPostgresqlProfile
     [JsonPropertyName("hostnameSelector")]
     public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfileHostnameSelector? HostnameSelector { get; set; }
 
+    /// <summary>Password for the PostgreSQL connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ConnectionProfileSpecInitProviderPostgresqlProfilePasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>Port for the PostgreSQL connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the PostgreSQL connection.</summary>
     [JsonPropertyName("username")]
@@ -1533,11 +1624,15 @@ public partial class V1beta1ConnectionProfileSpecInitProviderSqlServerProfile
 
     /// <summary>Password for the SQL Server connection. Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1ConnectionProfileSpecInitProviderSqlServerProfilePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1ConnectionProfileSpecInitProviderSqlServerProfilePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>Port for the SQL Server connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the SQL Server connection.</summary>
     [JsonPropertyName("username")]
@@ -1802,6 +1897,10 @@ public partial class V1beta1ConnectionProfileStatusAtProviderMysqlProfile
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
+
     /// <summary>SSL configuration for the MySQL connection. Structure is documented below.</summary>
     [JsonPropertyName("sslConfig")]
     public IList<V1beta1ConnectionProfileStatusAtProviderMysqlProfileSslConfig>? SslConfig { get; set; }
@@ -1831,6 +1930,10 @@ public partial class V1beta1ConnectionProfileStatusAtProviderOracleProfile
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
+
     /// <summary>Username for the Oracle connection.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
@@ -1851,6 +1954,10 @@ public partial class V1beta1ConnectionProfileStatusAtProviderPostgresqlProfile
     /// <summary>Port for the PostgreSQL connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the PostgreSQL connection.</summary>
     [JsonPropertyName("username")]
@@ -1881,6 +1988,10 @@ public partial class V1beta1ConnectionProfileStatusAtProviderSqlServerProfile
     /// <summary>Port for the SQL Server connection.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>A reference to a Secret Manager resource name storing the user's password.</summary>
+    [JsonPropertyName("secretManagerStoredPassword")]
+    public string? SecretManagerStoredPassword { get; set; }
 
     /// <summary>Username for the SQL Server connection.</summary>
     [JsonPropertyName("username")]

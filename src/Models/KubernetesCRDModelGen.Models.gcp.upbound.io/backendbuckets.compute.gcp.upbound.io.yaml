@@ -400,6 +400,14 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendBucket.
                     type: boolean
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -745,6 +753,14 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendBucket.
                     type: boolean
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -1114,6 +1130,14 @@ spec:
                     type: boolean
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/backendBuckets/{{name}}
+                    type: string
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
                     type: string
                   project:
                     description: >-
@@ -1399,16 +1423,24 @@ spec:
                           Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.
                         type: string
                       clientTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       defaultTtl:
                         description: >-
                           Specifies the default TTL for cached content served by this origin for responses
 
-                          that do not have an existing valid TTL (max-age or s-max-age).
+                          that do not have an existing valid TTL (max-age or s-max-age). When the cache_mode
+
+                          is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       maxTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       negativeCaching:
                         description: Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
@@ -1570,6 +1602,14 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendBucket.
                     type: boolean
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -1740,16 +1780,24 @@ spec:
                           Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.
                         type: string
                       clientTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       defaultTtl:
                         description: >-
                           Specifies the default TTL for cached content served by this origin for responses
 
-                          that do not have an existing valid TTL (max-age or s-max-age).
+                          that do not have an existing valid TTL (max-age or s-max-age). When the cache_mode
+
+                          is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       maxTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       negativeCaching:
                         description: Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
@@ -1911,6 +1959,14 @@ spec:
                   enableCdn:
                     description: If true, enable Cloud CDN for this BackendBucket.
                     type: boolean
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs.
@@ -2186,16 +2242,24 @@ spec:
                           Possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL, CACHE_ALL_STATIC.
                         type: string
                       clientTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       defaultTtl:
                         description: >-
                           Specifies the default TTL for cached content served by this origin for responses
 
-                          that do not have an existing valid TTL (max-age or s-max-age).
+                          that do not have an existing valid TTL (max-age or s-max-age). When the cache_mode
+
+                          is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       maxTtl:
-                        description: Specifies the maximum allowed TTL for cached content served by this origin.
+                        description: >-
+                          Specifies the maximum allowed TTL for cached content served by this origin. When the
+
+                          cache_mode is set to "USE_ORIGIN_HEADERS", you must omit this field.
                         type: number
                       negativeCaching:
                         description: Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
@@ -2276,6 +2340,14 @@ spec:
                     type: boolean
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/backendBuckets/{{name}}
+                    type: string
+                  loadBalancingScheme:
+                    description: >-
+                      The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer.
+
+                      If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
+
+                      Possible values are: INTERNAL_MANAGED.
                     type: string
                   project:
                     description: >-

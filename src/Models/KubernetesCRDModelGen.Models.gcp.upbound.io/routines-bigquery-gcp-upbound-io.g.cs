@@ -343,6 +343,10 @@ public partial class V1beta1RoutineSpecForProvider
     [JsonPropertyName("routineType")]
     public string? RoutineType { get; set; }
 
+    /// <summary>Optional. The security mode of the routine, if defined. If not defined, the security mode is automatically determined from the routine's configuration. Possible values are: DEFINER, INVOKER.</summary>
+    [JsonPropertyName("securityMode")]
+    public string? SecurityMode { get; set; }
+
     /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
     [JsonPropertyName("sparkOptions")]
     public IList<V1beta1RoutineSpecForProviderSparkOptions>? SparkOptions { get; set; }
@@ -614,6 +618,10 @@ public partial class V1beta1RoutineSpecInitProvider
     /// <summary>The type of routine. Possible values are: SCALAR_FUNCTION, PROCEDURE, TABLE_VALUED_FUNCTION.</summary>
     [JsonPropertyName("routineType")]
     public string? RoutineType { get; set; }
+
+    /// <summary>Optional. The security mode of the routine, if defined. If not defined, the security mode is automatically determined from the routine's configuration. Possible values are: DEFINER, INVOKER.</summary>
+    [JsonPropertyName("securityMode")]
+    public string? SecurityMode { get; set; }
 
     /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
     [JsonPropertyName("sparkOptions")]
@@ -906,6 +914,10 @@ public partial class V1beta1RoutineStatusAtProvider
     /// <summary>The type of routine. Possible values are: SCALAR_FUNCTION, PROCEDURE, TABLE_VALUED_FUNCTION.</summary>
     [JsonPropertyName("routineType")]
     public string? RoutineType { get; set; }
+
+    /// <summary>Optional. The security mode of the routine, if defined. If not defined, the security mode is automatically determined from the routine's configuration. Possible values are: DEFINER, INVOKER.</summary>
+    [JsonPropertyName("securityMode")]
+    public string? SecurityMode { get; set; }
 
     /// <summary>Optional. If language is one of "PYTHON", "JAVA", "SCALA", this field stores the options for spark stored procedure. Structure is documented below.</summary>
     [JsonPropertyName("sparkOptions")]

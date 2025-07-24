@@ -87,6 +87,19 @@ public partial class V1beta1WorkerPoolSpecForProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkerPoolSpecForProviderPrivateServiceConnect
+{
+    /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("routeAllTraffic")]
+    public bool? RouteAllTraffic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecForProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -121,6 +134,10 @@ public partial class V1beta1WorkerPoolSpecForProvider
     /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1WorkerPoolSpecForProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateServiceConnect")]
+    public IList<V1beta1WorkerPoolSpecForProviderPrivateServiceConnect>? PrivateServiceConnect { get; set; }
 
     /// <summary>The project for the resource</summary>
     [JsonPropertyName("project")]
@@ -210,6 +227,19 @@ public partial class V1beta1WorkerPoolSpecInitProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkerPoolSpecInitProviderPrivateServiceConnect
+{
+    /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("routeAllTraffic")]
+    public bool? RouteAllTraffic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolSpecInitProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -240,6 +270,10 @@ public partial class V1beta1WorkerPoolSpecInitProvider
     /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1WorkerPoolSpecInitProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateServiceConnect")]
+    public IList<V1beta1WorkerPoolSpecInitProviderPrivateServiceConnect>? PrivateServiceConnect { get; set; }
 
     /// <summary>The project for the resource</summary>
     [JsonPropertyName("project")]
@@ -397,6 +431,19 @@ public partial class V1beta1WorkerPoolStatusAtProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkerPoolStatusAtProviderPrivateServiceConnect
+{
+    /// <summary></summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("routeAllTraffic")]
+    public bool? RouteAllTraffic { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkerPoolStatusAtProviderWorkerConfig
 {
     /// <summary>Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If 0 is specified, Cloud Build will use a standard disk size.</summary>
@@ -447,6 +494,10 @@ public partial class V1beta1WorkerPoolStatusAtProvider
     /// <summary>Network configuration for the WorkerPool. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1WorkerPoolStatusAtProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("privateServiceConnect")]
+    public IList<V1beta1WorkerPoolStatusAtProviderPrivateServiceConnect>? PrivateServiceConnect { get; set; }
 
     /// <summary>The project for the resource</summary>
     [JsonPropertyName("project")]

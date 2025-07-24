@@ -1282,9 +1282,9 @@ spec:
                     type: string
                   type:
                     description: >-
-                      The type of hosting used by the gateway. Refer to
+                      The type of network connectivity used by the AppConnection. Refer
 
-                      https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
+                      to https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
 
                       for a list of possible values.
                     type: string
@@ -1545,9 +1545,9 @@ spec:
                     type: string
                   type:
                     description: >-
-                      The type of hosting used by the gateway. Refer to
+                      The type of network connectivity used by the AppConnection. Refer
 
-                      https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
+                      to https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
 
                       for a list of possible values.
                     type: string
@@ -1796,6 +1796,7 @@ spec:
                   effectiveLabels:
                     additionalProperties:
                       type: string
+                    description: for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   gateway:
@@ -1860,9 +1861,9 @@ spec:
                     x-kubernetes-map-type: granular
                   type:
                     description: >-
-                      The type of hosting used by the gateway. Refer to
+                      The type of network connectivity used by the AppConnection. Refer
 
-                      https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#Type_1
+                      to https://cloud.google.com/beyondcorp/docs/reference/rest/v1/projects.locations.appConnections#type
 
                       for a list of possible values.
                     type: string

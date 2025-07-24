@@ -115,6 +115,79 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepositoryPublicRepository>? PublicRepository { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepository
+{
+    /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
+    [JsonPropertyName("uri")]
+    public string? Uri { get; set; }
+
+    /// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
+    [JsonPropertyName("uriRef")]
+    public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriRef? UriRef { get; set; }
+
+    /// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
+    [JsonPropertyName("uriSelector")]
+    public V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepositoryUriSelector? UriSelector { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
@@ -319,6 +392,10 @@ public partial class V1beta1RegistryRepositorySpecForProviderRemoteRepositoryCon
     [JsonPropertyName("aptRepository")]
     public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigAptRepository>? AptRepository { get; set; }
 
+    /// <summary>Specific settings for an Artifact Registory remote repository. Structure is documented below.</summary>
+    [JsonPropertyName("commonRepository")]
+    public IList<V1beta1RegistryRepositorySpecForProviderRemoteRepositoryConfigCommonRepository>? CommonRepository { get; set; }
+
     /// <summary>The description of the remote source.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -444,6 +521,15 @@ public partial class V1beta1RegistryRepositorySpecForProviderVirtualRepositoryCo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecForProviderVulnerabilityScanningConfig
+{
+    /// <summary>This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository. Possible values are: INHERITED, DISABLED.</summary>
+    [JsonPropertyName("enablementConfig")]
+    public string? EnablementConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecForProvider
 {
     /// <summary>Cleanup policies for this repository. Cleanup policies indicate when certain package versions can be automatically deleted. Map keys are policy IDs supplied by users during policy creation. They must unique within a repository and be under 128 characters in length. Structure is documented below.</summary>
@@ -497,6 +583,10 @@ public partial class V1beta1RegistryRepositorySpecForProvider
     /// <summary>Configuration specific for a Virtual Repository. Structure is documented below.</summary>
     [JsonPropertyName("virtualRepositoryConfig")]
     public IList<V1beta1RegistryRepositorySpecForProviderVirtualRepositoryConfig>? VirtualRepositoryConfig { get; set; }
+
+    /// <summary>Configuration for vulnerability scanning of artifacts stored in this repository. Structure is documented below.</summary>
+    [JsonPropertyName("vulnerabilityScanningConfig")]
+    public IList<V1beta1RegistryRepositorySpecForProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -604,6 +694,79 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     /// <summary>One of the publicly available Yum repositories supported by Artifact Registry. Structure is documented below.</summary>
     [JsonPropertyName("publicRepository")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepositoryPublicRepository>? PublicRepository { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepository
+{
+    /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
+    [JsonPropertyName("uri")]
+    public string? Uri { get; set; }
+
+    /// <summary>Reference to a RegistryRepository in artifact to populate uri.</summary>
+    [JsonPropertyName("uriRef")]
+    public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriRef? UriRef { get; set; }
+
+    /// <summary>Selector for a RegistryRepository in artifact to populate uri.</summary>
+    [JsonPropertyName("uriSelector")]
+    public V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepositoryUriSelector? UriSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -810,6 +973,10 @@ public partial class V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryCo
     [JsonPropertyName("aptRepository")]
     public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigAptRepository>? AptRepository { get; set; }
 
+    /// <summary>Specific settings for an Artifact Registory remote repository. Structure is documented below.</summary>
+    [JsonPropertyName("commonRepository")]
+    public IList<V1beta1RegistryRepositorySpecInitProviderRemoteRepositoryConfigCommonRepository>? CommonRepository { get; set; }
+
     /// <summary>The description of the remote source.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -933,6 +1100,15 @@ public partial class V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryC
     public IList<V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositorySpecInitProviderVulnerabilityScanningConfig
+{
+    /// <summary>This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository. Possible values are: INHERITED, DISABLED.</summary>
+    [JsonPropertyName("enablementConfig")]
+    public string? EnablementConfig { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositorySpecInitProvider
@@ -984,6 +1160,10 @@ public partial class V1beta1RegistryRepositorySpecInitProvider
     /// <summary>Configuration specific for a Virtual Repository. Structure is documented below.</summary>
     [JsonPropertyName("virtualRepositoryConfig")]
     public IList<V1beta1RegistryRepositorySpecInitProviderVirtualRepositoryConfig>? VirtualRepositoryConfig { get; set; }
+
+    /// <summary>Configuration for vulnerability scanning of artifacts stored in this repository. Structure is documented below.</summary>
+    [JsonPropertyName("vulnerabilityScanningConfig")]
+    public IList<V1beta1RegistryRepositorySpecInitProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1227,6 +1407,15 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigCommonRepository
+{
+    /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
+    [JsonPropertyName("uri")]
+    public string? Uri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigDockerRepositoryCustomRepository
 {
     /// <summary>Specific uri to the registry, e.g. "https://registry-1.docker.io"</summary>
@@ -1365,6 +1554,10 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryCo
     [JsonPropertyName("aptRepository")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigAptRepository>? AptRepository { get; set; }
 
+    /// <summary>Specific settings for an Artifact Registory remote repository. Structure is documented below.</summary>
+    [JsonPropertyName("commonRepository")]
+    public IList<V1beta1RegistryRepositoryStatusAtProviderRemoteRepositoryConfigCommonRepository>? CommonRepository { get; set; }
+
     /// <summary>The description of the remote source.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -1422,6 +1615,23 @@ public partial class V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryC
     /// <summary>Policies that configure the upstream artifacts distributed by the Virtual Repository. Upstream policies cannot be set on a standard repository. Structure is documented below.</summary>
     [JsonPropertyName("upstreamPolicies")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfigUpstreamPolicies>? UpstreamPolicies { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegistryRepositoryStatusAtProviderVulnerabilityScanningConfig
+{
+    /// <summary>This configures whether vulnerability scanning is automatically performed for artifacts pushed to this repository. Possible values are: INHERITED, DISABLED.</summary>
+    [JsonPropertyName("enablementConfig")]
+    public string? EnablementConfig { get; set; }
+
+    /// <summary>(Output) This field returns whether scanning is active for this repository.</summary>
+    [JsonPropertyName("enablementState")]
+    public string? EnablementState { get; set; }
+
+    /// <summary>(Output) This provides an explanation for the state of scanning on this repository.</summary>
+    [JsonPropertyName("enablementStateReason")]
+    public string? EnablementStateReason { get; set; }
 }
 
 /// <summary></summary>
@@ -1503,6 +1713,10 @@ public partial class V1beta1RegistryRepositoryStatusAtProvider
     /// <summary>Configuration specific for a Virtual Repository. Structure is documented below.</summary>
     [JsonPropertyName("virtualRepositoryConfig")]
     public IList<V1beta1RegistryRepositoryStatusAtProviderVirtualRepositoryConfig>? VirtualRepositoryConfig { get; set; }
+
+    /// <summary>Configuration for vulnerability scanning of artifacts stored in this repository. Structure is documented below.</summary>
+    [JsonPropertyName("vulnerabilityScanningConfig")]
+    public IList<V1beta1RegistryRepositoryStatusAtProviderVulnerabilityScanningConfig>? VulnerabilityScanningConfig { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
