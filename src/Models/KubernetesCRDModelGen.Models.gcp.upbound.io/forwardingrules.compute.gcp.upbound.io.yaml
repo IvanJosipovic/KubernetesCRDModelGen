@@ -311,6 +311,18 @@ spec:
                             type: string
                         type: object
                     type: object
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
+                    type: string
                   ipProtocol:
                     description: >-
                       The IP protocol to which this rule applies.
@@ -1036,6 +1048,18 @@ spec:
                             type: string
                         type: object
                     type: object
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
+                    type: string
                   ipProtocol:
                     description: >-
                       The IP protocol to which this rule applies.
@@ -1789,6 +1813,18 @@ spec:
                       While creating a forwarding rule, specifying an IPAddress is
 
                       required under the following circumstances:
+                    type: string
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
                     type: string
                   ipProtocol:
                     description: >-
@@ -2396,6 +2432,18 @@ spec:
                             type: string
                         type: object
                     type: object
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
+                    type: string
                   ipProtocol:
                     description: >-
                       The IP protocol to which this rule applies.
@@ -2455,6 +2503,12 @@ spec:
                   loadBalancingScheme:
                     description: >-
                       Specifies the forwarding rule type.
+
+                      Note that an empty string value ("") is also supported for some use
+
+                      cases, for example PSC (private service connection) regional forwarding
+
+                      rules.
 
                       For more information about forwarding rules, refer to
 
@@ -3119,6 +3173,18 @@ spec:
                             type: string
                         type: object
                     type: object
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
+                    type: string
                   ipProtocol:
                     description: >-
                       The IP protocol to which this rule applies.
@@ -3178,6 +3244,12 @@ spec:
                   loadBalancingScheme:
                     description: >-
                       Specifies the forwarding rule type.
+
+                      Note that an empty string value ("") is also supported for some use
+
+                      cases, for example PSC (private service connection) regional forwarding
+
+                      rules.
 
                       For more information about forwarding rules, refer to
 
@@ -3871,6 +3943,18 @@ spec:
 
                       required under the following circumstances:
                     type: string
+                  ipCollection:
+                    description: >-
+                      Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP
+
+                      in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode.
+
+                      Use one of the following formats to specify a sub-PDP when creating an
+
+                      IPv6 NetLB forwarding rule using BYOIP:
+
+                      Full resource URL, as in:
+                    type: string
                   ipProtocol:
                     description: >-
                       The IP protocol to which this rule applies.
@@ -3936,6 +4020,12 @@ spec:
                   loadBalancingScheme:
                     description: >-
                       Specifies the forwarding rule type.
+
+                      Note that an empty string value ("") is also supported for some use
+
+                      cases, for example PSC (private service connection) regional forwarding
+
+                      rules.
 
                       For more information about forwarding rules, refer to
 

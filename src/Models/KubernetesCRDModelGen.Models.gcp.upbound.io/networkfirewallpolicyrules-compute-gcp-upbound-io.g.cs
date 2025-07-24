@@ -72,7 +72,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchLayer4C
     [JsonPropertyName("ipProtocol")]
     public string? IpProtocol { get; set; }
 
-    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: “.</summary>
+    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ["22"], ["80","443"], and ["12345-12349"].</summary>
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
@@ -193,7 +193,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -206,15 +206,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecu
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
 }
 
-/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
 {
-    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.</summary>
     [JsonPropertyName("destAddressGroups")]
     public IList<string>? DestAddressGroups { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of destination of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 100.</summary>
     [JsonPropertyName("destFqdns")]
     public IList<string>? DestFqdns { get; set; }
 
@@ -222,19 +222,19 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
     [JsonPropertyName("destIpRanges")]
     public IList<string>? DestIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.</summary>
     [JsonPropertyName("destRegionCodes")]
     public IList<string>? DestRegionCodes { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.</summary>
     [JsonPropertyName("destThreatIntelligences")]
     public IList<string>? DestThreatIntelligences { get; set; }
 
-    /// <summary>Pairs of IP protocols and ports that the rule should match.</summary>
+    /// <summary>Pairs of IP protocols and ports that the rule should match. Structure is documented below.</summary>
     [JsonPropertyName("layer4Configs")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchLayer4Configs>? Layer4Configs { get; set; }
 
-    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.</summary>
     [JsonPropertyName("srcAddressGroups")]
     public IList<string>? SrcAddressGroups { get; set; }
 
@@ -246,7 +246,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
     [JsonPropertyName("srcAddressGroupsSelector")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcAddressGroupsSelector? SrcAddressGroupsSelector { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 100.</summary>
     [JsonPropertyName("srcFqdns")]
     public IList<string>? SrcFqdns { get; set; }
 
@@ -254,15 +254,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
     [JsonPropertyName("srcIpRanges")]
     public IList<string>? SrcIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.</summary>
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
-    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("srcSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecForProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
@@ -271,7 +271,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecForProviderTargetSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -288,7 +288,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The direction in which this rule applies. Possible values: INGRESS, EGRESS</summary>
+    /// <summary>The direction in which this rule applies. Possible values are: INGRESS, EGRESS.</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
@@ -312,7 +312,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("firewallPolicySelector")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderFirewallPolicySelector? FirewallPolicySelector { get; set; }
 
-    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public V1beta1NetworkFirewallPolicyRuleSpecForProviderMatch? Match { get; set; }
 
@@ -320,7 +320,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("priority")]
     public double Priority { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -328,11 +328,11 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("ruleName")]
     public string? RuleName { get; set; }
 
-    /// <summary>A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
+    /// <summary>A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group Must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
     [JsonPropertyName("securityProfileGroup")]
     public string? SecurityProfileGroup { get; set; }
 
-    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("targetSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecForProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
@@ -340,7 +340,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecForProvider
     [JsonPropertyName("targetServiceAccounts")]
     public IList<string>? TargetServiceAccounts { get; set; }
 
-    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
+    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
@@ -353,7 +353,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchLayer4
     [JsonPropertyName("ipProtocol")]
     public string? IpProtocol { get; set; }
 
-    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: “.</summary>
+    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ["22"], ["80","443"], and ["12345-12349"].</summary>
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
@@ -474,7 +474,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -487,15 +487,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSec
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTagsNameSelector? NameSelector { get; set; }
 }
 
-/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
 {
-    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.</summary>
     [JsonPropertyName("destAddressGroups")]
     public IList<string>? DestAddressGroups { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of destination of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 100.</summary>
     [JsonPropertyName("destFqdns")]
     public IList<string>? DestFqdns { get; set; }
 
@@ -503,19 +503,19 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
     [JsonPropertyName("destIpRanges")]
     public IList<string>? DestIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.</summary>
     [JsonPropertyName("destRegionCodes")]
     public IList<string>? DestRegionCodes { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.</summary>
     [JsonPropertyName("destThreatIntelligences")]
     public IList<string>? DestThreatIntelligences { get; set; }
 
-    /// <summary>Pairs of IP protocols and ports that the rule should match.</summary>
+    /// <summary>Pairs of IP protocols and ports that the rule should match. Structure is documented below.</summary>
     [JsonPropertyName("layer4Configs")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchLayer4Configs>? Layer4Configs { get; set; }
 
-    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.</summary>
     [JsonPropertyName("srcAddressGroups")]
     public IList<string>? SrcAddressGroups { get; set; }
 
@@ -527,7 +527,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
     [JsonPropertyName("srcAddressGroupsSelector")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcAddressGroupsSelector? SrcAddressGroupsSelector { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 100.</summary>
     [JsonPropertyName("srcFqdns")]
     public IList<string>? SrcFqdns { get; set; }
 
@@ -535,15 +535,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
     [JsonPropertyName("srcIpRanges")]
     public IList<string>? SrcIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.</summary>
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
-    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("srcSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
@@ -552,7 +552,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProviderTargetSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -569,7 +569,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The direction in which this rule applies. Possible values: INGRESS, EGRESS</summary>
+    /// <summary>The direction in which this rule applies. Possible values are: INGRESS, EGRESS.</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
@@ -581,11 +581,11 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
     [JsonPropertyName("enableLogging")]
     public bool? EnableLogging { get; set; }
 
-    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public V1beta1NetworkFirewallPolicyRuleSpecInitProviderMatch? Match { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -593,11 +593,11 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
     [JsonPropertyName("ruleName")]
     public string? RuleName { get; set; }
 
-    /// <summary>A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
+    /// <summary>A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group Must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
     [JsonPropertyName("securityProfileGroup")]
     public string? SecurityProfileGroup { get; set; }
 
-    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("targetSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleSpecInitProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
@@ -605,7 +605,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleSpecInitProvider
     [JsonPropertyName("targetServiceAccounts")]
     public IList<string>? TargetServiceAccounts { get; set; }
 
-    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
+    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
@@ -750,7 +750,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchLayer4
     [JsonPropertyName("ipProtocol")]
     public string? IpProtocol { get; set; }
 
-    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: “.</summary>
+    /// <summary>An optional list of ports to which this rule applies. This field is only applicable for UDP or TCP protocol. Each entry must be either an integer or a range. If not specified, this rule applies to connections through any port. Example inputs include: ["22"], ["80","443"], and ["12345-12349"].</summary>
     [JsonPropertyName("ports")]
     public IList<string>? Ports { get; set; }
 }
@@ -759,24 +759,24 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchLayer4
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchSrcSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>[Output Only] State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
+    /// <summary>(Output) State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
 
-/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+/// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
 {
-    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.</summary>
     [JsonPropertyName("destAddressGroups")]
     public IList<string>? DestAddressGroups { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of destination of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 100.</summary>
     [JsonPropertyName("destFqdns")]
     public IList<string>? DestFqdns { get; set; }
 
@@ -784,23 +784,23 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
     [JsonPropertyName("destIpRanges")]
     public IList<string>? DestIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is egress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.</summary>
     [JsonPropertyName("destRegionCodes")]
     public IList<string>? DestRegionCodes { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.</summary>
     [JsonPropertyName("destThreatIntelligences")]
     public IList<string>? DestThreatIntelligences { get; set; }
 
-    /// <summary>Pairs of IP protocols and ports that the rule should match.</summary>
+    /// <summary>Pairs of IP protocols and ports that the rule should match. Structure is documented below.</summary>
     [JsonPropertyName("layer4Configs")]
     public IList<V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchLayer4Configs>? Layer4Configs { get; set; }
 
-    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.</summary>
+    /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.</summary>
     [JsonPropertyName("srcAddressGroups")]
     public IList<string>? SrcAddressGroups { get; set; }
 
-    /// <summary>Domain names that will be used to match against the resolved domain name of source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 100.</summary>
     [JsonPropertyName("srcFqdns")]
     public IList<string>? SrcFqdns { get; set; }
 
@@ -808,15 +808,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
     [JsonPropertyName("srcIpRanges")]
     public IList<string>? SrcIpRanges { get; set; }
 
-    /// <summary>The Unicode country codes whose IP addresses will be used to match against the source of traffic. Can only be specified if DIRECTION is ingress.</summary>
+    /// <summary>Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.</summary>
     [JsonPropertyName("srcRegionCodes")]
     public IList<string>? SrcRegionCodes { get; set; }
 
-    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
+    /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("srcSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatchSrcSecureTags>? SrcSecureTags { get; set; }
 
-    /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
+    /// <summary>Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
     public IList<string>? SrcThreatIntelligences { get; set; }
 }
@@ -825,11 +825,11 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProviderTargetSecureTags
 {
-    /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+</summary>
+    /// <summary>Name of the secure tag, created with TagManager's TagValue API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>[Output Only] State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
+    /// <summary>(Output) State of the secure tag, either EFFECTIVE or INEFFECTIVE. A secure tag is INEFFECTIVE when it is deleted or its network is deleted.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
@@ -842,11 +842,15 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
+    /// <summary>Creation timestamp in RFC3339 text format.</summary>
+    [JsonPropertyName("creationTimestamp")]
+    public string? CreationTimestamp { get; set; }
+
     /// <summary>An optional description for this resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The direction in which this rule applies. Possible values: INGRESS, EGRESS</summary>
+    /// <summary>The direction in which this rule applies. Possible values are: INGRESS, EGRESS.</summary>
     [JsonPropertyName("direction")]
     public string? Direction { get; set; }
 
@@ -870,7 +874,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 
-    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
+    /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public V1beta1NetworkFirewallPolicyRuleStatusAtProviderMatch? Match { get; set; }
 
@@ -878,7 +882,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -890,11 +894,11 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("ruleTupleCount")]
     public double? RuleTupleCount { get; set; }
 
-    /// <summary>A fully-qualified URL of a SecurityProfileGroup resource. Example: https://networksecurity.googleapis.com/v1/organizations/{organizationId}/locations/global/securityProfileGroups/my-security-profile-group. It must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
+    /// <summary>A fully-qualified URL of a SecurityProfile resource instance. Example: https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group Must be specified if action = 'apply_security_profile_group' and cannot be specified for other actions.</summary>
     [JsonPropertyName("securityProfileGroup")]
     public string? SecurityProfileGroup { get; set; }
 
-    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
+    /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the targetSecureTag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256. Structure is documented below.</summary>
     [JsonPropertyName("targetSecureTags")]
     public IList<V1beta1NetworkFirewallPolicyRuleStatusAtProviderTargetSecureTags>? TargetSecureTags { get; set; }
 
@@ -902,7 +906,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatusAtProvider
     [JsonPropertyName("targetServiceAccounts")]
     public IList<string>? TargetServiceAccounts { get; set; }
 
-    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. It can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
+    /// <summary>Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.</summary>
     [JsonPropertyName("tlsInspect")]
     public bool? TlsInspect { get; set; }
 }
@@ -953,7 +957,7 @@ public partial class V1beta1NetworkFirewallPolicyRuleStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. The Compute NetworkFirewallPolicyRule resource</summary>
+/// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkFirewallPolicyRuleSpec>, IStatus<V1beta1NetworkFirewallPolicyRuleStatus>
@@ -983,7 +987,7 @@ public partial class V1beta1NetworkFirewallPolicyRule : IKubernetesObject<V1Obje
     public V1beta1NetworkFirewallPolicyRuleStatus? Status { get; set; }
 }
 
-/// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. The Compute NetworkFirewallPolicyRule resource</summary>
+/// <summary>NetworkFirewallPolicyRule is the Schema for the NetworkFirewallPolicyRules API. Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NetworkFirewallPolicyRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkFirewallPolicyRule>

@@ -68,6 +68,10 @@ public partial class V1beta1FolderSpecForProviderParentSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderSpecForProvider
 {
+    /// <summary>When the field is set to false, deleting the folder is allowed. Default value is true.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
@@ -83,6 +87,10 @@ public partial class V1beta1FolderSpecForProvider
     /// <summary>Selector for a Folder in cloudplatform to populate parent.</summary>
     [JsonPropertyName("parentSelector")]
     public V1beta1FolderSpecForProviderParentSelector? ParentSelector { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when  mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -145,6 +153,10 @@ public partial class V1beta1FolderSpecInitProviderParentSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderSpecInitProvider
 {
+    /// <summary>When the field is set to false, deleting the folder is allowed. Default value is true.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
@@ -160,6 +172,10 @@ public partial class V1beta1FolderSpecInitProvider
     /// <summary>Selector for a Folder in cloudplatform to populate parent.</summary>
     [JsonPropertyName("parentSelector")]
     public V1beta1FolderSpecInitProviderParentSelector? ParentSelector { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when  mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -302,6 +318,10 @@ public partial class V1beta1FolderStatusAtProvider
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
+    /// <summary>When the field is set to false, deleting the folder is allowed. Default value is true.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>The folder’s display name. A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</summary>
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
@@ -325,6 +345,10 @@ public partial class V1beta1FolderStatusAtProvider
     /// <summary>The resource name of the parent Folder or Organization. Must be of the form folders/{folder_id} or organizations/{org_id}.</summary>
     [JsonPropertyName("parent")]
     public string? Parent { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when  mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

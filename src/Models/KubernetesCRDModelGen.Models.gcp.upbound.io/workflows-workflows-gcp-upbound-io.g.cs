@@ -76,9 +76,17 @@ public partial class V1beta1WorkflowSpecForProvider
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the workflow is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>Description of the workflow provided by the user. Must be at most 1000 unicode characters long.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Describes the level of execution history to be stored for this workflow. This configuration determines how much information about workflow executions is preserved. If not specified, defaults to EXECUTION_HISTORY_LEVEL_UNSPECIFIED. Possible values are: EXECUTION_HISTORY_LEVEL_UNSPECIFIED, EXECUTION_HISTORY_BASIC, EXECUTION_HISTORY_DETAILED.</summary>
+    [JsonPropertyName("executionHistoryLevel")]
+    public string? ExecutionHistoryLevel { get; set; }
 
     /// <summary>A set of key/value label pairs to assign to this Workflow.</summary>
     [JsonPropertyName("labels")]
@@ -116,7 +124,11 @@ public partial class V1beta1WorkflowSpecForProvider
     [JsonPropertyName("sourceContents")]
     public string? SourceContents { get; set; }
 
-    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS".</summary>
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with "GOOGLE" or "WORKFLOWS".</summary>
     [JsonPropertyName("userEnvVars")]
     public IDictionary<string, string>? UserEnvVars { get; set; }
 }
@@ -189,9 +201,17 @@ public partial class V1beta1WorkflowSpecInitProvider
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the workflow is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>Description of the workflow provided by the user. Must be at most 1000 unicode characters long.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Describes the level of execution history to be stored for this workflow. This configuration determines how much information about workflow executions is preserved. If not specified, defaults to EXECUTION_HISTORY_LEVEL_UNSPECIFIED. Possible values are: EXECUTION_HISTORY_LEVEL_UNSPECIFIED, EXECUTION_HISTORY_BASIC, EXECUTION_HISTORY_DETAILED.</summary>
+    [JsonPropertyName("executionHistoryLevel")]
+    public string? ExecutionHistoryLevel { get; set; }
 
     /// <summary>A set of key/value label pairs to assign to this Workflow.</summary>
     [JsonPropertyName("labels")]
@@ -229,7 +249,11 @@ public partial class V1beta1WorkflowSpecInitProvider
     [JsonPropertyName("sourceContents")]
     public string? SourceContents { get; set; }
 
-    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS".</summary>
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with "GOOGLE" or "WORKFLOWS".</summary>
     [JsonPropertyName("userEnvVars")]
     public IDictionary<string, string>? UserEnvVars { get; set; }
 }
@@ -382,6 +406,10 @@ public partial class V1beta1WorkflowStatusAtProvider
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the workflow is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>Description of the workflow provided by the user. Must be at most 1000 unicode characters long.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -389,6 +417,10 @@ public partial class V1beta1WorkflowStatusAtProvider
     /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
+
+    /// <summary>Describes the level of execution history to be stored for this workflow. This configuration determines how much information about workflow executions is preserved. If not specified, defaults to EXECUTION_HISTORY_LEVEL_UNSPECIFIED. Possible values are: EXECUTION_HISTORY_LEVEL_UNSPECIFIED, EXECUTION_HISTORY_BASIC, EXECUTION_HISTORY_DETAILED.</summary>
+    [JsonPropertyName("executionHistoryLevel")]
+    public string? ExecutionHistoryLevel { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{region}}/workflows/{{name}}</summary>
     [JsonPropertyName("id")]
@@ -430,6 +462,10 @@ public partial class V1beta1WorkflowStatusAtProvider
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
     /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
@@ -438,7 +474,7 @@ public partial class V1beta1WorkflowStatusAtProvider
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 
-    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or “WORKFLOWS".</summary>
+    /// <summary>User-defined environment variables associated with this workflow revision. This map has a maximum length of 20. Each string can take up to 4KiB. Keys cannot be empty strings and cannot start with "GOOGLE" or "WORKFLOWS".</summary>
     [JsonPropertyName("userEnvVars")]
     public IDictionary<string, string>? UserEnvVars { get; set; }
 }

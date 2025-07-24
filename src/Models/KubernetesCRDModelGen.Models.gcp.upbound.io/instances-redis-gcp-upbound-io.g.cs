@@ -881,6 +881,10 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 
+    /// <summary>The CIDR range of internal addresses that are reserved for this instance. If not provided, the service will choose an unused /29 block, for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique and non-overlapping with existing subnets in an authorized network.</summary>
+    [JsonPropertyName("effectiveReservedIpRange")]
+    public string? EffectiveReservedIpRange { get; set; }
+
     /// <summary>Hostname or IP address of the exposed Redis endpoint used by clients to connect to the service.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }

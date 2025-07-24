@@ -21,10 +21,6 @@ public partial class V1beta1ManagedSSLCertificateSpecForProviderManaged
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedSSLCertificateSpecForProvider
 {
-    /// <summary>The unique identifier for the resource.</summary>
-    [JsonPropertyName("certificateId")]
-    public double? CertificateId { get; set; }
-
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -55,10 +51,6 @@ public partial class V1beta1ManagedSSLCertificateSpecInitProviderManaged
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedSSLCertificateSpecInitProvider
 {
-    /// <summary>The unique identifier for the resource.</summary>
-    [JsonPropertyName("certificateId")]
-    public double? CertificateId { get; set; }
-
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }

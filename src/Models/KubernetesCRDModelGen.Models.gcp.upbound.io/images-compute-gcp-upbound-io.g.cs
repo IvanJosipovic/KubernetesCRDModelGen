@@ -17,6 +17,40 @@ public partial class V1beta1ImageSpecForProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecForProviderImageEncryptionKey
@@ -28,6 +62,14 @@ public partial class V1beta1ImageSpecForProviderImageEncryptionKey
     /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccount")]
     public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecForProviderImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecForProviderImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -45,6 +87,300 @@ public partial class V1beta1ImageSpecForProviderRawDisk
     /// <summary>The full Google Cloud Storage URL where disk storage is stored You must provide either this property or the sourceDisk property but not both.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderShieldedInstanceInitialStateDbs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderShieldedInstanceInitialStateDbxs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderShieldedInstanceInitialStateKeks
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderShieldedInstanceInitialStatePk
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderShieldedInstanceInitialState
+{
+    /// <summary>The Key Database (db). Structure is documented below.</summary>
+    [JsonPropertyName("dbs")]
+    public IList<V1beta1ImageSpecForProviderShieldedInstanceInitialStateDbs>? Dbs { get; set; }
+
+    /// <summary>The forbidden key database (dbx). Structure is documented below.</summary>
+    [JsonPropertyName("dbxs")]
+    public IList<V1beta1ImageSpecForProviderShieldedInstanceInitialStateDbxs>? Dbxs { get; set; }
+
+    /// <summary>The Key Exchange Key (KEK). Structure is documented below.</summary>
+    [JsonPropertyName("keks")]
+    public IList<V1beta1ImageSpecForProviderShieldedInstanceInitialStateKeks>? Keks { get; set; }
+
+    /// <summary>The Platform Key (PK). Structure is documented below.</summary>
+    [JsonPropertyName("pk")]
+    public IList<V1beta1ImageSpecForProviderShieldedInstanceInitialStatePk>? Pk { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceDiskEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ImageSpecForProviderSourceDiskRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceDiskSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ImageSpecForProviderSourceDiskSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceImageEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecForProviderSourceSnapshotEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecForProviderSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -87,17 +423,41 @@ public partial class V1beta1ImageSpecForProvider
     [JsonPropertyName("rawDisk")]
     public IList<V1beta1ImageSpecForProviderRawDisk>? RawDisk { get; set; }
 
+    /// <summary>Set the secure boot keys of shielded instance. Structure is documented below.</summary>
+    [JsonPropertyName("shieldedInstanceInitialState")]
+    public IList<V1beta1ImageSpecForProviderShieldedInstanceInitialState>? ShieldedInstanceInitialState { get; set; }
+
     /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
     [JsonPropertyName("sourceDisk")]
     public string? SourceDisk { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceDiskEncryptionKey")]
+    public IList<V1beta1ImageSpecForProviderSourceDiskEncryptionKey>? SourceDiskEncryptionKey { get; set; }
+
+    /// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
+    [JsonPropertyName("sourceDiskRef")]
+    public V1beta1ImageSpecForProviderSourceDiskRef? SourceDiskRef { get; set; }
+
+    /// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
+    [JsonPropertyName("sourceDiskSelector")]
+    public V1beta1ImageSpecForProviderSourceDiskSelector? SourceDiskSelector { get; set; }
 
     /// <summary>URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
+    /// <summary>The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1ImageSpecForProviderSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
     /// <summary>URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1ImageSpecForProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary>Cloud Storage bucket storage location of the image (regional or multi-regional). Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images</summary>
     [JsonPropertyName("storageLocations")]
@@ -113,6 +473,40 @@ public partial class V1beta1ImageSpecInitProviderGuestOsFeatures
     public string? Type { get; set; }
 }
 
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageSpecInitProviderImageEncryptionKey
@@ -124,6 +518,14 @@ public partial class V1beta1ImageSpecInitProviderImageEncryptionKey
     /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccount")]
     public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecInitProviderImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecInitProviderImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -141,6 +543,300 @@ public partial class V1beta1ImageSpecInitProviderRawDisk
     /// <summary>The full Google Cloud Storage URL where disk storage is stored You must provide either this property or the sourceDisk property but not both.</summary>
     [JsonPropertyName("source")]
     public string? Source { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderShieldedInstanceInitialStateDbs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderShieldedInstanceInitialStateDbxs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderShieldedInstanceInitialStateKeks
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderShieldedInstanceInitialStatePk
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderShieldedInstanceInitialState
+{
+    /// <summary>The Key Database (db). Structure is documented below.</summary>
+    [JsonPropertyName("dbs")]
+    public IList<V1beta1ImageSpecInitProviderShieldedInstanceInitialStateDbs>? Dbs { get; set; }
+
+    /// <summary>The forbidden key database (dbx). Structure is documented below.</summary>
+    [JsonPropertyName("dbxs")]
+    public IList<V1beta1ImageSpecInitProviderShieldedInstanceInitialStateDbxs>? Dbxs { get; set; }
+
+    /// <summary>The Key Exchange Key (KEK). Structure is documented below.</summary>
+    [JsonPropertyName("keks")]
+    public IList<V1beta1ImageSpecInitProviderShieldedInstanceInitialStateKeks>? Keks { get; set; }
+
+    /// <summary>The Platform Key (PK). Structure is documented below.</summary>
+    [JsonPropertyName("pk")]
+    public IList<V1beta1ImageSpecInitProviderShieldedInstanceInitialStatePk>? Pk { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceDiskEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceDiskEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ImageSpecInitProviderSourceDiskRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceDiskSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ImageSpecInitProviderSourceDiskSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceImageEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -183,17 +879,41 @@ public partial class V1beta1ImageSpecInitProvider
     [JsonPropertyName("rawDisk")]
     public IList<V1beta1ImageSpecInitProviderRawDisk>? RawDisk { get; set; }
 
+    /// <summary>Set the secure boot keys of shielded instance. Structure is documented below.</summary>
+    [JsonPropertyName("shieldedInstanceInitialState")]
+    public IList<V1beta1ImageSpecInitProviderShieldedInstanceInitialState>? ShieldedInstanceInitialState { get; set; }
+
     /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
     [JsonPropertyName("sourceDisk")]
     public string? SourceDisk { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceDiskEncryptionKey")]
+    public IList<V1beta1ImageSpecInitProviderSourceDiskEncryptionKey>? SourceDiskEncryptionKey { get; set; }
+
+    /// <summary>Reference to a Disk in compute to populate sourceDisk.</summary>
+    [JsonPropertyName("sourceDiskRef")]
+    public V1beta1ImageSpecInitProviderSourceDiskRef? SourceDiskRef { get; set; }
+
+    /// <summary>Selector for a Disk in compute to populate sourceDisk.</summary>
+    [JsonPropertyName("sourceDiskSelector")]
+    public V1beta1ImageSpecInitProviderSourceDiskSelector? SourceDiskSelector { get; set; }
 
     /// <summary>URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
+    /// <summary>The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1ImageSpecInitProviderSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
     /// <summary>URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1ImageSpecInitProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary>Cloud Storage bucket storage location of the image (regional or multi-regional). Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images</summary>
     [JsonPropertyName("storageLocations")]
@@ -373,6 +1093,118 @@ public partial class V1beta1ImageStatusAtProviderRawDisk
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderShieldedInstanceInitialStateDbs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderShieldedInstanceInitialStateDbxs
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderShieldedInstanceInitialStateKeks
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderShieldedInstanceInitialStatePk
+{
+    /// <summary>The raw content in the secure keys file. A base64-encoded string.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>The file type of source file.</summary>
+    [JsonPropertyName("fileType")]
+    public string? FileType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderShieldedInstanceInitialState
+{
+    /// <summary>The Key Database (db). Structure is documented below.</summary>
+    [JsonPropertyName("dbs")]
+    public IList<V1beta1ImageStatusAtProviderShieldedInstanceInitialStateDbs>? Dbs { get; set; }
+
+    /// <summary>The forbidden key database (dbx). Structure is documented below.</summary>
+    [JsonPropertyName("dbxs")]
+    public IList<V1beta1ImageStatusAtProviderShieldedInstanceInitialStateDbxs>? Dbxs { get; set; }
+
+    /// <summary>The Key Exchange Key (KEK). Structure is documented below.</summary>
+    [JsonPropertyName("keks")]
+    public IList<V1beta1ImageStatusAtProviderShieldedInstanceInitialStateKeks>? Keks { get; set; }
+
+    /// <summary>The Platform Key (PK). Structure is documented below.</summary>
+    [JsonPropertyName("pk")]
+    public IList<V1beta1ImageStatusAtProviderShieldedInstanceInitialStatePk>? Pk { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderSourceDiskEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderSourceImageEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ImageStatusAtProviderSourceSnapshotEncryptionKey
+{
+    /// <summary>The self link of the encryption key used to decrypt this resource. Also called KmsKeyName in the cloud console. Your project's Compute Engine System service account (service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com) must have roles/cloudkms.cryptoKeyEncrypterDecrypter to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageStatusAtProvider
 {
     /// <summary>Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).</summary>
@@ -435,17 +1267,33 @@ public partial class V1beta1ImageStatusAtProvider
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
 
+    /// <summary>Set the secure boot keys of shielded instance. Structure is documented below.</summary>
+    [JsonPropertyName("shieldedInstanceInitialState")]
+    public IList<V1beta1ImageStatusAtProviderShieldedInstanceInitialState>? ShieldedInstanceInitialState { get; set; }
+
     /// <summary>The source disk to create this image based on. You must provide either this property or the rawDisk.source property but not both to create an image.</summary>
     [JsonPropertyName("sourceDisk")]
     public string? SourceDisk { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceDiskEncryptionKey")]
+    public IList<V1beta1ImageStatusAtProviderSourceDiskEncryptionKey>? SourceDiskEncryptionKey { get; set; }
 
     /// <summary>URL of the source image used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceImage")]
     public string? SourceImage { get; set; }
 
+    /// <summary>The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1ImageStatusAtProviderSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
     /// <summary>URL of the source snapshot used to create this image. In order to create an image, you must provide the full or partial URL of one of the following:</summary>
     [JsonPropertyName("sourceSnapshot")]
     public string? SourceSnapshot { get; set; }
+
+    /// <summary>The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1ImageStatusAtProviderSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary>Cloud Storage bucket storage location of the image (regional or multi-regional). Reference link: https://cloud.google.com/compute/docs/reference/rest/v1/images</summary>
     [JsonPropertyName("storageLocations")]

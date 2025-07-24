@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   automatedBackupPolicy:
-                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.
+                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.
                     properties:
                       frequency:
                         type: string
@@ -101,6 +101,9 @@ spec:
                       properties:
                         family:
                           description: The name of the column family.
+                          type: string
+                        type:
+                          description: The type of the column family.
                           type: string
                       type: object
                     type: array
@@ -202,6 +205,8 @@ spec:
 
                       is not provided, the provider project is used.
                     type: string
+                  rowKeySchema:
+                    type: string
                   splitKeys:
                     description: A list of predefined keys to split the table on.
                     items:
@@ -231,7 +236,7 @@ spec:
                   autoscaler.
                 properties:
                   automatedBackupPolicy:
-                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.
+                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.
                     properties:
                       frequency:
                         type: string
@@ -248,6 +253,9 @@ spec:
                         family:
                           description: The name of the column family.
                           type: string
+                        type:
+                          description: The type of the column family.
+                          type: string
                       type: object
                     type: array
                   deletionProtection:
@@ -258,6 +266,8 @@ spec:
                       The ID of the project in which the resource belongs. If it
 
                       is not provided, the provider project is used.
+                    type: string
+                  rowKeySchema:
                     type: string
                   splitKeys:
                     description: A list of predefined keys to split the table on.
@@ -479,7 +489,7 @@ spec:
               atProvider:
                 properties:
                   automatedBackupPolicy:
-                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To disable, set both Retention Period and Frequency to 0.
+                    description: Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.
                     properties:
                       frequency:
                         type: string
@@ -495,6 +505,9 @@ spec:
                       properties:
                         family:
                           description: The name of the column family.
+                          type: string
+                        type:
+                          description: The type of the column family.
                           type: string
                       type: object
                     type: array
@@ -512,6 +525,8 @@ spec:
                       The ID of the project in which the resource belongs. If it
 
                       is not provided, the provider project is used.
+                    type: string
+                  rowKeySchema:
                     type: string
                   splitKeys:
                     description: A list of predefined keys to split the table on.

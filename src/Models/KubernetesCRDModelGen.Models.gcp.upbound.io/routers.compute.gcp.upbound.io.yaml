@@ -194,6 +194,24 @@ spec:
 
                       attachments (interconnectAttachments).
                     type: boolean
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        key:
+                          description: Value of the key used for MD5 authentication.
+                          type: string
+                        name:
+                          description: >-
+                            Name used to identify the key. Must be unique within a router.
+
+                            Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                          type: string
+                      type: object
+                    type: array
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string
@@ -427,6 +445,24 @@ spec:
 
                       attachments (interconnectAttachments).
                     type: boolean
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        key:
+                          description: Value of the key used for MD5 authentication.
+                          type: string
+                        name:
+                          description: >-
+                            Name used to identify the key. Must be unique within a router.
+
+                            Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                          type: string
+                      type: object
+                    type: array
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string
@@ -852,6 +888,24 @@ spec:
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/routers/{{name}}
                     type: string
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        key:
+                          description: Value of the key used for MD5 authentication.
+                          type: string
+                        name:
+                          description: >-
+                            Name used to identify the key. Must be unique within a router.
+
+                            Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                          type: string
+                      type: object
+                    type: array
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string
@@ -1109,6 +1163,22 @@ spec:
 
                       attachments (interconnectAttachments).
                     type: boolean
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    properties:
+                      key:
+                        description: Value of the key used for MD5 authentication.
+                        type: string
+                      name:
+                        description: >-
+                          Name used to identify the key. Must be unique within a router.
+
+                          Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                        type: string
+                    type: object
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string
@@ -1340,6 +1410,22 @@ spec:
 
                       attachments (interconnectAttachments).
                     type: boolean
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    properties:
+                      key:
+                        description: Value of the key used for MD5 authentication.
+                        type: string
+                      name:
+                        description: >-
+                          Name used to identify the key. Must be unique within a router.
+
+                          Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                        type: string
+                    type: object
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string
@@ -1763,6 +1849,22 @@ spec:
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/routers/{{name}}
                     type: string
+                  md5AuthenticationKeys:
+                    description: >-
+                      Keys used for MD5 authentication.
+
+                      Structure is documented below.
+                    properties:
+                      key:
+                        description: Value of the key used for MD5 authentication.
+                        type: string
+                      name:
+                        description: >-
+                          Name used to identify the key. Must be unique within a router.
+
+                          Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
+                        type: string
+                    type: object
                   network:
                     description: A reference to the network to which this router belongs.
                     type: string

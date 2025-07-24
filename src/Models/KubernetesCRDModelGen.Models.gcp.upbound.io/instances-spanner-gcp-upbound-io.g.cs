@@ -10,9 +10,53 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.spanner.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
+{
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("maxNodes")]
+    public double? MaxNodes { get; set; }
+
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("minNodes")]
+    public double? MinNodes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingLimits")]
+    public IList<V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits>? AutoscalingLimits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
+{
+    /// <summary>The location of the replica to apply asymmetric autoscaling options.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptions
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("overrides")]
+    public IList<V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides>? Overrides { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("replicaSelection")]
+    public IList<V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection>? ReplicaSelection { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingLimits
 {
-    /// <summary>Specifies maximum number of nodes allocated to the instance. If set, this number should be greater than or equal to min_nodes.</summary>
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
     [JsonPropertyName("maxNodes")]
     public double? MaxNodes { get; set; }
 
@@ -20,7 +64,7 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingL
     [JsonPropertyName("maxProcessingUnits")]
     public double? MaxProcessingUnits { get; set; }
 
-    /// <summary>Specifies number of nodes allocated to the instance. If set, this number should be greater than or equal to 1.</summary>
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 
@@ -46,6 +90,10 @@ public partial class V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingT
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAutoscalingConfig
 {
+    /// <summary>Asymmetric autoscaling options for specific replicas. Structure is documented below.</summary>
+    [JsonPropertyName("asymmetricAutoscalingOptions")]
+    public IList<V1beta1InstanceSpecForProviderAutoscalingConfigAsymmetricAutoscalingOptions>? AsymmetricAutoscalingOptions { get; set; }
+
     /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
     [JsonPropertyName("autoscalingLimits")]
     public IList<V1beta1InstanceSpecForProviderAutoscalingConfigAutoscalingLimits>? AutoscalingLimits { get; set; }
@@ -75,9 +123,17 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>The edition selected for this instance. Different editions provide different capabilities at different price points. Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
+    [JsonPropertyName("edition")]
+    public string? Edition { get; set; }
+
     /// <summary>When deleting a spanner instance, this boolean option will delete all backups of this instance. This must be set to true if you created a backup manually in the console.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
+
+    /// <summary>The type of this instance. The type can be used to distinguish product variants, that can affect aspects like: usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances. When configured as FREE_INSTANCE, the field edition should not be configured. Possible values are: PROVISIONED, FREE_INSTANCE.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
 
     /// <summary>An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]
@@ -98,9 +154,53 @@ public partial class V1beta1InstanceSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
+{
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("maxNodes")]
+    public double? MaxNodes { get; set; }
+
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("minNodes")]
+    public double? MinNodes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingLimits")]
+    public IList<V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits>? AutoscalingLimits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
+{
+    /// <summary>The location of the replica to apply asymmetric autoscaling options.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptions
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("overrides")]
+    public IList<V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides>? Overrides { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("replicaSelection")]
+    public IList<V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection>? ReplicaSelection { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscalingLimits
 {
-    /// <summary>Specifies maximum number of nodes allocated to the instance. If set, this number should be greater than or equal to min_nodes.</summary>
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
     [JsonPropertyName("maxNodes")]
     public double? MaxNodes { get; set; }
 
@@ -108,7 +208,7 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("maxProcessingUnits")]
     public double? MaxProcessingUnits { get; set; }
 
-    /// <summary>Specifies number of nodes allocated to the instance. If set, this number should be greater than or equal to 1.</summary>
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 
@@ -134,6 +234,10 @@ public partial class V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscaling
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAutoscalingConfig
 {
+    /// <summary>Asymmetric autoscaling options for specific replicas. Structure is documented below.</summary>
+    [JsonPropertyName("asymmetricAutoscalingOptions")]
+    public IList<V1beta1InstanceSpecInitProviderAutoscalingConfigAsymmetricAutoscalingOptions>? AsymmetricAutoscalingOptions { get; set; }
+
     /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
     [JsonPropertyName("autoscalingLimits")]
     public IList<V1beta1InstanceSpecInitProviderAutoscalingConfigAutoscalingLimits>? AutoscalingLimits { get; set; }
@@ -163,9 +267,17 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>The edition selected for this instance. Different editions provide different capabilities at different price points. Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
+    [JsonPropertyName("edition")]
+    public string? Edition { get; set; }
+
     /// <summary>When deleting a spanner instance, this boolean option will delete all backups of this instance. This must be set to true if you created a backup manually in the console.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
+
+    /// <summary>The type of this instance. The type can be used to distinguish product variants, that can affect aspects like: usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances. When configured as FREE_INSTANCE, the field edition should not be configured. Possible values are: PROVISIONED, FREE_INSTANCE.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
 
     /// <summary>An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]
@@ -318,9 +430,53 @@ public partial class V1beta1InstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits
+{
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("maxNodes")]
+    public double? MaxNodes { get; set; }
+
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
+    [JsonPropertyName("minNodes")]
+    public double? MinNodes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingLimits")]
+    public IList<V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverridesAutoscalingLimits>? AutoscalingLimits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection
+{
+    /// <summary>The location of the replica to apply asymmetric autoscaling options.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptions
+{
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("overrides")]
+    public IList<V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsOverrides>? Overrides { get; set; }
+
+    /// <summary>A nested object resource. Structure is documented below.</summary>
+    [JsonPropertyName("replicaSelection")]
+    public IList<V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptionsReplicaSelection>? ReplicaSelection { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscalingLimits
 {
-    /// <summary>Specifies maximum number of nodes allocated to the instance. If set, this number should be greater than or equal to min_nodes.</summary>
+    /// <summary>The maximum number of nodes for this specific replica.</summary>
     [JsonPropertyName("maxNodes")]
     public double? MaxNodes { get; set; }
 
@@ -328,7 +484,7 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscaling
     [JsonPropertyName("maxProcessingUnits")]
     public double? MaxProcessingUnits { get; set; }
 
-    /// <summary>Specifies number of nodes allocated to the instance. If set, this number should be greater than or equal to 1.</summary>
+    /// <summary>The minimum number of nodes for this specific replica.</summary>
     [JsonPropertyName("minNodes")]
     public double? MinNodes { get; set; }
 
@@ -354,6 +510,10 @@ public partial class V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscaling
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAutoscalingConfig
 {
+    /// <summary>Asymmetric autoscaling options for specific replicas. Structure is documented below.</summary>
+    [JsonPropertyName("asymmetricAutoscalingOptions")]
+    public IList<V1beta1InstanceStatusAtProviderAutoscalingConfigAsymmetricAutoscalingOptions>? AsymmetricAutoscalingOptions { get; set; }
+
     /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events. Users can define the minimum and maximum compute capacity allocated to the instance, and the autoscaler will only scale within that range. Users can either use nodes or processing units to specify the limits, but should use the same unit to set both the min_limit and max_limit. Structure is documented below.</summary>
     [JsonPropertyName("autoscalingLimits")]
     public IList<V1beta1InstanceStatusAtProviderAutoscalingConfigAutoscalingLimits>? AutoscalingLimits { get; set; }
@@ -383,6 +543,10 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>The edition selected for this instance. Different editions provide different capabilities at different price points. Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
+    [JsonPropertyName("edition")]
+    public string? Edition { get; set; }
+
     /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
@@ -394,6 +558,10 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>an identifier for the resource with format {{project}}/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The type of this instance. The type can be used to distinguish product variants, that can affect aspects like: usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances. When configured as FREE_INSTANCE, the field edition should not be configured. Possible values are: PROVISIONED, FREE_INSTANCE.</summary>
+    [JsonPropertyName("instanceType")]
+    public string? InstanceType { get; set; }
 
     /// <summary>An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
     [JsonPropertyName("labels")]

@@ -269,6 +269,10 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/{tag_value_id}. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
     /// <summary>Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and memory.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
@@ -538,6 +542,10 @@ public partial class V1beta1InstanceSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/{tag_value_id}. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>Represents the type of Data Fusion instance. Each type is configured with the default settings for processing and memory.</summary>
     [JsonPropertyName("type")]
@@ -856,6 +864,10 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>Additional information about the current state of this Data Fusion instance if available.</summary>
     [JsonPropertyName("stateMessage")]
     public string? StateMessage { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/{tag_value_id}. The field is ignored (both PUT &amp; PATCH) when empty.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The name of the tenant project.</summary>
     [JsonPropertyName("tenantProjectId")]

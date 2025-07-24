@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -94,35 +97,39 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        forwardingRule:
+                          description: >-
+                            Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                            PSC endpoints, and Protocol Forwarding.
+                          type: string
+                        fqdn:
+                          description: >-
+                            A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                            Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                            ip_address or network. Applicable only to destination endpoint.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
@@ -213,12 +220,7 @@ spec:
                               type: object
                           type: object
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         ipAddressRef:
                           description: Reference to a Address in compute to populate ipAddress.
@@ -307,7 +309,7 @@ spec:
                               type: object
                           type: object
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         networkRef:
                           description: Reference to a Network in compute to populate network.
@@ -397,17 +399,19 @@ spec:
                           type: object
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
                           type: string
                         projectIdRef:
                           description: Reference to a Address in compute to populate projectId.
@@ -495,6 +499,12 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        redisCluster:
+                          description: A Redis Cluster URI.
+                          type: string
+                        redisInstance:
+                          description: A Redis Instance URI.
+                          type: string
                       type: object
                     type: array
                   labels:
@@ -525,47 +535,71 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        appEngineVersion:
+                          description: >-
+                            An App Engine service version.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudFunction:
+                          description: >-
+                            A Cloud Function.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudRunRevision:
+                          description: >-
+                            A Cloud Run revision.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
@@ -656,12 +690,7 @@ spec:
                               type: object
                           type: object
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         ipAddressRef:
                           description: Reference to a Address in compute to populate ipAddress.
@@ -750,7 +779,7 @@ spec:
                               type: object
                           type: object
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         networkRef:
                           description: Reference to a Network in compute to populate network.
@@ -846,17 +875,19 @@ spec:
                           type: string
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
                           type: string
                         projectIdRef:
                           description: Reference to a Address in compute to populate projectId.
@@ -969,6 +1000,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -979,35 +1013,39 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        forwardingRule:
+                          description: >-
+                            Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                            PSC endpoints, and Protocol Forwarding.
+                          type: string
+                        fqdn:
+                          description: >-
+                            A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                            Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                            ip_address or network. Applicable only to destination endpoint.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
@@ -1098,12 +1136,7 @@ spec:
                               type: object
                           type: object
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         ipAddressRef:
                           description: Reference to a Address in compute to populate ipAddress.
@@ -1192,7 +1225,7 @@ spec:
                               type: object
                           type: object
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         networkRef:
                           description: Reference to a Network in compute to populate network.
@@ -1282,17 +1315,19 @@ spec:
                           type: object
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
                           type: string
                         projectIdRef:
                           description: Reference to a Address in compute to populate projectId.
@@ -1380,6 +1415,12 @@ spec:
                                   type: string
                               type: object
                           type: object
+                        redisCluster:
+                          description: A Redis Cluster URI.
+                          type: string
+                        redisInstance:
+                          description: A Redis Instance URI.
+                          type: string
                       type: object
                     type: array
                   labels:
@@ -1410,47 +1451,71 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        appEngineVersion:
+                          description: >-
+                            An App Engine service version.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudFunction:
+                          description: >-
+                            A Cloud Function.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudRunRevision:
+                          description: >-
+                            A Cloud Run revision.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
@@ -1541,12 +1606,7 @@ spec:
                               type: object
                           type: object
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         ipAddressRef:
                           description: Reference to a Address in compute to populate ipAddress.
@@ -1635,7 +1695,7 @@ spec:
                               type: object
                           type: object
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         networkRef:
                           description: Reference to a Network in compute to populate network.
@@ -1731,17 +1791,19 @@ spec:
                           type: string
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
                           type: string
                         projectIdRef:
                           description: Reference to a Address in compute to populate projectId.
@@ -2052,6 +2114,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -2062,68 +2127,76 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        forwardingRule:
+                          description: >-
+                            Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                            PSC endpoints, and Protocol Forwarding.
+                          type: string
+                        fqdn:
+                          description: >-
+                            A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                            Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                            ip_address or network. Applicable only to destination endpoint.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
+                          type: string
+                        redisCluster:
+                          description: A Redis Cluster URI.
+                          type: string
+                        redisInstance:
+                          description: A Redis Instance URI.
                           type: string
                       type: object
                     type: array
                   effectiveLabels:
                     additionalProperties:
                       type: string
+                    description: for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   id:
@@ -2157,60 +2230,79 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     items:
                       properties:
+                        appEngineVersion:
+                          description: >-
+                            An App Engine service version.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudFunction:
+                          description: >-
+                            A Cloud Function.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudRunRevision:
+                          description: >-
+                            A Cloud Run revision.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              uri:
+                                description: A Cloud Run revision URI.
+                                type: string
+                            type: object
+                          type: array
+                        cloudSqlInstance:
+                          description: A Cloud SQL instance URI.
+                          type: string
+                        gkeMasterCluster:
+                          description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                          type: string
                         instance:
                           description: A Compute Engine instance URI.
                           type: string
                         ipAddress:
-                          description: >-
-                            The IP address of the endpoint, which can be an external or
-
-                            internal IP. An IPv6 address is only allowed when the test's
-
-                            destination is a global load balancer VIP.
+                          description: The IP address of the endpoint, which can be an external or internal IP.
                           type: string
                         network:
-                          description: A Compute Engine network URI.
+                          description: A VPC network URI.
                           type: string
                         networkType:
                           description: >-
@@ -2220,17 +2312,19 @@ spec:
                           type: string
                         port:
                           description: >-
-                            The IP protocol port of the endpoint. Only applicable when
+                            The IP protocol port of the endpoint. Only applicable when protocol is
 
-                            protocol is TCP or UDP.
+                            TCP or UDP.
                           type: number
                         projectId:
                           description: >-
-                            Project ID where the endpoint is located. The Project ID can be
+                            Project ID where the endpoint is located.
 
-                            derived from the URI if you provide a VM instance or network URI.
+                            The project ID can be derived from the URI if you provide a endpoint or
 
-                            The following are two cases where you must provide the project ID:
+                            network URI.
+
+                            The following are two cases where you may need to provide the project ID:
                           type: string
                       type: object
                     type: array
@@ -2377,6 +2471,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -2387,34 +2484,38 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      forwardingRule:
+                        description: >-
+                          Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                          PSC endpoints, and Protocol Forwarding.
+                        type: string
+                      fqdn:
+                        description: >-
+                          A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                          Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                          ip_address or network. Applicable only to destination endpoint.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
@@ -2505,12 +2606,7 @@ spec:
                             type: object
                         type: object
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       ipAddressRef:
                         description: Reference to a Address in compute to populate ipAddress.
@@ -2599,7 +2695,7 @@ spec:
                             type: object
                         type: object
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       networkRef:
                         description: Reference to a Network in compute to populate network.
@@ -2689,17 +2785,19 @@ spec:
                         type: object
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
                         type: string
                       projectIdRef:
                         description: Reference to a Address in compute to populate projectId.
@@ -2787,6 +2885,12 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      redisCluster:
+                        description: A Redis Cluster URI.
+                        type: string
+                      redisInstance:
+                        description: A Redis Instance URI.
+                        type: string
                     type: object
                   labels:
                     additionalProperties:
@@ -2816,46 +2920,64 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      appEngineVersion:
+                        description: >-
+                          An App Engine service version.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudFunction:
+                        description: >-
+                          A Cloud Function.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudRunRevision:
+                        description: >-
+                          A Cloud Run revision.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
@@ -2946,12 +3068,7 @@ spec:
                             type: object
                         type: object
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       ipAddressRef:
                         description: Reference to a Address in compute to populate ipAddress.
@@ -3040,7 +3157,7 @@ spec:
                             type: object
                         type: object
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       networkRef:
                         description: Reference to a Network in compute to populate network.
@@ -3136,17 +3253,19 @@ spec:
                         type: string
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
                         type: string
                       projectIdRef:
                         description: Reference to a Address in compute to populate projectId.
@@ -3258,6 +3377,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -3268,34 +3390,38 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      forwardingRule:
+                        description: >-
+                          Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                          PSC endpoints, and Protocol Forwarding.
+                        type: string
+                      fqdn:
+                        description: >-
+                          A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                          Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                          ip_address or network. Applicable only to destination endpoint.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
@@ -3386,12 +3512,7 @@ spec:
                             type: object
                         type: object
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       ipAddressRef:
                         description: Reference to a Address in compute to populate ipAddress.
@@ -3480,7 +3601,7 @@ spec:
                             type: object
                         type: object
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       networkRef:
                         description: Reference to a Network in compute to populate network.
@@ -3570,17 +3691,19 @@ spec:
                         type: object
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
                         type: string
                       projectIdRef:
                         description: Reference to a Address in compute to populate projectId.
@@ -3668,6 +3791,12 @@ spec:
                                 type: string
                             type: object
                         type: object
+                      redisCluster:
+                        description: A Redis Cluster URI.
+                        type: string
+                      redisInstance:
+                        description: A Redis Instance URI.
+                        type: string
                     type: object
                   labels:
                     additionalProperties:
@@ -3697,46 +3826,64 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      appEngineVersion:
+                        description: >-
+                          An App Engine service version.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudFunction:
+                        description: >-
+                          A Cloud Function.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudRunRevision:
+                        description: >-
+                          A Cloud Run revision.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
@@ -3827,12 +3974,7 @@ spec:
                             type: object
                         type: object
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       ipAddressRef:
                         description: Reference to a Address in compute to populate ipAddress.
@@ -3921,7 +4063,7 @@ spec:
                             type: object
                         type: object
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       networkRef:
                         description: Reference to a Network in compute to populate network.
@@ -4017,17 +4159,19 @@ spec:
                         type: string
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
                         type: string
                       projectIdRef:
                         description: Reference to a Address in compute to populate projectId.
@@ -4337,6 +4481,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  bypassFirewallChecks:
+                    description: Whether the analysis should skip firewall checking. Default value is false.
+                    type: boolean
                   description:
                     description: >-
                       The user-supplied description of the Connectivity Test.
@@ -4347,66 +4494,74 @@ spec:
                     description: >-
                       Required. Destination specification of the Connectivity Test.
 
-                      You can use a combination of destination IP address, Compute
+                      You can use a combination of destination IP address, URI of a supported
 
-                      Engine VM instance, or VPC network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the destination location.
 
-                      destination location.
+                      Reachability analysis proceeds even if the destination location is
 
-                      Even if the destination IP address is not unique, the source IP
+                      ambiguous. However, the test result might include endpoints or use a
 
-                      location is unique. Usually, the analysis can infer the destination
-
-                      endpoint from route information.
-
-                      If the destination you specify is a VM instance and the instance has
-
-                      multiple network interfaces, then you must also specify either a
-
-                      destination IP address or VPC network to identify the destination
-
-                      interface.
-
-                      A reachability analysis proceeds even if the destination location
-
-                      is ambiguous. However, the result can include endpoints that you
-
-                      don't intend to test.
+                      destination that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      forwardingRule:
+                        description: >-
+                          Forwarding rule URI. Forwarding rules are frontends for load balancers,
+
+                          PSC endpoints, and Protocol Forwarding.
+                        type: string
+                      fqdn:
+                        description: >-
+                          A DNS endpoint of Google Kubernetes Engine cluster control plane.
+
+                          Requires gke_master_cluster to be set, can't be used simultaneoulsly with
+
+                          ip_address or network. Applicable only to destination endpoint.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
+                        type: string
+                      redisCluster:
+                        description: A Redis Cluster URI.
+                        type: string
+                      redisInstance:
+                        description: A Redis Instance URI.
                         type: string
                     type: object
                   effectiveLabels:
                     additionalProperties:
                       type: string
+                    description: for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   id:
@@ -4440,59 +4595,72 @@ spec:
                     items:
                       type: string
                     type: array
+                  roundTrip:
+                    description: >-
+                      Whether run analysis for the return path from destination to source.
+
+                      Default value is false.
+                    type: boolean
                   source:
                     description: >-
                       Required. Source specification of the Connectivity Test.
 
-                      You can use a combination of source IP address, virtual machine
+                      You can use a combination of source IP address, URI of a supported
 
-                      (VM) instance, or Compute Engine network to uniquely identify the
+                      endpoint, project ID, or VPC network to identify the source location.
 
-                      source location.
+                      Reachability analysis might proceed even if the source location is
 
-                      Examples: If the source IP address is an internal IP address within
+                      ambiguous. However, the test result might include endpoints or use a source
 
-                      a Google Cloud Virtual Private Cloud (VPC) network, then you must
-
-                      also specify the VPC network. Otherwise, specify the VM instance,
-
-                      which already contains its internal IP address and VPC network
-
-                      information.
-
-                      If the source of the test is within an on-premises network, then
-
-                      you must provide the destination VPC network.
-
-                      If the source endpoint is a Compute Engine VM instance with multiple
-
-                      network interfaces, the instance itself is not sufficient to
-
-                      identify the endpoint. So, you must also specify the source IP
-
-                      address or VPC network.
-
-                      A reachability analysis proceeds even if the source location is
-
-                      ambiguous. However, the test result may include endpoints that
-
-                      you don't intend to test.
+                      that you don't intend to test.
 
                       Structure is documented below.
                     properties:
+                      appEngineVersion:
+                        description: >-
+                          An App Engine service version.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudFunction:
+                        description: >-
+                          A Cloud Function.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudRunRevision:
+                        description: >-
+                          A Cloud Run revision.
+
+                          Structure is documented below.
+                        properties:
+                          uri:
+                            description: A Cloud Run revision URI.
+                            type: string
+                        type: object
+                      cloudSqlInstance:
+                        description: A Cloud SQL instance URI.
+                        type: string
+                      gkeMasterCluster:
+                        description: A cluster URI for Google Kubernetes Engine cluster control plane.
+                        type: string
                       instance:
                         description: A Compute Engine instance URI.
                         type: string
                       ipAddress:
-                        description: >-
-                          The IP address of the endpoint, which can be an external or
-
-                          internal IP. An IPv6 address is only allowed when the test's
-
-                          destination is a global load balancer VIP.
+                        description: The IP address of the endpoint, which can be an external or internal IP.
                         type: string
                       network:
-                        description: A Compute Engine network URI.
+                        description: A VPC network URI.
                         type: string
                       networkType:
                         description: >-
@@ -4502,17 +4670,19 @@ spec:
                         type: string
                       port:
                         description: >-
-                          The IP protocol port of the endpoint. Only applicable when
+                          The IP protocol port of the endpoint. Only applicable when protocol is
 
-                          protocol is TCP or UDP.
+                          TCP or UDP.
                         type: number
                       projectId:
                         description: >-
-                          Project ID where the endpoint is located. The Project ID can be
+                          Project ID where the endpoint is located.
 
-                          derived from the URI if you provide a VM instance or network URI.
+                          The project ID can be derived from the URI if you provide a endpoint or
 
-                          The following are two cases where you must provide the project ID:
+                          network URI.
+
+                          The following are two cases where you may need to provide the project ID:
                         type: string
                     type: object
                   terraformLabels:

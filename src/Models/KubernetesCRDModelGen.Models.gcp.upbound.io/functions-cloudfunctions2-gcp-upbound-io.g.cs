@@ -937,6 +937,10 @@ public partial class V1beta1FunctionSpecForProviderServiceConfig
     [JsonPropertyName("availableMemory")]
     public string? AvailableMemory { get; set; }
 
+    /// <summary>The binary authorization policy to be checked when deploying the Cloud Run service.</summary>
+    [JsonPropertyName("binaryAuthorizationPolicy")]
+    public string? BinaryAuthorizationPolicy { get; set; }
+
     /// <summary>Environment variables that shall be available during function execution.</summary>
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
@@ -1960,6 +1964,10 @@ public partial class V1beta1FunctionSpecInitProviderServiceConfig
     [JsonPropertyName("availableMemory")]
     public string? AvailableMemory { get; set; }
 
+    /// <summary>The binary authorization policy to be checked when deploying the Cloud Run service.</summary>
+    [JsonPropertyName("binaryAuthorizationPolicy")]
+    public string? BinaryAuthorizationPolicy { get; set; }
+
     /// <summary>Environment variables that shall be available during function execution.</summary>
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
@@ -2425,6 +2433,10 @@ public partial class V1beta1FunctionStatusAtProviderServiceConfig
     /// <summary>The amount of memory available for a function. Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is supplied the value is interpreted as bytes.</summary>
     [JsonPropertyName("availableMemory")]
     public string? AvailableMemory { get; set; }
+
+    /// <summary>The binary authorization policy to be checked when deploying the Cloud Run service.</summary>
+    [JsonPropertyName("binaryAuthorizationPolicy")]
+    public string? BinaryAuthorizationPolicy { get; set; }
 
     /// <summary>Environment variables that shall be available during function execution.</summary>
     [JsonPropertyName("environmentVariables")]

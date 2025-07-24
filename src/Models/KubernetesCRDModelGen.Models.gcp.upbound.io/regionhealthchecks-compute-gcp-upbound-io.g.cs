@@ -839,6 +839,10 @@ public partial class V1beta1RegionHealthCheckStatusAtProvider
     [JsonPropertyName("grpcHealthCheck")]
     public IList<V1beta1RegionHealthCheckStatusAtProviderGrpcHealthCheck>? GrpcHealthCheck { get; set; }
 
+    /// <summary>The unique identifier number for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("healthCheckId")]
+    public double? HealthCheckId { get; set; }
+
     /// <summary>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.</summary>
     [JsonPropertyName("healthyThreshold")]
     public double? HealthyThreshold { get; set; }

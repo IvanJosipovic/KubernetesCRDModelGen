@@ -144,6 +144,15 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigEndpointConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
+{
+    /// <summary>Defines whether the instance should have confidential compute enabled.</summary>
+    [JsonPropertyName("enableConfidentialCompute")]
+    public bool? EnableConfidentialCompute { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -245,6 +254,10 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigGceClusterConfig
 {
+    /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
+    [JsonPropertyName("confidentialInstanceConfig")]
+    public IList<V1beta1ClusterSpecForProviderClusterConfigGceClusterConfigConfidentialInstanceConfig>? ConfidentialInstanceConfig { get; set; }
+
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
     [JsonPropertyName("internalIpOnly")]
     public bool? InternalIpOnly { get; set; }
@@ -432,11 +445,28 @@ public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorker
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
+{
+    /// <summary>The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.</summary>
+    [JsonPropertyName("standardCapacityBase")]
+    public double? StandardCapacityBase { get; set; }
+
+    /// <summary>The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.</summary>
+    [JsonPropertyName("standardCapacityPercentAboveBase")]
+    public double? StandardCapacityPercentAboveBase { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
     [JsonPropertyName("instanceSelectionList")]
     public IList<V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList>? InstanceSelectionList { get; set; }
+
+    /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
+    [JsonPropertyName("provisioningModelMix")]
+    public IList<V1beta1ClusterSpecForProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix>? ProvisioningModelMix { get; set; }
 }
 
 /// <summary></summary>
@@ -1019,6 +1049,15 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigEndpointConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
+{
+    /// <summary>Defines whether the instance should have confidential compute enabled.</summary>
+    [JsonPropertyName("enableConfidentialCompute")]
+    public bool? EnableConfidentialCompute { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -1120,6 +1159,10 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfig
 {
+    /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
+    [JsonPropertyName("confidentialInstanceConfig")]
+    public IList<V1beta1ClusterSpecInitProviderClusterConfigGceClusterConfigConfidentialInstanceConfig>? ConfidentialInstanceConfig { get; set; }
+
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
     [JsonPropertyName("internalIpOnly")]
     public bool? InternalIpOnly { get; set; }
@@ -1307,11 +1350,28 @@ public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorke
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
+{
+    /// <summary>The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.</summary>
+    [JsonPropertyName("standardCapacityBase")]
+    public double? StandardCapacityBase { get; set; }
+
+    /// <summary>The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.</summary>
+    [JsonPropertyName("standardCapacityPercentAboveBase")]
+    public double? StandardCapacityPercentAboveBase { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
     [JsonPropertyName("instanceSelectionList")]
     public IList<V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionList>? InstanceSelectionList { get; set; }
+
+    /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
+    [JsonPropertyName("provisioningModelMix")]
+    public IList<V1beta1ClusterSpecInitProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix>? ProvisioningModelMix { get; set; }
 }
 
 /// <summary></summary>
@@ -2038,6 +2098,15 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigEndpointConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigConfidentialInstanceConfig
+{
+    /// <summary>Defines whether the instance should have confidential compute enabled.</summary>
+    [JsonPropertyName("enableConfidentialCompute")]
+    public bool? EnableConfidentialCompute { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigNodeGroupAffinity
 {
     /// <summary>The URI of a sole-tenant node group resource that the cluster will be created on.</summary>
@@ -2083,6 +2152,10 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfig
 {
+    /// <summary>Confidential Instance Config for clusters using Confidential VMs</summary>
+    [JsonPropertyName("confidentialInstanceConfig")]
+    public IList<V1beta1ClusterStatusAtProviderClusterConfigGceClusterConfigConfidentialInstanceConfig>? ConfidentialInstanceConfig { get; set; }
+
     /// <summary>By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. If set to true, all instances in the cluster will only have internal IP addresses. Note: Private Google Access (also known as privateIpGoogleAccess) must be enabled on the subnetwork that the cluster will be launched in.</summary>
     [JsonPropertyName("internalIpOnly")]
     public bool? InternalIpOnly { get; set; }
@@ -2283,6 +2356,19 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix
+{
+    /// <summary>The base capacity that will always use Standard VMs to avoid risk of more preemption than the minimum capacity you need. Dataproc will create only standard VMs until it reaches standardCapacityBase, then it will start using standardCapacityPercentAboveBase to mix Spot with Standard VMs. eg. If 15 instances are requested and standardCapacityBase is 5, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances.</summary>
+    [JsonPropertyName("standardCapacityBase")]
+    public double? StandardCapacityBase { get; set; }
+
+    /// <summary>The percentage of target capacity that should use Standard VM. The remaining percentage will use Spot VMs. The percentage applies only to the capacity above standardCapacityBase. eg. If 15 instances are requested and standardCapacityBase is 5 and standardCapacityPercentAboveBase is 30, Dataproc will create 5 standard VMs and then start mixing spot and standard VMs for remaining 10 instances. The mix will be 30% standard and 70% spot.</summary>
+    [JsonPropertyName("standardCapacityPercentAboveBase")]
+    public double? StandardCapacityPercentAboveBase { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicy
 {
     /// <summary>List of instance selection options that the group will use when creating new VMs.</summary>
@@ -2292,6 +2378,10 @@ public partial class V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorke
     /// <summary></summary>
     [JsonPropertyName("instanceSelectionResults")]
     public IList<V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyInstanceSelectionResults>? InstanceSelectionResults { get; set; }
+
+    /// <summary>Defines how the Group selects the provisioning model to ensure required reliability.</summary>
+    [JsonPropertyName("provisioningModelMix")]
+    public IList<V1beta1ClusterStatusAtProviderClusterConfigPreemptibleWorkerConfigInstanceFlexibilityPolicyProvisioningModelMix>? ProvisioningModelMix { get; set; }
 }
 
 /// <summary></summary>

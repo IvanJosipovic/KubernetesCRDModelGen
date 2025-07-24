@@ -8,6 +8,27 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderBiglakeConfiguration
+{
+    /// <summary>The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection_id can have the form "&lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt;" or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;".</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>The file format the table data is stored in.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>The fully qualified location prefix of the external folder where table data is stored. The '*' wildcard character is not allowed. The URI should be in the format "gs://bucket/path_to_table/"</summary>
+    [JsonPropertyName("storageUri")]
+    public string? StorageUri { get; set; }
+
+    /// <summary>The table format the metadata only snapshots are stored in.</summary>
+    [JsonPropertyName("tableFormat")]
+    public string? TableFormat { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderDatasetIdRefPolicy
@@ -71,6 +92,61 @@ public partial class V1beta1TableSpecForProviderEncryptionConfiguration
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
+{
+    /// <summary>Name of the SerDe. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Key-value pairs that define the initialization parameters for the serialization library. Maximum size 10 Kib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>Specifies a fully-qualified class name of the serialization library that is responsible for the translation of data between table representation and the underlying low-level input and output format structures. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("serializationLibrary")]
+    public string? SerializationLibrary { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptor
+{
+    /// <summary>Specifies the fully qualified class name of the InputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcInputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("inputFormat")]
+    public string? InputFormat { get; set; }
+
+    /// <summary>The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data/*'). The maximum length is 2056 bytes.</summary>
+    [JsonPropertyName("locationUri")]
+    public string? LocationUri { get; set; }
+
+    /// <summary>Specifies the fully qualified class name of the OutputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("outputFormat")]
+    public string? OutputFormat { get; set; }
+
+    /// <summary>Serializer and deserializer information. Structure is documented below.</summary>
+    [JsonPropertyName("serdeInfo")]
+    public IList<V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderExternalCatalogTableOptions
+{
+    /// <summary>The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table from BigQuery Engine. The connection_id can have the form &lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt; or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;.</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>A storage descriptor containing information about the physical storage of this table. Structure is documented below.</summary>
+    [JsonPropertyName("storageDescriptor")]
+    public IList<V1beta1TableSpecForProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
 
 /// <summary></summary>
@@ -376,6 +452,15 @@ public partial class V1beta1TableSpecForProviderRangePartitioning
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecForProviderSchemaForeignTypeInfo
+{
+    /// <summary>Specifies the system which defines the foreign data type.</summary>
+    [JsonPropertyName("typeSystem")]
+    public string? TypeSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -502,9 +587,9 @@ public partial class V1beta1TableSpecForProviderView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProvider
 {
-    /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
-    [JsonPropertyName("allowResourceTagsOnDeletion")]
-    public bool? AllowResourceTagsOnDeletion { get; set; }
+    /// <summary>Specifies the configuration of a BigLake managed table. Structure is documented below</summary>
+    [JsonPropertyName("biglakeConfiguration")]
+    public IList<V1beta1TableSpecForProviderBiglakeConfiguration>? BiglakeConfiguration { get; set; }
 
     /// <summary>Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.</summary>
     [JsonPropertyName("clustering")]
@@ -538,6 +623,10 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("expirationTime")]
     public double? ExpirationTime { get; set; }
 
+    /// <summary>Options defining open source compatible table. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogTableOptions")]
+    public IList<V1beta1TableSpecForProviderExternalCatalogTableOptions>? ExternalCatalogTableOptions { get; set; }
+
     /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table. Structure is documented below.</summary>
     [JsonPropertyName("externalDataConfiguration")]
     public IList<V1beta1TableSpecForProviderExternalDataConfiguration>? ExternalDataConfiguration { get; set; }
@@ -545,6 +634,10 @@ public partial class V1beta1TableSpecForProvider
     /// <summary>A descriptive name for the table.</summary>
     [JsonPropertyName("friendlyName")]
     public string? FriendlyName { get; set; }
+
+    /// <summary>A list of fields which should be ignored for each column in schema. NOTE: Right now only dataPolicies field is supported. We might support others in the future.</summary>
+    [JsonPropertyName("ignoreSchemaChanges")]
+    public IList<string>? IgnoreSchemaChanges { get; set; }
 
     /// <summary>A mapping of labels to assign to the resource.</summary>
     [JsonPropertyName("labels")]
@@ -578,9 +671,17 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 
+    /// <summary>Specifies metadata of the foreign data type definition in field schema. Structure is documented below.</summary>
+    [JsonPropertyName("schemaForeignTypeInfo")]
+    public IList<V1beta1TableSpecForProviderSchemaForeignTypeInfo>? SchemaForeignTypeInfo { get; set; }
+
     /// <summary>Defines the primary key and foreign keys. Structure is documented below.</summary>
     [JsonPropertyName("tableConstraints")]
     public IList<V1beta1TableSpecForProviderTableConstraints>? TableConstraints { get; set; }
+
+    /// <summary>If specified, configures this table as a view. Structure is documented below.</summary>
+    [JsonPropertyName("tableMetadataView")]
+    public string? TableMetadataView { get; set; }
 
     /// <summary>Replication info of a table created using "AS REPLICA" DDL like: CREATE MATERIALIZED VIEW mv1 AS REPLICA OF src_mv. Structure is documented below.</summary>
     [JsonPropertyName("tableReplicationInfo")]
@@ -597,11 +698,87 @@ public partial class V1beta1TableSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderBiglakeConfiguration
+{
+    /// <summary>The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection_id can have the form "&lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt;" or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;".</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>The file format the table data is stored in.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>The fully qualified location prefix of the external folder where table data is stored. The '*' wildcard character is not allowed. The URI should be in the format "gs://bucket/path_to_table/"</summary>
+    [JsonPropertyName("storageUri")]
+    public string? StorageUri { get; set; }
+
+    /// <summary>The table format the metadata only snapshots are stored in.</summary>
+    [JsonPropertyName("tableFormat")]
+    public string? TableFormat { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderEncryptionConfiguration
 {
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
+{
+    /// <summary>Name of the SerDe. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Key-value pairs that define the initialization parameters for the serialization library. Maximum size 10 Kib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>Specifies a fully-qualified class name of the serialization library that is responsible for the translation of data between table representation and the underlying low-level input and output format structures. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("serializationLibrary")]
+    public string? SerializationLibrary { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptor
+{
+    /// <summary>Specifies the fully qualified class name of the InputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcInputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("inputFormat")]
+    public string? InputFormat { get; set; }
+
+    /// <summary>The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data/*'). The maximum length is 2056 bytes.</summary>
+    [JsonPropertyName("locationUri")]
+    public string? LocationUri { get; set; }
+
+    /// <summary>Specifies the fully qualified class name of the OutputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("outputFormat")]
+    public string? OutputFormat { get; set; }
+
+    /// <summary>Serializer and deserializer information. Structure is documented below.</summary>
+    [JsonPropertyName("serdeInfo")]
+    public IList<V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderExternalCatalogTableOptions
+{
+    /// <summary>The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table from BigQuery Engine. The connection_id can have the form &lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt; or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;.</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>A storage descriptor containing information about the physical storage of this table. Structure is documented below.</summary>
+    [JsonPropertyName("storageDescriptor")]
+    public IList<V1beta1TableSpecInitProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
 
 /// <summary></summary>
@@ -907,6 +1084,15 @@ public partial class V1beta1TableSpecInitProviderRangePartitioning
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableSpecInitProviderSchemaForeignTypeInfo
+{
+    /// <summary>Specifies the system which defines the foreign data type.</summary>
+    [JsonPropertyName("typeSystem")]
+    public string? TypeSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -1029,9 +1215,9 @@ public partial class V1beta1TableSpecInitProviderView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProvider
 {
-    /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
-    [JsonPropertyName("allowResourceTagsOnDeletion")]
-    public bool? AllowResourceTagsOnDeletion { get; set; }
+    /// <summary>Specifies the configuration of a BigLake managed table. Structure is documented below</summary>
+    [JsonPropertyName("biglakeConfiguration")]
+    public IList<V1beta1TableSpecInitProviderBiglakeConfiguration>? BiglakeConfiguration { get; set; }
 
     /// <summary>Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.</summary>
     [JsonPropertyName("clustering")]
@@ -1053,6 +1239,10 @@ public partial class V1beta1TableSpecInitProvider
     [JsonPropertyName("expirationTime")]
     public double? ExpirationTime { get; set; }
 
+    /// <summary>Options defining open source compatible table. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogTableOptions")]
+    public IList<V1beta1TableSpecInitProviderExternalCatalogTableOptions>? ExternalCatalogTableOptions { get; set; }
+
     /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table. Structure is documented below.</summary>
     [JsonPropertyName("externalDataConfiguration")]
     public IList<V1beta1TableSpecInitProviderExternalDataConfiguration>? ExternalDataConfiguration { get; set; }
@@ -1060,6 +1250,10 @@ public partial class V1beta1TableSpecInitProvider
     /// <summary>A descriptive name for the table.</summary>
     [JsonPropertyName("friendlyName")]
     public string? FriendlyName { get; set; }
+
+    /// <summary>A list of fields which should be ignored for each column in schema. NOTE: Right now only dataPolicies field is supported. We might support others in the future.</summary>
+    [JsonPropertyName("ignoreSchemaChanges")]
+    public IList<string>? IgnoreSchemaChanges { get; set; }
 
     /// <summary>A mapping of labels to assign to the resource.</summary>
     [JsonPropertyName("labels")]
@@ -1089,9 +1283,17 @@ public partial class V1beta1TableSpecInitProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 
+    /// <summary>Specifies metadata of the foreign data type definition in field schema. Structure is documented below.</summary>
+    [JsonPropertyName("schemaForeignTypeInfo")]
+    public IList<V1beta1TableSpecInitProviderSchemaForeignTypeInfo>? SchemaForeignTypeInfo { get; set; }
+
     /// <summary>Defines the primary key and foreign keys. Structure is documented below.</summary>
     [JsonPropertyName("tableConstraints")]
     public IList<V1beta1TableSpecInitProviderTableConstraints>? TableConstraints { get; set; }
+
+    /// <summary>If specified, configures this table as a view. Structure is documented below.</summary>
+    [JsonPropertyName("tableMetadataView")]
+    public string? TableMetadataView { get; set; }
 
     /// <summary>Replication info of a table created using "AS REPLICA" DDL like: CREATE MATERIALIZED VIEW mv1 AS REPLICA OF src_mv. Structure is documented below.</summary>
     [JsonPropertyName("tableReplicationInfo")]
@@ -1240,6 +1442,27 @@ public partial class V1beta1TableSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderBiglakeConfiguration
+{
+    /// <summary>The connection specifying the credentials to be used to read and write to external storage, such as Cloud Storage. The connection_id can have the form "&lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt;" or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;".</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>The file format the table data is stored in.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
+    /// <summary>The fully qualified location prefix of the external folder where table data is stored. The '*' wildcard character is not allowed. The URI should be in the format "gs://bucket/path_to_table/"</summary>
+    [JsonPropertyName("storageUri")]
+    public string? StorageUri { get; set; }
+
+    /// <summary>The table format the metadata only snapshots are stored in.</summary>
+    [JsonPropertyName("tableFormat")]
+    public string? TableFormat { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
 {
     /// <summary>The self link or full name of a key which should be used to encrypt this table.  Note that the default bigquery service account will need to have encrypt/decrypt permissions on this key - you may want to see the google_bigquery_default_service_account datasource and the google_kms_crypto_key_iam_binding resource.</summary>
@@ -1249,6 +1472,61 @@ public partial class V1beta1TableStatusAtProviderEncryptionConfiguration
     /// <summary>The self link or full name of the kms key version used to encrypt this table.</summary>
     [JsonPropertyName("kmsKeyVersion")]
     public string? KmsKeyVersion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo
+{
+    /// <summary>Name of the SerDe. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Key-value pairs that define the initialization parameters for the serialization library. Maximum size 10 Kib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>Specifies a fully-qualified class name of the serialization library that is responsible for the translation of data between table representation and the underlying low-level input and output format structures. The maximum length is 256 characters.</summary>
+    [JsonPropertyName("serializationLibrary")]
+    public string? SerializationLibrary { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptor
+{
+    /// <summary>Specifies the fully qualified class name of the InputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcInputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("inputFormat")]
+    public string? InputFormat { get; set; }
+
+    /// <summary>The physical location of the table (e.g. 'gs://spark-dataproc-data/pangea-data/case_sensitive/' or 'gs://spark-dataproc-data/pangea-data/*'). The maximum length is 2056 bytes.</summary>
+    [JsonPropertyName("locationUri")]
+    public string? LocationUri { get; set; }
+
+    /// <summary>Specifies the fully qualified class name of the OutputFormat (e.g. "org.apache.hadoop.hive.ql.io.orc.OrcOutputFormat"). The maximum length is 128 characters.</summary>
+    [JsonPropertyName("outputFormat")]
+    public string? OutputFormat { get; set; }
+
+    /// <summary>Serializer and deserializer information. Structure is documented below.</summary>
+    [JsonPropertyName("serdeInfo")]
+    public IList<V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptorSerdeInfo>? SerdeInfo { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderExternalCatalogTableOptions
+{
+    /// <summary>The connection specifying the credentials to be used to read external storage, such as Azure Blob, Cloud Storage, or S3. The connection is needed to read the open source table from BigQuery Engine. The connection_id can have the form &lt;project_id&gt;.&lt;location_id&gt;.&lt;connection_id&gt; or projects/&lt;project_id&gt;/locations/&lt;location_id&gt;/connections/&lt;connection_id&gt;.</summary>
+    [JsonPropertyName("connectionId")]
+    public string? ConnectionId { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source table. Corresponds with hive meta store table parameters. Maximum size of 4Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>A storage descriptor containing information about the physical storage of this table. Structure is documented below.</summary>
+    [JsonPropertyName("storageDescriptor")]
+    public IList<V1beta1TableStatusAtProviderExternalCatalogTableOptionsStorageDescriptor>? StorageDescriptor { get; set; }
 }
 
 /// <summary></summary>
@@ -1554,6 +1832,15 @@ public partial class V1beta1TableStatusAtProviderRangePartitioning
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TableStatusAtProviderSchemaForeignTypeInfo
+{
+    /// <summary>Specifies the system which defines the foreign data type.</summary>
+    [JsonPropertyName("typeSystem")]
+    public string? TypeSystem { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTableConstraintsForeignKeysColumnReferences
 {
     /// <summary>:  The column in the primary key that are referenced by the referencingColumn</summary>
@@ -1680,9 +1967,9 @@ public partial class V1beta1TableStatusAtProviderView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProvider
 {
-    /// <summary>If set to true, it allows table deletion when there are still resource tags attached. The default value is false.</summary>
-    [JsonPropertyName("allowResourceTagsOnDeletion")]
-    public bool? AllowResourceTagsOnDeletion { get; set; }
+    /// <summary>Specifies the configuration of a BigLake managed table. Structure is documented below</summary>
+    [JsonPropertyName("biglakeConfiguration")]
+    public IList<V1beta1TableStatusAtProviderBiglakeConfiguration>? BiglakeConfiguration { get; set; }
 
     /// <summary>Specifies column names to use for data clustering. Up to four top-level columns are allowed, and should be specified in descending priority order.</summary>
     [JsonPropertyName("clustering")]
@@ -1720,6 +2007,10 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("expirationTime")]
     public double? ExpirationTime { get; set; }
 
+    /// <summary>Options defining open source compatible table. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogTableOptions")]
+    public IList<V1beta1TableStatusAtProviderExternalCatalogTableOptions>? ExternalCatalogTableOptions { get; set; }
+
     /// <summary>Describes the data format, location, and other properties of a table stored outside of BigQuery. By defining these properties, the data source can then be queried as if it were a standard BigQuery table. Structure is documented below.</summary>
     [JsonPropertyName("externalDataConfiguration")]
     public IList<V1beta1TableStatusAtProviderExternalDataConfiguration>? ExternalDataConfiguration { get; set; }
@@ -1731,6 +2022,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>an identifier for the resource with format projects/{{project}}/datasets/{{dataset}}/tables/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>A list of fields which should be ignored for each column in schema. NOTE: Right now only dataPolicies field is supported. We might support others in the future.</summary>
+    [JsonPropertyName("ignoreSchemaChanges")]
+    public IList<string>? IgnoreSchemaChanges { get; set; }
 
     /// <summary>A mapping of labels to assign to the resource.</summary>
     [JsonPropertyName("labels")]
@@ -1784,6 +2079,10 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("schema")]
     public string? Schema { get; set; }
 
+    /// <summary>Specifies metadata of the foreign data type definition in field schema. Structure is documented below.</summary>
+    [JsonPropertyName("schemaForeignTypeInfo")]
+    public IList<V1beta1TableStatusAtProviderSchemaForeignTypeInfo>? SchemaForeignTypeInfo { get; set; }
+
     /// <summary>The URI of the created resource.</summary>
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
@@ -1791,6 +2090,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>Defines the primary key and foreign keys. Structure is documented below.</summary>
     [JsonPropertyName("tableConstraints")]
     public IList<V1beta1TableStatusAtProviderTableConstraints>? TableConstraints { get; set; }
+
+    /// <summary>If specified, configures this table as a view. Structure is documented below.</summary>
+    [JsonPropertyName("tableMetadataView")]
+    public string? TableMetadataView { get; set; }
 
     /// <summary>Replication info of a table created using "AS REPLICA" DDL like: CREATE MATERIALIZED VIEW mv1 AS REPLICA OF src_mv. Structure is documented below.</summary>
     [JsonPropertyName("tableReplicationInfo")]

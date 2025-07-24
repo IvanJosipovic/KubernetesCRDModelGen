@@ -16,18 +16,47 @@ public partial class V1beta1InstanceSpecForProviderAdvancedMachineFeatures
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
-    /// <summary>he number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
+    /// <summary>Whether to enable UEFI networking for instance creation.</summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary>The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
+
+    /// <summary>Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).</summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
 
     /// <summary>The number of physical cores to expose to an instance. visible cores info (VC).</summary>
     [JsonPropertyName("visibleCoreCount")]
     public double? VisibleCoreCount { get; set; }
 }
 
-/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKeyRsaSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -50,11 +79,23 @@ public partial class V1beta1InstanceSpecForProviderAttachedDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
     public V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceSpecForProviderAttachedDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -67,9 +108,26 @@ public partial class V1beta1InstanceSpecForProviderAttachedDisk
     public string? Source { get; set; }
 }
 
-/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskDiskEncryptionKeyRsaSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -140,10 +198,124 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsImage
     public V1beta1InstanceSpecForProviderBootDiskInitializeParamsImageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParams
 {
+    /// <summary>The architecture of the attached disk. Valid values are ARM64 or x86_64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -176,11 +348,27 @@ public partial class V1beta1InstanceSpecForProviderBootDiskInitializeParams
     [JsonPropertyName("resourceManagerTags")]
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
+    /// <summary>- A list of self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
     /// <summary>The size of the image in gigabytes. If not specified, it will inherit the size of its base image.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The snapshot from which to initialize this disk. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup</summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given image. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given snapshot. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceSpecForProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 
@@ -201,15 +389,35 @@ public partial class V1beta1InstanceSpecForProviderBootDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
     public V1beta1InstanceSpecForProviderBootDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceSpecForProviderBootDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.</summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
 
     /// <summary>Parameters for a new disk that will be created alongside the new instance. Either initialize_params or source must be set. Structure is documented below.</summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceSpecForProviderBootDiskInitializeParams>? InitializeParams { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>The disk interface to use for attaching this disk; either SCSI or NVME.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -226,11 +434,11 @@ public partial class V1beta1InstanceSpecForProviderBootDisk
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderConfidentialInstanceConfig
 {
-    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
+    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
     [JsonPropertyName("confidentialInstanceType")]
     public string? ConfidentialInstanceType { get; set; }
 
-    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
+    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
@@ -246,6 +454,19 @@ public partial class V1beta1InstanceSpecForProviderGuestAccelerator
     /// <summary>The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderInstanceEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt the data on this instance.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
 }
 
 /// <summary></summary>
@@ -419,7 +640,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterfaceSubnetworkSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderNetworkInterface
 {
-    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
+    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be specified once per network_interface. Structure documented below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1InstanceSpecForProviderNetworkInterfaceAccessConfig>? AccessConfig { get; set; }
 
@@ -443,6 +664,10 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
     /// <summary>The private IP address to assign to the instance. If empty, the address will be automatically assigned.</summary>
     [JsonPropertyName("networkIp")]
     public string? NetworkIp { get; set; }
@@ -455,7 +680,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     [JsonPropertyName("networkSelector")]
     public V1beta1InstanceSpecForProviderNetworkInterfaceNetworkSelector? NetworkSelector { get; set; }
 
-    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.</summary>
+    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, IDPF, MRDMA, IRDMA.</summary>
     [JsonPropertyName("nicType")]
     public string? NicType { get; set; }
 
@@ -463,7 +688,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     [JsonPropertyName("queueCount")]
     public double? QueueCount { get; set; }
 
-    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
+    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 
@@ -471,7 +696,7 @@ public partial class V1beta1InstanceSpecForProviderNetworkInterface
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
-    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is ignored in favor of the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
+    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is set to the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
     [JsonPropertyName("subnetworkProject")]
     public string? SubnetworkProject { get; set; }
 
@@ -536,7 +761,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingLocalSsdRecoveryTim
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -549,7 +774,7 @@ public partial class V1beta1InstanceSpecForProviderSchedulingMaxRunDuration
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -588,11 +813,15 @@ public partial class V1beta1InstanceSpecForProviderScheduling
     [JsonPropertyName("automaticRestart")]
     public bool? AutomaticRestart { get; set; }
 
+    /// <summary>Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.</summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
     /// <summary>Describe the type of termination action for VM. Can be STOP or DELETE.  Read more on here</summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
-    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:</summary>
+    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.</summary>
     [JsonPropertyName("localSsdRecoveryTimeout")]
     public IList<V1beta1InstanceSpecForProviderSchedulingLocalSsdRecoveryTimeout>? LocalSsdRecoveryTimeout { get; set; }
 
@@ -623,6 +852,10 @@ public partial class V1beta1InstanceSpecForProviderScheduling
     /// <summary>Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT, preemptible should be true and automatic_restart should be false. For more info about SPOT, read here</summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary>Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.</summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -772,7 +1005,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Desired status of the instance. Either "RUNNING" or "TERMINATED".</summary>
+    /// <summary>Desired status of the instance. Either "RUNNING", "SUSPENDED" or "TERMINATED".</summary>
     [JsonPropertyName("desiredStatus")]
     public string? DesiredStatus { get; set; }
 
@@ -780,13 +1013,21 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("enableDisplay")]
     public bool? EnableDisplay { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: This field uses attr-as-block mode to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following syntax: example=[] For more details about this behavior, see this section.</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1InstanceSpecForProviderGuestAccelerator>? GuestAccelerator { get; set; }
 
     /// <summary>A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
+
+    /// <summary>Configuration for data encryption on the instance with encryption keys. Structure is documented below.</summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceSpecForProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
+    /// <summary>Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.</summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
 
     /// <summary>A map of key/value label pairs to assign to the instance. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field 'effective_labels' for all of the labels present on the resource.</summary>
     [JsonPropertyName("labels")]
@@ -796,7 +1037,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here</summary>
+    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of predefined metadata keys (e.g. ssh-keys) can be found here</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 
@@ -865,13 +1106,59 @@ public partial class V1beta1InstanceSpecInitProviderAdvancedMachineFeatures
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
-    /// <summary>he number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
+    /// <summary>Whether to enable UEFI networking for instance creation.</summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary>The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
+
+    /// <summary>Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).</summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
 
     /// <summary>The number of physical cores to expose to an instance. visible cores info (VC).</summary>
     [JsonPropertyName("visibleCoreCount")]
     public double? VisibleCoreCount { get; set; }
+}
+
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAttachedDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderAttachedDiskDiskEncryptionKeyRsaSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -882,7 +1169,23 @@ public partial class V1beta1InstanceSpecInitProviderAttachedDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+    [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
+    public V1beta1InstanceSpecInitProviderAttachedDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceSpecInitProviderAttachedDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -895,9 +1198,26 @@ public partial class V1beta1InstanceSpecInitProviderAttachedDisk
     public string? Source { get; set; }
 }
 
-/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskDiskEncryptionKeyRsaSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -968,10 +1288,124 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImag
     public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsImageSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
+/// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rawKeySecretRef")]
+    public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRawKeySecretRef? RawKeySecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("rsaEncryptedKeySecretRef")]
+    public V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKeyRsaEncryptedKeySecretRef? RsaEncryptedKeySecretRef { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParams
 {
+    /// <summary>The architecture of the attached disk. Valid values are ARM64 or x86_64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -1004,11 +1438,27 @@ public partial class V1beta1InstanceSpecInitProviderBootDiskInitializeParams
     [JsonPropertyName("resourceManagerTags")]
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
+    /// <summary>- A list of self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
     /// <summary>The size of the image in gigabytes. If not specified, it will inherit the size of its base image.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The snapshot from which to initialize this disk. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup</summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given image. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given snapshot. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceSpecInitProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 
@@ -1029,15 +1479,35 @@ public partial class V1beta1InstanceSpecInitProviderBootDisk
     [JsonPropertyName("deviceName")]
     public string? DeviceName { get; set; }
 
-    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>A 256-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption), encoded in RFC 4648 base64 to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("diskEncryptionKeyRawSecretRef")]
     public V1beta1InstanceSpecInitProviderBootDiskDiskEncryptionKeyRawSecretRef? DiskEncryptionKeyRawSecretRef { get; set; }
+
+    /// <summary>Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw</summary>
+    [JsonPropertyName("diskEncryptionKeyRsaSecretRef")]
+    public V1beta1InstanceSpecInitProviderBootDiskDiskEncryptionKeyRsaSecretRef? DiskEncryptionKeyRsaSecretRef { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.</summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
 
     /// <summary>Parameters for a new disk that will be created alongside the new instance. Either initialize_params or source must be set. Structure is documented below.</summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceSpecInitProviderBootDiskInitializeParams>? InitializeParams { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>The disk interface to use for attaching this disk; either SCSI or NVME.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -1054,11 +1524,11 @@ public partial class V1beta1InstanceSpecInitProviderBootDisk
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderConfidentialInstanceConfig
 {
-    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
+    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
     [JsonPropertyName("confidentialInstanceType")]
     public string? ConfidentialInstanceType { get; set; }
 
-    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
+    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
@@ -1074,6 +1544,19 @@ public partial class V1beta1InstanceSpecInitProviderGuestAccelerator
     /// <summary>The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderInstanceEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt the data on this instance.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
 }
 
 /// <summary></summary>
@@ -1247,7 +1730,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterfaceSubnetworkSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderNetworkInterface
 {
-    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
+    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be specified once per network_interface. Structure documented below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1InstanceSpecInitProviderNetworkInterfaceAccessConfig>? AccessConfig { get; set; }
 
@@ -1271,6 +1754,10 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
     /// <summary>The private IP address to assign to the instance. If empty, the address will be automatically assigned.</summary>
     [JsonPropertyName("networkIp")]
     public string? NetworkIp { get; set; }
@@ -1283,7 +1770,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     [JsonPropertyName("networkSelector")]
     public V1beta1InstanceSpecInitProviderNetworkInterfaceNetworkSelector? NetworkSelector { get; set; }
 
-    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.</summary>
+    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, IDPF, MRDMA, IRDMA.</summary>
     [JsonPropertyName("nicType")]
     public string? NicType { get; set; }
 
@@ -1291,7 +1778,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     [JsonPropertyName("queueCount")]
     public double? QueueCount { get; set; }
 
-    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
+    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 
@@ -1299,7 +1786,7 @@ public partial class V1beta1InstanceSpecInitProviderNetworkInterface
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
-    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is ignored in favor of the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
+    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is set to the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
     [JsonPropertyName("subnetworkProject")]
     public string? SubnetworkProject { get; set; }
 
@@ -1364,7 +1851,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingLocalSsdRecoveryTi
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -1377,7 +1864,7 @@ public partial class V1beta1InstanceSpecInitProviderSchedulingMaxRunDuration
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -1416,11 +1903,15 @@ public partial class V1beta1InstanceSpecInitProviderScheduling
     [JsonPropertyName("automaticRestart")]
     public bool? AutomaticRestart { get; set; }
 
+    /// <summary>Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.</summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
     /// <summary>Describe the type of termination action for VM. Can be STOP or DELETE.  Read more on here</summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
-    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:</summary>
+    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.</summary>
     [JsonPropertyName("localSsdRecoveryTimeout")]
     public IList<V1beta1InstanceSpecInitProviderSchedulingLocalSsdRecoveryTimeout>? LocalSsdRecoveryTimeout { get; set; }
 
@@ -1451,6 +1942,10 @@ public partial class V1beta1InstanceSpecInitProviderScheduling
     /// <summary>Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT, preemptible should be true and automatic_restart should be false. For more info about SPOT, read here</summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary>Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.</summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -1600,7 +2095,7 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Desired status of the instance. Either "RUNNING" or "TERMINATED".</summary>
+    /// <summary>Desired status of the instance. Either "RUNNING", "SUSPENDED" or "TERMINATED".</summary>
     [JsonPropertyName("desiredStatus")]
     public string? DesiredStatus { get; set; }
 
@@ -1608,13 +2103,21 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("enableDisplay")]
     public bool? EnableDisplay { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: This field uses attr-as-block mode to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following syntax: example=[] For more details about this behavior, see this section.</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1InstanceSpecInitProviderGuestAccelerator>? GuestAccelerator { get; set; }
 
     /// <summary>A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid. Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods. The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
+
+    /// <summary>Configuration for data encryption on the instance with encryption keys. Structure is documented below.</summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceSpecInitProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
+    /// <summary>Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.</summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
 
     /// <summary>A map of key/value label pairs to assign to the instance. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field 'effective_labels' for all of the labels present on the resource.</summary>
     [JsonPropertyName("labels")]
@@ -1624,7 +2127,7 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here</summary>
+    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of predefined metadata keys (e.g. ssh-keys) can be found here</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 
@@ -1821,9 +2324,21 @@ public partial class V1beta1InstanceStatusAtProviderAdvancedMachineFeatures
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
-    /// <summary>he number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
+    /// <summary>Whether to enable UEFI networking for instance creation.</summary>
+    [JsonPropertyName("enableUefiNetworking")]
+    public bool? EnableUefiNetworking { get; set; }
+
+    /// <summary>The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
+    /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
+
+    /// <summary>Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).</summary>
+    [JsonPropertyName("turboMode")]
+    public string? TurboMode { get; set; }
 
     /// <summary>The number of physical cores to expose to an instance. visible cores info (VC).</summary>
     [JsonPropertyName("visibleCoreCount")]
@@ -1842,7 +2357,15 @@ public partial class V1beta1InstanceStatusAtProviderAttachedDisk
     [JsonPropertyName("diskEncryptionKeySha256")]
     public string? DiskEncryptionKeySha256 { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -1857,8 +2380,46 @@ public partial class V1beta1InstanceStatusAtProviderAttachedDisk
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParamsSourceImageEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>The RFC 4648 base64 encoded SHA-256 hash of the [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.</summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key may be set.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>The RFC 4648 base64 encoded SHA-256 hash of the [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.</summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParams
 {
+    /// <summary>The architecture of the attached disk. Valid values are ARM64 or x86_64.</summary>
+    [JsonPropertyName("architecture")]
+    public string? Architecture { get; set; }
+
     /// <summary>Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
@@ -1883,11 +2444,27 @@ public partial class V1beta1InstanceStatusAtProviderBootDiskInitializeParams
     [JsonPropertyName("resourceManagerTags")]
     public IDictionary<string, string>? ResourceManagerTags { get; set; }
 
+    /// <summary>- A list of self_links of resource policies to attach to the instance. Modifying this list will cause the instance to recreate. Currently a max of 1 resource policy is supported.</summary>
+    [JsonPropertyName("resourcePolicies")]
+    public IList<string>? ResourcePolicies { get; set; }
+
     /// <summary>The size of the image in gigabytes. If not specified, it will inherit the size of its base image.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
-    /// <summary>The URL of the storage pool in which the new disk is created. For example:</summary>
+    /// <summary>The snapshot from which to initialize this disk. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup</summary>
+    [JsonPropertyName("snapshot")]
+    public string? Snapshot { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given image. Structure is documented below.</summary>
+    [JsonPropertyName("sourceImageEncryptionKey")]
+    public IList<V1beta1InstanceStatusAtProviderBootDiskInitializeParamsSourceImageEncryptionKey>? SourceImageEncryptionKey { get; set; }
+
+    /// <summary>Encryption key used to decrypt the given snapshot. Structure is documented below.</summary>
+    [JsonPropertyName("sourceSnapshotEncryptionKey")]
+    public IList<V1beta1InstanceStatusAtProviderBootDiskInitializeParamsSourceSnapshotEncryptionKey>? SourceSnapshotEncryptionKey { get; set; }
+
+    /// <summary>The URL or the name of the storage pool in which the new disk is created. For example:</summary>
     [JsonPropertyName("storagePool")]
     public string? StoragePool { get; set; }
 
@@ -1912,11 +2489,27 @@ public partial class V1beta1InstanceStatusAtProviderBootDisk
     [JsonPropertyName("diskEncryptionKeySha256")]
     public string? DiskEncryptionKeySha256 { get; set; }
 
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("diskEncryptionServiceAccount")]
+    public string? DiskEncryptionServiceAccount { get; set; }
+
+    /// <summary>boolean field that determines whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error. Setting this parameter cause VM recreation.</summary>
+    [JsonPropertyName("forceAttach")]
+    public bool? ForceAttach { get; set; }
+
+    /// <summary>A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.</summary>
+    [JsonPropertyName("guestOsFeatures")]
+    public IList<string>? GuestOsFeatures { get; set; }
+
     /// <summary>Parameters for a new disk that will be created alongside the new instance. Either initialize_params or source must be set. Structure is documented below.</summary>
     [JsonPropertyName("initializeParams")]
     public IList<V1beta1InstanceStatusAtProviderBootDiskInitializeParams>? InitializeParams { get; set; }
 
-    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link and disk_encryption_key_raw may be set.</summary>
+    /// <summary>The disk interface to use for attaching this disk; either SCSI or NVME.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
+
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw may be set.</summary>
     [JsonPropertyName("kmsKeySelfLink")]
     public string? KmsKeySelfLink { get; set; }
 
@@ -1933,11 +2526,11 @@ public partial class V1beta1InstanceStatusAtProviderBootDisk
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderConfidentialInstanceConfig
 {
-    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
+    /// <summary>Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.</summary>
     [JsonPropertyName("confidentialInstanceType")]
     public string? ConfidentialInstanceType { get; set; }
 
-    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
+    /// <summary>Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
     public bool? EnableConfidentialCompute { get; set; }
 }
@@ -1953,6 +2546,23 @@ public partial class V1beta1InstanceStatusAtProviderGuestAccelerator
     /// <summary>The accelerator type resource to expose to this instance. E.g. nvidia-tesla-k80.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderInstanceEncryptionKey
+{
+    /// <summary>The self_link of the encryption key that is stored in Google Cloud KMS to encrypt the data on this instance.</summary>
+    [JsonPropertyName("kmsKeySelfLink")]
+    public string? KmsKeySelfLink { get; set; }
+
+    /// <summary>The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.</summary>
+    [JsonPropertyName("kmsKeyServiceAccount")]
+    public string? KmsKeyServiceAccount { get; set; }
+
+    /// <summary>The RFC 4648 base64 encoded SHA-256 hash of the [customer-supplied encryption key] (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.</summary>
+    [JsonPropertyName("sha256")]
+    public string? Sha256 { get; set; }
 }
 
 /// <summary></summary>
@@ -2014,7 +2624,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterfaceIpv6AccessCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderNetworkInterface
 {
-    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be repeated multiple times. Structure documented below.</summary>
+    /// <summary>Access configurations, i.e. IPs via which this instance can be accessed via the Internet. Omit to ensure that the instance is not accessible from the Internet.g. via tunnel or because it is running on another cloud instance on that network). This block can be specified once per network_interface. Structure documented below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1InstanceStatusAtProviderNetworkInterfaceAccessConfig>? AccessConfig { get; set; }
 
@@ -2046,11 +2656,15 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterface
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.</summary>
+    [JsonPropertyName("networkAttachment")]
+    public string? NetworkAttachment { get; set; }
+
     /// <summary>The private IP address to assign to the instance. If empty, the address will be automatically assigned.</summary>
     [JsonPropertyName("networkIp")]
     public string? NetworkIp { get; set; }
 
-    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.</summary>
+    /// <summary>The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, IDPF, MRDMA, IRDMA.</summary>
     [JsonPropertyName("nicType")]
     public string? NicType { get; set; }
 
@@ -2058,7 +2672,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterface
     [JsonPropertyName("queueCount")]
     public double? QueueCount { get; set; }
 
-    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
+    /// <summary>The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
 
@@ -2066,7 +2680,7 @@ public partial class V1beta1InstanceStatusAtProviderNetworkInterface
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
-    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is ignored in favor of the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
+    /// <summary>The project in which the subnetwork belongs. If the subnetwork is a self_link, this field is set to the project defined in the subnetwork self_link. If the subnetwork is a name and this field is not provided, the provider project is used.</summary>
     [JsonPropertyName("subnetworkProject")]
     public string? SubnetworkProject { get; set; }
 }
@@ -2123,7 +2737,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingLocalSsdRecoveryTi
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -2136,7 +2750,7 @@ public partial class V1beta1InstanceStatusAtProviderSchedulingMaxRunDuration
     [JsonPropertyName("nanos")]
     public double? Nanos { get; set; }
 
-    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.</summary>
+    /// <summary>Span of time at a resolution of a second. The value must be between 1 and 3600, which is 3,600 seconds (one hour).`</summary>
     [JsonPropertyName("seconds")]
     public double? Seconds { get; set; }
 }
@@ -2175,11 +2789,15 @@ public partial class V1beta1InstanceStatusAtProviderScheduling
     [JsonPropertyName("automaticRestart")]
     public bool? AutomaticRestart { get; set; }
 
+    /// <summary>Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.</summary>
+    [JsonPropertyName("availabilityDomain")]
+    public double? AvailabilityDomain { get; set; }
+
     /// <summary>Describe the type of termination action for VM. Can be STOP or DELETE.  Read more on here</summary>
     [JsonPropertyName("instanceTerminationAction")]
     public string? InstanceTerminationAction { get; set; }
 
-    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below. The local_ssd_recovery_timeout block supports:</summary>
+    /// <summary>io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.</summary>
     [JsonPropertyName("localSsdRecoveryTimeout")]
     public IList<V1beta1InstanceStatusAtProviderSchedulingLocalSsdRecoveryTimeout>? LocalSsdRecoveryTimeout { get; set; }
 
@@ -2210,6 +2828,10 @@ public partial class V1beta1InstanceStatusAtProviderScheduling
     /// <summary>Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT, preemptible should be true and automatic_restart should be false. For more info about SPOT, read here</summary>
     [JsonPropertyName("provisioningModel")]
     public string? ProvisioningModel { get; set; }
+
+    /// <summary>Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.</summary>
+    [JsonPropertyName("terminationTime")]
+    public string? TerminationTime { get; set; }
 }
 
 /// <summary></summary>
@@ -2291,7 +2913,11 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("cpuPlatform")]
     public string? CpuPlatform { get; set; }
 
-    /// <summary>The current status of the instance. This could be one of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see Instance life cycle.`,</summary>
+    /// <summary>Creation timestamp in RFC3339 text format.</summary>
+    [JsonPropertyName("creationTimestamp")]
+    public string? CreationTimestamp { get; set; }
+
+    /// <summary>The current status of the instance. This could be one of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see Instance life cycle.</summary>
     [JsonPropertyName("currentStatus")]
     public string? CurrentStatus { get; set; }
 
@@ -2303,7 +2929,7 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Desired status of the instance. Either "RUNNING" or "TERMINATED".</summary>
+    /// <summary>Desired status of the instance. Either "RUNNING", "SUSPENDED" or "TERMINATED".</summary>
     [JsonPropertyName("desiredStatus")]
     public string? DesiredStatus { get; set; }
 
@@ -2315,7 +2941,7 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("enableDisplay")]
     public bool? EnableDisplay { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: This field uses attr-as-block mode to avoid breaking users during the 0.12 upgrade. To explicitly send a list of zero objects you must use the following syntax: example=[] For more details about this behavior, see this section.</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1InstanceStatusAtProviderGuestAccelerator>? GuestAccelerator { get; set; }
 
@@ -2327,9 +2953,17 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Configuration for data encryption on the instance with encryption keys. Structure is documented below.</summary>
+    [JsonPropertyName("instanceEncryptionKey")]
+    public IList<V1beta1InstanceStatusAtProviderInstanceEncryptionKey>? InstanceEncryptionKey { get; set; }
+
     /// <summary>The server-assigned unique identifier of this instance.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
+
+    /// <summary>Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.</summary>
+    [JsonPropertyName("keyRevocationActionType")]
+    public string? KeyRevocationActionType { get; set; }
 
     /// <summary>The unique fingerprint of the labels.</summary>
     [JsonPropertyName("labelFingerprint")]
@@ -2343,7 +2977,7 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
 
-    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of default metadata values (e.g. ssh-keys) can be found here</summary>
+    /// <summary>Metadata key/value pairs to make available from within the instance. Ssh keys attached in the Cloud Console will be removed. Add them to your config in order to keep them attached to your instance. A list of predefined metadata keys (e.g. ssh-keys) can be found here</summary>
     [JsonPropertyName("metadata")]
     public IDictionary<string, string>? Metadata { get; set; }
 

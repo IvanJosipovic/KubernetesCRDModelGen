@@ -1690,7 +1690,7 @@ spec:
                         properties:
                           maxScaledInReplicas:
                             description: >-
-                              A nested object resource
+                              A nested object resource.
 
                               Structure is documented below.
                             properties:
@@ -1746,7 +1746,7 @@ spec:
                         type: array
                     type: object
                   description:
-                    description: A description of a scaling schedule.
+                    description: An optional description of this resource.
                     type: string
                   project:
                     description: >-
@@ -2074,7 +2074,7 @@ spec:
                         properties:
                           maxScaledInReplicas:
                             description: >-
-                              A nested object resource
+                              A nested object resource.
 
                               Structure is documented below.
                             properties:
@@ -2130,7 +2130,7 @@ spec:
                         type: array
                     type: object
                   description:
-                    description: A description of a scaling schedule.
+                    description: An optional description of this resource.
                     type: string
                   project:
                     description: >-
@@ -2647,7 +2647,7 @@ spec:
                         properties:
                           maxScaledInReplicas:
                             description: >-
-                              A nested object resource
+                              A nested object resource.
 
                               Structure is documented below.
                             properties:
@@ -2706,7 +2706,7 @@ spec:
                     description: Creation timestamp in RFC3339 text format.
                     type: string
                   description:
-                    description: A description of a scaling schedule.
+                    description: An optional description of this resource.
                     type: string
                   id:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/autoscalers/{{name}}

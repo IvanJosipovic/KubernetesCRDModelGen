@@ -189,6 +189,62 @@ public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIp
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecForProviderRulesAction
@@ -205,9 +261,25 @@ public partial class V1beta1RouterNATSpecForProviderRulesAction
     [JsonPropertyName("sourceNatActiveIpsSelector")]
     public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveIpsSelector? SourceNatActiveIpsSelector { get; set; }
 
+    /// <summary>A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatActiveRanges")]
+    public IList<string>? SourceNatActiveRanges { get; set; }
+
+    /// <summary>References to Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+    [JsonPropertyName("sourceNatActiveRangesRefs")]
+    public IList<V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesRefs>? SourceNatActiveRangesRefs { get; set; }
+
+    /// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+    [JsonPropertyName("sourceNatActiveRangesSelector")]
+    public V1beta1RouterNATSpecForProviderRulesActionSourceNatActiveRangesSelector? SourceNatActiveRangesSelector { get; set; }
+
     /// <summary>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.</summary>
     [JsonPropertyName("sourceNatDrainIps")]
     public IList<string>? SourceNatDrainIps { get; set; }
+
+    /// <summary>A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatDrainRanges")]
+    public IList<string>? SourceNatDrainRanges { get; set; }
 }
 
 /// <summary></summary>
@@ -542,6 +614,62 @@ public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveI
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterNATSpecInitProviderRulesAction
@@ -558,9 +686,25 @@ public partial class V1beta1RouterNATSpecInitProviderRulesAction
     [JsonPropertyName("sourceNatActiveIpsSelector")]
     public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveIpsSelector? SourceNatActiveIpsSelector { get; set; }
 
+    /// <summary>A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatActiveRanges")]
+    public IList<string>? SourceNatActiveRanges { get; set; }
+
+    /// <summary>References to Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+    [JsonPropertyName("sourceNatActiveRangesRefs")]
+    public IList<V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesRefs>? SourceNatActiveRangesRefs { get; set; }
+
+    /// <summary>Selector for a list of Subnetwork in compute to populate sourceNatActiveRanges.</summary>
+    [JsonPropertyName("sourceNatActiveRangesSelector")]
+    public V1beta1RouterNATSpecInitProviderRulesActionSourceNatActiveRangesSelector? SourceNatActiveRangesSelector { get; set; }
+
     /// <summary>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.</summary>
     [JsonPropertyName("sourceNatDrainIps")]
     public IList<string>? SourceNatDrainIps { get; set; }
+
+    /// <summary>A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatDrainRanges")]
+    public IList<string>? SourceNatDrainRanges { get; set; }
 }
 
 /// <summary></summary>
@@ -907,9 +1051,17 @@ public partial class V1beta1RouterNATStatusAtProviderRulesAction
     [JsonPropertyName("sourceNatActiveIps")]
     public IList<string>? SourceNatActiveIps { get; set; }
 
+    /// <summary>A list of URLs of the subnetworks used as source ranges for this NAT Rule. These subnetworks must have purpose set to PRIVATE_NAT. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatActiveRanges")]
+    public IList<string>? SourceNatActiveRanges { get; set; }
+
     /// <summary>A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT rule only. This field is used for public NAT.</summary>
     [JsonPropertyName("sourceNatDrainIps")]
     public IList<string>? SourceNatDrainIps { get; set; }
+
+    /// <summary>A list of URLs of subnetworks representing source ranges to be drained. This is only supported on patch/update, and these subnetworks must have previously been used as active ranges in this NAT Rule. This field is used for private NAT.</summary>
+    [JsonPropertyName("sourceNatDrainRanges")]
+    public IList<string>? SourceNatDrainRanges { get; set; }
 }
 
 /// <summary></summary>

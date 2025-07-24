@@ -68,6 +68,10 @@ public partial class V1beta1NATAddressSpecForProviderInstanceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATAddressSpecForProvider
 {
+    /// <summary>Flag that specifies whether the reserved NAT address should be activate.</summary>
+    [JsonPropertyName("activate")]
+    public bool? Activate { get; set; }
+
     /// <summary>The Apigee instance associated with the Apigee environment, in the format organizations/{{org_name}}/instances/{{instance_name}}.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
@@ -85,6 +89,9 @@ public partial class V1beta1NATAddressSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATAddressSpecInitProvider
 {
+    /// <summary>Flag that specifies whether the reserved NAT address should be activate.</summary>
+    [JsonPropertyName("activate")]
+    public bool? Activate { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -223,6 +230,10 @@ public partial class V1beta1NATAddressSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NATAddressStatusAtProvider
 {
+    /// <summary>Flag that specifies whether the reserved NAT address should be activate.</summary>
+    [JsonPropertyName("activate")]
+    public bool? Activate { get; set; }
+
     /// <summary>an identifier for the resource with format {{instance_id}}/natAddresses/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

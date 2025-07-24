@@ -101,6 +101,46 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadI
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreIntermediateCas
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreTrustAnchors
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStore
+{
+    /// <summary>Set of intermediate CA certificates used for building the trust chain to trust anchor. IMPORTANT: Intermediate CAs are only supported when configuring x509 federation. Structure is documented below.</summary>
+    [JsonPropertyName("intermediateCas")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreIntermediateCas>? IntermediateCas { get; set; }
+
+    /// <summary>List of Trust Anchors to be used while performing validation against a given TrustStore. The incoming end entity's certificate must be chained up to one of the trust anchors here. Structure is documented below.</summary>
+    [JsonPropertyName("trustAnchors")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderX509
+{
+    /// <summary>A Trust store, use this trust store as a wrapper to config the trust anchor and optional intermediate cas to help build the trust chain for the incoming end entity certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store is currently supported. Structure is documented below.</summary>
+    [JsonPropertyName("trustStore")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509TrustStore>? TrustStore { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProvider
 {
     /// <summary>A Common Expression Language expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions:</summary>
@@ -150,6 +190,10 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecForProvider
     /// <summary>Selector for a WorkloadIdentityPool in iam to populate workloadIdentityPoolId.</summary>
     [JsonPropertyName("workloadIdentityPoolIdSelector")]
     public V1beta1WorkloadIdentityPoolProviderSpecForProviderWorkloadIdentityPoolIdSelector? WorkloadIdentityPoolIdSelector { get; set; }
+
+    /// <summary>An X.509-type identity provider represents a CA. It is trusted to assert a client identity if the client has a certificate that chains up to this CA. Structure is documented below.</summary>
+    [JsonPropertyName("x509")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecForProviderX509>? X509 { get; set; }
 }
 
 /// <summary></summary>
@@ -185,6 +229,46 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderSaml
     /// <summary>SAML Identity provider configuration metadata xml doc.</summary>
     [JsonPropertyName("idpMetadataXml")]
     public string? IdpMetadataXml { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreIntermediateCas
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreTrustAnchors
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStore
+{
+    /// <summary>Set of intermediate CA certificates used for building the trust chain to trust anchor. IMPORTANT: Intermediate CAs are only supported when configuring x509 federation. Structure is documented below.</summary>
+    [JsonPropertyName("intermediateCas")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreIntermediateCas>? IntermediateCas { get; set; }
+
+    /// <summary>List of Trust Anchors to be used while performing validation against a given TrustStore. The incoming end entity's certificate must be chained up to one of the trust anchors here. Structure is documented below.</summary>
+    [JsonPropertyName("trustAnchors")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509
+{
+    /// <summary>A Trust store, use this trust store as a wrapper to config the trust anchor and optional intermediate cas to help build the trust chain for the incoming end entity certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store is currently supported. Structure is documented below.</summary>
+    [JsonPropertyName("trustStore")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509TrustStore>? TrustStore { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -226,6 +310,10 @@ public partial class V1beta1WorkloadIdentityPoolProviderSpecInitProvider
     /// <summary>An SAML 2.0 identity provider. Not compatible with the property oidc or aws. Structure is documented below.</summary>
     [JsonPropertyName("saml")]
     public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderSaml>? Saml { get; set; }
+
+    /// <summary>An X.509-type identity provider represents a CA. It is trusted to assert a client identity if the client has a certificate that chains up to this CA. Structure is documented below.</summary>
+    [JsonPropertyName("x509")]
+    public IList<V1beta1WorkloadIdentityPoolProviderSpecInitProviderX509>? X509 { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -397,6 +485,46 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderSaml
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreIntermediateCas
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreTrustAnchors
+{
+    /// <summary>PEM certificate of the PKI used for validation. Must only contain one ca certificate(either root or intermediate cert).</summary>
+    [JsonPropertyName("pemCertificate")]
+    public string? PemCertificate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStore
+{
+    /// <summary>Set of intermediate CA certificates used for building the trust chain to trust anchor. IMPORTANT: Intermediate CAs are only supported when configuring x509 federation. Structure is documented below.</summary>
+    [JsonPropertyName("intermediateCas")]
+    public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreIntermediateCas>? IntermediateCas { get; set; }
+
+    /// <summary>List of Trust Anchors to be used while performing validation against a given TrustStore. The incoming end entity's certificate must be chained up to one of the trust anchors here. Structure is documented below.</summary>
+    [JsonPropertyName("trustAnchors")]
+    public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStoreTrustAnchors>? TrustAnchors { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509
+{
+    /// <summary>A Trust store, use this trust store as a wrapper to config the trust anchor and optional intermediate cas to help build the trust chain for the incoming end entity certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store is currently supported. Structure is documented below.</summary>
+    [JsonPropertyName("trustStore")]
+    public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509TrustStore>? TrustStore { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProvider
 {
     /// <summary>A Common Expression Language expression, in plain text, to restrict what otherwise valid authentication credentials issued by the provider should not be accepted. The expression must output a boolean representing whether to allow the federation. The following keywords may be referenced in the expressions:</summary>
@@ -450,6 +578,10 @@ public partial class V1beta1WorkloadIdentityPoolProviderStatusAtProvider
     /// <summary>The ID used for the pool, which is the final component of the pool resource name. This value should be 4-32 characters, and may contain the characters [a-z0-9-]. The prefix gcp- is reserved for use by Google, and may not be specified.</summary>
     [JsonPropertyName("workloadIdentityPoolId")]
     public string? WorkloadIdentityPoolId { get; set; }
+
+    /// <summary>An X.509-type identity provider represents a CA. It is trusted to assert a client identity if the client has a certificate that chains up to this CA. Structure is documented below.</summary>
+    [JsonPropertyName("x509")]
+    public IList<V1beta1WorkloadIdentityPoolProviderStatusAtProviderX509>? X509 { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

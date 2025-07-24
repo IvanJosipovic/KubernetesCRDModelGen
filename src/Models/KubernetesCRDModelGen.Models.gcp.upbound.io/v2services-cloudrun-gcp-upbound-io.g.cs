@@ -27,6 +27,124 @@ public partial class V1beta1V2ServiceSpecForProviderBinaryAuthorization
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderBuildConfig
+{
+    /// <summary>The base image used to build the function.</summary>
+    [JsonPropertyName("baseImage")]
+    public string? BaseImage { get; set; }
+
+    /// <summary>Sets whether the function will receive automatic base image updates.</summary>
+    [JsonPropertyName("enableAutomaticUpdates")]
+    public bool? EnableAutomaticUpdates { get; set; }
+
+    /// <summary>User-provided build-time environment variables for the function.</summary>
+    [JsonPropertyName("environmentVariables")]
+    public IDictionary<string, string>? EnvironmentVariables { get; set; }
+
+    /// <summary>The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function".</summary>
+    [JsonPropertyName("functionTarget")]
+    public string? FunctionTarget { get; set; }
+
+    /// <summary>Artifact Registry URI to store the built image.</summary>
+    [JsonPropertyName("imageUri")]
+    public string? ImageUri { get; set; }
+
+    /// <summary>Service account to be used for building the container. The format of this field is projects/{projectId}/serviceAccounts/{serviceAccountEmail}.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+    [JsonPropertyName("serviceAccountRef")]
+    public V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountRef? ServiceAccountRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+    [JsonPropertyName("serviceAccountSelector")]
+    public V1beta1V2ServiceSpecForProviderBuildConfigServiceAccountSelector? ServiceAccountSelector { get; set; }
+
+    /// <summary>The Cloud Storage bucket URI where the function source code is located.</summary>
+    [JsonPropertyName("sourceLocation")]
+    public string? SourceLocation { get; set; }
+
+    /// <summary>Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run function. The format of this field is projects/{project}/locations/{region}/workerPools/{workerPool} where {project} and {region} are the project id and region respectively where the worker pool is defined and {workerPool} is the short name of the worker pool.</summary>
+    [JsonPropertyName("workerPool")]
+    public string? WorkerPool { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderScaling
+{
+    /// <summary>Maximum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>Minimum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2ServiceSpecForProviderTemplateContainersEnvValueSourceSecretKeyRefSecretRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -349,6 +467,10 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateContainers
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
+    /// <summary>Base image for this container. If set, it indicates that the service is enrolled into automatic base image update.</summary>
+    [JsonPropertyName("baseImageUri")]
+    public string? BaseImageUri { get; set; }
+
     /// <summary>Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
@@ -396,6 +518,15 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderTemplateNodeSelector
+{
+    /// <summary>The GPU to attach to an instance. See https://cloud.google.com/run/docs/configuring/services/gpu for configuring GPU.</summary>
+    [JsonPropertyName("accelerator")]
+    public string? Accelerator { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2ServiceSpecForProviderTemplateScaling
 {
     /// <summary>Maximum number of serving instances that this resource should have.</summary>
@@ -405,6 +536,10 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateScaling
     /// <summary>Minimum number of serving instances that this resource should have.</summary>
     [JsonPropertyName("minInstanceCount")]
     public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -478,6 +613,19 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateVolumesCloudSqlInsta
     /// <summary>Selector for a list of DatabaseInstance in sql to populate instances.</summary>
     [JsonPropertyName("instancesSelector")]
     public V1beta1V2ServiceSpecForProviderTemplateVolumesCloudSqlInstanceInstancesSelector? InstancesSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecForProviderTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -680,7 +828,11 @@ public partial class V1beta1V2ServiceSpecForProviderTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2ServiceSpecForProviderTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
-    /// <summary>Represents a GCS Bucket mounted as a volume. Structure is documented below.</summary>
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2ServiceSpecForProviderTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. This feature is only supported in the gen2 execution environment. Structure is documented below.</summary>
     [JsonPropertyName("gcs")]
     public IList<V1beta1V2ServiceSpecForProviderTemplateVolumesGcs>? Gcs { get; set; }
 
@@ -751,6 +903,10 @@ public partial class V1beta1V2ServiceSpecForProviderTemplate
     [JsonPropertyName("executionEnvironment")]
     public string? ExecutionEnvironment { get; set; }
 
+    /// <summary>True if GPU zonal redundancy is disabled on this revision.</summary>
+    [JsonPropertyName("gpuZonalRedundancyDisabled")]
+    public bool? GpuZonalRedundancyDisabled { get; set; }
+
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
@@ -758,6 +914,10 @@ public partial class V1beta1V2ServiceSpecForProviderTemplate
     /// <summary>Sets the maximum number of requests that each serving instance can receive.</summary>
     [JsonPropertyName("maxInstanceRequestConcurrency")]
     public double? MaxInstanceRequestConcurrency { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Structure is documented below.</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IList<V1beta1V2ServiceSpecForProviderTemplateNodeSelector>? NodeSelector { get; set; }
 
     /// <summary>The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.</summary>
     [JsonPropertyName("revision")]
@@ -821,6 +981,10 @@ public partial class V1beta1V2ServiceSpecForProvider
     [JsonPropertyName("binaryAuthorization")]
     public IList<V1beta1V2ServiceSpecForProviderBinaryAuthorization>? BinaryAuthorization { get; set; }
 
+    /// <summary>Configuration for building a Cloud Run function. Structure is documented below.</summary>
+    [JsonPropertyName("buildConfig")]
+    public IList<V1beta1V2ServiceSpecForProviderBuildConfig>? BuildConfig { get; set; }
+
     /// <summary>Arbitrary identifier for the API client.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
@@ -833,6 +997,10 @@ public partial class V1beta1V2ServiceSpecForProvider
     [JsonPropertyName("customAudiences")]
     public IList<string>? CustomAudiences { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the service is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>User-provided description of the Service. This field currently has a 512-character limit.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -840,6 +1008,10 @@ public partial class V1beta1V2ServiceSpecForProvider
     /// <summary>Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values are: INGRESS_TRAFFIC_ALL, INGRESS_TRAFFIC_INTERNAL_ONLY, INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER.</summary>
     [JsonPropertyName("ingress")]
     public string? Ingress { get; set; }
+
+    /// <summary>Disables IAM permission check for run.routes.invoke for callers of this service. For more information, visit https://cloud.google.com/run/docs/securing/managing-access#invoker_check.</summary>
+    [JsonPropertyName("invokerIamDisabled")]
+    public bool? InvokerIamDisabled { get; set; }
 
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
@@ -856,6 +1028,10 @@ public partial class V1beta1V2ServiceSpecForProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Scaling settings that apply to the whole service Structure is documented below.</summary>
+    [JsonPropertyName("scaling")]
+    public IList<V1beta1V2ServiceSpecForProviderScaling>? Scaling { get; set; }
 
     /// <summary>The template used to create revisions for this Service. Structure is documented below.</summary>
     [JsonPropertyName("template")]
@@ -881,6 +1057,124 @@ public partial class V1beta1V2ServiceSpecInitProviderBinaryAuthorization
     /// <summary>If True, indicates to use the default project's binary authorization policy. If False, binary authorization will be disabled.</summary>
     [JsonPropertyName("useDefault")]
     public bool? UseDefault { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderBuildConfig
+{
+    /// <summary>The base image used to build the function.</summary>
+    [JsonPropertyName("baseImage")]
+    public string? BaseImage { get; set; }
+
+    /// <summary>Sets whether the function will receive automatic base image updates.</summary>
+    [JsonPropertyName("enableAutomaticUpdates")]
+    public bool? EnableAutomaticUpdates { get; set; }
+
+    /// <summary>User-provided build-time environment variables for the function.</summary>
+    [JsonPropertyName("environmentVariables")]
+    public IDictionary<string, string>? EnvironmentVariables { get; set; }
+
+    /// <summary>The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function".</summary>
+    [JsonPropertyName("functionTarget")]
+    public string? FunctionTarget { get; set; }
+
+    /// <summary>Artifact Registry URI to store the built image.</summary>
+    [JsonPropertyName("imageUri")]
+    public string? ImageUri { get; set; }
+
+    /// <summary>Service account to be used for building the container. The format of this field is projects/{projectId}/serviceAccounts/{serviceAccountEmail}.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+    [JsonPropertyName("serviceAccountRef")]
+    public V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountRef? ServiceAccountRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccount.</summary>
+    [JsonPropertyName("serviceAccountSelector")]
+    public V1beta1V2ServiceSpecInitProviderBuildConfigServiceAccountSelector? ServiceAccountSelector { get; set; }
+
+    /// <summary>The Cloud Storage bucket URI where the function source code is located.</summary>
+    [JsonPropertyName("sourceLocation")]
+    public string? SourceLocation { get; set; }
+
+    /// <summary>Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run function. The format of this field is projects/{project}/locations/{region}/workerPools/{workerPool} where {project} and {region} are the project id and region respectively where the worker pool is defined and {workerPool} is the short name of the worker pool.</summary>
+    [JsonPropertyName("workerPool")]
+    public string? WorkerPool { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderScaling
+{
+    /// <summary>Maximum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>Minimum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1207,6 +1501,10 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateContainers
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
+    /// <summary>Base image for this container. If set, it indicates that the service is enrolled into automatic base image update.</summary>
+    [JsonPropertyName("baseImageUri")]
+    public string? BaseImageUri { get; set; }
+
     /// <summary>Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
@@ -1254,6 +1552,15 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderTemplateNodeSelector
+{
+    /// <summary>The GPU to attach to an instance. See https://cloud.google.com/run/docs/configuring/services/gpu for configuring GPU.</summary>
+    [JsonPropertyName("accelerator")]
+    public string? Accelerator { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2ServiceSpecInitProviderTemplateScaling
 {
     /// <summary>Maximum number of serving instances that this resource should have.</summary>
@@ -1263,6 +1570,10 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateScaling
     /// <summary>Minimum number of serving instances that this resource should have.</summary>
     [JsonPropertyName("minInstanceCount")]
     public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1336,6 +1647,19 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateVolumesCloudSqlInst
     /// <summary>Selector for a list of DatabaseInstance in sql to populate instances.</summary>
     [JsonPropertyName("instancesSelector")]
     public V1beta1V2ServiceSpecInitProviderTemplateVolumesCloudSqlInstanceInstancesSelector? InstancesSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceSpecInitProviderTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1538,7 +1862,11 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2ServiceSpecInitProviderTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
-    /// <summary>Represents a GCS Bucket mounted as a volume. Structure is documented below.</summary>
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2ServiceSpecInitProviderTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. This feature is only supported in the gen2 execution environment. Structure is documented below.</summary>
     [JsonPropertyName("gcs")]
     public IList<V1beta1V2ServiceSpecInitProviderTemplateVolumesGcs>? Gcs { get; set; }
 
@@ -1609,6 +1937,10 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplate
     [JsonPropertyName("executionEnvironment")]
     public string? ExecutionEnvironment { get; set; }
 
+    /// <summary>True if GPU zonal redundancy is disabled on this revision.</summary>
+    [JsonPropertyName("gpuZonalRedundancyDisabled")]
+    public bool? GpuZonalRedundancyDisabled { get; set; }
+
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
@@ -1616,6 +1948,10 @@ public partial class V1beta1V2ServiceSpecInitProviderTemplate
     /// <summary>Sets the maximum number of requests that each serving instance can receive.</summary>
     [JsonPropertyName("maxInstanceRequestConcurrency")]
     public double? MaxInstanceRequestConcurrency { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Structure is documented below.</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IList<V1beta1V2ServiceSpecInitProviderTemplateNodeSelector>? NodeSelector { get; set; }
 
     /// <summary>The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.</summary>
     [JsonPropertyName("revision")]
@@ -1679,6 +2015,10 @@ public partial class V1beta1V2ServiceSpecInitProvider
     [JsonPropertyName("binaryAuthorization")]
     public IList<V1beta1V2ServiceSpecInitProviderBinaryAuthorization>? BinaryAuthorization { get; set; }
 
+    /// <summary>Configuration for building a Cloud Run function. Structure is documented below.</summary>
+    [JsonPropertyName("buildConfig")]
+    public IList<V1beta1V2ServiceSpecInitProviderBuildConfig>? BuildConfig { get; set; }
+
     /// <summary>Arbitrary identifier for the API client.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
@@ -1691,6 +2031,10 @@ public partial class V1beta1V2ServiceSpecInitProvider
     [JsonPropertyName("customAudiences")]
     public IList<string>? CustomAudiences { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the service is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>User-provided description of the Service. This field currently has a 512-character limit.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -1698,6 +2042,10 @@ public partial class V1beta1V2ServiceSpecInitProvider
     /// <summary>Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values are: INGRESS_TRAFFIC_ALL, INGRESS_TRAFFIC_INTERNAL_ONLY, INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER.</summary>
     [JsonPropertyName("ingress")]
     public string? Ingress { get; set; }
+
+    /// <summary>Disables IAM permission check for run.routes.invoke for callers of this service. For more information, visit https://cloud.google.com/run/docs/securing/managing-access#invoker_check.</summary>
+    [JsonPropertyName("invokerIamDisabled")]
+    public bool? InvokerIamDisabled { get; set; }
 
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
@@ -1710,6 +2058,10 @@ public partial class V1beta1V2ServiceSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Scaling settings that apply to the whole service Structure is documented below.</summary>
+    [JsonPropertyName("scaling")]
+    public IList<V1beta1V2ServiceSpecInitProviderScaling>? Scaling { get; set; }
 
     /// <summary>The template used to create revisions for this Service. Structure is documented below.</summary>
     [JsonPropertyName("template")]
@@ -1871,6 +2223,47 @@ public partial class V1beta1V2ServiceStatusAtProviderBinaryAuthorization
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceStatusAtProviderBuildConfig
+{
+    /// <summary>The base image used to build the function.</summary>
+    [JsonPropertyName("baseImage")]
+    public string? BaseImage { get; set; }
+
+    /// <summary>Sets whether the function will receive automatic base image updates.</summary>
+    [JsonPropertyName("enableAutomaticUpdates")]
+    public bool? EnableAutomaticUpdates { get; set; }
+
+    /// <summary>User-provided build-time environment variables for the function.</summary>
+    [JsonPropertyName("environmentVariables")]
+    public IDictionary<string, string>? EnvironmentVariables { get; set; }
+
+    /// <summary>The name of the function (as defined in source code) that will be executed. Defaults to the resource name suffix, if not specified. For backward compatibility, if function with given name is not found, then the system will try to use function named "function".</summary>
+    [JsonPropertyName("functionTarget")]
+    public string? FunctionTarget { get; set; }
+
+    /// <summary>Artifact Registry URI to store the built image.</summary>
+    [JsonPropertyName("imageUri")]
+    public string? ImageUri { get; set; }
+
+    /// <summary>(Output) The Cloud Build name of the latest successful deployment of the function.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Service account to be used for building the container. The format of this field is projects/{projectId}/serviceAccounts/{serviceAccountEmail}.</summary>
+    [JsonPropertyName("serviceAccount")]
+    public string? ServiceAccount { get; set; }
+
+    /// <summary>The Cloud Storage bucket URI where the function source code is located.</summary>
+    [JsonPropertyName("sourceLocation")]
+    public string? SourceLocation { get; set; }
+
+    /// <summary>Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run function. The format of this field is projects/{project}/locations/{region}/workerPools/{workerPool} where {project} and {region} are the project id and region respectively where the worker pool is defined and {workerPool} is the short name of the worker pool.</summary>
+    [JsonPropertyName("workerPool")]
+    public string? WorkerPool { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2ServiceStatusAtProviderConditions
 {
     /// <summary>(Output) A reason for the execution condition.</summary>
@@ -1904,6 +2297,36 @@ public partial class V1beta1V2ServiceStatusAtProviderConditions
     /// <summary>(Output) type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready": True when the Resource is ready.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceStatusAtProviderScaling
+{
+    /// <summary>Maximum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("maxInstanceCount")]
+    public double? MaxInstanceCount { get; set; }
+
+    /// <summary>Minimum number of serving instances that this resource should have.</summary>
+    [JsonPropertyName("minInstanceCount")]
+    public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceStatusAtProviderTemplateContainersBuildInfo
+{
+    /// <summary>(Output) Entry point of the function when the image is a Cloud Run function.</summary>
+    [JsonPropertyName("functionTarget")]
+    public string? FunctionTarget { get; set; }
+
+    /// <summary>(Output) Source code location of the image.</summary>
+    [JsonPropertyName("sourceLocation")]
+    public string? SourceLocation { get; set; }
 }
 
 /// <summary></summary>
@@ -2166,6 +2589,14 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateContainers
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
+    /// <summary>Base image for this container. If set, it indicates that the service is enrolled into automatic base image update.</summary>
+    [JsonPropertyName("baseImageUri")]
+    public string? BaseImageUri { get; set; }
+
+    /// <summary>(Output) The build info of the container image. Structure is documented below.</summary>
+    [JsonPropertyName("buildInfo")]
+    public IList<V1beta1V2ServiceStatusAtProviderTemplateContainersBuildInfo>? BuildInfo { get; set; }
+
     /// <summary>Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
@@ -2213,6 +2644,15 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateContainers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceStatusAtProviderTemplateNodeSelector
+{
+    /// <summary>The GPU to attach to an instance. See https://cloud.google.com/run/docs/configuring/services/gpu for configuring GPU.</summary>
+    [JsonPropertyName("accelerator")]
+    public string? Accelerator { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2ServiceStatusAtProviderTemplateScaling
 {
     /// <summary>Maximum number of serving instances that this resource should have.</summary>
@@ -2222,6 +2662,10 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateScaling
     /// <summary>Minimum number of serving instances that this resource should have.</summary>
     [JsonPropertyName("minInstanceCount")]
     public double? MinInstanceCount { get; set; }
+
+    /// <summary>The scaling mode for the service. Possible values are: AUTOMATIC, MANUAL.</summary>
+    [JsonPropertyName("scalingMode")]
+    public string? ScalingMode { get; set; }
 }
 
 /// <summary></summary>
@@ -2231,6 +2675,19 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateVolumesCloudSqlInst
     /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
     [JsonPropertyName("instances")]
     public IList<string>? Instances { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2ServiceStatusAtProviderTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
 }
 
 /// <summary></summary>
@@ -2305,7 +2762,11 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2ServiceStatusAtProviderTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
-    /// <summary>Represents a GCS Bucket mounted as a volume. Structure is documented below.</summary>
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2ServiceStatusAtProviderTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. This feature is only supported in the gen2 execution environment. Structure is documented below.</summary>
     [JsonPropertyName("gcs")]
     public IList<V1beta1V2ServiceStatusAtProviderTemplateVolumesGcs>? Gcs { get; set; }
 
@@ -2376,6 +2837,10 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplate
     [JsonPropertyName("executionEnvironment")]
     public string? ExecutionEnvironment { get; set; }
 
+    /// <summary>True if GPU zonal redundancy is disabled on this revision.</summary>
+    [JsonPropertyName("gpuZonalRedundancyDisabled")]
+    public bool? GpuZonalRedundancyDisabled { get; set; }
+
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
@@ -2383,6 +2848,10 @@ public partial class V1beta1V2ServiceStatusAtProviderTemplate
     /// <summary>Sets the maximum number of requests that each serving instance can receive.</summary>
     [JsonPropertyName("maxInstanceRequestConcurrency")]
     public double? MaxInstanceRequestConcurrency { get; set; }
+
+    /// <summary>Node Selector describes the hardware requirements of the resources. Structure is documented below.</summary>
+    [JsonPropertyName("nodeSelector")]
+    public IList<V1beta1V2ServiceStatusAtProviderTemplateNodeSelector>? NodeSelector { get; set; }
 
     /// <summary>The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.</summary>
     [JsonPropertyName("revision")]
@@ -2508,6 +2977,10 @@ public partial class V1beta1V2ServiceStatusAtProvider
     [JsonPropertyName("binaryAuthorization")]
     public IList<V1beta1V2ServiceStatusAtProviderBinaryAuthorization>? BinaryAuthorization { get; set; }
 
+    /// <summary>Configuration for building a Cloud Run function. Structure is documented below.</summary>
+    [JsonPropertyName("buildConfig")]
+    public IList<V1beta1V2ServiceStatusAtProviderBuildConfig>? BuildConfig { get; set; }
+
     /// <summary>Arbitrary identifier for the API client.</summary>
     [JsonPropertyName("client")]
     public string? Client { get; set; }
@@ -2535,6 +3008,10 @@ public partial class V1beta1V2ServiceStatusAtProvider
     /// <summary>The deletion time.</summary>
     [JsonPropertyName("deleteTime")]
     public string? DeleteTime { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the service is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>User-provided description of the Service. This field currently has a 512-character limit.</summary>
     [JsonPropertyName("description")]
@@ -2567,6 +3044,10 @@ public partial class V1beta1V2ServiceStatusAtProvider
     /// <summary>Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values are: INGRESS_TRAFFIC_ALL, INGRESS_TRAFFIC_INTERNAL_ONLY, INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER.</summary>
     [JsonPropertyName("ingress")]
     public string? Ingress { get; set; }
+
+    /// <summary>Disables IAM permission check for run.routes.invoke for callers of this service. For more information, visit https://cloud.google.com/run/docs/securing/managing-access#invoker_check.</summary>
+    [JsonPropertyName("invokerIamDisabled")]
+    public bool? InvokerIamDisabled { get; set; }
 
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 RevisionTemplate.</summary>
     [JsonPropertyName("labels")]
@@ -2603,6 +3084,10 @@ public partial class V1beta1V2ServiceStatusAtProvider
     /// <summary>Returns true if the Service is currently being acted upon by the system to bring it into the desired state. When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, observedGeneration, latest_ready_revison, trafficStatuses, and uri will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in terminalCondition.state. If reconciliation succeeded, the following fields will match: traffic and trafficStatuses, observedGeneration and generation, latestReadyRevision and latestCreatedRevision. If reconciliation failed, trafficStatuses, observedGeneration, and latestReadyRevision will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in terminalCondition and conditions.</summary>
     [JsonPropertyName("reconciling")]
     public bool? Reconciling { get; set; }
+
+    /// <summary>Scaling settings that apply to the whole service Structure is documented below.</summary>
+    [JsonPropertyName("scaling")]
+    public IList<V1beta1V2ServiceStatusAtProviderScaling>? Scaling { get; set; }
 
     /// <summary>The template used to create revisions for this Service. Structure is documented below.</summary>
     [JsonPropertyName("template")]

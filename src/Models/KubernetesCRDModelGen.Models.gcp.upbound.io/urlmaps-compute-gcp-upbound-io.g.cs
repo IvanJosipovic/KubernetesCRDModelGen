@@ -10,6 +10,100 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -99,11 +193,88 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
+
+    /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceRef")]
+    public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceSelector")]
+    public V1beta1URLMapSpecForProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -245,6 +416,10 @@ public partial class V1beta1URLMapSpecForProviderDefaultRouteAction
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. Structure is documented below.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecForProviderDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
+
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecForProviderDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
@@ -426,6 +601,100 @@ public partial class V1beta1URLMapSpecForProviderHostRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -515,11 +784,88 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
+
+    /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceRef")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceSelector")]
+    public V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -661,6 +1007,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherDefaultRouteAction
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
+
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
@@ -825,6 +1175,100 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherHeaderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -910,6 +1354,19 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionF
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1189,6 +1646,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -1299,6 +1760,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRuleUrlRedirect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherPathRule
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
@@ -1322,6 +1787,36 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherPathRule
     /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
 }
 
 /// <summary></summary>
@@ -1437,7 +1932,7 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesMatchRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the label must match the specified value. value can have a maximum length of 1024 characters.</summary>
+    /// <summary>Header value.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1604,6 +2099,19 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -1755,6 +2263,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActio
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -1865,6 +2377,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRulesUrlRedirec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRules
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
     [JsonPropertyName("headerAction")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRulesHeaderAction>? HeaderAction { get; set; }
@@ -1902,6 +2418,10 @@ public partial class V1beta1URLMapSpecForProviderPathMatcherRouteRules
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProviderPathMatcher
 {
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
+
     /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherDefaultRouteAction>? DefaultRouteAction { get; set; }
@@ -1941,6 +2461,19 @@ public partial class V1beta1URLMapSpecForProviderPathMatcher
     /// <summary>The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. The order of specifying routeRules matters: the first rule that matches will cause its specified routing action to take effect. Within a given pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in UrlMaps intended for External load balancers. Structure is documented below.</summary>
     [JsonPropertyName("routeRules")]
     public IList<V1beta1URLMapSpecForProviderPathMatcherRouteRules>? RouteRules { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecForProviderTestHeaders
+{
+    /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Header value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2007,6 +2540,18 @@ public partial class V1beta1URLMapSpecForProviderTest
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer's redirect response. If urlRedirect specifies httpsRedirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies stripQuery, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.</summary>
+    [JsonPropertyName("expectedOutputUrl")]
+    public string? ExpectedOutputUrl { get; set; }
+
+    /// <summary>For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be set when service is set.</summary>
+    [JsonPropertyName("expectedRedirectResponseCode")]
+    public double? ExpectedRedirectResponseCode { get; set; }
+
+    /// <summary>HTTP headers for this request. Structure is documented below.</summary>
+    [JsonPropertyName("headers")]
+    public IList<V1beta1URLMapSpecForProviderTestHeaders>? Headers { get; set; }
+
     /// <summary>Host portion of the URL.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
@@ -2032,6 +2577,10 @@ public partial class V1beta1URLMapSpecForProviderTest
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecForProvider
 {
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecForProviderDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
+
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]
     public IList<V1beta1URLMapSpecForProviderDefaultRouteAction>? DefaultRouteAction { get; set; }
@@ -2075,6 +2624,100 @@ public partial class V1beta1URLMapSpecForProvider
     /// <summary>The list of expected URL mapping tests. Request to update this UrlMap will succeed only if all of the test cases pass. You can specify a maximum of 100 tests per UrlMap. Structure is documented below.</summary>
     [JsonPropertyName("test")]
     public IList<V1beta1URLMapSpecForProviderTest>? Test { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -2168,11 +2811,88 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjecti
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
+
+    /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceRef")]
+    public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceSelector")]
+    public V1beta1URLMapSpecInitProviderDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -2314,6 +3034,10 @@ public partial class V1beta1URLMapSpecInitProviderDefaultRouteAction
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy. Structure is documented below.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecInitProviderDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
+
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecInitProviderDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
@@ -2495,6 +3219,100 @@ public partial class V1beta1URLMapSpecInitProviderHostRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2584,11 +3402,88 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionF
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendService")]
     public string? BackendService { get; set; }
+
+    /// <summary>Reference to a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceRef")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendService in compute to populate backendService.</summary>
+    [JsonPropertyName("backendServiceSelector")]
+    public V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceSelector? BackendServiceSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -2730,6 +3625,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteAction
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy. Structure is documented below.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
+
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
@@ -2894,6 +3793,100 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherHeaderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+
+    /// <summary>Reference to a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceRef")]
+    public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceRef? ErrorServiceRef { get; set; }
+
+    /// <summary>Selector for a BackendBucket in compute to populate errorService.</summary>
+    [JsonPropertyName("errorServiceSelector")]
+    public V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorServiceSelector? ErrorServiceSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -2979,6 +3972,19 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -3258,6 +4264,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -3368,6 +4378,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRuleUrlRedirect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRule
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
@@ -3391,6 +4405,36 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherPathRule
     /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
 }
 
 /// <summary></summary>
@@ -3506,7 +4550,7 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the label must match the specified value. value can have a maximum length of 1024 characters.</summary>
+    /// <summary>Header value.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -3673,6 +4717,19 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -3824,6 +4881,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -3934,6 +4995,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRulesUrlRedire
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRules
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
     [JsonPropertyName("headerAction")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRulesHeaderAction>? HeaderAction { get; set; }
@@ -3971,6 +5036,10 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcherRouteRules
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProviderPathMatcher
 {
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
+
     /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherDefaultRouteAction>? DefaultRouteAction { get; set; }
@@ -4010,6 +5079,19 @@ public partial class V1beta1URLMapSpecInitProviderPathMatcher
     /// <summary>The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. The order of specifying routeRules matters: the first rule that matches will cause its specified routing action to take effect. Within a given pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in UrlMaps intended for External load balancers. Structure is documented below.</summary>
     [JsonPropertyName("routeRules")]
     public IList<V1beta1URLMapSpecInitProviderPathMatcherRouteRules>? RouteRules { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapSpecInitProviderTestHeaders
+{
+    /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Header value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -4076,6 +5158,18 @@ public partial class V1beta1URLMapSpecInitProviderTest
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer's redirect response. If urlRedirect specifies httpsRedirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies stripQuery, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.</summary>
+    [JsonPropertyName("expectedOutputUrl")]
+    public string? ExpectedOutputUrl { get; set; }
+
+    /// <summary>For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be set when service is set.</summary>
+    [JsonPropertyName("expectedRedirectResponseCode")]
+    public double? ExpectedRedirectResponseCode { get; set; }
+
+    /// <summary>HTTP headers for this request. Structure is documented below.</summary>
+    [JsonPropertyName("headers")]
+    public IList<V1beta1URLMapSpecInitProviderTestHeaders>? Headers { get; set; }
+
     /// <summary>Host portion of the URL.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
@@ -4101,6 +5195,10 @@ public partial class V1beta1URLMapSpecInitProviderTest
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapSpecInitProvider
 {
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapSpecInitProviderDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
+
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]
     public IList<V1beta1URLMapSpecInitProviderDefaultRouteAction>? DefaultRouteAction { get; set; }
@@ -4280,6 +5378,36 @@ public partial class V1beta1URLMapSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4365,6 +5493,19 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjecti
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -4516,6 +5657,10 @@ public partial class V1beta1URLMapStatusAtProviderDefaultRouteAction
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapStatusAtProviderDefaultRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -4640,6 +5785,36 @@ public partial class V1beta1URLMapStatusAtProviderHostRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -4725,6 +5900,19 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionF
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -4876,6 +6064,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteAction
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -4983,6 +6175,36 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherHeaderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
@@ -5068,6 +6290,19 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service. Structure is documented below.</summary>
     [JsonPropertyName("delay")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay>? Delay { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -5219,6 +6454,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteAction
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -5273,6 +6512,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRuleUrlRedirect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRule
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
     [JsonPropertyName("paths")]
     public IList<string>? Paths { get; set; }
@@ -5288,6 +6531,36 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherPathRule
     /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set. Structure is documented below.</summary>
     [JsonPropertyName("urlRedirect")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherPathRuleUrlRedirect>? UrlRedirect { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule
+{
+    /// <summary>Valid values include:</summary>
+    [JsonPropertyName("matchResponseCodes")]
+    public IList<string>? MatchResponseCodes { get; set; }
+
+    /// <summary>The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.</summary>
+    [JsonPropertyName("overrideResponseCode")]
+    public double? OverrideResponseCode { get; set; }
+
+    /// <summary>Path portion of the URL.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicy
+{
+    /// <summary>Specifies rules for returning error responses. In a given policy, if you specify rules for both a range of error codes as well as rules for specific error codes then rules with specific error codes have a higher priority. For example, assume that you configure a rule for 401 (Un-authorized) code, and another for all 4 series error codes (4XX). If the backend service returns a 401, then the rule for 401 will be applied. However if the backend service returns a 403, the rule for 4xx takes effect. Structure is documented below.</summary>
+    [JsonPropertyName("errorResponseRule")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicyErrorResponseRule>? ErrorResponseRule { get; set; }
+
+    /// <summary>The full or partial URL to the BackendBucket resource that contains the custom error content. Examples are: https://www.googleapis.com/compute/v1/projects/project/global/backendBuckets/myBackendBucket compute/v1/projects/project/global/backendBuckets/myBackendBucket global/backendBuckets/myBackendBucket If errorService is not specified at lower levels like pathMatcher, pathRule and routeRule, an errorService specified at a higher level in the UrlMap will be used. If UrlMap.defaultCustomErrorResponsePolicy contains one or more errorResponseRules[], it must specify errorService. If load balancer cannot reach the backendBucket, a simple Not Found Error will be returned, with the original response code (or overrideResponseCode if configured).</summary>
+    [JsonPropertyName("errorService")]
+    public string? ErrorService { get; set; }
 }
 
 /// <summary></summary>
@@ -5403,7 +6676,7 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesMatchRule
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the label must match the specified value. value can have a maximum length of 1024 characters.</summary>
+    /// <summary>Header value.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -5570,6 +6843,19 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>The default BackendService resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
@@ -5721,6 +7007,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActi
     [JsonPropertyName("faultInjectionPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionFaultInjectionPolicy>? FaultInjectionPolicy { get; set; }
 
+    /// <summary>Specifies the maximum duration (timeout) for streams on the selected route. Unlike the Timeout field where the timeout duration starts from the time the request has been fully processed (known as end-of-stream), the duration in this field is computed from the beginning of the stream until the response has been processed, including all retries. A stream that does not complete in this duration is closed. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Structure is documented below.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesRouteActionRequestMirrorPolicy>? RequestMirrorPolicy { get; set; }
@@ -5775,6 +7065,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRulesUrlRedire
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRules
 {
+    /// <summary>customErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. Structure is documented below.</summary>
+    [JsonPropertyName("customErrorResponsePolicy")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesCustomErrorResponsePolicy>? CustomErrorResponsePolicy { get; set; }
+
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. Structure is documented below.</summary>
     [JsonPropertyName("headerAction")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherRouteRulesHeaderAction>? HeaderAction { get; set; }
@@ -5804,6 +7098,10 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcherRouteRules
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderPathMatcher
 {
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
+
     /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]
     public IList<V1beta1URLMapStatusAtProviderPathMatcherDefaultRouteAction>? DefaultRouteAction { get; set; }
@@ -5839,11 +7137,36 @@ public partial class V1beta1URLMapStatusAtProviderPathMatcher
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1URLMapStatusAtProviderTestHeaders
+{
+    /// <summary>The name of the query parameter to match. The query parameter must exist in the request, in the absence of which the request match fails.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Header value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1URLMapStatusAtProviderTest
 {
     /// <summary>Description of this test case.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>The expected output URL evaluated by the load balancer containing the scheme, host, path and query parameters. For rules that forward requests to backends, the test passes only when expectedOutputUrl matches the request forwarded by the load balancer to backends. For rules with urlRewrite, the test verifies that the forwarded request matches hostRewrite and pathPrefixRewrite in the urlRewrite action. When service is specified, expectedOutputUrl`s scheme is ignored. For rules with urlRedirect, the test passes only if expectedOutputUrl matches the URL in the load balancer's redirect response. If urlRedirect specifies httpsRedirect, the test passes only if the scheme in expectedOutputUrl is also set to HTTPS. If urlRedirect specifies stripQuery, the test passes only if expectedOutputUrl does not contain any query parameters. expectedOutputUrl is optional when service is specified.</summary>
+    [JsonPropertyName("expectedOutputUrl")]
+    public string? ExpectedOutputUrl { get; set; }
+
+    /// <summary>For rules with urlRedirect, the test passes only if expectedRedirectResponseCode matches the HTTP status code in load balancer's redirect response. expectedRedirectResponseCode cannot be set when service is set.</summary>
+    [JsonPropertyName("expectedRedirectResponseCode")]
+    public double? ExpectedRedirectResponseCode { get; set; }
+
+    /// <summary>HTTP headers for this request. Structure is documented below.</summary>
+    [JsonPropertyName("headers")]
+    public IList<V1beta1URLMapStatusAtProviderTestHeaders>? Headers { get; set; }
 
     /// <summary>Host portion of the URL.</summary>
     [JsonPropertyName("host")]
@@ -5865,6 +7188,10 @@ public partial class V1beta1URLMapStatusAtProvider
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
     public string? CreationTimestamp { get; set; }
+
+    /// <summary>defaultCustomErrorResponsePolicy specifies how the Load Balancer returns error responses when BackendService or BackendBucket responds with an error. This policy takes effect at the PathMatcher level and applies only when no policy has been defined for the error code at lower levels like RouteRule and PathRule within this PathMatcher. If an error code does not have a policy defined in defaultCustomErrorResponsePolicy, then a policy defined for the error code in UrlMap.defaultCustomErrorResponsePolicy takes effect. For example, consider a UrlMap with the following configuration: UrlMap.defaultCustomErrorResponsePolicy is configured with policies for 5xx and 4xx errors A RouteRule for /coming_soon/ is configured for the error code 404. If the request is for www.myotherdomain.com and a 404 is encountered, the policy under UrlMap.defaultCustomErrorResponsePolicy takes effect. If a 404 response is encountered for the request www.example.com/current_events/, the pathMatcher's policy takes effect. If however, the request for www.example.com/coming_soon/ encounters a 404, the policy in RouteRule.customErrorResponsePolicy takes effect. If any of the requests in this example encounter a 500 error code, the policy at UrlMap.defaultCustomErrorResponsePolicy takes effect. When used in conjunction with pathMatcher.defaultRouteAction.retryPolicy, retries take precedence. Only once all retries are exhausted, the defaultCustomErrorResponsePolicy is applied. While attempting a retry, if load balancer is successful in reaching the service, the defaultCustomErrorResponsePolicy is ignored and the response from the service is returned to the client. defaultCustomErrorResponsePolicy is supported only for global external Application Load Balancers. Structure is documented below.</summary>
+    [JsonPropertyName("defaultCustomErrorResponsePolicy")]
+    public IList<V1beta1URLMapStatusAtProviderDefaultCustomErrorResponsePolicy>? DefaultCustomErrorResponsePolicy { get; set; }
 
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. Structure is documented below.</summary>
     [JsonPropertyName("defaultRouteAction")]

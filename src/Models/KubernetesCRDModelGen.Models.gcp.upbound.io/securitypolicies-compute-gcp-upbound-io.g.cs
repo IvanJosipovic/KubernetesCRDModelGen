@@ -10,6 +10,64 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs
+{
+    /// <summary>If enabled, traffic matching each unique value for the specified type constitutes a separate traffic unit. It can only be set to true if value is empty.</summary>
+    [JsonPropertyName("enableEachUniqueValue")]
+    public bool? EnableEachUniqueValue { get; set; }
+
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs
+{
+    /// <summary>Confidence threshold above which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployConfidenceThreshold")]
+    public double? AutoDeployConfidenceThreshold { get; set; }
+
+    /// <summary>Duration over which Adaptive Protection's auto-deployed actions last.</summary>
+    [JsonPropertyName("autoDeployExpirationSec")]
+    public double? AutoDeployExpirationSec { get; set; }
+
+    /// <summary>Impacted baseline threshold below which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployImpactedBaselineThreshold")]
+    public double? AutoDeployImpactedBaselineThreshold { get; set; }
+
+    /// <summary>Load threshold above which Adaptive Protection automatically deploy threshold based on the backend load threshold and detect a new rule during an alerted attack.</summary>
+    [JsonPropertyName("autoDeployLoadThreshold")]
+    public double? AutoDeployLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on absolute QPS.</summary>
+    [JsonPropertyName("detectionAbsoluteQps")]
+    public double? DetectionAbsoluteQps { get; set; }
+
+    /// <summary>Detection threshold based on the backend service's load.</summary>
+    [JsonPropertyName("detectionLoadThreshold")]
+    public double? DetectionLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on QPS relative to the average of baseline traffic.</summary>
+    [JsonPropertyName("detectionRelativeToBaselineQps")]
+    public double? DetectionRelativeToBaselineQps { get; set; }
+
+    /// <summary>The name of config. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the security policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Configuration options for enabling Adaptive Protection to work on the specified service granularity. Structure is documented below.</summary>
+    [JsonPropertyName("trafficGranularityConfigs")]
+    public IList<V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs>? TrafficGranularityConfigs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -19,6 +77,10 @@ public partial class V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfi
     /// <summary>Rule visibility can be one of the following:</summary>
     [JsonPropertyName("ruleVisibility")]
     public string? RuleVisibility { get; set; }
+
+    /// <summary>Configuration options for layer7 adaptive protection for various customizable thresholds. Structure is documented below.</summary>
+    [JsonPropertyName("thresholdConfigs")]
+    public IList<V1beta1SecurityPolicySpecForProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs>? ThresholdConfigs { get; set; }
 }
 
 /// <summary></summary>
@@ -154,6 +216,96 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestCookie
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestHeader
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestQueryParam
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestUri
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusion
+{
+    /// <summary>Request cookie whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestCookie")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestCookie>? RequestCookie { get; set; }
+
+    /// <summary>Request header whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestHeader")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestHeader>? RequestHeader { get; set; }
+
+    /// <summary>Request query parameter whose value will be excluded from inspection during preconfigured WAF evaluation. Note that the parameter can be in the query string or in the POST body. Structure is documented below.</summary>
+    [JsonPropertyName("requestQueryParam")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestQueryParam>? RequestQueryParam { get; set; }
+
+    /// <summary>Request URI from the request line to be excluded from inspection during preconfigured WAF evaluation. When specifying this field, the query or fragment part should be excluded. Structure is documented below.</summary>
+    [JsonPropertyName("requestUri")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusionRequestUri>? RequestUri { get; set; }
+
+    /// <summary>A list of target rule IDs under the WAF rule set to apply the preconfigured WAF exclusion. If omitted, it refers to all the rule IDs under the WAF rule set.</summary>
+    [JsonPropertyName("targetRuleIds")]
+    public IList<string>? TargetRuleIds { get; set; }
+
+    /// <summary>Target WAF rule set to apply the preconfigured WAF exclusion.</summary>
+    [JsonPropertyName("targetRuleSet")]
+    public string? TargetRuleSet { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfig
+{
+    /// <summary>An exclusion to apply during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfigExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -167,13 +319,26 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsBan
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsEnforceOnKeyConfigs
+{
+    /// <summary>Rate limit key name applicable only for the following key types:</summary>
+    [JsonPropertyName("enforceOnKeyName")]
+    public string? EnforceOnKeyName { get; set; }
+
+    /// <summary>Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to ALL.</summary>
+    [JsonPropertyName("enforceOnKeyType")]
+    public string? EnforceOnKeyType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsExceedRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -211,6 +376,10 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptions
     [JsonPropertyName("enforceOnKey")]
     public string? EnforceOnKey { get; set; }
 
+    /// <summary>If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which rate limit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must be set to an empty string. Structure is documented below.</summary>
+    [JsonPropertyName("enforceOnKeyConfigs")]
+    public IList<V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsEnforceOnKeyConfigs>? EnforceOnKeyConfigs { get; set; }
+
     /// <summary>Rate limit key name applicable only for the following key types:</summary>
     [JsonPropertyName("enforceOnKeyName")]
     public string? EnforceOnKeyName { get; set; }
@@ -219,7 +388,7 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptions
     [JsonPropertyName("exceedAction")]
     public string? ExceedAction { get; set; }
 
-    /// <summary>block supports:</summary>
+    /// <summary>Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect. Structure is documented below.</summary>
     [JsonPropertyName("exceedRedirectOptions")]
     public IList<V1beta1SecurityPolicySpecForProviderRuleRateLimitOptionsExceedRedirectOptions>? ExceedRedirectOptions { get; set; }
 
@@ -232,11 +401,11 @@ public partial class V1beta1SecurityPolicySpecForProviderRuleRateLimitOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecForProviderRuleRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -260,6 +429,10 @@ public partial class V1beta1SecurityPolicySpecForProviderRule
     /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding action is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public IList<V1beta1SecurityPolicySpecForProviderRuleMatch>? Match { get; set; }
+
+    /// <summary>Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have no effect. Structure is documented below.</summary>
+    [JsonPropertyName("preconfiguredWafConfig")]
+    public IList<V1beta1SecurityPolicySpecForProviderRulePreconfiguredWafConfig>? PreconfiguredWafConfig { get; set; }
 
     /// <summary>When set to true, the action specified above is not enforced. Stackdriver logs for requests that trigger a preview action are annotated as such.</summary>
     [JsonPropertyName("preview")]
@@ -313,6 +486,64 @@ public partial class V1beta1SecurityPolicySpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs
+{
+    /// <summary>If enabled, traffic matching each unique value for the specified type constitutes a separate traffic unit. It can only be set to true if value is empty.</summary>
+    [JsonPropertyName("enableEachUniqueValue")]
+    public bool? EnableEachUniqueValue { get; set; }
+
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs
+{
+    /// <summary>Confidence threshold above which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployConfidenceThreshold")]
+    public double? AutoDeployConfidenceThreshold { get; set; }
+
+    /// <summary>Duration over which Adaptive Protection's auto-deployed actions last.</summary>
+    [JsonPropertyName("autoDeployExpirationSec")]
+    public double? AutoDeployExpirationSec { get; set; }
+
+    /// <summary>Impacted baseline threshold below which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployImpactedBaselineThreshold")]
+    public double? AutoDeployImpactedBaselineThreshold { get; set; }
+
+    /// <summary>Load threshold above which Adaptive Protection automatically deploy threshold based on the backend load threshold and detect a new rule during an alerted attack.</summary>
+    [JsonPropertyName("autoDeployLoadThreshold")]
+    public double? AutoDeployLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on absolute QPS.</summary>
+    [JsonPropertyName("detectionAbsoluteQps")]
+    public double? DetectionAbsoluteQps { get; set; }
+
+    /// <summary>Detection threshold based on the backend service's load.</summary>
+    [JsonPropertyName("detectionLoadThreshold")]
+    public double? DetectionLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on QPS relative to the average of baseline traffic.</summary>
+    [JsonPropertyName("detectionRelativeToBaselineQps")]
+    public double? DetectionRelativeToBaselineQps { get; set; }
+
+    /// <summary>The name of config. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the security policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Configuration options for enabling Adaptive Protection to work on the specified service granularity. Structure is documented below.</summary>
+    [JsonPropertyName("trafficGranularityConfigs")]
+    public IList<V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs>? TrafficGranularityConfigs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -322,6 +553,10 @@ public partial class V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConf
     /// <summary>Rule visibility can be one of the following:</summary>
     [JsonPropertyName("ruleVisibility")]
     public string? RuleVisibility { get; set; }
+
+    /// <summary>Configuration options for layer7 adaptive protection for various customizable thresholds. Structure is documented below.</summary>
+    [JsonPropertyName("thresholdConfigs")]
+    public IList<V1beta1SecurityPolicySpecInitProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs>? ThresholdConfigs { get; set; }
 }
 
 /// <summary></summary>
@@ -457,6 +692,96 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestCookie
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestHeader
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestQueryParam
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestUri
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusion
+{
+    /// <summary>Request cookie whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestCookie")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestCookie>? RequestCookie { get; set; }
+
+    /// <summary>Request header whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestHeader")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestHeader>? RequestHeader { get; set; }
+
+    /// <summary>Request query parameter whose value will be excluded from inspection during preconfigured WAF evaluation. Note that the parameter can be in the query string or in the POST body. Structure is documented below.</summary>
+    [JsonPropertyName("requestQueryParam")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestQueryParam>? RequestQueryParam { get; set; }
+
+    /// <summary>Request URI from the request line to be excluded from inspection during preconfigured WAF evaluation. When specifying this field, the query or fragment part should be excluded. Structure is documented below.</summary>
+    [JsonPropertyName("requestUri")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusionRequestUri>? RequestUri { get; set; }
+
+    /// <summary>A list of target rule IDs under the WAF rule set to apply the preconfigured WAF exclusion. If omitted, it refers to all the rule IDs under the WAF rule set.</summary>
+    [JsonPropertyName("targetRuleIds")]
+    public IList<string>? TargetRuleIds { get; set; }
+
+    /// <summary>Target WAF rule set to apply the preconfigured WAF exclusion.</summary>
+    [JsonPropertyName("targetRuleSet")]
+    public string? TargetRuleSet { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfig
+{
+    /// <summary>An exclusion to apply during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfigExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -470,13 +795,26 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsBa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsEnforceOnKeyConfigs
+{
+    /// <summary>Rate limit key name applicable only for the following key types:</summary>
+    [JsonPropertyName("enforceOnKeyName")]
+    public string? EnforceOnKeyName { get; set; }
+
+    /// <summary>Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to ALL.</summary>
+    [JsonPropertyName("enforceOnKeyType")]
+    public string? EnforceOnKeyType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsExceedRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -514,6 +852,10 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptions
     [JsonPropertyName("enforceOnKey")]
     public string? EnforceOnKey { get; set; }
 
+    /// <summary>If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which rate limit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must be set to an empty string. Structure is documented below.</summary>
+    [JsonPropertyName("enforceOnKeyConfigs")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsEnforceOnKeyConfigs>? EnforceOnKeyConfigs { get; set; }
+
     /// <summary>Rate limit key name applicable only for the following key types:</summary>
     [JsonPropertyName("enforceOnKeyName")]
     public string? EnforceOnKeyName { get; set; }
@@ -522,7 +864,7 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptions
     [JsonPropertyName("exceedAction")]
     public string? ExceedAction { get; set; }
 
-    /// <summary>block supports:</summary>
+    /// <summary>Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect. Structure is documented below.</summary>
     [JsonPropertyName("exceedRedirectOptions")]
     public IList<V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptionsExceedRedirectOptions>? ExceedRedirectOptions { get; set; }
 
@@ -535,11 +877,11 @@ public partial class V1beta1SecurityPolicySpecInitProviderRuleRateLimitOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicySpecInitProviderRuleRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -563,6 +905,10 @@ public partial class V1beta1SecurityPolicySpecInitProviderRule
     /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding action is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public IList<V1beta1SecurityPolicySpecInitProviderRuleMatch>? Match { get; set; }
+
+    /// <summary>Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have no effect. Structure is documented below.</summary>
+    [JsonPropertyName("preconfiguredWafConfig")]
+    public IList<V1beta1SecurityPolicySpecInitProviderRulePreconfiguredWafConfig>? PreconfiguredWafConfig { get; set; }
 
     /// <summary>When set to true, the action specified above is not enforced. Stackdriver logs for requests that trigger a preview action are annotated as such.</summary>
     [JsonPropertyName("preview")]
@@ -748,6 +1094,64 @@ public partial class V1beta1SecurityPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs
+{
+    /// <summary>If enabled, traffic matching each unique value for the specified type constitutes a separate traffic unit. It can only be set to true if value is empty.</summary>
+    [JsonPropertyName("enableEachUniqueValue")]
+    public bool? EnableEachUniqueValue { get; set; }
+
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs
+{
+    /// <summary>Confidence threshold above which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployConfidenceThreshold")]
+    public double? AutoDeployConfidenceThreshold { get; set; }
+
+    /// <summary>Duration over which Adaptive Protection's auto-deployed actions last.</summary>
+    [JsonPropertyName("autoDeployExpirationSec")]
+    public double? AutoDeployExpirationSec { get; set; }
+
+    /// <summary>Impacted baseline threshold below which Adaptive Protection's auto-deploy takes actions.</summary>
+    [JsonPropertyName("autoDeployImpactedBaselineThreshold")]
+    public double? AutoDeployImpactedBaselineThreshold { get; set; }
+
+    /// <summary>Load threshold above which Adaptive Protection automatically deploy threshold based on the backend load threshold and detect a new rule during an alerted attack.</summary>
+    [JsonPropertyName("autoDeployLoadThreshold")]
+    public double? AutoDeployLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on absolute QPS.</summary>
+    [JsonPropertyName("detectionAbsoluteQps")]
+    public double? DetectionAbsoluteQps { get; set; }
+
+    /// <summary>Detection threshold based on the backend service's load.</summary>
+    [JsonPropertyName("detectionLoadThreshold")]
+    public double? DetectionLoadThreshold { get; set; }
+
+    /// <summary>Detection threshold based on QPS relative to the average of baseline traffic.</summary>
+    [JsonPropertyName("detectionRelativeToBaselineQps")]
+    public double? DetectionRelativeToBaselineQps { get; set; }
+
+    /// <summary>The name of config. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the security policy.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Configuration options for enabling Adaptive Protection to work on the specified service granularity. Structure is documented below.</summary>
+    [JsonPropertyName("trafficGranularityConfigs")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigsTrafficGranularityConfigs>? TrafficGranularityConfigs { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfig
 {
     /// <summary>If set to true, enables CAAP for L7 DDoS detection.</summary>
@@ -757,6 +1161,10 @@ public partial class V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConf
     /// <summary>Rule visibility can be one of the following:</summary>
     [JsonPropertyName("ruleVisibility")]
     public string? RuleVisibility { get; set; }
+
+    /// <summary>Configuration options for layer7 adaptive protection for various customizable thresholds. Structure is documented below.</summary>
+    [JsonPropertyName("thresholdConfigs")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigs>? ThresholdConfigs { get; set; }
 }
 
 /// <summary></summary>
@@ -892,6 +1300,96 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestCookie
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestHeader
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestQueryParam
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestUri
+{
+    /// <summary>You can specify an exact match or a partial match by using a field operator and a field value.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>Requests that match this value constitute a granular traffic unit.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusion
+{
+    /// <summary>Request cookie whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestCookie")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestCookie>? RequestCookie { get; set; }
+
+    /// <summary>Request header whose value will be excluded from inspection during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("requestHeader")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestHeader>? RequestHeader { get; set; }
+
+    /// <summary>Request query parameter whose value will be excluded from inspection during preconfigured WAF evaluation. Note that the parameter can be in the query string or in the POST body. Structure is documented below.</summary>
+    [JsonPropertyName("requestQueryParam")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestQueryParam>? RequestQueryParam { get; set; }
+
+    /// <summary>Request URI from the request line to be excluded from inspection during preconfigured WAF evaluation. When specifying this field, the query or fragment part should be excluded. Structure is documented below.</summary>
+    [JsonPropertyName("requestUri")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusionRequestUri>? RequestUri { get; set; }
+
+    /// <summary>A list of target rule IDs under the WAF rule set to apply the preconfigured WAF exclusion. If omitted, it refers to all the rule IDs under the WAF rule set.</summary>
+    [JsonPropertyName("targetRuleIds")]
+    public IList<string>? TargetRuleIds { get; set; }
+
+    /// <summary>Target WAF rule set to apply the preconfigured WAF exclusion.</summary>
+    [JsonPropertyName("targetRuleSet")]
+    public string? TargetRuleSet { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfig
+{
+    /// <summary>An exclusion to apply during preconfigured WAF evaluation. Structure is documented below.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfigExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsBanThreshold
 {
     /// <summary>Number of HTTP(S) requests for calculating the threshold.</summary>
@@ -905,13 +1403,26 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsBa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsEnforceOnKeyConfigs
+{
+    /// <summary>Rate limit key name applicable only for the following key types:</summary>
+    [JsonPropertyName("enforceOnKeyName")]
+    public string? EnforceOnKeyName { get; set; }
+
+    /// <summary>Determines the key to enforce the rate_limit_threshold on. If not specified, defaults to ALL.</summary>
+    [JsonPropertyName("enforceOnKeyType")]
+    public string? EnforceOnKeyType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsExceedRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -949,6 +1460,10 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptions
     [JsonPropertyName("enforceOnKey")]
     public string? EnforceOnKey { get; set; }
 
+    /// <summary>If specified, any combination of values of enforce_on_key_type/enforce_on_key_name is treated as the key on which rate limit threshold/action is enforced. You can specify up to 3 enforce_on_key_configs. If enforce_on_key_configs is specified, enforce_on_key must be set to an empty string. Structure is documented below.</summary>
+    [JsonPropertyName("enforceOnKeyConfigs")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsEnforceOnKeyConfigs>? EnforceOnKeyConfigs { get; set; }
+
     /// <summary>Rate limit key name applicable only for the following key types:</summary>
     [JsonPropertyName("enforceOnKeyName")]
     public string? EnforceOnKeyName { get; set; }
@@ -957,7 +1472,7 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptions
     [JsonPropertyName("exceedAction")]
     public string? ExceedAction { get; set; }
 
-    /// <summary>block supports:</summary>
+    /// <summary>Parameters defining the redirect action that is used as the exceed action. Cannot be specified if the exceed action is not redirect. Structure is documented below.</summary>
     [JsonPropertyName("exceedRedirectOptions")]
     public IList<V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptionsExceedRedirectOptions>? ExceedRedirectOptions { get; set; }
 
@@ -970,11 +1485,11 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRuleRateLimitOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityPolicyStatusAtProviderRuleRedirectOptions
 {
-    /// <summary>Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.</summary>
+    /// <summary>External redirection target when EXTERNAL_302 is set in type.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of the redirect action.</summary>
+    /// <summary>The type indicates the intended use of the security policy. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -998,6 +1513,10 @@ public partial class V1beta1SecurityPolicyStatusAtProviderRule
     /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding action is enforced. Structure is documented below.</summary>
     [JsonPropertyName("match")]
     public IList<V1beta1SecurityPolicyStatusAtProviderRuleMatch>? Match { get; set; }
+
+    /// <summary>Preconfigured WAF configuration to be applied for the rule. If the rule does not evaluate preconfigured WAF rules, i.e., if evaluatePreconfiguredWaf() is not used, this field will have no effect. Structure is documented below.</summary>
+    [JsonPropertyName("preconfiguredWafConfig")]
+    public IList<V1beta1SecurityPolicyStatusAtProviderRulePreconfiguredWafConfig>? PreconfiguredWafConfig { get; set; }
 
     /// <summary>When set to true, the action specified above is not enforced. Stackdriver logs for requests that trigger a preview action are annotated as such.</summary>
     [JsonPropertyName("preview")]

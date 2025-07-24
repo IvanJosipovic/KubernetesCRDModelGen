@@ -8,6 +8,31 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDcrExchangeConfig
+{
+}
+
+/// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDefaultExchangeConfig
+{
+}
+
+/// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfig
+{
+    /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+    [JsonPropertyName("dcrExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDcrExchangeConfig? DcrExchangeConfig { get; set; }
+
+    /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+    [JsonPropertyName("defaultExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeSpecForProvider
@@ -36,6 +61,10 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>If true, subscriber email logging is enabled and all queries on the linked dataset will log the email address of the querying user. Once enabled, this setting cannot be turned off.</summary>
+    [JsonPropertyName("logLinkedDatasetQueryUserEmail")]
+    public bool? LogLinkedDatasetQueryUserEmail { get; set; }
+
     /// <summary>Email or URL of the primary point of contact of the data exchange.</summary>
     [JsonPropertyName("primaryContact")]
     public string? PrimaryContact { get; set; }
@@ -43,6 +72,35 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecForProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+    [JsonPropertyName("sharingEnvironmentConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecForProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
+}
+
+/// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDcrExchangeConfig
+{
+}
+
+/// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDefaultExchangeConfig
+{
+}
+
+/// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfig
+{
+    /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+    [JsonPropertyName("dcrExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDcrExchangeConfig? DcrExchangeConfig { get; set; }
+
+    /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+    [JsonPropertyName("defaultExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -73,6 +131,10 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>If true, subscriber email logging is enabled and all queries on the linked dataset will log the email address of the querying user. Once enabled, this setting cannot be turned off.</summary>
+    [JsonPropertyName("logLinkedDatasetQueryUserEmail")]
+    public bool? LogLinkedDatasetQueryUserEmail { get; set; }
+
     /// <summary>Email or URL of the primary point of contact of the data exchange.</summary>
     [JsonPropertyName("primaryContact")]
     public string? PrimaryContact { get; set; }
@@ -80,6 +142,10 @@ public partial class V1beta1AnalyticsHubDataExchangeSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+    [JsonPropertyName("sharingEnvironmentConfig")]
+    public V1beta1AnalyticsHubDataExchangeSpecInitProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -214,6 +280,31 @@ public partial class V1beta1AnalyticsHubDataExchangeSpec
     public V1beta1AnalyticsHubDataExchangeSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDcrExchangeConfig
+{
+}
+
+/// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDefaultExchangeConfig
+{
+}
+
+/// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfig
+{
+    /// <summary>Data Clean Room (DCR), used for privacy-safe and secured data sharing.</summary>
+    [JsonPropertyName("dcrExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDcrExchangeConfig? DcrExchangeConfig { get; set; }
+
+    /// <summary>Default Analytics Hub data exchange, used for secured data sharing.</summary>
+    [JsonPropertyName("defaultExchangeConfig")]
+    public V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfigDefaultExchangeConfig? DefaultExchangeConfig { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubDataExchangeStatusAtProvider
@@ -250,6 +341,10 @@ public partial class V1beta1AnalyticsHubDataExchangeStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>If true, subscriber email logging is enabled and all queries on the linked dataset will log the email address of the querying user. Once enabled, this setting cannot be turned off.</summary>
+    [JsonPropertyName("logLinkedDatasetQueryUserEmail")]
+    public bool? LogLinkedDatasetQueryUserEmail { get; set; }
+
     /// <summary>The resource name of the data exchange, for example: "projects/myproject/locations/US/dataExchanges/123"</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -261,6 +356,10 @@ public partial class V1beta1AnalyticsHubDataExchangeStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Configurable data sharing environment option for a data exchange. This field is required for data clean room exchanges. Structure is documented below.</summary>
+    [JsonPropertyName("sharingEnvironmentConfig")]
+    public V1beta1AnalyticsHubDataExchangeStatusAtProviderSharingEnvironmentConfig? SharingEnvironmentConfig { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

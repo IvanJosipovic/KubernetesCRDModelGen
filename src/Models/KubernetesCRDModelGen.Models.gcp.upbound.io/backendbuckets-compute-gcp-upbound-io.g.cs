@@ -252,6 +252,10 @@ public partial class V1beta1BackendBucketSpecForProvider
     [JsonPropertyName("enableCdn")]
     public bool? EnableCdn { get; set; }
 
+    /// <summary>The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer. If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both. Possible values are: INTERNAL_MANAGED.</summary>
+    [JsonPropertyName("loadBalancingScheme")]
+    public string? LoadBalancingScheme { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
@@ -500,6 +504,10 @@ public partial class V1beta1BackendBucketSpecInitProvider
     /// <summary>If true, enable Cloud CDN for this BackendBucket.</summary>
     [JsonPropertyName("enableCdn")]
     public bool? EnableCdn { get; set; }
+
+    /// <summary>The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer. If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both. Possible values are: INTERNAL_MANAGED.</summary>
+    [JsonPropertyName("loadBalancingScheme")]
+    public string? LoadBalancingScheme { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -761,6 +769,10 @@ public partial class V1beta1BackendBucketStatusAtProvider
     /// <summary>an identifier for the resource with format projects/{{project}}/global/backendBuckets/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer. If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both. Possible values are: INTERNAL_MANAGED.</summary>
+    [JsonPropertyName("loadBalancingScheme")]
+    public string? LoadBalancingScheme { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]

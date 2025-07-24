@@ -20,6 +20,10 @@ public partial class V1beta1DomainSpecForProvider
     [JsonPropertyName("authorizedNetworks")]
     public IList<string>? AuthorizedNetworks { get; set; }
 
+    /// <summary>Defaults to true. When the field is set to false, deleting the domain is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
+
     /// <summary>The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions of https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
@@ -52,6 +56,10 @@ public partial class V1beta1DomainSpecInitProvider
     /// <summary>The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks. If CIDR subnets overlap between networks, domain creation will fail.</summary>
     [JsonPropertyName("authorizedNetworks")]
     public IList<string>? AuthorizedNetworks { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the domain is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions of https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.</summary>
     [JsonPropertyName("domainName")]
@@ -217,6 +225,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>The full names of the Google Compute Engine networks the domain instance is connected to. The domain is only available on networks listed in authorizedNetworks. If CIDR subnets overlap between networks, domain creation will fail.</summary>
     [JsonPropertyName("authorizedNetworks")]
     public IList<string>? AuthorizedNetworks { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the domain is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>The fully qualified domain name. e.g. mydomain.myorganization.com, with the restrictions of https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.</summary>
     [JsonPropertyName("domainName")]

@@ -54,6 +54,28 @@ public partial class V1beta1InstanceSpecForProviderFileShares
     public string? SourceBackup { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderInitialReplicationReplicas
+{
+    /// <summary>The peer instance.</summary>
+    [JsonPropertyName("peerInstance")]
+    public string? PeerInstance { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderInitialReplication
+{
+    /// <summary>The replication role. Structure is documented below.</summary>
+    [JsonPropertyName("replicas")]
+    public IList<V1beta1InstanceSpecForProviderInitialReplicationReplicas>? Replicas { get; set; }
+
+    /// <summary>The replication role. Default value is STANDBY. Possible values are: ROLE_UNSPECIFIED, ACTIVE, STANDBY.</summary>
+    [JsonPropertyName("role")]
+    public string? Role { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderKmsKeyNameRefPolicy
@@ -114,7 +136,7 @@ public partial class V1beta1InstanceSpecForProviderKmsKeyNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderNetworks
 {
-    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS.</summary>
+    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS, PRIVATE_SERVICE_CONNECT.</summary>
     [JsonPropertyName("connectMode")]
     public string? ConnectMode { get; set; }
 
@@ -133,8 +155,47 @@ public partial class V1beta1InstanceSpecForProviderNetworks
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderPerformanceConfigFixedIops
+{
+    /// <summary>The number of IOPS to provision for the instance. max_iops must be in multiple of 1000.</summary>
+    [JsonPropertyName("maxIops")]
+    public double? MaxIops { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderPerformanceConfigIopsPerTb
+{
+    /// <summary>The instance max IOPS will be calculated by multiplying the capacity of the instance (TB) by max_iops_per_tb, and rounding to the nearest 1000. The instance max IOPS will be changed dynamically based on the instance capacity.</summary>
+    [JsonPropertyName("maxIopsPerTb")]
+    public double? MaxIopsPerTb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderPerformanceConfig
+{
+    /// <summary>The instance will have a fixed provisioned IOPS value, which will remain constant regardless of instance capacity. Structure is documented below.</summary>
+    [JsonPropertyName("fixedIops")]
+    public IList<V1beta1InstanceSpecForProviderPerformanceConfigFixedIops>? FixedIops { get; set; }
+
+    /// <summary>The instance provisioned IOPS will change dynamically based on the capacity of the instance. Structure is documented below.</summary>
+    [JsonPropertyName("iopsPerTb")]
+    public IList<V1beta1InstanceSpecForProviderPerformanceConfigIopsPerTb>? IopsPerTb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProvider
 {
+    /// <summary>Indicates whether the instance is protected against deletion.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
+    /// <summary>The reason for enabling deletion protection.</summary>
+    [JsonPropertyName("deletionProtectionReason")]
+    public string? DeletionProtectionReason { get; set; }
+
     /// <summary>A description of the instance.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -142,6 +203,10 @@ public partial class V1beta1InstanceSpecForProvider
     /// <summary>File system shares on the instance. For this version, only a single file share is supported. Structure is documented below.</summary>
     [JsonPropertyName("fileShares")]
     public IList<V1beta1InstanceSpecForProviderFileShares>? FileShares { get; set; }
+
+    /// <summary>Replication configuration, once set, this cannot be updated. Additionally this should be specified on the replica instance only, indicating the active as the peer_instance Structure is documented below.</summary>
+    [JsonPropertyName("initialReplication")]
+    public IList<V1beta1InstanceSpecForProviderInitialReplication>? InitialReplication { get; set; }
 
     /// <summary>KMS key name used for data encryption.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -167,9 +232,21 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("networks")]
     public IList<V1beta1InstanceSpecForProviderNetworks>? Networks { get; set; }
 
+    /// <summary>Performance configuration for the instance. If not provided, the default performance settings will be used. Structure is documented below.</summary>
+    [JsonPropertyName("performanceConfig")]
+    public IList<V1beta1InstanceSpecForProviderPerformanceConfig>? PerformanceConfig { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Either NFSv3, for using NFS version 3 as file sharing protocol, or NFSv4.1, for using NFS version 4.1 as file sharing protocol. NFSv4.1 can be used with HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE. The default is NFSv3. Default value is NFS_V3. Possible values are: NFS_V3, NFS_V4_1.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The service tier of the instance. Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE</summary>
     [JsonPropertyName("tier")]
@@ -224,6 +301,28 @@ public partial class V1beta1InstanceSpecInitProviderFileShares
     /// <summary>The resource name of the backup, in the format projects/{projectId}/locations/{locationId}/backups/{backupId}, that this file share has been restored from.</summary>
     [JsonPropertyName("sourceBackup")]
     public string? SourceBackup { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderInitialReplicationReplicas
+{
+    /// <summary>The peer instance.</summary>
+    [JsonPropertyName("peerInstance")]
+    public string? PeerInstance { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderInitialReplication
+{
+    /// <summary>The replication role. Structure is documented below.</summary>
+    [JsonPropertyName("replicas")]
+    public IList<V1beta1InstanceSpecInitProviderInitialReplicationReplicas>? Replicas { get; set; }
+
+    /// <summary>The replication role. Default value is STANDBY. Possible values are: ROLE_UNSPECIFIED, ACTIVE, STANDBY.</summary>
+    [JsonPropertyName("role")]
+    public string? Role { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -286,7 +385,7 @@ public partial class V1beta1InstanceSpecInitProviderKmsKeyNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderNetworks
 {
-    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS.</summary>
+    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS, PRIVATE_SERVICE_CONNECT.</summary>
     [JsonPropertyName("connectMode")]
     public string? ConnectMode { get; set; }
 
@@ -303,10 +402,49 @@ public partial class V1beta1InstanceSpecInitProviderNetworks
     public string? ReservedIpRange { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderPerformanceConfigFixedIops
+{
+    /// <summary>The number of IOPS to provision for the instance. max_iops must be in multiple of 1000.</summary>
+    [JsonPropertyName("maxIops")]
+    public double? MaxIops { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderPerformanceConfigIopsPerTb
+{
+    /// <summary>The instance max IOPS will be calculated by multiplying the capacity of the instance (TB) by max_iops_per_tb, and rounding to the nearest 1000. The instance max IOPS will be changed dynamically based on the instance capacity.</summary>
+    [JsonPropertyName("maxIopsPerTb")]
+    public double? MaxIopsPerTb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderPerformanceConfig
+{
+    /// <summary>The instance will have a fixed provisioned IOPS value, which will remain constant regardless of instance capacity. Structure is documented below.</summary>
+    [JsonPropertyName("fixedIops")]
+    public IList<V1beta1InstanceSpecInitProviderPerformanceConfigFixedIops>? FixedIops { get; set; }
+
+    /// <summary>The instance provisioned IOPS will change dynamically based on the capacity of the instance. Structure is documented below.</summary>
+    [JsonPropertyName("iopsPerTb")]
+    public IList<V1beta1InstanceSpecInitProviderPerformanceConfigIopsPerTb>? IopsPerTb { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProvider
 {
+    /// <summary>Indicates whether the instance is protected against deletion.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
+    /// <summary>The reason for enabling deletion protection.</summary>
+    [JsonPropertyName("deletionProtectionReason")]
+    public string? DeletionProtectionReason { get; set; }
+
     /// <summary>A description of the instance.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -314,6 +452,10 @@ public partial class V1beta1InstanceSpecInitProvider
     /// <summary>File system shares on the instance. For this version, only a single file share is supported. Structure is documented below.</summary>
     [JsonPropertyName("fileShares")]
     public IList<V1beta1InstanceSpecInitProviderFileShares>? FileShares { get; set; }
+
+    /// <summary>Replication configuration, once set, this cannot be updated. Additionally this should be specified on the replica instance only, indicating the active as the peer_instance Structure is documented below.</summary>
+    [JsonPropertyName("initialReplication")]
+    public IList<V1beta1InstanceSpecInitProviderInitialReplication>? InitialReplication { get; set; }
 
     /// <summary>KMS key name used for data encryption.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -335,9 +477,21 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("networks")]
     public IList<V1beta1InstanceSpecInitProviderNetworks>? Networks { get; set; }
 
+    /// <summary>Performance configuration for the instance. If not provided, the default performance settings will be used. Structure is documented below.</summary>
+    [JsonPropertyName("performanceConfig")]
+    public IList<V1beta1InstanceSpecInitProviderPerformanceConfig>? PerformanceConfig { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Either NFSv3, for using NFS version 3 as file sharing protocol, or NFSv4.1, for using NFS version 4.1 as file sharing protocol. NFSv4.1 can be used with HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE. The default is NFSv3. Default value is NFS_V3. Possible values are: NFS_V3, NFS_V4_1.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The service tier of the instance. Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE</summary>
     [JsonPropertyName("tier")]
@@ -482,6 +636,40 @@ public partial class V1beta1InstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderEffectiveReplicationReplicas
+{
+    /// <summary>(Output) Output only. The timestamp of the latest replication snapshot taken on the active instance and is already replicated safely. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z"</summary>
+    [JsonPropertyName("lastActiveSyncTime")]
+    public string? LastActiveSyncTime { get; set; }
+
+    /// <summary>The peer instance.</summary>
+    [JsonPropertyName("peerInstance")]
+    public string? PeerInstance { get; set; }
+
+    /// <summary>(Output) Output only. The replica state</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+
+    /// <summary>(Output) Output only. Additional information about the replication state, if available.</summary>
+    [JsonPropertyName("stateReasons")]
+    public IList<string>? StateReasons { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderEffectiveReplication
+{
+    /// <summary>The replication role. Structure is documented below.</summary>
+    [JsonPropertyName("replicas")]
+    public IList<V1beta1InstanceStatusAtProviderEffectiveReplicationReplicas>? Replicas { get; set; }
+
+    /// <summary>(Output) The replication role.</summary>
+    [JsonPropertyName("role")]
+    public string? Role { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderFileSharesNfsExportOptions
 {
     /// <summary>Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE. Default value is READ_WRITE. Possible values are: READ_ONLY, READ_WRITE.</summary>
@@ -528,9 +716,31 @@ public partial class V1beta1InstanceStatusAtProviderFileShares
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderInitialReplicationReplicas
+{
+    /// <summary>The peer instance.</summary>
+    [JsonPropertyName("peerInstance")]
+    public string? PeerInstance { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderInitialReplication
+{
+    /// <summary>The replication role. Structure is documented below.</summary>
+    [JsonPropertyName("replicas")]
+    public IList<V1beta1InstanceStatusAtProviderInitialReplicationReplicas>? Replicas { get; set; }
+
+    /// <summary>The replication role. Default value is STANDBY. Possible values are: ROLE_UNSPECIFIED, ACTIVE, STANDBY.</summary>
+    [JsonPropertyName("role")]
+    public string? Role { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderNetworks
 {
-    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS.</summary>
+    /// <summary>The network connect mode of the Filestore instance. If not provided, the connect mode defaults to DIRECT_PEERING. Default value is DIRECT_PEERING. Possible values are: DIRECT_PEERING, PRIVATE_SERVICE_ACCESS, PRIVATE_SERVICE_CONNECT.</summary>
     [JsonPropertyName("connectMode")]
     public string? ConnectMode { get; set; }
 
@@ -553,19 +763,62 @@ public partial class V1beta1InstanceStatusAtProviderNetworks
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderPerformanceConfigFixedIops
+{
+    /// <summary>The number of IOPS to provision for the instance. max_iops must be in multiple of 1000.</summary>
+    [JsonPropertyName("maxIops")]
+    public double? MaxIops { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderPerformanceConfigIopsPerTb
+{
+    /// <summary>The instance max IOPS will be calculated by multiplying the capacity of the instance (TB) by max_iops_per_tb, and rounding to the nearest 1000. The instance max IOPS will be changed dynamically based on the instance capacity.</summary>
+    [JsonPropertyName("maxIopsPerTb")]
+    public double? MaxIopsPerTb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderPerformanceConfig
+{
+    /// <summary>The instance will have a fixed provisioned IOPS value, which will remain constant regardless of instance capacity. Structure is documented below.</summary>
+    [JsonPropertyName("fixedIops")]
+    public IList<V1beta1InstanceStatusAtProviderPerformanceConfigFixedIops>? FixedIops { get; set; }
+
+    /// <summary>The instance provisioned IOPS will change dynamically based on the capacity of the instance. Structure is documented below.</summary>
+    [JsonPropertyName("iopsPerTb")]
+    public IList<V1beta1InstanceStatusAtProviderPerformanceConfigIopsPerTb>? IopsPerTb { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProvider
 {
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
+    /// <summary>Indicates whether the instance is protected against deletion.</summary>
+    [JsonPropertyName("deletionProtectionEnabled")]
+    public bool? DeletionProtectionEnabled { get; set; }
+
+    /// <summary>The reason for enabling deletion protection.</summary>
+    [JsonPropertyName("deletionProtectionReason")]
+    public string? DeletionProtectionReason { get; set; }
+
     /// <summary>A description of the instance.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary></summary>
+    /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
+
+    /// <summary>Output only fields for replication configuration. Structure is documented below.</summary>
+    [JsonPropertyName("effectiveReplication")]
+    public IList<V1beta1InstanceStatusAtProviderEffectiveReplication>? EffectiveReplication { get; set; }
 
     /// <summary>Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.</summary>
     [JsonPropertyName("etag")]
@@ -578,6 +831,10 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{location}}/instances/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Replication configuration, once set, this cannot be updated. Additionally this should be specified on the replica instance only, indicating the active as the peer_instance Structure is documented below.</summary>
+    [JsonPropertyName("initialReplication")]
+    public IList<V1beta1InstanceStatusAtProviderInitialReplication>? InitialReplication { get; set; }
 
     /// <summary>KMS key name used for data encryption.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -595,9 +852,21 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("networks")]
     public IList<V1beta1InstanceStatusAtProviderNetworks>? Networks { get; set; }
 
+    /// <summary>Performance configuration for the instance. If not provided, the default performance settings will be used. Structure is documented below.</summary>
+    [JsonPropertyName("performanceConfig")]
+    public IList<V1beta1InstanceStatusAtProviderPerformanceConfig>? PerformanceConfig { get; set; }
+
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Either NFSv3, for using NFS version 3 as file sharing protocol, or NFSv4.1, for using NFS version 4.1 as file sharing protocol. NFSv4.1 can be used with HIGH_SCALE_SSD, ZONAL, REGIONAL and ENTERPRISE. The default is NFSv3. Default value is NFS_V3. Possible values are: NFS_V3, NFS_V4_1.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>A map of resource manager tags. Resource manager tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456. The field is ignored when empty. The field is immutable and causes resource replacement when mutated. This field is only set at create time and modifying this field after creation will trigger recreation. To apply tags to an existing resource, see the google_tags_tag_value resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 
     /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
     [JsonPropertyName("terraformLabels")]

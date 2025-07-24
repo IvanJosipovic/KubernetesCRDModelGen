@@ -42,6 +42,10 @@ public partial class V1beta1AlertPolicySpecForProviderAlertStrategy
     [JsonPropertyName("notificationChannelStrategy")]
     public IList<V1beta1AlertPolicySpecForProviderAlertStrategyNotificationChannelStrategy>? NotificationChannelStrategy { get; set; }
 
+    /// <summary>Control when notifications will be sent out. Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.</summary>
+    [JsonPropertyName("notificationPrompts")]
+    public IList<string>? NotificationPrompts { get; set; }
+
     /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based. Structure is documented below.</summary>
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicySpecForProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
@@ -157,6 +161,10 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionPrometh
     [JsonPropertyName("alertRule")]
     public string? AlertRule { get; set; }
 
+    /// <summary>Whether to disable metric existence validation for this condition. Users with the monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the alerting policy condition.</summary>
+    [JsonPropertyName("disableMetricValidation")]
+    public bool? DisableMetricValidation { get; set; }
+
     /// <summary>The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
@@ -176,6 +184,113 @@ public partial class V1beta1AlertPolicySpecForProviderConditionsConditionPrometh
     /// <summary>The rule group name of this alert in the corresponding Prometheus configuration file. Some external tools may require this field to be populated correctly in order to refer to the original Prometheus configuration file. The rule group name and the alert name are necessary to update the relevant AlertPolicies in case the definition of the rule group changes in the future. This field is optional.</summary>
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlBooleanTest
+{
+    /// <summary>The name of the column containing the boolean value. If the value in a row is NULL, that row is ignored.</summary>
+    [JsonPropertyName("column")]
+    public string? Column { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDailyExecutionTime
+{
+    /// <summary>Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlDaily
+{
+    /// <summary>The time of day (in UTC) at which the query should run. If left unspecified, the server picks an arbitrary time of day and runs the query at the same time each day. Structure is documented below.</summary>
+    [JsonPropertyName("executionTime")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlDailyExecutionTime>? ExecutionTime { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlHourly
+{
+    /// <summary>The number of minutes after the hour (in UTC) to run the query. Must be greater than or equal to 0 minutes and less than or equal to 59 minutes.  If left unspecified, then an arbitrary offset is used.</summary>
+    [JsonPropertyName("minuteOffset")]
+    public double? MinuteOffset { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlMinutes
+{
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSqlRowCountTest
+{
+    /// <summary>The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side. Only COMPARISON_LT and COMPARISON_GT are supported currently. Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.</summary>
+    [JsonPropertyName("comparison")]
+    public string? Comparison { get; set; }
+
+    /// <summary>The value against which to compare the row count.</summary>
+    [JsonPropertyName("threshold")]
+    public double? Threshold { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecForProviderConditionsConditionSql
+{
+    /// <summary>A test that uses an alerting result in a boolean column produced by the SQL query. Structure is documented below.</summary>
+    [JsonPropertyName("booleanTest")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlBooleanTest>? BooleanTest { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many days. Structure is documented below.</summary>
+    [JsonPropertyName("daily")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlDaily>? Daily { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many hours. Structure is documented below.</summary>
+    [JsonPropertyName("hourly")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlHourly>? Hourly { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlMinutes>? Minutes { get; set; }
+
+    /// <summary>The Log Analytics SQL query to run, as a string.  The query must conform to the required shape. Specifically, the query must not try to filter the input by time.  A filter will automatically be applied to filter the input so that the query receives all rows received since the last time the query was run.</summary>
+    [JsonPropertyName("query")]
+    public string? Query { get; set; }
+
+    /// <summary>A test that checks if the number of rows in the result set violates some threshold. Structure is documented below.</summary>
+    [JsonPropertyName("rowCountTest")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
 
 /// <summary></summary>
@@ -307,6 +422,10 @@ public partial class V1beta1AlertPolicySpecForProviderConditions
     [JsonPropertyName("conditionPrometheusQueryLanguage")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionPrometheusQueryLanguage>? ConditionPrometheusQueryLanguage { get; set; }
 
+    /// <summary>A condition that allows alerting policies to be defined using GoogleSQL. SQL conditions examine a sliding window of logs using GoogleSQL. Alert policies with SQL conditions may incur additional billing. Structure is documented below.</summary>
+    [JsonPropertyName("conditionSql")]
+    public IList<V1beta1AlertPolicySpecForProviderConditionsConditionSql>? ConditionSql { get; set; }
+
     /// <summary>A condition that compares a time series against a threshold. Structure is documented below.</summary>
     [JsonPropertyName("conditionThreshold")]
     public IList<V1beta1AlertPolicySpecForProviderConditionsConditionThreshold>? ConditionThreshold { get; set; }
@@ -429,6 +548,10 @@ public partial class V1beta1AlertPolicySpecInitProviderAlertStrategy
     [JsonPropertyName("notificationChannelStrategy")]
     public IList<V1beta1AlertPolicySpecInitProviderAlertStrategyNotificationChannelStrategy>? NotificationChannelStrategy { get; set; }
 
+    /// <summary>Control when notifications will be sent out. Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.</summary>
+    [JsonPropertyName("notificationPrompts")]
+    public IList<string>? NotificationPrompts { get; set; }
+
     /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based. Structure is documented below.</summary>
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicySpecInitProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
@@ -544,6 +667,10 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionPromet
     [JsonPropertyName("alertRule")]
     public string? AlertRule { get; set; }
 
+    /// <summary>Whether to disable metric existence validation for this condition. Users with the monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the alerting policy condition.</summary>
+    [JsonPropertyName("disableMetricValidation")]
+    public bool? DisableMetricValidation { get; set; }
+
     /// <summary>The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
@@ -563,6 +690,113 @@ public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionPromet
     /// <summary>The rule group name of this alert in the corresponding Prometheus configuration file. Some external tools may require this field to be populated correctly in order to refer to the original Prometheus configuration file. The rule group name and the alert name are necessary to update the relevant AlertPolicies in case the definition of the rule group changes in the future. This field is optional.</summary>
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlBooleanTest
+{
+    /// <summary>The name of the column containing the boolean value. If the value in a row is NULL, that row is ignored.</summary>
+    [JsonPropertyName("column")]
+    public string? Column { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDailyExecutionTime
+{
+    /// <summary>Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDaily
+{
+    /// <summary>The time of day (in UTC) at which the query should run. If left unspecified, the server picks an arbitrary time of day and runs the query at the same time each day. Structure is documented below.</summary>
+    [JsonPropertyName("executionTime")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDailyExecutionTime>? ExecutionTime { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlHourly
+{
+    /// <summary>The number of minutes after the hour (in UTC) to run the query. Must be greater than or equal to 0 minutes and less than or equal to 59 minutes.  If left unspecified, then an arbitrary offset is used.</summary>
+    [JsonPropertyName("minuteOffset")]
+    public double? MinuteOffset { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlMinutes
+{
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSqlRowCountTest
+{
+    /// <summary>The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side. Only COMPARISON_LT and COMPARISON_GT are supported currently. Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.</summary>
+    [JsonPropertyName("comparison")]
+    public string? Comparison { get; set; }
+
+    /// <summary>The value against which to compare the row count.</summary>
+    [JsonPropertyName("threshold")]
+    public double? Threshold { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicySpecInitProviderConditionsConditionSql
+{
+    /// <summary>A test that uses an alerting result in a boolean column produced by the SQL query. Structure is documented below.</summary>
+    [JsonPropertyName("booleanTest")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlBooleanTest>? BooleanTest { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many days. Structure is documented below.</summary>
+    [JsonPropertyName("daily")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlDaily>? Daily { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many hours. Structure is documented below.</summary>
+    [JsonPropertyName("hourly")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlHourly>? Hourly { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlMinutes>? Minutes { get; set; }
+
+    /// <summary>The Log Analytics SQL query to run, as a string.  The query must conform to the required shape. Specifically, the query must not try to filter the input by time.  A filter will automatically be applied to filter the input so that the query receives all rows received since the last time the query was run.</summary>
+    [JsonPropertyName("query")]
+    public string? Query { get; set; }
+
+    /// <summary>A test that checks if the number of rows in the result set violates some threshold. Structure is documented below.</summary>
+    [JsonPropertyName("rowCountTest")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
 
 /// <summary></summary>
@@ -693,6 +927,10 @@ public partial class V1beta1AlertPolicySpecInitProviderConditions
     /// <summary>A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL). The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group. Structure is documented below.</summary>
     [JsonPropertyName("conditionPrometheusQueryLanguage")]
     public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionPrometheusQueryLanguage>? ConditionPrometheusQueryLanguage { get; set; }
+
+    /// <summary>A condition that allows alerting policies to be defined using GoogleSQL. SQL conditions examine a sliding window of logs using GoogleSQL. Alert policies with SQL conditions may incur additional billing. Structure is documented below.</summary>
+    [JsonPropertyName("conditionSql")]
+    public IList<V1beta1AlertPolicySpecInitProviderConditionsConditionSql>? ConditionSql { get; set; }
 
     /// <summary>A condition that compares a time series against a threshold. Structure is documented below.</summary>
     [JsonPropertyName("conditionThreshold")]
@@ -948,6 +1186,10 @@ public partial class V1beta1AlertPolicyStatusAtProviderAlertStrategy
     [JsonPropertyName("notificationChannelStrategy")]
     public IList<V1beta1AlertPolicyStatusAtProviderAlertStrategyNotificationChannelStrategy>? NotificationChannelStrategy { get; set; }
 
+    /// <summary>Control when notifications will be sent out. Each value may be one of: NOTIFICATION_PROMPT_UNSPECIFIED, OPENED, CLOSED.</summary>
+    [JsonPropertyName("notificationPrompts")]
+    public IList<string>? NotificationPrompts { get; set; }
+
     /// <summary>Required for alert policies with a LogMatch condition. This limit is not implemented for alert policies that are not log-based. Structure is documented below.</summary>
     [JsonPropertyName("notificationRateLimit")]
     public IList<V1beta1AlertPolicyStatusAtProviderAlertStrategyNotificationRateLimit>? NotificationRateLimit { get; set; }
@@ -1063,6 +1305,10 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionPromet
     [JsonPropertyName("alertRule")]
     public string? AlertRule { get; set; }
 
+    /// <summary>Whether to disable metric existence validation for this condition. Users with the monitoring.alertPolicyViewer role are able to see the name of the non-existent metric in the alerting policy condition.</summary>
+    [JsonPropertyName("disableMetricValidation")]
+    public bool? DisableMetricValidation { get; set; }
+
     /// <summary>The amount of time that a time series must violate the threshold to be considered failing. Currently, only values that are a multiple of a minute--e.g., 0, 60, 120, or 300 seconds--are supported. If an invalid value is given, an error will be returned. When choosing a duration, it is useful to keep in mind the frequency of the underlying time series data (which may also be affected by any alignments specified in the aggregations field); a good duration is long enough so that a single outlier does not generate spurious alerts, but short enough that unhealthy states are detected and alerted on quickly.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
@@ -1082,6 +1328,113 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionPromet
     /// <summary>The rule group name of this alert in the corresponding Prometheus configuration file. Some external tools may require this field to be populated correctly in order to refer to the original Prometheus configuration file. The rule group name and the alert name are necessary to update the relevant AlertPolicies in case the definition of the rule group changes in the future. This field is optional.</summary>
     [JsonPropertyName("ruleGroup")]
     public string? RuleGroup { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlBooleanTest
+{
+    /// <summary>The name of the column containing the boolean value. If the value in a row is NULL, that row is ignored.</summary>
+    [JsonPropertyName("column")]
+    public string? Column { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDailyExecutionTime
+{
+    /// <summary>Hours of a day in 24 hour format. Must be greater than or equal to 0 and typically must be less than or equal to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
+    [JsonPropertyName("hours")]
+    public double? Hours { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public double? Minutes { get; set; }
+
+    /// <summary>Fractions of seconds, in nanoseconds. Must be greater than or equal to 0 and less than or equal to 999,999,999.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Seconds of a minute. Must be greater than or equal to 0 and typically must be less than or equal to 59. An API may allow the value 60 if it allows leap-seconds.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDaily
+{
+    /// <summary>The time of day (in UTC) at which the query should run. If left unspecified, the server picks an arbitrary time of day and runs the query at the same time each day. Structure is documented below.</summary>
+    [JsonPropertyName("executionTime")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDailyExecutionTime>? ExecutionTime { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlHourly
+{
+    /// <summary>The number of minutes after the hour (in UTC) to run the query. Must be greater than or equal to 0 minutes and less than or equal to 59 minutes.  If left unspecified, then an arbitrary offset is used.</summary>
+    [JsonPropertyName("minuteOffset")]
+    public double? MinuteOffset { get; set; }
+
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlMinutes
+{
+    /// <summary>Number of minutes between runs. The interval must be greater than or equal to 5 minutes and less than or equal to 1440 minutes.</summary>
+    [JsonPropertyName("periodicity")]
+    public double? Periodicity { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlRowCountTest
+{
+    /// <summary>The comparison to apply between the time series (indicated by filter and aggregation) and the threshold (indicated by threshold_value). The comparison is applied on each time series, with the time series on the left-hand side and the threshold on the right-hand side. Only COMPARISON_LT and COMPARISON_GT are supported currently. Possible values are: COMPARISON_GT, COMPARISON_GE, COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE.</summary>
+    [JsonPropertyName("comparison")]
+    public string? Comparison { get; set; }
+
+    /// <summary>The value against which to compare the row count.</summary>
+    [JsonPropertyName("threshold")]
+    public double? Threshold { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AlertPolicyStatusAtProviderConditionsConditionSql
+{
+    /// <summary>A test that uses an alerting result in a boolean column produced by the SQL query. Structure is documented below.</summary>
+    [JsonPropertyName("booleanTest")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlBooleanTest>? BooleanTest { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many days. Structure is documented below.</summary>
+    [JsonPropertyName("daily")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlDaily>? Daily { get; set; }
+
+    /// <summary>Used to schedule the query to run every so many hours. Structure is documented below.</summary>
+    [JsonPropertyName("hourly")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlHourly>? Hourly { get; set; }
+
+    /// <summary>Minutes of an hour. Must be greater than or equal to 0 and less than or equal to 59.</summary>
+    [JsonPropertyName("minutes")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlMinutes>? Minutes { get; set; }
+
+    /// <summary>The Log Analytics SQL query to run, as a string.  The query must conform to the required shape. Specifically, the query must not try to filter the input by time.  A filter will automatically be applied to filter the input so that the query receives all rows received since the last time the query was run.</summary>
+    [JsonPropertyName("query")]
+    public string? Query { get; set; }
+
+    /// <summary>A test that checks if the number of rows in the result set violates some threshold. Structure is documented below.</summary>
+    [JsonPropertyName("rowCountTest")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSqlRowCountTest>? RowCountTest { get; set; }
 }
 
 /// <summary></summary>
@@ -1212,6 +1565,10 @@ public partial class V1beta1AlertPolicyStatusAtProviderConditions
     /// <summary>A condition type that allows alert policies to be defined using Prometheus Query Language (PromQL). The PrometheusQueryLanguageCondition message contains information from a Prometheus alerting rule and its associated rule group. Structure is documented below.</summary>
     [JsonPropertyName("conditionPrometheusQueryLanguage")]
     public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionPrometheusQueryLanguage>? ConditionPrometheusQueryLanguage { get; set; }
+
+    /// <summary>A condition that allows alerting policies to be defined using GoogleSQL. SQL conditions examine a sliding window of logs using GoogleSQL. Alert policies with SQL conditions may incur additional billing. Structure is documented below.</summary>
+    [JsonPropertyName("conditionSql")]
+    public IList<V1beta1AlertPolicyStatusAtProviderConditionsConditionSql>? ConditionSql { get; set; }
 
     /// <summary>A condition that compares a time series against a threshold. Structure is documented below.</summary>
     [JsonPropertyName("conditionThreshold")]

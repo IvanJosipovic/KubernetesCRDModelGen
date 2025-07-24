@@ -245,6 +245,10 @@ public partial class V1beta1ServiceAttachmentSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>The number of consumer spokes that connected Private Service Connect endpoints can be propagated to through Network Connectivity Center. This limit lets the service producer limit how many propagated Private Service Connect connections can be established to this service attachment from a single consumer. If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project that contains a connected endpoint. If unspecified, the default propagated connection limit is 250. To explicitly send a zero value, set send_propagated_connection_limit_if_zero = true.</summary>
+    [JsonPropertyName("propagatedConnectionLimit")]
+    public double? PropagatedConnectionLimit { get; set; }
+
     /// <summary>This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.</summary>
     [JsonPropertyName("reconcileConnections")]
     public bool? ReconcileConnections { get; set; }
@@ -252,6 +256,10 @@ public partial class V1beta1ServiceAttachmentSpecForProvider
     /// <summary>URL of the region where the resource resides.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>Controls the behavior of propagated_connection_limit. When false, setting propagated_connection_limit to zero causes the provider to use to the API's default value. When true, the provider will set propagated_connection_limit to zero. Defaults to false.</summary>
+    [JsonPropertyName("sendPropagatedConnectionLimitIfZero")]
+    public bool? SendPropagatedConnectionLimitIfZero { get; set; }
 
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.</summary>
     [JsonPropertyName("targetService")]
@@ -503,9 +511,17 @@ public partial class V1beta1ServiceAttachmentSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>The number of consumer spokes that connected Private Service Connect endpoints can be propagated to through Network Connectivity Center. This limit lets the service producer limit how many propagated Private Service Connect connections can be established to this service attachment from a single consumer. If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project that contains a connected endpoint. If unspecified, the default propagated connection limit is 250. To explicitly send a zero value, set send_propagated_connection_limit_if_zero = true.</summary>
+    [JsonPropertyName("propagatedConnectionLimit")]
+    public double? PropagatedConnectionLimit { get; set; }
+
     /// <summary>This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.</summary>
     [JsonPropertyName("reconcileConnections")]
     public bool? ReconcileConnections { get; set; }
+
+    /// <summary>Controls the behavior of propagated_connection_limit. When false, setting propagated_connection_limit to zero causes the provider to use to the API's default value. When true, the provider will set propagated_connection_limit to zero. Defaults to false.</summary>
+    [JsonPropertyName("sendPropagatedConnectionLimitIfZero")]
+    public bool? SendPropagatedConnectionLimitIfZero { get; set; }
 
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.</summary>
     [JsonPropertyName("targetService")]
@@ -656,9 +672,21 @@ public partial class V1beta1ServiceAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceAttachmentStatusAtProviderConnectedEndpoints
 {
+    /// <summary>(Output) The url of the consumer network.</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
     /// <summary>(Output) The URL of the consumer forwarding rule.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
+
+    /// <summary>(Output) The number of consumer Network Connectivity Center spokes that the connected Private Service Connect endpoint has propagated to.</summary>
+    [JsonPropertyName("propagatedConnectionCount")]
+    public double? PropagatedConnectionCount { get; set; }
+
+    /// <summary>(Output) The PSC connection id of the connected endpoint.</summary>
+    [JsonPropertyName("pscConnectionId")]
+    public string? PscConnectionId { get; set; }
 
     /// <summary>(Output) The status of the connection from the consumer forwarding rule to this service attachment.</summary>
     [JsonPropertyName("status")]
@@ -730,6 +758,10 @@ public partial class V1beta1ServiceAttachmentStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary>The number of consumer spokes that connected Private Service Connect endpoints can be propagated to through Network Connectivity Center. This limit lets the service producer limit how many propagated Private Service Connect connections can be established to this service attachment from a single consumer. If the connection preference of the service attachment is ACCEPT_MANUAL, the limit applies to each project or network that is listed in the consumer accept list. If the connection preference of the service attachment is ACCEPT_AUTOMATIC, the limit applies to each project that contains a connected endpoint. If unspecified, the default propagated connection limit is 250. To explicitly send a zero value, set send_propagated_connection_limit_if_zero = true.</summary>
+    [JsonPropertyName("propagatedConnectionLimit")]
+    public double? PropagatedConnectionLimit { get; set; }
+
     /// <summary>This flag determines whether a consumer accept/reject list change can reconcile the statuses of existing ACCEPTED or REJECTED PSC endpoints. If false, connection policy update will only affect existing PENDING PSC endpoints. Existing ACCEPTED/REJECTED endpoints will remain untouched regardless how the connection policy is modified . If true, update will affect both PENDING and ACCEPTED/REJECTED PSC endpoints. For example, an ACCEPTED PSC endpoint will be moved to REJECTED if its project is added to the reject list.</summary>
     [JsonPropertyName("reconcileConnections")]
     public bool? ReconcileConnections { get; set; }
@@ -741,6 +773,10 @@ public partial class V1beta1ServiceAttachmentStatusAtProvider
     /// <summary>The URI of the created resource.</summary>
     [JsonPropertyName("selfLink")]
     public string? SelfLink { get; set; }
+
+    /// <summary>Controls the behavior of propagated_connection_limit. When false, setting propagated_connection_limit to zero causes the provider to use to the API's default value. When true, the provider will set propagated_connection_limit to zero. Defaults to false.</summary>
+    [JsonPropertyName("sendPropagatedConnectionLimitIfZero")]
+    public bool? SendPropagatedConnectionLimitIfZero { get; set; }
 
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.</summary>
     [JsonPropertyName("targetService")]

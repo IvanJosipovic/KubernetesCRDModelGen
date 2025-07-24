@@ -10,6 +10,36 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateSpecForProviderAccelerators
+{
+    /// <summary>The number of the guest accelerator cards exposed to this node template.</summary>
+    [JsonPropertyName("acceleratorCount")]
+    public double? AcceleratorCount { get; set; }
+
+    /// <summary>Full or partial URL of the accelerator type resource to expose to this node template.</summary>
+    [JsonPropertyName("acceleratorType")]
+    public string? AcceleratorType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateSpecForProviderDisks
+{
+    /// <summary>Specifies the number of such disks.</summary>
+    [JsonPropertyName("diskCount")]
+    public double? DiskCount { get; set; }
+
+    /// <summary>Specifies the size of the disk in base-2 GB.</summary>
+    [JsonPropertyName("diskSizeGb")]
+    public double? DiskSizeGb { get; set; }
+
+    /// <summary>Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.</summary>
+    [JsonPropertyName("diskType")]
+    public string? DiskType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateSpecForProviderNodeTypeFlexibility
 {
     /// <summary>Number of virtual CPUs to use.</summary>
@@ -34,6 +64,10 @@ public partial class V1beta1NodeTemplateSpecForProviderServerBinding
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateSpecForProvider
 {
+    /// <summary>List of the type and count of accelerator cards attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("accelerators")]
+    public IList<V1beta1NodeTemplateSpecForProviderAccelerators>? Accelerators { get; set; }
+
     /// <summary>CPU overcommit. Default value is NONE. Possible values are: ENABLED, NONE.</summary>
     [JsonPropertyName("cpuOvercommitType")]
     public string? CpuOvercommitType { get; set; }
@@ -41,6 +75,10 @@ public partial class V1beta1NodeTemplateSpecForProvider
     /// <summary>An optional textual description of the resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>List of the type, size and count of disks attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("disks")]
+    public IList<V1beta1NodeTemplateSpecForProviderDisks>? Disks { get; set; }
 
     /// <summary>Labels to use for node affinity, which will be used in instance scheduling.</summary>
     [JsonPropertyName("nodeAffinityLabels")]
@@ -69,6 +107,36 @@ public partial class V1beta1NodeTemplateSpecForProvider
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateSpecInitProviderAccelerators
+{
+    /// <summary>The number of the guest accelerator cards exposed to this node template.</summary>
+    [JsonPropertyName("acceleratorCount")]
+    public double? AcceleratorCount { get; set; }
+
+    /// <summary>Full or partial URL of the accelerator type resource to expose to this node template.</summary>
+    [JsonPropertyName("acceleratorType")]
+    public string? AcceleratorType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateSpecInitProviderDisks
+{
+    /// <summary>Specifies the number of such disks.</summary>
+    [JsonPropertyName("diskCount")]
+    public double? DiskCount { get; set; }
+
+    /// <summary>Specifies the size of the disk in base-2 GB.</summary>
+    [JsonPropertyName("diskSizeGb")]
+    public double? DiskSizeGb { get; set; }
+
+    /// <summary>Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.</summary>
+    [JsonPropertyName("diskType")]
+    public string? DiskType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateSpecInitProviderNodeTypeFlexibility
 {
     /// <summary>Number of virtual CPUs to use.</summary>
@@ -93,6 +161,10 @@ public partial class V1beta1NodeTemplateSpecInitProviderServerBinding
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateSpecInitProvider
 {
+    /// <summary>List of the type and count of accelerator cards attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("accelerators")]
+    public IList<V1beta1NodeTemplateSpecInitProviderAccelerators>? Accelerators { get; set; }
+
     /// <summary>CPU overcommit. Default value is NONE. Possible values are: ENABLED, NONE.</summary>
     [JsonPropertyName("cpuOvercommitType")]
     public string? CpuOvercommitType { get; set; }
@@ -100,6 +172,10 @@ public partial class V1beta1NodeTemplateSpecInitProvider
     /// <summary>An optional textual description of the resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>List of the type, size and count of disks attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("disks")]
+    public IList<V1beta1NodeTemplateSpecInitProviderDisks>? Disks { get; set; }
 
     /// <summary>Labels to use for node affinity, which will be used in instance scheduling.</summary>
     [JsonPropertyName("nodeAffinityLabels")]
@@ -256,6 +332,36 @@ public partial class V1beta1NodeTemplateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateStatusAtProviderAccelerators
+{
+    /// <summary>The number of the guest accelerator cards exposed to this node template.</summary>
+    [JsonPropertyName("acceleratorCount")]
+    public double? AcceleratorCount { get; set; }
+
+    /// <summary>Full or partial URL of the accelerator type resource to expose to this node template.</summary>
+    [JsonPropertyName("acceleratorType")]
+    public string? AcceleratorType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeTemplateStatusAtProviderDisks
+{
+    /// <summary>Specifies the number of such disks.</summary>
+    [JsonPropertyName("diskCount")]
+    public double? DiskCount { get; set; }
+
+    /// <summary>Specifies the size of the disk in base-2 GB.</summary>
+    [JsonPropertyName("diskSizeGb")]
+    public double? DiskSizeGb { get; set; }
+
+    /// <summary>Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.</summary>
+    [JsonPropertyName("diskType")]
+    public string? DiskType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateStatusAtProviderNodeTypeFlexibility
 {
     /// <summary>Number of virtual CPUs to use.</summary>
@@ -284,6 +390,10 @@ public partial class V1beta1NodeTemplateStatusAtProviderServerBinding
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateStatusAtProvider
 {
+    /// <summary>List of the type and count of accelerator cards attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("accelerators")]
+    public IList<V1beta1NodeTemplateStatusAtProviderAccelerators>? Accelerators { get; set; }
+
     /// <summary>CPU overcommit. Default value is NONE. Possible values are: ENABLED, NONE.</summary>
     [JsonPropertyName("cpuOvercommitType")]
     public string? CpuOvercommitType { get; set; }
@@ -295,6 +405,10 @@ public partial class V1beta1NodeTemplateStatusAtProvider
     /// <summary>An optional textual description of the resource.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>List of the type, size and count of disks attached to the node template Structure is documented below.</summary>
+    [JsonPropertyName("disks")]
+    public IList<V1beta1NodeTemplateStatusAtProviderDisks>? Disks { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/nodeTemplates/{{name}}</summary>
     [JsonPropertyName("id")]

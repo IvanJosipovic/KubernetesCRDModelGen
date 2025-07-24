@@ -112,6 +112,15 @@ public partial class V1beta1ClusterSpecForProviderProxyConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
+{
+    /// <summary>Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Possible values are: VULNERABILITY_DISABLED, VULNERABILITY_ENTERPRISE.</summary>
+    [JsonPropertyName("vulnerabilityMode")]
+    public string? VulnerabilityMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
     /// <summary>Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix and name , separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
@@ -169,6 +178,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Support for proxy configuration. Structure is documented below.</summary>
     [JsonPropertyName("proxyConfig")]
     public IList<V1beta1ClusterSpecForProviderProxyConfig>? ProxyConfig { get; set; }
+
+    /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("securityPostureConfig")]
+    public IList<V1beta1ClusterSpecForProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -273,6 +286,15 @@ public partial class V1beta1ClusterSpecInitProviderProxyConfig
     public IList<V1beta1ClusterSpecInitProviderProxyConfigKubernetesSecret>? KubernetesSecret { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
+{
+    /// <summary>Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Possible values are: VULNERABILITY_DISABLED, VULNERABILITY_ENTERPRISE.</summary>
+    [JsonPropertyName("vulnerabilityMode")]
+    public string? VulnerabilityMode { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
@@ -328,6 +350,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Support for proxy configuration. Structure is documented below.</summary>
     [JsonPropertyName("proxyConfig")]
     public IList<V1beta1ClusterSpecInitProviderProxyConfig>? ProxyConfig { get; set; }
+
+    /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("securityPostureConfig")]
+    public IList<V1beta1ClusterSpecInitProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -579,6 +605,15 @@ public partial class V1beta1ClusterStatusAtProviderProxyConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
+{
+    /// <summary>Sets the mode of the Kubernetes security posture API's workload vulnerability scanning. Possible values are: VULNERABILITY_DISABLED, VULNERABILITY_ENTERPRISE.</summary>
+    [JsonPropertyName("vulnerabilityMode")]
+    public string? VulnerabilityMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderWorkloadIdentityConfig
 {
     /// <summary>The ID of the OIDC Identity Provider (IdP) associated to the Workload Identity Pool.</summary>
@@ -681,6 +716,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>If set, there are currently changes in flight to the cluster.</summary>
     [JsonPropertyName("reconciling")]
     public bool? Reconciling { get; set; }
+
+    /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("securityPostureConfig")]
+    public IList<V1beta1ClusterStatusAtProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
 
     /// <summary>The current state of the cluster. Possible values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING, STOPPING, ERROR, DEGRADED</summary>
     [JsonPropertyName("state")]

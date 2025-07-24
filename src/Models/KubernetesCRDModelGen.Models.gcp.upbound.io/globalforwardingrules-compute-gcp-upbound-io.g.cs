@@ -335,6 +335,14 @@ public partial class V1beta1GlobalForwardingRuleSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies the canary migration state for the backend buckets attached to this forwarding rule. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets attached to this forwarding rule by percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationState")]
+    public string? ExternalManagedBackendBucketMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests to backend buckets that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. This value can only be set if the loadBalancingScheme in the forwarding rule is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationTestingPercentage")]
+    public double? ExternalManagedBackendBucketMigrationTestingPercentage { get; set; }
+
     /// <summary>IP address for which this forwarding rule accepts traffic. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the referenced target. While creating a forwarding rule, specifying an IPAddress is required under the following circumstances:</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
@@ -378,6 +386,10 @@ public partial class V1beta1GlobalForwardingRuleSpecForProvider
     /// <summary>Selector for a Network in compute to populate network.</summary>
     [JsonPropertyName("networkSelector")]
     public V1beta1GlobalForwardingRuleSpecForProviderNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.</summary>
+    [JsonPropertyName("networkTier")]
+    public string? NetworkTier { get; set; }
 
     /// <summary>This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.</summary>
     [JsonPropertyName("noAutomateDnsZone")]
@@ -759,6 +771,14 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies the canary migration state for the backend buckets attached to this forwarding rule. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets attached to this forwarding rule by percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationState")]
+    public string? ExternalManagedBackendBucketMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests to backend buckets that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. This value can only be set if the loadBalancingScheme in the forwarding rule is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationTestingPercentage")]
+    public double? ExternalManagedBackendBucketMigrationTestingPercentage { get; set; }
+
     /// <summary>IP address for which this forwarding rule accepts traffic. When a client sends traffic to this IP address, the forwarding rule directs the traffic to the referenced target. While creating a forwarding rule, specifying an IPAddress is required under the following circumstances:</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
@@ -802,6 +822,10 @@ public partial class V1beta1GlobalForwardingRuleSpecInitProvider
     /// <summary>Selector for a Network in compute to populate network.</summary>
     [JsonPropertyName("networkSelector")]
     public V1beta1GlobalForwardingRuleSpecInitProviderNetworkSelector? NetworkSelector { get; set; }
+
+    /// <summary>This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.</summary>
+    [JsonPropertyName("networkTier")]
+    public string? NetworkTier { get; set; }
 
     /// <summary>This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.</summary>
     [JsonPropertyName("noAutomateDnsZone")]
@@ -1043,6 +1067,18 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProvider
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 
+    /// <summary>Specifies the canary migration state for the backend buckets attached to this forwarding rule. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic to backend buckets attached to this forwarding rule by percentage using externalManagedBackendBucketMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationState")]
+    public string? ExternalManagedBackendBucketMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests to backend buckets that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. This value can only be set if the loadBalancingScheme in the forwarding rule is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedBackendBucketMigrationTestingPercentage")]
+    public double? ExternalManagedBackendBucketMigrationTestingPercentage { get; set; }
+
+    /// <summary>The unique identifier number for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("forwardingRuleId")]
+    public double? ForwardingRuleId { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/global/forwardingRules/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -1078,6 +1114,10 @@ public partial class V1beta1GlobalForwardingRuleStatusAtProvider
     /// <summary>This field is not used for external load balancing. For Internal TCP/UDP Load Balancing, this field identifies the network that the load balanced IP should belong to for this Forwarding Rule. If the subnetwork is specified, the network of the subnetwork will be used. If neither subnetwork nor this field is specified, the default network will be used. For Private Service Connect forwarding rules that forward traffic to Google APIs, a network must be provided.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
+
+    /// <summary>This signifies the networking tier used for configuring this load balancer and can only take the following values: PREMIUM, STANDARD. For regional ForwardingRule, the valid values are PREMIUM and STANDARD. For GlobalForwardingRule, the valid value is PREMIUM. If this field is not specified, it is assumed to be PREMIUM. If IPAddress is specified, this value must be equal to the networkTier of the Address. Possible values are: PREMIUM, STANDARD.</summary>
+    [JsonPropertyName("networkTier")]
+    public string? NetworkTier { get; set; }
 
     /// <summary>This is used in PSC consumer ForwardingRule to control whether it should try to auto-generate a DNS zone or not. Non-PSC forwarding rules do not use this field.</summary>
     [JsonPropertyName("noAutomateDnsZone")]

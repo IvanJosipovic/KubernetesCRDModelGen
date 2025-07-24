@@ -101,6 +101,10 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthChecke
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -121,6 +125,62 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyGeo
     /// <summary>Same as rrdatas above.</summary>
     [JsonPropertyName("rrdatas")]
     public IList<string>? Rrdatas { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -160,6 +220,10 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBa
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -475,6 +539,10 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimary
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -538,6 +606,10 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthChecke
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -571,6 +643,18 @@ public partial class V1beta1RecordSetSpecForProviderRoutingPolicy
     /// <summary>The configuration for Geolocation based routing policy. Structure is document below.</summary>
     [JsonPropertyName("geo")]
     public IList<V1beta1RecordSetSpecForProviderRoutingPolicyGeo>? Geo { get; set; }
+
+    /// <summary>Specifies the health check (used with external endpoints).</summary>
+    [JsonPropertyName("healthCheck")]
+    public string? HealthCheck { get; set; }
+
+    /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
+    [JsonPropertyName("healthCheckRef")]
+    public V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckRef? HealthCheckRef { get; set; }
+
+    /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
+    [JsonPropertyName("healthCheckSelector")]
+    public V1beta1RecordSetSpecForProviderRoutingPolicyHealthCheckSelector? HealthCheckSelector { get; set; }
 
     /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy. Structure is document below.</summary>
     [JsonPropertyName("primaryBackup")]
@@ -715,6 +799,10 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheck
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -735,6 +823,62 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyGeo
     /// <summary>Same as rrdatas above.</summary>
     [JsonPropertyName("rrdatas")]
     public IList<string>? Rrdatas { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -774,6 +918,10 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupB
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1089,6 +1237,10 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimary
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1152,6 +1304,10 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheck
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1185,6 +1341,18 @@ public partial class V1beta1RecordSetSpecInitProviderRoutingPolicy
     /// <summary>The configuration for Geolocation based routing policy. Structure is document below.</summary>
     [JsonPropertyName("geo")]
     public IList<V1beta1RecordSetSpecInitProviderRoutingPolicyGeo>? Geo { get; set; }
+
+    /// <summary>Specifies the health check (used with external endpoints).</summary>
+    [JsonPropertyName("healthCheck")]
+    public string? HealthCheck { get; set; }
+
+    /// <summary>Reference to a HealthCheck in compute to populate healthCheck.</summary>
+    [JsonPropertyName("healthCheckRef")]
+    public V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckRef? HealthCheckRef { get; set; }
+
+    /// <summary>Selector for a HealthCheck in compute to populate healthCheck.</summary>
+    [JsonPropertyName("healthCheckSelector")]
+    public V1beta1RecordSetSpecInitProviderRoutingPolicyHealthCheckSelector? HealthCheckSelector { get; set; }
 
     /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy. Structure is document below.</summary>
     [JsonPropertyName("primaryBackup")]
@@ -1405,6 +1573,10 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheck
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1464,6 +1636,10 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupB
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupBackupGeoHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1523,6 +1699,10 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupPrimary
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyPrimaryBackupPrimaryInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1586,6 +1766,10 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheck
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheckedTargets
 {
+    /// <summary>The list of external endpoint addresses to health check.</summary>
+    [JsonPropertyName("externalEndpoints")]
+    public IList<string>? ExternalEndpoints { get; set; }
+
     /// <summary>The list of internal load balancers to health check. Structure is document below.</summary>
     [JsonPropertyName("internalLoadBalancers")]
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyWrrHealthCheckedTargetsInternalLoadBalancers>? InternalLoadBalancers { get; set; }
@@ -1619,6 +1803,10 @@ public partial class V1beta1RecordSetStatusAtProviderRoutingPolicy
     /// <summary>The configuration for Geolocation based routing policy. Structure is document below.</summary>
     [JsonPropertyName("geo")]
     public IList<V1beta1RecordSetStatusAtProviderRoutingPolicyGeo>? Geo { get; set; }
+
+    /// <summary>Specifies the health check (used with external endpoints).</summary>
+    [JsonPropertyName("healthCheck")]
+    public string? HealthCheck { get; set; }
 
     /// <summary>The configuration for a primary-backup policy with global to regional failover. Queries are responded to with the global primary targets, but if none of the primary targets are healthy, then we fallback to a regional failover policy. Structure is document below.</summary>
     [JsonPropertyName("primaryBackup")]

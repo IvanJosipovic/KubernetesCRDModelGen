@@ -351,7 +351,7 @@ public partial class V1beta1PageSpecForProviderEventHandlers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageSpecForProviderFormParametersAdvancedSettingsDtmfSettings
 {
-    /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -937,6 +937,420 @@ public partial class V1beta1PageSpecForProviderForm
     public IList<V1beta1PageSpecForProviderFormParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsDataStoreConnections
+{
+    /// <summary>The full name of the referenced data store. Formats: projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore} projects/{project}/locations/{location}/dataStores/{dataStore}</summary>
+    [JsonPropertyName("dataStore")]
+    public string? DataStore { get; set; }
+
+    /// <summary>The type of the connected data store.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>The document processing mode for the data store connection. Should only be set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy mode.</summary>
+    [JsonPropertyName("documentProcessingMode")]
+    public string? DocumentProcessingMode { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Page in dialogflowcx to populate targetPage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Page in dialogflowcx to populate targetPage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
+{
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Endpoint timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("endpointingTimeoutDuration")]
+    public string? EndpointingTimeoutDuration { get; set; }
+
+    /// <summary>The digit that terminates a DTMF digit sequence.</summary>
+    [JsonPropertyName("finishDigit")]
+    public string? FinishDigit { get; set; }
+
+    /// <summary>Interdigit timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("interdigitTimeoutDuration")]
+    public string? InterdigitTimeoutDuration { get; set; }
+
+    /// <summary>Max length of DTMF digits.</summary>
+    [JsonPropertyName("maxDigits")]
+    public double? MaxDigits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
+{
+    /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
+    [JsonPropertyName("dtmfSettings")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
+{
+    /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
+    [JsonPropertyName("cases")]
+    public string? Cases { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
+{
+    /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
+    [JsonPropertyName("ssml")]
+    public string? Ssml { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public string? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
+{
+    /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
+    [JsonPropertyName("audioUri")]
+    public string? AudioUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
+{
+    /// <summary>Transfer the call to a phone number in E.164 format.</summary>
+    [JsonPropertyName("phoneNumber")]
+    public string? PhoneNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
+{
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<string>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
+{
+    /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
+    [JsonPropertyName("channel")]
+    public string? Channel { get; set; }
+
+    /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example:</summary>
+    [JsonPropertyName("conversationSuccess")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess>? ConversationSuccess { get; set; }
+
+    /// <summary>This type has no fields. Represents info card response. If the response contains generative knowledge prediction, Dialogflow will return a payload with Infobot Messenger compatible info card. Otherwise, the info card response is skipped. This field is part of a union field message: Only one of text, payload, conversationSuccess, outputAudioText, liveAgentHandoff, endInteraction, playAudio, mixedAudio, telephonyTransferCall, or knowledgeInfoCard may be set.</summary>
+    [JsonPropertyName("knowledgeInfoCard")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard>? KnowledgeInfoCard { get; set; }
+
+    /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example:</summary>
+    [JsonPropertyName("liveAgentHandoff")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff>? LiveAgentHandoff { get; set; }
+
+    /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. Structure is documented below.</summary>
+    [JsonPropertyName("outputAudioText")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText>? OutputAudioText { get; set; }
+
+    /// <summary>A custom, platform-specific payload.</summary>
+    [JsonPropertyName("payload")]
+    public string? Payload { get; set; }
+
+    /// <summary>Specifies an audio clip to be played by the client as part of the response. Structure is documented below.</summary>
+    [JsonPropertyName("playAudio")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio>? PlayAudio { get; set; }
+
+    /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. Structure is documented below.</summary>
+    [JsonPropertyName("telephonyTransferCall")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall>? TelephonyTransferCall { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
+{
+    /// <summary>Display name of the parameter.</summary>
+    [JsonPropertyName("parameter")]
+    public string? Parameter { get; set; }
+
+    /// <summary>The new JSON-encoded value of the parameter. A null value clears the parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillment
+{
+    /// <summary>Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Overriding occurs at the sub-setting level. For example, the playbackInterruptionSettings at fulfillment level only overrides the playbackInterruptionSettings at the agent level, leaving other settings at the agent level unchanged. DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
+    [JsonPropertyName("advancedSettings")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings>? AdvancedSettings { get; set; }
+
+    /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("conditionalCases")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases>? ConditionalCases { get; set; }
+
+    /// <summary>If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation fails, the defined responses in the fulfillment will be respected. This flag is only useful for fulfillments associated with no-match event handlers.</summary>
+    [JsonPropertyName("enableGenerativeFallback")]
+    public bool? EnableGenerativeFallback { get; set; }
+
+    /// <summary>The list of rich message responses to present to the user. Structure is documented below.</summary>
+    [JsonPropertyName("messages")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages>? Messages { get; set; }
+
+    /// <summary>Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.</summary>
+    [JsonPropertyName("returnPartialResponses")]
+    public bool? ReturnPartialResponses { get; set; }
+
+    /// <summary>Set parameter values before executing the webhook. Structure is documented below.</summary>
+    [JsonPropertyName("setParameterActions")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions>? SetParameterActions { get; set; }
+
+    /// <summary>The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.</summary>
+    [JsonPropertyName("tag")]
+    public string? Tag { get; set; }
+
+    /// <summary>The webhook to call. Format: projects//locations//agents//webhooks/.</summary>
+    [JsonPropertyName("webhook")]
+    public string? Webhook { get; set; }
+
+    /// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
+    [JsonPropertyName("webhookRef")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef? WebhookRef { get; set; }
+
+    /// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
+    [JsonPropertyName("webhookSelector")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector? WebhookSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecForProviderKnowledgeConnectorSettings
+{
+    /// <summary>Optional. List of related data store connections. Structure is documented below.</summary>
+    [JsonPropertyName("dataStoreConnections")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsDataStoreConnections>? DataStoreConnections { get; set; }
+
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The target flow to transition to. Format: projects//locations//agents//flows/. This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetFlow")]
+    public string? TargetFlow { get; set; }
+
+    /// <summary>The target page to transition to. Format: projects//locations//agents//flows//pages/. The page must be in the same host flow (the flow that owns this KnowledgeConnectorSettings). This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetPage")]
+    public string? TargetPage { get; set; }
+
+    /// <summary>Reference to a Page in dialogflowcx to populate targetPage.</summary>
+    [JsonPropertyName("targetPageRef")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageRef? TargetPageRef { get; set; }
+
+    /// <summary>Selector for a Page in dialogflowcx to populate targetPage.</summary>
+    [JsonPropertyName("targetPageSelector")]
+    public V1beta1PageSpecForProviderKnowledgeConnectorSettingsTargetPageSelector? TargetPageSelector { get; set; }
+
+    /// <summary>The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by Dialogflow, you can utitlize the request scoped parameter $request.knowledge.answers (contains up to the 5 highest confidence answers) and $request.knowledge.questions (contains the corresponding questions) to construct the fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("triggerFulfillment")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageSpecForProviderParentRefPolicy
@@ -1251,6 +1665,10 @@ public partial class V1beta1PageSpecForProvider
     /// <summary>The form associated with the page, used for collecting parameters relevant to the page. Structure is documented below.</summary>
     [JsonPropertyName("form")]
     public IList<V1beta1PageSpecForProviderForm>? Form { get; set; }
+
+    /// <summary>Knowledge connector configuration. Structure is documented below.</summary>
+    [JsonPropertyName("knowledgeConnectorSettings")]
+    public IList<V1beta1PageSpecForProviderKnowledgeConnectorSettings>? KnowledgeConnectorSettings { get; set; }
 
     /// <summary>The language of the following fields in page: Page.entry_fulfillment.messages Page.entry_fulfillment.conditional_cases Page.event_handlers.trigger_fulfillment.messages Page.event_handlers.trigger_fulfillment.conditional_cases Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases Page.form.parameters.fill_behavior.reprompt_event_handlers.messages Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases Page.transition_routes.trigger_fulfillment.messages Page.transition_routes.trigger_fulfillment.conditional_cases If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.</summary>
     [JsonPropertyName("languageCode")]
@@ -1620,7 +2038,7 @@ public partial class V1beta1PageSpecInitProviderEventHandlers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageSpecInitProviderFormParametersAdvancedSettingsDtmfSettings
 {
-    /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -2206,6 +2624,420 @@ public partial class V1beta1PageSpecInitProviderForm
     public IList<V1beta1PageSpecInitProviderFormParameters>? Parameters { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsDataStoreConnections
+{
+    /// <summary>The full name of the referenced data store. Formats: projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore} projects/{project}/locations/{location}/dataStores/{dataStore}</summary>
+    [JsonPropertyName("dataStore")]
+    public string? DataStore { get; set; }
+
+    /// <summary>The type of the connected data store.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>The document processing mode for the data store connection. Should only be set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy mode.</summary>
+    [JsonPropertyName("documentProcessingMode")]
+    public string? DocumentProcessingMode { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Page in dialogflowcx to populate targetPage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Page in dialogflowcx to populate targetPage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
+{
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Endpoint timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("endpointingTimeoutDuration")]
+    public string? EndpointingTimeoutDuration { get; set; }
+
+    /// <summary>The digit that terminates a DTMF digit sequence.</summary>
+    [JsonPropertyName("finishDigit")]
+    public string? FinishDigit { get; set; }
+
+    /// <summary>Interdigit timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("interdigitTimeoutDuration")]
+    public string? InterdigitTimeoutDuration { get; set; }
+
+    /// <summary>Max length of DTMF digits.</summary>
+    [JsonPropertyName("maxDigits")]
+    public double? MaxDigits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
+{
+    /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
+    [JsonPropertyName("dtmfSettings")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
+{
+    /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
+    [JsonPropertyName("cases")]
+    public string? Cases { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
+{
+    /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
+    [JsonPropertyName("ssml")]
+    public string? Ssml { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public string? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
+{
+    /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
+    [JsonPropertyName("audioUri")]
+    public string? AudioUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
+{
+    /// <summary>Transfer the call to a phone number in E.164 format.</summary>
+    [JsonPropertyName("phoneNumber")]
+    public string? PhoneNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
+{
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<string>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
+{
+    /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
+    [JsonPropertyName("channel")]
+    public string? Channel { get; set; }
+
+    /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example:</summary>
+    [JsonPropertyName("conversationSuccess")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess>? ConversationSuccess { get; set; }
+
+    /// <summary>This type has no fields. Represents info card response. If the response contains generative knowledge prediction, Dialogflow will return a payload with Infobot Messenger compatible info card. Otherwise, the info card response is skipped. This field is part of a union field message: Only one of text, payload, conversationSuccess, outputAudioText, liveAgentHandoff, endInteraction, playAudio, mixedAudio, telephonyTransferCall, or knowledgeInfoCard may be set.</summary>
+    [JsonPropertyName("knowledgeInfoCard")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard>? KnowledgeInfoCard { get; set; }
+
+    /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example:</summary>
+    [JsonPropertyName("liveAgentHandoff")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff>? LiveAgentHandoff { get; set; }
+
+    /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. Structure is documented below.</summary>
+    [JsonPropertyName("outputAudioText")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText>? OutputAudioText { get; set; }
+
+    /// <summary>A custom, platform-specific payload.</summary>
+    [JsonPropertyName("payload")]
+    public string? Payload { get; set; }
+
+    /// <summary>Specifies an audio clip to be played by the client as part of the response. Structure is documented below.</summary>
+    [JsonPropertyName("playAudio")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio>? PlayAudio { get; set; }
+
+    /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. Structure is documented below.</summary>
+    [JsonPropertyName("telephonyTransferCall")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall>? TelephonyTransferCall { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
+{
+    /// <summary>Display name of the parameter.</summary>
+    [JsonPropertyName("parameter")]
+    public string? Parameter { get; set; }
+
+    /// <summary>The new JSON-encoded value of the parameter. A null value clears the parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillment
+{
+    /// <summary>Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Overriding occurs at the sub-setting level. For example, the playbackInterruptionSettings at fulfillment level only overrides the playbackInterruptionSettings at the agent level, leaving other settings at the agent level unchanged. DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
+    [JsonPropertyName("advancedSettings")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings>? AdvancedSettings { get; set; }
+
+    /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("conditionalCases")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases>? ConditionalCases { get; set; }
+
+    /// <summary>If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation fails, the defined responses in the fulfillment will be respected. This flag is only useful for fulfillments associated with no-match event handlers.</summary>
+    [JsonPropertyName("enableGenerativeFallback")]
+    public bool? EnableGenerativeFallback { get; set; }
+
+    /// <summary>The list of rich message responses to present to the user. Structure is documented below.</summary>
+    [JsonPropertyName("messages")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages>? Messages { get; set; }
+
+    /// <summary>Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.</summary>
+    [JsonPropertyName("returnPartialResponses")]
+    public bool? ReturnPartialResponses { get; set; }
+
+    /// <summary>Set parameter values before executing the webhook. Structure is documented below.</summary>
+    [JsonPropertyName("setParameterActions")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions>? SetParameterActions { get; set; }
+
+    /// <summary>The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.</summary>
+    [JsonPropertyName("tag")]
+    public string? Tag { get; set; }
+
+    /// <summary>The webhook to call. Format: projects//locations//agents//webhooks/.</summary>
+    [JsonPropertyName("webhook")]
+    public string? Webhook { get; set; }
+
+    /// <summary>Reference to a Webhook in dialogflowcx to populate webhook.</summary>
+    [JsonPropertyName("webhookRef")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookRef? WebhookRef { get; set; }
+
+    /// <summary>Selector for a Webhook in dialogflowcx to populate webhook.</summary>
+    [JsonPropertyName("webhookSelector")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillmentWebhookSelector? WebhookSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageSpecInitProviderKnowledgeConnectorSettings
+{
+    /// <summary>Optional. List of related data store connections. Structure is documented below.</summary>
+    [JsonPropertyName("dataStoreConnections")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsDataStoreConnections>? DataStoreConnections { get; set; }
+
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The target flow to transition to. Format: projects//locations//agents//flows/. This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetFlow")]
+    public string? TargetFlow { get; set; }
+
+    /// <summary>The target page to transition to. Format: projects//locations//agents//flows//pages/. The page must be in the same host flow (the flow that owns this KnowledgeConnectorSettings). This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetPage")]
+    public string? TargetPage { get; set; }
+
+    /// <summary>Reference to a Page in dialogflowcx to populate targetPage.</summary>
+    [JsonPropertyName("targetPageRef")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageRef? TargetPageRef { get; set; }
+
+    /// <summary>Selector for a Page in dialogflowcx to populate targetPage.</summary>
+    [JsonPropertyName("targetPageSelector")]
+    public V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTargetPageSelector? TargetPageSelector { get; set; }
+
+    /// <summary>The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by Dialogflow, you can utitlize the request scoped parameter $request.knowledge.answers (contains up to the 5 highest confidence answers) and $request.knowledge.questions (contains the corresponding questions) to construct the fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("triggerFulfillment")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageSpecInitProviderParentRefPolicy
@@ -2520,6 +3352,10 @@ public partial class V1beta1PageSpecInitProvider
     /// <summary>The form associated with the page, used for collecting parameters relevant to the page. Structure is documented below.</summary>
     [JsonPropertyName("form")]
     public IList<V1beta1PageSpecInitProviderForm>? Form { get; set; }
+
+    /// <summary>Knowledge connector configuration. Structure is documented below.</summary>
+    [JsonPropertyName("knowledgeConnectorSettings")]
+    public IList<V1beta1PageSpecInitProviderKnowledgeConnectorSettings>? KnowledgeConnectorSettings { get; set; }
 
     /// <summary>The language of the following fields in page: Page.entry_fulfillment.messages Page.entry_fulfillment.conditional_cases Page.event_handlers.trigger_fulfillment.messages Page.event_handlers.trigger_fulfillment.conditional_cases Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases Page.form.parameters.fill_behavior.reprompt_event_handlers.messages Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases Page.transition_routes.trigger_fulfillment.messages Page.transition_routes.trigger_fulfillment.conditional_cases If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.</summary>
     [JsonPropertyName("languageCode")]
@@ -3049,7 +3885,7 @@ public partial class V1beta1PageStatusAtProviderEventHandlers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageStatusAtProviderFormParametersAdvancedSettingsDtmfSettings
 {
-    /// <summary>If true, incoming audio is processed for DTMF (dual tone multi frequency) events. For example, if the caller presses a button on their telephone keypad and DTMF processing is enabled, Dialogflow will detect the event (e.g. a "3" was pressed) in the incoming audio and pass the event to the bot to drive business logic (e.g. when 3 is pressed, return the account balance).</summary>
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -3473,6 +4309,344 @@ public partial class V1beta1PageStatusAtProviderForm
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsDataStoreConnections
+{
+    /// <summary>The full name of the referenced data store. Formats: projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore} projects/{project}/locations/{location}/dataStores/{dataStore}</summary>
+    [JsonPropertyName("dataStore")]
+    public string? DataStore { get; set; }
+
+    /// <summary>The type of the connected data store.</summary>
+    [JsonPropertyName("dataStoreType")]
+    public string? DataStoreType { get; set; }
+
+    /// <summary>The document processing mode for the data store connection. Should only be set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy mode.</summary>
+    [JsonPropertyName("documentProcessingMode")]
+    public string? DocumentProcessingMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings
+{
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Endpoint timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("endpointingTimeoutDuration")]
+    public string? EndpointingTimeoutDuration { get; set; }
+
+    /// <summary>The digit that terminates a DTMF digit sequence.</summary>
+    [JsonPropertyName("finishDigit")]
+    public string? FinishDigit { get; set; }
+
+    /// <summary>Interdigit timeout setting for matching dtmf input to regex. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("interdigitTimeoutDuration")]
+    public string? InterdigitTimeoutDuration { get; set; }
+
+    /// <summary>Max length of DTMF digits.</summary>
+    [JsonPropertyName("maxDigits")]
+    public double? MaxDigits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings
+{
+    /// <summary>Enables consent-based end-user input redaction, if true, a pre-defined session parameter $session.params.conversation-redaction will be used to determine if the utterance should be redacted.</summary>
+    [JsonPropertyName("enableConsentBasedRedaction")]
+    public bool? EnableConsentBasedRedaction { get; set; }
+
+    /// <summary>Enables DF Interaction logging.</summary>
+    [JsonPropertyName("enableInteractionLogging")]
+    public bool? EnableInteractionLogging { get; set; }
+
+    /// <summary>Enables Google Cloud Logging.</summary>
+    [JsonPropertyName("enableStackdriverLogging")]
+    public bool? EnableStackdriverLogging { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings
+{
+    /// <summary>Sensitivity of the speech model that detects the end of speech. Scale from 0 to 100.</summary>
+    [JsonPropertyName("endpointerSensitivity")]
+    public double? EndpointerSensitivity { get; set; }
+
+    /// <summary>Mapping from language to Speech-to-Text model. The mapped Speech-to-Text model will be selected for requests from its corresponding language. For more information, see Speech models. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.</summary>
+    [JsonPropertyName("models")]
+    public IDictionary<string, string>? Models { get; set; }
+
+    /// <summary>Timeout before detecting no speech. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.500s".</summary>
+    [JsonPropertyName("noSpeechTimeout")]
+    public string? NoSpeechTimeout { get; set; }
+
+    /// <summary>Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.</summary>
+    [JsonPropertyName("useTimeoutBasedEndpointing")]
+    public bool? UseTimeoutBasedEndpointing { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings
+{
+    /// <summary>Define behaviors for DTMF (dual tone multi frequency). DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Exposed at the following levels:</summary>
+    [JsonPropertyName("dtmfSettings")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsDtmfSettings>? DtmfSettings { get; set; }
+
+    /// <summary>Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels:</summary>
+    [JsonPropertyName("loggingSettings")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsLoggingSettings>? LoggingSettings { get; set; }
+
+    /// <summary>Settings for speech to text detection. Exposed at the following levels:</summary>
+    [JsonPropertyName("speechSettings")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettingsSpeechSettings>? SpeechSettings { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases
+{
+    /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
+    [JsonPropertyName("cases")]
+    public string? Cases { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard
+{
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff
+{
+    /// <summary>Custom metadata. Dialogflow doesn't impose any structure on this.</summary>
+    [JsonPropertyName("metadata")]
+    public string? Metadata { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments
+{
+    /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
+    [JsonPropertyName("allowPlaybackInterruption")]
+    public bool? AllowPlaybackInterruption { get; set; }
+
+    /// <summary>Raw audio synthesized from the Dialogflow agent's response using the output config specified in the request. A base64-encoded string. This field is part of a union field content: Only one of audio or uri may be set.</summary>
+    [JsonPropertyName("audio")]
+    public string? Audio { get; set; }
+
+    /// <summary>Client-specific URI that points to an audio clip accessible to the client. Dialogflow does not impose any validation on it. This field is part of a union field content: Only one of audio or uri may be set.</summary>
+    [JsonPropertyName("uri")]
+    public string? Uri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio
+{
+    /// <summary>Segments this audio response is composed of. Structure is documented below.</summary>
+    [JsonPropertyName("segments")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudioSegments>? Segments { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText
+{
+    /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
+    [JsonPropertyName("allowPlaybackInterruption")]
+    public bool? AllowPlaybackInterruption { get; set; }
+
+    /// <summary>The SSML text to be synthesized. For more information, see SSML.</summary>
+    [JsonPropertyName("ssml")]
+    public string? Ssml { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public string? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio
+{
+    /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
+    [JsonPropertyName("allowPlaybackInterruption")]
+    public bool? AllowPlaybackInterruption { get; set; }
+
+    /// <summary>URI of the audio clip. Dialogflow does not impose any validation on this value. It is specific to the client that reads it.</summary>
+    [JsonPropertyName("audioUri")]
+    public string? AudioUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall
+{
+    /// <summary>Transfer the call to a phone number in E.164 format.</summary>
+    [JsonPropertyName("phoneNumber")]
+    public string? PhoneNumber { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText
+{
+    /// <summary>(Output) Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.</summary>
+    [JsonPropertyName("allowPlaybackInterruption")]
+    public bool? AllowPlaybackInterruption { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<string>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages
+{
+    /// <summary>The channel which the response is associated with. Clients can specify the channel via QueryParameters.channel, and only associated channel response will be returned.</summary>
+    [JsonPropertyName("channel")]
+    public string? Channel { get; set; }
+
+    /// <summary>Indicates that the conversation succeeded, i.e., the bot handled the issue that the customer talked to it about. Dialogflow only uses this to determine which conversations should be counted as successful and doesn't process the metadata in this message in any way. Note that Dialogflow also considers conversations that get to the conversation end page as successful even if they don't return ConversationSuccess. You may set this, for example:</summary>
+    [JsonPropertyName("conversationSuccess")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesConversationSuccess>? ConversationSuccess { get; set; }
+
+    /// <summary>(Output) This type has no fields. Indicates that interaction with the Dialogflow agent has ended. This message is generated by Dialogflow only and not supposed to be defined by the user. This field is part of a union field message: Only one of text, payload, conversationSuccess, outputAudioText, liveAgentHandoff, endInteraction, playAudio, mixedAudio, telephonyTransferCall, or knowledgeInfoCard may be set.</summary>
+    [JsonPropertyName("endInteraction")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesEndInteraction>? EndInteraction { get; set; }
+
+    /// <summary>This type has no fields. Represents info card response. If the response contains generative knowledge prediction, Dialogflow will return a payload with Infobot Messenger compatible info card. Otherwise, the info card response is skipped. This field is part of a union field message: Only one of text, payload, conversationSuccess, outputAudioText, liveAgentHandoff, endInteraction, playAudio, mixedAudio, telephonyTransferCall, or knowledgeInfoCard may be set.</summary>
+    [JsonPropertyName("knowledgeInfoCard")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesKnowledgeInfoCard>? KnowledgeInfoCard { get; set; }
+
+    /// <summary>Indicates that the conversation should be handed off to a live agent. Dialogflow only uses this to determine which conversations were handed off to a human agent for measurement purposes. What else to do with this signal is up to you and your handoff procedures. You may set this, for example:</summary>
+    [JsonPropertyName("liveAgentHandoff")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesLiveAgentHandoff>? LiveAgentHandoff { get; set; }
+
+    /// <summary>(Output) Represents an audio message that is composed of both segments synthesized from the Dialogflow agent prompts and ones hosted externally at the specified URIs. The external URIs are specified via playAudio. This message is generated by Dialogflow only and not supposed to be defined by the user. This field is part of a union field message: Only one of text, payload, conversationSuccess, outputAudioText, liveAgentHandoff, endInteraction, playAudio, mixedAudio, telephonyTransferCall, or knowledgeInfoCard may be set. Structure is documented below.</summary>
+    [JsonPropertyName("mixedAudio")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesMixedAudio>? MixedAudio { get; set; }
+
+    /// <summary>A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message. Structure is documented below.</summary>
+    [JsonPropertyName("outputAudioText")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesOutputAudioText>? OutputAudioText { get; set; }
+
+    /// <summary>A custom, platform-specific payload.</summary>
+    [JsonPropertyName("payload")]
+    public string? Payload { get; set; }
+
+    /// <summary>Specifies an audio clip to be played by the client as part of the response. Structure is documented below.</summary>
+    [JsonPropertyName("playAudio")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesPlayAudio>? PlayAudio { get; set; }
+
+    /// <summary>Represents the signal that telles the client to transfer the phone call connected to the agent to a third-party endpoint. Structure is documented below.</summary>
+    [JsonPropertyName("telephonyTransferCall")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesTelephonyTransferCall>? TelephonyTransferCall { get; set; }
+
+    /// <summary>A collection of text responses.</summary>
+    [JsonPropertyName("text")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessagesText>? Text { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions
+{
+    /// <summary>Display name of the parameter.</summary>
+    [JsonPropertyName("parameter")]
+    public string? Parameter { get; set; }
+
+    /// <summary>The new JSON-encoded value of the parameter. A null value clears the parameter.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillment
+{
+    /// <summary>Hierarchical advanced settings for agent/flow/page/fulfillment/parameter. Settings exposed at lower level overrides the settings exposed at higher level. Overriding occurs at the sub-setting level. For example, the playbackInterruptionSettings at fulfillment level only overrides the playbackInterruptionSettings at the agent level, leaving other settings at the agent level unchanged. DTMF settings does not override each other. DTMF settings set at different levels define DTMF detections running in parallel. Hierarchy: Agent-&gt;Flow-&gt;Page-&gt;Fulfillment/Parameter. Structure is documented below.</summary>
+    [JsonPropertyName("advancedSettings")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentAdvancedSettings>? AdvancedSettings { get; set; }
+
+    /// <summary>Conditional cases for this fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("conditionalCases")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentConditionalCases>? ConditionalCases { get; set; }
+
+    /// <summary>If the flag is true, the agent will utilize LLM to generate a text response. If LLM generation fails, the defined responses in the fulfillment will be respected. This flag is only useful for fulfillments associated with no-match event handlers.</summary>
+    [JsonPropertyName("enableGenerativeFallback")]
+    public bool? EnableGenerativeFallback { get; set; }
+
+    /// <summary>The list of rich message responses to present to the user. Structure is documented below.</summary>
+    [JsonPropertyName("messages")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentMessages>? Messages { get; set; }
+
+    /// <summary>Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.</summary>
+    [JsonPropertyName("returnPartialResponses")]
+    public bool? ReturnPartialResponses { get; set; }
+
+    /// <summary>Set parameter values before executing the webhook. Structure is documented below.</summary>
+    [JsonPropertyName("setParameterActions")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillmentSetParameterActions>? SetParameterActions { get; set; }
+
+    /// <summary>The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.</summary>
+    [JsonPropertyName("tag")]
+    public string? Tag { get; set; }
+
+    /// <summary>The webhook to call. Format: projects//locations//agents//webhooks/.</summary>
+    [JsonPropertyName("webhook")]
+    public string? Webhook { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1PageStatusAtProviderKnowledgeConnectorSettings
+{
+    /// <summary>Optional. List of related data store connections. Structure is documented below.</summary>
+    [JsonPropertyName("dataStoreConnections")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsDataStoreConnections>? DataStoreConnections { get; set; }
+
+    /// <summary>Whether Knowledge Connector is enabled or not.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The target flow to transition to. Format: projects//locations//agents//flows/. This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetFlow")]
+    public string? TargetFlow { get; set; }
+
+    /// <summary>The target page to transition to. Format: projects//locations//agents//flows//pages/. The page must be in the same host flow (the flow that owns this KnowledgeConnectorSettings). This field is part of a union field target: Only one of targetPage or targetFlow may be set.</summary>
+    [JsonPropertyName("targetPage")]
+    public string? TargetPage { get; set; }
+
+    /// <summary>The fulfillment to be triggered. When the answers from the Knowledge Connector are selected by Dialogflow, you can utitlize the request scoped parameter $request.knowledge.answers (contains up to the 5 highest confidence answers) and $request.knowledge.questions (contains the corresponding questions) to construct the fulfillment. Structure is documented below.</summary>
+    [JsonPropertyName("triggerFulfillment")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettingsTriggerFulfillment>? TriggerFulfillment { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PageStatusAtProviderTransitionRoutesTriggerFulfillmentConditionalCases
 {
     /// <summary>A JSON encoded list of cascading if-else conditions. Cases are mutually exclusive. The first one with a matching condition is selected, all the rest ignored. See Case for the schema.</summary>
@@ -3685,6 +4859,10 @@ public partial class V1beta1PageStatusAtProvider
     /// <summary>an identifier for the resource with format {{parent}}/pages/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Knowledge connector configuration. Structure is documented below.</summary>
+    [JsonPropertyName("knowledgeConnectorSettings")]
+    public IList<V1beta1PageStatusAtProviderKnowledgeConnectorSettings>? KnowledgeConnectorSettings { get; set; }
 
     /// <summary>The language of the following fields in page: Page.entry_fulfillment.messages Page.entry_fulfillment.conditional_cases Page.event_handlers.trigger_fulfillment.messages Page.event_handlers.trigger_fulfillment.conditional_cases Page.form.parameters.fill_behavior.initial_prompt_fulfillment.messages Page.form.parameters.fill_behavior.initial_prompt_fulfillment.conditional_cases Page.form.parameters.fill_behavior.reprompt_event_handlers.messages Page.form.parameters.fill_behavior.reprompt_event_handlers.conditional_cases Page.transition_routes.trigger_fulfillment.messages Page.transition_routes.trigger_fulfillment.conditional_cases If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.</summary>
     [JsonPropertyName("languageCode")]

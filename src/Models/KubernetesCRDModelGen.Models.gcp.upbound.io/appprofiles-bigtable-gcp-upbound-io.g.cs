@@ -135,6 +135,10 @@ public partial class V1beta1AppProfileSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("rowAffinity")]
+    public bool? RowAffinity { get; set; }
+
     /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
     [JsonPropertyName("singleClusterRouting")]
     public IList<V1beta1AppProfileSpecForProviderSingleClusterRouting>? SingleClusterRouting { get; set; }
@@ -202,6 +206,10 @@ public partial class V1beta1AppProfileSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("rowAffinity")]
+    public bool? RowAffinity { get; set; }
 
     /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
     [JsonPropertyName("singleClusterRouting")]
@@ -414,6 +422,10 @@ public partial class V1beta1AppProfileStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("rowAffinity")]
+    public bool? RowAffinity { get; set; }
 
     /// <summary>Use a single-cluster routing policy. Structure is documented below.</summary>
     [JsonPropertyName("singleClusterRouting")]

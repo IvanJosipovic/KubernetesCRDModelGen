@@ -20,7 +20,7 @@ public partial class V1beta1GoogleChannelConfigSpecForProvider
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
@@ -33,7 +33,7 @@ public partial class V1beta1GoogleChannelConfigSpecInitProvider
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 }
@@ -186,7 +186,7 @@ public partial class V1beta1GoogleChannelConfigStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 

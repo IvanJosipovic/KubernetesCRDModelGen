@@ -8,6 +8,28 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.upbound.io;
+/// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantSpecForProviderClientPermissions
+{
+    /// <summary>When true, end users cannot delete their account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserDeletion")]
+    public bool? DisabledUserDeletion { get; set; }
+
+    /// <summary>When true, end users cannot sign up for a new account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserSignup")]
+    public bool? DisabledUserSignup { get; set; }
+}
+
+/// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantSpecForProviderClient
+{
+    /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+    [JsonPropertyName("permissions")]
+    public V1beta1TenantSpecForProviderClientPermissions? Permissions { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantSpecForProvider
@@ -15,6 +37,10 @@ public partial class V1beta1TenantSpecForProvider
     /// <summary>Whether to allow email/password user authentication.</summary>
     [JsonPropertyName("allowPasswordSignup")]
     public bool? AllowPasswordSignup { get; set; }
+
+    /// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+    [JsonPropertyName("client")]
+    public V1beta1TenantSpecForProviderClient? Client { get; set; }
 
     /// <summary>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to sign-in. Admins of the disabled tenant are not able to manage its users.</summary>
     [JsonPropertyName("disableAuth")]
@@ -33,6 +59,28 @@ public partial class V1beta1TenantSpecForProvider
     public string? Project { get; set; }
 }
 
+/// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantSpecInitProviderClientPermissions
+{
+    /// <summary>When true, end users cannot delete their account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserDeletion")]
+    public bool? DisabledUserDeletion { get; set; }
+
+    /// <summary>When true, end users cannot sign up for a new account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserSignup")]
+    public bool? DisabledUserSignup { get; set; }
+}
+
+/// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantSpecInitProviderClient
+{
+    /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+    [JsonPropertyName("permissions")]
+    public V1beta1TenantSpecInitProviderClientPermissions? Permissions { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantSpecInitProvider
@@ -40,6 +88,10 @@ public partial class V1beta1TenantSpecInitProvider
     /// <summary>Whether to allow email/password user authentication.</summary>
     [JsonPropertyName("allowPasswordSignup")]
     public bool? AllowPasswordSignup { get; set; }
+
+    /// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+    [JsonPropertyName("client")]
+    public V1beta1TenantSpecInitProviderClient? Client { get; set; }
 
     /// <summary>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to sign-in. Admins of the disabled tenant are not able to manage its users.</summary>
     [JsonPropertyName("disableAuth")]
@@ -190,6 +242,28 @@ public partial class V1beta1TenantSpec
     public V1beta1TenantSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantStatusAtProviderClientPermissions
+{
+    /// <summary>When true, end users cannot delete their account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserDeletion")]
+    public bool? DisabledUserDeletion { get; set; }
+
+    /// <summary>When true, end users cannot sign up for a new account on the associated project through any of our API methods.</summary>
+    [JsonPropertyName("disabledUserSignup")]
+    public bool? DisabledUserSignup { get; set; }
+}
+
+/// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1TenantStatusAtProviderClient
+{
+    /// <summary>Configuration related to restricting a user's ability to affect their account. Structure is documented below.</summary>
+    [JsonPropertyName("permissions")]
+    public V1beta1TenantStatusAtProviderClientPermissions? Permissions { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantStatusAtProvider
@@ -197,6 +271,10 @@ public partial class V1beta1TenantStatusAtProvider
     /// <summary>Whether to allow email/password user authentication.</summary>
     [JsonPropertyName("allowPasswordSignup")]
     public bool? AllowPasswordSignup { get; set; }
+
+    /// <summary>Options related to how clients making requests on behalf of a tenant should be configured. Structure is documented below.</summary>
+    [JsonPropertyName("client")]
+    public V1beta1TenantStatusAtProviderClient? Client { get; set; }
 
     /// <summary>Whether authentication is disabled for the tenant. If true, the users under the disabled tenant are not allowed to sign-in. Admins of the disabled tenant are not able to manage its users.</summary>
     [JsonPropertyName("disableAuth")]

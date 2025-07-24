@@ -71,6 +71,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -135,6 +139,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgr
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -148,6 +156,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterSpecForProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -217,6 +229,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIn
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -230,6 +246,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderSpecIngressPolicies
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterSpecForProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -345,6 +365,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -409,6 +433,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesE
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -422,6 +450,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterSpecForProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -555,6 +587,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -568,6 +604,10 @@ public partial class V1beta1ServicePerimeterSpecForProviderStatusIngressPolicies
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterSpecForProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -720,6 +760,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -784,6 +828,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEg
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -797,6 +845,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -866,6 +918,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesI
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -879,6 +935,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderSpecIngressPolicies
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterSpecInitProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -994,6 +1054,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -1058,6 +1122,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1071,6 +1139,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1204,6 +1276,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1217,6 +1293,10 @@ public partial class V1beta1ServicePerimeterSpecInitProviderStatusIngressPolicie
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterSpecInitProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -1445,6 +1525,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -1509,6 +1593,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEg
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1522,6 +1610,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -1591,6 +1683,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesI
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1604,6 +1700,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderSpecIngressPolicies
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterStatusAtProviderSpecIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -1655,6 +1755,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     /// <summary>An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example accessPolicies/MY_POLICY/accessLevels/MY_LEVEL. If * is specified, then all IngressSources will be allowed.</summary>
     [JsonPropertyName("accessLevel")]
     public string? AccessLevel { get; set; }
+
+    /// <summary>A Google Cloud resource that is allowed to ingress the perimeter. Requests from these resources will be allowed to access perimeter data. Currently only projects and VPCs are allowed. Project format: projects/{projectNumber} VPC network format: //compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}. The project may be in any Google Cloud organization, not just the organization that the perimeter is defined in. * is not allowed, the case of allowing all Google Cloud resources only is not supported.</summary>
+    [JsonPropertyName("resource")]
+    public string? Resource { get; set; }
 }
 
 /// <summary></summary>
@@ -1719,6 +1823,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1732,6 +1840,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusEgressPolicies
     /// <summary>Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("egressTo")]
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusEgressPoliciesEgressTo>? EgressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>
@@ -1801,6 +1913,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     /// <summary>A list of GCP resources that are inside of the service perimeter. Currently only projects are allowed. Format: projects/{project_number}</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
+
+    /// <summary>A list of IAM roles that represent the set of operations that the sources specified in the corresponding IngressFrom are allowed to perform.</summary>
+    [JsonPropertyName("roles")]
+    public IList<string>? Roles { get; set; }
 }
 
 /// <summary></summary>
@@ -1814,6 +1930,10 @@ public partial class V1beta1ServicePerimeterStatusAtProviderStatusIngressPolicie
     /// <summary>Defines the conditions on the ApiOperation and request destination that cause this IngressPolicy to apply. Structure is documented below.</summary>
     [JsonPropertyName("ingressTo")]
     public IList<V1beta1ServicePerimeterStatusAtProviderStatusIngressPoliciesIngressTo>? IngressTo { get; set; }
+
+    /// <summary>Human readable title. Must be unique within the Policy.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary></summary>

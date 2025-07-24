@@ -8,6 +8,23 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecForProviderBackendCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Optional parameter to define a target utilization for the Custom Metrics balancing mode. The valid range is [0.0, 1.0].</summary>
+    [JsonPropertyName("maxUtilization")]
+    public double? MaxUtilization { get; set; }
+
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProviderBackendGroupRefPolicy
@@ -68,13 +85,17 @@ public partial class V1beta1BackendServiceSpecForProviderBackendGroupSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProviderBackend
 {
-    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
+    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)), CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.</summary>
     [JsonPropertyName("balancingMode")]
     public string? BalancingMode { get; set; }
 
     /// <summary>A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0].</summary>
     [JsonPropertyName("capacityScaler")]
     public double? CapacityScaler { get; set; }
+
+    /// <summary>The set of custom metrics that are used for CUSTOM_METRICS BalancingMode. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceSpecForProviderBackendCustomMetrics>? CustomMetrics { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -119,6 +140,10 @@ public partial class V1beta1BackendServiceSpecForProviderBackend
     /// <summary>Used when balancingMode is UTILIZATION. This ratio defines the CPU utilization target for the group. Valid range is [0.0, 1.0].</summary>
     [JsonPropertyName("maxUtilization")]
     public double? MaxUtilization { get; set; }
+
+    /// <summary>This field indicates whether this backend should be fully utilized before sending traffic to backends with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:</summary>
+    [JsonPropertyName("preference")]
+    public string? Preference { get; set; }
 }
 
 /// <summary></summary>
@@ -171,7 +196,7 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicyNegativeCachin
     [JsonPropertyName("code")]
     public double? Code { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
@@ -211,6 +236,10 @@ public partial class V1beta1BackendServiceSpecForProviderCdnPolicy
     /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs. Structure is documented below.</summary>
     [JsonPropertyName("negativeCachingPolicy")]
     public IList<V1beta1BackendServiceSpecForProviderCdnPolicyNegativeCachingPolicy>? NegativeCachingPolicy { get; set; }
+
+    /// <summary>If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.</summary>
+    [JsonPropertyName("requestCoalescing")]
+    public bool? RequestCoalescing { get; set; }
 
     /// <summary>Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.</summary>
     [JsonPropertyName("serveWhileStale")]
@@ -263,7 +292,7 @@ public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCooki
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCookie
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -271,7 +300,7 @@ public partial class V1beta1BackendServiceSpecForProviderConsistentHashHttpCooki
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public IList<V1beta1BackendServiceSpecForProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
@@ -291,6 +320,19 @@ public partial class V1beta1BackendServiceSpecForProviderConsistentHash
     /// <summary>The minimum number of virtual nodes to use for the hash ring. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node. Defaults to 1024.</summary>
     [JsonPropertyName("minimumRingSize")]
     public double? MinimumRingSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecForProviderCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Name of a custom utilization signal. The name must be 1-64 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, period, underscore, lowercase letter, or digit, except the last character, which cannot be a dash, period, or underscore. For usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global or regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -370,13 +412,17 @@ public partial class V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProviderIap
 {
+    /// <summary>Whether the serving infrastructure will authenticate and authorize all incoming requests.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
     /// <summary>OAuth2 Client ID for IAP</summary>
     [JsonPropertyName("oauth2ClientId")]
     public string? Oauth2ClientId { get; set; }
 
     /// <summary>OAuth2 Client Secret for IAP Note: This property is sensitive and will not be displayed in the plan.</summary>
     [JsonPropertyName("oauth2ClientSecretSecretRef")]
-    public V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSecretRef Oauth2ClientSecretSecretRef { get; set; }
+    public V1beta1BackendServiceSpecForProviderIapOauth2ClientSecretSecretRef? Oauth2ClientSecretSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -387,7 +433,7 @@ public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesCusto
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -396,7 +442,7 @@ public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesCusto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProviderLocalityLbPoliciesPolicy
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -422,9 +468,30 @@ public partial class V1beta1BackendServiceSpecForProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
+    /// <summary>This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to include in the logs. For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace For example: orca_load_report, tls.protocol</summary>
+    [JsonPropertyName("optionalFields")]
+    public IList<string>? OptionalFields { get; set; }
+
+    /// <summary>Specifies the optional logging mode for the load balancer traffic. Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM. Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.</summary>
+    [JsonPropertyName("optionalMode")]
+    public string? OptionalMode { get; set; }
+
     /// <summary>This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.</summary>
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecForProviderMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -559,6 +626,36 @@ public partial class V1beta1BackendServiceSpecForProviderSecuritySettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecForProviderStrongSessionAffinityCookieTtl
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecForProviderStrongSessionAffinityCookie
+{
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Path to set for the cookie.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
+    [JsonPropertyName("ttl")]
+    public IList<V1beta1BackendServiceSpecForProviderStrongSessionAffinityCookieTtl>? Ttl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecForProvider
 {
     /// <summary>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</summary>
@@ -589,6 +686,10 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("consistentHash")]
     public IList<V1beta1BackendServiceSpecForProviderConsistentHash>? ConsistentHash { get; set; }
 
+    /// <summary>List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceSpecForProviderCustomMetrics>? CustomMetrics { get; set; }
+
     /// <summary>Headers that the HTTP/S load balancer should add to proxied requests.</summary>
     [JsonPropertyName("customRequestHeaders")]
     public IList<string>? CustomRequestHeaders { get; set; }
@@ -609,6 +710,14 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("enableCdn")]
     public bool? EnableCdn { get; set; }
 
+    /// <summary>Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by percentage using externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedMigrationState")]
+    public string? ExternalManagedMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options will slightly affect this routing behavior, for more details, see: Session Affinity. This value can only be set if the loadBalancingScheme in the backend service is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedMigrationTestingPercentage")]
+    public double? ExternalManagedMigrationTestingPercentage { get; set; }
+
     /// <summary>The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this BackendService. Currently at most one health check can be specified. A health check must be specified unless the backend service uses an internet or serverless NEG as a backend. For internal load balancing, a URL to a HealthCheck resource must be specified instead.</summary>
     [JsonPropertyName("healthChecks")]
     public IList<string>? HealthChecks { get; set; }
@@ -621,9 +730,13 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("healthChecksSelector")]
     public V1beta1BackendServiceSpecForProviderHealthChecksSelector? HealthChecksSelector { get; set; }
 
-    /// <summary>Settings for enabling Cloud Identity Aware Proxy Structure is documented below.</summary>
+    /// <summary>Settings for enabling Cloud Identity Aware Proxy. If OAuth client is not set, the Google-managed OAuth client is used. Structure is documented below.</summary>
     [JsonPropertyName("iap")]
     public IList<V1beta1BackendServiceSpecForProviderIap>? Iap { get; set; }
+
+    /// <summary>Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC). Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.</summary>
+    [JsonPropertyName("ipAddressSelectionPolicy")]
+    public string? IpAddressSelectionPolicy { get; set; }
 
     /// <summary>Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are: EXTERNAL, INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, EXTERNAL_MANAGED.</summary>
     [JsonPropertyName("loadBalancingScheme")]
@@ -641,6 +754,10 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("logConfig")]
     public IList<V1beta1BackendServiceSpecForProviderLogConfig>? LogConfig { get; set; }
 
+    /// <summary>Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1BackendServiceSpecForProviderMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Settings controlling eviction of unhealthy hosts from the load balancing pool. Applicable backend service types can be a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("outlierDetection")]
     public IList<V1beta1BackendServiceSpecForProviderOutlierDetection>? OutlierDetection { get; set; }
@@ -653,7 +770,7 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”, the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing with TCP/UDP/L3_DEFAULT Forwarding Rule protocol. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.</summary>
+    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
@@ -661,7 +778,7 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 
-    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("securitySettings")]
     public IList<V1beta1BackendServiceSpecForProviderSecuritySettings>? SecuritySettings { get; set; }
 
@@ -669,13 +786,34 @@ public partial class V1beta1BackendServiceSpecForProvider
     [JsonPropertyName("serviceLbPolicy")]
     public string? ServiceLbPolicy { get; set; }
 
-    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.</summary>
+    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.</summary>
     [JsonPropertyName("sessionAffinity")]
     public string? SessionAffinity { get; set; }
 
-    /// <summary>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].</summary>
+    /// <summary>Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY. Structure is documented below.</summary>
+    [JsonPropertyName("strongSessionAffinityCookie")]
+    public IList<V1beta1BackendServiceSpecForProviderStrongSessionAffinityCookie>? StrongSessionAffinityCookie { get; set; }
+
+    /// <summary>The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.</summary>
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderBackendCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Optional parameter to define a target utilization for the Custom Metrics balancing mode. The valid range is [0.0, 1.0].</summary>
+    [JsonPropertyName("maxUtilization")]
+    public double? MaxUtilization { get; set; }
+
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -738,13 +876,17 @@ public partial class V1beta1BackendServiceSpecInitProviderBackendGroupSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecInitProviderBackend
 {
-    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
+    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)), CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.</summary>
     [JsonPropertyName("balancingMode")]
     public string? BalancingMode { get; set; }
 
     /// <summary>A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0].</summary>
     [JsonPropertyName("capacityScaler")]
     public double? CapacityScaler { get; set; }
+
+    /// <summary>The set of custom metrics that are used for CUSTOM_METRICS BalancingMode. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceSpecInitProviderBackendCustomMetrics>? CustomMetrics { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -789,6 +931,10 @@ public partial class V1beta1BackendServiceSpecInitProviderBackend
     /// <summary>Used when balancingMode is UTILIZATION. This ratio defines the CPU utilization target for the group. Valid range is [0.0, 1.0].</summary>
     [JsonPropertyName("maxUtilization")]
     public double? MaxUtilization { get; set; }
+
+    /// <summary>This field indicates whether this backend should be fully utilized before sending traffic to backends with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:</summary>
+    [JsonPropertyName("preference")]
+    public string? Preference { get; set; }
 }
 
 /// <summary></summary>
@@ -841,7 +987,7 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicyNegativeCachi
     [JsonPropertyName("code")]
     public double? Code { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
@@ -881,6 +1027,10 @@ public partial class V1beta1BackendServiceSpecInitProviderCdnPolicy
     /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs. Structure is documented below.</summary>
     [JsonPropertyName("negativeCachingPolicy")]
     public IList<V1beta1BackendServiceSpecInitProviderCdnPolicyNegativeCachingPolicy>? NegativeCachingPolicy { get; set; }
+
+    /// <summary>If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.</summary>
+    [JsonPropertyName("requestCoalescing")]
+    public bool? RequestCoalescing { get; set; }
 
     /// <summary>Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.</summary>
     [JsonPropertyName("serveWhileStale")]
@@ -933,7 +1083,7 @@ public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCook
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCookie
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -941,7 +1091,7 @@ public partial class V1beta1BackendServiceSpecInitProviderConsistentHashHttpCook
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public IList<V1beta1BackendServiceSpecInitProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
@@ -961,6 +1111,19 @@ public partial class V1beta1BackendServiceSpecInitProviderConsistentHash
     /// <summary>The minimum number of virtual nodes to use for the hash ring. Larger ring sizes result in more granular load distributions. If the number of hosts in the load balancing pool is larger than the ring size, each host will be assigned a single virtual node. Defaults to 1024.</summary>
     [JsonPropertyName("minimumRingSize")]
     public double? MinimumRingSize { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Name of a custom utilization signal. The name must be 1-64 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, period, underscore, lowercase letter, or digit, except the last character, which cannot be a dash, period, or underscore. For usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global or regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1019,13 +1182,38 @@ public partial class V1beta1BackendServiceSpecInitProviderHealthChecksSelector
     public V1beta1BackendServiceSpecInitProviderHealthChecksSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>OAuth2 Client Secret for IAP Note: This property is sensitive and will not be displayed in the plan.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderIapOauth2ClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecInitProviderIap
 {
+    /// <summary>Whether the serving infrastructure will authenticate and authorize all incoming requests.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
     /// <summary>OAuth2 Client ID for IAP</summary>
     [JsonPropertyName("oauth2ClientId")]
     public string? Oauth2ClientId { get; set; }
+
+    /// <summary>OAuth2 Client Secret for IAP Note: This property is sensitive and will not be displayed in the plan.</summary>
+    [JsonPropertyName("oauth2ClientSecretSecretRef")]
+    public V1beta1BackendServiceSpecInitProviderIapOauth2ClientSecretSecretRef? Oauth2ClientSecretSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -1036,7 +1224,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesCust
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1045,7 +1233,7 @@ public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesCust
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecInitProviderLocalityLbPoliciesPolicy
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1071,9 +1259,30 @@ public partial class V1beta1BackendServiceSpecInitProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
+    /// <summary>This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to include in the logs. For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace For example: orca_load_report, tls.protocol</summary>
+    [JsonPropertyName("optionalFields")]
+    public IList<string>? OptionalFields { get; set; }
+
+    /// <summary>Specifies the optional logging mode for the load balancer traffic. Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM. Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.</summary>
+    [JsonPropertyName("optionalMode")]
+    public string? OptionalMode { get; set; }
+
     /// <summary>This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.</summary>
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -1206,6 +1415,36 @@ public partial class V1beta1BackendServiceSpecInitProviderSecuritySettings
     public IList<string>? SubjectAltNames { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderStrongSessionAffinityCookieTtl
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceSpecInitProviderStrongSessionAffinityCookie
+{
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Path to set for the cookie.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
+    [JsonPropertyName("ttl")]
+    public IList<V1beta1BackendServiceSpecInitProviderStrongSessionAffinityCookieTtl>? Ttl { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceSpecInitProvider
@@ -1238,6 +1477,10 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("consistentHash")]
     public IList<V1beta1BackendServiceSpecInitProviderConsistentHash>? ConsistentHash { get; set; }
 
+    /// <summary>List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceSpecInitProviderCustomMetrics>? CustomMetrics { get; set; }
+
     /// <summary>Headers that the HTTP/S load balancer should add to proxied requests.</summary>
     [JsonPropertyName("customRequestHeaders")]
     public IList<string>? CustomRequestHeaders { get; set; }
@@ -1258,6 +1501,14 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("enableCdn")]
     public bool? EnableCdn { get; set; }
 
+    /// <summary>Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by percentage using externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedMigrationState")]
+    public string? ExternalManagedMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options will slightly affect this routing behavior, for more details, see: Session Affinity. This value can only be set if the loadBalancingScheme in the backend service is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedMigrationTestingPercentage")]
+    public double? ExternalManagedMigrationTestingPercentage { get; set; }
+
     /// <summary>The set of URLs to the HttpHealthCheck or HttpsHealthCheck resource for health checking this BackendService. Currently at most one health check can be specified. A health check must be specified unless the backend service uses an internet or serverless NEG as a backend. For internal load balancing, a URL to a HealthCheck resource must be specified instead.</summary>
     [JsonPropertyName("healthChecks")]
     public IList<string>? HealthChecks { get; set; }
@@ -1270,9 +1521,13 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("healthChecksSelector")]
     public V1beta1BackendServiceSpecInitProviderHealthChecksSelector? HealthChecksSelector { get; set; }
 
-    /// <summary>Settings for enabling Cloud Identity Aware Proxy Structure is documented below.</summary>
+    /// <summary>Settings for enabling Cloud Identity Aware Proxy. If OAuth client is not set, the Google-managed OAuth client is used. Structure is documented below.</summary>
     [JsonPropertyName("iap")]
     public IList<V1beta1BackendServiceSpecInitProviderIap>? Iap { get; set; }
+
+    /// <summary>Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC). Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.</summary>
+    [JsonPropertyName("ipAddressSelectionPolicy")]
+    public string? IpAddressSelectionPolicy { get; set; }
 
     /// <summary>Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are: EXTERNAL, INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, EXTERNAL_MANAGED.</summary>
     [JsonPropertyName("loadBalancingScheme")]
@@ -1290,6 +1545,10 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("logConfig")]
     public IList<V1beta1BackendServiceSpecInitProviderLogConfig>? LogConfig { get; set; }
 
+    /// <summary>Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1BackendServiceSpecInitProviderMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Settings controlling eviction of unhealthy hosts from the load balancing pool. Applicable backend service types can be a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("outlierDetection")]
     public IList<V1beta1BackendServiceSpecInitProviderOutlierDetection>? OutlierDetection { get; set; }
@@ -1302,7 +1561,7 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”, the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing with TCP/UDP/L3_DEFAULT Forwarding Rule protocol. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.</summary>
+    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
@@ -1310,7 +1569,7 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 
-    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("securitySettings")]
     public IList<V1beta1BackendServiceSpecInitProviderSecuritySettings>? SecuritySettings { get; set; }
 
@@ -1318,11 +1577,15 @@ public partial class V1beta1BackendServiceSpecInitProvider
     [JsonPropertyName("serviceLbPolicy")]
     public string? ServiceLbPolicy { get; set; }
 
-    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.</summary>
+    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.</summary>
     [JsonPropertyName("sessionAffinity")]
     public string? SessionAffinity { get; set; }
 
-    /// <summary>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].</summary>
+    /// <summary>Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY. Structure is documented below.</summary>
+    [JsonPropertyName("strongSessionAffinityCookie")]
+    public IList<V1beta1BackendServiceSpecInitProviderStrongSessionAffinityCookie>? StrongSessionAffinityCookie { get; set; }
+
+    /// <summary>The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.</summary>
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
 }
@@ -1461,15 +1724,36 @@ public partial class V1beta1BackendServiceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceStatusAtProviderBackendCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Optional parameter to define a target utilization for the Custom Metrics balancing mode. The valid range is [0.0, 1.0].</summary>
+    [JsonPropertyName("maxUtilization")]
+    public double? MaxUtilization { get; set; }
+
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceStatusAtProviderBackend
 {
-    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION.</summary>
+    /// <summary>Specifies the balancing mode for this backend. For global HTTP(S) or TCP/SSL load balancing, the default is UTILIZATION. Valid values are UTILIZATION, RATE (for HTTP(S)), CUSTOM_METRICS (for HTTP(s)) and CONNECTION (for TCP/SSL). See the Backend Services Overview for an explanation of load balancing modes. Default value is UTILIZATION. Possible values are: UTILIZATION, RATE, CONNECTION, CUSTOM_METRICS.</summary>
     [JsonPropertyName("balancingMode")]
     public string? BalancingMode { get; set; }
 
     /// <summary>A multiplier applied to the group's maximum servicing capacity (based on UTILIZATION, RATE or CONNECTION). Default value is 1, which means the group will serve up to 100% of its configured capacity (depending on balancingMode). A setting of 0 means the group is completely drained, offering 0% of its available Capacity. Valid range is [0.0,1.0].</summary>
     [JsonPropertyName("capacityScaler")]
     public double? CapacityScaler { get; set; }
+
+    /// <summary>The set of custom metrics that are used for CUSTOM_METRICS BalancingMode. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceStatusAtProviderBackendCustomMetrics>? CustomMetrics { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -1506,6 +1790,10 @@ public partial class V1beta1BackendServiceStatusAtProviderBackend
     /// <summary>Used when balancingMode is UTILIZATION. This ratio defines the CPU utilization target for the group. Valid range is [0.0, 1.0].</summary>
     [JsonPropertyName("maxUtilization")]
     public double? MaxUtilization { get; set; }
+
+    /// <summary>This field indicates whether this backend should be fully utilized before sending traffic to backends with default preference. This field cannot be set when loadBalancingScheme is set to 'EXTERNAL'. The possible values are:</summary>
+    [JsonPropertyName("preference")]
+    public string? Preference { get; set; }
 }
 
 /// <summary></summary>
@@ -1558,7 +1846,7 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicyNegativeCachi
     [JsonPropertyName("code")]
     public double? Code { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 }
@@ -1598,6 +1886,10 @@ public partial class V1beta1BackendServiceStatusAtProviderCdnPolicy
     /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs. Structure is documented below.</summary>
     [JsonPropertyName("negativeCachingPolicy")]
     public IList<V1beta1BackendServiceStatusAtProviderCdnPolicyNegativeCachingPolicy>? NegativeCachingPolicy { get; set; }
+
+    /// <summary>If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.</summary>
+    [JsonPropertyName("requestCoalescing")]
+    public bool? RequestCoalescing { get; set; }
 
     /// <summary>Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.</summary>
     [JsonPropertyName("serveWhileStale")]
@@ -1650,7 +1942,7 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCook
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCookie
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -1658,7 +1950,7 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHashHttpCook
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.</summary>
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
     [JsonPropertyName("ttl")]
     public IList<V1beta1BackendServiceStatusAtProviderConsistentHashHttpCookieTtl>? Ttl { get; set; }
 }
@@ -1682,8 +1974,25 @@ public partial class V1beta1BackendServiceStatusAtProviderConsistentHash
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceStatusAtProviderCustomMetrics
+{
+    /// <summary>If true, the metric data is collected and reported to Cloud Monitoring, but is not used for load balancing.</summary>
+    [JsonPropertyName("dryRun")]
+    public bool? DryRun { get; set; }
+
+    /// <summary>Name of a custom utilization signal. The name must be 1-64 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, period, underscore, lowercase letter, or digit, except the last character, which cannot be a dash, period, or underscore. For usage guidelines, see Custom Metrics balancing mode. This field can only be used for a global or regional backend service with the loadBalancingScheme set to EXTERNAL_MANAGED, INTERNAL_MANAGED INTERNAL_SELF_MANAGED.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceStatusAtProviderIap
 {
+    /// <summary>Whether the serving infrastructure will authenticate and authorize all incoming requests.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
     /// <summary>OAuth2 Client ID for IAP</summary>
     [JsonPropertyName("oauth2ClientId")]
     public string? Oauth2ClientId { get; set; }
@@ -1697,7 +2006,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesCust
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1706,7 +2015,7 @@ public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesCust
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceStatusAtProviderLocalityLbPoliciesPolicy
 {
-    /// <summary>The name of a locality load balancer policy to be used. The value should be one of the predefined ones as supported by localityLbPolicy, although at the moment only ROUND_ROBIN is supported. This field should only be populated when the customPolicy field is not used. Note that specifying the same policy more than once for a backend is not a valid configuration and will be rejected. The possible values are:</summary>
+    /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1732,9 +2041,30 @@ public partial class V1beta1BackendServiceStatusAtProviderLogConfig
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
+    /// <summary>This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to include in the logs. For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace For example: orca_load_report, tls.protocol</summary>
+    [JsonPropertyName("optionalFields")]
+    public IList<string>? OptionalFields { get; set; }
+
+    /// <summary>Specifies the optional logging mode for the load balancer traffic. Supported values: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM. Possible values are: INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM.</summary>
+    [JsonPropertyName("optionalMode")]
+    public string? OptionalMode { get; set; }
+
     /// <summary>This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.</summary>
     [JsonPropertyName("sampleRate")]
     public double? SampleRate { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceStatusAtProviderMaxStreamDuration
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive. (int64 format)</summary>
+    [JsonPropertyName("seconds")]
+    public string? Seconds { get; set; }
 }
 
 /// <summary></summary>
@@ -1848,6 +2178,36 @@ public partial class V1beta1BackendServiceStatusAtProviderSecuritySettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceStatusAtProviderStrongSessionAffinityCookieTtl
+{
+    /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
+    [JsonPropertyName("nanos")]
+    public double? Nanos { get; set; }
+
+    /// <summary>Span of time at a resolution of a second. Must be from 0 to 315,576,000,000 inclusive.</summary>
+    [JsonPropertyName("seconds")]
+    public double? Seconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BackendServiceStatusAtProviderStrongSessionAffinityCookie
+{
+    /// <summary>Name of the cookie.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>Path to set for the cookie.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Lifetime of the cookie. Structure is documented below.</summary>
+    [JsonPropertyName("ttl")]
+    public IList<V1beta1BackendServiceStatusAtProviderStrongSessionAffinityCookieTtl>? Ttl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackendServiceStatusAtProvider
 {
     /// <summary>Lifetime of cookies in seconds if session_affinity is GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value for TTL is one day. When the load balancing scheme is INTERNAL, this field is not used.</summary>
@@ -1882,6 +2242,10 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("creationTimestamp")]
     public string? CreationTimestamp { get; set; }
 
+    /// <summary>List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy. Structure is documented below.</summary>
+    [JsonPropertyName("customMetrics")]
+    public IList<V1beta1BackendServiceStatusAtProviderCustomMetrics>? CustomMetrics { get; set; }
+
     /// <summary>Headers that the HTTP/S load balancer should add to proxied requests.</summary>
     [JsonPropertyName("customRequestHeaders")]
     public IList<string>? CustomRequestHeaders { get; set; }
@@ -1902,6 +2266,14 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("enableCdn")]
     public bool? EnableCdn { get; set; }
 
+    /// <summary>Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by percentage using externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL. Possible values are: PREPARE, TEST_BY_PERCENTAGE, TEST_ALL_TRAFFIC.</summary>
+    [JsonPropertyName("externalManagedMigrationState")]
+    public string? ExternalManagedMigrationState { get; set; }
+
+    /// <summary>Determines the fraction of requests that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options will slightly affect this routing behavior, for more details, see: Session Affinity. This value can only be set if the loadBalancingScheme in the backend service is set to EXTERNAL (when using the Classic ALB) and the migration state is TEST_BY_PERCENTAGE.</summary>
+    [JsonPropertyName("externalManagedMigrationTestingPercentage")]
+    public double? ExternalManagedMigrationTestingPercentage { get; set; }
+
     /// <summary>Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.</summary>
     [JsonPropertyName("fingerprint")]
     public string? Fingerprint { get; set; }
@@ -1914,13 +2286,17 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("healthChecks")]
     public IList<string>? HealthChecks { get; set; }
 
-    /// <summary>Settings for enabling Cloud Identity Aware Proxy Structure is documented below.</summary>
+    /// <summary>Settings for enabling Cloud Identity Aware Proxy. If OAuth client is not set, the Google-managed OAuth client is used. Structure is documented below.</summary>
     [JsonPropertyName("iap")]
     public IList<V1beta1BackendServiceStatusAtProviderIap>? Iap { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/global/backendServices/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Specifies preference of traffic to the backend (from the proxy and from the client for proxyless gRPC). Possible values are: IPV4_ONLY, PREFER_IPV6, IPV6_ONLY.</summary>
+    [JsonPropertyName("ipAddressSelectionPolicy")]
+    public string? IpAddressSelectionPolicy { get; set; }
 
     /// <summary>Indicates whether the backend service will be used with internal or external load balancing. A backend service created for one type of load balancing cannot be used with the other. For more information, refer to Choosing a load balancer. Default value is EXTERNAL. Possible values are: EXTERNAL, INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, EXTERNAL_MANAGED.</summary>
     [JsonPropertyName("loadBalancingScheme")]
@@ -1938,6 +2314,10 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("logConfig")]
     public IList<V1beta1BackendServiceStatusAtProviderLogConfig>? LogConfig { get; set; }
 
+    /// <summary>Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    [JsonPropertyName("maxStreamDuration")]
+    public IList<V1beta1BackendServiceStatusAtProviderMaxStreamDuration>? MaxStreamDuration { get; set; }
+
     /// <summary>Settings controlling eviction of unhealthy hosts from the load balancing pool. Applicable backend service types can be a global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("outlierDetection")]
     public IList<V1beta1BackendServiceStatusAtProviderOutlierDetection>? OutlierDetection { get; set; }
@@ -1950,7 +2330,7 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. NOTE: HTTP2 is only valid for beta HTTP/2 load balancer types and may result in errors if used with the GA API. NOTE: With protocol “UNSPECIFIED”, the backend service can be used by Layer 4 Internal Load Balancing or Network Load Balancing with TCP/UDP/L3_DEFAULT Forwarding Rule protocol. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, GRPC, UNSPECIFIED.</summary>
+    /// <summary>The protocol this BackendService uses to communicate with backends. The default is HTTP. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy. Possible values are: HTTP, HTTPS, HTTP2, TCP, SSL, UDP, GRPC, UNSPECIFIED, H2C.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
@@ -1958,7 +2338,7 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("securityPolicy")]
     public string? SecurityPolicy { get; set; }
 
-    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, or HTTP2, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
+    /// <summary>The security settings that apply to this backend service. This field is applicable to either a regional backend service with the service_protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to INTERNAL_MANAGED; or a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED. Structure is documented below.</summary>
     [JsonPropertyName("securitySettings")]
     public IList<V1beta1BackendServiceStatusAtProviderSecuritySettings>? SecuritySettings { get; set; }
 
@@ -1970,11 +2350,15 @@ public partial class V1beta1BackendServiceStatusAtProvider
     [JsonPropertyName("serviceLbPolicy")]
     public string? ServiceLbPolicy { get; set; }
 
-    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE.</summary>
+    /// <summary>Type of session affinity to use. The default is NONE. Session affinity is not applicable if the protocol is UDP. Possible values are: NONE, CLIENT_IP, CLIENT_IP_PORT_PROTO, CLIENT_IP_PROTO, GENERATED_COOKIE, HEADER_FIELD, HTTP_COOKIE, STRONG_COOKIE_AFFINITY.</summary>
     [JsonPropertyName("sessionAffinity")]
     public string? SessionAffinity { get; set; }
 
-    /// <summary>How many seconds to wait for the backend before considering it a failed request. Default is 30 seconds. Valid range is [1, 86400].</summary>
+    /// <summary>Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY. Structure is documented below.</summary>
+    [JsonPropertyName("strongSessionAffinityCookie")]
+    public IList<V1beta1BackendServiceStatusAtProviderStrongSessionAffinityCookie>? StrongSessionAffinityCookie { get; set; }
+
+    /// <summary>The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds.</summary>
     [JsonPropertyName("timeoutSec")]
     public double? TimeoutSec { get; set; }
 }

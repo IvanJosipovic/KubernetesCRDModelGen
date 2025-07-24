@@ -93,13 +93,17 @@ public partial class V1beta1SubnetworkSpecForProviderNetworkSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetworkSpecForProviderSecondaryIpRange
 {
-    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported.</summary>
+    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. Field is optional when reserved_internal_range is defined, otherwise required.</summary>
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
 
     /// <summary>The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.</summary>
     [JsonPropertyName("rangeName")]
     public string? RangeName { get; set; }
+
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
 }
 
 /// <summary></summary>
@@ -110,6 +114,10 @@ public partial class V1beta1SubnetworkSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.</summary>
+    [JsonPropertyName("enableFlowLogs")]
+    public bool? EnableFlowLogs { get; set; }
+
     /// <summary>The range of external IPv6 addresses that are owned by this subnetwork.</summary>
     [JsonPropertyName("externalIpv6Prefix")]
     public string? ExternalIpv6Prefix { get; set; }
@@ -117,6 +125,10 @@ public partial class V1beta1SubnetworkSpecForProvider
     /// <summary>The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported.</summary>
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
+
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
 
     /// <summary>The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path. Possible values are: EXTERNAL, INTERNAL.</summary>
     [JsonPropertyName("ipv6AccessType")]
@@ -157,6 +169,10 @@ public partial class V1beta1SubnetworkSpecForProvider
     /// <summary>The GCP region for this subnetwork.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
 
     /// <summary>The role of subnetwork. Currently, this field is only used when purpose is REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. Possible values are: ACTIVE, BACKUP.</summary>
     [JsonPropertyName("role")]
@@ -260,13 +276,17 @@ public partial class V1beta1SubnetworkSpecInitProviderNetworkSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetworkSpecInitProviderSecondaryIpRange
 {
-    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported.</summary>
+    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. Field is optional when reserved_internal_range is defined, otherwise required.</summary>
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
 
     /// <summary>The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.</summary>
     [JsonPropertyName("rangeName")]
     public string? RangeName { get; set; }
+
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -277,6 +297,10 @@ public partial class V1beta1SubnetworkSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.</summary>
+    [JsonPropertyName("enableFlowLogs")]
+    public bool? EnableFlowLogs { get; set; }
+
     /// <summary>The range of external IPv6 addresses that are owned by this subnetwork.</summary>
     [JsonPropertyName("externalIpv6Prefix")]
     public string? ExternalIpv6Prefix { get; set; }
@@ -284,6 +308,10 @@ public partial class V1beta1SubnetworkSpecInitProvider
     /// <summary>The range of internal addresses that are owned by this subnetwork. Provide this property when you create the subnetwork. For example, 10.0.0.0/8 or 192.168.0.0/16. Ranges must be unique and non-overlapping within a network. Only IPv4 is supported.</summary>
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
+
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
 
     /// <summary>The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path. Possible values are: EXTERNAL, INTERNAL.</summary>
     [JsonPropertyName("ipv6AccessType")]
@@ -320,6 +348,10 @@ public partial class V1beta1SubnetworkSpecInitProvider
     /// <summary>The purpose of the resource. This field can be either PRIVATE_RFC_1918, REGIONAL_MANAGED_PROXY, GLOBAL_MANAGED_PROXY, PRIVATE_SERVICE_CONNECT or PRIVATE_NAT(Beta). A subnet with purpose set to REGIONAL_MANAGED_PROXY is a user-created subnetwork that is reserved for regional Envoy-based load balancers. A subnetwork in a given region with purpose set to GLOBAL_MANAGED_PROXY is a proxy-only subnet and is shared between all the cross-regional Envoy-based load balancers. A subnetwork with purpose set to PRIVATE_SERVICE_CONNECT reserves the subnet for hosting a Private Service Connect published service. A subnetwork with purpose set to PRIVATE_NAT is used as source range for Private NAT gateways. Note that REGIONAL_MANAGED_PROXY is the preferred setting for all regional Envoy load balancers. If unspecified, the purpose defaults to PRIVATE_RFC_1918.</summary>
     [JsonPropertyName("purpose")]
     public string? Purpose { get; set; }
+
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
 
     /// <summary>The role of subnetwork. Currently, this field is only used when purpose is REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. Possible values are: ACTIVE, BACKUP.</summary>
     [JsonPropertyName("role")]
@@ -499,13 +531,17 @@ public partial class V1beta1SubnetworkStatusAtProviderLogConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetworkStatusAtProviderSecondaryIpRange
 {
-    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported.</summary>
+    /// <summary>The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. Field is optional when reserved_internal_range is defined, otherwise required.</summary>
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
 
     /// <summary>The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.</summary>
     [JsonPropertyName("rangeName")]
     public string? RangeName { get; set; }
+
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
 }
 
 /// <summary></summary>
@@ -519,6 +555,10 @@ public partial class V1beta1SubnetworkStatusAtProvider
     /// <summary>An optional description of this resource. Provide this property when you create the resource. This field can be set only at resource creation time.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. This field isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.</summary>
+    [JsonPropertyName("enableFlowLogs")]
+    public bool? EnableFlowLogs { get; set; }
 
     /// <summary>The range of external IPv6 addresses that are owned by this subnetwork.</summary>
     [JsonPropertyName("externalIpv6Prefix")]
@@ -544,6 +584,10 @@ public partial class V1beta1SubnetworkStatusAtProvider
     [JsonPropertyName("ipCidrRange")]
     public string? IpCidrRange { get; set; }
 
+    /// <summary>Resource reference of a PublicDelegatedPrefix. The PDP must be a sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify a sub-PDP when creating an IPv6 NetLB forwarding rule using BYOIP: Full resource URL, as in:</summary>
+    [JsonPropertyName("ipCollection")]
+    public string? IpCollection { get; set; }
+
     /// <summary>The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack. If the ipv6_type is EXTERNAL then this subnet cannot enable direct path. Possible values are: EXTERNAL, INTERNAL.</summary>
     [JsonPropertyName("ipv6AccessType")]
     public string? Ipv6AccessType { get; set; }
@@ -551,6 +595,10 @@ public partial class V1beta1SubnetworkStatusAtProvider
     /// <summary>The range of internal IPv6 addresses that are owned by this subnetwork.</summary>
     [JsonPropertyName("ipv6CidrRange")]
     public string? Ipv6CidrRange { get; set; }
+
+    /// <summary>Possible endpoints of this subnetwork. It can be one of the following:</summary>
+    [JsonPropertyName("ipv6GceEndpoint")]
+    public string? Ipv6GceEndpoint { get; set; }
 
     /// <summary>This field denotes the VPC flow logging options for this subnetwork. If logging is enabled, logs are exported to Cloud Logging. Flow logging isn't supported if the subnet purpose field is set to subnetwork is REGIONAL_MANAGED_PROXY or GLOBAL_MANAGED_PROXY. Structure is documented below.</summary>
     [JsonPropertyName("logConfig")]
@@ -580,6 +628,10 @@ public partial class V1beta1SubnetworkStatusAtProvider
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
+    /// <summary>The ID of the reserved internal range. Must be prefixed with networkconnectivity.googleapis.com E.g. networkconnectivity.googleapis.com/projects/{project}/locations/global/internalRanges/{rangeId}</summary>
+    [JsonPropertyName("reservedInternalRange")]
+    public string? ReservedInternalRange { get; set; }
+
     /// <summary>The role of subnetwork. Currently, this field is only used when purpose is REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. Possible values are: ACTIVE, BACKUP.</summary>
     [JsonPropertyName("role")]
     public string? Role { get; set; }
@@ -599,6 +651,14 @@ public partial class V1beta1SubnetworkStatusAtProvider
     /// <summary>The stack type for this subnet to identify whether the IPv6 feature is enabled or not. If not specified IPV4_ONLY will be used. Possible values are: IPV4_ONLY, IPV4_IPV6.</summary>
     [JsonPropertyName("stackType")]
     public string? StackType { get; set; }
+
+    /// <summary>'The state of the subnetwork, which can be one of the following values: READY: Subnetwork is created and ready to use DRAINING: only applicable to subnetworks that have the purpose set to INTERNAL_HTTPS_LOAD_BALANCER and indicates that connections to the load balancer are being drained. A subnetwork that is draining cannot be used or modified until it reaches a status of READY'</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+
+    /// <summary>The unique identifier number for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("subnetworkId")]
+    public double? SubnetworkId { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

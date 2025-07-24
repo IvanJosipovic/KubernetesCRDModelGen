@@ -8,6 +8,27 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetSpecForProviderAccessCondition
+{
+    /// <summary>A user-friendly description of the dataset</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>The geographic location where the dataset should reside. See official docs. There are two types of locations, regional or multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a large geographic area, such as the United States, that contains at least two geographic places. The default value is multi-regional location US. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProviderAccessDatasetDatasetDatasetIdRefPolicy
@@ -384,6 +405,10 @@ public partial class V1beta1DatasetSpecForProviderAccessView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProviderAccess
 {
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetSpecForProviderAccessCondition>? Condition { get; set; }
+
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]
     public IList<V1beta1DatasetSpecForProviderAccessDataset>? Dataset { get; set; }
@@ -504,6 +529,19 @@ public partial class V1beta1DatasetSpecForProviderDefaultEncryptionConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetSpecForProviderExternalCatalogDatasetOptions
+{
+    /// <summary>The storage location URI for all tables in the dataset. Equivalent to hive metastore's database locationUri. Maximum length of 1024 characters.</summary>
+    [JsonPropertyName("defaultStorageLocationUri")]
+    public string? DefaultStorageLocationUri { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source schema. Maximum size of 2Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProviderExternalDatasetReference
 {
     /// <summary>The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}</summary>
@@ -547,6 +585,10 @@ public partial class V1beta1DatasetSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Options defining open source compatible datasets living in the BigQuery catalog. Contains metadata of open source database, schema or namespace represented by the current dataset. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogDatasetOptions")]
+    public IList<V1beta1DatasetSpecForProviderExternalCatalogDatasetOptions>? ExternalCatalogDatasetOptions { get; set; }
+
     /// <summary>Information about the external metadata storage where the dataset is defined. Structure is documented below.</summary>
     [JsonPropertyName("externalDatasetReference")]
     public IList<V1beta1DatasetSpecForProviderExternalDatasetReference>? ExternalDatasetReference { get; set; }
@@ -582,6 +624,27 @@ public partial class V1beta1DatasetSpecForProvider
     /// <summary>Specifies the storage billing model for the dataset. Set this flag value to LOGICAL to use logical bytes for storage billing, or to PHYSICAL to use physical bytes instead. LOGICAL is the default if this flag isn't specified.</summary>
     [JsonPropertyName("storageBillingModel")]
     public string? StorageBillingModel { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetSpecInitProviderAccessCondition
+{
+    /// <summary>A user-friendly description of the dataset</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>The geographic location where the dataset should reside. See official docs. There are two types of locations, regional or multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a large geographic area, such as the United States, that contains at least two geographic places. The default value is multi-regional location US. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -960,6 +1023,10 @@ public partial class V1beta1DatasetSpecInitProviderAccessView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecInitProviderAccess
 {
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetSpecInitProviderAccessCondition>? Condition { get; set; }
+
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]
     public IList<V1beta1DatasetSpecInitProviderAccessDataset>? Dataset { get; set; }
@@ -1080,6 +1147,19 @@ public partial class V1beta1DatasetSpecInitProviderDefaultEncryptionConfiguratio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetSpecInitProviderExternalCatalogDatasetOptions
+{
+    /// <summary>The storage location URI for all tables in the dataset. Equivalent to hive metastore's database locationUri. Maximum length of 1024 characters.</summary>
+    [JsonPropertyName("defaultStorageLocationUri")]
+    public string? DefaultStorageLocationUri { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source schema. Maximum size of 2Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecInitProviderExternalDatasetReference
 {
     /// <summary>The connection id that is used to access the externalSource. Format: projects/{projectId}/locations/{locationId}/connections/{connectionId}</summary>
@@ -1122,6 +1202,10 @@ public partial class V1beta1DatasetSpecInitProvider
     /// <summary>A user-friendly description of the dataset</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Options defining open source compatible datasets living in the BigQuery catalog. Contains metadata of open source database, schema or namespace represented by the current dataset. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogDatasetOptions")]
+    public IList<V1beta1DatasetSpecInitProviderExternalCatalogDatasetOptions>? ExternalCatalogDatasetOptions { get; set; }
 
     /// <summary>Information about the external metadata storage where the dataset is defined. Structure is documented below.</summary>
     [JsonPropertyName("externalDatasetReference")]
@@ -1290,6 +1374,27 @@ public partial class V1beta1DatasetSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetStatusAtProviderAccessCondition
+{
+    /// <summary>A user-friendly description of the dataset</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
+    /// <summary>Textual representation of an expression in Common Expression Language syntax.</summary>
+    [JsonPropertyName("expression")]
+    public string? Expression { get; set; }
+
+    /// <summary>The geographic location where the dataset should reside. See official docs. There are two types of locations, regional or multi-regional. A regional location is a specific geographic place, such as Tokyo, and a multi-regional location is a large geographic area, such as the United States, that contains at least two geographic places. The default value is multi-regional location US. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.</summary>
+    [JsonPropertyName("title")]
+    public string? Title { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetStatusAtProviderAccessDatasetDataset
 {
     /// <summary>The ID of the dataset containing this table.</summary>
@@ -1352,6 +1457,10 @@ public partial class V1beta1DatasetStatusAtProviderAccessView
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetStatusAtProviderAccess
 {
+    /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
+    [JsonPropertyName("condition")]
+    public IList<V1beta1DatasetStatusAtProviderAccessCondition>? Condition { get; set; }
+
     /// <summary>Grants all resources of particular types in a particular dataset read access to the current dataset. Structure is documented below.</summary>
     [JsonPropertyName("dataset")]
     public IList<V1beta1DatasetStatusAtProviderAccessDataset>? Dataset { get; set; }
@@ -1396,6 +1505,19 @@ public partial class V1beta1DatasetStatusAtProviderDefaultEncryptionConfiguratio
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DatasetStatusAtProviderExternalCatalogDatasetOptions
+{
+    /// <summary>The storage location URI for all tables in the dataset. Equivalent to hive metastore's database locationUri. Maximum length of 1024 characters.</summary>
+    [JsonPropertyName("defaultStorageLocationUri")]
+    public string? DefaultStorageLocationUri { get; set; }
+
+    /// <summary>A map of key value pairs defining the parameters and properties of the open source schema. Maximum size of 2Mib.</summary>
+    [JsonPropertyName("parameters")]
+    public IDictionary<string, string>? Parameters { get; set; }
 }
 
 /// <summary></summary>
@@ -1454,6 +1576,10 @@ public partial class V1beta1DatasetStatusAtProvider
     /// <summary>A hash of the resource.</summary>
     [JsonPropertyName("etag")]
     public string? Etag { get; set; }
+
+    /// <summary>Options defining open source compatible datasets living in the BigQuery catalog. Contains metadata of open source database, schema or namespace represented by the current dataset. Structure is documented below.</summary>
+    [JsonPropertyName("externalCatalogDatasetOptions")]
+    public IList<V1beta1DatasetStatusAtProviderExternalCatalogDatasetOptions>? ExternalCatalogDatasetOptions { get; set; }
 
     /// <summary>Information about the external metadata storage where the dataset is defined. Structure is documented below.</summary>
     [JsonPropertyName("externalDatasetReference")]

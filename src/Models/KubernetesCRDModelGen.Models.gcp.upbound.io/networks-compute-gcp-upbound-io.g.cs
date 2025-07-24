@@ -8,6 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkSpecForProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the network. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSpecForProvider
@@ -15,6 +24,18 @@ public partial class V1beta1NetworkSpecForProvider
     /// <summary>When set to true, the network is created in "auto subnet mode" and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. When set to false, the network is created in "custom subnet mode" so the user can explicitly connect subnetwork resources.</summary>
     [JsonPropertyName("autoCreateSubnetworks")]
     public bool? AutoCreateSubnetworks { get; set; }
+
+    /// <summary>Enables/disables the comparison of MED across routes with different Neighbor ASNs. This value can only be set if the --bgp-best-path-selection-mode is STANDARD</summary>
+    [JsonPropertyName("bgpAlwaysCompareMed")]
+    public bool? BgpAlwaysCompareMed { get; set; }
+
+    /// <summary>The BGP best selection algorithm to be employed. MODE can be LEGACY or STANDARD. Possible values are: LEGACY, STANDARD.</summary>
+    [JsonPropertyName("bgpBestPathSelectionMode")]
+    public string? BgpBestPathSelectionMode { get; set; }
+
+    /// <summary>Choice of the behavior of inter-regional cost and MED in the BPS algorithm. Possible values are: DEFAULT, ADD_COST_TO_MED.</summary>
+    [JsonPropertyName("bgpInterRegionCost")]
+    public string? BgpInterRegionCost { get; set; }
 
     /// <summary>If set to true, default routes (0.0.0.0/0) will be deleted immediately after network creation. Defaults to false.</summary>
     [JsonPropertyName("deleteDefaultRoutesOnCreate")]
@@ -39,6 +60,14 @@ public partial class V1beta1NetworkSpecForProvider
     /// <summary>Set the order that Firewall Rules and Firewall Policies are evaluated. Default value is AFTER_CLASSIC_FIREWALL. Possible values are: BEFORE_CLASSIC_FIREWALL, AFTER_CLASSIC_FIREWALL.</summary>
     [JsonPropertyName("networkFirewallPolicyEnforcementOrder")]
     public string? NetworkFirewallPolicyEnforcementOrder { get; set; }
+
+    /// <summary>A full or partial URL of the network profile to apply to this network. This field can be set only at resource creation time. For example, the following are valid URLs:</summary>
+    [JsonPropertyName("networkProfile")]
+    public string? NetworkProfile { get; set; }
+
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public V1beta1NetworkSpecForProviderParams? Params { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -49,6 +78,15 @@ public partial class V1beta1NetworkSpecForProvider
     public string? RoutingMode { get; set; }
 }
 
+/// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkSpecInitProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the network. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSpecInitProvider
@@ -56,6 +94,18 @@ public partial class V1beta1NetworkSpecInitProvider
     /// <summary>When set to true, the network is created in "auto subnet mode" and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. When set to false, the network is created in "custom subnet mode" so the user can explicitly connect subnetwork resources.</summary>
     [JsonPropertyName("autoCreateSubnetworks")]
     public bool? AutoCreateSubnetworks { get; set; }
+
+    /// <summary>Enables/disables the comparison of MED across routes with different Neighbor ASNs. This value can only be set if the --bgp-best-path-selection-mode is STANDARD</summary>
+    [JsonPropertyName("bgpAlwaysCompareMed")]
+    public bool? BgpAlwaysCompareMed { get; set; }
+
+    /// <summary>The BGP best selection algorithm to be employed. MODE can be LEGACY or STANDARD. Possible values are: LEGACY, STANDARD.</summary>
+    [JsonPropertyName("bgpBestPathSelectionMode")]
+    public string? BgpBestPathSelectionMode { get; set; }
+
+    /// <summary>Choice of the behavior of inter-regional cost and MED in the BPS algorithm. Possible values are: DEFAULT, ADD_COST_TO_MED.</summary>
+    [JsonPropertyName("bgpInterRegionCost")]
+    public string? BgpInterRegionCost { get; set; }
 
     /// <summary>If set to true, default routes (0.0.0.0/0) will be deleted immediately after network creation. Defaults to false.</summary>
     [JsonPropertyName("deleteDefaultRoutesOnCreate")]
@@ -80,6 +130,14 @@ public partial class V1beta1NetworkSpecInitProvider
     /// <summary>Set the order that Firewall Rules and Firewall Policies are evaluated. Default value is AFTER_CLASSIC_FIREWALL. Possible values are: BEFORE_CLASSIC_FIREWALL, AFTER_CLASSIC_FIREWALL.</summary>
     [JsonPropertyName("networkFirewallPolicyEnforcementOrder")]
     public string? NetworkFirewallPolicyEnforcementOrder { get; set; }
+
+    /// <summary>A full or partial URL of the network profile to apply to this network. This field can be set only at resource creation time. For example, the following are valid URLs:</summary>
+    [JsonPropertyName("networkProfile")]
+    public string? NetworkProfile { get; set; }
+
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public V1beta1NetworkSpecInitProviderParams? Params { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -222,6 +280,15 @@ public partial class V1beta1NetworkSpec
     public V1beta1NetworkSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkStatusAtProviderParams
+{
+    /// <summary>Resource manager tags to be bound to the network. Tag keys and values have the same definition as resource manager tags. Keys must be in the format tagKeys/{tag_key_id}, and values are in the format tagValues/456.</summary>
+    [JsonPropertyName("resourceManagerTags")]
+    public IDictionary<string, string>? ResourceManagerTags { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkStatusAtProvider
@@ -229,6 +296,18 @@ public partial class V1beta1NetworkStatusAtProvider
     /// <summary>When set to true, the network is created in "auto subnet mode" and it will create a subnet for each region automatically across the 10.128.0.0/9 address range. When set to false, the network is created in "custom subnet mode" so the user can explicitly connect subnetwork resources.</summary>
     [JsonPropertyName("autoCreateSubnetworks")]
     public bool? AutoCreateSubnetworks { get; set; }
+
+    /// <summary>Enables/disables the comparison of MED across routes with different Neighbor ASNs. This value can only be set if the --bgp-best-path-selection-mode is STANDARD</summary>
+    [JsonPropertyName("bgpAlwaysCompareMed")]
+    public bool? BgpAlwaysCompareMed { get; set; }
+
+    /// <summary>The BGP best selection algorithm to be employed. MODE can be LEGACY or STANDARD. Possible values are: LEGACY, STANDARD.</summary>
+    [JsonPropertyName("bgpBestPathSelectionMode")]
+    public string? BgpBestPathSelectionMode { get; set; }
+
+    /// <summary>Choice of the behavior of inter-regional cost and MED in the BPS algorithm. Possible values are: DEFAULT, ADD_COST_TO_MED.</summary>
+    [JsonPropertyName("bgpInterRegionCost")]
+    public string? BgpInterRegionCost { get; set; }
 
     /// <summary>If set to true, default routes (0.0.0.0/0) will be deleted immediately after network creation. Defaults to false.</summary>
     [JsonPropertyName("deleteDefaultRoutesOnCreate")]
@@ -263,8 +342,20 @@ public partial class V1beta1NetworkStatusAtProvider
     public string? NetworkFirewallPolicyEnforcementOrder { get; set; }
 
     /// <summary>The unique identifier for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("networkId")]
+    public string? NetworkId { get; set; }
+
+    /// <summary>A full or partial URL of the network profile to apply to this network. This field can be set only at resource creation time. For example, the following are valid URLs:</summary>
+    [JsonPropertyName("networkProfile")]
+    public string? NetworkProfile { get; set; }
+
+    /// <summary>(Deprecated) The unique identifier for the resource. This identifier is defined by the server.</summary>
     [JsonPropertyName("numericId")]
     public string? NumericId { get; set; }
+
+    /// <summary>Additional params passed with the request, but not persisted as part of resource payload Structure is documented below.</summary>
+    [JsonPropertyName("params")]
+    public V1beta1NetworkStatusAtProviderParams? Params { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]

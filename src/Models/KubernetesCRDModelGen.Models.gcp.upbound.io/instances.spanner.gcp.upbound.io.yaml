@@ -97,6 +97,51 @@ spec:
                       Structure is documented below.
                     items:
                       properties:
+                        asymmetricAutoscalingOptions:
+                          description: >-
+                            Asymmetric autoscaling options for specific replicas.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              overrides:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    autoscalingLimits:
+                                      description: >-
+                                        A nested object resource.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          maxNodes:
+                                            description: The maximum number of nodes for this specific replica.
+                                            type: number
+                                          minNodes:
+                                            description: The minimum number of nodes for this specific replica.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              replicaSelection:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    location:
+                                      description: The location of the replica to apply asymmetric autoscaling options.
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         autoscalingLimits:
                           description: >-
                             Defines scale in controls to reduce the risk of response latency
@@ -115,10 +160,7 @@ spec:
                           items:
                             properties:
                               maxNodes:
-                                description: >-
-                                  Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to min_nodes.
+                                description: The maximum number of nodes for this specific replica.
                                 type: number
                               maxProcessingUnits:
                                 description: >-
@@ -129,10 +171,7 @@ spec:
                                   min_processing_units.
                                 type: number
                               minNodes:
-                                description: >-
-                                  Specifies number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to 1.
+                                description: The minimum number of nodes for this specific replica.
                                 type: number
                               minProcessingUnits:
                                 description: >-
@@ -201,12 +240,28 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   forceDestroy:
                     description: >-
                       When deleting a spanner instance, this boolean option will delete all backups of this instance.
 
                       This must be set to true if you created a backup manually in the console.
                     type: boolean
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -264,6 +319,51 @@ spec:
                       Structure is documented below.
                     items:
                       properties:
+                        asymmetricAutoscalingOptions:
+                          description: >-
+                            Asymmetric autoscaling options for specific replicas.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              overrides:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    autoscalingLimits:
+                                      description: >-
+                                        A nested object resource.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          maxNodes:
+                                            description: The maximum number of nodes for this specific replica.
+                                            type: number
+                                          minNodes:
+                                            description: The minimum number of nodes for this specific replica.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              replicaSelection:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    location:
+                                      description: The location of the replica to apply asymmetric autoscaling options.
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         autoscalingLimits:
                           description: >-
                             Defines scale in controls to reduce the risk of response latency
@@ -282,10 +382,7 @@ spec:
                           items:
                             properties:
                               maxNodes:
-                                description: >-
-                                  Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to min_nodes.
+                                description: The maximum number of nodes for this specific replica.
                                 type: number
                               maxProcessingUnits:
                                 description: >-
@@ -296,10 +393,7 @@ spec:
                                   min_processing_units.
                                 type: number
                               minNodes:
-                                description: >-
-                                  Specifies number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to 1.
+                                description: The minimum number of nodes for this specific replica.
                                 type: number
                               minProcessingUnits:
                                 description: >-
@@ -368,12 +462,28 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   forceDestroy:
                     description: >-
                       When deleting a spanner instance, this boolean option will delete all backups of this instance.
 
                       This must be set to true if you created a backup manually in the console.
                     type: boolean
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -627,6 +737,51 @@ spec:
                       Structure is documented below.
                     items:
                       properties:
+                        asymmetricAutoscalingOptions:
+                          description: >-
+                            Asymmetric autoscaling options for specific replicas.
+
+                            Structure is documented below.
+                          items:
+                            properties:
+                              overrides:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    autoscalingLimits:
+                                      description: >-
+                                        A nested object resource.
+
+                                        Structure is documented below.
+                                      items:
+                                        properties:
+                                          maxNodes:
+                                            description: The maximum number of nodes for this specific replica.
+                                            type: number
+                                          minNodes:
+                                            description: The minimum number of nodes for this specific replica.
+                                            type: number
+                                        type: object
+                                      type: array
+                                  type: object
+                                type: array
+                              replicaSelection:
+                                description: >-
+                                  A nested object resource.
+
+                                  Structure is documented below.
+                                items:
+                                  properties:
+                                    location:
+                                      description: The location of the replica to apply asymmetric autoscaling options.
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         autoscalingLimits:
                           description: >-
                             Defines scale in controls to reduce the risk of response latency
@@ -645,10 +800,7 @@ spec:
                           items:
                             properties:
                               maxNodes:
-                                description: >-
-                                  Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to min_nodes.
+                                description: The maximum number of nodes for this specific replica.
                                 type: number
                               maxProcessingUnits:
                                 description: >-
@@ -659,10 +811,7 @@ spec:
                                   min_processing_units.
                                 type: number
                               minNodes:
-                                description: >-
-                                  Specifies number of nodes allocated to the instance. If set, this number
-
-                                  should be greater than or equal to 1.
+                                description: The minimum number of nodes for this specific replica.
                                 type: number
                               minProcessingUnits:
                                 description: >-
@@ -731,6 +880,12 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   effectiveLabels:
                     additionalProperties:
                       type: string
@@ -745,6 +900,16 @@ spec:
                     type: boolean
                   id:
                     description: an identifier for the resource with format {{project}}/{{name}}
+                    type: string
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
                     type: string
                   labels:
                     additionalProperties:
@@ -925,6 +1090,45 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      asymmetricAutoscalingOptions:
+                        description: >-
+                          Asymmetric autoscaling options for specific replicas.
+
+                          Structure is documented below.
+                        items:
+                          properties:
+                            overrides:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                autoscalingLimits:
+                                  description: >-
+                                    A nested object resource.
+
+                                    Structure is documented below.
+                                  properties:
+                                    maxNodes:
+                                      description: The maximum number of nodes for this specific replica.
+                                      type: number
+                                    minNodes:
+                                      description: The minimum number of nodes for this specific replica.
+                                      type: number
+                                  type: object
+                              type: object
+                            replicaSelection:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                location:
+                                  description: The location of the replica to apply asymmetric autoscaling options.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
                       autoscalingLimits:
                         description: >-
                           Defines scale in controls to reduce the risk of response latency
@@ -942,10 +1146,7 @@ spec:
                           Structure is documented below.
                         properties:
                           maxNodes:
-                            description: >-
-                              Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to min_nodes.
+                            description: The maximum number of nodes for this specific replica.
                             type: number
                           maxProcessingUnits:
                             description: >-
@@ -956,10 +1157,7 @@ spec:
                               min_processing_units.
                             type: number
                           minNodes:
-                            description: >-
-                              Specifies number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to 1.
+                            description: The minimum number of nodes for this specific replica.
                             type: number
                           minProcessingUnits:
                             description: >-
@@ -1024,12 +1222,28 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   forceDestroy:
                     description: >-
                       When deleting a spanner instance, this boolean option will delete all backups of this instance.
 
                       This must be set to true if you created a backup manually in the console.
                     type: boolean
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -1086,6 +1300,45 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      asymmetricAutoscalingOptions:
+                        description: >-
+                          Asymmetric autoscaling options for specific replicas.
+
+                          Structure is documented below.
+                        items:
+                          properties:
+                            overrides:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                autoscalingLimits:
+                                  description: >-
+                                    A nested object resource.
+
+                                    Structure is documented below.
+                                  properties:
+                                    maxNodes:
+                                      description: The maximum number of nodes for this specific replica.
+                                      type: number
+                                    minNodes:
+                                      description: The minimum number of nodes for this specific replica.
+                                      type: number
+                                  type: object
+                              type: object
+                            replicaSelection:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                location:
+                                  description: The location of the replica to apply asymmetric autoscaling options.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
                       autoscalingLimits:
                         description: >-
                           Defines scale in controls to reduce the risk of response latency
@@ -1103,10 +1356,7 @@ spec:
                           Structure is documented below.
                         properties:
                           maxNodes:
-                            description: >-
-                              Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to min_nodes.
+                            description: The maximum number of nodes for this specific replica.
                             type: number
                           maxProcessingUnits:
                             description: >-
@@ -1117,10 +1367,7 @@ spec:
                               min_processing_units.
                             type: number
                           minNodes:
-                            description: >-
-                              Specifies number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to 1.
+                            description: The minimum number of nodes for this specific replica.
                             type: number
                           minProcessingUnits:
                             description: >-
@@ -1185,12 +1432,28 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   forceDestroy:
                     description: >-
                       When deleting a spanner instance, this boolean option will delete all backups of this instance.
 
                       This must be set to true if you created a backup manually in the console.
                     type: boolean
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
+                    type: string
                   labels:
                     additionalProperties:
                       type: string
@@ -1443,6 +1706,45 @@ spec:
 
                       Structure is documented below.
                     properties:
+                      asymmetricAutoscalingOptions:
+                        description: >-
+                          Asymmetric autoscaling options for specific replicas.
+
+                          Structure is documented below.
+                        items:
+                          properties:
+                            overrides:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                autoscalingLimits:
+                                  description: >-
+                                    A nested object resource.
+
+                                    Structure is documented below.
+                                  properties:
+                                    maxNodes:
+                                      description: The maximum number of nodes for this specific replica.
+                                      type: number
+                                    minNodes:
+                                      description: The minimum number of nodes for this specific replica.
+                                      type: number
+                                  type: object
+                              type: object
+                            replicaSelection:
+                              description: >-
+                                A nested object resource.
+
+                                Structure is documented below.
+                              properties:
+                                location:
+                                  description: The location of the replica to apply asymmetric autoscaling options.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
                       autoscalingLimits:
                         description: >-
                           Defines scale in controls to reduce the risk of response latency
@@ -1460,10 +1762,7 @@ spec:
                           Structure is documented below.
                         properties:
                           maxNodes:
-                            description: >-
-                              Specifies maximum number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to min_nodes.
+                            description: The maximum number of nodes for this specific replica.
                             type: number
                           maxProcessingUnits:
                             description: >-
@@ -1474,10 +1773,7 @@ spec:
                               min_processing_units.
                             type: number
                           minNodes:
-                            description: >-
-                              Specifies number of nodes allocated to the instance. If set, this number
-
-                              should be greater than or equal to 1.
+                            description: The minimum number of nodes for this specific replica.
                             type: number
                           minProcessingUnits:
                             description: >-
@@ -1542,6 +1838,12 @@ spec:
 
                       unique per project and between 4 and 30 characters in length.
                     type: string
+                  edition:
+                    description: >-
+                      The edition selected for this instance. Different editions provide different capabilities at different price points.
+
+                      Possible values are: EDITION_UNSPECIFIED, STANDARD, ENTERPRISE, ENTERPRISE_PLUS.
+                    type: string
                   effectiveLabels:
                     additionalProperties:
                       type: string
@@ -1556,6 +1858,16 @@ spec:
                     type: boolean
                   id:
                     description: an identifier for the resource with format {{project}}/{{name}}
+                    type: string
+                  instanceType:
+                    description: >-
+                      The type of this instance. The type can be used to distinguish product variants, that can affect aspects like:
+
+                      usage restrictions, quotas and billing. Currently this is used to distinguish FREE_INSTANCE vs PROVISIONED instances.
+
+                      When configured as FREE_INSTANCE, the field edition should not be configured.
+
+                      Possible values are: PROVISIONED, FREE_INSTANCE.
                     type: string
                   labels:
                     additionalProperties:

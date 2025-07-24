@@ -136,7 +136,7 @@ public partial class V1beta1FirewallPolicyAssociationSpecForProvider
     [JsonPropertyName("attachmentTargetSelector")]
     public V1beta1FirewallPolicyAssociationSpecForProviderAttachmentTargetSelector? AttachmentTargetSelector { get; set; }
 
-    /// <summary>The firewall policy ID of the association.</summary>
+    /// <summary>The firewall policy of the resource. This field can be updated to refer to a different Firewall Policy, which will create a new association from that new firewall policy with the flag to override the existing attachmentTarget's policy association. Note Due to potential risks with this operation it is highly recommended to use the create_before_destroy life cycle option on your exisiting firewall policy so as to prevent a situation where your attachment target has no associated policy.</summary>
     [JsonPropertyName("firewallPolicy")]
     public string? FirewallPolicy { get; set; }
 
@@ -281,7 +281,7 @@ public partial class V1beta1FirewallPolicyAssociationSpecInitProvider
     [JsonPropertyName("attachmentTargetSelector")]
     public V1beta1FirewallPolicyAssociationSpecInitProviderAttachmentTargetSelector? AttachmentTargetSelector { get; set; }
 
-    /// <summary>The firewall policy ID of the association.</summary>
+    /// <summary>The firewall policy of the resource. This field can be updated to refer to a different Firewall Policy, which will create a new association from that new firewall policy with the flag to override the existing attachmentTarget's policy association. Note Due to potential risks with this operation it is highly recommended to use the create_before_destroy life cycle option on your exisiting firewall policy so as to prevent a situation where your attachment target has no associated policy.</summary>
     [JsonPropertyName("firewallPolicy")]
     public string? FirewallPolicy { get; set; }
 
@@ -438,7 +438,7 @@ public partial class V1beta1FirewallPolicyAssociationStatusAtProvider
     [JsonPropertyName("attachmentTarget")]
     public string? AttachmentTarget { get; set; }
 
-    /// <summary>The firewall policy ID of the association.</summary>
+    /// <summary>The firewall policy of the resource. This field can be updated to refer to a different Firewall Policy, which will create a new association from that new firewall policy with the flag to override the existing attachmentTarget's policy association. Note Due to potential risks with this operation it is highly recommended to use the create_before_destroy life cycle option on your exisiting firewall policy so as to prevent a situation where your attachment target has no associated policy.</summary>
     [JsonPropertyName("firewallPolicy")]
     public string? FirewallPolicy { get; set; }
 
@@ -501,7 +501,7 @@ public partial class V1beta1FirewallPolicyAssociationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>FirewallPolicyAssociation is the Schema for the FirewallPolicyAssociations API. Applies a hierarchical firewall policy to a target resource</summary>
+/// <summary>FirewallPolicyAssociation is the Schema for the FirewallPolicyAssociations API. Allows associating hierarchical firewall policies with the target where they are applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FirewallPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FirewallPolicyAssociationSpec>, IStatus<V1beta1FirewallPolicyAssociationStatus>
@@ -531,7 +531,7 @@ public partial class V1beta1FirewallPolicyAssociation : IKubernetesObject<V1Obje
     public V1beta1FirewallPolicyAssociationStatus? Status { get; set; }
 }
 
-/// <summary>FirewallPolicyAssociation is the Schema for the FirewallPolicyAssociations API. Applies a hierarchical firewall policy to a target resource</summary>
+/// <summary>FirewallPolicyAssociation is the Schema for the FirewallPolicyAssociations API. Allows associating hierarchical firewall policies with the target where they are applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FirewallPolicyAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FirewallPolicyAssociation>

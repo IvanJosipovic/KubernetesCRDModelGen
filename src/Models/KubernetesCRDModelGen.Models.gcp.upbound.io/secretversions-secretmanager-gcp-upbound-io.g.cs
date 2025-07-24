@@ -105,6 +105,14 @@ public partial class V1beta1SecretVersionSpecForProvider
     [JsonPropertyName("secretDataSecretRef")]
     public V1beta1SecretVersionSpecForProviderSecretDataSecretRef? SecretDataSecretRef { get; set; }
 
+    /// <summary>The secret data. Must be no larger than 64KiB. For more info see updating write-only attributes Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretDataWo")]
+    public string? SecretDataWo { get; set; }
+
+    /// <summary>Triggers update of secret data write-only. For more info see updating write-only attributes</summary>
+    [JsonPropertyName("secretDataWoVersion")]
+    public double? SecretDataWoVersion { get; set; }
+
     /// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
     [JsonPropertyName("secretRef")]
     public V1beta1SecretVersionSpecForProviderSecretRef? SecretRef { get; set; }
@@ -209,7 +217,15 @@ public partial class V1beta1SecretVersionSpecInitProvider
 
     /// <summary>The secret data. Must be no larger than 64KiB.</summary>
     [JsonPropertyName("secretDataSecretRef")]
-    public V1beta1SecretVersionSpecInitProviderSecretDataSecretRef SecretDataSecretRef { get; set; }
+    public V1beta1SecretVersionSpecInitProviderSecretDataSecretRef? SecretDataSecretRef { get; set; }
+
+    /// <summary>The secret data. Must be no larger than 64KiB. For more info see updating write-only attributes Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretDataWo")]
+    public string? SecretDataWo { get; set; }
+
+    /// <summary>Triggers update of secret data write-only. For more info see updating write-only attributes</summary>
+    [JsonPropertyName("secretDataWoVersion")]
+    public double? SecretDataWoVersion { get; set; }
 
     /// <summary>Reference to a Secret in secretmanager to populate secret.</summary>
     [JsonPropertyName("secretRef")]
@@ -387,6 +403,14 @@ public partial class V1beta1SecretVersionStatusAtProvider
     /// <summary>Secret Manager secret resource</summary>
     [JsonPropertyName("secret")]
     public string? Secret { get; set; }
+
+    /// <summary>The secret data. Must be no larger than 64KiB. For more info see updating write-only attributes Note: This property is write-only and will not be read from the API.</summary>
+    [JsonPropertyName("secretDataWo")]
+    public string? SecretDataWo { get; set; }
+
+    /// <summary>Triggers update of secret data write-only. For more info see updating write-only attributes</summary>
+    [JsonPropertyName("secretDataWoVersion")]
+    public double? SecretDataWoVersion { get; set; }
 
     /// <summary>The version of the Secret.</summary>
     [JsonPropertyName("version")]

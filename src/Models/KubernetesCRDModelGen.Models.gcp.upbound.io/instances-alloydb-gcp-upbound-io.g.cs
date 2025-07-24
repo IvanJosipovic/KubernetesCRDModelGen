@@ -164,13 +164,43 @@ public partial class V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExtern
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderNetworkConfig
 {
+    /// <summary>Name of the allocated IP range for the private IP AlloyDB instance, for example: "google-managed-services-default". If set, the instance IPs will be created from this allocated range and will override the IP range used by the parent cluster. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
+    [JsonPropertyName("allocatedIpRangeOverride")]
+    public string? AllocatedIpRangeOverride { get; set; }
+
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
     [JsonPropertyName("authorizedExternalNetworks")]
     public IList<V1beta1InstanceSpecForProviderNetworkConfigAuthorizedExternalNetworks>? AuthorizedExternalNetworks { get; set; }
 
+    /// <summary>Enabling outbound public ip for the instance.</summary>
+    [JsonPropertyName("enableOutboundPublicIp")]
+    public bool? EnableOutboundPublicIp { get; set; }
+
     /// <summary>Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscAutoConnections
+{
+    /// <summary>The consumer network for the PSC service automation, example: "projects/vpc-host-project/global/networks/default". The consumer network might be hosted a different project than the consumer project. The API expects the consumer project specified to be the project ID (and not the project number)</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>The consumer project to which the PSC service automation endpoint will be created. The API expects the consumer project to be the project ID( and not the project number).</summary>
+    [JsonPropertyName("consumerProject")]
+    public string? ConsumerProject { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecForProviderPscInstanceConfigPscInterfaceConfigs
+{
+    /// <summary>The network attachment resource created in the consumer project to which the PSC interface will be linked. This is of the format: "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}". The network attachment must be in the same region as the instance.</summary>
+    [JsonPropertyName("networkAttachmentResource")]
+    public string? NetworkAttachmentResource { get; set; }
 }
 
 /// <summary></summary>
@@ -180,6 +210,14 @@ public partial class V1beta1InstanceSpecForProviderPscInstanceConfig
     /// <summary>List of consumer projects that are allowed to create PSC endpoints to service-attachments to this instance. These should be specified as project numbers only.</summary>
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
+
+    /// <summary>Configurations for setting up PSC service automation. Structure is documented below.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1InstanceSpecForProviderPscInstanceConfigPscAutoConnections>? PscAutoConnections { get; set; }
+
+    /// <summary>Configurations for setting up PSC interfaces attached to the instance which are used for outbound connectivity. Currently, AlloyDB supports only 0 or 1 PSC interface. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfigs")]
+    public IList<V1beta1InstanceSpecForProviderPscInstanceConfigPscInterfaceConfigs>? PscInterfaceConfigs { get; set; }
 }
 
 /// <summary></summary>
@@ -216,6 +254,10 @@ public partial class V1beta1InstanceSpecForProviderReadPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProvider
 {
+    /// <summary>'Specifies whether an instance needs to spin up. Once the instance is active, the activation policy can be updated to the NEVER to stop the instance. Likewise, the activation policy can be updated to ALWAYS to start the instance. There are restrictions around when an instance can/cannot be activated (for example, a read pool instance should be stopped before stopping primary etc.). Please refer to the API documentation for more details. Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.' Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.</summary>
+    [JsonPropertyName("activationPolicy")]
+    public string? ActivationPolicy { get; set; }
+
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
@@ -389,13 +431,43 @@ public partial class V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderNetworkConfig
 {
+    /// <summary>Name of the allocated IP range for the private IP AlloyDB instance, for example: "google-managed-services-default". If set, the instance IPs will be created from this allocated range and will override the IP range used by the parent cluster. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
+    [JsonPropertyName("allocatedIpRangeOverride")]
+    public string? AllocatedIpRangeOverride { get; set; }
+
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
     [JsonPropertyName("authorizedExternalNetworks")]
     public IList<V1beta1InstanceSpecInitProviderNetworkConfigAuthorizedExternalNetworks>? AuthorizedExternalNetworks { get; set; }
 
+    /// <summary>Enabling outbound public ip for the instance.</summary>
+    [JsonPropertyName("enableOutboundPublicIp")]
+    public bool? EnableOutboundPublicIp { get; set; }
+
     /// <summary>Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscAutoConnections
+{
+    /// <summary>The consumer network for the PSC service automation, example: "projects/vpc-host-project/global/networks/default". The consumer network might be hosted a different project than the consumer project. The API expects the consumer project specified to be the project ID (and not the project number)</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>The consumer project to which the PSC service automation endpoint will be created. The API expects the consumer project to be the project ID( and not the project number).</summary>
+    [JsonPropertyName("consumerProject")]
+    public string? ConsumerProject { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceSpecInitProviderPscInstanceConfigPscInterfaceConfigs
+{
+    /// <summary>The network attachment resource created in the consumer project to which the PSC interface will be linked. This is of the format: "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}". The network attachment must be in the same region as the instance.</summary>
+    [JsonPropertyName("networkAttachmentResource")]
+    public string? NetworkAttachmentResource { get; set; }
 }
 
 /// <summary></summary>
@@ -405,6 +477,14 @@ public partial class V1beta1InstanceSpecInitProviderPscInstanceConfig
     /// <summary>List of consumer projects that are allowed to create PSC endpoints to service-attachments to this instance. These should be specified as project numbers only.</summary>
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
+
+    /// <summary>Configurations for setting up PSC service automation. Structure is documented below.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1InstanceSpecInitProviderPscInstanceConfigPscAutoConnections>? PscAutoConnections { get; set; }
+
+    /// <summary>Configurations for setting up PSC interfaces attached to the instance which are used for outbound connectivity. Currently, AlloyDB supports only 0 or 1 PSC interface. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfigs")]
+    public IList<V1beta1InstanceSpecInitProviderPscInstanceConfigPscInterfaceConfigs>? PscInterfaceConfigs { get; set; }
 }
 
 /// <summary></summary>
@@ -441,6 +521,10 @@ public partial class V1beta1InstanceSpecInitProviderReadPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProvider
 {
+    /// <summary>'Specifies whether an instance needs to spin up. Once the instance is active, the activation policy can be updated to the NEVER to stop the instance. Likewise, the activation policy can be updated to ALWAYS to start the instance. There are restrictions around when an instance can/cannot be activated (for example, a read pool instance should be stopped before stopping primary etc.). Please refer to the API documentation for more details. Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.' Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.</summary>
+    [JsonPropertyName("activationPolicy")]
+    public string? ActivationPolicy { get; set; }
+
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
@@ -678,13 +762,55 @@ public partial class V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderNetworkConfig
 {
+    /// <summary>Name of the allocated IP range for the private IP AlloyDB instance, for example: "google-managed-services-default". If set, the instance IPs will be created from this allocated range and will override the IP range used by the parent cluster. The range name must comply with RFC 1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z?.</summary>
+    [JsonPropertyName("allocatedIpRangeOverride")]
+    public string? AllocatedIpRangeOverride { get; set; }
+
     /// <summary>A list of external networks authorized to access this instance. This field is only allowed to be set when enable_public_ip is set to true. Structure is documented below.</summary>
     [JsonPropertyName("authorizedExternalNetworks")]
     public IList<V1beta1InstanceStatusAtProviderNetworkConfigAuthorizedExternalNetworks>? AuthorizedExternalNetworks { get; set; }
 
+    /// <summary>Enabling outbound public ip for the instance.</summary>
+    [JsonPropertyName("enableOutboundPublicIp")]
+    public bool? EnableOutboundPublicIp { get; set; }
+
     /// <summary>Enabling public ip for the instance. If a user wishes to disable this, please also clear the list of the authorized external networks set on the same instance.</summary>
     [JsonPropertyName("enablePublicIp")]
     public bool? EnablePublicIp { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscAutoConnections
+{
+    /// <summary>The consumer network for the PSC service automation, example: "projects/vpc-host-project/global/networks/default". The consumer network might be hosted a different project than the consumer project. The API expects the consumer project specified to be the project ID (and not the project number)</summary>
+    [JsonPropertyName("consumerNetwork")]
+    public string? ConsumerNetwork { get; set; }
+
+    /// <summary>(Output) The status of the service connection policy.</summary>
+    [JsonPropertyName("consumerNetworkStatus")]
+    public string? ConsumerNetworkStatus { get; set; }
+
+    /// <summary>The consumer project to which the PSC service automation endpoint will be created. The API expects the consumer project to be the project ID( and not the project number).</summary>
+    [JsonPropertyName("consumerProject")]
+    public string? ConsumerProject { get; set; }
+
+    /// <summary>(Output) The IP address of the PSC service automation endpoint.</summary>
+    [JsonPropertyName("ipAddress")]
+    public string? IpAddress { get; set; }
+
+    /// <summary>(Output) The status of the PSC service automation connection.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InstanceStatusAtProviderPscInstanceConfigPscInterfaceConfigs
+{
+    /// <summary>The network attachment resource created in the consumer project to which the PSC interface will be linked. This is of the format: "projects/${CONSUMER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}". The network attachment must be in the same region as the instance.</summary>
+    [JsonPropertyName("networkAttachmentResource")]
+    public string? NetworkAttachmentResource { get; set; }
 }
 
 /// <summary></summary>
@@ -695,9 +821,17 @@ public partial class V1beta1InstanceStatusAtProviderPscInstanceConfig
     [JsonPropertyName("allowedConsumerProjects")]
     public IList<string>? AllowedConsumerProjects { get; set; }
 
+    /// <summary>Configurations for setting up PSC service automation. Structure is documented below.</summary>
+    [JsonPropertyName("pscAutoConnections")]
+    public IList<V1beta1InstanceStatusAtProviderPscInstanceConfigPscAutoConnections>? PscAutoConnections { get; set; }
+
     /// <summary>(Output) The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-psc.goog</summary>
     [JsonPropertyName("pscDnsName")]
     public string? PscDnsName { get; set; }
+
+    /// <summary>Configurations for setting up PSC interfaces attached to the instance which are used for outbound connectivity. Currently, AlloyDB supports only 0 or 1 PSC interface. Structure is documented below.</summary>
+    [JsonPropertyName("pscInterfaceConfigs")]
+    public IList<V1beta1InstanceStatusAtProviderPscInstanceConfigPscInterfaceConfigs>? PscInterfaceConfigs { get; set; }
 
     /// <summary>(Output) The service attachment created when Private Service Connect (PSC) is enabled for the instance. The name of the resource will be in the format of projects/&lt;alloydb-tenant-project-number&gt;/regions/&lt;region-name&gt;/serviceAttachments/&lt;service-attachment-name&gt;</summary>
     [JsonPropertyName("serviceAttachmentLink")]
@@ -738,6 +872,10 @@ public partial class V1beta1InstanceStatusAtProviderReadPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProvider
 {
+    /// <summary>'Specifies whether an instance needs to spin up. Once the instance is active, the activation policy can be updated to the NEVER to stop the instance. Likewise, the activation policy can be updated to ALWAYS to start the instance. There are restrictions around when an instance can/cannot be activated (for example, a read pool instance should be stopped before stopping primary etc.). Please refer to the API documentation for more details. Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.' Possible values are: ACTIVATION_POLICY_UNSPECIFIED, ALWAYS, NEVER.</summary>
+    [JsonPropertyName("activationPolicy")]
+    public string? ActivationPolicy { get; set; }
+
     /// <summary>Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. Note: This field is non-authoritative, and will only manage the annotations present in your configuration. Please refer to the field effective_annotations for all of the annotations present on the resource.</summary>
     [JsonPropertyName("annotations")]
     public IDictionary<string, string>? Annotations { get; set; }
@@ -805,6 +943,10 @@ public partial class V1beta1InstanceStatusAtProvider
     /// <summary>Instance level network configuration. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1InstanceStatusAtProviderNetworkConfig>? NetworkConfig { get; set; }
+
+    /// <summary>The outbound public IP addresses for the instance. This is available ONLY when networkConfig.enableOutboundPublicIp is set to true. These IP addresses are used for outbound connections.</summary>
+    [JsonPropertyName("outboundPublicIpAddresses")]
+    public IList<string>? OutboundPublicIpAddresses { get; set; }
 
     /// <summary>Configuration for Private Service Connect (PSC) for the instance. Structure is documented below.</summary>
     [JsonPropertyName("pscInstanceConfig")]

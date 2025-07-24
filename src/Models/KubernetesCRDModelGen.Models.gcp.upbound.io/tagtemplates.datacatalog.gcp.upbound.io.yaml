@@ -744,7 +744,7 @@ spec:
               forProvider:
                 properties:
                   displayName:
-                    description: The display name for this field.
+                    description: The display name for this template.
                     type: string
                   fields:
                     description: >-
@@ -855,7 +855,7 @@ spec:
                   autoscaler.
                 properties:
                   displayName:
-                    description: The display name for this field.
+                    description: The display name for this template.
                     type: string
                   fields:
                     description: >-
@@ -1157,7 +1157,7 @@ spec:
               atProvider:
                 properties:
                   displayName:
-                    description: The display name for this field.
+                    description: The display name for this template.
                     type: string
                   fields:
                     description: >-

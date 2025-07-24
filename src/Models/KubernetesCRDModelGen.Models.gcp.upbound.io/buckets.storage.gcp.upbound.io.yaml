@@ -158,6 +158,55 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    items:
+                      properties:
+                        enabled:
+                          description: Enables hierarchical namespace for the bucket.
+                          type: boolean
+                      type: object
+                    type: array
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    items:
+                      properties:
+                        allowAllServiceAgentAccess:
+                          description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                          type: boolean
+                        allowCrossOrgVpcs:
+                          description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                          type: boolean
+                        mode:
+                          description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                          type: string
+                        publicNetworkSource:
+                          description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
+                        vpcNetworkSources:
+                          description: The list of VPC networks that can access the bucket. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                              network:
+                                description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   labels:
                     additionalProperties:
                       type: string
@@ -214,9 +263,6 @@ spec:
                                 items:
                                   type: string
                                 type: array
-                              noAge:
-                                description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
-                                type: boolean
                               noncurrentTimeBefore:
                                 description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
                                 type: string
@@ -426,6 +472,55 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    items:
+                      properties:
+                        enabled:
+                          description: Enables hierarchical namespace for the bucket.
+                          type: boolean
+                      type: object
+                    type: array
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    items:
+                      properties:
+                        allowAllServiceAgentAccess:
+                          description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                          type: boolean
+                        allowCrossOrgVpcs:
+                          description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                          type: boolean
+                        mode:
+                          description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                          type: string
+                        publicNetworkSource:
+                          description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
+                        vpcNetworkSources:
+                          description: The list of VPC networks that can access the bucket. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                              network:
+                                description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   labels:
                     additionalProperties:
                       type: string
@@ -482,9 +577,6 @@ spec:
                                 items:
                                   type: string
                                 type: array
-                              noAge:
-                                description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
-                                type: boolean
                               noncurrentTimeBefore:
                                 description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
                                 type: string
@@ -894,8 +986,57 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    items:
+                      properties:
+                        enabled:
+                          description: Enables hierarchical namespace for the bucket.
+                          type: boolean
+                      type: object
+                    type: array
                   id:
                     type: string
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    items:
+                      properties:
+                        allowAllServiceAgentAccess:
+                          description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                          type: boolean
+                        allowCrossOrgVpcs:
+                          description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                          type: boolean
+                        mode:
+                          description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                          type: string
+                        publicNetworkSource:
+                          description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                            type: object
+                          type: array
+                        vpcNetworkSources:
+                          description: The list of VPC networks that can access the bucket. Structure is documented below.
+                          items:
+                            properties:
+                              allowedIpCidrRanges:
+                                description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                                items:
+                                  type: string
+                                type: array
+                              network:
+                                description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
                   labels:
                     additionalProperties:
                       type: string
@@ -952,9 +1093,6 @@ spec:
                                 items:
                                   type: string
                                 type: array
-                              noAge:
-                                description: While set true, age value will be omitted. Note Required to set true when age is unset in the config file.
-                                type: boolean
                               noncurrentTimeBefore:
                                 description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent.
                                 type: string
@@ -1051,9 +1189,15 @@ spec:
                     description: A map of key/value label pairs to assign to the bucket.
                     type: object
                     x-kubernetes-map-type: granular
+                  timeCreated:
+                    description: (Computed) The creation time of the bucket in RFC 3339 format.
+                    type: string
                   uniformBucketLevelAccess:
                     description: Enables Uniform bucket-level access access to a bucket.
                     type: boolean
+                  updated:
+                    description: (Computed) The time at which the bucket's metadata or IAM policy was last updated, in RFC 3339 format.
+                    type: string
                   url:
                     description: The base URL of the bucket, in the format gs://<bucket-name>.
                     type: string
@@ -1286,6 +1430,49 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    properties:
+                      enabled:
+                        description: Enables hierarchical namespace for the bucket.
+                        type: boolean
+                    type: object
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    properties:
+                      allowAllServiceAgentAccess:
+                        description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                        type: boolean
+                      allowCrossOrgVpcs:
+                        description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                        type: boolean
+                      mode:
+                        description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                        type: string
+                      publicNetworkSource:
+                        description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                        properties:
+                          allowedIpCidrRanges:
+                            description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                            items:
+                              type: string
+                            type: array
+                        type: object
+                      vpcNetworkSources:
+                        description: The list of VPC networks that can access the bucket. Structure is documented below.
+                        items:
+                          properties:
+                            allowedIpCidrRanges:
+                              description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                              items:
+                                type: string
+                              type: array
+                            network:
+                              description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                              type: string
+                          type: object
+                        type: array
+                    type: object
                   labels:
                     additionalProperties:
                       type: string
@@ -1310,7 +1497,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
+                              description: Minimum age of an object in days to satisfy this condition. Note To set 0 value of age, send_age_if_zero should be set true otherwise 0 value of age field will be ignored.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -1339,9 +1526,6 @@ spec:
                               items:
                                 type: string
                               type: array
-                            noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
-                              type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
@@ -1389,7 +1573,7 @@ spec:
                       is not provided, the provider project is used.
                     type: string
                   publicAccessPrevention:
-                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
+                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
                     type: string
                   requesterPays:
                     description: Enables Requester Pays on a storage bucket.
@@ -1534,6 +1718,49 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    properties:
+                      enabled:
+                        description: Enables hierarchical namespace for the bucket.
+                        type: boolean
+                    type: object
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    properties:
+                      allowAllServiceAgentAccess:
+                        description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                        type: boolean
+                      allowCrossOrgVpcs:
+                        description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                        type: boolean
+                      mode:
+                        description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                        type: string
+                      publicNetworkSource:
+                        description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                        properties:
+                          allowedIpCidrRanges:
+                            description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                            items:
+                              type: string
+                            type: array
+                        type: object
+                      vpcNetworkSources:
+                        description: The list of VPC networks that can access the bucket. Structure is documented below.
+                        items:
+                          properties:
+                            allowedIpCidrRanges:
+                              description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                              items:
+                                type: string
+                              type: array
+                            network:
+                              description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                              type: string
+                          type: object
+                        type: array
+                    type: object
                   labels:
                     additionalProperties:
                       type: string
@@ -1558,7 +1785,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
+                              description: Minimum age of an object in days to satisfy this condition. Note To set 0 value of age, send_age_if_zero should be set true otherwise 0 value of age field will be ignored.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -1587,9 +1814,6 @@ spec:
                               items:
                                 type: string
                               type: array
-                            noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
-                              type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
@@ -1637,7 +1861,7 @@ spec:
                       is not provided, the provider project is used.
                     type: string
                   publicAccessPrevention:
-                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
+                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
                     type: string
                   requesterPays:
                     description: Enables Requester Pays on a storage bucket.
@@ -1982,8 +2206,51 @@ spec:
 
                       boolean option will delete all contained objects.
                     type: boolean
+                  hierarchicalNamespace:
+                    description: The bucket's hierarchical namespace policy, which defines the bucket capability to handle folders in logical structure. Structure is documented below. To use this configuration, uniform_bucket_level_access must be enabled on bucket.
+                    properties:
+                      enabled:
+                        description: Enables hierarchical namespace for the bucket.
+                        type: boolean
+                    type: object
                   id:
                     type: string
+                  ipFilter:
+                    description: The bucket IP filtering configuration. Specifies the network sources that can access the bucket, as well as its underlying objects. Structure is documented below.
+                    properties:
+                      allowAllServiceAgentAccess:
+                        description: While set true, allows all service agents to access the bucket regardless of the IP filter configuration.
+                        type: boolean
+                      allowCrossOrgVpcs:
+                        description: While set true, allows cross-org VPCs in the bucket's IP filter configuration.
+                        type: boolean
+                      mode:
+                        description: 'The state of the IP filter configuration. Valid values are Enabled and Disabled. When set to Enabled, IP filtering rules are applied to a bucket and all incoming requests to the bucket are evaluated against these rules. When set to Disabled, IP filtering rules are not applied to a bucket. Note: allow_all_service_agent_access must be supplied when mode is set to Enabled, it can be ommited for other values.'
+                        type: string
+                      publicNetworkSource:
+                        description: The public network IP address ranges that can access the bucket and its data. Structure is documented below.
+                        properties:
+                          allowedIpCidrRanges:
+                            description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                            items:
+                              type: string
+                            type: array
+                        type: object
+                      vpcNetworkSources:
+                        description: The list of VPC networks that can access the bucket. Structure is documented below.
+                        items:
+                          properties:
+                            allowedIpCidrRanges:
+                              description: The list of public or private IPv4 and IPv6 CIDR ranges that can access the bucket.
+                              items:
+                                type: string
+                              type: array
+                            network:
+                              description: 'Name of the network. Format: projects/PROJECT_ID/global/networks/NETWORK_NAME'
+                              type: string
+                          type: object
+                        type: array
+                    type: object
                   labels:
                     additionalProperties:
                       type: string
@@ -2008,7 +2275,7 @@ spec:
                           description: The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
                           properties:
                             age:
-                              description: Minimum age of an object in days to satisfy this condition. If not supplied alongside another condition and without setting no_age to true, a default age of 0 will be set.
+                              description: Minimum age of an object in days to satisfy this condition. Note To set 0 value of age, send_age_if_zero should be set true otherwise 0 value of age field will be ignored.
                               type: number
                             createdBefore:
                               description: A date in the RFC 3339 format YYYY-MM-DD. This condition is satisfied when an object is created before midnight of the specified date in UTC.
@@ -2037,9 +2304,6 @@ spec:
                               items:
                                 type: string
                               type: array
-                            noAge:
-                              description: While set true, age value will be omitted from requests. This prevents a default age of 0 from being applied, and if you do not have an age value set, setting this to true is strongly recommended. When unset and other conditions are set to zero values, this can result in a rule that applies your action to all files in the bucket. no_age is deprecated and will be removed in a future major release. Use send_age_if_zero instead.
-                              type: boolean
                             noncurrentTimeBefore:
                               description: Relevant only for versioned objects. The date in RFC 3339 (e.g. 2017-06-13) when the object became nonconcurrent. When set to 0 it will be ignored, and your state will treat it as though you supplied no noncurrent_time_before condition.
                               type: string
@@ -2089,7 +2353,7 @@ spec:
                   projectNumber:
                     type: number
                   publicAccessPrevention:
-                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention. only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
+                    description: Prevents public access to a bucket. Acceptable values are "inherited" or "enforced". If "inherited", the bucket uses public access prevention only if the bucket is subject to the public access prevention organization policy constraint. Defaults to "inherited".
                     type: string
                   requesterPays:
                     description: Enables Requester Pays on a storage bucket.
@@ -2129,9 +2393,15 @@ spec:
                     description: A map of key/value label pairs to assign to the bucket.
                     type: object
                     x-kubernetes-map-type: granular
+                  timeCreated:
+                    description: (Computed) The creation time of the bucket in RFC 3339 format.
+                    type: string
                   uniformBucketLevelAccess:
                     description: Enables Uniform bucket-level access access to a bucket.
                     type: boolean
+                  updated:
+                    description: (Computed) The time at which the bucket's metadata or IAM policy was last updated, in RFC 3339 format.
+                    type: string
                   url:
                     description: The base URL of the bucket, in the format gs://<bucket-name>.
                     type: string

@@ -15,6 +15,10 @@ public partial class V1beta1DatabaseSpecForProviderEncryptionConfig
     /// <summary>Fully qualified name of the KMS key to use to encrypt this database. This key must exist in the same location as the Spanner Database.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+
+    /// <summary>Fully qualified name of the KMS keys to use to encrypt this database. The keys must exist in the same locations as the Spanner Database.</summary>
+    [JsonPropertyName("kmsKeyNames")]
+    public IList<string>? KmsKeyNames { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -81,11 +85,15 @@ public partial class V1beta1DatabaseSpecForProvider
     [JsonPropertyName("databaseDialect")]
     public string? DatabaseDialect { get; set; }
 
-    /// <summary>An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.</summary>
+    /// <summary>An optional list of DDL statements to run inside the database. Statements can create tables, indexes, etc. During creation these statements execute atomically with the creation of the database and if there is an error in any statement, the database is not created. Limited updates to this field are supported, and newly appended DDL statements can be executed in an update. However, modifications to prior statements will create a plan that marks the resource for recreation.</summary>
     [JsonPropertyName("ddl")]
     public IList<string>? Ddl { get; set; }
 
-    /// <summary>Defaults to true.</summary>
+    /// <summary>The default time zone for the database. The default time zone must be a valid name from the tz database. Default value is "America/Los_angeles".</summary>
+    [JsonPropertyName("defaultTimeZone")]
+    public string? DefaultTimeZone { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the database is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -125,6 +133,10 @@ public partial class V1beta1DatabaseSpecInitProviderEncryptionConfig
     /// <summary>Fully qualified name of the KMS key to use to encrypt this database. This key must exist in the same location as the Spanner Database.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+
+    /// <summary>Fully qualified name of the KMS keys to use to encrypt this database. The keys must exist in the same locations as the Spanner Database.</summary>
+    [JsonPropertyName("kmsKeyNames")]
+    public IList<string>? KmsKeyNames { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -135,11 +147,15 @@ public partial class V1beta1DatabaseSpecInitProvider
     [JsonPropertyName("databaseDialect")]
     public string? DatabaseDialect { get; set; }
 
-    /// <summary>An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.</summary>
+    /// <summary>An optional list of DDL statements to run inside the database. Statements can create tables, indexes, etc. During creation these statements execute atomically with the creation of the database and if there is an error in any statement, the database is not created. Limited updates to this field are supported, and newly appended DDL statements can be executed in an update. However, modifications to prior statements will create a plan that marks the resource for recreation.</summary>
     [JsonPropertyName("ddl")]
     public IList<string>? Ddl { get; set; }
 
-    /// <summary>Defaults to true.</summary>
+    /// <summary>The default time zone for the database. The default time zone must be a valid name from the tz database. Default value is "America/Los_angeles".</summary>
+    [JsonPropertyName("defaultTimeZone")]
+    public string? DefaultTimeZone { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the database is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -299,6 +315,10 @@ public partial class V1beta1DatabaseStatusAtProviderEncryptionConfig
     /// <summary>Fully qualified name of the KMS key to use to encrypt this database. This key must exist in the same location as the Spanner Database.</summary>
     [JsonPropertyName("kmsKeyName")]
     public string? KmsKeyName { get; set; }
+
+    /// <summary>Fully qualified name of the KMS keys to use to encrypt this database. The keys must exist in the same locations as the Spanner Database.</summary>
+    [JsonPropertyName("kmsKeyNames")]
+    public IList<string>? KmsKeyNames { get; set; }
 }
 
 /// <summary></summary>
@@ -312,6 +332,10 @@ public partial class V1beta1DatabaseStatusAtProvider
     /// <summary>An optional list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.</summary>
     [JsonPropertyName("ddl")]
     public IList<string>? Ddl { get; set; }
+
+    /// <summary>The default time zone for the database. The default time zone must be a valid name from the tz database. Default value is "America/Los_angeles".</summary>
+    [JsonPropertyName("defaultTimeZone")]
+    public string? DefaultTimeZone { get; set; }
 
     /// <summary>Defaults to true.</summary>
     [JsonPropertyName("deletionProtection")]

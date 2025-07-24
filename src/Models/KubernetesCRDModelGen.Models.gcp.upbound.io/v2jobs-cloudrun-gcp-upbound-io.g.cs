@@ -152,6 +152,91 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersResour
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeGrpc
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.</summary>
+    [JsonPropertyName("service")]
+    public string? Service { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders
+{
+    /// <summary>Volume's name.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The header field value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeHttpGet
+{
+    /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
+    [JsonPropertyName("httpHeaders")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders>? HttpHeaders { get; set; }
+
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeTcpSocket
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbe
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public double? FailureThreshold { get; set; }
+
+    /// <summary>GRPC specifies an action involving a GRPC port. Structure is documented below.</summary>
+    [JsonPropertyName("grpc")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeGrpc>? Grpc { get; set; }
+
+    /// <summary>HttpGet specifies the http request to perform. Structure is documented below.</summary>
+    [JsonPropertyName("httpGet")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeHttpGet>? HttpGet { get; set; }
+
+    /// <summary>Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public double? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public double? PeriodSeconds { get; set; }
+
+    /// <summary>TcpSocket specifies an action involving a TCP port. Structure is documented below.</summary>
+    [JsonPropertyName("tcpSocket")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbeTcpSocket>? TcpSocket { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public double? TimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -175,6 +260,10 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
+    /// <summary>Names of the containers that must start before this container.</summary>
+    [JsonPropertyName("dependsOn")]
+    public IList<string>? DependsOn { get; set; }
+
     /// <summary>List of environment variables to set in the container. Structure is documented below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersEnv>? Env { get; set; }
@@ -194,6 +283,10 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateContainers
     /// <summary>Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources Structure is documented below.</summary>
     [JsonPropertyName("resources")]
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersResources>? Resources { get; set; }
+
+    /// <summary>Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. Structure is documented below.</summary>
+    [JsonPropertyName("startupProbe")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateContainersStartupProbe>? StartupProbe { get; set; }
 
     /// <summary>Volume to mount into the container's filesystem. Structure is documented below.</summary>
     [JsonPropertyName("volumeMounts")]
@@ -275,6 +368,49 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesCloudSqlI
     /// <summary>Selector for a list of DatabaseInstance in sql to populate instances.</summary>
     [JsonPropertyName("instancesSelector")]
     public V1beta1V2JobSpecForProviderTemplateTemplateVolumesCloudSqlInstanceInstancesSelector? InstancesSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesGcs
+{
+    /// <summary>Name of the cloud storage bucket to back the volume. The resource service account must have permission to access the bucket.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumesNfs
+{
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Hostname or IP address of the NFS server.</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
 }
 
 /// <summary></summary>
@@ -383,9 +519,21 @@ public partial class V1beta1V2JobSpecForProviderTemplateTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2JobSpecForProviderTemplateTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. Structure is documented below.</summary>
+    [JsonPropertyName("gcs")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateVolumesGcs>? Gcs { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>NFS share mounted as a volume. Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1V2JobSpecForProviderTemplateTemplateVolumesNfs>? Nfs { get; set; }
 
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -507,6 +655,10 @@ public partial class V1beta1V2JobSpecForProvider
     /// <summary>Arbitrary version identifier for the API client.</summary>
     [JsonPropertyName("clientVersion")]
     public string? ClientVersion { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the job is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.</summary>
     [JsonPropertyName("labels")]
@@ -673,6 +825,91 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersResou
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeGrpc
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.</summary>
+    [JsonPropertyName("service")]
+    public string? Service { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders
+{
+    /// <summary>Volume's name.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The header field value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeHttpGet
+{
+    /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
+    [JsonPropertyName("httpHeaders")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders>? HttpHeaders { get; set; }
+
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeTcpSocket
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbe
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public double? FailureThreshold { get; set; }
+
+    /// <summary>GRPC specifies an action involving a GRPC port. Structure is documented below.</summary>
+    [JsonPropertyName("grpc")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeGrpc>? Grpc { get; set; }
+
+    /// <summary>HttpGet specifies the http request to perform. Structure is documented below.</summary>
+    [JsonPropertyName("httpGet")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeHttpGet>? HttpGet { get; set; }
+
+    /// <summary>Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public double? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public double? PeriodSeconds { get; set; }
+
+    /// <summary>TcpSocket specifies an action involving a TCP port. Structure is documented below.</summary>
+    [JsonPropertyName("tcpSocket")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbeTcpSocket>? TcpSocket { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public double? TimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -696,6 +933,10 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
+    /// <summary>Names of the containers that must start before this container.</summary>
+    [JsonPropertyName("dependsOn")]
+    public IList<string>? DependsOn { get; set; }
+
     /// <summary>List of environment variables to set in the container. Structure is documented below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersEnv>? Env { get; set; }
@@ -715,6 +956,10 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateContainers
     /// <summary>Compute Resource requirements by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources Structure is documented below.</summary>
     [JsonPropertyName("resources")]
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersResources>? Resources { get; set; }
+
+    /// <summary>Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. Structure is documented below.</summary>
+    [JsonPropertyName("startupProbe")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateContainersStartupProbe>? StartupProbe { get; set; }
 
     /// <summary>Volume to mount into the container's filesystem. Structure is documented below.</summary>
     [JsonPropertyName("volumeMounts")]
@@ -796,6 +1041,49 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesCloudSql
     /// <summary>Selector for a list of DatabaseInstance in sql to populate instances.</summary>
     [JsonPropertyName("instancesSelector")]
     public V1beta1V2JobSpecInitProviderTemplateTemplateVolumesCloudSqlInstanceInstancesSelector? InstancesSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesGcs
+{
+    /// <summary>Name of the cloud storage bucket to back the volume. The resource service account must have permission to access the bucket.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumesNfs
+{
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Hostname or IP address of the NFS server.</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
 }
 
 /// <summary></summary>
@@ -904,9 +1192,21 @@ public partial class V1beta1V2JobSpecInitProviderTemplateTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. Structure is documented below.</summary>
+    [JsonPropertyName("gcs")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVolumesGcs>? Gcs { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>NFS share mounted as a volume. Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1V2JobSpecInitProviderTemplateTemplateVolumesNfs>? Nfs { get; set; }
 
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -1028,6 +1328,10 @@ public partial class V1beta1V2JobSpecInitProvider
     /// <summary>Arbitrary version identifier for the API client.</summary>
     [JsonPropertyName("clientVersion")]
     public string? ClientVersion { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the job is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with run.googleapis.com, cloud.googleapis.com, serving.knative.dev, or autoscaling.knative.dev namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 ExecutionTemplate.</summary>
     [JsonPropertyName("labels")]
@@ -1312,6 +1616,91 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersResou
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeGrpc
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The name of the service to place in the gRPC HealthCheckRequest (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the default behavior is defined by gRPC.</summary>
+    [JsonPropertyName("service")]
+    public string? Service { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders
+{
+    /// <summary>Volume's name.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The header field value.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeHttpGet
+{
+    /// <summary>Custom headers to set in the request. HTTP allows repeated headers. Structure is documented below.</summary>
+    [JsonPropertyName("httpHeaders")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeHttpGetHttpHeaders>? HttpHeaders { get; set; }
+
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeTcpSocket
+{
+    /// <summary>Port number to access on the container. Number must be in the range 1 to 65535. If not specified, defaults to the same value as container.ports[0].containerPort.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbe
+{
+    /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.</summary>
+    [JsonPropertyName("failureThreshold")]
+    public double? FailureThreshold { get; set; }
+
+    /// <summary>GRPC specifies an action involving a GRPC port. Structure is documented below.</summary>
+    [JsonPropertyName("grpc")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeGrpc>? Grpc { get; set; }
+
+    /// <summary>HttpGet specifies the http request to perform. Structure is documented below.</summary>
+    [JsonPropertyName("httpGet")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeHttpGet>? HttpGet { get; set; }
+
+    /// <summary>Number of seconds after the container has started before the probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum value is 240.</summary>
+    [JsonPropertyName("initialDelaySeconds")]
+    public double? InitialDelaySeconds { get; set; }
+
+    /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Maximum value is 240.</summary>
+    [JsonPropertyName("periodSeconds")]
+    public double? PeriodSeconds { get; set; }
+
+    /// <summary>TcpSocket specifies an action involving a TCP port. Structure is documented below.</summary>
+    [JsonPropertyName("tcpSocket")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbeTcpSocket>? TcpSocket { get; set; }
+
+    /// <summary>Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. Maximum value is 3600. Must be smaller than periodSeconds.</summary>
+    [JsonPropertyName("timeoutSeconds")]
+    public double? TimeoutSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainersVolumeMounts
 {
     /// <summary>Path within the container at which the volume should be mounted. Must not contain ':'. For Cloud SQL volumes, it can be left empty, or must otherwise be /cloudsql. All instances defined in the Volume will be available as /cloudsql/[instance]. For more information on Cloud SQL volumes, visit https://cloud.google.com/sql/docs/mysql/connect-run</summary>
@@ -1335,6 +1724,10 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainers
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
+    /// <summary>Names of the containers that must start before this container.</summary>
+    [JsonPropertyName("dependsOn")]
+    public IList<string>? DependsOn { get; set; }
+
     /// <summary>List of environment variables to set in the container. Structure is documented below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersEnv>? Env { get; set; }
@@ -1355,6 +1748,10 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateContainers
     [JsonPropertyName("resources")]
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersResources>? Resources { get; set; }
 
+    /// <summary>Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. Structure is documented below.</summary>
+    [JsonPropertyName("startupProbe")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersStartupProbe>? StartupProbe { get; set; }
+
     /// <summary>Volume to mount into the container's filesystem. Structure is documented below.</summary>
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateContainersVolumeMounts>? VolumeMounts { get; set; }
@@ -1371,6 +1768,49 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesCloudSql
     /// <summary>The Cloud SQL instance connection names, as can be found in https://console.cloud.google.com/sql/instances. Visit https://cloud.google.com/sql/docs/mysql/connect-run for more information on how to connect Cloud SQL and Cloud Run. Format: {project}:{location}:{instance}</summary>
     [JsonPropertyName("instances")]
     public IList<string>? Instances { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesEmptyDir
+{
+    /// <summary>The different types of medium supported for EmptyDir. Default value is MEMORY. Possible values are: MEMORY.</summary>
+    [JsonPropertyName("medium")]
+    public string? Medium { get; set; }
+
+    /// <summary>Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between the SizeLimit specified here and the sum of memory limits of all containers in a pod. This field's values are of the 'Quantity' k8s type: https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/. The default is nil which means that the limit is undefined. More info: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir.</summary>
+    [JsonPropertyName("sizeLimit")]
+    public string? SizeLimit { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesGcs
+{
+    /// <summary>Name of the cloud storage bucket to back the volume. The resource service account must have permission to access the bucket.</summary>
+    [JsonPropertyName("bucket")]
+    public string? Bucket { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumesNfs
+{
+    /// <summary>Path that is exported by the NFS server.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+
+    /// <summary>If true, mount this volume as read-only in all mounts.</summary>
+    [JsonPropertyName("readOnly")]
+    public bool? ReadOnly { get; set; }
+
+    /// <summary>Hostname or IP address of the NFS server.</summary>
+    [JsonPropertyName("server")]
+    public string? Server { get; set; }
 }
 
 /// <summary></summary>
@@ -1415,9 +1855,21 @@ public partial class V1beta1V2JobStatusAtProviderTemplateTemplateVolumes
     [JsonPropertyName("cloudSqlInstance")]
     public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVolumesCloudSqlInstance>? CloudSqlInstance { get; set; }
 
+    /// <summary>Ephemeral storage used as a shared volume. Structure is documented below.</summary>
+    [JsonPropertyName("emptyDir")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVolumesEmptyDir>? EmptyDir { get; set; }
+
+    /// <summary>Cloud Storage bucket mounted as a volume using GCSFuse. Structure is documented below.</summary>
+    [JsonPropertyName("gcs")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVolumesGcs>? Gcs { get; set; }
+
     /// <summary>Volume's name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>NFS share mounted as a volume. Structure is documented below.</summary>
+    [JsonPropertyName("nfs")]
+    public IList<V1beta1V2JobStatusAtProviderTemplateTemplateVolumesNfs>? Nfs { get; set; }
 
     /// <summary>Secret represents a secret that should populate this volume. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret Structure is documented below.</summary>
     [JsonPropertyName("secret")]
@@ -1592,6 +2044,10 @@ public partial class V1beta1V2JobStatusAtProvider
     /// <summary>The deletion time.</summary>
     [JsonPropertyName("deleteTime")]
     public string? DeleteTime { get; set; }
+
+    /// <summary>Defaults to true. When the field is set to false, deleting the job is allowed.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("effectiveAnnotations")]

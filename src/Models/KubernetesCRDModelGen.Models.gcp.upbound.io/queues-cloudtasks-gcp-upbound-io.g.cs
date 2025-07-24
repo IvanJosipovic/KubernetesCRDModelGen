@@ -25,6 +25,254 @@ public partial class V1beta1QueueSpecForProviderAppEngineRoutingOverride
     public string? Version { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverridesHeader
+{
+    /// <summary>The Key of the header.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>The Value of the header.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetHeaderOverrides
+{
+    /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
+    [JsonPropertyName("header")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetHeaderOverridesHeader>? Header { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOauthToken
+{
+    /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1QueueSpecForProviderHttpTargetOauthTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetOidcToken
+{
+    /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
+    [JsonPropertyName("audience")]
+    public string? Audience { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1QueueSpecForProviderHttpTargetOidcTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetUriOverridePathOverride
+{
+    /// <summary>The URI path (e.g., /users/1234). Default is an empty string.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetUriOverrideQueryOverride
+{
+    /// <summary>The query parameters (e.g., qparam1=123&amp;qparam2=456). Default is an empty string.</summary>
+    [JsonPropertyName("queryParams")]
+    public string? QueryParams { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTargetUriOverride
+{
+    /// <summary>Host override. When specified, replaces the host part of the task URL. For example, if the task URL is "https://www.google.com", and host value is set to "example.net", the overridden URI will be changed to "https://example.net". Host value cannot be an empty string (INVALID_ARGUMENT).</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
+    [JsonPropertyName("pathOverride")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetUriOverridePathOverride>? PathOverride { get; set; }
+
+    /// <summary>Port override. When specified, replaces the port part of the task URI. For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the port to 0 (Zero) clears the URI port.</summary>
+    [JsonPropertyName("port")]
+    public string? Port { get; set; }
+
+    /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
+    [JsonPropertyName("queryOverride")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetUriOverrideQueryOverride>? QueryOverride { get; set; }
+
+    /// <summary>Scheme override. When specified, the task URI scheme is replaced by the provided value (HTTP or HTTPS). Possible values are: HTTP, HTTPS.</summary>
+    [JsonPropertyName("scheme")]
+    public string? Scheme { get; set; }
+
+    /// <summary>URI Override Enforce Mode When specified, determines the Target UriOverride mode. If not specified, it defaults to ALWAYS. Possible values are: ALWAYS, IF_NOT_EXISTS.</summary>
+    [JsonPropertyName("uriOverrideEnforceMode")]
+    public string? UriOverrideEnforceMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecForProviderHttpTarget
+{
+    /// <summary>HTTP target headers. This map contains the header field names and values. Headers will be set when running the CreateTask and/or BufferTask. These headers represent a subset of the headers that will be configured for the task's HTTP request. Some HTTP request headers will be ignored or replaced. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to override headers of all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("headerOverrides")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetHeaderOverrides>? HeaderOverrides { get; set; }
+
+    /// <summary>The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to GET the body of the task will be ignored at execution time. Possible values are: HTTP_METHOD_UNSPECIFIED, POST, GET, HEAD, PUT, DELETE, PATCH, OPTIONS.</summary>
+    [JsonPropertyName("httpMethod")]
+    public string? HttpMethod { get; set; }
+
+    /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oauthToken")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetOauthToken>? OauthToken { get; set; }
+
+    /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oidcToken")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetOidcToken>? OidcToken { get; set; }
+
+    /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("uriOverride")]
+    public IList<V1beta1QueueSpecForProviderHttpTargetUriOverride>? UriOverride { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderProjectRefPolicy
@@ -136,6 +384,10 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("appEngineRoutingOverride")]
     public IList<V1beta1QueueSpecForProviderAppEngineRoutingOverride>? AppEngineRoutingOverride { get; set; }
 
+    /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
+    [JsonPropertyName("httpTarget")]
+    public IList<V1beta1QueueSpecForProviderHttpTarget>? HttpTarget { get; set; }
+
     /// <summary>The location of the queue</summary>
     [JsonPropertyName("location")]
     public string Location { get; set; }
@@ -180,6 +432,254 @@ public partial class V1beta1QueueSpecInitProviderAppEngineRoutingOverride
     /// <summary>App version. By default, the task is sent to the version which is the default version when the task is attempted.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverridesHeader
+{
+    /// <summary>The Key of the header.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>The Value of the header.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetHeaderOverrides
+{
+    /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
+    [JsonPropertyName("header")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetHeaderOverridesHeader>? Header { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOauthToken
+{
+    /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1QueueSpecInitProviderHttpTargetOauthTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetOidcToken
+{
+    /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
+    [JsonPropertyName("audience")]
+    public string? Audience { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1QueueSpecInitProviderHttpTargetOidcTokenServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverridePathOverride
+{
+    /// <summary>The URI path (e.g., /users/1234). Default is an empty string.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverrideQueryOverride
+{
+    /// <summary>The query parameters (e.g., qparam1=123&amp;qparam2=456). Default is an empty string.</summary>
+    [JsonPropertyName("queryParams")]
+    public string? QueryParams { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTargetUriOverride
+{
+    /// <summary>Host override. When specified, replaces the host part of the task URL. For example, if the task URL is "https://www.google.com", and host value is set to "example.net", the overridden URI will be changed to "https://example.net". Host value cannot be an empty string (INVALID_ARGUMENT).</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
+    [JsonPropertyName("pathOverride")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetUriOverridePathOverride>? PathOverride { get; set; }
+
+    /// <summary>Port override. When specified, replaces the port part of the task URI. For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the port to 0 (Zero) clears the URI port.</summary>
+    [JsonPropertyName("port")]
+    public string? Port { get; set; }
+
+    /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
+    [JsonPropertyName("queryOverride")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetUriOverrideQueryOverride>? QueryOverride { get; set; }
+
+    /// <summary>Scheme override. When specified, the task URI scheme is replaced by the provided value (HTTP or HTTPS). Possible values are: HTTP, HTTPS.</summary>
+    [JsonPropertyName("scheme")]
+    public string? Scheme { get; set; }
+
+    /// <summary>URI Override Enforce Mode When specified, determines the Target UriOverride mode. If not specified, it defaults to ALWAYS. Possible values are: ALWAYS, IF_NOT_EXISTS.</summary>
+    [JsonPropertyName("uriOverrideEnforceMode")]
+    public string? UriOverrideEnforceMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueSpecInitProviderHttpTarget
+{
+    /// <summary>HTTP target headers. This map contains the header field names and values. Headers will be set when running the CreateTask and/or BufferTask. These headers represent a subset of the headers that will be configured for the task's HTTP request. Some HTTP request headers will be ignored or replaced. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to override headers of all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("headerOverrides")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetHeaderOverrides>? HeaderOverrides { get; set; }
+
+    /// <summary>The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to GET the body of the task will be ignored at execution time. Possible values are: HTTP_METHOD_UNSPECIFIED, POST, GET, HEAD, PUT, DELETE, PATCH, OPTIONS.</summary>
+    [JsonPropertyName("httpMethod")]
+    public string? HttpMethod { get; set; }
+
+    /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oauthToken")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetOauthToken>? OauthToken { get; set; }
+
+    /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oidcToken")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetOidcToken>? OidcToken { get; set; }
+
+    /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("uriOverride")]
+    public IList<V1beta1QueueSpecInitProviderHttpTargetUriOverride>? UriOverride { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -292,6 +792,10 @@ public partial class V1beta1QueueSpecInitProvider
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
     [JsonPropertyName("appEngineRoutingOverride")]
     public IList<V1beta1QueueSpecInitProviderAppEngineRoutingOverride>? AppEngineRoutingOverride { get; set; }
+
+    /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
+    [JsonPropertyName("httpTarget")]
+    public IList<V1beta1QueueSpecInitProviderHttpTarget>? HttpTarget { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -473,6 +977,126 @@ public partial class V1beta1QueueStatusAtProviderAppEngineRoutingOverride
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverridesHeader
+{
+    /// <summary>The Key of the header.</summary>
+    [JsonPropertyName("key")]
+    public string? Key { get; set; }
+
+    /// <summary>The Value of the header.</summary>
+    [JsonPropertyName("value")]
+    public string? Value { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetHeaderOverrides
+{
+    /// <summary>Header embodying a key and a value. Structure is documented below.</summary>
+    [JsonPropertyName("header")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetHeaderOverridesHeader>? Header { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetOauthToken
+{
+    /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetOidcToken
+{
+    /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
+    [JsonPropertyName("audience")]
+    public string? Audience { get; set; }
+
+    /// <summary>Service account email to be used for generating OIDC token. The service account must be within the same project as the queue. The caller must have iam.serviceAccounts.actAs permission for the service account.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverridePathOverride
+{
+    /// <summary>The URI path (e.g., /users/1234). Default is an empty string.</summary>
+    [JsonPropertyName("path")]
+    public string? Path { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverrideQueryOverride
+{
+    /// <summary>The query parameters (e.g., qparam1=123&amp;qparam2=456). Default is an empty string.</summary>
+    [JsonPropertyName("queryParams")]
+    public string? QueryParams { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTargetUriOverride
+{
+    /// <summary>Host override. When specified, replaces the host part of the task URL. For example, if the task URL is "https://www.google.com", and host value is set to "example.net", the overridden URI will be changed to "https://example.net". Host value cannot be an empty string (INVALID_ARGUMENT).</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>URI path. When specified, replaces the existing path of the task URL. Setting the path value to an empty string clears the URI path segment. Structure is documented below.</summary>
+    [JsonPropertyName("pathOverride")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetUriOverridePathOverride>? PathOverride { get; set; }
+
+    /// <summary>Port override. When specified, replaces the port part of the task URI. For instance, for a URI http://www.google.com/foo and port=123, the overridden URI becomes http://www.google.com:123/foo. Note that the port value must be a positive integer. Setting the port to 0 (Zero) clears the URI port.</summary>
+    [JsonPropertyName("port")]
+    public string? Port { get; set; }
+
+    /// <summary>URI query. When specified, replaces the query part of the task URI. Setting the query value to an empty string clears the URI query segment. Structure is documented below.</summary>
+    [JsonPropertyName("queryOverride")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetUriOverrideQueryOverride>? QueryOverride { get; set; }
+
+    /// <summary>Scheme override. When specified, the task URI scheme is replaced by the provided value (HTTP or HTTPS). Possible values are: HTTP, HTTPS.</summary>
+    [JsonPropertyName("scheme")]
+    public string? Scheme { get; set; }
+
+    /// <summary>URI Override Enforce Mode When specified, determines the Target UriOverride mode. If not specified, it defaults to ALWAYS. Possible values are: ALWAYS, IF_NOT_EXISTS.</summary>
+    [JsonPropertyName("uriOverrideEnforceMode")]
+    public string? UriOverrideEnforceMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1QueueStatusAtProviderHttpTarget
+{
+    /// <summary>HTTP target headers. This map contains the header field names and values. Headers will be set when running the CreateTask and/or BufferTask. These headers represent a subset of the headers that will be configured for the task's HTTP request. Some HTTP request headers will be ignored or replaced. Headers which can have multiple values (according to RFC2616) can be specified using comma-separated values. The size of the headers must be less than 80KB. Queue-level headers to override headers of all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("headerOverrides")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetHeaderOverrides>? HeaderOverrides { get; set; }
+
+    /// <summary>The HTTP method to use for the request. When specified, it overrides HttpRequest for the task. Note that if the value is set to GET the body of the task will be ignored at execution time. Possible values are: HTTP_METHOD_UNSPECIFIED, POST, GET, HEAD, PUT, DELETE, PATCH, OPTIONS.</summary>
+    [JsonPropertyName("httpMethod")]
+    public string? HttpMethod { get; set; }
+
+    /// <summary>If specified, an OAuth token is generated and attached as the Authorization header in the HTTP request. This type of authorization should generally be used only when calling Google APIs hosted on *.googleapis.com. Note that both the service account email and the scope MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oauthToken")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetOauthToken>? OauthToken { get; set; }
+
+    /// <summary>If specified, an OIDC token is generated and attached as an Authorization header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself. Note that both the service account email and the audience MUST be specified when using the queue-level authorization override. Structure is documented below.</summary>
+    [JsonPropertyName("oidcToken")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetOidcToken>? OidcToken { get; set; }
+
+    /// <summary>URI override. When specified, overrides the execution URI for all the tasks in the queue. Structure is documented below.</summary>
+    [JsonPropertyName("uriOverride")]
+    public IList<V1beta1QueueStatusAtProviderHttpTargetUriOverride>? UriOverride { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProviderRateLimits
 {
     /// <summary>(Output) The max burst size. Max burst size limits how fast tasks in queue are processed when many tasks are in the queue and the rate is high. This field allows the queue to have a high rate so processing starts shortly after a task is enqueued, but still limits resource usage when many tasks are enqueued in a short period of time.</summary>
@@ -529,6 +1153,10 @@ public partial class V1beta1QueueStatusAtProvider
     /// <summary>Overrides for task-level appEngineRouting. These settings apply only to App Engine tasks in this queue Structure is documented below.</summary>
     [JsonPropertyName("appEngineRoutingOverride")]
     public IList<V1beta1QueueStatusAtProviderAppEngineRoutingOverride>? AppEngineRoutingOverride { get; set; }
+
+    /// <summary>Modifies HTTP target for HTTP tasks. Structure is documented below.</summary>
+    [JsonPropertyName("httpTarget")]
+    public IList<V1beta1QueueStatusAtProviderHttpTarget>? HttpTarget { get; set; }
 
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{location}}/queues/{{name}}</summary>
     [JsonPropertyName("id")]

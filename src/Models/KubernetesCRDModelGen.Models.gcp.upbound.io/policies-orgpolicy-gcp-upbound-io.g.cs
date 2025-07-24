@@ -62,6 +62,10 @@ public partial class V1beta1PolicySpecForProviderDryRunSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicySpecForProviderDryRunSpecRulesValues? Values { get; set; }
@@ -194,6 +198,10 @@ public partial class V1beta1PolicySpecForProviderSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicySpecForProviderSpecRulesValues? Values { get; set; }
@@ -211,7 +219,7 @@ public partial class V1beta1PolicySpecForProviderSpec
     [JsonPropertyName("reset")]
     public bool? Reset { get; set; }
 
-    /// <summary>Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
+    /// <summary>In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
     [JsonPropertyName("rules")]
     public IList<V1beta1PolicySpecForProviderSpecRules>? Rules { get; set; }
 }
@@ -295,6 +303,10 @@ public partial class V1beta1PolicySpecInitProviderDryRunSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicySpecInitProviderDryRunSpecRulesValues? Values { get; set; }
@@ -371,6 +383,10 @@ public partial class V1beta1PolicySpecInitProviderSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicySpecInitProviderSpecRulesValues? Values { get; set; }
@@ -388,7 +404,7 @@ public partial class V1beta1PolicySpecInitProviderSpec
     [JsonPropertyName("reset")]
     public bool? Reset { get; set; }
 
-    /// <summary>Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
+    /// <summary>In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
     [JsonPropertyName("rules")]
     public IList<V1beta1PolicySpecInitProviderSpecRules>? Rules { get; set; }
 }
@@ -592,6 +608,10 @@ public partial class V1beta1PolicyStatusAtProviderDryRunSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicyStatusAtProviderDryRunSpecRulesValues? Values { get; set; }
@@ -676,6 +696,10 @@ public partial class V1beta1PolicyStatusAtProviderSpecRules
     [JsonPropertyName("enforce")]
     public string? Enforce { get; set; }
 
+    /// <summary>Optional. Required for Managed Constraints if parameters defined in constraints. Pass parameter values when policy enforcement is enabled. Ensure that parameter value types match those defined in the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll" : true }</summary>
+    [JsonPropertyName("parameters")]
+    public string? Parameters { get; set; }
+
     /// <summary>List of values to be used for this PolicyRule. This field can be set only in Policies for list constraints. Structure is documented below.</summary>
     [JsonPropertyName("values")]
     public V1beta1PolicyStatusAtProviderSpecRulesValues? Values { get; set; }
@@ -697,7 +721,7 @@ public partial class V1beta1PolicyStatusAtProviderSpec
     [JsonPropertyName("reset")]
     public bool? Reset { get; set; }
 
-    /// <summary>Up to 10 PolicyRules are allowed. In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
+    /// <summary>In Policies for boolean constraints, the following requirements apply: - There must be one and only one PolicyRule where condition is unset. - BooleanPolicyRules with conditions must set enforced to the opposite of the PolicyRule without a condition. - During policy evaluation, PolicyRules with conditions that are true for a target resource take precedence. Structure is documented below.</summary>
     [JsonPropertyName("rules")]
     public IList<V1beta1PolicyStatusAtProviderSpecRules>? Rules { get; set; }
 

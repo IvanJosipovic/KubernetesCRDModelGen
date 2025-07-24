@@ -42,6 +42,19 @@ public partial class V1beta1OAuthIdPConfigSpecForProviderClientSecretSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OAuthIdPConfigSpecForProviderResponseType
+{
+    /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("code")]
+    public bool? Code { get; set; }
+
+    /// <summary>If true, ID token is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("idToken")]
+    public bool? IdToken { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecForProvider
@@ -73,6 +86,10 @@ public partial class V1beta1OAuthIdPConfigSpecForProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+    [JsonPropertyName("responseType")]
+    public V1beta1OAuthIdPConfigSpecForProviderResponseType? ResponseType { get; set; }
 }
 
 /// <summary>The client id of an OAuth client.</summary>
@@ -109,6 +126,19 @@ public partial class V1beta1OAuthIdPConfigSpecInitProviderClientSecretSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OAuthIdPConfigSpecInitProviderResponseType
+{
+    /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("code")]
+    public bool? Code { get; set; }
+
+    /// <summary>If true, ID token is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("idToken")]
+    public bool? IdToken { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigSpecInitProvider
@@ -140,6 +170,10 @@ public partial class V1beta1OAuthIdPConfigSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+    [JsonPropertyName("responseType")]
+    public V1beta1OAuthIdPConfigSpecInitProviderResponseType? ResponseType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -274,6 +308,19 @@ public partial class V1beta1OAuthIdPConfigSpec
     public V1beta1OAuthIdPConfigSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OAuthIdPConfigStatusAtProviderResponseType
+{
+    /// <summary>If true, authorization code is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("code")]
+    public bool? Code { get; set; }
+
+    /// <summary>If true, ID token is returned from IdP's authorization endpoint.</summary>
+    [JsonPropertyName("idToken")]
+    public bool? IdToken { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OAuthIdPConfigStatusAtProvider
@@ -301,6 +348,10 @@ public partial class V1beta1OAuthIdPConfigStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The response type to request for in the OAuth authorization flow. You can set either idToken or code to true, but not both. Setting both types to be simultaneously true ({code: true, idToken: true}) is not yet supported. Structure is documented below.</summary>
+    [JsonPropertyName("responseType")]
+    public V1beta1OAuthIdPConfigStatusAtProviderResponseType? ResponseType { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

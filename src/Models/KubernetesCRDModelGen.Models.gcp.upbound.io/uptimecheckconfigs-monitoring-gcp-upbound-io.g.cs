@@ -51,7 +51,7 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAcceptedRes
     public double? StatusValue { get; set; }
 }
 
-/// <summary>The password to authenticate. Note: This property is sensitive and will not be displayed in the plan.</summary>
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPasswordSecretRef
 {
@@ -72,11 +72,19 @@ public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPas
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfo
 {
-    /// <summary>The password to authenticate. Note: This property is sensitive and will not be displayed in the plan.</summary>
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1UptimeCheckConfigSpecForProviderHttpCheckAuthInfoPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The username to authenticate.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public string? PasswordWoVersion { get; set; }
+
+    /// <summary>A unique resource name for this UptimeCheckConfig. The format is projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -374,6 +382,10 @@ public partial class V1beta1UptimeCheckConfigSpecForProvider
     [JsonPropertyName("httpCheck")]
     public IList<V1beta1UptimeCheckConfigSpecForProviderHttpCheck>? HttpCheck { get; set; }
 
+    /// <summary>Specifies whether to log the results of failed probes to Cloud Logging.</summary>
+    [JsonPropertyName("logCheckFailures")]
+    public bool? LogCheckFailures { get; set; }
+
     /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
     [JsonPropertyName("monitoredResource")]
     public IList<V1beta1UptimeCheckConfigSpecForProviderMonitoredResource>? MonitoredResource { get; set; }
@@ -454,11 +466,40 @@ public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAcceptedRe
     public double? StatusValue { get; set; }
 }
 
+/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfoPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfo
 {
-    /// <summary>The username to authenticate.</summary>
+    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1UptimeCheckConfigSpecInitProviderHttpCheckAuthInfoPasswordSecretRef? PasswordSecretRef { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public string? PasswordWoVersion { get; set; }
+
+    /// <summary>A unique resource name for this UptimeCheckConfig. The format is projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -756,6 +797,10 @@ public partial class V1beta1UptimeCheckConfigSpecInitProvider
     [JsonPropertyName("httpCheck")]
     public IList<V1beta1UptimeCheckConfigSpecInitProviderHttpCheck>? HttpCheck { get; set; }
 
+    /// <summary>Specifies whether to log the results of failed probes to Cloud Logging.</summary>
+    [JsonPropertyName("logCheckFailures")]
+    public bool? LogCheckFailures { get; set; }
+
     /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
     [JsonPropertyName("monitoredResource")]
     public IList<V1beta1UptimeCheckConfigSpecInitProviderMonitoredResource>? MonitoredResource { get; set; }
@@ -972,7 +1017,15 @@ public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAcceptedRe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UptimeCheckConfigStatusAtProviderHttpCheckAuthInfo
 {
-    /// <summary>The username to authenticate.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public string? PasswordWoVersion { get; set; }
+
+    /// <summary>A unique resource name for this UptimeCheckConfig. The format is projects/[PROJECT_ID]/uptimeCheckConfigs/[UPTIME_CHECK_ID].</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -1145,6 +1198,10 @@ public partial class V1beta1UptimeCheckConfigStatusAtProvider
     /// <summary>an identifier for the resource with format {{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Specifies whether to log the results of failed probes to Cloud Logging.</summary>
+    [JsonPropertyName("logCheckFailures")]
+    public bool? LogCheckFailures { get; set; }
 
     /// <summary>The [monitored resource] (https://cloud.google.com/monitoring/api/resources) associated with the configuration. The following monitored resource types are supported for uptime checks:</summary>
     [JsonPropertyName("monitoredResource")]

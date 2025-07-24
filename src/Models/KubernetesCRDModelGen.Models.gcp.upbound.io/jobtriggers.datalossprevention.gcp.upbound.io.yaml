@@ -5878,7 +5878,7 @@ spec:
                               Structure is documented below.
                             properties:
                               description:
-                                description: A description of the job trigger.
+                                description: A short description of where the data is coming from. Will be stored once in the job. 256 max length.
                                 type: string
                               labels:
                                 additionalProperties:
@@ -7248,7 +7248,7 @@ spec:
                               Structure is documented below.
                             properties:
                               description:
-                                description: A description of the job trigger.
+                                description: A short description of where the data is coming from. Will be stored once in the job. 256 max length.
                                 type: string
                               labels:
                                 additionalProperties:
@@ -8654,7 +8654,7 @@ spec:
                               Structure is documented below.
                             properties:
                               description:
-                                description: A description of the job trigger.
+                                description: A short description of where the data is coming from. Will be stored once in the job. 256 max length.
                                 type: string
                               labels:
                                 additionalProperties:

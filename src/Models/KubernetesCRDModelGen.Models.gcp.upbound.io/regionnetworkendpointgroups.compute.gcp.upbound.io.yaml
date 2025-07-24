@@ -491,6 +491,25 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        producerPort:
+                          description: >-
+                            The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                            this flag isn't specified for a PSC NEG with endpoint type
+
+                            private-service-connect, then PSC NEG will be connected to a first port in the
+
+                            available PSC producer port range.
+                          type: string
+                      type: object
+                    type: array
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.
@@ -1112,6 +1131,25 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        producerPort:
+                          description: >-
+                            The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                            this flag isn't specified for a PSC NEG with endpoint type
+
+                            private-service-connect, then PSC NEG will be connected to a first port in the
+
+                            available PSC producer port range.
+                          type: string
+                      type: object
+                    type: array
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.
@@ -1664,6 +1702,25 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    items:
+                      properties:
+                        producerPort:
+                          description: >-
+                            The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                            this flag isn't specified for a PSC NEG with endpoint type
+
+                            private-service-connect, then PSC NEG will be connected to a first port in the
+
+                            available PSC producer port range.
+                          type: string
+                      type: object
+                    type: array
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.
@@ -2219,6 +2276,23 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    properties:
+                      producerPort:
+                        description: >-
+                          The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                          this flag isn't specified for a PSC NEG with endpoint type
+
+                          private-service-connect, then PSC NEG will be connected to a first port in the
+
+                          available PSC producer port range.
+                        type: string
+                    type: object
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.
@@ -2834,6 +2908,23 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    properties:
+                      producerPort:
+                        description: >-
+                          The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                          this flag isn't specified for a PSC NEG with endpoint type
+
+                          private-service-connect, then PSC NEG will be connected to a first port in the
+
+                          available PSC producer port range.
+                        type: string
+                    type: object
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.
@@ -3380,6 +3471,23 @@ spec:
 
                       If it is not provided, the provider project is used.
                     type: string
+                  pscData:
+                    description: >-
+                      This field is only used for PSC NEGs.
+
+                      Structure is documented below.
+                    properties:
+                      producerPort:
+                        description: >-
+                          The PSC producer port to use when consumer PSC NEG connects to a producer. If
+
+                          this flag isn't specified for a PSC NEG with endpoint type
+
+                          private-service-connect, then PSC NEG will be connected to a first port in the
+
+                          available PSC producer port range.
+                        type: string
+                    type: object
                   pscTargetService:
                     description: >-
                       This field is only used for PSC and INTERNET NEGs.

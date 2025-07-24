@@ -64,7 +64,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelect
     public V1beta1DatasetSpecForProviderEncryptionSpecKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A nested object resource Structure is documented below.</summary>
+/// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProviderEncryptionSpec
 {
@@ -85,7 +85,7 @@ public partial class V1beta1DatasetSpecForProviderEncryptionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProvider
 {
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("encryptionSpec")]
     public V1beta1DatasetSpecForProviderEncryptionSpec? EncryptionSpec { get; set; }
 
@@ -162,7 +162,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelec
     public V1beta1DatasetSpecInitProviderEncryptionSpecKmsKeyNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A nested object resource Structure is documented below.</summary>
+/// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecInitProviderEncryptionSpec
 {
@@ -183,7 +183,7 @@ public partial class V1beta1DatasetSpecInitProviderEncryptionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecInitProvider
 {
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("encryptionSpec")]
     public V1beta1DatasetSpecInitProviderEncryptionSpec? EncryptionSpec { get; set; }
 
@@ -336,7 +336,7 @@ public partial class V1beta1DatasetSpec
     public V1beta1DatasetSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary>A nested object resource Structure is documented below.</summary>
+/// <summary>A nested object resource. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetStatusAtProviderEncryptionSpec
 {
@@ -349,7 +349,7 @@ public partial class V1beta1DatasetStatusAtProviderEncryptionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetStatusAtProvider
 {
-    /// <summary>A nested object resource Structure is documented below.</summary>
+    /// <summary>A nested object resource. Structure is documented below.</summary>
     [JsonPropertyName("encryptionSpec")]
     public V1beta1DatasetStatusAtProviderEncryptionSpec? EncryptionSpec { get; set; }
 

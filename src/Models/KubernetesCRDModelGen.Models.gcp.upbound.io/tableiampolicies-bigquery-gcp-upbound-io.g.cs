@@ -124,7 +124,7 @@ public partial class V1beta1TableIAMPolicySpecForProviderTableIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableIAMPolicySpecForProvider
 {
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("datasetId")]
     public string? DatasetId { get; set; }
 
@@ -144,7 +144,7 @@ public partial class V1beta1TableIAMPolicySpecForProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 
@@ -273,7 +273,7 @@ public partial class V1beta1TableIAMPolicySpecInitProviderTableIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableIAMPolicySpecInitProvider
 {
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("datasetId")]
     public string? DatasetId { get; set; }
 
@@ -293,7 +293,7 @@ public partial class V1beta1TableIAMPolicySpecInitProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 
@@ -442,7 +442,7 @@ public partial class V1beta1TableIAMPolicySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableIAMPolicyStatusAtProvider
 {
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("datasetId")]
     public string? DatasetId { get; set; }
 
@@ -462,7 +462,7 @@ public partial class V1beta1TableIAMPolicyStatusAtProvider
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to find the parent resource to bind the IAM policy to</summary>
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
 }

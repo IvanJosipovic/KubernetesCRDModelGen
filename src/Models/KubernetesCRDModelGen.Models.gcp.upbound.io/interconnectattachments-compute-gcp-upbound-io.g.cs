@@ -128,7 +128,7 @@ public partial class V1beta1InterconnectAttachmentSpecForProvider
     [JsonPropertyName("adminEnabled")]
     public bool? AdminEnabled { get; set; }
 
-    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G.</summary>
+    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G, BPS_100G.</summary>
     [JsonPropertyName("bandwidth")]
     public string? Bandwidth { get; set; }
 
@@ -164,7 +164,11 @@ public partial class V1beta1InterconnectAttachmentSpecForProvider
     [JsonPropertyName("ipsecInternalAddressesSelector")]
     public V1beta1InterconnectAttachmentSpecForProviderIpsecInternalAddressesSelector? IpsecInternalAddressesSelector { get; set; }
 
-    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.</summary>
+    /// <summary>Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will default to 1440.</summary>
     [JsonPropertyName("mtu")]
     public string? Mtu { get; set; }
 
@@ -325,7 +329,7 @@ public partial class V1beta1InterconnectAttachmentSpecInitProvider
     [JsonPropertyName("adminEnabled")]
     public bool? AdminEnabled { get; set; }
 
-    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G.</summary>
+    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G, BPS_100G.</summary>
     [JsonPropertyName("bandwidth")]
     public string? Bandwidth { get; set; }
 
@@ -361,7 +365,11 @@ public partial class V1beta1InterconnectAttachmentSpecInitProvider
     [JsonPropertyName("ipsecInternalAddressesSelector")]
     public V1beta1InterconnectAttachmentSpecInitProviderIpsecInternalAddressesSelector? IpsecInternalAddressesSelector { get; set; }
 
-    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.</summary>
+    /// <summary>Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will default to 1440.</summary>
     [JsonPropertyName("mtu")]
     public string? Mtu { get; set; }
 
@@ -547,7 +555,11 @@ public partial class V1beta1InterconnectAttachmentStatusAtProvider
     [JsonPropertyName("adminEnabled")]
     public bool? AdminEnabled { get; set; }
 
-    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G.</summary>
+    /// <summary>URL of the AttachmentGroup that includes this Attachment.</summary>
+    [JsonPropertyName("attachmentGroup")]
+    public string? AttachmentGroup { get; set; }
+
+    /// <summary>Provisioned bandwidth capacity for the interconnect attachment. For attachments of type DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner that is operating the interconnect must set the bandwidth. Output only for PARTNER type, mutable for PARTNER_PROVIDER and DEDICATED, Defaults to BPS_10G Possible values are: BPS_50M, BPS_100M, BPS_200M, BPS_300M, BPS_400M, BPS_500M, BPS_1G, BPS_2G, BPS_5G, BPS_10G, BPS_20G, BPS_50G, BPS_100G.</summary>
     [JsonPropertyName("bandwidth")]
     public string? Bandwidth { get; set; }
 
@@ -583,6 +595,10 @@ public partial class V1beta1InterconnectAttachmentStatusAtProvider
     [JsonPropertyName("edgeAvailabilityDomain")]
     public string? EdgeAvailabilityDomain { get; set; }
 
+    /// <summary>for all of the labels present on the resource.</summary>
+    [JsonPropertyName("effectiveLabels")]
+    public IDictionary<string, string>? EffectiveLabels { get; set; }
+
     /// <summary>Indicates the user-supplied encryption option of this interconnect attachment. Can only be specified at attachment creation for PARTNER or DEDICATED attachments.</summary>
     [JsonPropertyName("encryption")]
     public string? Encryption { get; set; }
@@ -603,7 +619,15 @@ public partial class V1beta1InterconnectAttachmentStatusAtProvider
     [JsonPropertyName("ipsecInternalAddresses")]
     public IList<string>? IpsecInternalAddresses { get; set; }
 
-    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.</summary>
+    /// <summary>A fingerprint for the labels being applied to this Interconnect, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet.</summary>
+    [JsonPropertyName("labelFingerprint")]
+    public string? LabelFingerprint { get; set; }
+
+    /// <summary>Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.</summary>
+    [JsonPropertyName("labels")]
+    public IDictionary<string, string>? Labels { get; set; }
+
+    /// <summary>Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will default to 1440.</summary>
     [JsonPropertyName("mtu")]
     public string? Mtu { get; set; }
 
@@ -646,6 +670,10 @@ public partial class V1beta1InterconnectAttachmentStatusAtProvider
     /// <summary>Length of the IPv4 subnet mask. Allowed values: 29 (default), 30. The default value is 29, except for Cross-Cloud Interconnect connections that use an InterconnectRemoteLocation with a constraints.subnetLengthRange.min equal to 30. For example, connections that use an Azure remote location fall into this category. In these cases, the default value is 30, and requesting 29 returns an error. Where both 29 and 30 are allowed, 29 is preferred, because it gives Google Cloud Support more debugging visibility.</summary>
     [JsonPropertyName("subnetLength")]
     public double? SubnetLength { get; set; }
+
+    /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
+    [JsonPropertyName("terraformLabels")]
+    public IDictionary<string, string>? TerraformLabels { get; set; }
 
     /// <summary>The type of InterconnectAttachment you wish to create. Defaults to DEDICATED. Possible values are: DEDICATED, PARTNER, PARTNER_PROVIDER.</summary>
     [JsonPropertyName("type")]

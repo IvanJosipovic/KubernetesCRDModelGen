@@ -87,8 +87,24 @@ spec:
                   exportCustomRoutes:
                     description: Whether to export the custom routes to the peer network.
                     type: boolean
+                  exportSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are exported.
+
+                      IPv4 special-use ranges are always exported to peers and
+
+                      are not controlled by this field.
+                    type: boolean
                   importCustomRoutes:
                     description: Whether to import the custom routes to the peer network.
+                    type: boolean
+                  importSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are imported.
+
+                      IPv4 special-use ranges are always imported from peers and
+
+                      are not controlled by this field.
                     type: boolean
                   network:
                     description: The name of the primary network for the peering.
@@ -300,8 +316,24 @@ spec:
                   exportCustomRoutes:
                     description: Whether to export the custom routes to the peer network.
                     type: boolean
+                  exportSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are exported.
+
+                      IPv4 special-use ranges are always exported to peers and
+
+                      are not controlled by this field.
+                    type: boolean
                   importCustomRoutes:
                     description: Whether to import the custom routes to the peer network.
+                    type: boolean
+                  importSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are imported.
+
+                      IPv4 special-use ranges are always imported from peers and
+
+                      are not controlled by this field.
                     type: boolean
                   network:
                     description: The name of the primary network for the peering.
@@ -709,11 +741,27 @@ spec:
                   exportCustomRoutes:
                     description: Whether to export the custom routes to the peer network.
                     type: boolean
+                  exportSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are exported.
+
+                      IPv4 special-use ranges are always exported to peers and
+
+                      are not controlled by this field.
+                    type: boolean
                   id:
                     description: an identifier for the resource with format projects/{{project}}/global/networks/{{network}}/networkPeerings/{{peering}}
                     type: string
                   importCustomRoutes:
                     description: Whether to import the custom routes to the peer network.
+                    type: boolean
+                  importSubnetRoutesWithPublicIp:
+                    description: >-
+                      Whether subnet routes with public IP range are imported.
+
+                      IPv4 special-use ranges are always imported from peers and
+
+                      are not controlled by this field.
                     type: boolean
                   network:
                     description: The name of the primary network for the peering.

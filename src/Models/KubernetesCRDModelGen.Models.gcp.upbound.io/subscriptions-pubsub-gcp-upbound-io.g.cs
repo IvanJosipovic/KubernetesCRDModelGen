@@ -37,9 +37,69 @@ public partial class V1beta1SubscriptionSpecForProviderBigqueryConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigAvroConfig
 {
+    /// <summary>When true, use the topic's schema as the columns to write to in BigQuery, if it exists. Only one of use_topic_schema and use_table_schema can be set.</summary>
+    [JsonPropertyName("useTopicSchema")]
+    public bool? UseTopicSchema { get; set; }
+
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -73,6 +133,22 @@ public partial class V1beta1SubscriptionSpecForProviderCloudStorageConfig
     /// <summary>The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement deadline. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
     [JsonPropertyName("maxDuration")]
     public string? MaxDuration { get; set; }
+
+    /// <summary>The maximum messages that can be written to a Cloud Storage file before a new file is created. Min 1000 messages.</summary>
+    [JsonPropertyName("maxMessages")]
+    public double? MaxMessages { get; set; }
+
+    /// <summary>The service account to use to write to Cloud Storage. If not specified, the Pub/Sub service agent, service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1SubscriptionSpecForProviderCloudStorageConfigServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -159,6 +235,32 @@ public partial class V1beta1SubscriptionSpecForProviderExpirationPolicy
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecForProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1SubscriptionSpecForProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -313,9 +415,13 @@ public partial class V1beta1SubscriptionSpecForProvider
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ("604800s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
+    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 31 days ("2678400s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
     [JsonPropertyName("messageRetentionDuration")]
     public string? MessageRetentionDuration { get; set; }
+
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1SubscriptionSpecForProviderMessageTransforms>? MessageTransforms { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -375,9 +481,69 @@ public partial class V1beta1SubscriptionSpecInitProviderBigqueryConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigAvroConfig
 {
+    /// <summary>When true, use the topic's schema as the columns to write to in BigQuery, if it exists. Only one of use_topic_schema and use_table_schema can be set.</summary>
+    [JsonPropertyName("useTopicSchema")]
+    public bool? UseTopicSchema { get; set; }
+
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -411,6 +577,22 @@ public partial class V1beta1SubscriptionSpecInitProviderCloudStorageConfig
     /// <summary>The maximum duration that can elapse before a new Cloud Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement deadline. A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".</summary>
     [JsonPropertyName("maxDuration")]
     public string? MaxDuration { get; set; }
+
+    /// <summary>The maximum messages that can be written to a Cloud Storage file before a new file is created. Min 1000 messages.</summary>
+    [JsonPropertyName("maxMessages")]
+    public double? MaxMessages { get; set; }
+
+    /// <summary>The service account to use to write to Cloud Storage. If not specified, the Pub/Sub service agent, service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
+    /// <summary>Reference to a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailRef")]
+    public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailRef? ServiceAccountEmailRef { get; set; }
+
+    /// <summary>Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.</summary>
+    [JsonPropertyName("serviceAccountEmailSelector")]
+    public V1beta1SubscriptionSpecInitProviderCloudStorageConfigServiceAccountEmailSelector? ServiceAccountEmailSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -497,6 +679,32 @@ public partial class V1beta1SubscriptionSpecInitProviderExpirationPolicy
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionSpecInitProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1SubscriptionSpecInitProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -651,9 +859,13 @@ public partial class V1beta1SubscriptionSpecInitProvider
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ("604800s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
+    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 31 days ("2678400s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
     [JsonPropertyName("messageRetentionDuration")]
     public string? MessageRetentionDuration { get; set; }
+
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1SubscriptionSpecInitProviderMessageTransforms>? MessageTransforms { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -845,6 +1057,10 @@ public partial class V1beta1SubscriptionStatusAtProviderBigqueryConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfigAvroConfig
 {
+    /// <summary>When true, use the topic's schema as the columns to write to in BigQuery, if it exists. Only one of use_topic_schema and use_table_schema can be set.</summary>
+    [JsonPropertyName("useTopicSchema")]
+    public bool? UseTopicSchema { get; set; }
+
     /// <summary>When true, writes the Pub/Sub message metadata to x-goog-pubsub-&lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request. Writes the Pub/Sub message attributes to &lt;KEY&gt;:&lt;VAL&gt; headers of the HTTP request.</summary>
     [JsonPropertyName("writeMetadata")]
     public bool? WriteMetadata { get; set; }
@@ -882,6 +1098,14 @@ public partial class V1beta1SubscriptionStatusAtProviderCloudStorageConfig
     [JsonPropertyName("maxDuration")]
     public string? MaxDuration { get; set; }
 
+    /// <summary>The maximum messages that can be written to a Cloud Storage file before a new file is created. Min 1000 messages.</summary>
+    [JsonPropertyName("maxMessages")]
+    public double? MaxMessages { get; set; }
+
+    /// <summary>The service account to use to write to Cloud Storage. If not specified, the Pub/Sub service agent, service-{project_number}@gcp-sa-pubsub.iam.gserviceaccount.com, is used.</summary>
+    [JsonPropertyName("serviceAccountEmail")]
+    public string? ServiceAccountEmail { get; set; }
+
     /// <summary>(Output) An output-only field that indicates whether or not the subscription can receive messages.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
@@ -907,6 +1131,32 @@ public partial class V1beta1SubscriptionStatusAtProviderExpirationPolicy
     /// <summary>Specifies the "time-to-live" duration for an associated resource. The resource expires if it is not active for a period of ttl. If ttl is set to "", the associated resource never expires. A duration in seconds with up to nine fractional digits, terminated by 's'. Example - "3.5s".</summary>
     [JsonPropertyName("ttl")]
     public string? Ttl { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionStatusAtProviderMessageTransformsJavascriptUdf
+{
+    /// <summary>JavaScript code that contains a function function_name with the following signature:</summary>
+    [JsonPropertyName("code")]
+    public string? Code { get; set; }
+
+    /// <summary>Name of the JavaScript function that should be applied to Pub/Sub messages.</summary>
+    [JsonPropertyName("functionName")]
+    public string? FunctionName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SubscriptionStatusAtProviderMessageTransforms
+{
+    /// <summary>Controls whether or not to use this transform. If not set or false, the transform will be applied to messages. Default: true.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Javascript User Defined Function. If multiple Javascript UDFs are specified on a resource, each one must have a unique function_name. Structure is documented below.</summary>
+    [JsonPropertyName("javascriptUdf")]
+    public IList<V1beta1SubscriptionStatusAtProviderMessageTransformsJavascriptUdf>? JavascriptUdf { get; set; }
 }
 
 /// <summary></summary>
@@ -1013,9 +1263,13 @@ public partial class V1beta1SubscriptionStatusAtProvider
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 7 days ("604800s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
+    /// <summary>How long to retain unacknowledged messages in the subscription's backlog, from the moment a message is published. If retain_acked_messages is true, then this also configures the retention of acknowledged messages, and thus configures how far back in time a subscriptions.seek can be done. Defaults to 7 days. Cannot be more than 31 days ("2678400s") or less than 10 minutes ("600s"). A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "600.5s".</summary>
     [JsonPropertyName("messageRetentionDuration")]
     public string? MessageRetentionDuration { get; set; }
+
+    /// <summary>Transforms to be applied to messages published to the topic. Transforms are applied in the order specified. Structure is documented below.</summary>
+    [JsonPropertyName("messageTransforms")]
+    public IList<V1beta1SubscriptionStatusAtProviderMessageTransforms>? MessageTransforms { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]

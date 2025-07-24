@@ -28,7 +28,7 @@ public partial class V1beta1TagKeySpecForProvider
     [JsonPropertyName("purposeData")]
     public IDictionary<string, string>? PurposeData { get; set; }
 
-    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -53,7 +53,7 @@ public partial class V1beta1TagKeySpecInitProvider
     [JsonPropertyName("purposeData")]
     public IDictionary<string, string>? PurposeData { get; set; }
 
-    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 }
@@ -226,7 +226,7 @@ public partial class V1beta1TagKeyStatusAtProvider
     [JsonPropertyName("purposeData")]
     public IDictionary<string, string>? PurposeData { get; set; }
 
-    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.</summary>
+    /// <summary>Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name can have a maximum length of 256 characters. The permitted character set for the shortName includes all UTF-8 encoded Unicode characters except single quotes ('), double quotes ("), backslashes (\), and forward slashes (/).</summary>
     [JsonPropertyName("shortName")]
     public string? ShortName { get; set; }
 

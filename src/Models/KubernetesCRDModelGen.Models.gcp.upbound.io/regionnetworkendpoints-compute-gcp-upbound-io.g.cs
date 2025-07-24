@@ -342,6 +342,10 @@ public partial class V1beta1RegionNetworkEndpointStatusAtProvider
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
+    /// <summary>The unique identifier number for the resource. This identifier is defined by the server.</summary>
+    [JsonPropertyName("networkEndpointId")]
+    public double? NetworkEndpointId { get; set; }
+
     /// <summary>Port number of network endpoint.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }

@@ -291,62 +291,6 @@ public partial class V1beta1ClusterSpecForProviderNetworkConfig
     public V1beta1ClusterSpecForProviderNetworkConfigNetworkSelector? NetworkSelector { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderNetworkRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Network in compute to populate network.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderNetworkRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ClusterSpecForProviderNetworkRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderNetworkSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Network in compute to populate network.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderNetworkSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ClusterSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderPscConfig
@@ -635,21 +579,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("maintenanceUpdatePolicy")]
     public IList<V1beta1ClusterSpecForProviderMaintenanceUpdatePolicy>? MaintenanceUpdatePolicy { get; set; }
 
-    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
-    [JsonPropertyName("network")]
-    public string? Network { get; set; }
-
     /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1ClusterSpecForProviderNetworkConfig>? NetworkConfig { get; set; }
-
-    /// <summary>Reference to a Network in compute to populate network.</summary>
-    [JsonPropertyName("networkRef")]
-    public V1beta1ClusterSpecForProviderNetworkRef? NetworkRef { get; set; }
-
-    /// <summary>Selector for a Network in compute to populate network.</summary>
-    [JsonPropertyName("networkSelector")]
-    public V1beta1ClusterSpecForProviderNetworkSelector? NetworkSelector { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -670,6 +602,14 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. Structure is documented below.</summary>
     [JsonPropertyName("secondaryConfig")]
     public IList<V1beta1ClusterSpecForProviderSecondaryConfig>? SecondaryConfig { get; set; }
+
+    /// <summary>Set to true to skip awaiting on the major version upgrade of the cluster. Possible values: true, false Default value: "true"</summary>
+    [JsonPropertyName("skipAwaitMajorVersionUpgrade")]
+    public bool? SkipAwaitMajorVersionUpgrade { get; set; }
+
+    /// <summary>The subscrition type of cluster. Possible values are: TRIAL, STANDARD.</summary>
+    [JsonPropertyName("subscriptionType")]
+    public string? SubscriptionType { get; set; }
 }
 
 /// <summary></summary>
@@ -928,62 +868,6 @@ public partial class V1beta1ClusterSpecInitProviderNetworkConfig
     /// <summary>Selector for a Network in compute to populate network.</summary>
     [JsonPropertyName("networkSelector")]
     public V1beta1ClusterSpecInitProviderNetworkConfigNetworkSelector? NetworkSelector { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderNetworkRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Network in compute to populate network.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderNetworkRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ClusterSpecInitProviderNetworkRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderNetworkSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Network in compute to populate network.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderNetworkSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ClusterSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -1270,21 +1154,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("maintenanceUpdatePolicy")]
     public IList<V1beta1ClusterSpecInitProviderMaintenanceUpdatePolicy>? MaintenanceUpdatePolicy { get; set; }
 
-    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
-    [JsonPropertyName("network")]
-    public string? Network { get; set; }
-
     /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1ClusterSpecInitProviderNetworkConfig>? NetworkConfig { get; set; }
-
-    /// <summary>Reference to a Network in compute to populate network.</summary>
-    [JsonPropertyName("networkRef")]
-    public V1beta1ClusterSpecInitProviderNetworkRef? NetworkRef { get; set; }
-
-    /// <summary>Selector for a Network in compute to populate network.</summary>
-    [JsonPropertyName("networkSelector")]
-    public V1beta1ClusterSpecInitProviderNetworkSelector? NetworkSelector { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
@@ -1305,6 +1177,14 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY. Structure is documented below.</summary>
     [JsonPropertyName("secondaryConfig")]
     public IList<V1beta1ClusterSpecInitProviderSecondaryConfig>? SecondaryConfig { get; set; }
+
+    /// <summary>Set to true to skip awaiting on the major version upgrade of the cluster. Possible values: true, false Default value: "true"</summary>
+    [JsonPropertyName("skipAwaitMajorVersionUpgrade")]
+    public bool? SkipAwaitMajorVersionUpgrade { get; set; }
+
+    /// <summary>The subscrition type of cluster. Possible values are: TRIAL, STANDARD.</summary>
+    [JsonPropertyName("subscriptionType")]
+    public string? SubscriptionType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1717,6 +1597,10 @@ public partial class V1beta1ClusterStatusAtProviderPscConfig
     /// <summary>Create an instance that allows connections from Private Service Connect endpoints to the instance.</summary>
     [JsonPropertyName("pscEnabled")]
     public bool? PscEnabled { get; set; }
+
+    /// <summary>(Output) The project number that needs to be allowlisted on the network attachment to enable outbound connectivity, if the network attachment is configured to ACCEPT_MANUAL connections. In case the network attachment is configured to ACCEPT_AUTOMATIC, this project number does not need to be allowlisted explicitly.</summary>
+    [JsonPropertyName("serviceOwnedProjectNumber")]
+    public double? ServiceOwnedProjectNumber { get; set; }
 }
 
 /// <summary></summary>
@@ -1748,6 +1632,27 @@ public partial class V1beta1ClusterStatusAtProviderSecondaryConfig
     /// <summary>Name of the primary cluster must be in the format 'projects/{project}/locations/{location}/clusters/{cluster_id}'</summary>
     [JsonPropertyName("primaryClusterName")]
     public string? PrimaryClusterName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderTrialMetadata
+{
+    /// <summary>End time of the trial cluster.</summary>
+    [JsonPropertyName("endTime")]
+    public string? EndTime { get; set; }
+
+    /// <summary>Grace end time of the trial cluster.</summary>
+    [JsonPropertyName("graceEndTime")]
+    public string? GraceEndTime { get; set; }
+
+    /// <summary>Start time of the trial cluster.</summary>
+    [JsonPropertyName("startTime")]
+    public string? StartTime { get; set; }
+
+    /// <summary>Upgrade time of the trial cluster to standard cluster.</summary>
+    [JsonPropertyName("upgradeTime")]
+    public string? UpgradeTime { get; set; }
 }
 
 /// <summary></summary>
@@ -1838,10 +1743,6 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form: "projects/{projectNumber}/global/networks/{network_id}".</summary>
-    [JsonPropertyName("network")]
-    public string? Network { get; set; }
-
     /// <summary>Metadata related to network configuration. Structure is documented below.</summary>
     [JsonPropertyName("networkConfig")]
     public IList<V1beta1ClusterStatusAtProviderNetworkConfig>? NetworkConfig { get; set; }
@@ -1870,13 +1771,25 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("secondaryConfig")]
     public IList<V1beta1ClusterStatusAtProviderSecondaryConfig>? SecondaryConfig { get; set; }
 
+    /// <summary>Set to true to skip awaiting on the major version upgrade of the cluster. Possible values: true, false Default value: "true"</summary>
+    [JsonPropertyName("skipAwaitMajorVersionUpgrade")]
+    public bool? SkipAwaitMajorVersionUpgrade { get; set; }
+
     /// <summary>Output only. The current serving state of the cluster.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
+    /// <summary>The subscrition type of cluster. Possible values are: TRIAL, STANDARD.</summary>
+    [JsonPropertyName("subscriptionType")]
+    public string? SubscriptionType { get; set; }
+
     /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
+
+    /// <summary>Contains information and all metadata related to TRIAL clusters. Structure is documented below.</summary>
+    [JsonPropertyName("trialMetadata")]
+    public IList<V1beta1ClusterStatusAtProviderTrialMetadata>? TrialMetadata { get; set; }
 
     /// <summary>The system-generated UID of the resource.</summary>
     [JsonPropertyName("uid")]

@@ -239,6 +239,15 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSele
     public V1beta1RegionNetworkEndpointGroupSpecForProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscData
+{
+    /// <summary>The PSC producer port to use when consumer PSC NEG connects to a producer. If this flag isn't specified for a PSC NEG with endpoint type private-service-connect, then PSC NEG will be connected to a first port in the available PSC producer port range.</summary>
+    [JsonPropertyName("producerPort")]
+    public string? ProducerPort { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecForProviderPscTargetServiceRefPolicy
@@ -390,6 +399,10 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecForProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
+    [JsonPropertyName("pscData")]
+    public IList<V1beta1RegionNetworkEndpointGroupSpecForProviderPscData>? PscData { get; set; }
 
     /// <summary>This field is only used for PSC and INTERNET NEGs. The target service url used to set up private service connection to a Google API or a PSC Producer Service Attachment.</summary>
     [JsonPropertyName("pscTargetService")]
@@ -651,6 +664,15 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSel
     public V1beta1RegionNetworkEndpointGroupSpecInitProviderNetworkSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscData
+{
+    /// <summary>The PSC producer port to use when consumer PSC NEG connects to a producer. If this flag isn't specified for a PSC NEG with endpoint type private-service-connect, then PSC NEG will be connected to a first port in the available PSC producer port range.</summary>
+    [JsonPropertyName("producerPort")]
+    public string? ProducerPort { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupSpecInitProviderPscTargetServiceRefPolicy
@@ -802,6 +824,10 @@ public partial class V1beta1RegionNetworkEndpointGroupSpecInitProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
+    [JsonPropertyName("pscData")]
+    public IList<V1beta1RegionNetworkEndpointGroupSpecInitProviderPscData>? PscData { get; set; }
 
     /// <summary>This field is only used for PSC and INTERNET NEGs. The target service url used to set up private service connection to a Google API or a PSC Producer Service Attachment.</summary>
     [JsonPropertyName("pscTargetService")]
@@ -1009,6 +1035,15 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderCloudRun
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RegionNetworkEndpointGroupStatusAtProviderPscData
+{
+    /// <summary>The PSC producer port to use when consumer PSC NEG connects to a producer. If this flag isn't specified for a PSC NEG with endpoint type private-service-connect, then PSC NEG will be connected to a first port in the available PSC producer port range.</summary>
+    [JsonPropertyName("producerPort")]
+    public string? ProducerPort { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
 {
     /// <summary>This field is only used for SERVERLESS NEGs. Only one of cloud_run, app_engine, cloud_function or serverless_deployment may be set. Structure is documented below.</summary>
@@ -1042,6 +1077,10 @@ public partial class V1beta1RegionNetworkEndpointGroupStatusAtProvider
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>This field is only used for PSC NEGs. Structure is documented below.</summary>
+    [JsonPropertyName("pscData")]
+    public IList<V1beta1RegionNetworkEndpointGroupStatusAtProviderPscData>? PscData { get; set; }
 
     /// <summary>This field is only used for PSC and INTERNET NEGs. The target service url used to set up private service connection to a Google API or a PSC Producer Service Attachment.</summary>
     [JsonPropertyName("pscTargetService")]

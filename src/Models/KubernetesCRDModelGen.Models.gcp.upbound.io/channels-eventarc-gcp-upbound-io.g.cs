@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.eventarc.gcp.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProvider
 {
-    /// <summary>Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
+    /// <summary>Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
@@ -20,7 +20,7 @@ public partial class V1beta1ChannelSpecForProvider
     [JsonPropertyName("location")]
     public string Location { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -33,11 +33,11 @@ public partial class V1beta1ChannelSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProvider
 {
-    /// <summary>Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
+    /// <summary>Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
@@ -182,15 +182,15 @@ public partial class V1beta1ChannelSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProvider
 {
-    /// <summary>Output only. The activation token for the channel. The token must be used by the provider to register the channel for publishing.</summary>
+    /// <summary>The activation token for the channel. The token must be used by the provider to register the channel for publishing.</summary>
     [JsonPropertyName("activationToken")]
     public string? ActivationToken { get; set; }
 
-    /// <summary>Output only. The creation time.</summary>
+    /// <summary>The creation time.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
-    /// <summary>Optional. Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
+    /// <summary>Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt their event data. It must match the pattern projects/*/locations/*/keyRings/*/cryptoKeys/*.</summary>
     [JsonPropertyName("cryptoKeyName")]
     public string? CryptoKeyName { get; set; }
 
@@ -202,15 +202,15 @@ public partial class V1beta1ChannelStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The project for the resource</summary>
+    /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
 
-    /// <summary>Output only. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: projects/{project}/topics/{topic_id}.</summary>
+    /// <summary>The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: projects/{project}/topics/{topic_id}.</summary>
     [JsonPropertyName("pubsubTopic")]
     public string? PubsubTopic { get; set; }
 
-    /// <summary>Output only. The state of a Channel. Possible values: STATE_UNSPECIFIED, PENDING, ACTIVE, INACTIVE</summary>
+    /// <summary>The state of a Channel.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
@@ -218,11 +218,11 @@ public partial class V1beta1ChannelStatusAtProvider
     [JsonPropertyName("thirdPartyProvider")]
     public string? ThirdPartyProvider { get; set; }
 
-    /// <summary>Output only. Server assigned unique identifier for the channel. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.</summary>
+    /// <summary>Server assigned unique identifier for the channel. The value is a UUID4 string and guaranteed to remain unchanged until the resource is deleted.</summary>
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
 
-    /// <summary>Output only. The last-modified time.</summary>
+    /// <summary>The last-modified time.</summary>
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }

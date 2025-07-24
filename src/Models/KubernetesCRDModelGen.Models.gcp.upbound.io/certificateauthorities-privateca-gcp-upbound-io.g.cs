@@ -484,13 +484,26 @@ public partial class V1beta1CertificateAuthoritySpecForProviderSubordinateConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateAuthoritySpecForProviderUserDefinedAccessUrls
+{
+    /// <summary>A list of URLs where this CertificateAuthority's CA certificate is published that is specified by users.</summary>
+    [JsonPropertyName("aiaIssuingCertificateUrls")]
+    public IList<string>? AiaIssuingCertificateUrls { get; set; }
+
+    /// <summary>A list of URLs where this CertificateAuthority's CRLs are published that is specified by users.</summary>
+    [JsonPropertyName("crlAccessUrls")]
+    public IList<string>? CrlAccessUrls { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecForProvider
 {
     /// <summary>The config used to create a self-signed X.509 certificate or CSR. Structure is documented below.</summary>
     [JsonPropertyName("config")]
     public IList<V1beta1CertificateAuthoritySpecForProviderConfig>? Config { get; set; }
 
-    /// <summary></summary>
+    /// <summary>When the field is set to false, deleting the CertificateAuthority is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -553,6 +566,10 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     /// <summary>The Type of this CertificateAuthority. ~&gt; Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>Custom URLs for accessing content published by this CA, such as the CA certificate and CRLs, that can be specified by users. Structure is documented below.</summary>
+    [JsonPropertyName("userDefinedAccessUrls")]
+    public IList<V1beta1CertificateAuthoritySpecForProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
 
 /// <summary></summary>
@@ -973,6 +990,19 @@ public partial class V1beta1CertificateAuthoritySpecInitProviderSubordinateConfi
     public IList<V1beta1CertificateAuthoritySpecInitProviderSubordinateConfigPemIssuerChain>? PemIssuerChain { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateAuthoritySpecInitProviderUserDefinedAccessUrls
+{
+    /// <summary>A list of URLs where this CertificateAuthority's CA certificate is published that is specified by users.</summary>
+    [JsonPropertyName("aiaIssuingCertificateUrls")]
+    public IList<string>? AiaIssuingCertificateUrls { get; set; }
+
+    /// <summary>A list of URLs where this CertificateAuthority's CRLs are published that is specified by users.</summary>
+    [JsonPropertyName("crlAccessUrls")]
+    public IList<string>? CrlAccessUrls { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthoritySpecInitProvider
@@ -981,7 +1011,7 @@ public partial class V1beta1CertificateAuthoritySpecInitProvider
     [JsonPropertyName("config")]
     public IList<V1beta1CertificateAuthoritySpecInitProviderConfig>? Config { get; set; }
 
-    /// <summary></summary>
+    /// <summary>When the field is set to false, deleting the CertificateAuthority is allowed.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
@@ -1028,6 +1058,10 @@ public partial class V1beta1CertificateAuthoritySpecInitProvider
     /// <summary>The Type of this CertificateAuthority. ~&gt; Note: For SUBORDINATE Certificate Authorities, they need to be activated before they can issue certificates. Default value is SELF_SIGNED. Possible values are: SELF_SIGNED, SUBORDINATE.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>Custom URLs for accessing content published by this CA, such as the CA certificate and CRLs, that can be specified by users. Structure is documented below.</summary>
+    [JsonPropertyName("userDefinedAccessUrls")]
+    public IList<V1beta1CertificateAuthoritySpecInitProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1531,6 +1565,19 @@ public partial class V1beta1CertificateAuthorityStatusAtProviderSubordinateConfi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CertificateAuthorityStatusAtProviderUserDefinedAccessUrls
+{
+    /// <summary>A list of URLs where this CertificateAuthority's CA certificate is published that is specified by users.</summary>
+    [JsonPropertyName("aiaIssuingCertificateUrls")]
+    public IList<string>? AiaIssuingCertificateUrls { get; set; }
+
+    /// <summary>A list of URLs where this CertificateAuthority's CRLs are published that is specified by users.</summary>
+    [JsonPropertyName("crlAccessUrls")]
+    public IList<string>? CrlAccessUrls { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateAuthorityStatusAtProvider
 {
     /// <summary>URLs for accessing content published by this CA, such as the CA certificate and CRLs. Structure is documented below.</summary>
@@ -1628,6 +1675,10 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     /// <summary>The time at which this CertificateAuthority was updated. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
+
+    /// <summary>Custom URLs for accessing content published by this CA, such as the CA certificate and CRLs, that can be specified by users. Structure is documented below.</summary>
+    [JsonPropertyName("userDefinedAccessUrls")]
+    public IList<V1beta1CertificateAuthorityStatusAtProviderUserDefinedAccessUrls>? UserDefinedAccessUrls { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

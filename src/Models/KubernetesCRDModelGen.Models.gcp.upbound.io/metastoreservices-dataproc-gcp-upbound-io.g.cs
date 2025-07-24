@@ -264,8 +264,38 @@ public partial class V1beta1MetastoreServiceSpecForProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfigLimitConfig
+{
+    /// <summary>The maximum scaling factor that the service will autoscale to. The default value is 6.0.</summary>
+    [JsonPropertyName("maxScalingFactor")]
+    public double? MaxScalingFactor { get; set; }
+
+    /// <summary>The minimum scaling factor that the service will autoscale to. The default value is 0.1.</summary>
+    [JsonPropertyName("minScalingFactor")]
+    public double? MinScalingFactor { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfig
+{
+    /// <summary>Defines whether autoscaling is enabled. The default value is false.</summary>
+    [JsonPropertyName("autoscalingEnabled")]
+    public bool? AutoscalingEnabled { get; set; }
+
+    /// <summary>Represents the limit configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("limitConfig")]
+    public IList<V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecForProviderScalingConfig
 {
+    /// <summary>Represents the autoscaling configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingConfig")]
+    public IList<V1beta1MetastoreServiceSpecForProviderScalingConfigAutoscalingConfig>? AutoscalingConfig { get; set; }
+
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
@@ -312,6 +342,10 @@ public partial class V1beta1MetastoreServiceSpecForProvider
     /// <summary>The database type that the Metastore service stores its data. Default value is MYSQL. Possible values are: MYSQL, SPANNER.</summary>
     [JsonPropertyName("databaseType")]
     public string? DatabaseType { get; set; }
+
+    /// <summary>Indicates if the dataproc metastore should be protected against accidental deletions.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Structure is documented below.</summary>
     [JsonPropertyName("encryptionConfig")]
@@ -630,8 +664,38 @@ public partial class V1beta1MetastoreServiceSpecInitProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfigLimitConfig
+{
+    /// <summary>The maximum scaling factor that the service will autoscale to. The default value is 6.0.</summary>
+    [JsonPropertyName("maxScalingFactor")]
+    public double? MaxScalingFactor { get; set; }
+
+    /// <summary>The minimum scaling factor that the service will autoscale to. The default value is 0.1.</summary>
+    [JsonPropertyName("minScalingFactor")]
+    public double? MinScalingFactor { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfig
+{
+    /// <summary>Defines whether autoscaling is enabled. The default value is false.</summary>
+    [JsonPropertyName("autoscalingEnabled")]
+    public bool? AutoscalingEnabled { get; set; }
+
+    /// <summary>Represents the limit configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("limitConfig")]
+    public IList<V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceSpecInitProviderScalingConfig
 {
+    /// <summary>Represents the autoscaling configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingConfig")]
+    public IList<V1beta1MetastoreServiceSpecInitProviderScalingConfigAutoscalingConfig>? AutoscalingConfig { get; set; }
+
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
@@ -678,6 +742,10 @@ public partial class V1beta1MetastoreServiceSpecInitProvider
     /// <summary>The database type that the Metastore service stores its data. Default value is MYSQL. Possible values are: MYSQL, SPANNER.</summary>
     [JsonPropertyName("databaseType")]
     public string? DatabaseType { get; set; }
+
+    /// <summary>Indicates if the dataproc metastore should be protected against accidental deletions.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary>Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Structure is documented below.</summary>
     [JsonPropertyName("encryptionConfig")]
@@ -1000,8 +1068,42 @@ public partial class V1beta1MetastoreServiceStatusAtProviderNetworkConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfigLimitConfig
+{
+    /// <summary>The maximum scaling factor that the service will autoscale to. The default value is 6.0.</summary>
+    [JsonPropertyName("maxScalingFactor")]
+    public double? MaxScalingFactor { get; set; }
+
+    /// <summary>The minimum scaling factor that the service will autoscale to. The default value is 0.1.</summary>
+    [JsonPropertyName("minScalingFactor")]
+    public double? MinScalingFactor { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfig
+{
+    /// <summary>Defines whether autoscaling is enabled. The default value is false.</summary>
+    [JsonPropertyName("autoscalingEnabled")]
+    public bool? AutoscalingEnabled { get; set; }
+
+    /// <summary>(Output) Output only. The scaling factor of a service with autoscaling enabled.</summary>
+    [JsonPropertyName("autoscalingFactor")]
+    public double? AutoscalingFactor { get; set; }
+
+    /// <summary>Represents the limit configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("limitConfig")]
+    public IList<V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfigLimitConfig>? LimitConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetastoreServiceStatusAtProviderScalingConfig
 {
+    /// <summary>Represents the autoscaling configuration of a metastore service. Structure is documented below.</summary>
+    [JsonPropertyName("autoscalingConfig")]
+    public IList<V1beta1MetastoreServiceStatusAtProviderScalingConfigAutoscalingConfig>? AutoscalingConfig { get; set; }
+
     /// <summary>Metastore instance sizes. Possible values are: EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE.</summary>
     [JsonPropertyName("instanceSize")]
     public string? InstanceSize { get; set; }
@@ -1049,9 +1151,17 @@ public partial class V1beta1MetastoreServiceStatusAtProvider
     [JsonPropertyName("artifactGcsUri")]
     public string? ArtifactGcsUri { get; set; }
 
+    /// <summary>Output only. The time when the metastore service was created.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
+
     /// <summary>The database type that the Metastore service stores its data. Default value is MYSQL. Possible values are: MYSQL, SPANNER.</summary>
     [JsonPropertyName("databaseType")]
     public string? DatabaseType { get; set; }
+
+    /// <summary>Indicates if the dataproc metastore should be protected against accidental deletions.</summary>
+    [JsonPropertyName("deletionProtection")]
+    public bool? DeletionProtection { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("effectiveLabels")]
@@ -1144,6 +1254,10 @@ public partial class V1beta1MetastoreServiceStatusAtProvider
     /// <summary>The globally unique resource identifier of the metastore service.</summary>
     [JsonPropertyName("uid")]
     public string? Uid { get; set; }
+
+    /// <summary>Output only. The time when the metastore service was last updated.</summary>
+    [JsonPropertyName("updateTime")]
+    public string? UpdateTime { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

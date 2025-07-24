@@ -152,6 +152,10 @@ public partial class V1beta1AttachedDiskSpecForProvider
     [JsonPropertyName("instanceSelector")]
     public V1beta1AttachedDiskSpecForProviderInstanceSelector? InstanceSelector { get; set; }
 
+    /// <summary>The disk interface used for attaching this disk.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
+
     /// <summary>The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
@@ -308,6 +312,10 @@ public partial class V1beta1AttachedDiskSpecInitProvider
     /// <summary>Selector for a Instance in compute to populate instance.</summary>
     [JsonPropertyName("instanceSelector")]
     public V1beta1AttachedDiskSpecInitProviderInstanceSelector? InstanceSelector { get; set; }
+
+    /// <summary>The disk interface used for attaching this disk.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
 
     /// <summary>The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.</summary>
     [JsonPropertyName("mode")]
@@ -473,6 +481,10 @@ public partial class V1beta1AttachedDiskStatusAtProvider
     /// <summary>name or self_link of the compute instance that the disk will be attached to. If the self_link is provided then zone and project are extracted from the self link. If only the name is used then zone and project must be defined as properties on the resource or provider.</summary>
     [JsonPropertyName("instance")]
     public string? Instance { get; set; }
+
+    /// <summary>The disk interface used for attaching this disk.</summary>
+    [JsonPropertyName("interface")]
+    public string? Interface { get; set; }
 
     /// <summary>The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.</summary>
     [JsonPropertyName("mode")]

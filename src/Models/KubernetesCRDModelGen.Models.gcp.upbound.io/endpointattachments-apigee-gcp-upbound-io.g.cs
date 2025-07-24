@@ -10,62 +10,6 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointAttachmentSpecForProviderOrgIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Organization in apigee to populate orgId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointAttachmentSpecForProviderOrgIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1EndpointAttachmentSpecForProviderOrgIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointAttachmentSpecForProviderOrgIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Organization in apigee to populate orgId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointAttachmentSpecForProviderOrgIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1EndpointAttachmentSpecForProviderOrgIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -124,23 +68,15 @@ public partial class V1beta1EndpointAttachmentSpecForProviderServiceAttachmentSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecForProvider
 {
-    /// <summary>Location of the endpoint attachment.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The Apigee Organization associated with the Apigee instance, in the format organizations/{{org_name}}.</summary>
+    /// <summary></summary>
     [JsonPropertyName("orgId")]
-    public string? OrgId { get; set; }
+    public string OrgId { get; set; }
 
-    /// <summary>Reference to a Organization in apigee to populate orgId.</summary>
-    [JsonPropertyName("orgIdRef")]
-    public V1beta1EndpointAttachmentSpecForProviderOrgIdRef? OrgIdRef { get; set; }
-
-    /// <summary>Selector for a Organization in apigee to populate orgId.</summary>
-    [JsonPropertyName("orgIdSelector")]
-    public V1beta1EndpointAttachmentSpecForProviderOrgIdSelector? OrgIdSelector { get; set; }
-
-    /// <summary>Format: projects//regions//serviceAttachments/*</summary>
+    /// <summary></summary>
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 
@@ -213,11 +149,11 @@ public partial class V1beta1EndpointAttachmentSpecInitProviderServiceAttachmentS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentSpecInitProvider
 {
-    /// <summary>Location of the endpoint attachment.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Format: projects//regions//serviceAttachments/*</summary>
+    /// <summary></summary>
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 
@@ -366,31 +302,31 @@ public partial class V1beta1EndpointAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointAttachmentStatusAtProvider
 {
-    /// <summary>State of the endpoint attachment connection to the service attachment.</summary>
+    /// <summary></summary>
     [JsonPropertyName("connectionState")]
     public string? ConnectionState { get; set; }
 
-    /// <summary>Host that can be used in either HTTP Target Endpoint directly, or as the host in Target Server.</summary>
+    /// <summary></summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>an identifier for the resource with format {{org_id}}/endpointAttachments/{{endpoint_attachment_id}}</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Location of the endpoint attachment.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Name of the Endpoint Attachment in the following format: organizations/{organization}/endpointAttachments/{endpointAttachment}.</summary>
+    /// <summary></summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The Apigee Organization associated with the Apigee instance, in the format organizations/{{org_name}}.</summary>
+    /// <summary></summary>
     [JsonPropertyName("orgId")]
     public string? OrgId { get; set; }
 
-    /// <summary>Format: projects//regions//serviceAttachments/*</summary>
+    /// <summary></summary>
     [JsonPropertyName("serviceAttachment")]
     public string? ServiceAttachment { get; set; }
 }
@@ -441,7 +377,7 @@ public partial class V1beta1EndpointAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. Apigee Endpoint Attachment.</summary>
+/// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EndpointAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointAttachmentSpec>, IStatus<V1beta1EndpointAttachmentStatus>
@@ -471,7 +407,7 @@ public partial class V1beta1EndpointAttachment : IKubernetesObject<V1ObjectMeta>
     public V1beta1EndpointAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. Apigee Endpoint Attachment.</summary>
+/// <summary>EndpointAttachment is the Schema for the EndpointAttachments API. &lt;no value&gt;</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EndpointAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EndpointAttachment>

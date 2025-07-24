@@ -405,6 +405,14 @@ public partial class V1beta1RouterPeerSpecForProvider
     [JsonPropertyName("enableIpv6")]
     public bool? EnableIpv6 { get; set; }
 
+    /// <summary>routers.list of export policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.</summary>
+    [JsonPropertyName("exportPolicies")]
+    public IList<string>? ExportPolicies { get; set; }
+
+    /// <summary>routers.list of import policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.</summary>
+    [JsonPropertyName("importPolicies")]
+    public IList<string>? ImportPolicies { get; set; }
+
     /// <summary>Name of the interface the BGP peer is associated with.</summary>
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
@@ -496,6 +504,14 @@ public partial class V1beta1RouterPeerSpecForProvider
     /// <summary>Selector for a Router in compute to populate router.</summary>
     [JsonPropertyName("routerSelector")]
     public V1beta1RouterPeerSpecForProviderRouterSelector? RouterSelector { get; set; }
+
+    /// <summary>The user-defined zero-advertised-route-priority for a advertised-route-priority in BGP session. This value has to be set true to force the advertised_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroAdvertisedRoutePriority")]
+    public bool? ZeroAdvertisedRoutePriority { get; set; }
+
+    /// <summary>The user-defined zero-custom-learned-route-priority for a custom-learned-route-priority in BGP session. This value has to be set true to force the custom_learned_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroCustomLearnedRoutePriority")]
+    public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
 
 /// <summary></summary>
@@ -818,6 +834,14 @@ public partial class V1beta1RouterPeerSpecInitProvider
     [JsonPropertyName("enableIpv6")]
     public bool? EnableIpv6 { get; set; }
 
+    /// <summary>routers.list of export policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.</summary>
+    [JsonPropertyName("exportPolicies")]
+    public IList<string>? ExportPolicies { get; set; }
+
+    /// <summary>routers.list of import policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.</summary>
+    [JsonPropertyName("importPolicies")]
+    public IList<string>? ImportPolicies { get; set; }
+
     /// <summary>Name of the interface the BGP peer is associated with.</summary>
     [JsonPropertyName("interface")]
     public string? Interface { get; set; }
@@ -897,6 +921,14 @@ public partial class V1beta1RouterPeerSpecInitProvider
     /// <summary>Selector for a Instance in compute to populate routerApplianceInstance.</summary>
     [JsonPropertyName("routerApplianceInstanceSelector")]
     public V1beta1RouterPeerSpecInitProviderRouterApplianceInstanceSelector? RouterApplianceInstanceSelector { get; set; }
+
+    /// <summary>The user-defined zero-advertised-route-priority for a advertised-route-priority in BGP session. This value has to be set true to force the advertised_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroAdvertisedRoutePriority")]
+    public bool? ZeroAdvertisedRoutePriority { get; set; }
+
+    /// <summary>The user-defined zero-custom-learned-route-priority for a custom-learned-route-priority in BGP session. This value has to be set true to force the custom_learned_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroCustomLearnedRoutePriority")]
+    public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1127,9 +1159,17 @@ public partial class V1beta1RouterPeerStatusAtProvider
     [JsonPropertyName("enableIpv6")]
     public bool? EnableIpv6 { get; set; }
 
+    /// <summary>routers.list of export policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.</summary>
+    [JsonPropertyName("exportPolicies")]
+    public IList<string>? ExportPolicies { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/regions/{{region}}/routers/{{router}}/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>routers.list of import policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.</summary>
+    [JsonPropertyName("importPolicies")]
+    public IList<string>? ImportPolicies { get; set; }
 
     /// <summary>Name of the interface the BGP peer is associated with.</summary>
     [JsonPropertyName("interface")]
@@ -1146,6 +1186,14 @@ public partial class V1beta1RouterPeerStatusAtProvider
     /// <summary>IPv6 address of the interface inside Google Cloud Platform. The address must be in the range 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64. If you do not specify the next hop addresses, Google Cloud automatically assigns unused addresses from the 2600:2d00:0:2::/64 or 2600:2d00:0:3::/64 range for you.</summary>
     [JsonPropertyName("ipv6NexthopAddress")]
     public string? Ipv6NexthopAddress { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("isAdvertisedRoutePrioritySet")]
+    public bool? IsAdvertisedRoutePrioritySet { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("isCustomLearnedPrioritySet")]
+    public bool? IsCustomLearnedPrioritySet { get; set; }
 
     /// <summary>The resource that configures and manages this BGP peer.</summary>
     [JsonPropertyName("managementType")]
@@ -1186,6 +1234,14 @@ public partial class V1beta1RouterPeerStatusAtProvider
     /// <summary>The URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.</summary>
     [JsonPropertyName("routerApplianceInstance")]
     public string? RouterApplianceInstance { get; set; }
+
+    /// <summary>The user-defined zero-advertised-route-priority for a advertised-route-priority in BGP session. This value has to be set true to force the advertised_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroAdvertisedRoutePriority")]
+    public bool? ZeroAdvertisedRoutePriority { get; set; }
+
+    /// <summary>The user-defined zero-custom-learned-route-priority for a custom-learned-route-priority in BGP session. This value has to be set true to force the custom_learned_route_priority to be 0.</summary>
+    [JsonPropertyName("zeroCustomLearnedRoutePriority")]
+    public bool? ZeroCustomLearnedRoutePriority { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

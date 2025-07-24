@@ -236,7 +236,7 @@ public partial class V1beta1GatewaySpecForProviderSubnetworkSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecForProvider
 {
-    /// <summary>Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.</summary>
+    /// <summary>Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6.</summary>
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 
@@ -260,7 +260,11 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: projects/*/locations/*/gatewaySecurityPolicies/swg-policy. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>Determines if envoy will insert internal debug headers into upstream requests. Other Envoy headers may still be injected. By default, envoy will not insert any debug headers. Possible values are: NONE, DEBUG_HEADERS.</summary>
+    [JsonPropertyName("envoyHeaders")]
+    public string? EnvoyHeaders { get; set; }
+
+    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: 'projects//locations//gatewaySecurityPolicies/swg-policy'. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("gatewaySecurityPolicy")]
     public string? GatewaySecurityPolicy { get; set; }
 
@@ -272,7 +276,11 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("gatewaySecurityPolicySelector")]
     public V1beta1GatewaySpecForProviderGatewaySecurityPolicySelector? GatewaySecurityPolicySelector { get; set; }
 
-    /// <summary>Set of label tags associated with the Gateway resource. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    /// <summary>The IP Version that will be used by this gateway. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("ipVersion")]
+    public string? IpVersion { get; set; }
+
+    /// <summary>Set of label tags associated with the Gateway resource.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -280,7 +288,7 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: projects/*/global/networks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: 'projects/*/global/networks/network-1'. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
@@ -292,13 +300,17 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("networkSelector")]
     public V1beta1GatewaySpecForProviderNetworkSelector? NetworkSelector { get; set; }
 
-    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.</summary>
+    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support multiple ports.</summary>
     [JsonPropertyName("ports")]
     public IList<double>? Ports { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The routing mode of the Gateway. This field is configurable only for gateways of type SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY. Possible values are: NEXT_HOP_ROUTING_MODE.</summary>
+    [JsonPropertyName("routingMode")]
+    public string? RoutingMode { get; set; }
 
     /// <summary>Immutable. Scope determines how configuration across multiple Gateway instances are merged. The configuration for multiple Gateway instances with the same scope will be merged as presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.</summary>
     [JsonPropertyName("scope")]
@@ -308,7 +320,7 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("serverTlsPolicy")]
     public string? ServerTlsPolicy { get; set; }
 
-    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.</summary>
+    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
@@ -320,7 +332,7 @@ public partial class V1beta1GatewaySpecForProvider
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1GatewaySpecForProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 
-    /// <summary>Immutable. The type of the customer-managed gateway. Possible values are: * OPEN_MESH * SECURE_WEB_GATEWAY. Possible values are: TYPE_UNSPECIFIED, OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
+    /// <summary>Immutable. The type of the customer managed gateway. Possible values are: OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -553,7 +565,7 @@ public partial class V1beta1GatewaySpecInitProviderSubnetworkSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecInitProvider
 {
-    /// <summary>Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.</summary>
+    /// <summary>Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6.</summary>
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 
@@ -577,7 +589,11 @@ public partial class V1beta1GatewaySpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: projects/*/locations/*/gatewaySecurityPolicies/swg-policy. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>Determines if envoy will insert internal debug headers into upstream requests. Other Envoy headers may still be injected. By default, envoy will not insert any debug headers. Possible values are: NONE, DEBUG_HEADERS.</summary>
+    [JsonPropertyName("envoyHeaders")]
+    public string? EnvoyHeaders { get; set; }
+
+    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: 'projects//locations//gatewaySecurityPolicies/swg-policy'. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("gatewaySecurityPolicy")]
     public string? GatewaySecurityPolicy { get; set; }
 
@@ -589,11 +605,15 @@ public partial class V1beta1GatewaySpecInitProvider
     [JsonPropertyName("gatewaySecurityPolicySelector")]
     public V1beta1GatewaySpecInitProviderGatewaySecurityPolicySelector? GatewaySecurityPolicySelector { get; set; }
 
-    /// <summary>Set of label tags associated with the Gateway resource. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    /// <summary>The IP Version that will be used by this gateway. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("ipVersion")]
+    public string? IpVersion { get; set; }
+
+    /// <summary>Set of label tags associated with the Gateway resource.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
-    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: projects/*/global/networks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: 'projects/*/global/networks/network-1'. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
@@ -605,13 +625,17 @@ public partial class V1beta1GatewaySpecInitProvider
     [JsonPropertyName("networkSelector")]
     public V1beta1GatewaySpecInitProviderNetworkSelector? NetworkSelector { get; set; }
 
-    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.</summary>
+    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support multiple ports.</summary>
     [JsonPropertyName("ports")]
     public IList<double>? Ports { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The routing mode of the Gateway. This field is configurable only for gateways of type SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY. Possible values are: NEXT_HOP_ROUTING_MODE.</summary>
+    [JsonPropertyName("routingMode")]
+    public string? RoutingMode { get; set; }
 
     /// <summary>Immutable. Scope determines how configuration across multiple Gateway instances are merged. The configuration for multiple Gateway instances with the same scope will be merged as presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.</summary>
     [JsonPropertyName("scope")]
@@ -621,7 +645,7 @@ public partial class V1beta1GatewaySpecInitProvider
     [JsonPropertyName("serverTlsPolicy")]
     public string? ServerTlsPolicy { get; set; }
 
-    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.</summary>
+    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
@@ -633,7 +657,7 @@ public partial class V1beta1GatewaySpecInitProvider
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1GatewaySpecInitProviderSubnetworkSelector? SubnetworkSelector { get; set; }
 
-    /// <summary>Immutable. The type of the customer-managed gateway. Possible values are: * OPEN_MESH * SECURE_WEB_GATEWAY. Possible values are: TYPE_UNSPECIFIED, OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
+    /// <summary>Immutable. The type of the customer managed gateway. Possible values are: OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -774,7 +798,7 @@ public partial class V1beta1GatewaySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayStatusAtProvider
 {
-    /// <summary>Zero or one IPv4-address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0.</summary>
+    /// <summary>Zero or one IPv4 or IPv6 address on which the Gateway will receive the traffic. When no address is provided, an IP from the subnetwork is allocated. This field only applies to gateways of type 'SECURE_WEB_GATEWAY'. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6.</summary>
     [JsonPropertyName("addresses")]
     public IList<string>? Addresses { get; set; }
 
@@ -782,7 +806,7 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("certificateUrls")]
     public IList<string>? CertificateUrls { get; set; }
 
-    /// <summary>Time the AccessPolicy was created in UTC.</summary>
+    /// <summary>The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
     public string? CreateTime { get; set; }
 
@@ -794,11 +818,15 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary></summary>
+    /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 
-    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: projects/*/locations/*/gatewaySecurityPolicies/swg-policy. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>Determines if envoy will insert internal debug headers into upstream requests. Other Envoy headers may still be injected. By default, envoy will not insert any debug headers. Possible values are: NONE, DEBUG_HEADERS.</summary>
+    [JsonPropertyName("envoyHeaders")]
+    public string? EnvoyHeaders { get; set; }
+
+    /// <summary>A fully-qualified GatewaySecurityPolicy URL reference. Defines how a server should apply security policy to inbound (VM to Proxy) initiated connections. For example: 'projects//locations//gatewaySecurityPolicies/swg-policy'. This policy is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("gatewaySecurityPolicy")]
     public string? GatewaySecurityPolicy { get; set; }
 
@@ -806,7 +834,11 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Set of label tags associated with the Gateway resource. Note: This field is non-authoritative, and will only manage the labels present in your configuration. Please refer to the field effective_labels for all of the labels present on the resource.</summary>
+    /// <summary>The IP Version that will be used by this gateway. Possible values are: IPV4, IPV6.</summary>
+    [JsonPropertyName("ipVersion")]
+    public string? IpVersion { get; set; }
+
+    /// <summary>Set of label tags associated with the Gateway resource.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -814,17 +846,21 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: projects/*/global/networks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
+    /// <summary>The relative resource name identifying the VPC network that is using this configuration. For example: 'projects/*/global/networks/network-1'. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
-    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 and support multiple ports.</summary>
+    /// <summary>One or more port numbers (1-65535), on which the Gateway will receive traffic. The proxy binds to the specified ports. Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port. Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and support multiple ports.</summary>
     [JsonPropertyName("ports")]
     public IList<double>? Ports { get; set; }
 
     /// <summary>The ID of the project in which the resource belongs. If it is not provided, the provider project is used.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>The routing mode of the Gateway. This field is configurable only for gateways of type SECURE_WEB_GATEWAY. This field is required for gateways of type SECURE_WEB_GATEWAY. Possible values are: NEXT_HOP_ROUTING_MODE.</summary>
+    [JsonPropertyName("routingMode")]
+    public string? RoutingMode { get; set; }
 
     /// <summary>Immutable. Scope determines how configuration across multiple Gateway instances are merged. The configuration for multiple Gateway instances with the same scope will be merged as presented as a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start with a letter and can only have letters, numbers, hyphens.</summary>
     [JsonPropertyName("scope")]
@@ -838,7 +874,7 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("serverTlsPolicy")]
     public string? ServerTlsPolicy { get; set; }
 
-    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY.</summary>
+    /// <summary>The relative resource name identifying the subnetwork in which this SWG is allocated. For example: projects/*/regions/us-central1/subnetworks/network-1. Currently, this field is specific to gateways of type 'SECURE_WEB_GATEWAY'.</summary>
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
@@ -846,11 +882,11 @@ public partial class V1beta1GatewayStatusAtProvider
     [JsonPropertyName("terraformLabels")]
     public IDictionary<string, string>? TerraformLabels { get; set; }
 
-    /// <summary>Immutable. The type of the customer-managed gateway. Possible values are: * OPEN_MESH * SECURE_WEB_GATEWAY. Possible values are: TYPE_UNSPECIFIED, OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
+    /// <summary>Immutable. The type of the customer managed gateway. Possible values are: OPEN_MESH, SECURE_WEB_GATEWAY.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Time the AccessPolicy was updated in UTC.</summary>
+    /// <summary>The timestamp when the resource was updated.</summary>
     [JsonPropertyName("updateTime")]
     public string? UpdateTime { get; set; }
 }

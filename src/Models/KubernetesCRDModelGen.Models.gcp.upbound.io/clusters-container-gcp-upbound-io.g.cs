@@ -104,6 +104,15 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfi
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderAddonsConfigParallelstoreCsiDriverConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -190,6 +199,10 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfig
     [JsonPropertyName("networkPolicyConfig")]
     public IList<V1beta1ClusterSpecForProviderAddonsConfigNetworkPolicyConfig>? NetworkPolicyConfig { get; set; }
 
+    /// <summary>The status of the Parallelstore CSI driver addon, which allows the usage of a Parallelstore instances as volumes. It is disabled by default for Standard clusters; set enabled = true to enable. It is enabled by default for Autopilot clusters with version 1.29 or later; set enabled = true to enable it explicitly. See Enable the Parallelstore CSI driver for more information.</summary>
+    [JsonPropertyName("parallelstoreCsiDriverConfig")]
+    public IList<V1beta1ClusterSpecForProviderAddonsConfigParallelstoreCsiDriverConfig>? ParallelstoreCsiDriverConfig { get; set; }
+
     /// <summary>. The status of the Ray Operator addon. It is disabled by default. Set enabled = true to enable. The minimum cluster version to enable Ray is 1.30.0-gke.1747000.</summary>
     [JsonPropertyName("rayOperatorConfig")]
     public IList<V1beta1ClusterSpecForProviderAddonsConfigRayOperatorConfig>? RayOperatorConfig { get; set; }
@@ -197,6 +210,15 @@ public partial class V1beta1ClusterSpecForProviderAddonsConfig
     /// <summary>. The status of the Stateful HA addon, which provides automatic configurable failover for stateful applications. It is disabled by default for Standard clusters. Set enabled = true to enable.</summary>
     [JsonPropertyName("statefulHaConfig")]
     public IList<V1beta1ClusterSpecForProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderAnonymousAuthenticationConfig
+{
+    /// <summary>Sets or removes authentication restrictions. Available options include LIMITED and ENABLED.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -389,9 +411,48 @@ public partial class V1beta1ClusterSpecForProviderClusterAutoscaling
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfidentialNodes
 {
-    /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
+    /// <summary>Enable Confidential GKE Nodes for this node pool, to enforce encryption of data in-use.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderControlPlaneEndpointsConfigDnsEndpointConfig
+{
+    /// <summary>Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may still use the endpoint even if this is false.</summary>
+    [JsonPropertyName("allowExternalTraffic")]
+    public bool? AllowExternalTraffic { get; set; }
+
+    /// <summary>(Output) The cluster's DNS endpoint.</summary>
+    [JsonPropertyName("endpoint")]
+    public string? Endpoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderControlPlaneEndpointsConfigIpEndpointsConfig
+{
+    /// <summary>Controls whether to allow direct IP access. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderControlPlaneEndpointsConfig
+{
+    /// <summary>DNS endpoint configuration.</summary>
+    [JsonPropertyName("dnsEndpointConfig")]
+    public IList<V1beta1ClusterSpecForProviderControlPlaneEndpointsConfigDnsEndpointConfig>? DnsEndpointConfig { get; set; }
+
+    /// <summary>IP endpoint configuration.</summary>
+    [JsonPropertyName("ipEndpointsConfig")]
+    public IList<V1beta1ClusterSpecForProviderControlPlaneEndpointsConfigIpEndpointsConfig>? IpEndpointsConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -429,6 +490,10 @@ public partial class V1beta1ClusterSpecForProviderDefaultSnatStatus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderDnsConfig
 {
+    /// <summary>This will enable Cloud DNS additive VPC scope. Must provide a domain name that is unique within the VPC. For this to work cluster_dns = "CLOUD_DNS" and cluster_dns_scope = "CLUSTER_SCOPE" must both be set as well.</summary>
+    [JsonPropertyName("additiveVpcScopeDnsDomain")]
+    public string? AdditiveVpcScopeDnsDomain { get; set; }
+
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
     [JsonPropertyName("clusterDns")]
     public string? ClusterDns { get; set; }
@@ -453,6 +518,15 @@ public partial class V1beta1ClusterSpecForProviderEnableK8SBetaApis
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderEnterpriseConfig
+{
+    /// <summary>Sets the tier of the cluster. Available options include STANDARD and ENTERPRISE.</summary>
+    [JsonPropertyName("desiredTier")]
+    public string? DesiredTier { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -467,6 +541,15 @@ public partial class V1beta1ClusterSpecForProviderGatewayApiConfig
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
     [JsonPropertyName("channel")]
     public string? Channel { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderGkeAutoUpgradeConfig
+{
+    /// <summary>The selected patch mode. Accepted values are:</summary>
+    [JsonPropertyName("patchMode")]
+    public string? PatchMode { get; set; }
 }
 
 /// <summary></summary>
@@ -653,6 +736,10 @@ public partial class V1beta1ClusterSpecForProviderMasterAuthorizedNetworksConfig
     /// <summary>Whether Kubernetes master is accessible via Google Compute Engine Public IPs.</summary>
     [JsonPropertyName("gcpPublicCidrsAccessEnabled")]
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
+
+    /// <summary>Whether authorized networks is enforced on the private endpoint or not.</summary>
+    [JsonPropertyName("privateEndpointEnforcementEnabled")]
+    public bool? PrivateEndpointEnforcementEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -675,16 +762,25 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfigAdvancedDatapa
     /// <summary>Whether or not Relay is enabled.</summary>
     [JsonPropertyName("enableRelay")]
     public bool? EnableRelay { get; set; }
+}
 
-    /// <summary>Mode used to make Relay available.</summary>
-    [JsonPropertyName("relayMode")]
-    public string? RelayMode { get; set; }
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig
+{
+    /// <summary>Whether or not to enable GKE Auto-Monitoring. Supported values include: ALL, NONE.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheus
 {
+    /// <summary>Configuration options for GKE Auto-Monitoring.</summary>
+    [JsonPropertyName("autoMonitoringConfig")]
+    public IList<V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig>? AutoMonitoringConfig { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -705,6 +801,15 @@ public partial class V1beta1ClusterSpecForProviderMonitoringConfig
     /// <summary>Configuration for Managed Service for Prometheus. Structure is documented below.</summary>
     [JsonPropertyName("managedPrometheus")]
     public IList<V1beta1ClusterSpecForProviderMonitoringConfigManagedPrometheus>? ManagedPrometheus { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNetworkPerformanceConfig
+{
+    /// <summary>Specifies the total network bandwidth tier for NodePools in the cluster.</summary>
+    [JsonPropertyName("totalEgressBandwidthTier")]
+    public string? TotalEgressBandwidthTier { get; set; }
 }
 
 /// <summary></summary>
@@ -784,6 +889,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatu
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
+    /// <summary>Defines the performance monitoring unit PMU level. Valid values are ARCHITECTURAL, STANDARD, or ENHANCED. Defaults to off.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
     /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
@@ -793,6 +902,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigAdvancedMachineFeatu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes
 {
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -846,6 +959,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigContainerdConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary>Number of raw-block local NVMe SSD disks to be attached to the node utilized for GKE Data Cache. If zero, then GKE Data Cache will not be enabled in the nodes.</summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -938,6 +1055,18 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigHostMaintenancePolic
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
 {
+    /// <summary>Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns which can be set on the Pods. The allowed sysctl groups are kernel.shm*, kernel.msg*, kernel.sem, fs.mqueue.*, and net.*.</summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary>Defines the maximum number of container log files that can be present for a container. The integer must be between 2 and 10, inclusive.</summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary>Defines the maximum size of the container log file before it is rotated. Specified as a positive number and a unit suffix, such as "100Ki", "10Mi". Valid units are "Ki", "Mi", "Gi". The value must be between "10Mi" and "500Mi", inclusive. And the total container log size (container_log_max_size * container_log_max_files) cannot exceed 1% of the total storage of the node.</summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
@@ -946,11 +1075,27 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". Defaults to none when kubelet_config is unset.</summary>
+    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". If unset (or set to the empty string ""), the API will treat the field as if set to "none". Prior to the 6.4.0 this field was marked as required. The workaround for the required field is setting the empty string "", which will function identically to not setting this field.</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    /// <summary>Defines the percent of disk usage after which image garbage collection is always run. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary>Defines the percent of disk usage before which image garbage collection is never run. Lowest disk usage to garbage collect to. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary>Defines the maximum age an image can be unused before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m", and "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.</summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary>Defines the minimum age for an unused image before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m". The value cannot be greater than "2m".</summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -961,11 +1106,28 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary>Amount of 1G hugepages.</summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary>Amount of 2M hugepages.</summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary>Amounts for 2M and 1G hugepages. Structure is documented below.</summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1ClusterSpecForProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary>The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value. Currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional.</summary>
     [JsonPropertyName("sysctls")]
@@ -1125,6 +1287,15 @@ public partial class V1beta1ClusterSpecForProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -1144,7 +1315,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("bootDiskKmsKey")]
     public string? BootDiskKmsKey { get; set; }
 
-    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
+    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigConfidentialNodes>? ConfidentialNodes { get; set; }
 
@@ -1156,7 +1327,7 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
 
-    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'</summary>
+    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-balanced'</summary>
     [JsonPropertyName("diskType")]
     public string? DiskType { get; set; }
 
@@ -1172,11 +1343,15 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("fastSocket")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
+    /// <summary>Enables Flex Start provisioning model for the node pool.</summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
     /// <summary>Parameters for the Google Container Filesystem (GCFS). If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify image_type = "COS_CONTAINERD" and node_version from GKE versions 1.19 or later to use it. For GKE versions 1.19, 1.20, and 1.21, the recommended minimum node_version would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively. A machine_type that has more than 16 GiB of memory is also recommended. GCFS must be enabled in order to use image streaming. Structure is documented below.</summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below.12 this field is an Attribute as Block</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigGuestAccelerator>? GuestAccelerator { get; set; }
 
@@ -1191,10 +1366,6 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     /// <summary>The image type to use for this node. Note that changing the image type will delete and recreate all nodes in the node pool.</summary>
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
-
-    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
-    [JsonPropertyName("index")]
-    public string? Index { get; set; }
 
     /// <summary>Kubelet configuration, currently supported attributes can be found here. Structure is documented below.</summary>
     [JsonPropertyName("kubeletConfig")]
@@ -1216,6 +1387,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary>wide default value. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -1223,6 +1398,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     /// <summary>The name of a Google Compute Engine machine type. Defaults to e2-medium. To create a custom machine type, value should be set as specified here.</summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary>The runtime of each node in the node pool in seconds, terminated by 's'. Example: "3600s".</summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary>The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.</summary>
     [JsonPropertyName("metadata")]
@@ -1284,6 +1463,10 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 
+    /// <summary>The list of Storage Pools where boot disks are provisioned.</summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
     /// <summary>The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls.</summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
@@ -1292,9 +1475,22 @@ public partial class V1beta1ClusterSpecForProviderNodeConfig
     [JsonPropertyName("taint")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigTaint>? Taint { get; set; }
 
+    /// <summary>Windows node configuration, currently supporting OSVersion attribute. The value must be one of [OS_VERSION_UNSPECIFIED, OS_VERSION_LTSC2019, OS_VERSION_LTSC2022]. For example:</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1ClusterSpecForProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
+
     /// <summary>Metadata configuration to expose to workloads on the node pool. Structure is documented below.</summary>
     [JsonPropertyName("workloadMetadataConfig")]
     public IList<V1beta1ClusterSpecForProviderNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigLinuxNodeConfig
+{
+    /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
+    [JsonPropertyName("cgroupMode")]
+    public string? CgroupMode { get; set; }
 }
 
 /// <summary></summary>
@@ -1319,6 +1515,10 @@ public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfigNodeKubeletC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolAutoConfig
 {
+    /// <summary>Linux system configuration for the cluster's automatically provisioned node pools. Only cgroup_mode field is supported in node_pool_auto_config. Structure is documented below.</summary>
+    [JsonPropertyName("linuxNodeConfig")]
+    public IList<V1beta1ClusterSpecForProviderNodePoolAutoConfigLinuxNodeConfig>? LinuxNodeConfig { get; set; }
+
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterSpecForProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
@@ -1378,11 +1578,24 @@ public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>The default Google Container Filesystem (GCFS) configuration at the cluster level. e.g. enable image streaming across all the node pools within the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("gcfsConfig")]
+    public IList<V1beta1ClusterSpecForProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig>? GcfsConfig { get; set; }
 
     /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
@@ -1435,6 +1648,15 @@ public partial class V1beta1ClusterSpecForProviderNotificationConfig
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
     [JsonPropertyName("pubsub")]
     public IList<V1beta1ClusterSpecForProviderNotificationConfigPubsub>? Pubsub { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderPodAutoscaling
+{
+    /// <summary>Enable the Horizontal Pod Autoscaling profile for this cluster. Acceptable values are:</summary>
+    [JsonPropertyName("hpaProfile")]
+    public string? HpaProfile { get; set; }
 }
 
 /// <summary></summary>
@@ -1572,6 +1794,15 @@ public partial class V1beta1ClusterSpecForProviderResourceUsageExportConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderSecretManagerConfig
+{
+    /// <summary>Enable the Secret Manager add-on for this cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -1650,6 +1881,43 @@ public partial class V1beta1ClusterSpecForProviderSubnetworkSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderUserManagedKeysConfig
+{
+    /// <summary>The Certificate Authority Service caPool to use for the aggreation CA in this cluster.</summary>
+    [JsonPropertyName("aggregationCa")]
+    public string? AggregationCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the cluster CA in this cluster.</summary>
+    [JsonPropertyName("clusterCa")]
+    public string? ClusterCa { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKey to use for Confidential Hyperdisk on the control plane nodes.</summary>
+    [JsonPropertyName("controlPlaneDiskEncryptionKey")]
+    public string? ControlPlaneDiskEncryptionKey { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd API CA in this cluster.</summary>
+    [JsonPropertyName("etcdApiCa")]
+    public string? EtcdApiCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd peer CA in this cluster.</summary>
+    [JsonPropertyName("etcdPeerCa")]
+    public string? EtcdPeerCa { get; set; }
+
+    /// <summary>Resource path of the Cloud KMS cryptoKey to use for encryption of internal etcd backups.</summary>
+    [JsonPropertyName("gkeopsEtcdBackupEncryptionKey")]
+    public string? GkeopsEtcdBackupEncryptionKey { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for signing service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountSigningKeys")]
+    public IList<string>? ServiceAccountSigningKeys { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for verifying service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountVerificationKeys")]
+    public IList<string>? ServiceAccountVerificationKeys { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -1678,6 +1946,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("allowNetAdmin")]
     public bool? AllowNetAdmin { get; set; }
 
+    /// <summary>Configuration for anonymous authentication restrictions. Structure is documented below.</summary>
+    [JsonPropertyName("anonymousAuthenticationConfig")]
+    public IList<V1beta1ClusterSpecForProviderAnonymousAuthenticationConfig>? AnonymousAuthenticationConfig { get; set; }
+
     /// <summary>Configuration for the Google Groups for GKE feature. Structure is documented below.</summary>
     [JsonPropertyName("authenticatorGroupsConfig")]
     public IList<V1beta1ClusterSpecForProviderAuthenticatorGroupsConfig>? AuthenticatorGroupsConfig { get; set; }
@@ -1697,6 +1969,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterSpecForProviderConfidentialNodes>? ConfidentialNodes { get; set; }
+
+    /// <summary>Configuration for all of the cluster's control plane endpoints. Structure is documented below.</summary>
+    [JsonPropertyName("controlPlaneEndpointsConfig")]
+    public IList<V1beta1ClusterSpecForProviderControlPlaneEndpointsConfig>? ControlPlaneEndpointsConfig { get; set; }
 
     /// <summary>Configuration for the Cost Allocation feature. Structure is documented below.</summary>
     [JsonPropertyName("costManagementConfig")]
@@ -1726,6 +2002,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Disable L4 load balancer VPC firewalls to enable firewall policies.</summary>
+    [JsonPropertyName("disableL4LbFirewallReconciliation")]
+    public bool? DisableL4LbFirewallReconciliation { get; set; }
+
     /// <summary>Configuration for Using Cloud DNS for GKE. Structure is documented below.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ClusterSpecForProviderDnsConfig>? DnsConfig { get; set; }
@@ -1737,6 +2017,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Whether CiliumClusterWideNetworkPolicy is enabled on this cluster. Defaults to false.</summary>
     [JsonPropertyName("enableCiliumClusterwideNetworkPolicy")]
     public bool? EnableCiliumClusterwideNetworkPolicy { get; set; }
+
+    /// <summary>Whether FQDN Network Policy is enabled on this cluster. Users who enable this feature for existing Standard clusters must restart the GKE Dataplane V2 anetd DaemonSet after enabling it. See the Enable FQDN Network Policy in an existing cluster for more information.</summary>
+    [JsonPropertyName("enableFqdnNetworkPolicy")]
+    public bool? EnableFqdnNetworkPolicy { get; set; }
 
     /// <summary>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</summary>
     [JsonPropertyName("enableIntranodeVisibility")]
@@ -1770,6 +2054,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("enableTpu")]
     public bool? EnableTpu { get; set; }
 
+    /// <summary>Configuration for [Enterprise edition].(https://cloud.google.com/kubernetes-engine/enterprise/docs/concepts/gke-editions). Structure is documented below.</summary>
+    [JsonPropertyName("enterpriseConfig")]
+    public IList<V1beta1ClusterSpecForProviderEnterpriseConfig>? EnterpriseConfig { get; set; }
+
     /// <summary>Fleet configuration for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("fleet")]
     public IList<V1beta1ClusterSpecForProviderFleet>? Fleet { get; set; }
@@ -1778,9 +2066,17 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("gatewayApiConfig")]
     public IList<V1beta1ClusterSpecForProviderGatewayApiConfig>? GatewayApiConfig { get; set; }
 
+    /// <summary>Configuration options for the auto-upgrade patch type feature, which provide more control over the speed of automatic upgrades of your GKE clusters. Structure is documented below.</summary>
+    [JsonPropertyName("gkeAutoUpgradeConfig")]
+    public IList<V1beta1ClusterSpecForProviderGkeAutoUpgradeConfig>? GkeAutoUpgradeConfig { get; set; }
+
     /// <summary>. Structure is documented below.</summary>
     [JsonPropertyName("identityServiceConfig")]
     public IList<V1beta1ClusterSpecForProviderIdentityServiceConfig>? IdentityServiceConfig { get; set; }
+
+    /// <summary>Defines the config of in-transit encryption. Valid values are IN_TRANSIT_ENCRYPTION_DISABLED and IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT.</summary>
+    [JsonPropertyName("inTransitEncryptionConfig")]
+    public string? InTransitEncryptionConfig { get; set; }
 
     /// <summary>The number of nodes to create in this cluster's default node pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Must be set if node_pool is not set. If you're using google_container_node_pool objects with no default node pool, you'll need to set this to a value of at least 1, alongside setting remove_default_node_pool to true.</summary>
     [JsonPropertyName("initialNodeCount")]
@@ -1834,6 +2130,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>Network bandwidth tier configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkPerformanceConfig")]
+    public IList<V1beta1ClusterSpecForProviderNetworkPerformanceConfig>? NetworkPerformanceConfig { get; set; }
+
     /// <summary>Configuration options for the NetworkPolicy feature. Structure is documented below.</summary>
     [JsonPropertyName("networkPolicy")]
     public IList<V1beta1ClusterSpecForProviderNetworkPolicy>? NetworkPolicy { get; set; }
@@ -1874,6 +2174,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("notificationConfig")]
     public IList<V1beta1ClusterSpecForProviderNotificationConfig>? NotificationConfig { get; set; }
 
+    /// <summary>Configuration for the Structure is documented below.</summary>
+    [JsonPropertyName("podAutoscaling")]
+    public IList<V1beta1ClusterSpecForProviderPodAutoscaling>? PodAutoscaling { get; set; }
+
     /// <summary>Configuration for private clusters, clusters with private nodes. Structure is documented below.</summary>
     [JsonPropertyName("privateClusterConfig")]
     public IList<V1beta1ClusterSpecForProviderPrivateClusterConfig>? PrivateClusterConfig { get; set; }
@@ -1902,6 +2206,10 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("resourceUsageExportConfig")]
     public IList<V1beta1ClusterSpecForProviderResourceUsageExportConfig>? ResourceUsageExportConfig { get; set; }
 
+    /// <summary>Configuration for the SecretManagerConfig feature. Structure is documented below.</summary>
+    [JsonPropertyName("secretManagerConfig")]
+    public IList<V1beta1ClusterSpecForProviderSecretManagerConfig>? SecretManagerConfig { get; set; }
+
     /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("securityPostureConfig")]
     public IList<V1beta1ClusterSpecForProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
@@ -1921,6 +2229,10 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1ClusterSpecForProviderSubnetworkSelector? SubnetworkSelector { get; set; }
+
+    /// <summary>The custom keys configuration of the cluster Structure is documented below.</summary>
+    [JsonPropertyName("userManagedKeysConfig")]
+    public IList<V1beta1ClusterSpecForProviderUserManagedKeysConfig>? UserManagedKeysConfig { get; set; }
 
     /// <summary>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. Structure is documented below.</summary>
     [JsonPropertyName("verticalPodAutoscaling")]
@@ -2027,6 +2339,15 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConf
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderAddonsConfigParallelstoreCsiDriverConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -2113,6 +2434,10 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfig
     [JsonPropertyName("networkPolicyConfig")]
     public IList<V1beta1ClusterSpecInitProviderAddonsConfigNetworkPolicyConfig>? NetworkPolicyConfig { get; set; }
 
+    /// <summary>The status of the Parallelstore CSI driver addon, which allows the usage of a Parallelstore instances as volumes. It is disabled by default for Standard clusters; set enabled = true to enable. It is enabled by default for Autopilot clusters with version 1.29 or later; set enabled = true to enable it explicitly. See Enable the Parallelstore CSI driver for more information.</summary>
+    [JsonPropertyName("parallelstoreCsiDriverConfig")]
+    public IList<V1beta1ClusterSpecInitProviderAddonsConfigParallelstoreCsiDriverConfig>? ParallelstoreCsiDriverConfig { get; set; }
+
     /// <summary>. The status of the Ray Operator addon. It is disabled by default. Set enabled = true to enable. The minimum cluster version to enable Ray is 1.30.0-gke.1747000.</summary>
     [JsonPropertyName("rayOperatorConfig")]
     public IList<V1beta1ClusterSpecInitProviderAddonsConfigRayOperatorConfig>? RayOperatorConfig { get; set; }
@@ -2120,6 +2445,15 @@ public partial class V1beta1ClusterSpecInitProviderAddonsConfig
     /// <summary>. The status of the Stateful HA addon, which provides automatic configurable failover for stateful applications. It is disabled by default for Standard clusters. Set enabled = true to enable.</summary>
     [JsonPropertyName("statefulHaConfig")]
     public IList<V1beta1ClusterSpecInitProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderAnonymousAuthenticationConfig
+{
+    /// <summary>Sets or removes authentication restrictions. Available options include LIMITED and ENABLED.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -2312,9 +2646,48 @@ public partial class V1beta1ClusterSpecInitProviderClusterAutoscaling
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfidentialNodes
 {
-    /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
+    /// <summary>Enable Confidential GKE Nodes for this node pool, to enforce encryption of data in-use.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfigDnsEndpointConfig
+{
+    /// <summary>Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may still use the endpoint even if this is false.</summary>
+    [JsonPropertyName("allowExternalTraffic")]
+    public bool? AllowExternalTraffic { get; set; }
+
+    /// <summary>(Output) The cluster's DNS endpoint.</summary>
+    [JsonPropertyName("endpoint")]
+    public string? Endpoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfigIpEndpointsConfig
+{
+    /// <summary>Controls whether to allow direct IP access. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfig
+{
+    /// <summary>DNS endpoint configuration.</summary>
+    [JsonPropertyName("dnsEndpointConfig")]
+    public IList<V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfigDnsEndpointConfig>? DnsEndpointConfig { get; set; }
+
+    /// <summary>IP endpoint configuration.</summary>
+    [JsonPropertyName("ipEndpointsConfig")]
+    public IList<V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfigIpEndpointsConfig>? IpEndpointsConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -2352,6 +2725,10 @@ public partial class V1beta1ClusterSpecInitProviderDefaultSnatStatus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderDnsConfig
 {
+    /// <summary>This will enable Cloud DNS additive VPC scope. Must provide a domain name that is unique within the VPC. For this to work cluster_dns = "CLOUD_DNS" and cluster_dns_scope = "CLUSTER_SCOPE" must both be set as well.</summary>
+    [JsonPropertyName("additiveVpcScopeDnsDomain")]
+    public string? AdditiveVpcScopeDnsDomain { get; set; }
+
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
     [JsonPropertyName("clusterDns")]
     public string? ClusterDns { get; set; }
@@ -2376,6 +2753,15 @@ public partial class V1beta1ClusterSpecInitProviderEnableK8SBetaApis
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderEnterpriseConfig
+{
+    /// <summary>Sets the tier of the cluster. Available options include STANDARD and ENTERPRISE.</summary>
+    [JsonPropertyName("desiredTier")]
+    public string? DesiredTier { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderFleet
 {
     /// <summary>The name of the Fleet host project where this cluster will be registered.</summary>
@@ -2390,6 +2776,15 @@ public partial class V1beta1ClusterSpecInitProviderGatewayApiConfig
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
     [JsonPropertyName("channel")]
     public string? Channel { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderGkeAutoUpgradeConfig
+{
+    /// <summary>The selected patch mode. Accepted values are:</summary>
+    [JsonPropertyName("patchMode")]
+    public string? PatchMode { get; set; }
 }
 
 /// <summary></summary>
@@ -2576,6 +2971,10 @@ public partial class V1beta1ClusterSpecInitProviderMasterAuthorizedNetworksConfi
     /// <summary>Whether Kubernetes master is accessible via Google Compute Engine Public IPs.</summary>
     [JsonPropertyName("gcpPublicCidrsAccessEnabled")]
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
+
+    /// <summary>Whether authorized networks is enforced on the private endpoint or not.</summary>
+    [JsonPropertyName("privateEndpointEnforcementEnabled")]
+    public bool? PrivateEndpointEnforcementEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -2598,16 +2997,25 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfigAdvancedDatap
     /// <summary>Whether or not Relay is enabled.</summary>
     [JsonPropertyName("enableRelay")]
     public bool? EnableRelay { get; set; }
+}
 
-    /// <summary>Mode used to make Relay available.</summary>
-    [JsonPropertyName("relayMode")]
-    public string? RelayMode { get; set; }
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig
+{
+    /// <summary>Whether or not to enable GKE Auto-Monitoring. Supported values include: ALL, NONE.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheus
 {
+    /// <summary>Configuration options for GKE Auto-Monitoring.</summary>
+    [JsonPropertyName("autoMonitoringConfig")]
+    public IList<V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig>? AutoMonitoringConfig { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -2628,6 +3036,15 @@ public partial class V1beta1ClusterSpecInitProviderMonitoringConfig
     /// <summary>Configuration for Managed Service for Prometheus. Structure is documented below.</summary>
     [JsonPropertyName("managedPrometheus")]
     public IList<V1beta1ClusterSpecInitProviderMonitoringConfigManagedPrometheus>? ManagedPrometheus { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNetworkPerformanceConfig
+{
+    /// <summary>Specifies the total network bandwidth tier for NodePools in the cluster.</summary>
+    [JsonPropertyName("totalEgressBandwidthTier")]
+    public string? TotalEgressBandwidthTier { get; set; }
 }
 
 /// <summary></summary>
@@ -2707,6 +3124,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeat
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
+    /// <summary>Defines the performance monitoring unit PMU level. Valid values are ARCHITECTURAL, STANDARD, or ENHANCED. Defaults to off.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
     /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
@@ -2716,6 +3137,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigAdvancedMachineFeat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes
 {
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -2769,6 +3194,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigContainerdConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary>Number of raw-block local NVMe SSD disks to be attached to the node utilized for GKE Data Cache. If zero, then GKE Data Cache will not be enabled in the nodes.</summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -2861,6 +3290,18 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigHostMaintenancePoli
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
 {
+    /// <summary>Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns which can be set on the Pods. The allowed sysctl groups are kernel.shm*, kernel.msg*, kernel.sem, fs.mqueue.*, and net.*.</summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary>Defines the maximum number of container log files that can be present for a container. The integer must be between 2 and 10, inclusive.</summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary>Defines the maximum size of the container log file before it is rotated. Specified as a positive number and a unit suffix, such as "100Ki", "10Mi". Valid units are "Ki", "Mi", "Gi". The value must be between "10Mi" and "500Mi", inclusive. And the total container log size (container_log_max_size * container_log_max_files) cannot exceed 1% of the total storage of the node.</summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
@@ -2869,11 +3310,27 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". Defaults to none when kubelet_config is unset.</summary>
+    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". If unset (or set to the empty string ""), the API will treat the field as if set to "none". Prior to the 6.4.0 this field was marked as required. The workaround for the required field is setting the empty string "", which will function identically to not setting this field.</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    /// <summary>Defines the percent of disk usage after which image garbage collection is always run. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary>Defines the percent of disk usage before which image garbage collection is never run. Lowest disk usage to garbage collect to. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary>Defines the maximum age an image can be unused before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m", and "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.</summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary>Defines the minimum age for an unused image before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m". The value cannot be greater than "2m".</summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -2884,11 +3341,28 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary>Amount of 1G hugepages.</summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary>Amount of 2M hugepages.</summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary>Amounts for 2M and 1G hugepages. Structure is documented below.</summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary>The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value. Currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional.</summary>
     [JsonPropertyName("sysctls")]
@@ -3048,6 +3522,15 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -3067,7 +3550,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("bootDiskKmsKey")]
     public string? BootDiskKmsKey { get; set; }
 
-    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
+    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigConfidentialNodes>? ConfidentialNodes { get; set; }
 
@@ -3079,7 +3562,7 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
 
-    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'</summary>
+    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-balanced'</summary>
     [JsonPropertyName("diskType")]
     public string? DiskType { get; set; }
 
@@ -3095,11 +3578,15 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("fastSocket")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
+    /// <summary>Enables Flex Start provisioning model for the node pool.</summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
     /// <summary>Parameters for the Google Container Filesystem (GCFS). If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify image_type = "COS_CONTAINERD" and node_version from GKE versions 1.19 or later to use it. For GKE versions 1.19, 1.20, and 1.21, the recommended minimum node_version would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively. A machine_type that has more than 16 GiB of memory is also recommended. GCFS must be enabled in order to use image streaming. Structure is documented below.</summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below.12 this field is an Attribute as Block</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigGuestAccelerator>? GuestAccelerator { get; set; }
 
@@ -3114,10 +3601,6 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     /// <summary>The image type to use for this node. Note that changing the image type will delete and recreate all nodes in the node pool.</summary>
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
-
-    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
-    [JsonPropertyName("index")]
-    public string? Index { get; set; }
 
     /// <summary>Kubelet configuration, currently supported attributes can be found here. Structure is documented below.</summary>
     [JsonPropertyName("kubeletConfig")]
@@ -3139,6 +3622,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary>wide default value. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -3146,6 +3633,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     /// <summary>The name of a Google Compute Engine machine type. Defaults to e2-medium. To create a custom machine type, value should be set as specified here.</summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary>The runtime of each node in the node pool in seconds, terminated by 's'. Example: "3600s".</summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary>The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.</summary>
     [JsonPropertyName("metadata")]
@@ -3207,6 +3698,10 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 
+    /// <summary>The list of Storage Pools where boot disks are provisioned.</summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
     /// <summary>The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls.</summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
@@ -3215,9 +3710,22 @@ public partial class V1beta1ClusterSpecInitProviderNodeConfig
     [JsonPropertyName("taint")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigTaint>? Taint { get; set; }
 
+    /// <summary>Windows node configuration, currently supporting OSVersion attribute. The value must be one of [OS_VERSION_UNSPECIFIED, OS_VERSION_LTSC2019, OS_VERSION_LTSC2022]. For example:</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
+
     /// <summary>Metadata configuration to expose to workloads on the node pool. Structure is documented below.</summary>
     [JsonPropertyName("workloadMetadataConfig")]
     public IList<V1beta1ClusterSpecInitProviderNodeConfigWorkloadMetadataConfig>? WorkloadMetadataConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigLinuxNodeConfig
+{
+    /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
+    [JsonPropertyName("cgroupMode")]
+    public string? CgroupMode { get; set; }
 }
 
 /// <summary></summary>
@@ -3242,6 +3750,10 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfigNodeKubelet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolAutoConfig
 {
+    /// <summary>Linux system configuration for the cluster's automatically provisioned node pools. Only cgroup_mode field is supported in node_pool_auto_config. Structure is documented below.</summary>
+    [JsonPropertyName("linuxNodeConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNodePoolAutoConfigLinuxNodeConfig>? LinuxNodeConfig { get; set; }
+
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterSpecInitProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
@@ -3301,11 +3813,24 @@ public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>The default Google Container Filesystem (GCFS) configuration at the cluster level. e.g. enable image streaming across all the node pools within the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("gcfsConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig>? GcfsConfig { get; set; }
 
     /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
@@ -3358,6 +3883,15 @@ public partial class V1beta1ClusterSpecInitProviderNotificationConfig
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
     [JsonPropertyName("pubsub")]
     public IList<V1beta1ClusterSpecInitProviderNotificationConfigPubsub>? Pubsub { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderPodAutoscaling
+{
+    /// <summary>Enable the Horizontal Pod Autoscaling profile for this cluster. Acceptable values are:</summary>
+    [JsonPropertyName("hpaProfile")]
+    public string? HpaProfile { get; set; }
 }
 
 /// <summary></summary>
@@ -3495,6 +4029,15 @@ public partial class V1beta1ClusterSpecInitProviderResourceUsageExportConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderSecretManagerConfig
+{
+    /// <summary>Enable the Secret Manager add-on for this cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -3573,6 +4116,43 @@ public partial class V1beta1ClusterSpecInitProviderSubnetworkSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderUserManagedKeysConfig
+{
+    /// <summary>The Certificate Authority Service caPool to use for the aggreation CA in this cluster.</summary>
+    [JsonPropertyName("aggregationCa")]
+    public string? AggregationCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the cluster CA in this cluster.</summary>
+    [JsonPropertyName("clusterCa")]
+    public string? ClusterCa { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKey to use for Confidential Hyperdisk on the control plane nodes.</summary>
+    [JsonPropertyName("controlPlaneDiskEncryptionKey")]
+    public string? ControlPlaneDiskEncryptionKey { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd API CA in this cluster.</summary>
+    [JsonPropertyName("etcdApiCa")]
+    public string? EtcdApiCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd peer CA in this cluster.</summary>
+    [JsonPropertyName("etcdPeerCa")]
+    public string? EtcdPeerCa { get; set; }
+
+    /// <summary>Resource path of the Cloud KMS cryptoKey to use for encryption of internal etcd backups.</summary>
+    [JsonPropertyName("gkeopsEtcdBackupEncryptionKey")]
+    public string? GkeopsEtcdBackupEncryptionKey { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for signing service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountSigningKeys")]
+    public IList<string>? ServiceAccountSigningKeys { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for verifying service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountVerificationKeys")]
+    public IList<string>? ServiceAccountVerificationKeys { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderVerticalPodAutoscaling
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -3601,6 +4181,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("allowNetAdmin")]
     public bool? AllowNetAdmin { get; set; }
 
+    /// <summary>Configuration for anonymous authentication restrictions. Structure is documented below.</summary>
+    [JsonPropertyName("anonymousAuthenticationConfig")]
+    public IList<V1beta1ClusterSpecInitProviderAnonymousAuthenticationConfig>? AnonymousAuthenticationConfig { get; set; }
+
     /// <summary>Configuration for the Google Groups for GKE feature. Structure is documented below.</summary>
     [JsonPropertyName("authenticatorGroupsConfig")]
     public IList<V1beta1ClusterSpecInitProviderAuthenticatorGroupsConfig>? AuthenticatorGroupsConfig { get; set; }
@@ -3620,6 +4204,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterSpecInitProviderConfidentialNodes>? ConfidentialNodes { get; set; }
+
+    /// <summary>Configuration for all of the cluster's control plane endpoints. Structure is documented below.</summary>
+    [JsonPropertyName("controlPlaneEndpointsConfig")]
+    public IList<V1beta1ClusterSpecInitProviderControlPlaneEndpointsConfig>? ControlPlaneEndpointsConfig { get; set; }
 
     /// <summary>Configuration for the Cost Allocation feature. Structure is documented below.</summary>
     [JsonPropertyName("costManagementConfig")]
@@ -3649,6 +4237,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Disable L4 load balancer VPC firewalls to enable firewall policies.</summary>
+    [JsonPropertyName("disableL4LbFirewallReconciliation")]
+    public bool? DisableL4LbFirewallReconciliation { get; set; }
+
     /// <summary>Configuration for Using Cloud DNS for GKE. Structure is documented below.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ClusterSpecInitProviderDnsConfig>? DnsConfig { get; set; }
@@ -3660,6 +4252,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Whether CiliumClusterWideNetworkPolicy is enabled on this cluster. Defaults to false.</summary>
     [JsonPropertyName("enableCiliumClusterwideNetworkPolicy")]
     public bool? EnableCiliumClusterwideNetworkPolicy { get; set; }
+
+    /// <summary>Whether FQDN Network Policy is enabled on this cluster. Users who enable this feature for existing Standard clusters must restart the GKE Dataplane V2 anetd DaemonSet after enabling it. See the Enable FQDN Network Policy in an existing cluster for more information.</summary>
+    [JsonPropertyName("enableFqdnNetworkPolicy")]
+    public bool? EnableFqdnNetworkPolicy { get; set; }
 
     /// <summary>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</summary>
     [JsonPropertyName("enableIntranodeVisibility")]
@@ -3693,6 +4289,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("enableTpu")]
     public bool? EnableTpu { get; set; }
 
+    /// <summary>Configuration for [Enterprise edition].(https://cloud.google.com/kubernetes-engine/enterprise/docs/concepts/gke-editions). Structure is documented below.</summary>
+    [JsonPropertyName("enterpriseConfig")]
+    public IList<V1beta1ClusterSpecInitProviderEnterpriseConfig>? EnterpriseConfig { get; set; }
+
     /// <summary>Fleet configuration for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("fleet")]
     public IList<V1beta1ClusterSpecInitProviderFleet>? Fleet { get; set; }
@@ -3701,9 +4301,17 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("gatewayApiConfig")]
     public IList<V1beta1ClusterSpecInitProviderGatewayApiConfig>? GatewayApiConfig { get; set; }
 
+    /// <summary>Configuration options for the auto-upgrade patch type feature, which provide more control over the speed of automatic upgrades of your GKE clusters. Structure is documented below.</summary>
+    [JsonPropertyName("gkeAutoUpgradeConfig")]
+    public IList<V1beta1ClusterSpecInitProviderGkeAutoUpgradeConfig>? GkeAutoUpgradeConfig { get; set; }
+
     /// <summary>. Structure is documented below.</summary>
     [JsonPropertyName("identityServiceConfig")]
     public IList<V1beta1ClusterSpecInitProviderIdentityServiceConfig>? IdentityServiceConfig { get; set; }
+
+    /// <summary>Defines the config of in-transit encryption. Valid values are IN_TRANSIT_ENCRYPTION_DISABLED and IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT.</summary>
+    [JsonPropertyName("inTransitEncryptionConfig")]
+    public string? InTransitEncryptionConfig { get; set; }
 
     /// <summary>The number of nodes to create in this cluster's default node pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Must be set if node_pool is not set. If you're using google_container_node_pool objects with no default node pool, you'll need to set this to a value of at least 1, alongside setting remove_default_node_pool to true.</summary>
     [JsonPropertyName("initialNodeCount")]
@@ -3753,6 +4361,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>Network bandwidth tier configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkPerformanceConfig")]
+    public IList<V1beta1ClusterSpecInitProviderNetworkPerformanceConfig>? NetworkPerformanceConfig { get; set; }
+
     /// <summary>Configuration options for the NetworkPolicy feature. Structure is documented below.</summary>
     [JsonPropertyName("networkPolicy")]
     public IList<V1beta1ClusterSpecInitProviderNetworkPolicy>? NetworkPolicy { get; set; }
@@ -3793,6 +4405,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("notificationConfig")]
     public IList<V1beta1ClusterSpecInitProviderNotificationConfig>? NotificationConfig { get; set; }
 
+    /// <summary>Configuration for the Structure is documented below.</summary>
+    [JsonPropertyName("podAutoscaling")]
+    public IList<V1beta1ClusterSpecInitProviderPodAutoscaling>? PodAutoscaling { get; set; }
+
     /// <summary>Configuration for private clusters, clusters with private nodes. Structure is documented below.</summary>
     [JsonPropertyName("privateClusterConfig")]
     public IList<V1beta1ClusterSpecInitProviderPrivateClusterConfig>? PrivateClusterConfig { get; set; }
@@ -3821,6 +4437,10 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("resourceUsageExportConfig")]
     public IList<V1beta1ClusterSpecInitProviderResourceUsageExportConfig>? ResourceUsageExportConfig { get; set; }
 
+    /// <summary>Configuration for the SecretManagerConfig feature. Structure is documented below.</summary>
+    [JsonPropertyName("secretManagerConfig")]
+    public IList<V1beta1ClusterSpecInitProviderSecretManagerConfig>? SecretManagerConfig { get; set; }
+
     /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("securityPostureConfig")]
     public IList<V1beta1ClusterSpecInitProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
@@ -3840,6 +4460,10 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>Selector for a Subnetwork in compute to populate subnetwork.</summary>
     [JsonPropertyName("subnetworkSelector")]
     public V1beta1ClusterSpecInitProviderSubnetworkSelector? SubnetworkSelector { get; set; }
+
+    /// <summary>The custom keys configuration of the cluster Structure is documented below.</summary>
+    [JsonPropertyName("userManagedKeysConfig")]
+    public IList<V1beta1ClusterSpecInitProviderUserManagedKeysConfig>? UserManagedKeysConfig { get; set; }
 
     /// <summary>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. Structure is documented below.</summary>
     [JsonPropertyName("verticalPodAutoscaling")]
@@ -4078,6 +4702,15 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConf
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderAddonsConfigParallelstoreCsiDriverConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfigRayClusterLoggingConfig
 {
     /// <summary>Enables vertical pod autoscaling</summary>
@@ -4164,6 +4797,10 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfig
     [JsonPropertyName("networkPolicyConfig")]
     public IList<V1beta1ClusterStatusAtProviderAddonsConfigNetworkPolicyConfig>? NetworkPolicyConfig { get; set; }
 
+    /// <summary>The status of the Parallelstore CSI driver addon, which allows the usage of a Parallelstore instances as volumes. It is disabled by default for Standard clusters; set enabled = true to enable. It is enabled by default for Autopilot clusters with version 1.29 or later; set enabled = true to enable it explicitly. See Enable the Parallelstore CSI driver for more information.</summary>
+    [JsonPropertyName("parallelstoreCsiDriverConfig")]
+    public IList<V1beta1ClusterStatusAtProviderAddonsConfigParallelstoreCsiDriverConfig>? ParallelstoreCsiDriverConfig { get; set; }
+
     /// <summary>. The status of the Ray Operator addon. It is disabled by default. Set enabled = true to enable. The minimum cluster version to enable Ray is 1.30.0-gke.1747000.</summary>
     [JsonPropertyName("rayOperatorConfig")]
     public IList<V1beta1ClusterStatusAtProviderAddonsConfigRayOperatorConfig>? RayOperatorConfig { get; set; }
@@ -4171,6 +4808,15 @@ public partial class V1beta1ClusterStatusAtProviderAddonsConfig
     /// <summary>. The status of the Stateful HA addon, which provides automatic configurable failover for stateful applications. It is disabled by default for Standard clusters. Set enabled = true to enable.</summary>
     [JsonPropertyName("statefulHaConfig")]
     public IList<V1beta1ClusterStatusAtProviderAddonsConfigStatefulHaConfig>? StatefulHaConfig { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderAnonymousAuthenticationConfig
+{
+    /// <summary>Sets or removes authentication restrictions. Available options include LIMITED and ENABLED.</summary>
+    [JsonPropertyName("mode")]
+    public string? Mode { get; set; }
 }
 
 /// <summary></summary>
@@ -4380,9 +5026,48 @@ public partial class V1beta1ClusterStatusAtProviderClusterAutoscaling
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfidentialNodes
 {
-    /// <summary>Enable Confidential GKE Nodes for this cluster, to enforce encryption of data in-use.</summary>
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
+    /// <summary>Enable Confidential GKE Nodes for this node pool, to enforce encryption of data in-use.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfigDnsEndpointConfig
+{
+    /// <summary>Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may still use the endpoint even if this is false.</summary>
+    [JsonPropertyName("allowExternalTraffic")]
+    public bool? AllowExternalTraffic { get; set; }
+
+    /// <summary>(Output) The cluster's DNS endpoint.</summary>
+    [JsonPropertyName("endpoint")]
+    public string? Endpoint { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfigIpEndpointsConfig
+{
+    /// <summary>Controls whether to allow direct IP access. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfig
+{
+    /// <summary>DNS endpoint configuration.</summary>
+    [JsonPropertyName("dnsEndpointConfig")]
+    public IList<V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfigDnsEndpointConfig>? DnsEndpointConfig { get; set; }
+
+    /// <summary>IP endpoint configuration.</summary>
+    [JsonPropertyName("ipEndpointsConfig")]
+    public IList<V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfigIpEndpointsConfig>? IpEndpointsConfig { get; set; }
 }
 
 /// <summary></summary>
@@ -4420,6 +5105,10 @@ public partial class V1beta1ClusterStatusAtProviderDefaultSnatStatus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderDnsConfig
 {
+    /// <summary>This will enable Cloud DNS additive VPC scope. Must provide a domain name that is unique within the VPC. For this to work cluster_dns = "CLOUD_DNS" and cluster_dns_scope = "CLUSTER_SCOPE" must both be set as well.</summary>
+    [JsonPropertyName("additiveVpcScopeDnsDomain")]
+    public string? AdditiveVpcScopeDnsDomain { get; set; }
+
     /// <summary>Which in-cluster DNS provider should be used. PROVIDER_UNSPECIFIED (default) or PLATFORM_DEFAULT or CLOUD_DNS.</summary>
     [JsonPropertyName("clusterDns")]
     public string? ClusterDns { get; set; }
@@ -4440,6 +5129,19 @@ public partial class V1beta1ClusterStatusAtProviderEnableK8SBetaApis
     /// <summary>Enabled Kubernetes Beta APIs. To list a Beta API resource, use the representation {group}/{version}/{resource}. The version must be a Beta version. Note that you cannot disable beta APIs that are already enabled on a cluster without recreating it. See the Configure beta APIs for more information.</summary>
     [JsonPropertyName("enabledApis")]
     public IList<string>? EnabledApis { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderEnterpriseConfig
+{
+    /// <summary>The effective tier of the cluster.</summary>
+    [JsonPropertyName("clusterTier")]
+    public string? ClusterTier { get; set; }
+
+    /// <summary>Sets the tier of the cluster. Available options include STANDARD and ENTERPRISE.</summary>
+    [JsonPropertyName("desiredTier")]
+    public string? DesiredTier { get; set; }
 }
 
 /// <summary></summary>
@@ -4474,6 +5176,15 @@ public partial class V1beta1ClusterStatusAtProviderGatewayApiConfig
     /// <summary>Which Gateway Api channel should be used. CHANNEL_DISABLED, CHANNEL_EXPERIMENTAL or CHANNEL_STANDARD.</summary>
     [JsonPropertyName("channel")]
     public string? Channel { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderGkeAutoUpgradeConfig
+{
+    /// <summary>The selected patch mode. Accepted values are:</summary>
+    [JsonPropertyName("patchMode")]
+    public string? PatchMode { get; set; }
 }
 
 /// <summary></summary>
@@ -4672,6 +5383,10 @@ public partial class V1beta1ClusterStatusAtProviderMasterAuthorizedNetworksConfi
     /// <summary>Whether Kubernetes master is accessible via Google Compute Engine Public IPs.</summary>
     [JsonPropertyName("gcpPublicCidrsAccessEnabled")]
     public bool? GcpPublicCidrsAccessEnabled { get; set; }
+
+    /// <summary>Whether authorized networks is enforced on the private endpoint or not.</summary>
+    [JsonPropertyName("privateEndpointEnforcementEnabled")]
+    public bool? PrivateEndpointEnforcementEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -4694,16 +5409,25 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfigAdvancedDatap
     /// <summary>Whether or not Relay is enabled.</summary>
     [JsonPropertyName("enableRelay")]
     public bool? EnableRelay { get; set; }
+}
 
-    /// <summary>Mode used to make Relay available.</summary>
-    [JsonPropertyName("relayMode")]
-    public string? RelayMode { get; set; }
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig
+{
+    /// <summary>Whether or not to enable GKE Auto-Monitoring. Supported values include: ALL, NONE.</summary>
+    [JsonPropertyName("scope")]
+    public string? Scope { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheus
 {
+    /// <summary>Configuration options for GKE Auto-Monitoring.</summary>
+    [JsonPropertyName("autoMonitoringConfig")]
+    public IList<V1beta1ClusterStatusAtProviderMonitoringConfigManagedPrometheusAutoMonitoringConfig>? AutoMonitoringConfig { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -4728,6 +5452,15 @@ public partial class V1beta1ClusterStatusAtProviderMonitoringConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNetworkPerformanceConfig
+{
+    /// <summary>Specifies the total network bandwidth tier for NodePools in the cluster.</summary>
+    [JsonPropertyName("totalEgressBandwidthTier")]
+    public string? TotalEgressBandwidthTier { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNetworkPolicy
 {
     /// <summary>Whether network policy is enabled on the cluster.</summary>
@@ -4747,6 +5480,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeat
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
+    /// <summary>Defines the performance monitoring unit PMU level. Valid values are ARCHITECTURAL, STANDARD, or ENHANCED. Defaults to off.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
     /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
@@ -4756,6 +5493,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigAdvancedMachineFeat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes
 {
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -4826,6 +5567,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigEffectiveTaints
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary>Number of raw-block local NVMe SSD disks to be attached to the node utilized for GKE Data Cache. If zero, then GKE Data Cache will not be enabled in the nodes.</summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -4918,6 +5663,18 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigHostMaintenancePoli
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
 {
+    /// <summary>Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns which can be set on the Pods. The allowed sysctl groups are kernel.shm*, kernel.msg*, kernel.sem, fs.mqueue.*, and net.*.</summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary>Defines the maximum number of container log files that can be present for a container. The integer must be between 2 and 10, inclusive.</summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary>Defines the maximum size of the container log file before it is rotated. Specified as a positive number and a unit suffix, such as "100Ki", "10Mi". Valid units are "Ki", "Mi", "Gi". The value must be between "10Mi" and "500Mi", inclusive. And the total container log size (container_log_max_size * container_log_max_files) cannot exceed 1% of the total storage of the node.</summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
@@ -4926,11 +5683,27 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". Defaults to none when kubelet_config is unset.</summary>
+    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". If unset (or set to the empty string ""), the API will treat the field as if set to "none". Prior to the 6.4.0 this field was marked as required. The workaround for the required field is setting the empty string "", which will function identically to not setting this field.</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    /// <summary>Defines the percent of disk usage after which image garbage collection is always run. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary>Defines the percent of disk usage before which image garbage collection is never run. Lowest disk usage to garbage collect to. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary>Defines the maximum age an image can be unused before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m", and "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.</summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary>Defines the minimum age for an unused image before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m". The value cannot be greater than "2m".</summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -4941,11 +5714,28 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigKubeletConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary>Amount of 1G hugepages.</summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary>Amount of 2M hugepages.</summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary>Amounts for 2M and 1G hugepages. Structure is documented below.</summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary>The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value. Currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional.</summary>
     [JsonPropertyName("sysctls")]
@@ -5049,6 +5839,15 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodeConfigWindowsNodeConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -5068,7 +5867,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     [JsonPropertyName("bootDiskKmsKey")]
     public string? BootDiskKmsKey { get; set; }
 
-    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
+    /// <summary>Configuration for Confidential Nodes feature. Structure is documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterStatusAtProviderNodeConfigConfidentialNodes>? ConfidentialNodes { get; set; }
 
@@ -5080,7 +5879,7 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
 
-    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'</summary>
+    /// <summary>Type of the disk attached to each node (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-balanced'</summary>
     [JsonPropertyName("diskType")]
     public string? DiskType { get; set; }
 
@@ -5100,11 +5899,15 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     [JsonPropertyName("fastSocket")]
     public IList<V1beta1ClusterStatusAtProviderNodeConfigFastSocket>? FastSocket { get; set; }
 
+    /// <summary>Enables Flex Start provisioning model for the node pool.</summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
     /// <summary>Parameters for the Google Container Filesystem (GCFS). If unspecified, GCFS will not be enabled on the node pool. When enabling this feature you must specify image_type = "COS_CONTAINERD" and node_version from GKE versions 1.19 or later to use it. For GKE versions 1.19, 1.20, and 1.21, the recommended minimum node_version would be 1.19.15-gke.1300, 1.20.11-gke.1300, and 1.21.5-gke.1300 respectively. A machine_type that has more than 16 GiB of memory is also recommended. GCFS must be enabled in order to use image streaming. Structure is documented below.</summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1ClusterStatusAtProviderNodeConfigGcfsConfig>? GcfsConfig { get; set; }
 
-    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below.12 this field is an Attribute as Block</summary>
+    /// <summary>List of the type and count of accelerator cards attached to the instance. Structure documented below. Note: As of 6.0.0, argument syntax is no longer supported for this field in favor of block syntax. To dynamically set a list of guest accelerators, use dynamic blocks. To set an empty list, use a single guest_accelerator block with count = 0.</summary>
     [JsonPropertyName("guestAccelerator")]
     public IList<V1beta1ClusterStatusAtProviderNodeConfigGuestAccelerator>? GuestAccelerator { get; set; }
 
@@ -5119,10 +5922,6 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     /// <summary>The image type to use for this node. Note that changing the image type will delete and recreate all nodes in the node pool.</summary>
     [JsonPropertyName("imageType")]
     public string? ImageType { get; set; }
-
-    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
-    [JsonPropertyName("index")]
-    public string? Index { get; set; }
 
     /// <summary>Kubelet configuration, currently supported attributes can be found here. Structure is documented below.</summary>
     [JsonPropertyName("kubeletConfig")]
@@ -5144,6 +5943,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary>wide default value. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -5151,6 +5954,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     /// <summary>The name of a Google Compute Engine machine type. Defaults to e2-medium. To create a custom machine type, value should be set as specified here.</summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary>The runtime of each node in the node pool in seconds, terminated by 's'. Example: "3600s".</summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary>The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.</summary>
     [JsonPropertyName("metadata")]
@@ -5204,6 +6011,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 
+    /// <summary>The list of Storage Pools where boot disks are provisioned.</summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
     /// <summary>The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets for network firewalls.</summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
@@ -5211,6 +6022,10 @@ public partial class V1beta1ClusterStatusAtProviderNodeConfig
     /// <summary>A list of Kubernetes taints to apply to nodes. Structure is documented below.</summary>
     [JsonPropertyName("taint")]
     public IList<V1beta1ClusterStatusAtProviderNodeConfigTaint>? Taint { get; set; }
+
+    /// <summary>Windows node configuration, currently supporting OSVersion attribute. The value must be one of [OS_VERSION_UNSPECIFIED, OS_VERSION_LTSC2019, OS_VERSION_LTSC2022]. For example:</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
 
     /// <summary>Metadata configuration to expose to workloads on the node pool. Structure is documented below.</summary>
     [JsonPropertyName("workloadMetadataConfig")]
@@ -5289,7 +6104,7 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigAddition
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNetworkConfigNetworkPerformanceConfig
 {
-    /// <summary>Specifies the total network bandwidth tier for the NodePool.</summary>
+    /// <summary>Specifies the total network bandwidth tier for NodePools in the cluster.</summary>
     [JsonPropertyName("totalEgressBandwidthTier")]
     public string? TotalEgressBandwidthTier { get; set; }
 }
@@ -5348,6 +6163,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMac
     [JsonPropertyName("enableNestedVirtualization")]
     public bool? EnableNestedVirtualization { get; set; }
 
+    /// <summary>Defines the performance monitoring unit PMU level. Valid values are ARCHITECTURAL, STANDARD, or ENHANCED. Defaults to off.</summary>
+    [JsonPropertyName("performanceMonitoringUnit")]
+    public string? PerformanceMonitoringUnit { get; set; }
+
     /// <summary>The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.</summary>
     [JsonPropertyName("threadsPerCore")]
     public double? ThreadsPerCore { get; set; }
@@ -5357,6 +6176,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigAdvancedMac
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigConfidentialNodes
 {
+    /// <summary>Defines the type of technology used by the confidential node.</summary>
+    [JsonPropertyName("confidentialInstanceType")]
+    public string? ConfidentialInstanceType { get; set; }
+
     /// <summary>Enables vertical pod autoscaling</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
@@ -5427,6 +6250,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEffectiveTa
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigEphemeralStorageLocalSsdConfig
 {
+    /// <summary>Number of raw-block local NVMe SSD disks to be attached to the node utilized for GKE Data Cache. If zero, then GKE Data Cache will not be enabled in the nodes.</summary>
+    [JsonPropertyName("dataCacheCount")]
+    public double? DataCacheCount { get; set; }
+
     /// <summary>The amount of local SSD disks that will be attached to each cluster node. Defaults to 0.</summary>
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
@@ -5519,6 +6346,18 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigHostMainten
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConfig
 {
+    /// <summary>Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns which can be set on the Pods. The allowed sysctl groups are kernel.shm*, kernel.msg*, kernel.sem, fs.mqueue.*, and net.*.</summary>
+    [JsonPropertyName("allowedUnsafeSysctls")]
+    public IList<string>? AllowedUnsafeSysctls { get; set; }
+
+    /// <summary>Defines the maximum number of container log files that can be present for a container. The integer must be between 2 and 10, inclusive.</summary>
+    [JsonPropertyName("containerLogMaxFiles")]
+    public double? ContainerLogMaxFiles { get; set; }
+
+    /// <summary>Defines the maximum size of the container log file before it is rotated. Specified as a positive number and a unit suffix, such as "100Ki", "10Mi". Valid units are "Ki", "Mi", "Gi". The value must be between "10Mi" and "500Mi", inclusive. And the total container log size (container_log_max_size * container_log_max_files) cannot exceed 1% of the total storage of the node.</summary>
+    [JsonPropertyName("containerLogMaxSize")]
+    public string? ContainerLogMaxSize { get; set; }
+
     /// <summary>If true, enables CPU CFS quota enforcement for containers that specify CPU limits.</summary>
     [JsonPropertyName("cpuCfsQuota")]
     public bool? CpuCfsQuota { get; set; }
@@ -5527,11 +6366,27 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConf
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". Defaults to none when kubelet_config is unset.</summary>
+    /// <summary>The CPU management policy on the node. See K8S CPU Management Policies. One of "none" or "static". If unset (or set to the empty string ""), the API will treat the field as if set to "none". Prior to the 6.4.0 this field was marked as required. The workaround for the required field is setting the empty string "", which will function identically to not setting this field.</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Controls whether the kubelet read-only port is enabled. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
+    /// <summary>Defines the percent of disk usage after which image garbage collection is always run. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcHighThresholdPercent")]
+    public double? ImageGcHighThresholdPercent { get; set; }
+
+    /// <summary>Defines the percent of disk usage before which image garbage collection is never run. Lowest disk usage to garbage collect to. The integer must be between 10 and 85, inclusive.</summary>
+    [JsonPropertyName("imageGcLowThresholdPercent")]
+    public double? ImageGcLowThresholdPercent { get; set; }
+
+    /// <summary>Defines the maximum age an image can be unused before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m", and "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h". The value must be a positive duration.</summary>
+    [JsonPropertyName("imageMaximumGcAge")]
+    public string? ImageMaximumGcAge { get; set; }
+
+    /// <summary>Defines the minimum age for an unused image before it is garbage collected. Specified as a sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300s", "1.5m". The value cannot be greater than "2m".</summary>
+    [JsonPropertyName("imageMinimumGcAge")]
+    public string? ImageMinimumGcAge { get; set; }
+
+    /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
     public string? InsecureKubeletReadonlyPortEnabled { get; set; }
 
@@ -5542,11 +6397,28 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigKubeletConf
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeConfigHugepagesConfig
+{
+    /// <summary>Amount of 1G hugepages.</summary>
+    [JsonPropertyName("hugepageSize1G")]
+    public double? HugepageSize1G { get; set; }
+
+    /// <summary>Amount of 2M hugepages.</summary>
+    [JsonPropertyName("hugepageSize2M")]
+    public double? HugepageSize2M { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeConfig
 {
     /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
     [JsonPropertyName("cgroupMode")]
     public string? CgroupMode { get; set; }
+
+    /// <summary>Amounts for 2M and 1G hugepages. Structure is documented below.</summary>
+    [JsonPropertyName("hugepagesConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigLinuxNodeConfigHugepagesConfig>? HugepagesConfig { get; set; }
 
     /// <summary>The Linux kernel parameters to be applied to the nodes and all pods running on the nodes. Specified as a map from the key, such as net.core.wmem_max, to a string value. Currently supported attributes can be found here. Note that validations happen all server side. All attributes are optional.</summary>
     [JsonPropertyName("sysctls")]
@@ -5650,6 +6522,15 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWindowsNodeConfig
+{
+    /// <summary></summary>
+    [JsonPropertyName("osversion")]
+    public string? Osversion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfigWorkloadMetadataConfig
 {
     /// <summary>How to expose the node metadata to the workload running on the node. Accepted values are:</summary>
@@ -5701,6 +6582,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     [JsonPropertyName("fastSocket")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigFastSocket>? FastSocket { get; set; }
 
+    /// <summary>Enables Flex Start provisioning model for the node pool.</summary>
+    [JsonPropertyName("flexStart")]
+    public bool? FlexStart { get; set; }
+
     /// <summary>The default Google Container Filesystem (GCFS) configuration at the cluster level. e.g. enable image streaming across all the node pools within the cluster. Structure is documented below.</summary>
     [JsonPropertyName("gcfsConfig")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigGcfsConfig>? GcfsConfig { get; set; }
@@ -5741,6 +6626,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     [JsonPropertyName("localSsdCount")]
     public double? LocalSsdCount { get; set; }
 
+    /// <summary>Possible Local SSD encryption modes: Accepted values are:</summary>
+    [JsonPropertyName("localSsdEncryptionMode")]
+    public string? LocalSsdEncryptionMode { get; set; }
+
     /// <summary>The type of logging agent that is deployed by default for newly created node pools in the cluster. Valid values include DEFAULT and MAX_THROUGHPUT. See Increasing logging agent throughput for more information.</summary>
     [JsonPropertyName("loggingVariant")]
     public string? LoggingVariant { get; set; }
@@ -5748,6 +6637,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     /// <summary>The name of a Google Compute Engine machine type. Defaults to e2-medium. To create a custom machine type, value should be set as specified here.</summary>
     [JsonPropertyName("machineType")]
     public string? MachineType { get; set; }
+
+    /// <summary>The runtime of each node in the node pool in seconds, terminated by 's'. Example: "3600s".</summary>
+    [JsonPropertyName("maxRunDuration")]
+    public string? MaxRunDuration { get; set; }
 
     /// <summary>The metadata key/value pairs assigned to instances in the cluster. From GKE 1. To avoid this, set the value in your config.</summary>
     [JsonPropertyName("metadata")]
@@ -5801,6 +6694,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     [JsonPropertyName("spot")]
     public bool? Spot { get; set; }
 
+    /// <summary>The list of Storage Pools where boot disks are provisioned.</summary>
+    [JsonPropertyName("storagePools")]
+    public IList<string>? StoragePools { get; set; }
+
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
     [JsonPropertyName("tags")]
     public IList<string>? Tags { get; set; }
@@ -5808,6 +6705,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolNodeConfig
     /// <summary>A list of Kubernetes taints to apply to nodes. Structure is documented below.</summary>
     [JsonPropertyName("taint")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigTaint>? Taint { get; set; }
+
+    /// <summary>Windows node configuration, currently supporting OSVersion attribute. The value must be one of [OS_VERSION_UNSPECIFIED, OS_VERSION_LTSC2019, OS_VERSION_LTSC2022]. For example:</summary>
+    [JsonPropertyName("windowsNodeConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolNodeConfigWindowsNodeConfig>? WindowsNodeConfig { get; set; }
 
     /// <summary>Metadata configuration to expose to workloads on the node pool. Structure is documented below.</summary>
     [JsonPropertyName("workloadMetadataConfig")]
@@ -5962,6 +6863,15 @@ public partial class V1beta1ClusterStatusAtProviderNodePool
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigLinuxNodeConfig
+{
+    /// <summary>Possible cgroup modes that can be used. Accepted values are:</summary>
+    [JsonPropertyName("cgroupMode")]
+    public string? CgroupMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags
 {
     /// <summary>List of network tags applied to auto-provisioned node pools.</summary>
@@ -5982,6 +6892,10 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfigNodeKubelet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolAutoConfig
 {
+    /// <summary>Linux system configuration for the cluster's automatically provisioned node pools. Only cgroup_mode field is supported in node_pool_auto_config. Structure is documented below.</summary>
+    [JsonPropertyName("linuxNodeConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolAutoConfigLinuxNodeConfig>? LinuxNodeConfig { get; set; }
+
     /// <summary>The network tag config for the cluster's automatically provisioned node pools.</summary>
     [JsonPropertyName("networkTags")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolAutoConfigNetworkTags>? NetworkTags { get; set; }
@@ -6041,11 +6955,24 @@ public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig
+{
+    /// <summary>Enables vertical pod autoscaling</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaults
 {
     /// <summary>Parameters to customize containerd runtime. Structure is documented below.</summary>
     [JsonPropertyName("containerdConfig")]
     public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsContainerdConfig>? ContainerdConfig { get; set; }
+
+    /// <summary>The default Google Container Filesystem (GCFS) configuration at the cluster level. e.g. enable image streaming across all the node pools within the cluster. Structure is documented below.</summary>
+    [JsonPropertyName("gcfsConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNodePoolDefaultsNodeConfigDefaultsGcfsConfig>? GcfsConfig { get; set; }
 
     /// <summary>only port is enabled for newly created node pools in the cluster. It is strongly recommended to set this to FALSE. Possible values: TRUE, FALSE.</summary>
     [JsonPropertyName("insecureKubeletReadonlyPortEnabled")]
@@ -6098,6 +7025,15 @@ public partial class V1beta1ClusterStatusAtProviderNotificationConfig
     /// <summary>The pubsub config for the cluster's upgrade notifications.</summary>
     [JsonPropertyName("pubsub")]
     public IList<V1beta1ClusterStatusAtProviderNotificationConfigPubsub>? Pubsub { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderPodAutoscaling
+{
+    /// <summary>Enable the Horizontal Pod Autoscaling profile for this cluster. Acceptable values are:</summary>
+    [JsonPropertyName("hpaProfile")]
+    public string? HpaProfile { get; set; }
 }
 
 /// <summary></summary>
@@ -6183,6 +7119,15 @@ public partial class V1beta1ClusterStatusAtProviderResourceUsageExportConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderSecretManagerConfig
+{
+    /// <summary>Enable the Secret Manager add-on for this cluster.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderSecurityPostureConfig
 {
     /// <summary>Sets the mode of the Kubernetes security posture API's off-cluster features. Available options include DISABLED and BASIC.</summary>
@@ -6201,6 +7146,43 @@ public partial class V1beta1ClusterStatusAtProviderServiceExternalIpsConfig
     /// <summary>Controls whether external ips specified by a service will be allowed. It is enabled by default.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderUserManagedKeysConfig
+{
+    /// <summary>The Certificate Authority Service caPool to use for the aggreation CA in this cluster.</summary>
+    [JsonPropertyName("aggregationCa")]
+    public string? AggregationCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the cluster CA in this cluster.</summary>
+    [JsonPropertyName("clusterCa")]
+    public string? ClusterCa { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKey to use for Confidential Hyperdisk on the control plane nodes.</summary>
+    [JsonPropertyName("controlPlaneDiskEncryptionKey")]
+    public string? ControlPlaneDiskEncryptionKey { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd API CA in this cluster.</summary>
+    [JsonPropertyName("etcdApiCa")]
+    public string? EtcdApiCa { get; set; }
+
+    /// <summary>The Certificate Authority Service caPool to use for the etcd peer CA in this cluster.</summary>
+    [JsonPropertyName("etcdPeerCa")]
+    public string? EtcdPeerCa { get; set; }
+
+    /// <summary>Resource path of the Cloud KMS cryptoKey to use for encryption of internal etcd backups.</summary>
+    [JsonPropertyName("gkeopsEtcdBackupEncryptionKey")]
+    public string? GkeopsEtcdBackupEncryptionKey { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for signing service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountSigningKeys")]
+    public IList<string>? ServiceAccountSigningKeys { get; set; }
+
+    /// <summary>The Cloud KMS cryptoKeyVersions to use for verifying service account JWTs issued by this cluster.</summary>
+    [JsonPropertyName("serviceAccountVerificationKeys")]
+    public IList<string>? ServiceAccountVerificationKeys { get; set; }
 }
 
 /// <summary></summary>
@@ -6233,6 +7215,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("allowNetAdmin")]
     public bool? AllowNetAdmin { get; set; }
 
+    /// <summary>Configuration for anonymous authentication restrictions. Structure is documented below.</summary>
+    [JsonPropertyName("anonymousAuthenticationConfig")]
+    public IList<V1beta1ClusterStatusAtProviderAnonymousAuthenticationConfig>? AnonymousAuthenticationConfig { get; set; }
+
     /// <summary>Configuration for the Google Groups for GKE feature. Structure is documented below.</summary>
     [JsonPropertyName("authenticatorGroupsConfig")]
     public IList<V1beta1ClusterStatusAtProviderAuthenticatorGroupsConfig>? AuthenticatorGroupsConfig { get; set; }
@@ -6252,6 +7238,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Configuration for Confidential Nodes feature. Structure is documented below documented below.</summary>
     [JsonPropertyName("confidentialNodes")]
     public IList<V1beta1ClusterStatusAtProviderConfidentialNodes>? ConfidentialNodes { get; set; }
+
+    /// <summary>Configuration for all of the cluster's control plane endpoints. Structure is documented below.</summary>
+    [JsonPropertyName("controlPlaneEndpointsConfig")]
+    public IList<V1beta1ClusterStatusAtProviderControlPlaneEndpointsConfig>? ControlPlaneEndpointsConfig { get; set; }
 
     /// <summary>Configuration for the Cost Allocation feature. Structure is documented below.</summary>
     [JsonPropertyName("costManagementConfig")]
@@ -6281,9 +7271,17 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Disable L4 load balancer VPC firewalls to enable firewall policies.</summary>
+    [JsonPropertyName("disableL4LbFirewallReconciliation")]
+    public bool? DisableL4LbFirewallReconciliation { get; set; }
+
     /// <summary>Configuration for Using Cloud DNS for GKE. Structure is documented below.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ClusterStatusAtProviderDnsConfig>? DnsConfig { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("effectiveLabels")]
+    public IDictionary<string, string>? EffectiveLabels { get; set; }
 
     /// <summary>Enable Autopilot for this cluster. Defaults to false. Note that when this option is enabled, certain features of Standard GKE are not available. See the official documentation for available features.</summary>
     [JsonPropertyName("enableAutopilot")]
@@ -6292,6 +7290,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Whether CiliumClusterWideNetworkPolicy is enabled on this cluster. Defaults to false.</summary>
     [JsonPropertyName("enableCiliumClusterwideNetworkPolicy")]
     public bool? EnableCiliumClusterwideNetworkPolicy { get; set; }
+
+    /// <summary>Whether FQDN Network Policy is enabled on this cluster. Users who enable this feature for existing Standard clusters must restart the GKE Dataplane V2 anetd DaemonSet after enabling it. See the Enable FQDN Network Policy in an existing cluster for more information.</summary>
+    [JsonPropertyName("enableFqdnNetworkPolicy")]
+    public bool? EnableFqdnNetworkPolicy { get; set; }
 
     /// <summary>Whether Intra-node visibility is enabled for this cluster. This makes same node pod to pod traffic visible for VPC network.</summary>
     [JsonPropertyName("enableIntranodeVisibility")]
@@ -6329,6 +7331,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
+    /// <summary>Configuration for [Enterprise edition].(https://cloud.google.com/kubernetes-engine/enterprise/docs/concepts/gke-editions). Structure is documented below.</summary>
+    [JsonPropertyName("enterpriseConfig")]
+    public IList<V1beta1ClusterStatusAtProviderEnterpriseConfig>? EnterpriseConfig { get; set; }
+
     /// <summary>Fleet configuration for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("fleet")]
     public IList<V1beta1ClusterStatusAtProviderFleet>? Fleet { get; set; }
@@ -6337,6 +7343,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("gatewayApiConfig")]
     public IList<V1beta1ClusterStatusAtProviderGatewayApiConfig>? GatewayApiConfig { get; set; }
 
+    /// <summary>Configuration options for the auto-upgrade patch type feature, which provide more control over the speed of automatic upgrades of your GKE clusters. Structure is documented below.</summary>
+    [JsonPropertyName("gkeAutoUpgradeConfig")]
+    public IList<V1beta1ClusterStatusAtProviderGkeAutoUpgradeConfig>? GkeAutoUpgradeConfig { get; set; }
+
     /// <summary>an identifier for the resource with format projects/{{project}}/locations/{{zone}}/clusters/{{name}}</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -6344,6 +7354,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>. Structure is documented below.</summary>
     [JsonPropertyName("identityServiceConfig")]
     public IList<V1beta1ClusterStatusAtProviderIdentityServiceConfig>? IdentityServiceConfig { get; set; }
+
+    /// <summary>Defines the config of in-transit encryption. Valid values are IN_TRANSIT_ENCRYPTION_DISABLED and IN_TRANSIT_ENCRYPTION_INTER_NODE_TRANSPARENT.</summary>
+    [JsonPropertyName("inTransitEncryptionConfig")]
+    public string? InTransitEncryptionConfig { get; set; }
 
     /// <summary>The number of nodes to create in this cluster's default node pool. In regional or multi-zonal clusters, this is the number of nodes per zone. Must be set if node_pool is not set. If you're using google_container_node_pool objects with no default node pool, you'll need to set this to a value of at least 1, alongside setting remove_default_node_pool to true.</summary>
     [JsonPropertyName("initialNodeCount")]
@@ -6405,6 +7419,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("network")]
     public string? Network { get; set; }
 
+    /// <summary>Network bandwidth tier configuration. Structure is documented below.</summary>
+    [JsonPropertyName("networkPerformanceConfig")]
+    public IList<V1beta1ClusterStatusAtProviderNetworkPerformanceConfig>? NetworkPerformanceConfig { get; set; }
+
     /// <summary>Configuration options for the NetworkPolicy feature. Structure is documented below.</summary>
     [JsonPropertyName("networkPolicy")]
     public IList<V1beta1ClusterStatusAtProviderNetworkPolicy>? NetworkPolicy { get; set; }
@@ -6445,6 +7463,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("operation")]
     public string? Operation { get; set; }
 
+    /// <summary>Configuration for the Structure is documented below.</summary>
+    [JsonPropertyName("podAutoscaling")]
+    public IList<V1beta1ClusterStatusAtProviderPodAutoscaling>? PodAutoscaling { get; set; }
+
     /// <summary>Configuration for private clusters, clusters with private nodes. Structure is documented below.</summary>
     [JsonPropertyName("privateClusterConfig")]
     public IList<V1beta1ClusterStatusAtProviderPrivateClusterConfig>? PrivateClusterConfig { get; set; }
@@ -6473,6 +7495,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("resourceUsageExportConfig")]
     public IList<V1beta1ClusterStatusAtProviderResourceUsageExportConfig>? ResourceUsageExportConfig { get; set; }
 
+    /// <summary>Configuration for the SecretManagerConfig feature. Structure is documented below.</summary>
+    [JsonPropertyName("secretManagerConfig")]
+    public IList<V1beta1ClusterStatusAtProviderSecretManagerConfig>? SecretManagerConfig { get; set; }
+
     /// <summary>Enable/Disable Security Posture API features for the cluster. Structure is documented below.</summary>
     [JsonPropertyName("securityPostureConfig")]
     public IList<V1beta1ClusterStatusAtProviderSecurityPostureConfig>? SecurityPostureConfig { get; set; }
@@ -6493,9 +7519,17 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("subnetwork")]
     public string? Subnetwork { get; set; }
 
+    /// <summary>The combination of labels configured directly on the resource and default labels configured on the provider.</summary>
+    [JsonPropertyName("terraformLabels")]
+    public IDictionary<string, string>? TerraformLabels { get; set; }
+
     /// <summary>The IP address range of the Cloud TPUs in this cluster, in CIDR notation (e.g. 1.2.3.4/29).</summary>
     [JsonPropertyName("tpuIpv4CidrBlock")]
     public string? TpuIpv4CidrBlock { get; set; }
+
+    /// <summary>The custom keys configuration of the cluster Structure is documented below.</summary>
+    [JsonPropertyName("userManagedKeysConfig")]
+    public IList<V1beta1ClusterStatusAtProviderUserManagedKeysConfig>? UserManagedKeysConfig { get; set; }
 
     /// <summary>Vertical Pod Autoscaling automatically adjusts the resources of pods controlled by it. Structure is documented below.</summary>
     [JsonPropertyName("verticalPodAutoscaling")]

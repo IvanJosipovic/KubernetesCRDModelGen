@@ -68,7 +68,7 @@ public partial class V1beta1KeyRingImportJobSpecForProviderKeyRingSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyRingImportJobSpecForProvider
 {
-    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256.</summary>
+    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256, RSA_OAEP_3072_SHA256_AES_256, RSA_OAEP_4096_SHA256_AES_256, RSA_OAEP_3072_SHA256, RSA_OAEP_4096_SHA256.</summary>
     [JsonPropertyName("importMethod")]
     public string? ImportMethod { get; set; }
 
@@ -93,7 +93,7 @@ public partial class V1beta1KeyRingImportJobSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyRingImportJobSpecInitProvider
 {
-    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256.</summary>
+    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256, RSA_OAEP_3072_SHA256_AES_256, RSA_OAEP_4096_SHA256_AES_256, RSA_OAEP_3072_SHA256, RSA_OAEP_4096_SHA256.</summary>
     [JsonPropertyName("importMethod")]
     public string? ImportMethod { get; set; }
 
@@ -272,7 +272,7 @@ public partial class V1beta1KeyRingImportJobStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256.</summary>
+    /// <summary>The wrapping method to be used for incoming key material. Possible values are: RSA_OAEP_3072_SHA1_AES_256, RSA_OAEP_4096_SHA1_AES_256, RSA_OAEP_3072_SHA256_AES_256, RSA_OAEP_4096_SHA256_AES_256, RSA_OAEP_3072_SHA256, RSA_OAEP_4096_SHA256.</summary>
     [JsonPropertyName("importMethod")]
     public string? ImportMethod { get; set; }
 

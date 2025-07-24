@@ -91,9 +91,18 @@ spec:
                         enableNestedVirtualization:
                           description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                           type: boolean
+                        enableUefiNetworking:
+                          description: Whether to enable UEFI networking for instance creation.
+                          type: boolean
+                        performanceMonitoringUnit:
+                          description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                          type: string
                         threadsPerCore:
                           description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                           type: number
+                        turboMode:
+                          description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                          type: string
                         visibleCoreCount:
                           description: The number of physical cores to expose to an instance. visible cores info (VC).
                           type: number
@@ -110,10 +119,10 @@ spec:
                     items:
                       properties:
                         confidentialInstanceType:
-                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
+                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                           type: string
                         enableConfidentialCompute:
-                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
+                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
                           type: boolean
                       type: object
                     type: array
@@ -129,6 +138,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -154,7 +166,17 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                type: string
+                              kmsKeyServiceAccount:
+                                description: >-
+                                  The service account being used for the
+
+                                  encryption request for the given KMS key. If absent, the Compute Engine
+
+                                  default service account is used.
                                 type: string
                             type: object
                           type: array
@@ -176,8 +198,13 @@ spec:
                           description: >-
                             The GCE disk type. Such as "pd-ssd", "local-ssd",
 
-                            "pd-balanced" or "pd-standard".
+                            "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -214,6 +241,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -352,7 +381,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -362,6 +393,54 @@ spec:
 
                                   default service account is used.
                                 type: string
+                              rawKeySecretRef:
+                                description: >-
+                                  A 256-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                  encoded in RFC 4648 base64
+
+                                  to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
+                              rsaEncryptedKeySecretRef:
+                                description: >-
+                                  Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                             type: object
                           type: array
                         sourceRef:
@@ -469,7 +548,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -479,6 +560,54 @@ spec:
 
                                   default service account is used.
                                 type: string
+                              rawKeySecretRef:
+                                description: >-
+                                  A 256-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                  encoded in RFC 4648 base64
+
+                                  to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
+                              rsaEncryptedKeySecretRef:
+                                description: >-
+                                  Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                             type: object
                           type: array
                         type:
@@ -506,6 +635,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -550,7 +682,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -567,7 +703,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -737,13 +873,13 @@ spec:
                               type: object
                           type: object
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -934,14 +1070,14 @@ spec:
 
                             terminated by a user). This defaults to true.
                           type: boolean
+                        availabilityDomain:
+                          description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                          type: number
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
                         localSsdRecoveryTimeout:
-                          description: >-
-                            io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                            The local_ssd_recovery_timeout block supports:
+                          description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                           items:
                             properties:
                               nanos:
@@ -956,11 +1092,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -980,11 +1114,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -1052,6 +1184,9 @@ spec:
                             false. For more info about
 
                             SPOT, read here
+                          type: string
+                        terminationTime:
+                          description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                           type: string
                       type: object
                     type: array
@@ -1218,9 +1353,18 @@ spec:
                         enableNestedVirtualization:
                           description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                           type: boolean
+                        enableUefiNetworking:
+                          description: Whether to enable UEFI networking for instance creation.
+                          type: boolean
+                        performanceMonitoringUnit:
+                          description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                          type: string
                         threadsPerCore:
                           description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                           type: number
+                        turboMode:
+                          description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                          type: string
                         visibleCoreCount:
                           description: The number of physical cores to expose to an instance. visible cores info (VC).
                           type: number
@@ -1237,10 +1381,10 @@ spec:
                     items:
                       properties:
                         confidentialInstanceType:
-                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
+                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                           type: string
                         enableConfidentialCompute:
-                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
+                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
                           type: boolean
                       type: object
                     type: array
@@ -1256,6 +1400,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -1281,7 +1428,17 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                type: string
+                              kmsKeyServiceAccount:
+                                description: >-
+                                  The service account being used for the
+
+                                  encryption request for the given KMS key. If absent, the Compute Engine
+
+                                  default service account is used.
                                 type: string
                             type: object
                           type: array
@@ -1303,8 +1460,13 @@ spec:
                           description: >-
                             The GCE disk type. Such as "pd-ssd", "local-ssd",
 
-                            "pd-balanced" or "pd-standard".
+                            "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -1341,6 +1503,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -1479,7 +1643,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -1489,6 +1655,54 @@ spec:
 
                                   default service account is used.
                                 type: string
+                              rawKeySecretRef:
+                                description: >-
+                                  A 256-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                  encoded in RFC 4648 base64
+
+                                  to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
+                              rsaEncryptedKeySecretRef:
+                                description: >-
+                                  Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                             type: object
                           type: array
                         sourceRef:
@@ -1596,7 +1810,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -1606,6 +1822,54 @@ spec:
 
                                   default service account is used.
                                 type: string
+                              rawKeySecretRef:
+                                description: >-
+                                  A 256-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                  encoded in RFC 4648 base64
+
+                                  to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
+                              rsaEncryptedKeySecretRef:
+                                description: >-
+                                  Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                  (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                properties:
+                                  key:
+                                    description: The key to select.
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                  namespace:
+                                    description: Namespace of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                - namespace
+                                type: object
                             type: object
                           type: array
                         type:
@@ -1633,6 +1897,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -1677,7 +1944,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -1694,7 +1965,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -1864,13 +2135,13 @@ spec:
                               type: object
                           type: object
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -2061,14 +2332,14 @@ spec:
 
                             terminated by a user). This defaults to true.
                           type: boolean
+                        availabilityDomain:
+                          description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                          type: number
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
                         localSsdRecoveryTimeout:
-                          description: >-
-                            io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                            The local_ssd_recovery_timeout block supports:
+                          description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                           items:
                             properties:
                               nanos:
@@ -2083,11 +2354,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -2107,11 +2376,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -2179,6 +2446,9 @@ spec:
                             false. For more info about
 
                             SPOT, read here
+                          type: string
+                        terminationTime:
+                          description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                           type: string
                       type: object
                     type: array
@@ -2541,9 +2811,18 @@ spec:
                         enableNestedVirtualization:
                           description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                           type: boolean
+                        enableUefiNetworking:
+                          description: Whether to enable UEFI networking for instance creation.
+                          type: boolean
+                        performanceMonitoringUnit:
+                          description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                          type: string
                         threadsPerCore:
                           description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                           type: number
+                        turboMode:
+                          description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                          type: string
                         visibleCoreCount:
                           description: The number of physical cores to expose to an instance. visible cores info (VC).
                           type: number
@@ -2560,13 +2839,16 @@ spec:
                     items:
                       properties:
                         confidentialInstanceType:
-                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. One of the following values: SEV, SEV_SNP. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
+                          description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                           type: string
                         enableConfidentialCompute:
-                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
+                          description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
                           type: boolean
                       type: object
                     type: array
+                  creationTimestamp:
+                    description: Creation timestamp in RFC3339 text format.
+                    type: string
                   description:
                     description: A brief description of this resource.
                     type: string
@@ -2579,6 +2861,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -2604,7 +2889,17 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
+                                type: string
+                              kmsKeyServiceAccount:
+                                description: >-
+                                  The service account being used for the
+
+                                  encryption request for the given KMS key. If absent, the Compute Engine
+
+                                  default service account is used.
                                 type: string
                             type: object
                           type: array
@@ -2626,8 +2921,13 @@ spec:
                           description: >-
                             The GCE disk type. Such as "pd-ssd", "local-ssd",
 
-                            "pd-balanced" or "pd-standard".
+                            "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -2664,6 +2964,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -2713,7 +3015,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -2744,7 +3048,9 @@ spec:
                                 description: >-
                                   The self link of the encryption key that is
 
-                                  stored in Google Cloud KMS.
+                                  stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                  may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: >-
@@ -2789,6 +3095,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -2836,7 +3145,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -2853,7 +3166,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -2955,13 +3268,13 @@ spec:
                             empty, the address will be automatically assigned.
                           type: string
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -2991,6 +3304,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  numericId:
+                    description: numeric identifier of the resource.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs. If it
@@ -3066,14 +3382,14 @@ spec:
 
                             terminated by a user). This defaults to true.
                           type: boolean
+                        availabilityDomain:
+                          description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                          type: number
                         instanceTerminationAction:
                           description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                           type: string
                         localSsdRecoveryTimeout:
-                          description: >-
-                            io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                            The local_ssd_recovery_timeout block supports:
+                          description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                           items:
                             properties:
                               nanos:
@@ -3088,11 +3404,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -3112,11 +3426,9 @@ spec:
                                 type: number
                               seconds:
                                 description: >-
-                                  Span of time at a resolution of a second. Must be from 0 to
+                                  Span of time at a resolution of a second.
 
-                                  315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                  sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                  The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                                 type: number
                             type: object
                           type: array
@@ -3184,6 +3496,9 @@ spec:
                             false. For more info about
 
                             SPOT, read here
+                          type: string
+                        terminationTime:
+                          description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                           type: string
                       type: object
                     type: array
@@ -3392,9 +3707,18 @@ spec:
                       enableNestedVirtualization:
                         description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                         type: boolean
+                      enableUefiNetworking:
+                        description: Whether to enable UEFI networking for instance creation.
+                        type: boolean
+                      performanceMonitoringUnit:
+                        description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                        type: string
                       threadsPerCore:
                         description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                         type: number
+                      turboMode:
+                        description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                        type: string
                       visibleCoreCount:
                         description: The number of physical cores to expose to an instance. visible cores info (VC).
                         type: number
@@ -3409,7 +3733,7 @@ spec:
                     description: Enable Confidential Mode on this VM. Structure is documented below
                     properties:
                       confidentialInstanceType:
-                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM. TDX is only available in beta.'
+                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                         type: string
                       enableConfidentialCompute:
                         description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
@@ -3427,6 +3751,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -3451,7 +3778,17 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              type: string
+                            kmsKeyServiceAccount:
+                              description: >-
+                                The service account being used for the
+
+                                encryption request for the given KMS key. If absent, the Compute Engine
+
+                                default service account is used.
                               type: string
                           type: object
                         diskName:
@@ -3474,6 +3811,11 @@ spec:
 
                             "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -3510,6 +3852,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -3647,7 +3991,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -3657,6 +4003,54 @@ spec:
 
                                 default service account is used.
                               type: string
+                            rawKeySecretRef:
+                              description: >-
+                                A 256-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                encoded in RFC 4648 base64
+
+                                to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
+                            rsaEncryptedKeySecretRef:
+                              description: >-
+                                Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
                           type: object
                         sourceRef:
                           description: Reference to a Disk in compute to populate source.
@@ -3762,7 +4156,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -3772,6 +4168,54 @@ spec:
 
                                 default service account is used.
                               type: string
+                            rawKeySecretRef:
+                              description: >-
+                                A 256-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                encoded in RFC 4648 base64
+
+                                to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
+                            rsaEncryptedKeySecretRef:
+                              description: >-
+                                Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
                           type: object
                         type:
                           description: >-
@@ -3798,6 +4242,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -3842,7 +4289,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -3859,7 +4310,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -4029,13 +4480,13 @@ spec:
                               type: object
                           type: object
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -4219,14 +4670,14 @@ spec:
 
                           terminated by a user). This defaults to true.
                         type: boolean
+                      availabilityDomain:
+                        description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                        type: number
                       instanceTerminationAction:
                         description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                         type: string
                       localSsdRecoveryTimeout:
-                        description: >-
-                          io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                          The local_ssd_recovery_timeout block supports:
+                        description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         items:
                           properties:
                             nanos:
@@ -4241,11 +4692,9 @@ spec:
                               type: number
                             seconds:
                               description: >-
-                                Span of time at a resolution of a second. Must be from 0 to
+                                Span of time at a resolution of a second.
 
-                                315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                               type: number
                           type: object
                         type: array
@@ -4264,11 +4713,9 @@ spec:
                             type: number
                           seconds:
                             description: >-
-                              Span of time at a resolution of a second. Must be from 0 to
+                              Span of time at a resolution of a second.
 
-                              315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                              sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                              The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
                       minNodeCpus:
@@ -4333,6 +4780,9 @@ spec:
                           false. For more info about
 
                           SPOT, read here
+                        type: string
+                      terminationTime:
+                        description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                         type: string
                     type: object
                   serviceAccount:
@@ -4493,9 +4943,18 @@ spec:
                       enableNestedVirtualization:
                         description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                         type: boolean
+                      enableUefiNetworking:
+                        description: Whether to enable UEFI networking for instance creation.
+                        type: boolean
+                      performanceMonitoringUnit:
+                        description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                        type: string
                       threadsPerCore:
                         description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                         type: number
+                      turboMode:
+                        description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                        type: string
                       visibleCoreCount:
                         description: The number of physical cores to expose to an instance. visible cores info (VC).
                         type: number
@@ -4510,7 +4969,7 @@ spec:
                     description: Enable Confidential Mode on this VM. Structure is documented below
                     properties:
                       confidentialInstanceType:
-                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM. TDX is only available in beta.'
+                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                         type: string
                       enableConfidentialCompute:
                         description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
@@ -4528,6 +4987,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -4552,7 +5014,17 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              type: string
+                            kmsKeyServiceAccount:
+                              description: >-
+                                The service account being used for the
+
+                                encryption request for the given KMS key. If absent, the Compute Engine
+
+                                default service account is used.
                               type: string
                           type: object
                         diskName:
@@ -4575,6 +5047,11 @@ spec:
 
                             "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -4611,6 +5088,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -4748,7 +5227,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -4758,6 +5239,54 @@ spec:
 
                                 default service account is used.
                               type: string
+                            rawKeySecretRef:
+                              description: >-
+                                A 256-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                encoded in RFC 4648 base64
+
+                                to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
+                            rsaEncryptedKeySecretRef:
+                              description: >-
+                                Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
                           type: object
                         sourceRef:
                           description: Reference to a Disk in compute to populate source.
@@ -4863,7 +5392,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -4873,6 +5404,54 @@ spec:
 
                                 default service account is used.
                               type: string
+                            rawKeySecretRef:
+                              description: >-
+                                A 256-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
+
+                                encoded in RFC 4648 base64
+
+                                to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
+                            rsaEncryptedKeySecretRef:
+                              description: >-
+                                Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
+
+                                (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt this snapshot. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              properties:
+                                key:
+                                  description: The key to select.
+                                  type: string
+                                name:
+                                  description: Name of the secret.
+                                  type: string
+                                namespace:
+                                  description: Namespace of the secret.
+                                  type: string
+                              required:
+                              - key
+                              - name
+                              - namespace
+                              type: object
                           type: object
                         type:
                           description: >-
@@ -4899,6 +5478,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -4943,7 +5525,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -4960,7 +5546,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -5130,13 +5716,13 @@ spec:
                               type: object
                           type: object
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -5320,14 +5906,14 @@ spec:
 
                           terminated by a user). This defaults to true.
                         type: boolean
+                      availabilityDomain:
+                        description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                        type: number
                       instanceTerminationAction:
                         description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                         type: string
                       localSsdRecoveryTimeout:
-                        description: >-
-                          io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                          The local_ssd_recovery_timeout block supports:
+                        description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         items:
                           properties:
                             nanos:
@@ -5342,11 +5928,9 @@ spec:
                               type: number
                             seconds:
                               description: >-
-                                Span of time at a resolution of a second. Must be from 0 to
+                                Span of time at a resolution of a second.
 
-                                315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                               type: number
                           type: object
                         type: array
@@ -5365,11 +5949,9 @@ spec:
                             type: number
                           seconds:
                             description: >-
-                              Span of time at a resolution of a second. Must be from 0 to
+                              Span of time at a resolution of a second.
 
-                              315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                              sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                              The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
                       minNodeCpus:
@@ -5434,6 +6016,9 @@ spec:
                           false. For more info about
 
                           SPOT, read here
+                        type: string
+                      terminationTime:
+                        description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                         type: string
                     type: object
                   serviceAccount:
@@ -5790,9 +6375,18 @@ spec:
                       enableNestedVirtualization:
                         description: Defines whether the instance should have nested virtualization enabled. Defaults to false.
                         type: boolean
+                      enableUefiNetworking:
+                        description: Whether to enable UEFI networking for instance creation.
+                        type: boolean
+                      performanceMonitoringUnit:
+                        description: The PMU is a hardware component within the CPU core that monitors how the processor runs code. Valid values for the level of PMU are STANDARD, ENHANCED, and ARCHITECTURAL.
+                        type: string
                       threadsPerCore:
                         description: The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1.
                         type: number
+                      turboMode:
+                        description: Turbo frequency mode to use for the instance. Supported modes are currently either ALL_CORE_MAX or unset (default).
+                        type: string
                       visibleCoreCount:
                         description: The number of physical cores to expose to an instance. visible cores info (VC).
                         type: number
@@ -5807,12 +6401,15 @@ spec:
                     description: Enable Confidential Mode on this VM. Structure is documented below
                     properties:
                       confidentialInstanceType:
-                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM. TDX is only available in beta.'
+                        description: 'Defines the confidential computing technology the instance uses. SEV is an AMD feature. TDX is an Intel feature. One of the following values is required: SEV, SEV_SNP, TDX. on_host_maintenance can be set to MIGRATE if confidential_instance_type is set to SEV and min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM. If SEV_SNP, currently min_cpu_platform has to be set to "AMD Milan" or this will fail to create the VM.'
                         type: string
                       enableConfidentialCompute:
                         description: Defines whether the instance should have confidential compute enabled with AMD SEV. If enabled, on_host_maintenance can be set to MIGRATE if min_cpu_platform is set to "AMD Milan". Otherwise, on_host_maintenance has to be set to TERMINATE or this will fail to create the VM.
                         type: boolean
                     type: object
+                  creationTimestamp:
+                    description: Creation timestamp in RFC3339 text format.
+                    type: string
                   description:
                     description: A brief description of this resource.
                     type: string
@@ -5825,6 +6422,9 @@ spec:
                       documented below.
                     items:
                       properties:
+                        architecture:
+                          description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
+                          type: string
                         autoDelete:
                           description: >-
                             Whether or not the disk should be auto-deleted.
@@ -5849,7 +6449,17 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
+                              type: string
+                            kmsKeyServiceAccount:
+                              description: >-
+                                The service account being used for the
+
+                                encryption request for the given KMS key. If absent, the Compute Engine
+
+                                default service account is used.
                               type: string
                           type: object
                         diskName:
@@ -5872,6 +6482,11 @@ spec:
 
                             "pd-balanced" or "pd-standard", "hyperdisk-balanced", "hyperdisk-throughput" or "hyperdisk-extreme".
                           type: string
+                        guestOsFeatures:
+                          description: A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
+                          items:
+                            type: string
+                          type: array
                         interface:
                           description: >-
                             Specifies the disk interface to use for attaching this disk,
@@ -5908,6 +6523,8 @@ spec:
                             Values must be between 10,000 and 120,000. For more details, see the
 
                             Extreme persistent disk documentation.
+                          type: number
+                        provisionedThroughput:
                           type: number
                         resourceManagerTags:
                           additionalProperties:
@@ -5956,7 +6573,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -5985,7 +6604,9 @@ spec:
                               description: >-
                                 The self link of the encryption key that is
 
-                                stored in Google Cloud KMS.
+                                stored in Google Cloud KMS. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
+
+                                may be set.
                               type: string
                             kmsKeyServiceAccount:
                               description: >-
@@ -6029,6 +6650,9 @@ spec:
                       A brief description to use for instances
 
                       created from this template.
+                    type: string
+                  keyRevocationActionType:
+                    description: Action to be taken when a customer's encryption key is revoked. Supports STOP and NONE, with NONE being the default.
                     type: string
                   labels:
                     additionalProperties:
@@ -6076,7 +6700,11 @@ spec:
                     description: >-
                       Creates a unique name beginning with the specified
 
-                      prefix. Conflicts with name.
+                      prefix. Conflicts with name. Max length is 54 characters.
+
+                      Prefixes with lengths longer than 37 characters will use a shortened
+
+                      UUID that will be more prone to collisions.
                     type: string
                   networkInterface:
                     description: >-
@@ -6093,7 +6721,7 @@ spec:
 
                             instance can be accessed via the Internet.g. via tunnel or because it is running on another cloud instance
 
-                            on that network). This block can be repeated multiple times. Structure documented below.
+                            on that network). This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
                               natIp:
@@ -6195,13 +6823,13 @@ spec:
                             empty, the address will be automatically assigned.
                           type: string
                         nicType:
-                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.'
+                          description: 'The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET, MRDMA, IRDMA.'
                           type: string
                         queueCount:
                           description: The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
                           type: number
                         stackType:
-                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
+                          description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
                           description: >-
@@ -6229,6 +6857,9 @@ spec:
                         description: 'The egress bandwidth tier to enable. Possible values: TIER_1, DEFAULT'
                         type: string
                     type: object
+                  numericId:
+                    description: numeric identifier of the resource.
+                    type: string
                   project:
                     description: >-
                       The ID of the project in which the resource belongs. If it
@@ -6299,14 +6930,14 @@ spec:
 
                           terminated by a user). This defaults to true.
                         type: boolean
+                      availabilityDomain:
+                        description: Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
+                        type: number
                       instanceTerminationAction:
                         description: Describe the type of termination action for SPOT VM. Can be STOP or DELETE.  Read more on here
                         type: string
                       localSsdRecoveryTimeout:
-                        description: >-
-                          io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
-
-                          The local_ssd_recovery_timeout block supports:
+                        description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         items:
                           properties:
                             nanos:
@@ -6321,11 +6952,9 @@ spec:
                               type: number
                             seconds:
                               description: >-
-                                Span of time at a resolution of a second. Must be from 0 to
+                                Span of time at a resolution of a second.
 
-                                315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                                sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                                The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                               type: number
                           type: object
                         type: array
@@ -6344,11 +6973,9 @@ spec:
                             type: number
                           seconds:
                             description: >-
-                              Span of time at a resolution of a second. Must be from 0 to
+                              Span of time at a resolution of a second.
 
-                              315,576,000,000 inclusive. Note: these bounds are computed from: 60
-
-                              sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years.
+                              The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
                       minNodeCpus:
@@ -6413,6 +7040,9 @@ spec:
                           false. For more info about
 
                           SPOT, read here
+                        type: string
+                      terminationTime:
+                        description: Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
                         type: string
                     type: object
                   selfLink:
