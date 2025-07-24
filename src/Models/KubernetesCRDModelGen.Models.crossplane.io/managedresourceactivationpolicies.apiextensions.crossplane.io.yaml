@@ -61,6 +61,7 @@ spec:
                 items:
                   description: ActivationPolicy matches on MRD names with wildcard prefix support.
                   type: string
+                minItems: 1
                 type: array
             required:
             - activate
