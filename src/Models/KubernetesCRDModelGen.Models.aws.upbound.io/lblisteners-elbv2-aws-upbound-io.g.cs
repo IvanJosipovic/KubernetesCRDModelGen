@@ -336,6 +336,10 @@ public partial class V1beta1LBListenerSpecForProviderDefaultAction
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionForward>? Forward { get; set; }
 
+    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
+    [JsonPropertyName("index")]
+    public string? Index { get; set; }
+
     /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
@@ -823,6 +827,10 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultAction
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionForward>? Forward { get; set; }
 
+    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
+    [JsonPropertyName("index")]
+    public string? Index { get; set; }
+
     /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
@@ -1296,6 +1304,10 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
     /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. Cannot be specified with target_group_arn. Detailed below.</summary>
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionForward>? Forward { get; set; }
+
+    /// <summary>This is an injected field with a default value for being able to merge items of the parent object list.</summary>
+    [JsonPropertyName("index")]
+    public string? Index { get; set; }
 
     /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
