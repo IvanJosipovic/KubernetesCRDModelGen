@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
 /// <summary>ManagedResourceActivationPolicySpec specifies the desired activation state of ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceActivationPolicySpec
+public partial class V1alpha1ManagedResourceActivationPolicySpec
 {
     /// <summary>Activations is an array of MRD names to activate. Supports wildcard prefixes (like `*.aws.crossplane.io`) but not full regular expressions.</summary>
     [JsonPropertyName("activate")]
@@ -19,7 +19,7 @@ public partial class V2alpha1ManagedResourceActivationPolicySpec
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceActivationPolicyStatusConditions
+public partial class V1alpha1ManagedResourceActivationPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -48,7 +48,7 @@ public partial class V2alpha1ManagedResourceActivationPolicyStatusConditions
 
 /// <summary>ManagedResourceActivationPolicyStatus shows the observed state of the policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceActivationPolicyStatus
+public partial class V1alpha1ManagedResourceActivationPolicyStatus
 {
     /// <summary>Activated names the ManagedResourceDefinitions this policy has activated.</summary>
     [JsonPropertyName("activated")]
@@ -56,15 +56,15 @@ public partial class V2alpha1ManagedResourceActivationPolicyStatus
 
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V2alpha1ManagedResourceActivationPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ManagedResourceActivationPolicyStatusConditions>? Conditions { get; set; }
 }
 
 /// <summary>A ManagedResourceActivationPolicy defines the activation policy for ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V2alpha1ManagedResourceActivationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V2alpha1ManagedResourceActivationPolicySpec>, IStatus<V2alpha1ManagedResourceActivationPolicyStatus>
+public partial class V1alpha1ManagedResourceActivationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ManagedResourceActivationPolicySpec>, IStatus<V1alpha1ManagedResourceActivationPolicyStatus>
 {
-    public const string KubeApiVersion = "v2alpha1";
+    public const string KubeApiVersion = "v1alpha1";
     public const string KubeKind = "ManagedResourceActivationPolicy";
     public const string KubeGroup = "apiextensions.crossplane.io";
     public const string KubePluralName = "managedresourceactivationpolicies";
@@ -82,19 +82,19 @@ public partial class V2alpha1ManagedResourceActivationPolicy : IKubernetesObject
 
     /// <summary>ManagedResourceActivationPolicySpec specifies the desired activation state of ManagedResourceDefinitions.</summary>
     [JsonPropertyName("spec")]
-    public V2alpha1ManagedResourceActivationPolicySpec? Spec { get; set; }
+    public V1alpha1ManagedResourceActivationPolicySpec? Spec { get; set; }
 
     /// <summary>ManagedResourceActivationPolicyStatus shows the observed state of the policy.</summary>
     [JsonPropertyName("status")]
-    public V2alpha1ManagedResourceActivationPolicyStatus? Status { get; set; }
+    public V1alpha1ManagedResourceActivationPolicyStatus? Status { get; set; }
 }
 
 /// <summary>A ManagedResourceActivationPolicy defines the activation policy for ManagedResourceDefinitions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V2alpha1ManagedResourceActivationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V2alpha1ManagedResourceActivationPolicy>
+public partial class V1alpha1ManagedResourceActivationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ManagedResourceActivationPolicy>
 {
-    public const string KubeApiVersion = "v2alpha1";
+    public const string KubeApiVersion = "v1alpha1";
     public const string KubeKind = "ManagedResourceActivationPolicyList";
     public const string KubeGroup = "apiextensions.crossplane.io";
     public const string KubePluralName = "managedresourceactivationpolicies";
@@ -112,5 +112,5 @@ public partial class V2alpha1ManagedResourceActivationPolicyList : IKubernetesOb
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V2alpha1ManagedResourceActivationPolicy> Items { get; set; }
+    public IList<V1alpha1ManagedResourceActivationPolicy> Items { get; set; }
 }

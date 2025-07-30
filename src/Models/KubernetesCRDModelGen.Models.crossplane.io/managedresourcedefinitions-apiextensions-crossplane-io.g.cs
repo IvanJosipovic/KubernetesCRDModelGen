@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
 /// <summary>ConnectionDetail holds keys and descriptions of connection secrets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecConnectionDetails
+public partial class V1alpha1ManagedResourceDefinitionSpecConnectionDetails
 {
     /// <summary>Description of how the key is used.</summary>
     [JsonPropertyName("description")]
@@ -23,7 +23,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConnectionDetails
 
 /// <summary>service is a reference to the service for this webhook. Either service or url must be specified.  If the webhook is running within the cluster, then you should use `service`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfigService
+public partial class V1alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfigService
 {
     /// <summary>name is the name of the service. Required</summary>
     [JsonPropertyName("name")]
@@ -44,7 +44,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhookClien
 
 /// <summary>clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfig
+public partial class V1alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfig
 {
     /// <summary>caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.</summary>
     [JsonPropertyName("caBundle")]
@@ -52,7 +52,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhookClien
 
     /// <summary>service is a reference to the service for this webhook. Either service or url must be specified.  If the webhook is running within the cluster, then you should use `service`.</summary>
     [JsonPropertyName("service")]
-    public V2alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfigService? Service { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfigService? Service { get; set; }
 
     /// <summary>url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.  The `host` should not refer to a service running in the cluster; use the `service` field instead. The host might be resolved via external DNS in some apiservers (e.g., `kube-apiserver` cannot resolve in-cluster DNS as that would be a layering violation). `host` may also be an IP address.  Please note that using `localhost` or `127.0.0.1` as a `host` is risky unless you take great care to run this webhook on all hosts which run an apiserver which might need to make calls to this webhook. Such installs are likely to be non-portable, i.e., not easy to turn up in a new cluster.  The scheme must be "https"; the URL must begin with "https://".  A path is optional, and if present may be any string permissible in a URL. You may use the path to pass an arbitrary string to the webhook, for example, a cluster identifier.  Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.</summary>
     [JsonPropertyName("url")]
@@ -61,11 +61,11 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhookClien
 
 /// <summary>webhook describes how to call the conversion webhook. Required when `strategy` is set to `"Webhook"`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhook
+public partial class V1alpha1ManagedResourceDefinitionSpecConversionWebhook
 {
     /// <summary>clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.</summary>
     [JsonPropertyName("clientConfig")]
-    public V2alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfig? ClientConfig { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecConversionWebhookClientConfig? ClientConfig { get; set; }
 
     /// <summary>conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.</summary>
     [JsonPropertyName("conversionReviewVersions")]
@@ -74,7 +74,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConversionWebhook
 
 /// <summary>Conversion defines conversion settings for the CRD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecConversion
+public partial class V1alpha1ManagedResourceDefinitionSpecConversion
 {
     /// <summary>strategy specifies how custom resources are converted between versions. Allowed values are: - `"None"`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `"Webhook"`: API Server will call to an external webhook to do the conversion. Additional information   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.</summary>
     [JsonPropertyName("strategy")]
@@ -82,12 +82,12 @@ public partial class V2alpha1ManagedResourceDefinitionSpecConversion
 
     /// <summary>webhook describes how to call the conversion webhook. Required when `strategy` is set to `"Webhook"`.</summary>
     [JsonPropertyName("webhook")]
-    public V2alpha1ManagedResourceDefinitionSpecConversionWebhook? Webhook { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecConversionWebhook? Webhook { get; set; }
 }
 
 /// <summary>Names specify the resource and kind names for the custom resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecNames
+public partial class V1alpha1ManagedResourceDefinitionSpecNames
 {
     /// <summary>categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.</summary>
     [JsonPropertyName("categories")]
@@ -116,7 +116,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecNames
 
 /// <summary>CustomResourceColumnDefinition specifies a column for server side printing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrinterColumns
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrinterColumns
 {
     /// <summary>description is a human readable description of this column.</summary>
     [JsonPropertyName("description")]
@@ -145,7 +145,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrin
 
 /// <summary>Schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSchema
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsSchema
 {
     /// <summary>OpenAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.</summary>
     [JsonPropertyName("openAPIV3Schema")]
@@ -154,7 +154,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSchema
 
 /// <summary>SelectableField specifies the JSON path of a field that may be used with field selectors.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSelectableFields
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsSelectableFields
 {
     /// <summary>jsonPath is a simple JSON path which is evaluated against each custom resource to produce a field selector value. Only JSON paths without the array notation are allowed. Must point to a field of type string, boolean or integer. Types with enum values and strings with formats are allowed. If jsonPath refers to absent field in a resource, the jsonPath evaluates to an empty string. Must not point to metdata fields. Required.</summary>
     [JsonPropertyName("jsonPath")]
@@ -163,7 +163,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSelectableFiel
 
 /// <summary>scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSubresourcesScale
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsSubresourcesScale
 {
     /// <summary>labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.</summary>
     [JsonPropertyName("labelSelectorPath")]
@@ -180,30 +180,30 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSubresourcesSc
 
 /// <summary>status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSubresourcesStatus
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsSubresourcesStatus
 {
 }
 
 /// <summary>Subresources specify what subresources this version of the defined custom resource have.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersionsSubresources
+public partial class V1alpha1ManagedResourceDefinitionSpecVersionsSubresources
 {
     /// <summary>scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.</summary>
     [JsonPropertyName("scale")]
-    public V2alpha1ManagedResourceDefinitionSpecVersionsSubresourcesScale? Scale { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecVersionsSubresourcesScale? Scale { get; set; }
 
     /// <summary>status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.</summary>
     [JsonPropertyName("status")]
-    public V2alpha1ManagedResourceDefinitionSpecVersionsSubresourcesStatus? Status { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecVersionsSubresourcesStatus? Status { get; set; }
 }
 
 /// <summary>CustomResourceDefinitionVersion describes a version for CRD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpecVersions
+public partial class V1alpha1ManagedResourceDefinitionSpecVersions
 {
     /// <summary>AdditionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.</summary>
     [JsonPropertyName("additionalPrinterColumns")]
-    public IList<V2alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrinterColumns>? AdditionalPrinterColumns { get; set; }
+    public IList<V1alpha1ManagedResourceDefinitionSpecVersionsAdditionalPrinterColumns>? AdditionalPrinterColumns { get; set; }
 
     /// <summary>Deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.</summary>
     [JsonPropertyName("deprecated")]
@@ -219,11 +219,11 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersions
 
     /// <summary>Schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.</summary>
     [JsonPropertyName("schema")]
-    public V2alpha1ManagedResourceDefinitionSpecVersionsSchema? Schema { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecVersionsSchema? Schema { get; set; }
 
     /// <summary>SelectableFields specifies paths to fields that may be used as field selectors. A maximum of 8 selectable fields are allowed. See https://kubernetes.io/docs/concepts/overview/working-with-objects/field-selectors</summary>
     [JsonPropertyName("selectableFields")]
-    public IList<V2alpha1ManagedResourceDefinitionSpecVersionsSelectableFields>? SelectableFields { get; set; }
+    public IList<V1alpha1ManagedResourceDefinitionSpecVersionsSelectableFields>? SelectableFields { get; set; }
 
     /// <summary>Served is a flag enabling/disabling this version from being served via REST APIs</summary>
     [JsonPropertyName("served")]
@@ -235,20 +235,20 @@ public partial class V2alpha1ManagedResourceDefinitionSpecVersions
 
     /// <summary>Subresources specify what subresources this version of the defined custom resource have.</summary>
     [JsonPropertyName("subresources")]
-    public V2alpha1ManagedResourceDefinitionSpecVersionsSubresources? Subresources { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecVersionsSubresources? Subresources { get; set; }
 }
 
 /// <summary>ManagedResourceDefinitionSpec specifies the desired state of the resource definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionSpec
+public partial class V1alpha1ManagedResourceDefinitionSpec
 {
     /// <summary>ConnectionDetails is an array of connection detail keys and descriptions.</summary>
     [JsonPropertyName("connectionDetails")]
-    public IList<V2alpha1ManagedResourceDefinitionSpecConnectionDetails>? ConnectionDetails { get; set; }
+    public IList<V1alpha1ManagedResourceDefinitionSpecConnectionDetails>? ConnectionDetails { get; set; }
 
     /// <summary>Conversion defines conversion settings for the CRD.</summary>
     [JsonPropertyName("conversion")]
-    public V2alpha1ManagedResourceDefinitionSpecConversion? Conversion { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecConversion? Conversion { get; set; }
 
     /// <summary>Group is the API group of the defined custom resource. The custom resources are served under `/apis/&lt;group&gt;/...`. Must match the name of the CustomResourceDefinition (in the form `&lt;names.plural&gt;.&lt;group&gt;`).</summary>
     [JsonPropertyName("group")]
@@ -256,7 +256,7 @@ public partial class V2alpha1ManagedResourceDefinitionSpec
 
     /// <summary>Names specify the resource and kind names for the custom resource.</summary>
     [JsonPropertyName("names")]
-    public V2alpha1ManagedResourceDefinitionSpecNames Names { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpecNames Names { get; set; }
 
     /// <summary>PreserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/extend-kubernetes/custom-resources/custom-resource-definitions/#field-pruning for details.</summary>
     [JsonPropertyName("preserveUnknownFields")]
@@ -272,12 +272,12 @@ public partial class V2alpha1ManagedResourceDefinitionSpec
 
     /// <summary>Versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA &gt; beta &gt; alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.</summary>
     [JsonPropertyName("versions")]
-    public IList<V2alpha1ManagedResourceDefinitionSpecVersions> Versions { get; set; }
+    public IList<V1alpha1ManagedResourceDefinitionSpecVersions> Versions { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionStatusConditions
+public partial class V1alpha1ManagedResourceDefinitionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -306,19 +306,19 @@ public partial class V2alpha1ManagedResourceDefinitionStatusConditions
 
 /// <summary>ManagedResourceDefinitionStatus shows the observed state of the resource definition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V2alpha1ManagedResourceDefinitionStatus
+public partial class V1alpha1ManagedResourceDefinitionStatus
 {
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V2alpha1ManagedResourceDefinitionStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ManagedResourceDefinitionStatusConditions>? Conditions { get; set; }
 }
 
 /// <summary>A ManagedResourceDefinition defines the schema for a new custom Kubernetes API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V2alpha1ManagedResourceDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V2alpha1ManagedResourceDefinitionSpec>, IStatus<V2alpha1ManagedResourceDefinitionStatus>
+public partial class V1alpha1ManagedResourceDefinition : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ManagedResourceDefinitionSpec>, IStatus<V1alpha1ManagedResourceDefinitionStatus>
 {
-    public const string KubeApiVersion = "v2alpha1";
+    public const string KubeApiVersion = "v1alpha1";
     public const string KubeKind = "ManagedResourceDefinition";
     public const string KubeGroup = "apiextensions.crossplane.io";
     public const string KubePluralName = "managedresourcedefinitions";
@@ -336,19 +336,19 @@ public partial class V2alpha1ManagedResourceDefinition : IKubernetesObject<V1Obj
 
     /// <summary>ManagedResourceDefinitionSpec specifies the desired state of the resource definition.</summary>
     [JsonPropertyName("spec")]
-    public V2alpha1ManagedResourceDefinitionSpec? Spec { get; set; }
+    public V1alpha1ManagedResourceDefinitionSpec? Spec { get; set; }
 
     /// <summary>ManagedResourceDefinitionStatus shows the observed state of the resource definition.</summary>
     [JsonPropertyName("status")]
-    public V2alpha1ManagedResourceDefinitionStatus? Status { get; set; }
+    public V1alpha1ManagedResourceDefinitionStatus? Status { get; set; }
 }
 
 /// <summary>A ManagedResourceDefinition defines the schema for a new custom Kubernetes API.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V2alpha1ManagedResourceDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V2alpha1ManagedResourceDefinition>
+public partial class V1alpha1ManagedResourceDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ManagedResourceDefinition>
 {
-    public const string KubeApiVersion = "v2alpha1";
+    public const string KubeApiVersion = "v1alpha1";
     public const string KubeKind = "ManagedResourceDefinitionList";
     public const string KubeGroup = "apiextensions.crossplane.io";
     public const string KubePluralName = "managedresourcedefinitions";
@@ -366,5 +366,5 @@ public partial class V2alpha1ManagedResourceDefinitionList : IKubernetesObject<V
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V2alpha1ManagedResourceDefinition> Items { get; set; }
+    public IList<V1alpha1ManagedResourceDefinition> Items { get; set; }
 }
