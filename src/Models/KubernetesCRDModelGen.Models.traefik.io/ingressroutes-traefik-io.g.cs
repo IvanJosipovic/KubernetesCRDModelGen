@@ -21,19 +21,23 @@ public partial class V1alpha1IngressRouteSpecRoutesMiddlewares
     public string? Namespace { get; set; }
 }
 
-/// <summary>Observability defines the observability configuration for a router. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#observability</summary>
+/// <summary>Observability defines the observability configuration for a router. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#observability</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesObservability
 {
-    /// <summary></summary>
+    /// <summary>AccessLogs enables access logs for this router.</summary>
     [JsonPropertyName("accessLogs")]
     public bool? AccessLogs { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Metrics enables metrics for this router.</summary>
     [JsonPropertyName("metrics")]
     public bool? Metrics { get; set; }
 
-    /// <summary></summary>
+    /// <summary>TraceVerbosity defines the verbosity level of the tracing for this router.</summary>
+    [JsonPropertyName("traceVerbosity")]
+    public string? TraceVerbosity { get; set; }
+
+    /// <summary>Tracing enables tracing for this router.</summary>
     [JsonPropertyName("tracing")]
     public bool? Tracing { get; set; }
 }
@@ -54,7 +58,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     [JsonPropertyName("hostname")]
     public string? Hostname { get; set; }
 
-    /// <summary>Interval defines the frequency of the health check calls. Default: 30s</summary>
+    /// <summary>Interval defines the frequency of the health check calls for healthy targets. Default: 30s</summary>
     [JsonPropertyName("interval")]
     public IntstrIntOrString? Interval { get; set; }
 
@@ -85,6 +89,10 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesHealthCheck
     /// <summary>Timeout defines the maximum duration Traefik will wait for a health check request before considering the server unhealthy. Default: 5s</summary>
     [JsonPropertyName("timeout")]
     public IntstrIntOrString? Timeout { get; set; }
+
+    /// <summary>UnhealthyInterval defines the frequency of the health check calls for unhealthy targets. When UnhealthyInterval is not defined, it defaults to the Interval value. Default: 30s</summary>
+    [JsonPropertyName("unhealthyInterval")]
+    public IntstrIntOrString? UnhealthyInterval { get; set; }
 }
 
 /// <summary>ResponseForwarding defines how Traefik forwards the response from the upstream Kubernetes Service to the client.</summary>
@@ -129,7 +137,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServicesStickyCookie
     public bool? Secure { get; set; }
 }
 
-/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
+/// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecRoutesServicesSticky
 {
@@ -186,7 +194,7 @@ public partial class V1alpha1IngressRouteSpecRoutesServices
     [JsonPropertyName("serversTransport")]
     public string? ServersTransport { get; set; }
 
-    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/services/#sticky-sessions</summary>
+    /// <summary>Sticky defines the sticky sessions configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#sticky-sessions</summary>
     [JsonPropertyName("sticky")]
     public V1alpha1IngressRouteSpecRoutesServicesSticky? Sticky { get; set; }
 
@@ -207,19 +215,19 @@ public partial class V1alpha1IngressRouteSpecRoutes
     [JsonPropertyName("kind")]
     public string? Kind { get; set; }
 
-    /// <summary>Match defines the router's rule. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#rule</summary>
+    /// <summary>Match defines the router's rule. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rule</summary>
     [JsonPropertyName("match")]
     public string Match { get; set; }
 
-    /// <summary>Middlewares defines the list of references to Middleware resources. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-middleware</summary>
+    /// <summary>Middlewares defines the list of references to Middleware resources. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-middleware</summary>
     [JsonPropertyName("middlewares")]
     public IList<V1alpha1IngressRouteSpecRoutesMiddlewares>? Middlewares { get; set; }
 
-    /// <summary>Observability defines the observability configuration for a router. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#observability</summary>
+    /// <summary>Observability defines the observability configuration for a router. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#observability</summary>
     [JsonPropertyName("observability")]
     public V1alpha1IngressRouteSpecRoutesObservability? Observability { get; set; }
 
-    /// <summary>Priority defines the router's priority. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#priority</summary>
+    /// <summary>Priority defines the router's priority. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#priority</summary>
     [JsonPropertyName("priority")]
     public int? Priority { get; set; }
 
@@ -227,7 +235,7 @@ public partial class V1alpha1IngressRouteSpecRoutes
     [JsonPropertyName("services")]
     public IList<V1alpha1IngressRouteSpecRoutesServices>? Services { get; set; }
 
-    /// <summary>Syntax defines the router's rule syntax. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#rulesyntax Deprecated: Please do not use this field and rewrite the router rules to use the v3 syntax.</summary>
+    /// <summary>Syntax defines the router's rule syntax. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rulesyntax Deprecated: Please do not use this field and rewrite the router rules to use the v3 syntax.</summary>
     [JsonPropertyName("syntax")]
     public string? Syntax { get; set; }
 }
@@ -245,15 +253,15 @@ public partial class V1alpha1IngressRouteSpecTlsDomains
     public IList<string>? Sans { get; set; }
 }
 
-/// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.4/https/tls/#tls-options</summary>
+/// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsOptions
 {
-    /// <summary>Name defines the name of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
+    /// <summary>Name defines the name of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>Namespace defines the namespace of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
+    /// <summary>Namespace defines the namespace of the referenced TLSOption. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-tlsoption</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -262,28 +270,28 @@ public partial class V1alpha1IngressRouteSpecTlsOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTlsStore
 {
-    /// <summary>Name defines the name of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
+    /// <summary>Name defines the name of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>Namespace defines the namespace of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.4/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
+    /// <summary>Namespace defines the namespace of the referenced TLSStore. More info: https://doc.traefik.io/traefik/v3.5/routing/providers/kubernetes-crd/#kind-tlsstore</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
 
-/// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#tls</summary>
+/// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpecTls
 {
-    /// <summary>CertResolver defines the name of the certificate resolver to use. Cert resolvers have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.4/https/acme/#certificate-resolvers</summary>
+    /// <summary>CertResolver defines the name of the certificate resolver to use. Cert resolvers have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.5/https/acme/#certificate-resolvers</summary>
     [JsonPropertyName("certResolver")]
     public string? CertResolver { get; set; }
 
-    /// <summary>Domains defines the list of domains that will be used to issue certificates. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#domains</summary>
+    /// <summary>Domains defines the list of domains that will be used to issue certificates. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#domains</summary>
     [JsonPropertyName("domains")]
     public IList<V1alpha1IngressRouteSpecTlsDomains>? Domains { get; set; }
 
-    /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.4/https/tls/#tls-options</summary>
+    /// <summary>Options defines the reference to a TLSOption, that specifies the parameters of the TLS connection. If not defined, the `default` TLSOption is used. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options</summary>
     [JsonPropertyName("options")]
     public V1alpha1IngressRouteSpecTlsOptions? Options { get; set; }
 
@@ -300,7 +308,7 @@ public partial class V1alpha1IngressRouteSpecTls
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteSpec
 {
-    /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/entrypoints/ Default: all.</summary>
+    /// <summary>EntryPoints defines the list of entry point names to bind to. Entry points have to be configured in the static configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/entrypoints/ Default: all.</summary>
     [JsonPropertyName("entryPoints")]
     public IList<string>? EntryPoints { get; set; }
 
@@ -308,7 +316,7 @@ public partial class V1alpha1IngressRouteSpec
     [JsonPropertyName("routes")]
     public IList<V1alpha1IngressRouteSpecRoutes> Routes { get; set; }
 
-    /// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#tls</summary>
+    /// <summary>TLS defines the TLS configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls</summary>
     [JsonPropertyName("tls")]
     public V1alpha1IngressRouteSpecTls? Tls { get; set; }
 }

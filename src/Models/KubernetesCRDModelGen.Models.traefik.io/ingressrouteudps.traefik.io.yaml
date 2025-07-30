@@ -51,7 +51,7 @@ spec:
 
                   Entry points have to be configured in the static configuration.
 
-                  More info: https://doc.traefik.io/traefik/v3.4/routing/entrypoints/
+                  More info: https://doc.traefik.io/traefik/v3.5/routing/entrypoints/
 
                   Default: all.
                 items:

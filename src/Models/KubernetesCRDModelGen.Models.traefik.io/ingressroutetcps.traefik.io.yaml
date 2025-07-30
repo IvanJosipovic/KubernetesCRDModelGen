@@ -51,7 +51,7 @@ spec:
 
                   Entry points have to be configured in the static configuration.
 
-                  More info: https://doc.traefik.io/traefik/v3.4/routing/entrypoints/
+                  More info: https://doc.traefik.io/traefik/v3.5/routing/entrypoints/
 
                   Default: all.
                 items:
@@ -66,7 +66,7 @@ spec:
                       description: >-
                         Match defines the router's rule.
 
-                        More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#rule_1
+                        More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rule_1
                       type: string
                     middlewares:
                       description: Middlewares defines the list of references to MiddlewareTCP resources.
@@ -87,7 +87,7 @@ spec:
                       description: >-
                         Priority defines the router's priority.
 
-                        More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#priority_1
+                        More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#priority_1
                       maximum: 9223372036854775000
                       type: integer
                     services:
@@ -134,7 +134,7 @@ spec:
                             description: >-
                               ProxyProtocol defines the PROXY protocol configuration.
 
-                              More info: https://doc.traefik.io/traefik/v3.4/routing/services/#proxy-protocol
+                              More info: https://doc.traefik.io/traefik/v3.5/routing/services/#proxy-protocol
                             properties:
                               version:
                                 description: Version defines the PROXY Protocol version to use.
@@ -180,7 +180,7 @@ spec:
                       description: >-
                         Syntax defines the router's rule syntax.
 
-                        More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#rulesyntax_1
+                        More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#rulesyntax_1
 
                         Deprecated: Please do not use this field and rewrite the router rules to use the v3 syntax.
                       enum:
@@ -195,7 +195,7 @@ spec:
                 description: >-
                   TLS defines the TLS configuration on a layer 4 / TCP Route.
 
-                  More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#tls_1
+                  More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#tls_1
                 properties:
                   certResolver:
                     description: >-
@@ -203,13 +203,13 @@ spec:
 
                       Cert resolvers have to be configured in the static configuration.
 
-                      More info: https://doc.traefik.io/traefik/v3.4/https/acme/#certificate-resolvers
+                      More info: https://doc.traefik.io/traefik/v3.5/https/acme/#certificate-resolvers
                     type: string
                   domains:
                     description: >-
                       Domains defines the list of domains that will be used to issue certificates.
 
-                      More info: https://doc.traefik.io/traefik/v3.4/routing/routers/#domains
+                      More info: https://doc.traefik.io/traefik/v3.5/routing/routers/#domains
                     items:
                       description: Domain holds a domain name with SANs.
                       properties:
@@ -229,7 +229,7 @@ spec:
 
                       If not defined, the `default` TLSOption is used.
 
-                      More info: https://doc.traefik.io/traefik/v3.4/https/tls/#tls-options
+                      More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options
                     properties:
                       name:
                         description: Name defines the name of the referenced Traefik resource.

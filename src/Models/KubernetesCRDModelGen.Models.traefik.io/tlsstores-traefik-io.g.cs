@@ -69,7 +69,7 @@ public partial class V1alpha1TLSStoreSpec
     public V1alpha1TLSStoreSpecDefaultGeneratedCert? DefaultGeneratedCert { get; set; }
 }
 
-/// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.4/https/tls/#certificates-stores</summary>
+/// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#certificates-stores</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1TLSStoreSpec>
@@ -95,7 +95,7 @@ public partial class V1alpha1TLSStore : IKubernetesObject<V1ObjectMeta>, ISpec<V
     public V1alpha1TLSStoreSpec Spec { get; set; }
 }
 
-/// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.4/https/tls/#certificates-stores</summary>
+/// <summary>TLSStore is the CRD implementation of a Traefik TLS Store. For the time being, only the TLSStore named default is supported. This means that you cannot have two stores that are named default in different Kubernetes namespaces. More info: https://doc.traefik.io/traefik/v3.5/https/tls/#certificates-stores</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1alpha1TLSStoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TLSStore>
