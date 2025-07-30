@@ -24,11 +24,11 @@ public partial class V1GRPCRouteSpecParentRefs
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>Namespace is the namespace of the referent. When unspecified, this refers to the local namespace of the Route.  Note that there are specific rules for ParentRefs which cross namespace boundaries. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example: Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable any other kind of cross-namespace reference.    Support: Core</summary>
+    /// <summary>Namespace is the namespace of the referent. When unspecified, this refers to the local namespace of the Route.  Note that there are specific rules for ParentRefs which cross namespace boundaries. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example: Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable any other kind of cross-namespace reference.  Support: Core</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Port is the network port this Route targets. It can be interpreted differently based on the type of parent resource.  When the parent resource is a Gateway, this targets all listeners listening on the specified port that also support this kind of Route(and select this Route). It's not recommended to set `Port` unless the networking behaviors specified in a Route must apply to a specific port as opposed to a listener(s) whose port(s) may be changed. When both Port and SectionName are specified, the name and port of the selected listener must match both specified values.    Implementations MAY choose to support other parent resources. Implementations supporting other types of parent resources MUST clearly document how/if Port is interpreted.  For the purpose of status, an attachment is considered successful as long as the parent resource accepts it partially. For example, Gateway listeners can restrict which Routes can attach to them by Route kind, namespace, or hostname. If 1 of 2 Gateway listeners accept attachment from the referencing Route, the Route MUST be considered successfully attached. If no Gateway listeners accept attachment from this Route, the Route MUST be considered detached from the Gateway.  Support: Extended</summary>
+    /// <summary>Port is the network port this Route targets. It can be interpreted differently based on the type of parent resource.  When the parent resource is a Gateway, this targets all listeners listening on the specified port that also support this kind of Route(and select this Route). It's not recommended to set `Port` unless the networking behaviors specified in a Route must apply to a specific port as opposed to a listener(s) whose port(s) may be changed. When both Port and SectionName are specified, the name and port of the selected listener must match both specified values.  Implementations MAY choose to support other parent resources. Implementations supporting other types of parent resources MUST clearly document how/if Port is interpreted.  For the purpose of status, an attachment is considered successful as long as the parent resource accepts it partially. For example, Gateway listeners can restrict which Routes can attach to them by Route kind, namespace, or hostname. If 1 of 2 Gateway listeners accept attachment from the referencing Route, the Route MUST be considered successfully attached. If no Gateway listeners accept attachment from this Route, the Route MUST be considered detached from the Gateway.  Support: Extended</summary>
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 
@@ -58,7 +58,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersExtensionRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierAdd
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -71,7 +71,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifierSet
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -122,20 +122,41 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendR
     public int? Port { get; set; }
 }
 
-/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended  </summary>
+/// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction
+{
+    /// <summary></summary>
+    [JsonPropertyName("denominator")]
+    public int? Denominator { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("numerator")]
+    public int Numerator { get; set; }
+}
+
+/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror
 {
     /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
     [JsonPropertyName("backendRef")]
     public V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorBackendRef BackendRef { get; set; }
+
+    /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+    [JsonPropertyName("fraction")]
+    public V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirrorFraction? Fraction { get; set; }
+
+    /// <summary>Percent represents the percentage of requests that should be mirrored to BackendRef. Its minimum value is 0 (indicating 0% of requests) and its maximum value is 100 (indicating 100% of requests).  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+    [JsonPropertyName("percent")]
+    public int? Percent { get; set; }
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierAdd
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -148,7 +169,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifie
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifierSet
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -186,7 +207,7 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
     [JsonPropertyName("requestHeaderModifier")]
     public V1GRPCRouteSpecRulesBackendRefsFiltersRequestHeaderModifier? RequestHeaderModifier { get; set; }
 
-    /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended  </summary>
+    /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
     [JsonPropertyName("requestMirror")]
     public V1GRPCRouteSpecRulesBackendRefsFiltersRequestMirror? RequestMirror { get; set; }
 
@@ -194,12 +215,12 @@ public partial class V1GRPCRouteSpecRulesBackendRefsFilters
     [JsonPropertyName("responseHeaderModifier")]
     public V1GRPCRouteSpecRulesBackendRefsFiltersResponseHeaderModifier? ResponseHeaderModifier { get; set; }
 
-    /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:  - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.  - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.  - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.  Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.  If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.  </summary>
+    /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:  - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.  - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.  - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.  Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.  If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
 
-/// <summary>GRPCBackendRef defines how a GRPCRoute forwards a gRPC request.  Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.  &lt;gateway:experimental:description&gt;  When the BackendRef points to a Kubernetes Service, implementations SHOULD honor the appProtocol field if it is set for the target Service Port.  Implementations supporting appProtocol SHOULD recognize the Kubernetes Standard Application Protocols defined in KEP-3726.  If a Service appProtocol isn't specified, an implementation MAY infer the backend protocol through its own means. Implementations MAY infer the protocol from the Route type referring to the backend Service.  If a Route is not able to send traffic to the backend using the specified protocol then the backend is considered invalid. Implementations MUST set the "ResolvedRefs" condition to "False" with the "UnsupportedProtocol" reason.  &lt;/gateway:experimental:description&gt;</summary>
+/// <summary>GRPCBackendRef defines how a GRPCRoute forwards a gRPC request.  Note that when a namespace different than the local namespace is specified, a ReferenceGrant object is required in the referent namespace to allow that namespace's owner to accept the reference. See the ReferenceGrant documentation for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesBackendRefs
 {
@@ -253,7 +274,7 @@ public partial class V1GRPCRouteSpecRulesFiltersExtensionRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -266,7 +287,7 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierAdd
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestHeaderModifierSet
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -317,20 +338,41 @@ public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef
     public int? Port { get; set; }
 }
 
-/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended  </summary>
+/// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1GRPCRouteSpecRulesFiltersRequestMirrorFraction
+{
+    /// <summary></summary>
+    [JsonPropertyName("denominator")]
+    public int? Denominator { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("numerator")]
+    public int Numerator { get; set; }
+}
+
+/// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersRequestMirror
 {
     /// <summary>BackendRef references a resource where mirrored requests are sent.  Mirrored requests must be sent only to a single destination endpoint within this BackendRef, irrespective of how many endpoints are present within this BackendRef.  If the referent cannot be found, this BackendRef is invalid and must be dropped from the Gateway. The controller must ensure the "ResolvedRefs" condition on the Route status is set to `status: False` and not configure this backend in the underlying implementation.  If there is a cross-namespace reference to an *existing* object that is not allowed by a ReferenceGrant, the controller must ensure the "ResolvedRefs"  condition on the Route is set to `status: False`, with the "RefNotPermitted" reason and not configure this backend in the underlying implementation.  In either error case, the Message of the `ResolvedRefs` Condition should be used to provide more detail about the problem.  Support: Extended for Kubernetes Service  Support: Implementation-specific for any other resource</summary>
     [JsonPropertyName("backendRef")]
     public V1GRPCRouteSpecRulesFiltersRequestMirrorBackendRef BackendRef { get; set; }
+
+    /// <summary>Fraction represents the fraction of requests that should be mirrored to BackendRef.  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+    [JsonPropertyName("fraction")]
+    public V1GRPCRouteSpecRulesFiltersRequestMirrorFraction? Fraction { get; set; }
+
+    /// <summary>Percent represents the percentage of requests that should be mirrored to BackendRef. Its minimum value is 0 (indicating 0% of requests) and its maximum value is 100 (indicating 100% of requests).  Only one of Fraction or Percent may be specified. If neither field is specified, 100% of requests will be mirrored.</summary>
+    [JsonPropertyName("percent")]
+    public int? Percent { get; set; }
 }
 
 /// <summary>HTTPHeader represents an HTTP Header name and value as defined by RFC 7230.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -343,7 +385,7 @@ public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierAdd
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteSpecRulesFiltersResponseHeaderModifierSet
 {
-    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
+    /// <summary>Name is the name of the HTTP Header to be matched. Name matching MUST be case-insensitive. (See https://tools.ietf.org/html/rfc7230#section-3.2).  If multiple entries specify equivalent header names, the first entry with an equivalent name MUST be considered for a match. Subsequent entries with an equivalent header name MUST be ignored. Due to the case-insensitivity of header names, "foo" and "Foo" are considered equivalent.</summary>
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
@@ -381,7 +423,7 @@ public partial class V1GRPCRouteSpecRulesFilters
     [JsonPropertyName("requestHeaderModifier")]
     public V1GRPCRouteSpecRulesFiltersRequestHeaderModifier? RequestHeaderModifier { get; set; }
 
-    /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended  </summary>
+    /// <summary>RequestMirror defines a schema for a filter that mirrors requests. Requests are sent to the specified destination, but responses from that destination are ignored.  This filter can be used multiple times within the same rule. Note that not all implementations will be able to support mirroring to multiple backends.  Support: Extended</summary>
     [JsonPropertyName("requestMirror")]
     public V1GRPCRouteSpecRulesFiltersRequestMirror? RequestMirror { get; set; }
 
@@ -389,7 +431,7 @@ public partial class V1GRPCRouteSpecRulesFilters
     [JsonPropertyName("responseHeaderModifier")]
     public V1GRPCRouteSpecRulesFiltersResponseHeaderModifier? ResponseHeaderModifier { get; set; }
 
-    /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:  - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.  - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.  - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.  Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.  If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.  </summary>
+    /// <summary>Type identifies the type of filter to apply. As with other API fields, types are classified into three conformance levels:  - Core: Filter types and their corresponding configuration defined by   "Support: Core" in this package, e.g. "RequestHeaderModifier". All   implementations supporting GRPCRoute MUST support core filters.  - Extended: Filter types and their corresponding configuration defined by   "Support: Extended" in this package, e.g. "RequestMirror". Implementers   are encouraged to support extended filters.  - Implementation-specific: Filters that are defined and supported by specific vendors.   In the future, filters showing convergence in behavior across multiple   implementations will be considered for inclusion in extended or core   conformance levels. Filter-specific configuration for such filters   is specified using the ExtensionRef field. `Type` MUST be set to   "ExtensionRef" for custom filters.  Implementers are encouraged to define custom implementation types to extend the core API with implementation-specific behavior.  If a reference to a custom filter type cannot be resolved, the filter MUST NOT be skipped. Instead, requests that would have been processed by that filter MUST receive a HTTP error response.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -449,7 +491,7 @@ public partial class V1GRPCRouteSpecRules
     [JsonPropertyName("backendRefs")]
     public IList<V1GRPCRouteSpecRulesBackendRefs>? BackendRefs { get; set; }
 
-    /// <summary>Filters define the filters that are applied to requests that match this rule.  The effects of ordering of multiple behaviors are currently unspecified. This can change in the future based on feedback during the alpha stage.  Conformance-levels at this level are defined based on the type of filter:  - ALL core filters MUST be supported by all implementations that support   GRPCRoute. - Implementers are encouraged to support extended filters. - Implementation-specific custom filters have no API guarantees across   implementations.  Specifying the same filter multiple times is not supported unless explicitly indicated in the filter.  If an implementation can not support a combination of filters, it must clearly document that limitation. In cases where incompatible or unsupported filters are specified and cause the `Accepted` condition to be set to status `False`, implementations may use the `IncompatibleFilters` reason to specify this configuration error.  Support: Core</summary>
+    /// <summary>Filters define the filters that are applied to requests that match this rule.  The effects of ordering of multiple behaviors are currently unspecified. This can change in the future based on feedback during the alpha stage.  Conformance-levels at this level are defined based on the type of filter:  - ALL core filters MUST be supported by all implementations that support   GRPCRoute. - Implementers are encouraged to support extended filters. - Implementation-specific custom filters have no API guarantees across   implementations.  Specifying the same filter multiple times is not supported unless explicitly indicated in the filter.  If an implementation cannot support a combination of filters, it must clearly document that limitation. In cases where incompatible or unsupported filters are specified and cause the `Accepted` condition to be set to status `False`, implementations may use the `IncompatibleFilters` reason to specify this configuration error.  Support: Core</summary>
     [JsonPropertyName("filters")]
     public IList<V1GRPCRouteSpecRulesFilters>? Filters { get; set; }
 
@@ -466,11 +508,11 @@ public partial class V1GRPCRouteSpec
     [JsonPropertyName("hostnames")]
     public IList<string>? Hostnames { get; set; }
 
-    /// <summary>ParentRefs references the resources (usually Gateways) that a Route wants to be attached to. Note that the referenced parent resource needs to allow this for the attachment to be complete. For Gateways, that means the Gateway needs to allow attachment from Routes of this kind and namespace. For Services, that means the Service must either be in the same namespace for a "producer" route, or the mesh implementation must support and allow "consumer" routes for the referenced Service. ReferenceGrant is not applicable for governing ParentRefs to Services - it is not possible to create a "producer" route for a Service in a different namespace from the Route.  There are two kinds of parent resources with "Core" support:  * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)  This API may be extended in the future to support additional kinds of parent resources.  ParentRefs must be _distinct_. This means either that:  * They select different objects.  If this is the case, then parentRef   entries are distinct. In terms of fields, this means that the   multi-part key defined by `group`, `kind`, `namespace`, and `name` must   be unique across all parentRef entries in the Route. * They do not select different objects, but for each optional field used,   each ParentRef that selects the same object must set the same set of   optional fields to different values. If one ParentRef sets a   combination of optional fields, all must set the same combination.  Some examples:  * If one ParentRef sets `sectionName`, all ParentRefs referencing the   same object must also set `sectionName`. * If one ParentRef sets `port`, all ParentRefs referencing the same   object must also set `port`. * If one ParentRef sets `sectionName` and `port`, all ParentRefs   referencing the same object must also set `sectionName` and `port`.  It is possible to separately reference multiple distinct objects that may be collapsed by an implementation. For example, some implementations may choose to merge compatible Gateway Listeners together. If that is the case, the list of routes attached to those resources should also be merged.  Note that for ParentRefs that cross namespace boundaries, there are specific rules. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example, Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable other kinds of cross-namespace reference.       </summary>
+    /// <summary>ParentRefs references the resources (usually Gateways) that a Route wants to be attached to. Note that the referenced parent resource needs to allow this for the attachment to be complete. For Gateways, that means the Gateway needs to allow attachment from Routes of this kind and namespace. For Services, that means the Service must either be in the same namespace for a "producer" route, or the mesh implementation must support and allow "consumer" routes for the referenced Service. ReferenceGrant is not applicable for governing ParentRefs to Services - it is not possible to create a "producer" route for a Service in a different namespace from the Route.  There are two kinds of parent resources with "Core" support:  * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)  This API may be extended in the future to support additional kinds of parent resources.  ParentRefs must be _distinct_. This means either that:  * They select different objects.  If this is the case, then parentRef   entries are distinct. In terms of fields, this means that the   multi-part key defined by `group`, `kind`, `namespace`, and `name` must   be unique across all parentRef entries in the Route. * They do not select different objects, but for each optional field used,   each ParentRef that selects the same object must set the same set of   optional fields to different values. If one ParentRef sets a   combination of optional fields, all must set the same combination.  Some examples:  * If one ParentRef sets `sectionName`, all ParentRefs referencing the   same object must also set `sectionName`. * If one ParentRef sets `port`, all ParentRefs referencing the same   object must also set `port`. * If one ParentRef sets `sectionName` and `port`, all ParentRefs   referencing the same object must also set `sectionName` and `port`.  It is possible to separately reference multiple distinct objects that may be collapsed by an implementation. For example, some implementations may choose to merge compatible Gateway Listeners together. If that is the case, the list of routes attached to those resources should also be merged.  Note that for ParentRefs that cross namespace boundaries, there are specific rules. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example, Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable other kinds of cross-namespace reference.</summary>
     [JsonPropertyName("parentRefs")]
     public IList<V1GRPCRouteSpecParentRefs>? ParentRefs { get; set; }
 
-    /// <summary>Rules are a list of GRPC matchers, filters and actions.  </summary>
+    /// <summary>Rules are a list of GRPC matchers, filters and actions.</summary>
     [JsonPropertyName("rules")]
     public IList<V1GRPCRouteSpecRules>? Rules { get; set; }
 }
@@ -520,11 +562,11 @@ public partial class V1GRPCRouteStatusParentsParentRef
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>Namespace is the namespace of the referent. When unspecified, this refers to the local namespace of the Route.  Note that there are specific rules for ParentRefs which cross namespace boundaries. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example: Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable any other kind of cross-namespace reference.    Support: Core</summary>
+    /// <summary>Namespace is the namespace of the referent. When unspecified, this refers to the local namespace of the Route.  Note that there are specific rules for ParentRefs which cross namespace boundaries. Cross-namespace references are only valid if they are explicitly allowed by something in the namespace they are referring to. For example: Gateway has the AllowedRoutes field, and ReferenceGrant provides a generic way to enable any other kind of cross-namespace reference.  Support: Core</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Port is the network port this Route targets. It can be interpreted differently based on the type of parent resource.  When the parent resource is a Gateway, this targets all listeners listening on the specified port that also support this kind of Route(and select this Route). It's not recommended to set `Port` unless the networking behaviors specified in a Route must apply to a specific port as opposed to a listener(s) whose port(s) may be changed. When both Port and SectionName are specified, the name and port of the selected listener must match both specified values.    Implementations MAY choose to support other parent resources. Implementations supporting other types of parent resources MUST clearly document how/if Port is interpreted.  For the purpose of status, an attachment is considered successful as long as the parent resource accepts it partially. For example, Gateway listeners can restrict which Routes can attach to them by Route kind, namespace, or hostname. If 1 of 2 Gateway listeners accept attachment from the referencing Route, the Route MUST be considered successfully attached. If no Gateway listeners accept attachment from this Route, the Route MUST be considered detached from the Gateway.  Support: Extended</summary>
+    /// <summary>Port is the network port this Route targets. It can be interpreted differently based on the type of parent resource.  When the parent resource is a Gateway, this targets all listeners listening on the specified port that also support this kind of Route(and select this Route). It's not recommended to set `Port` unless the networking behaviors specified in a Route must apply to a specific port as opposed to a listener(s) whose port(s) may be changed. When both Port and SectionName are specified, the name and port of the selected listener must match both specified values.  Implementations MAY choose to support other parent resources. Implementations supporting other types of parent resources MUST clearly document how/if Port is interpreted.  For the purpose of status, an attachment is considered successful as long as the parent resource accepts it partially. For example, Gateway listeners can restrict which Routes can attach to them by Route kind, namespace, or hostname. If 1 of 2 Gateway listeners accept attachment from the referencing Route, the Route MUST be considered successfully attached. If no Gateway listeners accept attachment from this Route, the Route MUST be considered detached from the Gateway.  Support: Extended</summary>
     [JsonPropertyName("port")]
     public int? Port { get; set; }
 
@@ -537,7 +579,7 @@ public partial class V1GRPCRouteStatusParentsParentRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1GRPCRouteStatusParents
 {
-    /// <summary>Conditions describes the status of the route with respect to the Gateway. Note that the route's availability is also subject to the Gateway's own status conditions and listener status.  If the Route's ParentRef specifies an existing Gateway that supports Routes of this kind AND that Gateway's controller has sufficient access, then that Gateway's controller MUST set the "Accepted" condition on the Route, to indicate whether the route has been accepted or rejected by the Gateway, and why.  A Route MUST be considered "Accepted" if at least one of the Route's rules is implemented by the Gateway.  There are a number of cases where the "Accepted" condition may not be set due to lack of controller visibility, that includes when:  * The Route refers to a non-existent parent. * The Route is of a type that the controller does not support. * The Route is in a namespace the controller does not have access to.</summary>
+    /// <summary>Conditions describes the status of the route with respect to the Gateway. Note that the route's availability is also subject to the Gateway's own status conditions and listener status.  If the Route's ParentRef specifies an existing Gateway that supports Routes of this kind AND that Gateway's controller has sufficient access, then that Gateway's controller MUST set the "Accepted" condition on the Route, to indicate whether the route has been accepted or rejected by the Gateway, and why.  A Route MUST be considered "Accepted" if at least one of the Route's rules is implemented by the Gateway.  There are a number of cases where the "Accepted" condition may not be set due to lack of controller visibility, that includes when:  * The Route refers to a nonexistent parent. * The Route is of a type that the controller does not support. * The Route is in a namespace the controller does not have access to.</summary>
     [JsonPropertyName("conditions")]
     public IList<V1GRPCRouteStatusParentsConditions>? Conditions { get; set; }
 

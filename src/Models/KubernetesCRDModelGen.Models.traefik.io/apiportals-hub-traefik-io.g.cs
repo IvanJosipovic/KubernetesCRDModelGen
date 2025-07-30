@@ -8,6 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>Auth references the APIPortalAuth resource for authentication configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1alpha1APIPortalSpecAuth
+{
+    /// <summary>Name is the name of the APIPortalAuth resource.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
 /// <summary>UI holds the UI customization options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpecUi
@@ -21,6 +30,10 @@ public partial class V1alpha1APIPortalSpecUi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalSpec
 {
+    /// <summary>Auth references the APIPortalAuth resource for authentication configuration.</summary>
+    [JsonPropertyName("auth")]
+    public V1alpha1APIPortalSpecAuth? Auth { get; set; }
+
     /// <summary>Description of the APIPortal.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
