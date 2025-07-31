@@ -136,7 +136,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecForProvider
     [JsonPropertyName("claimsMappingPolicyIdSelector")]
     public V1beta1ClaimsMappingPolicyAssignmentSpecForProviderClaimsMappingPolicyIdSelector? ClaimsMappingPolicyIdSelector { get; set; }
 
-    /// <summary>The object ID of the service principal for the policy assignment. Object ID of the service principal for which to assign the policy</summary>
+    /// <summary>The ID of the service principal for the policy assignment. ID of the service principal for which to assign the policy</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -277,7 +277,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentSpecInitProvider
     [JsonPropertyName("claimsMappingPolicyIdSelector")]
     public V1beta1ClaimsMappingPolicyAssignmentSpecInitProviderClaimsMappingPolicyIdSelector? ClaimsMappingPolicyIdSelector { get; set; }
 
-    /// <summary>The object ID of the service principal for the policy assignment. Object ID of the service principal for which to assign the policy</summary>
+    /// <summary>The ID of the service principal for the policy assignment. ID of the service principal for which to assign the policy</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -434,7 +434,7 @@ public partial class V1beta1ClaimsMappingPolicyAssignmentStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The object ID of the service principal for the policy assignment. Object ID of the service principal for which to assign the policy</summary>
+    /// <summary>The ID of the service principal for the policy assignment. ID of the service principal for which to assign the policy</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 }

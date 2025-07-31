@@ -45,7 +45,7 @@ public partial class V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleL
     [JsonPropertyName("dataStoreType")]
     public string? DataStoreType { get; set; }
 
-    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    /// <summary>The retention duration up to which the backups are to be retained in the data stores. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
@@ -139,10 +139,6 @@ public partial class V1beta1BackupPolicyBlobStorageSpecForProvider
     [JsonPropertyName("operationalDefaultRetentionDuration")]
     public string? OperationalDefaultRetentionDuration { get; set; }
 
-    /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
-    [JsonPropertyName("retentionDuration")]
-    public string? RetentionDuration { get; set; }
-
     /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionRule")]
     public IList<V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRule>? RetentionRule { get; set; }
@@ -205,7 +201,7 @@ public partial class V1beta1BackupPolicyBlobStorageSpecInitProviderRetentionRule
     [JsonPropertyName("dataStoreType")]
     public string? DataStoreType { get; set; }
 
-    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    /// <summary>The retention duration up to which the backups are to be retained in the data stores. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
@@ -242,10 +238,6 @@ public partial class V1beta1BackupPolicyBlobStorageSpecInitProvider
     /// <summary>The duration of operational default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("operationalDefaultRetentionDuration")]
     public string? OperationalDefaultRetentionDuration { get; set; }
-
-    /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
-    [JsonPropertyName("retentionDuration")]
-    public string? RetentionDuration { get; set; }
 
     /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionRule")]
@@ -429,7 +421,7 @@ public partial class V1beta1BackupPolicyBlobStorageStatusAtProviderRetentionRule
     [JsonPropertyName("dataStoreType")]
     public string? DataStoreType { get; set; }
 
-    /// <summary>Duration after which the backup is deleted. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
+    /// <summary>The retention duration up to which the backups are to be retained in the data stores. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
 }
@@ -470,10 +462,6 @@ public partial class V1beta1BackupPolicyBlobStorageStatusAtProvider
     /// <summary>The duration of operational default retention rule. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("operationalDefaultRetentionDuration")]
     public string? OperationalDefaultRetentionDuration { get; set; }
-
-    /// <summary>Duration of deletion after given timespan. It should follow ISO 8601 duration format. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
-    [JsonPropertyName("retentionDuration")]
-    public string? RetentionDuration { get; set; }
 
     /// <summary>One or more retention_rule blocks as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
     [JsonPropertyName("retentionRule")]

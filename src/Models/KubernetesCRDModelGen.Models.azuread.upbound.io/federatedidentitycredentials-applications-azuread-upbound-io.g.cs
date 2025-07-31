@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.applications.azuread.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRefPolicy
+public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -21,9 +21,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRef
+public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -31,12 +31,12 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -47,9 +47,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelector
+public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -61,7 +61,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProviderApplicatio
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
+    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -72,17 +72,13 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProvider
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
 
-    /// <summary>The object ID of the application for which this federated identity credential should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
+    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdRef")]
+    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdRef? ApplicationIdRef { get; set; }
 
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
+    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdSelector")]
+    public V1beta1FederatedIdentityCredentialSpecForProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
     /// <summary>List of audiences that can appear in the external token. This specifies what should be accepted in the aud claim of incoming tokens. List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.</summary>
     [JsonPropertyName("audiences")]
@@ -107,7 +103,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecForProvider
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRefPolicy
+public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -118,9 +114,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRef
+public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -128,12 +124,12 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -144,9 +140,9 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelector
+public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -158,7 +154,7 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProviderApplicati
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
+    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -169,17 +165,13 @@ public partial class V1beta1FederatedIdentityCredentialSpecInitProvider
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
 
-    /// <summary>The object ID of the application for which this federated identity credential should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
+    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdRef")]
+    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdRef? ApplicationIdRef { get; set; }
 
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
+    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdSelector")]
+    public V1beta1FederatedIdentityCredentialSpecInitProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
     /// <summary>List of audiences that can appear in the external token. This specifies what should be accepted in the aud claim of incoming tokens. List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.</summary>
     [JsonPropertyName("audiences")]
@@ -341,10 +333,6 @@ public partial class V1beta1FederatedIdentityCredentialStatusAtProvider
     /// <summary>The resource ID of the application for which this federated identity credential should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this federated identity credential should be created</summary>
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
-
-    /// <summary>The object ID of the application for which this federated identity credential should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
 
     /// <summary>List of audiences that can appear in the external token. This specifies what should be accepted in the aud claim of incoming tokens. List of audiences that can appear in the external token. This specifies what should be accepted in the `aud` claim of incoming tokens.</summary>
     [JsonPropertyName("audiences")]

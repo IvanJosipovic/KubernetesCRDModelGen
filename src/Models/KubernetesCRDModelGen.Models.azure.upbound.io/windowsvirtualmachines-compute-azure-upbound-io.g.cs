@@ -44,7 +44,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnatte
 {
     /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("contentSecretRef")]
-    public V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+    public V1beta1WindowsVirtualMachineSpecForProviderAdditionalUnattendContentContentSecretRef? ContentSecretRef { get; set; }
 
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
@@ -106,7 +106,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderGalleryApplicati
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -200,7 +200,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProviderOsDiskDiffDiskSe
     [JsonPropertyName("option")]
     public string? Option { get; set; }
 
-    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk and ResourceDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk, ResourceDisk and NvmeDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
@@ -489,7 +489,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
     [JsonPropertyName("hotpatchingEnabled")]
     public bool? HotpatchingEnabled { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1WindowsVirtualMachineSpecForProviderIdentity>? Identity { get; set; }
 
@@ -517,7 +517,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
     [JsonPropertyName("networkInterfaceIdsSelector")]
     public V1beta1WindowsVirtualMachineSpecForProviderNetworkInterfaceIdsSelector? NetworkInterfaceIdsSelector { get; set; }
 
-    /// <summary>A os_disk block as defined below.</summary>
+    /// <summary>An os_disk block as defined below.</summary>
     [JsonPropertyName("osDisk")]
     public IList<V1beta1WindowsVirtualMachineSpecForProviderOsDisk>? OsDisk { get; set; }
 
@@ -609,7 +609,7 @@ public partial class V1beta1WindowsVirtualMachineSpecForProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 
@@ -639,13 +639,51 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalCapab
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnattendContentContentSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnattendContent
 {
+    /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("contentSecretRef")]
+    public V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
     public string? Setting { get; set; }
+}
+
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineSpecInitProviderAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -686,7 +724,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderGalleryApplicat
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -780,7 +818,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProviderOsDiskDiffDiskS
     [JsonPropertyName("option")]
     public string? Option { get; set; }
 
-    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk and ResourceDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk, ResourceDisk and NvmeDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
@@ -937,6 +975,10 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProvider
     [JsonPropertyName("additionalUnattendContent")]
     public IList<V1beta1WindowsVirtualMachineSpecInitProviderAdditionalUnattendContent>? AdditionalUnattendContent { get; set; }
 
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1WindowsVirtualMachineSpecInitProviderAdminPasswordSecretRef AdminPasswordSecretRef { get; set; }
+
     /// <summary>The username of the local administrator used for the Virtual Machine. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
     public string? AdminUsername { get; set; }
@@ -1009,7 +1051,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProvider
     [JsonPropertyName("hotpatchingEnabled")]
     public bool? HotpatchingEnabled { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1WindowsVirtualMachineSpecInitProviderIdentity>? Identity { get; set; }
 
@@ -1037,7 +1079,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProvider
     [JsonPropertyName("networkInterfaceIdsSelector")]
     public V1beta1WindowsVirtualMachineSpecInitProviderNetworkInterfaceIdsSelector? NetworkInterfaceIdsSelector { get; set; }
 
-    /// <summary>A os_disk block as defined below.</summary>
+    /// <summary>An os_disk block as defined below.</summary>
     [JsonPropertyName("osDisk")]
     public IList<V1beta1WindowsVirtualMachineSpecInitProviderOsDisk>? OsDisk { get; set; }
 
@@ -1117,7 +1159,7 @@ public partial class V1beta1WindowsVirtualMachineSpecInitProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 
@@ -1309,7 +1351,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderGalleryApplicat
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -1355,7 +1397,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDiskDiffDiskS
     [JsonPropertyName("option")]
     public string? Option { get; set; }
 
-    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk and ResourceDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies where to store the Ephemeral Disk. Possible values are CacheDisk, ResourceDisk and NvmeDisk. Defaults to CacheDisk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("placement")]
     public string? Placement { get; set; }
 }
@@ -1379,6 +1421,10 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProviderOsDisk
     /// <summary>The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
+
+    /// <summary>The ID of the OS disk.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
 
     /// <summary>The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
@@ -1584,7 +1630,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1WindowsVirtualMachineStatusAtProviderIdentity>? Identity { get; set; }
 
@@ -1604,7 +1650,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProvider
     [JsonPropertyName("networkInterfaceIds")]
     public IList<string>? NetworkInterfaceIds { get; set; }
 
-    /// <summary>A os_disk block as defined below.</summary>
+    /// <summary>An os_disk block as defined below.</summary>
     [JsonPropertyName("osDisk")]
     public IList<V1beta1WindowsVirtualMachineStatusAtProviderOsDisk>? OsDisk { get; set; }
 
@@ -1708,7 +1754,7 @@ public partial class V1beta1WindowsVirtualMachineStatusAtProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 

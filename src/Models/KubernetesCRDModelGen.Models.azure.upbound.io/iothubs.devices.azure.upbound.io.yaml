@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: iothubs.devices.azure.upbound.io
 spec:
   group: devices.azure.upbound.io
@@ -1146,10 +1146,10 @@ spec:
                         type: number
                     type: object
                   eventHubPartitionCount:
-                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128.
+                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128. Defaults to 4.
                     type: number
                   eventHubRetentionInDays:
-                    description: The event hub retention to use in days. Must be between 1 and 7.
+                    description: The event hub retention to use in days. Must be between 1 and 7. Defaults to 1.
                     type: number
                   fileUpload:
                     description: A file_upload block as defined below.
@@ -1402,10 +1402,10 @@ spec:
                         type: number
                     type: object
                   eventHubPartitionCount:
-                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128.
+                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128. Defaults to 4.
                     type: number
                   eventHubRetentionInDays:
-                    description: The event hub retention to use in days. Must be between 1 and 7.
+                    description: The event hub retention to use in days. Must be between 1 and 7. Defaults to 1.
                     type: number
                   fileUpload:
                     description: A file_upload block as defined below.
@@ -1841,10 +1841,10 @@ spec:
                     description: The EventHub compatible path for operational data
                     type: string
                   eventHubPartitionCount:
-                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128.
+                    description: The number of device-to-cloud partitions used by backing event hubs. Must be between 2 and 128. Defaults to 4.
                     type: number
                   eventHubRetentionInDays:
-                    description: The event hub retention to use in days. Must be between 1 and 7.
+                    description: The event hub retention to use in days. Must be between 1 and 7. Defaults to 1.
                     type: number
                   fallbackRoute:
                     description: A fallback_route block as defined below. If the fallback route is enabled, messages that don't match any of the supplied routes are automatically sent to this route. Defaults to messages/events.
@@ -1853,7 +1853,7 @@ spec:
                         description: 'The condition that is evaluated to apply the routing rule. Defaults to true. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language.'
                         type: string
                       enabled:
-                        description: Used to specify whether the fallback route is enabled.
+                        description: Used to specify whether the fallback route is enabled. Defaults to true.
                         type: boolean
                       endpointNames:
                         description: The endpoints to which messages that satisfy the condition are routed. Currently only 1 endpoint is allowed.

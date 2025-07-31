@@ -68,7 +68,7 @@ public partial class V1beta1IntegrationRuntimeAzureSpecForProviderDataFactoryIdS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSpecForProvider
 {
-    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.</summary>
+    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.</summary>
     [JsonPropertyName("cleanupEnabled")]
     public bool? CleanupEnabled { get; set; }
 
@@ -113,7 +113,7 @@ public partial class V1beta1IntegrationRuntimeAzureSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureSpecInitProvider
 {
-    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.</summary>
+    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.</summary>
     [JsonPropertyName("cleanupEnabled")]
     public bool? CleanupEnabled { get; set; }
 
@@ -278,7 +278,7 @@ public partial class V1beta1IntegrationRuntimeAzureSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationRuntimeAzureStatusAtProvider
 {
-    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.</summary>
+    /// <summary>Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.</summary>
     [JsonPropertyName("cleanupEnabled")]
     public bool? CleanupEnabled { get; set; }
 

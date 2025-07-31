@@ -253,14 +253,6 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("enableAcceleratedNetworking")]
-    public bool? EnableAcceleratedNetworking { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enableIpForwarding")]
-    public bool? EnableIpForwarding { get; set; }
-
     /// <summary>The (relative) DNS Name used for internal communications between Virtual Machines in the same Virtual Network.</summary>
     [JsonPropertyName("internalDnsNameLabel")]
     public string? InternalDnsNameLabel { get; set; }
@@ -483,14 +475,6 @@ public partial class V1beta1NetworkInterfaceSpecInitProvider
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("enableAcceleratedNetworking")]
-    public bool? EnableAcceleratedNetworking { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enableIpForwarding")]
-    public bool? EnableIpForwarding { get; set; }
-
     /// <summary>The (relative) DNS Name used for internal communications between Virtual Machines in the same Virtual Network.</summary>
     [JsonPropertyName("internalDnsNameLabel")]
     public string? InternalDnsNameLabel { get; set; }
@@ -708,14 +692,6 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     /// <summary>Specifies the Edge Zone within the Azure Region where this Network Interface should exist. Changing this forces a new Network Interface to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enableAcceleratedNetworking")]
-    public bool? EnableAcceleratedNetworking { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enableIpForwarding")]
-    public bool? EnableIpForwarding { get; set; }
 
     /// <summary>The ID of the Network Interface.</summary>
     [JsonPropertyName("id")]

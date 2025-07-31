@@ -179,10 +179,6 @@ public partial class V1beta1ComputeInstanceSpecForProvider
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
 
-    /// <summary>The Azure Region where the Machine Learning Compute Instance should exist. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
-    [JsonPropertyName("location")]
-    public string? Location { get; set; }
-
     /// <summary>The ID of the Machine Learning Workspace. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
     [JsonPropertyName("machineLearningWorkspaceId")]
     public string? MachineLearningWorkspaceId { get; set; }
@@ -338,10 +334,6 @@ public partial class V1beta1ComputeInstanceSpecInitProvider
     /// <summary>Whether local authentication methods is enabled. Defaults to true. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
-
-    /// <summary>The Azure Region where the Machine Learning Compute Instance should exist. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
-    [JsonPropertyName("location")]
-    public string? Location { get; set; }
 
     /// <summary>Whether the compute instance will have a public ip. To set this to false a subnet_resource_id needs to be set. Defaults to true. Changing this forces a new Machine Learning Compute Cluster to be created.</summary>
     [JsonPropertyName("nodePublicIpEnabled")]
@@ -582,10 +574,6 @@ public partial class V1beta1ComputeInstanceStatusAtProvider
     /// <summary>Whether local authentication methods is enabled. Defaults to true. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
-
-    /// <summary>The Azure Region where the Machine Learning Compute Instance should exist. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
-    [JsonPropertyName("location")]
-    public string? Location { get; set; }
 
     /// <summary>The ID of the Machine Learning Workspace. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
     [JsonPropertyName("machineLearningWorkspaceId")]

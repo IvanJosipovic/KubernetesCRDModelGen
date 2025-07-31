@@ -64,9 +64,82 @@ public partial class V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelecto
     public V1beta1LinkedServiceSFTPSpecForProviderDataFactoryIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPassword
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the password.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPrivateKeyContentBase64
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the Base64 encoded SSH private key.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPrivateKeyPassphrase
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the SSH private key passphrase.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>Password to log on to the SFTP Server for Basic Authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceSFTPSpecForProviderPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Base64 encoded private key content in OpenSSH format used to log on to the SFTP server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecForProviderPrivateKeyContentBase64SecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The passphrase for the private key if the key is encrypted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecForProviderPrivateKeyPassphraseSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -93,7 +166,7 @@ public partial class V1beta1LinkedServiceSFTPSpecForProvider
     [JsonPropertyName("annotations")]
     public IList<string>? Annotations { get; set; }
 
-    /// <summary>The type of authentication used to connect to the web table source. Valid options are Anonymous, Basic and ClientCertificate.</summary>
+    /// <summary>The type of authentication used to connect to the SFTP server. Valid options are MultiFactor, Basic and SshPublicKey.</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
@@ -121,21 +194,45 @@ public partial class V1beta1LinkedServiceSFTPSpecForProvider
     [JsonPropertyName("hostKeyFingerprint")]
     public string? HostKeyFingerprint { get; set; }
 
-    /// <summary>The integration runtime reference to associate with the Data Factory Linked Service.</summary>
+    /// <summary>The name of the integration runtime to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("integrationRuntimeName")]
     public string? IntegrationRuntimeName { get; set; }
+
+    /// <summary>A key_vault_password block as defined below.</summary>
+    [JsonPropertyName("keyVaultPassword")]
+    public IList<V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPassword>? KeyVaultPassword { get; set; }
+
+    /// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyContentBase64")]
+    public V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPrivateKeyContentBase64? KeyVaultPrivateKeyContentBase64 { get; set; }
+
+    /// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyPassphrase")]
+    public V1beta1LinkedServiceSFTPSpecForProviderKeyVaultPrivateKeyPassphrase? KeyVaultPrivateKeyPassphrase { get; set; }
 
     /// <summary>A map of parameters to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
+    /// <summary>Password to log on to the SFTP Server for Basic Authentication.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1LinkedServiceSFTPSpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>The Base64 encoded private key content in OpenSSH format used to log on to the SFTP server.</summary>
+    [JsonPropertyName("privateKeyContentBase64SecretRef")]
+    public V1beta1LinkedServiceSFTPSpecForProviderPrivateKeyContentBase64SecretRef? PrivateKeyContentBase64SecretRef { get; set; }
+
+    /// <summary>The passphrase for the private key if the key is encrypted.</summary>
+    [JsonPropertyName("privateKeyPassphraseSecretRef")]
+    public V1beta1LinkedServiceSFTPSpecForProviderPrivateKeyPassphraseSecretRef? PrivateKeyPassphraseSecretRef { get; set; }
+
+    /// <summary>The absolute path to the private key file that the self-hosted integration runtime can access.</summary>
+    [JsonPropertyName("privateKeyPath")]
+    public string? PrivateKeyPath { get; set; }
 
     /// <summary>Whether to validate host key fingerprint while connecting. If set to false, host_key_fingerprint must also be set.</summary>
     [JsonPropertyName("skipHostKeyValidation")]
@@ -146,9 +243,82 @@ public partial class V1beta1LinkedServiceSFTPSpecForProvider
     public string? Username { get; set; }
 }
 
-/// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPassword
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the password.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPrivateKeyContentBase64
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the Base64 encoded SSH private key.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPrivateKeyPassphrase
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the SSH private key passphrase.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>Password to log on to the SFTP Server for Basic Authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceSFTPSpecInitProviderPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Base64 encoded private key content in OpenSSH format used to log on to the SFTP server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecInitProviderPrivateKeyContentBase64SecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The passphrase for the private key if the key is encrypted.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPSpecInitProviderPrivateKeyPassphraseSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -175,7 +345,7 @@ public partial class V1beta1LinkedServiceSFTPSpecInitProvider
     [JsonPropertyName("annotations")]
     public IList<string>? Annotations { get; set; }
 
-    /// <summary>The type of authentication used to connect to the web table source. Valid options are Anonymous, Basic and ClientCertificate.</summary>
+    /// <summary>The type of authentication used to connect to the SFTP server. Valid options are MultiFactor, Basic and SshPublicKey.</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
@@ -191,21 +361,45 @@ public partial class V1beta1LinkedServiceSFTPSpecInitProvider
     [JsonPropertyName("hostKeyFingerprint")]
     public string? HostKeyFingerprint { get; set; }
 
-    /// <summary>The integration runtime reference to associate with the Data Factory Linked Service.</summary>
+    /// <summary>The name of the integration runtime to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("integrationRuntimeName")]
     public string? IntegrationRuntimeName { get; set; }
+
+    /// <summary>A key_vault_password block as defined below.</summary>
+    [JsonPropertyName("keyVaultPassword")]
+    public IList<V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPassword>? KeyVaultPassword { get; set; }
+
+    /// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyContentBase64")]
+    public V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPrivateKeyContentBase64? KeyVaultPrivateKeyContentBase64 { get; set; }
+
+    /// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyPassphrase")]
+    public V1beta1LinkedServiceSFTPSpecInitProviderKeyVaultPrivateKeyPassphrase? KeyVaultPrivateKeyPassphrase { get; set; }
 
     /// <summary>A map of parameters to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>Password to logon to the SFTP Server for Basic Authentication.</summary>
+    /// <summary>Password to log on to the SFTP Server for Basic Authentication.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1LinkedServiceSFTPSpecInitProviderPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1LinkedServiceSFTPSpecInitProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>The Base64 encoded private key content in OpenSSH format used to log on to the SFTP server.</summary>
+    [JsonPropertyName("privateKeyContentBase64SecretRef")]
+    public V1beta1LinkedServiceSFTPSpecInitProviderPrivateKeyContentBase64SecretRef? PrivateKeyContentBase64SecretRef { get; set; }
+
+    /// <summary>The passphrase for the private key if the key is encrypted.</summary>
+    [JsonPropertyName("privateKeyPassphraseSecretRef")]
+    public V1beta1LinkedServiceSFTPSpecInitProviderPrivateKeyPassphraseSecretRef? PrivateKeyPassphraseSecretRef { get; set; }
+
+    /// <summary>The absolute path to the private key file that the self-hosted integration runtime can access.</summary>
+    [JsonPropertyName("privateKeyPath")]
+    public string? PrivateKeyPath { get; set; }
 
     /// <summary>Whether to validate host key fingerprint while connecting. If set to false, host_key_fingerprint must also be set.</summary>
     [JsonPropertyName("skipHostKeyValidation")]
@@ -350,6 +544,45 @@ public partial class V1beta1LinkedServiceSFTPSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPassword
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the password.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPrivateKeyContentBase64
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the Base64 encoded SSH private key.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPrivateKeyPassphrase
+{
+    /// <summary>Specifies the name of an existing Key Vault Data Factory Linked Service.</summary>
+    [JsonPropertyName("linkedServiceName")]
+    public string? LinkedServiceName { get; set; }
+
+    /// <summary>Specifies the name of the secret containing the SSH private key passphrase.</summary>
+    [JsonPropertyName("secretName")]
+    public string? SecretName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceSFTPStatusAtProvider
 {
     /// <summary>A map of additional properties to associate with the Data Factory Linked Service.</summary>
@@ -360,7 +593,7 @@ public partial class V1beta1LinkedServiceSFTPStatusAtProvider
     [JsonPropertyName("annotations")]
     public IList<string>? Annotations { get; set; }
 
-    /// <summary>The type of authentication used to connect to the web table source. Valid options are Anonymous, Basic and ClientCertificate.</summary>
+    /// <summary>The type of authentication used to connect to the SFTP server. Valid options are MultiFactor, Basic and SshPublicKey.</summary>
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
@@ -384,9 +617,21 @@ public partial class V1beta1LinkedServiceSFTPStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The integration runtime reference to associate with the Data Factory Linked Service.</summary>
+    /// <summary>The name of the integration runtime to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("integrationRuntimeName")]
     public string? IntegrationRuntimeName { get; set; }
+
+    /// <summary>A key_vault_password block as defined below.</summary>
+    [JsonPropertyName("keyVaultPassword")]
+    public IList<V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPassword>? KeyVaultPassword { get; set; }
+
+    /// <summary>A key_vault_private_key_content_base64 block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyContentBase64")]
+    public V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPrivateKeyContentBase64? KeyVaultPrivateKeyContentBase64 { get; set; }
+
+    /// <summary>A key_vault_private_key_passphrase block as defined below.</summary>
+    [JsonPropertyName("keyVaultPrivateKeyPassphrase")]
+    public V1beta1LinkedServiceSFTPStatusAtProviderKeyVaultPrivateKeyPassphrase? KeyVaultPrivateKeyPassphrase { get; set; }
 
     /// <summary>A map of parameters to associate with the Data Factory Linked Service.</summary>
     [JsonPropertyName("parameters")]
@@ -395,6 +640,10 @@ public partial class V1beta1LinkedServiceSFTPStatusAtProvider
     /// <summary>The TCP port number that the SFTP server uses to listen for client connection. Default value is 22.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>The absolute path to the private key file that the self-hosted integration runtime can access.</summary>
+    [JsonPropertyName("privateKeyPath")]
+    public string? PrivateKeyPath { get; set; }
 
     /// <summary>Whether to validate host key fingerprint while connecting. If set to false, host_key_fingerprint must also be set.</summary>
     [JsonPropertyName("skipHostKeyValidation")]

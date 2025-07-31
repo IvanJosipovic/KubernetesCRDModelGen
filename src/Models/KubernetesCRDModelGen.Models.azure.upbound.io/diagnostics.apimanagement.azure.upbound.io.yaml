@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: diagnostics.apimanagement.azure.upbound.io
 spec:
   group: apimanagement.azure.upbound.io
@@ -1769,7 +1769,7 @@ spec:
                     description: Log client IP address.
                     type: boolean
                   operationNameFormat:
-                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url. Defaults to Name.
+                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url.
                     type: string
                   resourceGroupName:
                     description: The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.
@@ -2152,7 +2152,7 @@ spec:
                     description: Log client IP address.
                     type: boolean
                   operationNameFormat:
-                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url. Defaults to Name.
+                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url.
                     type: string
                   samplingPercentage:
                     description: Sampling (%). For high traffic APIs, please read this documentation to understand performance implications and log sampling. Valid values are between 0.0 and 100.0.
@@ -2557,7 +2557,7 @@ spec:
                     description: Log client IP address.
                     type: boolean
                   operationNameFormat:
-                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url. Defaults to Name.
+                    description: The format of the Operation Name for Application Insights telemetries. Possible values are Name, and Url.
                     type: string
                   resourceGroupName:
                     description: The Name of the Resource Group where the API Management Service exists. Changing this forces a new resource to be created.

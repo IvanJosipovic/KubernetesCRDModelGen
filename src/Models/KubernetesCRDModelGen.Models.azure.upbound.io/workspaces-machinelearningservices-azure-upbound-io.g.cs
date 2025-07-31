@@ -761,11 +761,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("primaryUserAssignedIdentitySelector")]
     public V1beta1WorkspaceSpecForProviderPrimaryUserAssignedIdentitySelector? PrimaryUserAssignedIdentitySelector { get; set; }
 
-    /// <summary>Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("publicAccessBehindVirtualNetworkEnabled")]
-    public bool? PublicAccessBehindVirtualNetworkEnabled { get; set; }
-
-    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet.</summary>
+    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
@@ -1507,11 +1503,7 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("primaryUserAssignedIdentitySelector")]
     public V1beta1WorkspaceSpecInitProviderPrimaryUserAssignedIdentitySelector? PrimaryUserAssignedIdentitySelector { get; set; }
 
-    /// <summary>Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("publicAccessBehindVirtualNetworkEnabled")]
-    public bool? PublicAccessBehindVirtualNetworkEnabled { get; set; }
-
-    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet.</summary>
+    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
@@ -1821,11 +1813,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("primaryUserAssignedIdentity")]
     public string? PrimaryUserAssignedIdentity { get; set; }
 
-    /// <summary>Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("publicAccessBehindVirtualNetworkEnabled")]
-    public bool? PublicAccessBehindVirtualNetworkEnabled { get; set; }
-
-    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet.</summary>
+    /// <summary>Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 

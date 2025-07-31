@@ -126,6 +126,10 @@ public partial class V1beta1ExpressRouteCircuitSpecForProvider
     [JsonPropertyName("peeringLocation")]
     public string? PeeringLocation { get; set; }
 
+    /// <summary>Enable rate limiting for the circuit. Only works with ExpressRoute Ports. Defaults to false.</summary>
+    [JsonPropertyName("rateLimitingEnabled")]
+    public bool? RateLimitingEnabled { get; set; }
+
     /// <summary>The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -151,6 +155,23 @@ public partial class V1beta1ExpressRouteCircuitSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>The authorization key. This can be used to set up an ExpressRoute Circuit with an ExpressRoute Port from another subscription.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExpressRouteCircuitSpecInitProviderAuthorizationKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRouteCircuitSpecInitProviderSku
@@ -172,6 +193,10 @@ public partial class V1beta1ExpressRouteCircuitSpecInitProvider
     [JsonPropertyName("allowClassicOperations")]
     public bool? AllowClassicOperations { get; set; }
 
+    /// <summary>The authorization key. This can be used to set up an ExpressRoute Circuit with an ExpressRoute Port from another subscription.</summary>
+    [JsonPropertyName("authorizationKeySecretRef")]
+    public V1beta1ExpressRouteCircuitSpecInitProviderAuthorizationKeySecretRef? AuthorizationKeySecretRef { get; set; }
+
     /// <summary>The bandwidth in Gbps of the circuit being created on the Express Route Port.</summary>
     [JsonPropertyName("bandwidthInGbps")]
     public double? BandwidthInGbps { get; set; }
@@ -191,6 +216,10 @@ public partial class V1beta1ExpressRouteCircuitSpecInitProvider
     /// <summary>The name of the peering location and not the Azure resource location. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("peeringLocation")]
     public string? PeeringLocation { get; set; }
+
+    /// <summary>Enable rate limiting for the circuit. Only works with ExpressRoute Ports. Defaults to false.</summary>
+    [JsonPropertyName("rateLimitingEnabled")]
+    public bool? RateLimitingEnabled { get; set; }
 
     /// <summary>The name of the ExpressRoute Service Provider. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serviceProviderName")]
@@ -381,6 +410,10 @@ public partial class V1beta1ExpressRouteCircuitStatusAtProvider
     /// <summary>The name of the peering location and not the Azure resource location. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("peeringLocation")]
     public string? PeeringLocation { get; set; }
+
+    /// <summary>Enable rate limiting for the circuit. Only works with ExpressRoute Ports. Defaults to false.</summary>
+    [JsonPropertyName("rateLimitingEnabled")]
+    public bool? RateLimitingEnabled { get; set; }
 
     /// <summary>The name of the resource group in which to create the ExpressRoute circuit. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

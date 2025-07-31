@@ -25,6 +25,31 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderAdministratorLogi
     public string Namespace { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLManagedInstanceSpecForProviderAzureActiveDirectoryAdministrator
+{
+    /// <summary>Specifies whether only Azure AD authentication can be used to log in to this SQL Managed Instance. When true, the administrator_login and administrator_login_password properties can be omitted. Defaults to false.</summary>
+    [JsonPropertyName("azureadAuthenticationOnlyEnabled")]
+    public bool? AzureadAuthenticationOnlyEnabled { get; set; }
+
+    /// <summary>The login username of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("loginUsername")]
+    public string? LoginUsername { get; set; }
+
+    /// <summary>The object id of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("objectId")]
+    public string? ObjectId { get; set; }
+
+    /// <summary>The principal type of the Azure AD Administrator of this SQL Managed Instance. Possible values are Application, Group, User.</summary>
+    [JsonPropertyName("principalType")]
+    public string? PrincipalType { get; set; }
+
+    /// <summary>The tenant id of the Azure AD Administrator of this SQL Managed Instance. Should be specified if the Azure AD Administrator is homed in a different tenant to the SQL Managed Instance.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdRefPolicy
@@ -85,11 +110,11 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecForProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type is set to UserAssigned.</summary>
+    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type includes UserAssigned.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -218,9 +243,17 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     [JsonPropertyName("administratorLoginPasswordSecretRef")]
     public V1beta1MSSQLManagedInstanceSpecForProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
 
+    /// <summary>An azure_active_directory_administrator block as defined below.</summary>
+    [JsonPropertyName("azureActiveDirectoryAdministrator")]
+    public IList<V1beta1MSSQLManagedInstanceSpecForProviderAzureActiveDirectoryAdministrator>? AzureActiveDirectoryAdministrator { get; set; }
+
     /// <summary>Specifies how the SQL Managed Instance will be collated. Default value is SQL_Latin1_General_CP1_CI_AS. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
+
+    /// <summary>Specifies the internal format of the SQL Managed Instance databases specific to the SQL engine version. Possible values are AlwaysUpToDate and SQLServer2022. Defaults to SQLServer2022.</summary>
+    [JsonPropertyName("databaseFormat")]
+    public string? DatabaseFormat { get; set; }
 
     /// <summary>The ID of the SQL Managed Instance which will share the DNS zone. This is a prerequisite for creating an azurerm_sql_managed_instance_failover_group. Setting this after creation forces a new resource to be created.</summary>
     [JsonPropertyName("dnsZonePartnerId")]
@@ -233,6 +266,10 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     /// <summary>Selector for a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
     [JsonPropertyName("dnsZonePartnerIdSelector")]
     public V1beta1MSSQLManagedInstanceSpecForProviderDnsZonePartnerIdSelector? DnsZonePartnerIdSelector { get; set; }
+
+    /// <summary>Specifies the hybrid secondary usage for disaster recovery of the SQL Managed Instance. Possible values are Active and Passive. Defaults to Active.</summary>
+    [JsonPropertyName("hybridSecondaryUsage")]
+    public string? HybridSecondaryUsage { get; set; }
 
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
@@ -274,11 +311,15 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1MSSQLManagedInstanceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
+    /// <summary>The service principal type. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("servicePrincipalType")]
+    public string? ServicePrincipalType { get; set; }
+
     /// <summary>Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.</summary>
+    /// <summary>Specifies the storage account type used to store backups for this database. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 
@@ -286,7 +327,7 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     [JsonPropertyName("storageSizeInGb")]
     public double? StorageSizeInGb { get; set; }
 
-    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -313,6 +354,48 @@ public partial class V1beta1MSSQLManagedInstanceSpecForProvider
     /// <summary>Specifies whether or not the SQL Managed Instance is zone redundant. Defaults to false.</summary>
     [JsonPropertyName("zoneRedundantEnabled")]
     public bool? ZoneRedundantEnabled { get; set; }
+}
+
+/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLManagedInstanceSpecInitProviderAzureActiveDirectoryAdministrator
+{
+    /// <summary>Specifies whether only Azure AD authentication can be used to log in to this SQL Managed Instance. When true, the administrator_login and administrator_login_password properties can be omitted. Defaults to false.</summary>
+    [JsonPropertyName("azureadAuthenticationOnlyEnabled")]
+    public bool? AzureadAuthenticationOnlyEnabled { get; set; }
+
+    /// <summary>The login username of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("loginUsername")]
+    public string? LoginUsername { get; set; }
+
+    /// <summary>The object id of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("objectId")]
+    public string? ObjectId { get; set; }
+
+    /// <summary>The principal type of the Azure AD Administrator of this SQL Managed Instance. Possible values are Application, Group, User.</summary>
+    [JsonPropertyName("principalType")]
+    public string? PrincipalType { get; set; }
+
+    /// <summary>The tenant id of the Azure AD Administrator of this SQL Managed Instance. Should be specified if the Azure AD Administrator is homed in a different tenant to the SQL Managed Instance.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -375,11 +458,11 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerId
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceSpecInitProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type is set to UserAssigned.</summary>
+    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type includes UserAssigned.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -448,9 +531,21 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
+    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy</summary>
+    [JsonPropertyName("administratorLoginPasswordSecretRef")]
+    public V1beta1MSSQLManagedInstanceSpecInitProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
+
+    /// <summary>An azure_active_directory_administrator block as defined below.</summary>
+    [JsonPropertyName("azureActiveDirectoryAdministrator")]
+    public IList<V1beta1MSSQLManagedInstanceSpecInitProviderAzureActiveDirectoryAdministrator>? AzureActiveDirectoryAdministrator { get; set; }
+
     /// <summary>Specifies how the SQL Managed Instance will be collated. Default value is SQL_Latin1_General_CP1_CI_AS. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
+
+    /// <summary>Specifies the internal format of the SQL Managed Instance databases specific to the SQL engine version. Possible values are AlwaysUpToDate and SQLServer2022. Defaults to SQLServer2022.</summary>
+    [JsonPropertyName("databaseFormat")]
+    public string? DatabaseFormat { get; set; }
 
     /// <summary>The ID of the SQL Managed Instance which will share the DNS zone. This is a prerequisite for creating an azurerm_sql_managed_instance_failover_group. Setting this after creation forces a new resource to be created.</summary>
     [JsonPropertyName("dnsZonePartnerId")]
@@ -463,6 +558,10 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
     /// <summary>Selector for a MSSQLManagedInstance in sql to populate dnsZonePartnerId.</summary>
     [JsonPropertyName("dnsZonePartnerIdSelector")]
     public V1beta1MSSQLManagedInstanceSpecInitProviderDnsZonePartnerIdSelector? DnsZonePartnerIdSelector { get; set; }
+
+    /// <summary>Specifies the hybrid secondary usage for disaster recovery of the SQL Managed Instance. Possible values are Active and Passive. Defaults to Active.</summary>
+    [JsonPropertyName("hybridSecondaryUsage")]
+    public string? HybridSecondaryUsage { get; set; }
 
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
@@ -492,11 +591,15 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
     [JsonPropertyName("publicDataEndpointEnabled")]
     public bool? PublicDataEndpointEnabled { get; set; }
 
+    /// <summary>The service principal type. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("servicePrincipalType")]
+    public string? ServicePrincipalType { get; set; }
+
     /// <summary>Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.</summary>
+    /// <summary>Specifies the storage account type used to store backups for this database. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 
@@ -504,7 +607,7 @@ public partial class V1beta1MSSQLManagedInstanceSpecInitProvider
     [JsonPropertyName("storageSizeInGb")]
     public double? StorageSizeInGb { get; set; }
 
-    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -667,9 +770,34 @@ public partial class V1beta1MSSQLManagedInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLManagedInstanceStatusAtProviderAzureActiveDirectoryAdministrator
+{
+    /// <summary>Specifies whether only Azure AD authentication can be used to log in to this SQL Managed Instance. When true, the administrator_login and administrator_login_password properties can be omitted. Defaults to false.</summary>
+    [JsonPropertyName("azureadAuthenticationOnlyEnabled")]
+    public bool? AzureadAuthenticationOnlyEnabled { get; set; }
+
+    /// <summary>The login username of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("loginUsername")]
+    public string? LoginUsername { get; set; }
+
+    /// <summary>The object id of the Azure AD Administrator of this SQL Managed Instance.</summary>
+    [JsonPropertyName("objectId")]
+    public string? ObjectId { get; set; }
+
+    /// <summary>The principal type of the Azure AD Administrator of this SQL Managed Instance. Possible values are Application, Group, User.</summary>
+    [JsonPropertyName("principalType")]
+    public string? PrincipalType { get; set; }
+
+    /// <summary>The tenant id of the Azure AD Administrator of this SQL Managed Instance. Should be specified if the Azure AD Administrator is homed in a different tenant to the SQL Managed Instance.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceStatusAtProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type is set to UserAssigned.</summary>
+    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this SQL Managed Instance. Required when type includes UserAssigned.</summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
@@ -681,7 +809,7 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProviderIdentity
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this SQL Managed Instance. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -694,9 +822,17 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
+    /// <summary>An azure_active_directory_administrator block as defined below.</summary>
+    [JsonPropertyName("azureActiveDirectoryAdministrator")]
+    public IList<V1beta1MSSQLManagedInstanceStatusAtProviderAzureActiveDirectoryAdministrator>? AzureActiveDirectoryAdministrator { get; set; }
+
     /// <summary>Specifies how the SQL Managed Instance will be collated. Default value is SQL_Latin1_General_CP1_CI_AS. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("collation")]
     public string? Collation { get; set; }
+
+    /// <summary>Specifies the internal format of the SQL Managed Instance databases specific to the SQL engine version. Possible values are AlwaysUpToDate and SQLServer2022. Defaults to SQLServer2022.</summary>
+    [JsonPropertyName("databaseFormat")]
+    public string? DatabaseFormat { get; set; }
 
     /// <summary>The Dns Zone where the SQL Managed Instance is located.</summary>
     [JsonPropertyName("dnsZone")]
@@ -709,6 +845,10 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
     /// <summary>The fully qualified domain name of the Azure Managed SQL Instance</summary>
     [JsonPropertyName("fqdn")]
     public string? Fqdn { get; set; }
+
+    /// <summary>Specifies the hybrid secondary usage for disaster recovery of the SQL Managed Instance. Possible values are Active and Passive. Defaults to Active.</summary>
+    [JsonPropertyName("hybridSecondaryUsage")]
+    public string? HybridSecondaryUsage { get; set; }
 
     /// <summary>The SQL Managed Instance ID.</summary>
     [JsonPropertyName("id")]
@@ -746,11 +886,15 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
+    /// <summary>The service principal type. The only possible value is SystemAssigned.</summary>
+    [JsonPropertyName("servicePrincipalType")]
+    public string? ServicePrincipalType { get; set; }
+
     /// <summary>Specifies the SKU Name for the SQL Managed Instance. Valid values include GP_Gen4, GP_Gen5, GP_Gen8IM, GP_Gen8IH, BC_Gen4, BC_Gen5, BC_Gen8IM or BC_Gen8IH.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created. Possible values are GRS, LRS and ZRS. Defaults to GRS.</summary>
+    /// <summary>Specifies the storage account type used to store backups for this database. Possible values are GRS, GZRS, LRS, and ZRS. Defaults to GRS.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 
@@ -758,7 +902,7 @@ public partial class V1beta1MSSQLManagedInstanceStatusAtProvider
     [JsonPropertyName("storageSizeInGb")]
     public double? StorageSizeInGb { get; set; }
 
-    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subnet resource id that the SQL Managed Instance will be associated with.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 

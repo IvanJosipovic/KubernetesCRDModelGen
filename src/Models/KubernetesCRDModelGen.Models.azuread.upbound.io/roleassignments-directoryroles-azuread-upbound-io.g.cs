@@ -128,17 +128,9 @@ public partial class V1beta1RoleAssignmentSpecForProvider
     [JsonPropertyName("appScopeId")]
     public string? AppScopeId { get; set; }
 
-    /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific</summary>
-    [JsonPropertyName("appScopeObjectId")]
-    public string? AppScopeObjectId { get; set; }
-
     /// <summary>Identifier of the directory object representing the scope of the assignment. Cannot be used with app_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the directory object representing the scope of the assignment</summary>
     [JsonPropertyName("directoryScopeId")]
     public string? DirectoryScopeId { get; set; }
-
-    /// <summary>Identifier of the directory object representing the scope of the assignment</summary>
-    [JsonPropertyName("directoryScopeObjectId")]
-    public string? DirectoryScopeObjectId { get; set; }
 
     /// <summary>The object ID of the principal for you want to create a role assignment. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created. The object ID of the member principal</summary>
     [JsonPropertyName("principalObjectId")]
@@ -285,17 +277,9 @@ public partial class V1beta1RoleAssignmentSpecInitProvider
     [JsonPropertyName("appScopeId")]
     public string? AppScopeId { get; set; }
 
-    /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific</summary>
-    [JsonPropertyName("appScopeObjectId")]
-    public string? AppScopeObjectId { get; set; }
-
     /// <summary>Identifier of the directory object representing the scope of the assignment. Cannot be used with app_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the directory object representing the scope of the assignment</summary>
     [JsonPropertyName("directoryScopeId")]
     public string? DirectoryScopeId { get; set; }
-
-    /// <summary>Identifier of the directory object representing the scope of the assignment</summary>
-    [JsonPropertyName("directoryScopeObjectId")]
-    public string? DirectoryScopeObjectId { get; set; }
 
     /// <summary>The object ID of the principal for you want to create a role assignment. Supported object types are Users, Groups or Service Principals. Changing this forces a new resource to be created. The object ID of the member principal</summary>
     [JsonPropertyName("principalObjectId")]
@@ -462,17 +446,9 @@ public partial class V1beta1RoleAssignmentStatusAtProvider
     [JsonPropertyName("appScopeId")]
     public string? AppScopeId { get; set; }
 
-    /// <summary>Identifier of the app-specific scope when the assignment scope is app-specific</summary>
-    [JsonPropertyName("appScopeObjectId")]
-    public string? AppScopeObjectId { get; set; }
-
     /// <summary>Identifier of the directory object representing the scope of the assignment. Cannot be used with app_scope_id. See official documentation for example usage. Changing this forces a new resource to be created. Identifier of the directory object representing the scope of the assignment</summary>
     [JsonPropertyName("directoryScopeId")]
     public string? DirectoryScopeId { get; set; }
-
-    /// <summary>Identifier of the directory object representing the scope of the assignment</summary>
-    [JsonPropertyName("directoryScopeObjectId")]
-    public string? DirectoryScopeObjectId { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]

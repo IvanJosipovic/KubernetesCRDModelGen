@@ -66,7 +66,7 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationIdSelector
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRefPolicy
+public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -77,9 +77,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRefPo
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRef
+public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -87,12 +87,12 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -103,9 +103,9 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelec
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelector
+public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -117,63 +117,7 @@ public partial class V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelec
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate authorizedAppId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate authorizedAppId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -192,33 +136,17 @@ public partial class V1beta1PreAuthorizedSpecForProvider
     [JsonPropertyName("applicationIdSelector")]
     public V1beta1PreAuthorizedSpecForProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
-    /// <summary>The object ID of the application to which this pre-authorized application should be added</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1PreAuthorizedSpecForProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1PreAuthorizedSpecForProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
-
-    /// <summary>The application ID of the pre-authorized application</summary>
-    [JsonPropertyName("authorizedAppId")]
-    public string? AuthorizedAppId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate authorizedAppId.</summary>
-    [JsonPropertyName("authorizedAppIdRef")]
-    public V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdRef? AuthorizedAppIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate authorizedAppId.</summary>
-    [JsonPropertyName("authorizedAppIdSelector")]
-    public V1beta1PreAuthorizedSpecForProviderAuthorizedAppIdSelector? AuthorizedAppIdSelector { get; set; }
-
     /// <summary>The client ID of the application being authorized. Changing this field forces a new resource to be created. The client ID of the pre-authorized application</summary>
     [JsonPropertyName("authorizedClientId")]
     public string? AuthorizedClientId { get; set; }
+
+    /// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
+    [JsonPropertyName("authorizedClientIdRef")]
+    public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdRef? AuthorizedClientIdRef { get; set; }
+
+    /// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
+    [JsonPropertyName("authorizedClientIdSelector")]
+    public V1beta1PreAuthorizedSpecForProviderAuthorizedClientIdSelector? AuthorizedClientIdSelector { get; set; }
 
     /// <summary>A set of permission scope IDs required by the authorized application. The IDs of the permission scopes required by the pre-authorized application</summary>
     [JsonPropertyName("permissionIds")]
@@ -283,7 +211,7 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationIdSelector
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRefPolicy
+public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -294,9 +222,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRefP
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRef
+public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -304,12 +232,12 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -320,9 +248,9 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSele
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSelector
+public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -334,63 +262,7 @@ public partial class V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSele
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate authorizedAppId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate authorizedAppId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -409,33 +281,17 @@ public partial class V1beta1PreAuthorizedSpecInitProvider
     [JsonPropertyName("applicationIdSelector")]
     public V1beta1PreAuthorizedSpecInitProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
-    /// <summary>The object ID of the application to which this pre-authorized application should be added</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1PreAuthorizedSpecInitProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
-
-    /// <summary>The application ID of the pre-authorized application</summary>
-    [JsonPropertyName("authorizedAppId")]
-    public string? AuthorizedAppId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate authorizedAppId.</summary>
-    [JsonPropertyName("authorizedAppIdRef")]
-    public V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdRef? AuthorizedAppIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate authorizedAppId.</summary>
-    [JsonPropertyName("authorizedAppIdSelector")]
-    public V1beta1PreAuthorizedSpecInitProviderAuthorizedAppIdSelector? AuthorizedAppIdSelector { get; set; }
-
     /// <summary>The client ID of the application being authorized. Changing this field forces a new resource to be created. The client ID of the pre-authorized application</summary>
     [JsonPropertyName("authorizedClientId")]
     public string? AuthorizedClientId { get; set; }
+
+    /// <summary>Reference to a Application in applications to populate authorizedClientId.</summary>
+    [JsonPropertyName("authorizedClientIdRef")]
+    public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdRef? AuthorizedClientIdRef { get; set; }
+
+    /// <summary>Selector for a Application in applications to populate authorizedClientId.</summary>
+    [JsonPropertyName("authorizedClientIdSelector")]
+    public V1beta1PreAuthorizedSpecInitProviderAuthorizedClientIdSelector? AuthorizedClientIdSelector { get; set; }
 
     /// <summary>A set of permission scope IDs required by the authorized application. The IDs of the permission scopes required by the pre-authorized application</summary>
     [JsonPropertyName("permissionIds")]
@@ -581,14 +437,6 @@ public partial class V1beta1PreAuthorizedStatusAtProvider
     /// <summary>The resource ID of the application for which permissions are being authorized. Changing this field forces a new resource to be created. The resource ID of the application to which this pre-authorized application should be added</summary>
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
-
-    /// <summary>The object ID of the application to which this pre-authorized application should be added</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
-
-    /// <summary>The application ID of the pre-authorized application</summary>
-    [JsonPropertyName("authorizedAppId")]
-    public string? AuthorizedAppId { get; set; }
 
     /// <summary>The client ID of the application being authorized. Changing this field forces a new resource to be created. The client ID of the pre-authorized application</summary>
     [JsonPropertyName("authorizedClientId")]

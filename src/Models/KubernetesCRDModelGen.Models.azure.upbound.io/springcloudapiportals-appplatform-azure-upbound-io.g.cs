@@ -493,7 +493,7 @@ public partial class V1beta1SpringCloudAPIPortalStatusAtProvider
     [JsonPropertyName("sso")]
     public IList<V1beta1SpringCloudAPIPortalStatusAtProviderSso>? Sso { get; set; }
 
-    /// <summary>TODO.</summary>
+    /// <summary></summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }

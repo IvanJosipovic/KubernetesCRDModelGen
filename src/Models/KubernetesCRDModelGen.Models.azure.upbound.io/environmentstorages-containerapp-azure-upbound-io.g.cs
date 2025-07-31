@@ -229,6 +229,10 @@ public partial class V1beta1EnvironmentStorageSpecForProvider
     [JsonPropertyName("containerAppEnvironmentIdSelector")]
     public V1beta1EnvironmentStorageSpecForProviderContainerAppEnvironmentIdSelector? ContainerAppEnvironmentIdSelector { get; set; }
 
+    /// <summary>The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("nfsServerUrl")]
+    public string? NfsServerUrl { get; set; }
+
     /// <summary>The name of the Azure Storage Share to use. Changing this forces a new resource to be created. The name of the Azure Storage Share to use.</summary>
     [JsonPropertyName("shareName")]
     public string? ShareName { get; set; }
@@ -377,7 +381,7 @@ public partial class V1beta1EnvironmentStorageSpecInitProvider
 {
     /// <summary>The Storage Account Access Key. The Storage Account Access Key.</summary>
     [JsonPropertyName("accessKeySecretRef")]
-    public V1beta1EnvironmentStorageSpecInitProviderAccessKeySecretRef AccessKeySecretRef { get; set; }
+    public V1beta1EnvironmentStorageSpecInitProviderAccessKeySecretRef? AccessKeySecretRef { get; set; }
 
     /// <summary>The access mode to connect this storage to the Container App. Possible values include ReadOnly and ReadWrite. Changing this forces a new resource to be created. The access mode to connect this storage to the Container App. Possible values include `ReadOnly` and `ReadWrite`.</summary>
     [JsonPropertyName("accessMode")]
@@ -394,6 +398,10 @@ public partial class V1beta1EnvironmentStorageSpecInitProvider
     /// <summary>Selector for a Account in storage to populate accountName.</summary>
     [JsonPropertyName("accountNameSelector")]
     public V1beta1EnvironmentStorageSpecInitProviderAccountNameSelector? AccountNameSelector { get; set; }
+
+    /// <summary>The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("nfsServerUrl")]
+    public string? NfsServerUrl { get; set; }
 
     /// <summary>The name of the Azure Storage Share to use. Changing this forces a new resource to be created. The name of the Azure Storage Share to use.</summary>
     [JsonPropertyName("shareName")]
@@ -559,6 +567,10 @@ public partial class V1beta1EnvironmentStorageStatusAtProvider
     /// <summary>The ID of the Container App Environment Storage</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("nfsServerUrl")]
+    public string? NfsServerUrl { get; set; }
 
     /// <summary>The name of the Azure Storage Share to use. Changing this forces a new resource to be created. The name of the Azure Storage Share to use.</summary>
     [JsonPropertyName("shareName")]

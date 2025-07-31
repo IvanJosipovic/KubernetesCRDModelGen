@@ -68,7 +68,7 @@ public partial class V1beta1ServiceSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProvider
 {
-    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
+    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK, usgov and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
     [JsonPropertyName("dataLocation")]
     public string? DataLocation { get; set; }
 
@@ -93,7 +93,7 @@ public partial class V1beta1ServiceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProvider
 {
-    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
+    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK, usgov and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
     [JsonPropertyName("dataLocation")]
     public string? DataLocation { get; set; }
 
@@ -238,9 +238,13 @@ public partial class V1beta1ServiceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProvider
 {
-    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
+    /// <summary>The location where the Communication service stores its data at rest. Possible values are Africa, Asia Pacific, Australia, Brazil, Canada, Europe, France, Germany, India, Japan, Korea, Norway, Switzerland, UAE, UK, usgov and United States. Defaults to United States. Changing this forces a new Communication Service to be created.</summary>
     [JsonPropertyName("dataLocation")]
     public string? DataLocation { get; set; }
+
+    /// <summary>The hostname of the Communication Service</summary>
+    [JsonPropertyName("hostname")]
+    public string? Hostname { get; set; }
 
     /// <summary>The ID of the Communication Service.</summary>
     [JsonPropertyName("id")]

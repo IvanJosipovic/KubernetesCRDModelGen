@@ -188,10 +188,6 @@ public partial class V1beta1BotConnectionSpecForProvider
     /// <summary>The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
-
-    /// <summary>A mapping of tags to assign to the resource.</summary>
-    [JsonPropertyName("tags")]
-    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>The Client Secret that will be used to authenticate with the service provider.</summary>
@@ -238,10 +234,6 @@ public partial class V1beta1BotConnectionSpecInitProvider
     /// <summary>The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
-
-    /// <summary>A mapping of tags to assign to the resource.</summary>
-    [JsonPropertyName("tags")]
-    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -411,10 +403,6 @@ public partial class V1beta1BotConnectionStatusAtProvider
     /// <summary>The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("serviceProviderName")]
     public string? ServiceProviderName { get; set; }
-
-    /// <summary>A mapping of tags to assign to the resource.</summary>
-    [JsonPropertyName("tags")]
-    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

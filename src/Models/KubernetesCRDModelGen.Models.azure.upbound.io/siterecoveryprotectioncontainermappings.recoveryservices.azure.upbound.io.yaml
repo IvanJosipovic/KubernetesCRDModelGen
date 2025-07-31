@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: siterecoveryprotectioncontainermappings.recoveryservices.azure.upbound.io
 spec:
   group: recoveryservices.azure.upbound.io
@@ -1237,7 +1237,7 @@ spec:
                     description: a automatic_update block defined as below.
                     properties:
                       authenticationType:
-                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity.
+                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity. Defaults to SystemAssignedIdentity.
                         type: string
                       automationAccountId:
                         description: The automation account ID which holds the automatic update runbook and authenticates to Azure resources.
@@ -1807,7 +1807,7 @@ spec:
                     description: a automatic_update block defined as below.
                     properties:
                       authenticationType:
-                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity.
+                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity. Defaults to SystemAssignedIdentity.
                         type: string
                       automationAccountId:
                         description: The automation account ID which holds the automatic update runbook and authenticates to Azure resources.
@@ -2212,7 +2212,7 @@ spec:
                     description: a automatic_update block defined as below.
                     properties:
                       authenticationType:
-                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity.
+                        description: The authentication type used for automation account. Possible values are RunAsAccount and SystemAssignedIdentity. Defaults to SystemAssignedIdentity.
                         type: string
                       automationAccountId:
                         description: The automation account ID which holds the automatic update runbook and authenticates to Azure resources.

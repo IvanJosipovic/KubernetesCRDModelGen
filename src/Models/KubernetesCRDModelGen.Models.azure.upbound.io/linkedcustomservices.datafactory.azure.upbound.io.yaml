@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: linkedcustomservices.datafactory.azure.upbound.io
 spec:
   group: datafactory.azure.upbound.io
@@ -801,7 +801,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Changing this forces a new resource to be created.
+                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Please refer to Microsoft.DataFactory factories/linkedservices for the type values syntax. Changing this forces a new resource to be created.
                     type: string
                   typePropertiesJson:
                     description: A JSON object that contains the properties of the Data Factory Linked Service.
@@ -863,7 +863,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Changing this forces a new resource to be created.
+                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Please refer to Microsoft.DataFactory factories/linkedservices for the type values syntax. Changing this forces a new resource to be created.
                     type: string
                   typePropertiesJson:
                     description: A JSON object that contains the properties of the Data Factory Linked Service.
@@ -1127,7 +1127,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Changing this forces a new resource to be created.
+                    description: The type of data stores that will be connected to Data Factory. For full list of supported data stores, please refer to Azure Data Factory connector. Please refer to Microsoft.DataFactory factories/linkedservices for the type values syntax. Changing this forces a new resource to be created.
                     type: string
                   typePropertiesJson:
                     description: A JSON object that contains the properties of the Data Factory Linked Service.

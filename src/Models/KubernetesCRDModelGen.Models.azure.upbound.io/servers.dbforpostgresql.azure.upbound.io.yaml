@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: servers.dbforpostgresql.azure.upbound.io
 spec:
   group: dbforpostgresql.azure.upbound.io
@@ -88,7 +88,7 @@ spec:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
                   administratorLoginPasswordSecretRef:
-                    description: The Password associated with the administrator_login for the PostgreSQL Server. Required when create_mode is Default.
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
                     properties:
                       key:
                         description: The key to select.
@@ -104,6 +104,12 @@ spec:
                     - name
                     - namespace
                     type: object
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean
@@ -323,6 +329,29 @@ spec:
                   administratorLogin:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
+                  administratorLoginPasswordSecretRef:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean
@@ -402,6 +431,23 @@ spec:
                         retentionDays:
                           description: Specifies the number of days to keep in the Threat Detection audit logs.
                           type: number
+                        storageAccountAccessKeySecretRef:
+                          description: Specifies the identifier key of the Threat Detection audit storage account.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         storageEndpoint:
                           description: Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
                           type: string
@@ -636,6 +682,12 @@ spec:
                   administratorLogin:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean
@@ -876,7 +928,7 @@ spec:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
                   administratorLoginPasswordSecretRef:
-                    description: The Password associated with the administrator_login for the PostgreSQL Server. Required when create_mode is Default.
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
                     properties:
                       key:
                         description: The key to select.
@@ -892,6 +944,12 @@ spec:
                     - name
                     - namespace
                     type: object
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean
@@ -1108,7 +1166,7 @@ spec:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
                   administratorLoginPasswordSecretRef:
-                    description: The Password associated with the administrator_login for the PostgreSQL Server. Required when create_mode is Default.
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
                     properties:
                       key:
                         description: The key to select.
@@ -1124,6 +1182,12 @@ spec:
                     - name
                     - namespace
                     type: object
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean
@@ -1450,6 +1514,12 @@ spec:
                   administratorLogin:
                     description: The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.
                     type: string
+                  administratorLoginPasswordWo:
+                    description: The Password associated with the administrator_login for the PostgreSQL Server.
+                    type: string
+                  administratorLoginPasswordWoVersion:
+                    description: An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.
+                    type: number
                   autoGrowEnabled:
                     description: Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.
                     type: boolean

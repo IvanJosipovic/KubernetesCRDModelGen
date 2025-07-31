@@ -68,7 +68,7 @@ public partial class V1beta1DeploymentSpecForProviderCognitiveAccountIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecForProviderModel
 {
-    /// <summary>The format of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created. Possible value is OpenAI.</summary>
+    /// <summary>The format of the Cognitive Services Account Deployment model. Possible values are OpenAI and Cohere. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -83,7 +83,7 @@ public partial class V1beta1DeploymentSpecForProviderModel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DeploymentSpecForProviderScale
+public partial class V1beta1DeploymentSpecForProviderSku
 {
     /// <summary>Tokens-per-Minute (TPM). The unit of measure for this field is in the thousands of Tokens-per-Minute. Defaults to 1 which means that the limitation is 1000 tokens per minute. If the resources SKU supports scale in/out then the capacity field should be included in the resources' configuration. If the scale in/out is not supported by the resources SKU then this field can be safely omitted. For more information about TPM please see the product documentation.</summary>
     [JsonPropertyName("capacity")]
@@ -93,17 +93,17 @@ public partial class V1beta1DeploymentSpecForProviderScale
     [JsonPropertyName("family")]
     public string? Family { get; set; }
 
+    /// <summary>The name of the SKU. Possible values include Standard, DataZoneBatch, DataZoneStandard, DataZoneProvisionedManaged, GlobalBatch, GlobalProvisionedManaged, GlobalStandard, and ProvisionedManaged.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("size")]
     public string? Size { get; set; }
 
-    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. Changing this forces a new resource to be created.</summary>
+    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. This property is required only when multiple tiers are available with the SKU name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
-
-    /// <summary>The name of the SKU. Ex - Standard or P3. It is typically a letter+number code. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary></summary>
@@ -122,6 +122,10 @@ public partial class V1beta1DeploymentSpecForProvider
     [JsonPropertyName("cognitiveAccountIdSelector")]
     public V1beta1DeploymentSpecForProviderCognitiveAccountIdSelector? CognitiveAccountIdSelector { get; set; }
 
+    /// <summary>Whether dynamic throttling is enabled.</summary>
+    [JsonPropertyName("dynamicThrottlingEnabled")]
+    public bool? DynamicThrottlingEnabled { get; set; }
+
     /// <summary>A model block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("model")]
     public IList<V1beta1DeploymentSpecForProviderModel>? Model { get; set; }
@@ -130,9 +134,9 @@ public partial class V1beta1DeploymentSpecForProvider
     [JsonPropertyName("raiPolicyName")]
     public string? RaiPolicyName { get; set; }
 
-    /// <summary>A scale block as defined below.</summary>
-    [JsonPropertyName("scale")]
-    public IList<V1beta1DeploymentSpecForProviderScale>? Scale { get; set; }
+    /// <summary>A sku block as defined below.</summary>
+    [JsonPropertyName("sku")]
+    public IList<V1beta1DeploymentSpecForProviderSku>? Sku { get; set; }
 
     /// <summary>Deployment model version upgrade option. Possible values are OnceNewDefaultVersionAvailable, OnceCurrentVersionExpired, and NoAutoUpgrade. Defaults to OnceNewDefaultVersionAvailable.</summary>
     [JsonPropertyName("versionUpgradeOption")]
@@ -143,7 +147,7 @@ public partial class V1beta1DeploymentSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecInitProviderModel
 {
-    /// <summary>The format of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created. Possible value is OpenAI.</summary>
+    /// <summary>The format of the Cognitive Services Account Deployment model. Possible values are OpenAI and Cohere. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -158,7 +162,7 @@ public partial class V1beta1DeploymentSpecInitProviderModel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DeploymentSpecInitProviderScale
+public partial class V1beta1DeploymentSpecInitProviderSku
 {
     /// <summary>Tokens-per-Minute (TPM). The unit of measure for this field is in the thousands of Tokens-per-Minute. Defaults to 1 which means that the limitation is 1000 tokens per minute. If the resources SKU supports scale in/out then the capacity field should be included in the resources' configuration. If the scale in/out is not supported by the resources SKU then this field can be safely omitted. For more information about TPM please see the product documentation.</summary>
     [JsonPropertyName("capacity")]
@@ -168,23 +172,27 @@ public partial class V1beta1DeploymentSpecInitProviderScale
     [JsonPropertyName("family")]
     public string? Family { get; set; }
 
+    /// <summary>The name of the SKU. Possible values include Standard, DataZoneBatch, DataZoneStandard, DataZoneProvisionedManaged, GlobalBatch, GlobalProvisionedManaged, GlobalStandard, and ProvisionedManaged.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("size")]
     public string? Size { get; set; }
 
-    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. Changing this forces a new resource to be created.</summary>
+    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. This property is required only when multiple tiers are available with the SKU name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
-
-    /// <summary>The name of the SKU. Ex - Standard or P3. It is typically a letter+number code. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentSpecInitProvider
 {
+    /// <summary>Whether dynamic throttling is enabled.</summary>
+    [JsonPropertyName("dynamicThrottlingEnabled")]
+    public bool? DynamicThrottlingEnabled { get; set; }
+
     /// <summary>A model block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("model")]
     public IList<V1beta1DeploymentSpecInitProviderModel>? Model { get; set; }
@@ -193,9 +201,9 @@ public partial class V1beta1DeploymentSpecInitProvider
     [JsonPropertyName("raiPolicyName")]
     public string? RaiPolicyName { get; set; }
 
-    /// <summary>A scale block as defined below.</summary>
-    [JsonPropertyName("scale")]
-    public IList<V1beta1DeploymentSpecInitProviderScale>? Scale { get; set; }
+    /// <summary>A sku block as defined below.</summary>
+    [JsonPropertyName("sku")]
+    public IList<V1beta1DeploymentSpecInitProviderSku>? Sku { get; set; }
 
     /// <summary>Deployment model version upgrade option. Possible values are OnceNewDefaultVersionAvailable, OnceCurrentVersionExpired, and NoAutoUpgrade. Defaults to OnceNewDefaultVersionAvailable.</summary>
     [JsonPropertyName("versionUpgradeOption")]
@@ -338,7 +346,7 @@ public partial class V1beta1DeploymentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentStatusAtProviderModel
 {
-    /// <summary>The format of the Cognitive Services Account Deployment model. Changing this forces a new resource to be created. Possible value is OpenAI.</summary>
+    /// <summary>The format of the Cognitive Services Account Deployment model. Possible values are OpenAI and Cohere. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -353,7 +361,7 @@ public partial class V1beta1DeploymentStatusAtProviderModel
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DeploymentStatusAtProviderScale
+public partial class V1beta1DeploymentStatusAtProviderSku
 {
     /// <summary>Tokens-per-Minute (TPM). The unit of measure for this field is in the thousands of Tokens-per-Minute. Defaults to 1 which means that the limitation is 1000 tokens per minute. If the resources SKU supports scale in/out then the capacity field should be included in the resources' configuration. If the scale in/out is not supported by the resources SKU then this field can be safely omitted. For more information about TPM please see the product documentation.</summary>
     [JsonPropertyName("capacity")]
@@ -363,17 +371,17 @@ public partial class V1beta1DeploymentStatusAtProviderScale
     [JsonPropertyName("family")]
     public string? Family { get; set; }
 
+    /// <summary>The name of the SKU. Possible values include Standard, DataZoneBatch, DataZoneStandard, DataZoneProvisionedManaged, GlobalBatch, GlobalProvisionedManaged, GlobalStandard, and ProvisionedManaged.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
     /// <summary>The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("size")]
     public string? Size { get; set; }
 
-    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. Changing this forces a new resource to be created.</summary>
+    /// <summary>Possible values are Free, Basic, Standard, Premium, Enterprise. This property is required only when multiple tiers are available with the SKU name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("tier")]
     public string? Tier { get; set; }
-
-    /// <summary>The name of the SKU. Ex - Standard or P3. It is typically a letter+number code. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary></summary>
@@ -383,6 +391,10 @@ public partial class V1beta1DeploymentStatusAtProvider
     /// <summary>The ID of the Cognitive Services Account. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("cognitiveAccountId")]
     public string? CognitiveAccountId { get; set; }
+
+    /// <summary>Whether dynamic throttling is enabled.</summary>
+    [JsonPropertyName("dynamicThrottlingEnabled")]
+    public bool? DynamicThrottlingEnabled { get; set; }
 
     /// <summary>The ID of the Deployment for Azure Cognitive Services Account.</summary>
     [JsonPropertyName("id")]
@@ -396,9 +408,9 @@ public partial class V1beta1DeploymentStatusAtProvider
     [JsonPropertyName("raiPolicyName")]
     public string? RaiPolicyName { get; set; }
 
-    /// <summary>A scale block as defined below.</summary>
-    [JsonPropertyName("scale")]
-    public IList<V1beta1DeploymentStatusAtProviderScale>? Scale { get; set; }
+    /// <summary>A sku block as defined below.</summary>
+    [JsonPropertyName("sku")]
+    public IList<V1beta1DeploymentStatusAtProviderSku>? Sku { get; set; }
 
     /// <summary>Deployment model version upgrade option. Possible values are OnceNewDefaultVersionAvailable, OnceCurrentVersionExpired, and NoAutoUpgrade. Defaults to OnceNewDefaultVersionAvailable.</summary>
     [JsonPropertyName("versionUpgradeOption")]

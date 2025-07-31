@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: containerapps.containerapp.azure.upbound.io
 spec:
   group: containerapp.azure.upbound.io
@@ -225,25 +225,42 @@ spec:
 
                             Should this ingress allow insecure connections?
                           type: boolean
-                        customDomain:
-                          description: One or more custom_domain block as detailed below.
+                        clientCertificateMode:
+                          description: >-
+                            The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                            Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                          type: string
+                        cors:
+                          description: A cors block as defined below.
                           items:
                             properties:
-                              certificateBindingType:
-                                description: >-
-                                  The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                                  The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
-                                type: string
-                              certificateId:
-                                description: The ID of the Container App Environment Certificate.
-                                type: string
-                              name:
-                                description: >-
-                                  The name of the Volume to be mounted in the container.
-
-                                  The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
-                                type: string
+                              allowCredentialsEnabled:
+                                description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                                type: boolean
+                              allowedHeaders:
+                                description: Specifies the list of request headers that are permitted in the actual request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedMethods:
+                                description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedOrigins:
+                                description: Specifies the list of origins that are allowed to make cross-origin calls.
+                                items:
+                                  type: string
+                                type: array
+                              exposedHeaders:
+                                description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              maxAgeInSeconds:
+                                description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                                type: number
                             type: object
                           type: array
                         exposedPort:
@@ -332,6 +349,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   registry:
                     description: A registry block as detailed below.
                     items:
@@ -611,9 +631,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -641,9 +661,9 @@ spec:
                                       type: string
                                     initialDelay:
                                       description: >-
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                       type: number
                                     intervalSeconds:
                                       description: >-
@@ -695,9 +715,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -723,6 +743,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -767,9 +793,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -795,6 +821,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -842,6 +874,12 @@ spec:
                                         The path in the container at which to mount this volume.
 
                                         The path in the container at which to mount this volume.
+                                      type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
                                       type: string
                                   type: object
                                 type: array
@@ -985,6 +1023,12 @@ spec:
 
                                         The path in the container at which to mount this volume.
                                       type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
+                                      type: string
                                   type: object
                                 type: array
                             type: object
@@ -1031,10 +1075,22 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        terminationGracePeriodSeconds:
+                          description: >-
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                          type: number
                         volume:
                           description: A volume block as detailed below.
                           items:
                             properties:
+                              mountOptions:
+                                description: >-
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                                type: string
                               name:
                                 description: >-
                                   The name of the Volume to be mounted in the container.
@@ -1224,25 +1280,42 @@ spec:
 
                             Should this ingress allow insecure connections?
                           type: boolean
-                        customDomain:
-                          description: One or more custom_domain block as detailed below.
+                        clientCertificateMode:
+                          description: >-
+                            The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                            Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                          type: string
+                        cors:
+                          description: A cors block as defined below.
                           items:
                             properties:
-                              certificateBindingType:
-                                description: >-
-                                  The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                                  The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
-                                type: string
-                              certificateId:
-                                description: The ID of the Container App Environment Certificate.
-                                type: string
-                              name:
-                                description: >-
-                                  The name of the Volume to be mounted in the container.
-
-                                  The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
-                                type: string
+                              allowCredentialsEnabled:
+                                description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                                type: boolean
+                              allowedHeaders:
+                                description: Specifies the list of request headers that are permitted in the actual request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedMethods:
+                                description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedOrigins:
+                                description: Specifies the list of origins that are allowed to make cross-origin calls.
+                                items:
+                                  type: string
+                                type: array
+                              exposedHeaders:
+                                description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              maxAgeInSeconds:
+                                description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                                type: number
                             type: object
                           type: array
                         exposedPort:
@@ -1331,6 +1404,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   registry:
                     description: A registry block as detailed below.
                     items:
@@ -1523,9 +1599,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -1553,9 +1629,9 @@ spec:
                                       type: string
                                     initialDelay:
                                       description: >-
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                       type: number
                                     intervalSeconds:
                                       description: >-
@@ -1607,9 +1683,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -1635,6 +1711,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -1679,9 +1761,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -1707,6 +1789,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -1754,6 +1842,12 @@ spec:
                                         The path in the container at which to mount this volume.
 
                                         The path in the container at which to mount this volume.
+                                      type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
                                       type: string
                                   type: object
                                 type: array
@@ -1897,6 +1991,12 @@ spec:
 
                                         The path in the container at which to mount this volume.
                                       type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
+                                      type: string
                                   type: object
                                 type: array
                             type: object
@@ -1943,10 +2043,22 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        terminationGracePeriodSeconds:
+                          description: >-
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                          type: number
                         volume:
                           description: A volume block as detailed below.
                           items:
                             properties:
+                              mountOptions:
+                                description: >-
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                                type: string
                               name:
                                 description: >-
                                   The name of the Volume to be mounted in the container.
@@ -2255,24 +2367,56 @@ spec:
 
                             Should this ingress allow insecure connections?
                           type: boolean
+                        clientCertificateMode:
+                          description: >-
+                            The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                            Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                          type: string
+                        cors:
+                          description: A cors block as defined below.
+                          items:
+                            properties:
+                              allowCredentialsEnabled:
+                                description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                                type: boolean
+                              allowedHeaders:
+                                description: Specifies the list of request headers that are permitted in the actual request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedMethods:
+                                description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              allowedOrigins:
+                                description: Specifies the list of origins that are allowed to make cross-origin calls.
+                                items:
+                                  type: string
+                                type: array
+                              exposedHeaders:
+                                description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                                items:
+                                  type: string
+                                type: array
+                              maxAgeInSeconds:
+                                description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                                type: number
+                            type: object
+                          type: array
                         customDomain:
                           description: One or more custom_domain block as detailed below.
                           items:
                             properties:
                               certificateBindingType:
-                                description: >-
-                                  The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                                  The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
+                                description: The Binding type.
                                 type: string
                               certificateId:
                                 description: The ID of the Container App Environment Certificate.
                                 type: string
                               name:
-                                description: >-
-                                  The name of the Volume to be mounted in the container.
-
-                                  The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
+                                description: The hostname of the Certificate.
                                 type: string
                             type: object
                           type: array
@@ -2383,6 +2527,9 @@ spec:
                   location:
                     description: The location this Container App is deployed in. This is the same as the Environment in which it is deployed.
                     type: string
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   outboundIpAddresses:
                     description: A list of the Public IP Addresses which the Container App uses for outbound network access.
                     items:
@@ -2547,9 +2694,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -2577,9 +2724,9 @@ spec:
                                       type: string
                                     initialDelay:
                                       description: >-
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                        The time in seconds to wait after the container has started before the probe is started.
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                       type: number
                                     intervalSeconds:
                                       description: >-
@@ -2637,9 +2784,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -2665,6 +2812,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -2709,9 +2862,9 @@ spec:
                                   properties:
                                     failureCountThreshold:
                                       description: >-
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                        The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                       type: number
                                     header:
                                       description: A header block as detailed below.
@@ -2737,6 +2890,12 @@ spec:
 
                                         The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                       type: string
+                                    initialDelay:
+                                      description: >-
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                        The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                      type: number
                                     intervalSeconds:
                                       description: >-
                                         How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -2790,6 +2949,12 @@ spec:
                                         The path in the container at which to mount this volume.
 
                                         The path in the container at which to mount this volume.
+                                      type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
                                       type: string
                                   type: object
                                 type: array
@@ -2939,6 +3104,12 @@ spec:
 
                                         The path in the container at which to mount this volume.
                                       type: string
+                                    subPath:
+                                      description: >-
+                                        The sub path of the volume to be mounted in the container.
+
+                                        The sub path of the volume to be mounted in the container.
+                                      type: string
                                   type: object
                                 type: array
                             type: object
@@ -2985,10 +3156,22 @@ spec:
                                 type: string
                             type: object
                           type: array
+                        terminationGracePeriodSeconds:
+                          description: >-
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                            The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                          type: number
                         volume:
                           description: A volume block as detailed below.
                           items:
                             properties:
+                              mountOptions:
+                                description: >-
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                  Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                                type: string
                               name:
                                 description: >-
                                   The name of the Volume to be mounted in the container.
@@ -3284,24 +3467,41 @@ spec:
 
                           Should this ingress allow insecure connections?
                         type: boolean
-                      customDomain:
-                        description: One or more custom_domain block as detailed below.
+                      clientCertificateMode:
+                        description: >-
+                          The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                          Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                        type: string
+                      cors:
+                        description: A cors block as defined below.
                         properties:
-                          certificateBindingType:
-                            description: >-
-                              The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                              The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
-                            type: string
-                          certificateId:
-                            description: The ID of the Container App Environment Certificate.
-                            type: string
-                          name:
-                            description: >-
-                              The name of the Volume to be mounted in the container.
-
-                              The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
-                            type: string
+                          allowCredentialsEnabled:
+                            description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                            type: boolean
+                          allowedHeaders:
+                            description: Specifies the list of request headers that are permitted in the actual request.
+                            items:
+                              type: string
+                            type: array
+                          allowedMethods:
+                            description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          allowedOrigins:
+                            description: Specifies the list of origins that are allowed to make cross-origin calls.
+                            items:
+                              type: string
+                            type: array
+                          exposedHeaders:
+                            description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          maxAgeInSeconds:
+                            description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                            type: number
                         type: object
                       exposedPort:
                         description: >-
@@ -3388,6 +3588,9 @@ spec:
                           The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`
                         type: string
                     type: object
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   registry:
                     description: A registry block as detailed below.
                     items:
@@ -3666,9 +3869,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -3696,9 +3899,9 @@ spec:
                                     type: string
                                   initialDelay:
                                     description: >-
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                     type: number
                                   intervalSeconds:
                                     description: >-
@@ -3750,9 +3953,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -3778,6 +3981,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -3822,9 +4031,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -3850,6 +4059,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -3897,6 +4112,12 @@ spec:
                                       The path in the container at which to mount this volume.
 
                                       The path in the container at which to mount this volume.
+                                    type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
                                     type: string
                                 type: object
                               type: array
@@ -4040,6 +4261,12 @@ spec:
 
                                       The path in the container at which to mount this volume.
                                     type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
+                                    type: string
                                 type: object
                               type: array
                           type: object
@@ -4086,10 +4313,22 @@ spec:
                               type: string
                           type: object
                         type: array
+                      terminationGracePeriodSeconds:
+                        description: >-
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                        type: number
                       volume:
                         description: A volume block as detailed below.
                         items:
                           properties:
+                            mountOptions:
+                              description: >-
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                              type: string
                             name:
                               description: >-
                                 The name of the Volume to be mounted in the container.
@@ -4273,24 +4512,41 @@ spec:
 
                           Should this ingress allow insecure connections?
                         type: boolean
-                      customDomain:
-                        description: One or more custom_domain block as detailed below.
+                      clientCertificateMode:
+                        description: >-
+                          The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                          Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                        type: string
+                      cors:
+                        description: A cors block as defined below.
                         properties:
-                          certificateBindingType:
-                            description: >-
-                              The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                              The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
-                            type: string
-                          certificateId:
-                            description: The ID of the Container App Environment Certificate.
-                            type: string
-                          name:
-                            description: >-
-                              The name of the Volume to be mounted in the container.
-
-                              The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
-                            type: string
+                          allowCredentialsEnabled:
+                            description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                            type: boolean
+                          allowedHeaders:
+                            description: Specifies the list of request headers that are permitted in the actual request.
+                            items:
+                              type: string
+                            type: array
+                          allowedMethods:
+                            description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          allowedOrigins:
+                            description: Specifies the list of origins that are allowed to make cross-origin calls.
+                            items:
+                              type: string
+                            type: array
+                          exposedHeaders:
+                            description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          maxAgeInSeconds:
+                            description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                            type: number
                         type: object
                       exposedPort:
                         description: >-
@@ -4377,6 +4633,9 @@ spec:
                           The transport method for the Ingress. Possible values include `auto`, `http`, and `http2`, `tcp`. Defaults to `auto`
                         type: string
                     type: object
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   registry:
                     description: A registry block as detailed below.
                     items:
@@ -4568,9 +4827,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -4598,9 +4857,9 @@ spec:
                                     type: string
                                   initialDelay:
                                     description: >-
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                     type: number
                                   intervalSeconds:
                                     description: >-
@@ -4652,9 +4911,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -4680,6 +4939,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -4724,9 +4989,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -4752,6 +5017,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -4799,6 +5070,12 @@ spec:
                                       The path in the container at which to mount this volume.
 
                                       The path in the container at which to mount this volume.
+                                    type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
                                     type: string
                                 type: object
                               type: array
@@ -4942,6 +5219,12 @@ spec:
 
                                       The path in the container at which to mount this volume.
                                     type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
+                                    type: string
                                 type: object
                               type: array
                           type: object
@@ -4988,10 +5271,22 @@ spec:
                               type: string
                           type: object
                         type: array
+                      terminationGracePeriodSeconds:
+                        description: >-
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                        type: number
                       volume:
                         description: A volume block as detailed below.
                         items:
                           properties:
+                            mountOptions:
+                              description: >-
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                              type: string
                             name:
                               description: >-
                                 The name of the Volume to be mounted in the container.
@@ -5294,25 +5589,57 @@ spec:
 
                           Should this ingress allow insecure connections?
                         type: boolean
+                      clientCertificateMode:
+                        description: >-
+                          The client certificate mode for the Ingress. Possible values are require, accept, and ignore.
+
+                          Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.
+                        type: string
+                      cors:
+                        description: A cors block as defined below.
+                        properties:
+                          allowCredentialsEnabled:
+                            description: Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.
+                            type: boolean
+                          allowedHeaders:
+                            description: Specifies the list of request headers that are permitted in the actual request.
+                            items:
+                              type: string
+                            type: array
+                          allowedMethods:
+                            description: Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          allowedOrigins:
+                            description: Specifies the list of origins that are allowed to make cross-origin calls.
+                            items:
+                              type: string
+                            type: array
+                          exposedHeaders:
+                            description: Specifies the list of headers exposed to the browser in the response to a cross-origin request.
+                            items:
+                              type: string
+                            type: array
+                          maxAgeInSeconds:
+                            description: Specifies the number of seconds that the browser can cache the results of a preflight request.
+                            type: number
+                        type: object
                       customDomain:
                         description: One or more custom_domain block as detailed below.
-                        properties:
-                          certificateBindingType:
-                            description: >-
-                              The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled.
-
-                              The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`
-                            type: string
-                          certificateId:
-                            description: The ID of the Container App Environment Certificate.
-                            type: string
-                          name:
-                            description: >-
-                              The name of the Volume to be mounted in the container.
-
-                              The hostname of the Certificate. Must be the CN or a named SAN in the certificate.
-                            type: string
-                        type: object
+                        items:
+                          properties:
+                            certificateBindingType:
+                              description: The Binding type.
+                              type: string
+                            certificateId:
+                              description: The ID of the Container App Environment Certificate.
+                              type: string
+                            name:
+                              description: The hostname of the Certificate.
+                              type: string
+                          type: object
+                        type: array
                       exposedPort:
                         description: >-
                           The exposed port on the container for the Ingress traffic.
@@ -5419,6 +5746,9 @@ spec:
                   location:
                     description: The location this Container App is deployed in. This is the same as the Environment in which it is deployed.
                     type: string
+                  maxInactiveRevisions:
+                    description: The maximum of inactive revisions allowed for this Container App.
+                    type: number
                   outboundIpAddresses:
                     description: A list of the Public IP Addresses which the Container App uses for outbound network access.
                     items:
@@ -5582,9 +5912,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -5612,9 +5942,9 @@ spec:
                                     type: string
                                   initialDelay:
                                     description: >-
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
 
-                                      The time in seconds to wait after the container has started before the probe is started.
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.
                                     type: number
                                   intervalSeconds:
                                     description: >-
@@ -5672,9 +6002,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -5700,6 +6030,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -5744,9 +6080,9 @@ spec:
                                 properties:
                                   failureCountThreshold:
                                     description: >-
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3.
 
-                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.
+                                      The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.
                                     type: number
                                   header:
                                     description: A header block as detailed below.
@@ -5772,6 +6108,12 @@ spec:
 
                                       The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.
                                     type: string
+                                  initialDelay:
+                                    description: >-
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds.
+
+                                      The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.
+                                    type: number
                                   intervalSeconds:
                                     description: >-
                                       How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10
@@ -5825,6 +6167,12 @@ spec:
                                       The path in the container at which to mount this volume.
 
                                       The path in the container at which to mount this volume.
+                                    type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
                                     type: string
                                 type: object
                               type: array
@@ -5974,6 +6322,12 @@ spec:
 
                                       The path in the container at which to mount this volume.
                                     type: string
+                                  subPath:
+                                    description: >-
+                                      The sub path of the volume to be mounted in the container.
+
+                                      The sub path of the volume to be mounted in the container.
+                                    type: string
                                 type: object
                               type: array
                           type: object
@@ -6020,10 +6374,22 @@ spec:
                               type: string
                           type: object
                         type: array
+                      terminationGracePeriodSeconds:
+                        description: >-
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+
+                          The time in seconds after the container is sent the termination signal before the process if forcibly killed.
+                        type: number
                       volume:
                         description: A volume block as detailed below.
                         items:
                           properties:
+                            mountOptions:
+                              description: >-
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751.
+
+                                Mount options used while mounting the AzureFile. Must be a comma-separated string.
+                              type: string
                             name:
                               description: >-
                                 The name of the Volume to be mounted in the container.

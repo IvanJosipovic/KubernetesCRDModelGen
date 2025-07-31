@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: virtualhubs.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -206,7 +206,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   virtualRouterAutoScaleMinCapacity:
-                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router.
+                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.
                     type: number
                   virtualWanId:
                     description: The ID of a Virtual WAN within which the Virtual Hub should be created. Changing this forces a new resource to be created.
@@ -353,7 +353,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   virtualRouterAutoScaleMinCapacity:
-                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router.
+                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.
                     type: number
                   virtualWanId:
                     description: The ID of a Virtual WAN within which the Virtual Hub should be created. Changing this forces a new resource to be created.
@@ -706,7 +706,7 @@ spec:
                     description: The Autonomous System Number of the Virtual Hub BGP router.
                     type: number
                   virtualRouterAutoScaleMinCapacity:
-                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router.
+                    description: Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.
                     type: number
                   virtualRouterIps:
                     description: The IP addresses of the Virtual Hub BGP router.

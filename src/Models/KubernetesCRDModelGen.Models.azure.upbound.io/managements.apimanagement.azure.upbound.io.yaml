@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: managements.apimanagement.azure.upbound.io
 spec:
   group: apimanagement.azure.upbound.io
@@ -196,7 +196,7 @@ spec:
                             type: object
                           type: array
                         zones:
-                          description: A list of availability zones. Changing this forces a new resource to be created.
+                          description: A list of availability zones.
                           items:
                             type: string
                           type: array
@@ -244,8 +244,6 @@ spec:
                         storeName:
                           description: The name of the Certificate Store where this certificate should be stored. Possible values are CertificateAuthority and Root.
                           type: string
-                      required:
-                      - encodedCertificateSecretRef
                       type: object
                     type: array
                   clientCertificateEnabled:
@@ -310,23 +308,13 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    description: A policy block as defined below.
-                    items:
-                      properties:
-                        xmlContent:
-                          description: The XML Content for this Policy.
-                          type: string
-                        xmlLink:
-                          description: A link to an API Management Policy XML Document, which must be publicly available.
-                          type: string
-                      type: object
-                    type: array
                   protocols:
                     description: A protocols block as defined below.
                     items:
                       properties:
                         enableHttp2:
+                          type: boolean
+                        http2Enabled:
                           description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                           type: boolean
                       type: object
@@ -344,7 +332,7 @@ spec:
                     description: The name of publisher/company.
                     type: string
                   resourceGroupName:
-                    description: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+                    description: The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -436,22 +424,34 @@ spec:
                     description: A security block as defined below.
                     items:
                       properties:
-                        enableBackendSsl30:
+                        backendSsl30Enabled:
                           description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls10:
+                        backendTls10Enabled:
                           description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls11:
+                        backendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
+                        enableBackendSsl30:
+                          type: boolean
+                        enableBackendTls10:
+                          type: boolean
+                        enableBackendTls11:
+                          type: boolean
                         enableFrontendSsl30:
-                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls10:
-                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls11:
+                          type: boolean
+                        frontendSsl30Enabled:
+                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls10Enabled:
+                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:
@@ -779,7 +779,7 @@ spec:
                             type: object
                           type: array
                         zones:
-                          description: A list of availability zones. Changing this forces a new resource to be created.
+                          description: A list of availability zones.
                           items:
                             type: string
                           type: array
@@ -807,9 +807,28 @@ spec:
                           - name
                           - namespace
                           type: object
+                        encodedCertificateSecretRef:
+                          description: The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         storeName:
                           description: The name of the Certificate Store where this certificate should be stored. Possible values are CertificateAuthority and Root.
                           type: string
+                      required:
+                      - encodedCertificateSecretRef
                       type: object
                     type: array
                   clientCertificateEnabled:
@@ -874,23 +893,13 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    description: A policy block as defined below.
-                    items:
-                      properties:
-                        xmlContent:
-                          description: The XML Content for this Policy.
-                          type: string
-                        xmlLink:
-                          description: A link to an API Management Policy XML Document, which must be publicly available.
-                          type: string
-                      type: object
-                    type: array
                   protocols:
                     description: A protocols block as defined below.
                     items:
                       properties:
                         enableHttp2:
+                          type: boolean
+                        http2Enabled:
                           description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                           type: boolean
                       type: object
@@ -911,22 +920,34 @@ spec:
                     description: A security block as defined below.
                     items:
                       properties:
-                        enableBackendSsl30:
+                        backendSsl30Enabled:
                           description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls10:
+                        backendTls10Enabled:
                           description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls11:
+                        backendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
+                        enableBackendSsl30:
+                          type: boolean
+                        enableBackendTls10:
+                          type: boolean
+                        enableBackendTls11:
+                          type: boolean
                         enableFrontendSsl30:
-                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls10:
-                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls11:
+                          type: boolean
+                        frontendSsl30Enabled:
+                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls10Enabled:
+                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:
@@ -1381,7 +1402,7 @@ spec:
                             type: object
                           type: array
                         zones:
-                          description: A list of availability zones. Changing this forces a new resource to be created.
+                          description: A list of availability zones.
                           items:
                             type: string
                           type: array
@@ -1456,8 +1477,11 @@ spec:
                               hostName:
                                 description: The Hostname to use for the Management API.
                                 type: string
+                              keyVaultCertificateId:
+                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                                type: string
                               keyVaultId:
-                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                                description: The ID of the API Management Service.
                                 type: string
                               negotiateClientCertificate:
                                 description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -1489,8 +1513,11 @@ spec:
                               hostName:
                                 description: The Hostname to use for the Management API.
                                 type: string
+                              keyVaultCertificateId:
+                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                                type: string
                               keyVaultId:
-                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                                description: The ID of the API Management Service.
                                 type: string
                               negotiateClientCertificate:
                                 description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -1522,8 +1549,11 @@ spec:
                               hostName:
                                 description: The Hostname to use for the Management API.
                                 type: string
+                              keyVaultCertificateId:
+                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                                type: string
                               keyVaultId:
-                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                                description: The ID of the API Management Service.
                                 type: string
                               negotiateClientCertificate:
                                 description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -1558,8 +1588,11 @@ spec:
                               hostName:
                                 description: The Hostname to use for the Management API.
                                 type: string
+                              keyVaultCertificateId:
+                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                                type: string
                               keyVaultId:
-                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                                description: The ID of the API Management Service.
                                 type: string
                               negotiateClientCertificate:
                                 description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -1591,8 +1624,11 @@ spec:
                               hostName:
                                 description: The Hostname to use for the Management API.
                                 type: string
+                              keyVaultCertificateId:
+                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                                type: string
                               keyVaultId:
-                                description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                                description: The ID of the API Management Service.
                                 type: string
                               negotiateClientCertificate:
                                 description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -1646,18 +1682,6 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    description: A policy block as defined below.
-                    items:
-                      properties:
-                        xmlContent:
-                          description: The XML Content for this Policy.
-                          type: string
-                        xmlLink:
-                          description: A link to an API Management Policy XML Document, which must be publicly available.
-                          type: string
-                      type: object
-                    type: array
                   portalUrl:
                     description: The URL for the Publisher Portal associated with this API Management service.
                     type: string
@@ -1671,6 +1695,8 @@ spec:
                     items:
                       properties:
                         enableHttp2:
+                          type: boolean
+                        http2Enabled:
                           description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                           type: boolean
                       type: object
@@ -1693,7 +1719,7 @@ spec:
                     description: The name of publisher/company.
                     type: string
                   resourceGroupName:
-                    description: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+                    description: The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.
                     type: string
                   scmUrl:
                     description: The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
@@ -1702,22 +1728,34 @@ spec:
                     description: A security block as defined below.
                     items:
                       properties:
-                        enableBackendSsl30:
+                        backendSsl30Enabled:
                           description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls10:
+                        backendTls10Enabled:
                           description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
-                        enableBackendTls11:
+                        backendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                           type: boolean
+                        enableBackendSsl30:
+                          type: boolean
+                        enableBackendTls10:
+                          type: boolean
+                        enableBackendTls11:
+                          type: boolean
                         enableFrontendSsl30:
-                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls10:
-                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         enableFrontendTls11:
+                          type: boolean
+                        frontendSsl30Enabled:
+                          description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls10Enabled:
+                          description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                          type: boolean
+                        frontendTls11Enabled:
                           description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                           type: boolean
                         tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:
@@ -2179,17 +2217,12 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    properties:
-                      xmlContent:
-                        type: string
-                      xmlLink:
-                        type: string
-                    type: object
                   protocols:
                     description: A protocols block as defined below.
                     properties:
                       enableHttp2:
+                        type: boolean
+                      http2Enabled:
                         description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                         type: boolean
                     type: object
@@ -2206,7 +2239,7 @@ spec:
                     description: The name of publisher/company.
                     type: string
                   resourceGroupName:
-                    description: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+                    description: The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.
                     type: string
                   resourceGroupNameRef:
                     description: Reference to a ResourceGroup in azure to populate resourceGroupName.
@@ -2297,22 +2330,34 @@ spec:
                   security:
                     description: A security block as defined below.
                     properties:
-                      enableBackendSsl30:
+                      backendSsl30Enabled:
                         description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls10:
+                      backendTls10Enabled:
                         description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls11:
+                      backendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
+                      enableBackendSsl30:
+                        type: boolean
+                      enableBackendTls10:
+                        type: boolean
+                      enableBackendTls11:
+                        type: boolean
                       enableFrontendSsl30:
-                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls10:
-                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls11:
+                        type: boolean
+                      frontendSsl30Enabled:
+                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls10Enabled:
+                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:
@@ -2737,17 +2782,12 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    properties:
-                      xmlContent:
-                        type: string
-                      xmlLink:
-                        type: string
-                    type: object
                   protocols:
                     description: A protocols block as defined below.
                     properties:
                       enableHttp2:
+                        type: boolean
+                      http2Enabled:
                         description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                         type: boolean
                     type: object
@@ -2766,22 +2806,34 @@ spec:
                   security:
                     description: A security block as defined below.
                     properties:
-                      enableBackendSsl30:
+                      backendSsl30Enabled:
                         description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls10:
+                      backendTls10Enabled:
                         description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls11:
+                      backendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
+                      enableBackendSsl30:
+                        type: boolean
+                      enableBackendTls10:
+                        type: boolean
+                      enableBackendTls11:
+                        type: boolean
                       enableFrontendSsl30:
-                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls10:
-                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls11:
+                        type: boolean
+                      frontendSsl30Enabled:
+                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls10Enabled:
+                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:
@@ -3295,8 +3347,11 @@ spec:
                             hostName:
                               description: The Hostname to use for the Management API.
                               type: string
+                            keyVaultCertificateId:
+                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                              type: string
                             keyVaultId:
-                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                              description: The ID of the API Management Service.
                               type: string
                             negotiateClientCertificate:
                               description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -3328,8 +3383,11 @@ spec:
                             hostName:
                               description: The Hostname to use for the Management API.
                               type: string
+                            keyVaultCertificateId:
+                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                              type: string
                             keyVaultId:
-                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                              description: The ID of the API Management Service.
                               type: string
                             negotiateClientCertificate:
                               description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -3361,8 +3419,11 @@ spec:
                             hostName:
                               description: The Hostname to use for the Management API.
                               type: string
+                            keyVaultCertificateId:
+                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                              type: string
                             keyVaultId:
-                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                              description: The ID of the API Management Service.
                               type: string
                             negotiateClientCertificate:
                               description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -3397,8 +3458,11 @@ spec:
                             hostName:
                               description: The Hostname to use for the Management API.
                               type: string
+                            keyVaultCertificateId:
+                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                              type: string
                             keyVaultId:
-                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                              description: The ID of the API Management Service.
                               type: string
                             negotiateClientCertificate:
                               description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -3430,8 +3494,11 @@ spec:
                             hostName:
                               description: The Hostname to use for the Management API.
                               type: string
+                            keyVaultCertificateId:
+                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.
+                              type: string
                             keyVaultId:
-                              description: The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.
+                              description: The ID of the API Management Service.
                               type: string
                             negotiateClientCertificate:
                               description: Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.
@@ -3482,13 +3549,6 @@ spec:
                   notificationSenderEmail:
                     description: Email address from which the notification will be sent.
                     type: string
-                  policy:
-                    properties:
-                      xmlContent:
-                        type: string
-                      xmlLink:
-                        type: string
-                    type: object
                   portalUrl:
                     description: The URL for the Publisher Portal associated with this API Management service.
                     type: string
@@ -3501,6 +3561,8 @@ spec:
                     description: A protocols block as defined below.
                     properties:
                       enableHttp2:
+                        type: boolean
+                      http2Enabled:
                         description: Should HTTP/2 be supported by the API Management Service? Defaults to false.
                         type: boolean
                     type: object
@@ -3522,7 +3584,7 @@ spec:
                     description: The name of publisher/company.
                     type: string
                   resourceGroupName:
-                    description: The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+                    description: The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.
                     type: string
                   scmUrl:
                     description: The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
@@ -3530,22 +3592,34 @@ spec:
                   security:
                     description: A security block as defined below.
                     properties:
-                      enableBackendSsl30:
+                      backendSsl30Enabled:
                         description: Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls10:
+                      backendTls10Enabled:
                         description: Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
-                      enableBackendTls11:
+                      backendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.
                         type: boolean
+                      enableBackendSsl30:
+                        type: boolean
+                      enableBackendTls10:
+                        type: boolean
+                      enableBackendTls11:
+                        type: boolean
                       enableFrontendSsl30:
-                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls10:
-                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       enableFrontendTls11:
+                        type: boolean
+                      frontendSsl30Enabled:
+                        description: Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls10Enabled:
+                        description: Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.
+                        type: boolean
+                      frontendTls11Enabled:
                         description: Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.
                         type: boolean
                       tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled:

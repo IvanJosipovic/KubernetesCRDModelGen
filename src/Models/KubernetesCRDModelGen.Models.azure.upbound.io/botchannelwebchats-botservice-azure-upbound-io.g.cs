@@ -176,10 +176,6 @@ public partial class V1beta1BotChannelWebChatSpecForProvider
     /// <summary>A site represents a client application that you want to connect to your bot. One or more site blocks as defined below.</summary>
     [JsonPropertyName("site")]
     public IList<V1beta1BotChannelWebChatSpecForProviderSite>? Site { get; set; }
-
-    /// <summary>Deprecated: siteNames will be removed in favour of the site code block.</summary>
-    [JsonPropertyName("siteNames")]
-    public IList<string>? SiteNames { get; set; }
 }
 
 /// <summary></summary>
@@ -214,10 +210,6 @@ public partial class V1beta1BotChannelWebChatSpecInitProvider
     /// <summary>A site represents a client application that you want to connect to your bot. One or more site blocks as defined below.</summary>
     [JsonPropertyName("site")]
     public IList<V1beta1BotChannelWebChatSpecInitProviderSite>? Site { get; set; }
-
-    /// <summary>Deprecated: siteNames will be removed in favour of the site code block.</summary>
-    [JsonPropertyName("siteNames")]
-    public IList<string>? SiteNames { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -396,10 +388,6 @@ public partial class V1beta1BotChannelWebChatStatusAtProvider
     /// <summary>A site represents a client application that you want to connect to your bot. One or more site blocks as defined below.</summary>
     [JsonPropertyName("site")]
     public IList<V1beta1BotChannelWebChatStatusAtProviderSite>? Site { get; set; }
-
-    /// <summary>Deprecated: siteNames will be removed in favour of the site code block.</summary>
-    [JsonPropertyName("siteNames")]
-    public IList<string>? SiteNames { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

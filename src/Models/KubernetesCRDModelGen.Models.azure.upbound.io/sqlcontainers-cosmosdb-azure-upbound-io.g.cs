@@ -305,7 +305,7 @@ public partial class V1beta1SQLContainerSpecForProvider
     [JsonPropertyName("analyticalStorageTtl")]
     public double? AnalyticalStorageTtl { get; set; }
 
-    /// <summary>An autoscale_settings block as defined below. Requires partition_key_path to be set.</summary>
+    /// <summary>An autoscale_settings block as defined below.</summary>
     [JsonPropertyName("autoscaleSettings")]
     public IList<V1beta1SQLContainerSpecForProviderAutoscaleSettings>? AutoscaleSettings { get; set; }
 
@@ -337,15 +337,11 @@ public partial class V1beta1SQLContainerSpecForProvider
     [JsonPropertyName("partitionKeyKind")]
     public string? PartitionKeyKind { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("partitionKeyPath")]
-    public string? PartitionKeyPath { get; set; }
-
     /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitionKeyPaths")]
     public IList<string>? PartitionKeyPaths { get; set; }
 
-    /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
+    /// <summary>Define a partition key version. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]
     public double? PartitionKeyVersion { get; set; }
 
@@ -487,7 +483,7 @@ public partial class V1beta1SQLContainerSpecInitProvider
     [JsonPropertyName("analyticalStorageTtl")]
     public double? AnalyticalStorageTtl { get; set; }
 
-    /// <summary>An autoscale_settings block as defined below. Requires partition_key_path to be set.</summary>
+    /// <summary>An autoscale_settings block as defined below.</summary>
     [JsonPropertyName("autoscaleSettings")]
     public IList<V1beta1SQLContainerSpecInitProviderAutoscaleSettings>? AutoscaleSettings { get; set; }
 
@@ -507,15 +503,11 @@ public partial class V1beta1SQLContainerSpecInitProvider
     [JsonPropertyName("partitionKeyKind")]
     public string? PartitionKeyKind { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("partitionKeyPath")]
-    public string? PartitionKeyPath { get; set; }
-
     /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitionKeyPaths")]
     public IList<string>? PartitionKeyPaths { get; set; }
 
-    /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
+    /// <summary>Define a partition key version. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]
     public double? PartitionKeyVersion { get; set; }
 
@@ -785,7 +777,7 @@ public partial class V1beta1SQLContainerStatusAtProvider
     [JsonPropertyName("analyticalStorageTtl")]
     public double? AnalyticalStorageTtl { get; set; }
 
-    /// <summary>An autoscale_settings block as defined below. Requires partition_key_path to be set.</summary>
+    /// <summary>An autoscale_settings block as defined below.</summary>
     [JsonPropertyName("autoscaleSettings")]
     public IList<V1beta1SQLContainerStatusAtProviderAutoscaleSettings>? AutoscaleSettings { get; set; }
 
@@ -813,15 +805,11 @@ public partial class V1beta1SQLContainerStatusAtProvider
     [JsonPropertyName("partitionKeyKind")]
     public string? PartitionKeyKind { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("partitionKeyPath")]
-    public string? PartitionKeyPath { get; set; }
-
     /// <summary>A list of partition key paths. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitionKeyPaths")]
     public IList<string>? PartitionKeyPaths { get; set; }
 
-    /// <summary>Define a partition key version. Changing this forces a new resource to be created. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
+    /// <summary>Define a partition key version. Possible values are 1and 2. This should be set to 2 in order to use large partition keys.</summary>
     [JsonPropertyName("partitionKeyVersion")]
     public double? PartitionKeyVersion { get; set; }
 

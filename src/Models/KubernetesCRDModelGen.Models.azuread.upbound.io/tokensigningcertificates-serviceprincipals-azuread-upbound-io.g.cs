@@ -76,7 +76,7 @@ public partial class V1beta1TokenSigningCertificateSpecForProvider
     [JsonPropertyName("endDate")]
     public string? EndDate { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -157,7 +157,7 @@ public partial class V1beta1TokenSigningCertificateSpecInitProvider
     [JsonPropertyName("endDate")]
     public string? EndDate { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -322,7 +322,7 @@ public partial class V1beta1TokenSigningCertificateStatusAtProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 

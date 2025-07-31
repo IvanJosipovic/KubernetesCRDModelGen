@@ -10,62 +10,6 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.serviceprincipals.azuread.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecForProviderApplicationIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate applicationId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecForProviderApplicationIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PrincipalSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecForProviderApplicationIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate applicationId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecForProviderApplicationIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PrincipalSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalSpecForProviderClientIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -166,18 +110,6 @@ public partial class V1beta1PrincipalSpecForProvider
     [JsonPropertyName("appRoleAssignmentRequired")]
     public bool? AppRoleAssignmentRequired { get; set; }
 
-    /// <summary>The unique identifier of the app_role. The application ID (client ID) of the application for which to create a service principal</summary>
-    [JsonPropertyName("applicationId")]
-    public string? ApplicationId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
-    [JsonPropertyName("applicationIdRef")]
-    public V1beta1PrincipalSpecForProviderApplicationIdRef? ApplicationIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
-    [JsonPropertyName("applicationIdSelector")]
-    public V1beta1PrincipalSpecForProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
-
     /// <summary>The client ID of the application for which to create a service principal. The client ID of the application for which to create a service principal</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
@@ -229,62 +161,6 @@ public partial class V1beta1PrincipalSpecForProvider
     /// <summary>When true, any existing service principal linked to the same application will be automatically imported. When false, an import error will be raised for any pre-existing service principal. When true, the resource will return an existing service principal instead of failing with an error</summary>
     [JsonPropertyName("useExisting")]
     public bool? UseExisting { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecInitProviderApplicationIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate applicationId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecInitProviderApplicationIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PrincipalSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecInitProviderApplicationIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate applicationId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PrincipalSpecInitProviderApplicationIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1PrincipalSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -388,18 +264,6 @@ public partial class V1beta1PrincipalSpecInitProvider
     /// <summary>Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application. Defaults to false. Whether this service principal requires an app role assignment to a user or group before Azure AD will issue a user or access token to the application</summary>
     [JsonPropertyName("appRoleAssignmentRequired")]
     public bool? AppRoleAssignmentRequired { get; set; }
-
-    /// <summary>The unique identifier of the app_role. The application ID (client ID) of the application for which to create a service principal</summary>
-    [JsonPropertyName("applicationId")]
-    public string? ApplicationId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
-    [JsonPropertyName("applicationIdRef")]
-    public V1beta1PrincipalSpecInitProviderApplicationIdRef? ApplicationIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
-    [JsonPropertyName("applicationIdSelector")]
-    public V1beta1PrincipalSpecInitProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
     /// <summary>The client ID of the application for which to create a service principal. The client ID of the application for which to create a service principal</summary>
     [JsonPropertyName("clientId")]
@@ -705,10 +569,6 @@ public partial class V1beta1PrincipalStatusAtProvider
     /// <summary>A list of app roles published by the associated application, as documented below. For more information official documentation.</summary>
     [JsonPropertyName("appRoles")]
     public IList<V1beta1PrincipalStatusAtProviderAppRoles>? AppRoles { get; set; }
-
-    /// <summary>The unique identifier of the app_role. The application ID (client ID) of the application for which to create a service principal</summary>
-    [JsonPropertyName("applicationId")]
-    public string? ApplicationId { get; set; }
 
     /// <summary>The tenant ID where the associated application is registered. The tenant ID where the associated application is registered</summary>
     [JsonPropertyName("applicationTenantId")]

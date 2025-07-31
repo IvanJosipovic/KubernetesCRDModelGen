@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: trafficmanagerazureendpoints.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -304,7 +304,7 @@ spec:
                         type: object
                     type: object
                   weight:
-                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.
+                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.
                     type: number
                 type: object
               initProvider:
@@ -460,7 +460,7 @@ spec:
                         type: object
                     type: object
                   weight:
-                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.
+                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.
                     type: number
                 type: object
               managementPolicies:
@@ -727,7 +727,7 @@ spec:
                     description: The ID of the Azure Resource which should be used as a target.
                     type: string
                   weight:
-                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.
+                    description: Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.
                     type: number
                 type: object
               conditions:

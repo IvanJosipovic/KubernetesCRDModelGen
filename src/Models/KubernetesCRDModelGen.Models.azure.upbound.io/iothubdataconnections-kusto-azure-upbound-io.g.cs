@@ -392,7 +392,7 @@ public partial class V1beta1IOTHubDataConnectionSpecForProvider
     [JsonPropertyName("databaseRoutingType")]
     public string? DatabaseRoutingType { get; set; }
 
-    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created. Possible values are message-id, sequence-number, to, absolute-expiry-time, iothub-enqueuedtime, correlation-id, user-id, iothub-ack, iothub-connection-device-id, iothub-connection-auth-generation-id and iothub-connection-auth-method.</summary>
+    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("eventSystemProperties")]
     public IList<string>? EventSystemProperties { get; set; }
 
@@ -833,7 +833,7 @@ public partial class V1beta1IOTHubDataConnectionSpecInitProvider
     [JsonPropertyName("databaseRoutingType")]
     public string? DatabaseRoutingType { get; set; }
 
-    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created. Possible values are message-id, sequence-number, to, absolute-expiry-time, iothub-enqueuedtime, correlation-id, user-id, iothub-ack, iothub-connection-device-id, iothub-connection-auth-generation-id and iothub-connection-auth-method.</summary>
+    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("eventSystemProperties")]
     public IList<string>? EventSystemProperties { get; set; }
 
@@ -1046,7 +1046,7 @@ public partial class V1beta1IOTHubDataConnectionStatusAtProvider
     [JsonPropertyName("databaseRoutingType")]
     public string? DatabaseRoutingType { get; set; }
 
-    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created. Possible values are message-id, sequence-number, to, absolute-expiry-time, iothub-enqueuedtime, correlation-id, user-id, iothub-ack, iothub-connection-device-id, iothub-connection-auth-generation-id and iothub-connection-auth-method.</summary>
+    /// <summary>Specifies the System Properties that each IoT Hub message should contain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("eventSystemProperties")]
     public IList<string>? EventSystemProperties { get; set; }
 

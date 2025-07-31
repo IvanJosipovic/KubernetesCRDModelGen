@@ -96,7 +96,7 @@ public partial class V1beta1RoleAssignmentSpecForProvider
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.</summary>
+    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
@@ -108,7 +108,7 @@ public partial class V1beta1RoleAssignmentSpecForProvider
     [JsonPropertyName("roleDefinitionIdSelector")]
     public V1beta1RoleAssignmentSpecForProviderRoleDefinitionIdSelector? RoleDefinitionIdSelector { get; set; }
 
-    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.</summary>
+    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionName")]
     public string? RoleDefinitionName { get; set; }
 
@@ -209,7 +209,7 @@ public partial class V1beta1RoleAssignmentSpecInitProvider
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.</summary>
+    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
@@ -221,7 +221,7 @@ public partial class V1beta1RoleAssignmentSpecInitProvider
     [JsonPropertyName("roleDefinitionIdSelector")]
     public V1beta1RoleAssignmentSpecInitProviderRoleDefinitionIdSelector? RoleDefinitionIdSelector { get; set; }
 
-    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.</summary>
+    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionName")]
     public string? RoleDefinitionName { get; set; }
 
@@ -402,11 +402,11 @@ public partial class V1beta1RoleAssignmentStatusAtProvider
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created. Conflicts with role_definition_name.</summary>
+    /// <summary>The Scoped-ID of the Role Definition. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created. Conflicts with role_definition_id.</summary>
+    /// <summary>The name of a built-in Role. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleDefinitionName")]
     public string? RoleDefinitionName { get; set; }
 

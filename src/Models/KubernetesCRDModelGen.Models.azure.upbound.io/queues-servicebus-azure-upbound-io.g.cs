@@ -72,7 +72,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -84,23 +84,11 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (PT10M).</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to false for Basic and Standard. For Premium, it MUST be set to false.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
@@ -112,7 +100,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("forwardTo")]
     public string? ForwardTo { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (PT1M).</summary>
+    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to PT1M (1 Minute).</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 
@@ -124,7 +112,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas. Defaults to 1024.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
@@ -140,7 +128,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("namespaceIdSelector")]
     public V1beta1QueueSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 
@@ -165,7 +153,7 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -177,23 +165,11 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (PT10M).</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to false for Basic and Standard. For Premium, it MUST be set to false.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
@@ -205,7 +181,7 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("forwardTo")]
     public string? ForwardTo { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (PT1M).</summary>
+    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to PT1M (1 Minute).</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 
@@ -217,11 +193,11 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas. Defaults to 1024.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 
@@ -378,7 +354,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -390,23 +366,11 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes (PT10M).</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls whether server-side batched operations are enabled. Defaults to true.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage. Defaults to false for Basic and Standard. For Premium, it MUST be set to false.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
@@ -422,7 +386,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute (PT1M).</summary>
+    /// <summary>The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to PT1M (1 Minute).</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 
@@ -434,7 +398,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas. Defaults to 1024.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the queue. For supported values see the "Queue or topic size" section of Service Bus Quotas.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
@@ -442,7 +406,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the queue to be partitioned across multiple message brokers. Changing this forces a new resource to be created. Defaults to false for Basic and Standard.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 

@@ -12,7 +12,11 @@ namespace KubernetesCRDModelGen.Models.search.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderIdentity
 {
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. The only possible value is SystemAssigned.</summary>
+    /// <summary>Specifies the list of User Assigned Managed Service Identity IDs which should be assigned to this Search Service.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -105,7 +109,11 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free or basic sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to None.</summary>
+    [JsonPropertyName("networkRuleBypassOption")]
+    public string? NetworkRuleBypassOption { get; set; }
+
+    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
     [JsonPropertyName("partitionCount")]
     public double? PartitionCount { get; set; }
 
@@ -146,7 +154,11 @@ public partial class V1beta1ServiceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderIdentity
 {
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. The only possible value is SystemAssigned.</summary>
+    /// <summary>Specifies the list of User Assigned Managed Service Identity IDs which should be assigned to this Search Service.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -183,7 +195,11 @@ public partial class V1beta1ServiceSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free or basic sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to None.</summary>
+    [JsonPropertyName("networkRuleBypassOption")]
+    public string? NetworkRuleBypassOption { get; set; }
+
+    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
     [JsonPropertyName("partitionCount")]
     public double? PartitionCount { get; set; }
 
@@ -344,6 +360,10 @@ public partial class V1beta1ServiceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderIdentity
 {
+    /// <summary>Specifies the list of User Assigned Managed Service Identity IDs which should be assigned to this Search Service.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
     /// <summary>The Principal ID associated with this Managed Service Identity.</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
@@ -352,7 +372,7 @@ public partial class V1beta1ServiceStatusAtProviderIdentity
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. The only possible value is SystemAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this Search Service. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -382,6 +402,10 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("authenticationFailureMode")]
     public string? AuthenticationFailureMode { get; set; }
 
+    /// <summary>Describes whether the search service is compliant or not with respect to having non-customer encrypted resources. If a service has more than one non-customer encrypted resource and Enforcement is enabled then the service will be marked as NonCompliant. If all the resources are customer encrypted, then the service will be marked as Compliant.</summary>
+    [JsonPropertyName("customerManagedKeyEncryptionComplianceStatus")]
+    public string? CustomerManagedKeyEncryptionComplianceStatus { get; set; }
+
     /// <summary>Specifies whether the Search Service should enforce that non-customer resources are encrypted. Defaults to false.</summary>
     [JsonPropertyName("customerManagedKeyEnforcementEnabled")]
     public bool? CustomerManagedKeyEnforcementEnabled { get; set; }
@@ -406,7 +430,11 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free or basic sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to None.</summary>
+    [JsonPropertyName("networkRuleBypassOption")]
+    public string? NetworkRuleBypassOption { get; set; }
+
+    /// <summary>Specifies the number of partitions which should be created. This field cannot be set when using a free sku (see the Microsoft documentation). Possible values include 1, 2, 3, 4, 6, or 12. Defaults to 1.</summary>
     [JsonPropertyName("partitionCount")]
     public double? PartitionCount { get; set; }
 

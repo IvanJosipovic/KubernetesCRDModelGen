@@ -21,7 +21,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Database in dbformysql to populate databaseName.</summary>
+/// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRef
 {
@@ -47,7 +47,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabas
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Database in dbformysql to populate databaseName.</summary>
+/// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelector
 {
@@ -77,7 +77,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Server in dbformysql to populate mysqlServerId.</summary>
+/// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRef
 {
@@ -103,7 +103,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlSe
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Server in dbformysql to populate mysqlServerId.</summary>
+/// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelector
 {
@@ -206,7 +206,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Server in dbformysql to populate username.</summary>
+/// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRef
 {
@@ -232,7 +232,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernam
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Server in dbformysql to populate username.</summary>
+/// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector
 {
@@ -257,11 +257,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
-    /// <summary>Reference to a Database in dbformysql to populate databaseName.</summary>
+    /// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
     [JsonPropertyName("databaseNameRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameRef? DatabaseNameRef { get; set; }
 
-    /// <summary>Selector for a Database in dbformysql to populate databaseName.</summary>
+    /// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
     [JsonPropertyName("databaseNameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderDatabaseNameSelector? DatabaseNameSelector { get; set; }
 
@@ -269,11 +269,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
     [JsonPropertyName("mysqlServerId")]
     public string? MysqlServerId { get; set; }
 
-    /// <summary>Reference to a Server in dbformysql to populate mysqlServerId.</summary>
+    /// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
     [JsonPropertyName("mysqlServerIdRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdRef? MysqlServerIdRef { get; set; }
 
-    /// <summary>Selector for a Server in dbformysql to populate mysqlServerId.</summary>
+    /// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
     [JsonPropertyName("mysqlServerIdSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderMysqlServerIdSelector? MysqlServerIdSelector { get; set; }
 
@@ -297,11 +297,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecForProvider
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 
-    /// <summary>Reference to a Server in dbformysql to populate username.</summary>
+    /// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
     [JsonPropertyName("usernameRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameRef? UsernameRef { get; set; }
 
-    /// <summary>Selector for a Server in dbformysql to populate username.</summary>
+    /// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
     [JsonPropertyName("usernameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecForProviderUsernameSelector? UsernameSelector { get; set; }
 }
@@ -319,7 +319,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Database in dbformysql to populate databaseName.</summary>
+/// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRef
 {
@@ -345,7 +345,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDataba
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Database in dbformysql to populate databaseName.</summary>
+/// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelector
 {
@@ -375,7 +375,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Server in dbformysql to populate mysqlServerId.</summary>
+/// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRef
 {
@@ -401,7 +401,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlS
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Server in dbformysql to populate mysqlServerId.</summary>
+/// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelector
 {
@@ -448,7 +448,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Server in dbformysql to populate username.</summary>
+/// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRef
 {
@@ -474,7 +474,7 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUserna
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Server in dbformysql to populate username.</summary>
+/// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelector
 {
@@ -499,11 +499,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
-    /// <summary>Reference to a Database in dbformysql to populate databaseName.</summary>
+    /// <summary>Reference to a FlexibleDatabase in dbformysql to populate databaseName.</summary>
     [JsonPropertyName("databaseNameRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameRef? DatabaseNameRef { get; set; }
 
-    /// <summary>Selector for a Database in dbformysql to populate databaseName.</summary>
+    /// <summary>Selector for a FlexibleDatabase in dbformysql to populate databaseName.</summary>
     [JsonPropertyName("databaseNameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderDatabaseNameSelector? DatabaseNameSelector { get; set; }
 
@@ -511,11 +511,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
     [JsonPropertyName("mysqlServerId")]
     public string? MysqlServerId { get; set; }
 
-    /// <summary>Reference to a Server in dbformysql to populate mysqlServerId.</summary>
+    /// <summary>Reference to a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
     [JsonPropertyName("mysqlServerIdRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdRef? MysqlServerIdRef { get; set; }
 
-    /// <summary>Selector for a Server in dbformysql to populate mysqlServerId.</summary>
+    /// <summary>Selector for a FlexibleServer in dbformysql to populate mysqlServerId.</summary>
     [JsonPropertyName("mysqlServerIdSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderMysqlServerIdSelector? MysqlServerIdSelector { get; set; }
 
@@ -527,11 +527,11 @@ public partial class V1beta1SpringCloudAppMySQLAssociationSpecInitProvider
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 
-    /// <summary>Reference to a Server in dbformysql to populate username.</summary>
+    /// <summary>Reference to a FlexibleServer in dbformysql to populate username.</summary>
     [JsonPropertyName("usernameRef")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameRef? UsernameRef { get; set; }
 
-    /// <summary>Selector for a Server in dbformysql to populate username.</summary>
+    /// <summary>Selector for a FlexibleServer in dbformysql to populate username.</summary>
     [JsonPropertyName("usernameSelector")]
     public V1beta1SpringCloudAppMySQLAssociationSpecInitProviderUsernameSelector? UsernameSelector { get; set; }
 }

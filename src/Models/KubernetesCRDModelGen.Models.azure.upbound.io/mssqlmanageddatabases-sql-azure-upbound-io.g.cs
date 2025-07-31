@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecForProviderLongTermRetentionPolicy
 {
-    /// <summary>Specifies if the backups are immutable. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("immutableBackupsEnabled")]
     public bool? ImmutableBackupsEnabled { get; set; }
 
-    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D.</summary>
+    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D. Defaults to PT0S.</summary>
     [JsonPropertyName("monthlyRetention")]
     public string? MonthlyRetention { get; set; }
 
@@ -24,11 +24,11 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProviderLongTermRetention
     [JsonPropertyName("weekOfYear")]
     public double? WeekOfYear { get; set; }
 
-    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D.</summary>
+    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D. Defaults to PT0S.</summary>
     [JsonPropertyName("weeklyRetention")]
     public string? WeeklyRetention { get; set; }
 
-    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D.</summary>
+    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D. Defaults to PT0S.</summary>
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
@@ -129,17 +129,21 @@ public partial class V1beta1MSSQLManagedDatabaseSpecForProvider
     /// <summary>The backup retention period in days. This is how many days Point-in-Time Restore will be supported.</summary>
     [JsonPropertyName("shortTermRetentionDays")]
     public double? ShortTermRetentionDays { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderLongTermRetentionPolicy
 {
-    /// <summary>Specifies if the backups are immutable. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("immutableBackupsEnabled")]
     public bool? ImmutableBackupsEnabled { get; set; }
 
-    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D.</summary>
+    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D. Defaults to PT0S.</summary>
     [JsonPropertyName("monthlyRetention")]
     public string? MonthlyRetention { get; set; }
 
@@ -147,11 +151,11 @@ public partial class V1beta1MSSQLManagedDatabaseSpecInitProviderLongTermRetentio
     [JsonPropertyName("weekOfYear")]
     public double? WeekOfYear { get; set; }
 
-    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D.</summary>
+    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D. Defaults to PT0S.</summary>
     [JsonPropertyName("weeklyRetention")]
     public string? WeeklyRetention { get; set; }
 
-    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D.</summary>
+    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D. Defaults to PT0S.</summary>
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
@@ -184,6 +188,10 @@ public partial class V1beta1MSSQLManagedDatabaseSpecInitProvider
     /// <summary>The backup retention period in days. This is how many days Point-in-Time Restore will be supported.</summary>
     [JsonPropertyName("shortTermRetentionDays")]
     public double? ShortTermRetentionDays { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -322,11 +330,11 @@ public partial class V1beta1MSSQLManagedDatabaseSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderLongTermRetentionPolicy
 {
-    /// <summary>Specifies if the backups are immutable. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("immutableBackupsEnabled")]
     public bool? ImmutableBackupsEnabled { get; set; }
 
-    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D.</summary>
+    /// <summary>The monthly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 120 months. e.g. P1Y, P1M, P4W or P30D. Defaults to PT0S.</summary>
     [JsonPropertyName("monthlyRetention")]
     public string? MonthlyRetention { get; set; }
 
@@ -334,11 +342,11 @@ public partial class V1beta1MSSQLManagedDatabaseStatusAtProviderLongTermRetentio
     [JsonPropertyName("weekOfYear")]
     public double? WeekOfYear { get; set; }
 
-    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D.</summary>
+    /// <summary>The weekly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 520 weeks. e.g. P1Y, P1M, P1W or P7D. Defaults to PT0S.</summary>
     [JsonPropertyName("weeklyRetention")]
     public string? WeeklyRetention { get; set; }
 
-    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D.</summary>
+    /// <summary>The yearly retention policy for an LTR backup in an ISO 8601 format. Valid value is between 1 to 10 years. e.g. P1Y, P12M, P52W or P365D. Defaults to PT0S.</summary>
     [JsonPropertyName("yearlyRetention")]
     public string? YearlyRetention { get; set; }
 }
@@ -379,6 +387,10 @@ public partial class V1beta1MSSQLManagedDatabaseStatusAtProvider
     /// <summary>The backup retention period in days. This is how many days Point-in-Time Restore will be supported.</summary>
     [JsonPropertyName("shortTermRetentionDays")]
     public double? ShortTermRetentionDays { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

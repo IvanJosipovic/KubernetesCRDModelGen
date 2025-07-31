@@ -120,6 +120,14 @@ public partial class V1beta1SecretSpecForProvider
     /// <summary>Specifies the value of the Key Vault Secret. Changing this will create a new version of the Key Vault Secret.</summary>
     [JsonPropertyName("valueSecretRef")]
     public V1beta1SecretSpecForProviderValueSecretRef? ValueSecretRef { get; set; }
+
+    /// <summary>Specifies the value of the Key Vault Secret. Changing this will create a new version of the Key Vault Secret.</summary>
+    [JsonPropertyName("valueWo")]
+    public string? ValueWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for value_wo. This property should be incremented when updating value_wo.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -233,7 +241,15 @@ public partial class V1beta1SecretSpecInitProvider
 
     /// <summary>Specifies the value of the Key Vault Secret. Changing this will create a new version of the Key Vault Secret.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1SecretSpecInitProviderValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1SecretSpecInitProviderValueSecretRef? ValueSecretRef { get; set; }
+
+    /// <summary>Specifies the value of the Key Vault Secret. Changing this will create a new version of the Key Vault Secret.</summary>
+    [JsonPropertyName("valueWo")]
+    public string? ValueWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for value_wo. This property should be incremented when updating value_wo.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -407,6 +423,14 @@ public partial class V1beta1SecretStatusAtProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Specifies the value of the Key Vault Secret. Changing this will create a new version of the Key Vault Secret.</summary>
+    [JsonPropertyName("valueWo")]
+    public string? ValueWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for value_wo. This property should be incremented when updating value_wo.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 
     /// <summary>The current version of the Key Vault Secret.</summary>
     [JsonPropertyName("version")]

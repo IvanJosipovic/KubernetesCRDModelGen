@@ -77,6 +77,10 @@ public partial class V1beta1BackupVaultSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupVaultSpecForProvider
 {
+    /// <summary>Whether to enable cross-region restore for the Backup Vault.</summary>
+    [JsonPropertyName("crossRegionRestoreEnabled")]
+    public bool? CrossRegionRestoreEnabled { get; set; }
+
     /// <summary>Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("datastoreType")]
     public string? DatastoreType { get; set; }
@@ -84,6 +88,10 @@ public partial class V1beta1BackupVaultSpecForProvider
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1BackupVaultSpecForProviderIdentity>? Identity { get; set; }
+
+    /// <summary>The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.</summary>
+    [JsonPropertyName("immutability")]
+    public string? Immutability { get; set; }
 
     /// <summary>The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.</summary>
     [JsonPropertyName("location")]
@@ -109,7 +117,7 @@ public partial class V1beta1BackupVaultSpecForProvider
     [JsonPropertyName("retentionDurationInDays")]
     public double? RetentionDurationInDays { get; set; }
 
-    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.</summary>
+    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.</summary>
     [JsonPropertyName("softDelete")]
     public string? SoftDelete { get; set; }
 
@@ -131,6 +139,10 @@ public partial class V1beta1BackupVaultSpecInitProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupVaultSpecInitProvider
 {
+    /// <summary>Whether to enable cross-region restore for the Backup Vault.</summary>
+    [JsonPropertyName("crossRegionRestoreEnabled")]
+    public bool? CrossRegionRestoreEnabled { get; set; }
+
     /// <summary>Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("datastoreType")]
     public string? DatastoreType { get; set; }
@@ -138,6 +150,10 @@ public partial class V1beta1BackupVaultSpecInitProvider
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1BackupVaultSpecInitProviderIdentity>? Identity { get; set; }
+
+    /// <summary>The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.</summary>
+    [JsonPropertyName("immutability")]
+    public string? Immutability { get; set; }
 
     /// <summary>The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.</summary>
     [JsonPropertyName("location")]
@@ -151,7 +167,7 @@ public partial class V1beta1BackupVaultSpecInitProvider
     [JsonPropertyName("retentionDurationInDays")]
     public double? RetentionDurationInDays { get; set; }
 
-    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.</summary>
+    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.</summary>
     [JsonPropertyName("softDelete")]
     public string? SoftDelete { get; set; }
 
@@ -313,6 +329,10 @@ public partial class V1beta1BackupVaultStatusAtProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupVaultStatusAtProvider
 {
+    /// <summary>Whether to enable cross-region restore for the Backup Vault.</summary>
+    [JsonPropertyName("crossRegionRestoreEnabled")]
+    public bool? CrossRegionRestoreEnabled { get; set; }
+
     /// <summary>Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("datastoreType")]
     public string? DatastoreType { get; set; }
@@ -324,6 +344,10 @@ public partial class V1beta1BackupVaultStatusAtProvider
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1BackupVaultStatusAtProviderIdentity>? Identity { get; set; }
+
+    /// <summary>The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.</summary>
+    [JsonPropertyName("immutability")]
+    public string? Immutability { get; set; }
 
     /// <summary>The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.</summary>
     [JsonPropertyName("location")]
@@ -341,7 +365,7 @@ public partial class V1beta1BackupVaultStatusAtProvider
     [JsonPropertyName("retentionDurationInDays")]
     public double? RetentionDurationInDays { get; set; }
 
-    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.</summary>
+    /// <summary>The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.</summary>
     [JsonPropertyName("softDelete")]
     public string? SoftDelete { get; set; }
 

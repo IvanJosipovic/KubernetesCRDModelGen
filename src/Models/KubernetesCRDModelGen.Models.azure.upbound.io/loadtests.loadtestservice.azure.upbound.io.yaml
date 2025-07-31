@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: loadtests.loadtestservice.azure.upbound.io
 spec:
   group: loadtestservice.azure.upbound.io
@@ -699,7 +699,7 @@ spec:
               forProvider:
                 properties:
                   description:
-                    description: Description of the resource. Changing this forces a new Load Test to be created.
+                    description: Description of the resource.
                     type: string
                   encryption:
                     description: An encryption block as defined below. Changing this forces a new Load Test to be created.
@@ -853,7 +853,7 @@ spec:
                   autoscaler.
                 properties:
                   description:
-                    description: Description of the resource. Changing this forces a new Load Test to be created.
+                    description: Description of the resource.
                     type: string
                   encryption:
                     description: An encryption block as defined below. Changing this forces a new Load Test to be created.
@@ -1115,7 +1115,7 @@ spec:
                     description: Resource data plane URI.
                     type: string
                   description:
-                    description: Description of the resource. Changing this forces a new Load Test to be created.
+                    description: Description of the resource.
                     type: string
                   encryption:
                     description: An encryption block as defined below. Changing this forces a new Load Test to be created.

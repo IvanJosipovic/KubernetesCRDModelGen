@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: servers.fluidrelay.azure.upbound.io
 spec:
   group: fluidrelay.azure.upbound.io
@@ -84,6 +84,18 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    items:
+                      properties:
+                        keyVaultKeyId:
+                          description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                          type: string
+                        userAssignedIdentityId:
+                          description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                          type: string
+                      type: object
+                    type: array
                   identity:
                     description: An identity block as defined below.
                     items:
@@ -226,6 +238,18 @@ spec:
 
                   autoscaler.
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    items:
+                      properties:
+                        keyVaultKeyId:
+                          description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                          type: string
+                        userAssignedIdentityId:
+                          description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                          type: string
+                      type: object
+                    type: array
                   identity:
                     description: An identity block as defined below.
                     items:
@@ -564,6 +588,18 @@ spec:
             properties:
               atProvider:
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    items:
+                      properties:
+                        keyVaultKeyId:
+                          description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                          type: string
+                        userAssignedIdentityId:
+                          description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                          type: string
+                      type: object
+                    type: array
                   frsTenantId:
                     description: The Fluid tenantId for this server.
                     type: string
@@ -758,6 +794,16 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    properties:
+                      keyVaultKeyId:
+                        description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                        type: string
+                      userAssignedIdentityId:
+                        description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                        type: string
+                    type: object
                   identity:
                     description: An identity block as defined below.
                     properties:
@@ -898,6 +944,16 @@ spec:
 
                   autoscaler.
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    properties:
+                      keyVaultKeyId:
+                        description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                        type: string
+                      userAssignedIdentityId:
+                        description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                        type: string
+                    type: object
                   identity:
                     description: An identity block as defined below.
                     properties:
@@ -1234,6 +1290,16 @@ spec:
             properties:
               atProvider:
                 properties:
+                  customerManagedKey:
+                    description: A customer_managed_key block as defined below. Changing this forces a new resource to be created.
+                    properties:
+                      keyVaultKeyId:
+                        description: The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.
+                        type: string
+                      userAssignedIdentityId:
+                        description: The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.
+                        type: string
+                    type: object
                   frsTenantId:
                     description: The Fluid tenantId for this server.
                     type: string

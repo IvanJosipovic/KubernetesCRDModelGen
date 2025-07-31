@@ -397,7 +397,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderAuthSettingsV2Active
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -748,7 +748,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderBackup
 
     /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
     [JsonPropertyName("storageAccountUrlSecretRef")]
-    public V1beta1WindowsWebAppSlotSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+    public V1beta1WindowsWebAppSlotSpecForProviderBackupStorageAccountUrlSecretRef? StorageAccountUrlSecretRef { get; set; }
 }
 
 /// <summary>The connection string value. The connection string value.</summary>
@@ -782,7 +782,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderConnectionString
 
     /// <summary>The connection string value. The connection string value.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1WindowsWebAppSlotSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1WindowsWebAppSlotSpecForProviderConnectionStringValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -855,7 +855,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderLogsHttpLogsAzureBlo
 
     /// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
     [JsonPropertyName("sasurlSecretRef")]
-    public V1beta1WindowsWebAppSlotSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef SasurlSecretRef { get; set; }
+    public V1beta1WindowsWebAppSlotSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef? SasurlSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -930,18 +930,6 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfigApplicatio
     [JsonPropertyName("currentStack")]
     public string? CurrentStack { get; set; }
 
-    /// <summary>The name of the container to be used. This value is required with docker_container_tag.</summary>
-    [JsonPropertyName("dockerContainerName")]
-    public string? DockerContainerName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerContainerRegistry")]
-    public string? DockerContainerRegistry { get; set; }
-
-    /// <summary>The tag of the container to be used. This value is required with docker_container_name.</summary>
-    [JsonPropertyName("dockerContainerTag")]
-    public string? DockerContainerTag { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. azure-app-service/windows/parkingpage:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
@@ -962,7 +950,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfigApplicatio
     [JsonPropertyName("dotnetCoreVersion")]
     public string? DotnetCoreVersion { get; set; }
 
-    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0 and v8.0.</summary>
+    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0, v8.0 and v9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -982,7 +970,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfigApplicatio
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, and ~18.</summary>
+    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, ~18, ~20 and ~22.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
@@ -993,10 +981,6 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfigApplicatio
     /// <summary>The app is a Python app. Defaults to false.</summary>
     [JsonPropertyName("python")]
     public bool? Python { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("pythonVersion")]
-    public string? PythonVersion { get; set; }
 
     /// <summary>The version of Tomcat the Java App should use.</summary>
     [JsonPropertyName("tomcatVersion")]
@@ -1057,10 +1041,6 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfigAutoHealSe
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -1487,10 +1467,6 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1WindowsWebAppSlotSpecForProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled. Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1WindowsWebAppSlotSpecForProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -1523,7 +1499,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("handlerMapping")]
     public IList<V1beta1WindowsWebAppSlotSpecForProviderSiteConfigHandlerMapping>? HandlerMapping { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -1563,7 +1539,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017 and VS2019</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -1583,7 +1559,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App Slotuse a 32-bit worker. Defaults to true.</summary>
+    /// <summary>Should the Windows Web App Slot use a 32-bit worker. The default value varies from different service plans.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -1627,7 +1603,7 @@ public partial class V1beta1WindowsWebAppSlotSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
     [JsonPropertyName("accessKeySecretRef")]
-    public V1beta1WindowsWebAppSlotSpecForProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+    public V1beta1WindowsWebAppSlotSpecForProviderStorageAccountAccessKeySecretRef? AccessKeySecretRef { get; set; }
 
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
@@ -1801,6 +1777,10 @@ public partial class V1beta1WindowsWebAppSlotSpecForProvider
     /// <summary>A mapping of tags which should be assigned to the Windows Web App Slot.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
@@ -2156,7 +2136,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderAuthSettingsV2Activ
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -2472,6 +2452,23 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsWebAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsWebAppSlotSpecInitProviderBackup
@@ -2487,6 +2484,27 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderBackup
     /// <summary>A schedule block as defined below.</summary>
     [JsonPropertyName("schedule")]
     public IList<V1beta1WindowsWebAppSlotSpecInitProviderBackupSchedule>? Schedule { get; set; }
+
+    /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+    [JsonPropertyName("storageAccountUrlSecretRef")]
+    public V1beta1WindowsWebAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+}
+
+/// <summary>The connection string value. The connection string value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsWebAppSlotSpecInitProviderConnectionStringValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -2500,6 +2518,10 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderConnectionString
     /// <summary>Type of database. Possible values include: APIHub, Custom, DocDb, EventHub, MySQL, NotificationHub, PostgreSQL, RedisCache, ServiceBus, SQLAzure, and SQLServer. Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>The connection string value. The connection string value.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1WindowsWebAppSlotSpecInitProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2545,6 +2567,23 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderLogsApplicationLogs
     public string? FileSystemLevel { get; set; }
 }
 
+/// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsWebAppSlotSpecInitProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsWebAppSlotSpecInitProviderLogsHttpLogsAzureBlobStorage
@@ -2552,6 +2591,10 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderLogsHttpLogsAzureBl
     /// <summary>The retention period in days. A values of 0 means no retention.</summary>
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
+
+    /// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
+    [JsonPropertyName("sasurlSecretRef")]
+    public V1beta1WindowsWebAppSlotSpecInitProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef SasurlSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2626,18 +2669,6 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigApplicati
     [JsonPropertyName("currentStack")]
     public string? CurrentStack { get; set; }
 
-    /// <summary>The name of the container to be used. This value is required with docker_container_tag.</summary>
-    [JsonPropertyName("dockerContainerName")]
-    public string? DockerContainerName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerContainerRegistry")]
-    public string? DockerContainerRegistry { get; set; }
-
-    /// <summary>The tag of the container to be used. This value is required with docker_container_name.</summary>
-    [JsonPropertyName("dockerContainerTag")]
-    public string? DockerContainerTag { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. azure-app-service/windows/parkingpage:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
@@ -2658,7 +2689,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigApplicati
     [JsonPropertyName("dotnetCoreVersion")]
     public string? DotnetCoreVersion { get; set; }
 
-    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0 and v8.0.</summary>
+    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0, v8.0 and v9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -2678,7 +2709,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigApplicati
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, and ~18.</summary>
+    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, ~18, ~20 and ~22.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
@@ -2689,10 +2720,6 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigApplicati
     /// <summary>The app is a Python app. Defaults to false.</summary>
     [JsonPropertyName("python")]
     public bool? Python { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("pythonVersion")]
-    public string? PythonVersion { get; set; }
 
     /// <summary>The version of Tomcat the Java App should use.</summary>
     [JsonPropertyName("tomcatVersion")]
@@ -2753,10 +2780,6 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigAutoHealS
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -3183,10 +3206,6 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled. Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -3219,7 +3238,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("handlerMapping")]
     public IList<V1beta1WindowsWebAppSlotSpecInitProviderSiteConfigHandlerMapping>? HandlerMapping { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -3259,7 +3278,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017 and VS2019</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -3279,7 +3298,7 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App Slotuse a 32-bit worker. Defaults to true.</summary>
+    /// <summary>Should the Windows Web App Slot use a 32-bit worker. The default value varies from different service plans.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -3300,10 +3319,31 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsWebAppSlotSpecInitProviderStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsWebAppSlotSpecInitProviderStorageAccount
 {
+    /// <summary>The Access key for the storage account.</summary>
+    [JsonPropertyName("accessKeySecretRef")]
+    public V1beta1WindowsWebAppSlotSpecInitProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
@@ -3464,6 +3504,10 @@ public partial class V1beta1WindowsWebAppSlotSpecInitProvider
     /// <summary>A mapping of tags which should be assigned to the Windows Web App Slot.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
@@ -3825,7 +3869,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderAuthSettingsV2Activ
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -4318,18 +4362,6 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigApplicati
     [JsonPropertyName("currentStack")]
     public string? CurrentStack { get; set; }
 
-    /// <summary>The name of the container to be used. This value is required with docker_container_tag.</summary>
-    [JsonPropertyName("dockerContainerName")]
-    public string? DockerContainerName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerContainerRegistry")]
-    public string? DockerContainerRegistry { get; set; }
-
-    /// <summary>The tag of the container to be used. This value is required with docker_container_name.</summary>
-    [JsonPropertyName("dockerContainerTag")]
-    public string? DockerContainerTag { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. azure-app-service/windows/parkingpage:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
@@ -4346,7 +4378,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigApplicati
     [JsonPropertyName("dotnetCoreVersion")]
     public string? DotnetCoreVersion { get; set; }
 
-    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0 and v8.0.</summary>
+    /// <summary>The version of .NET to use when current_stack is set to dotnet. Possible values include v2.0,v3.0, v4.0, v5.0, v6.0, v7.0, v8.0 and v9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -4366,7 +4398,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigApplicati
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, and ~18.</summary>
+    /// <summary>The version of node to use when current_stack is set to node. Possible values include ~12, ~14, ~16, ~18, ~20 and ~22.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
@@ -4377,10 +4409,6 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigApplicati
     /// <summary>The app is a Python app. Defaults to false.</summary>
     [JsonPropertyName("python")]
     public bool? Python { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("pythonVersion")]
-    public string? PythonVersion { get; set; }
 
     /// <summary>The version of Tomcat the Java App should use.</summary>
     [JsonPropertyName("tomcatVersion")]
@@ -4441,10 +4469,6 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigAutoHealS
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -4743,10 +4767,6 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled. Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -4783,7 +4803,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("handlerMapping")]
     public IList<V1beta1WindowsWebAppSlotStatusAtProviderSiteConfigHandlerMapping>? HandlerMapping { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -4823,7 +4843,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017 and VS2019</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -4847,7 +4867,7 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App Slotuse a 32-bit worker. Defaults to true.</summary>
+    /// <summary>Should the Windows Web App Slot use a 32-bit worker. The default value varies from different service plans.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -5016,6 +5036,10 @@ public partial class V1beta1WindowsWebAppSlotStatusAtProvider
     /// <summary>A mapping of tags which should be assigned to the Windows Web App Slot.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]

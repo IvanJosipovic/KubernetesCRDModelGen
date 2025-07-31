@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: accounts.storage.azure.upbound.io
 spec:
   group: storage.azure.upbound.io
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -222,7 +222,7 @@ spec:
                       type: object
                     type: array
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -260,9 +260,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -292,7 +289,7 @@ spec:
                           description: The immutability period for the blobs in the container since the policy creation, in days.
                           type: number
                         state:
-                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -303,7 +300,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.
@@ -510,7 +507,7 @@ spec:
                           items:
                             properties:
                               delete:
-                                description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                                description: (Defaults to 1 hour) Used when deleting the Storage Account.
                                 type: boolean
                               read:
                                 description: (Defaults to 5 minutes) Used when retrieving the Storage Account.
@@ -793,7 +790,7 @@ spec:
                   autoscaler.
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -930,7 +927,7 @@ spec:
                       type: object
                     type: array
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -968,9 +965,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -1000,7 +994,7 @@ spec:
                           description: The immutability period for the blobs in the container since the policy creation, in days.
                           type: number
                         state:
-                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -1011,7 +1005,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.
@@ -1218,7 +1212,7 @@ spec:
                           items:
                             properties:
                               delete:
-                                description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                                description: (Defaults to 1 hour) Used when deleting the Storage Account.
                                 type: boolean
                               read:
                                 description: (Defaults to 5 minutes) Used when retrieving the Storage Account.
@@ -1610,7 +1604,7 @@ spec:
               atProvider:
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -1747,7 +1741,7 @@ spec:
                       type: object
                     type: array
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -1785,9 +1779,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -1826,7 +1817,7 @@ spec:
                           description: The immutability period for the blobs in the container since the policy creation, in days.
                           type: number
                         state:
-                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                          description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -1837,7 +1828,7 @@ spec:
                     description: Is Hierarchical Namespace enabled? This can be used with Azure Data Lake Storage Gen 2 (see here for more information). Changing this forces a new resource to be created.
                     type: boolean
                   largeFileShareEnabled:
-                    description: Is Large File Share Enabled?
+                    description: Are Large File Shares Enabled? Defaults to false.
                     type: boolean
                   localUserEnabled:
                     description: Is Local User Enabled? Defaults to true.
@@ -2054,7 +2045,7 @@ spec:
                           items:
                             properties:
                               delete:
-                                description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                                description: (Defaults to 1 hour) Used when deleting the Storage Account.
                                 type: boolean
                               read:
                                 description: (Defaults to 5 minutes) Used when retrieving the Storage Account.
@@ -2461,7 +2452,7 @@ spec:
               forProvider:
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -2586,7 +2577,7 @@ spec:
                         type: boolean
                     type: object
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -2620,8 +2611,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -2648,7 +2637,7 @@ spec:
                         description: The immutability period for the blobs in the container since the policy creation, in days.
                         type: number
                       state:
-                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                         type: string
                     type: object
                   infrastructureEncryptionEnabled:
@@ -2859,7 +2848,7 @@ spec:
                         description: A logging block as defined below.
                         properties:
                           delete:
-                            description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                            description: (Defaults to 1 hour) Used when deleting the Storage Account.
                             type: boolean
                           read:
                             description: (Defaults to 5 minutes) Used when retrieving the Storage Account.
@@ -3126,7 +3115,7 @@ spec:
                   autoscaler.
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -3251,7 +3240,7 @@ spec:
                         type: boolean
                     type: object
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -3285,8 +3274,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -3313,7 +3300,7 @@ spec:
                         description: The immutability period for the blobs in the container since the policy creation, in days.
                         type: number
                       state:
-                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                         type: string
                     type: object
                   infrastructureEncryptionEnabled:
@@ -3524,7 +3511,7 @@ spec:
                         description: A logging block as defined below.
                         properties:
                           delete:
-                            description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                            description: (Defaults to 1 hour) Used when deleting the Storage Account.
                             type: boolean
                           read:
                             description: (Defaults to 5 minutes) Used when retrieving the Storage Account.
@@ -3900,7 +3887,7 @@ spec:
               atProvider:
                 properties:
                   accessTier:
-                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.
+                    description: Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.
                     type: string
                   accountKind:
                     description: Defines the Kind of account. Valid options are BlobStorage, BlockBlobStorage, FileStorage, Storage and StorageV2. Defaults to StorageV2.
@@ -4025,7 +4012,7 @@ spec:
                         type: boolean
                     type: object
                   crossTenantReplicationEnabled:
-                    description: Should cross Tenant replication be enabled? Defaults to true.
+                    description: Should cross Tenant replication be enabled? Defaults to false.
                     type: boolean
                   customDomain:
                     description: A custom_domain block as documented below.
@@ -4059,8 +4046,6 @@ spec:
                   edgeZone:
                     description: Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.
                     type: string
-                  enableHttpsTrafficOnly:
-                    type: boolean
                   httpsTrafficOnlyEnabled:
                     description: Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.
                     type: boolean
@@ -4096,7 +4081,7 @@ spec:
                         description: The immutability period for the blobs in the container since the policy creation, in days.
                         type: number
                       state:
-                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.
+                        description: Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.
                         type: string
                     type: object
                   infrastructureEncryptionEnabled:
@@ -4317,7 +4302,7 @@ spec:
                         description: A logging block as defined below.
                         properties:
                           delete:
-                            description: (Defaults to 60 minutes) Used when deleting the Storage Account.
+                            description: (Defaults to 1 hour) Used when deleting the Storage Account.
                             type: boolean
                           read:
                             description: (Defaults to 5 minutes) Used when retrieving the Storage Account.

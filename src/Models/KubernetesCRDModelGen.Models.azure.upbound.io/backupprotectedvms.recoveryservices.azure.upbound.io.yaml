@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: backupprotectedvms.recoveryservices.azure.upbound.io
 spec:
   group: recoveryservices.azure.upbound.io
@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected VM.
+        description: BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected Virtual Machine.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   backupPolicyId:
-                    description: Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.
+                    description: Specifies the ID of the backup policy to use.
                     type: string
                   backupPolicyIdRef:
                     description: Reference to a BackupPolicyVM in recoveryservices to populate backupPolicyId.
@@ -174,19 +174,19 @@ spec:
                         type: object
                     type: object
                   excludeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.
                     items:
                       type: number
                     type: array
                     x-kubernetes-list-type: set
                   includeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.
                     items:
                       type: number
                     type: array
                     x-kubernetes-list-type: set
                   protectionState:
-                    description: Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.
+                    description: Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.
                     type: string
                   recoveryVaultName:
                     description: Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
@@ -367,7 +367,7 @@ spec:
                         type: object
                     type: object
                   sourceVmId:
-                    description: Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
+                    description: Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.
                     type: string
                 type: object
               initProvider:
@@ -393,7 +393,7 @@ spec:
                   autoscaler.
                 properties:
                   backupPolicyId:
-                    description: Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.
+                    description: Specifies the ID of the backup policy to use.
                     type: string
                   backupPolicyIdRef:
                     description: Reference to a BackupPolicyVM in recoveryservices to populate backupPolicyId.
@@ -482,19 +482,19 @@ spec:
                         type: object
                     type: object
                   excludeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.
                     items:
                       type: number
                     type: array
                     x-kubernetes-list-type: set
                   includeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.
                     items:
                       type: number
                     type: array
                     x-kubernetes-list-type: set
                   protectionState:
-                    description: Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.
+                    description: Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.
                     type: string
                   recoveryVaultName:
                     description: Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
@@ -675,7 +675,7 @@ spec:
                         type: object
                     type: object
                   sourceVmId:
-                    description: Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
+                    description: Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.
                     type: string
                 type: object
               managementPolicies:
@@ -892,10 +892,10 @@ spec:
               atProvider:
                 properties:
                   backupPolicyId:
-                    description: Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.
+                    description: Specifies the ID of the backup policy to use.
                     type: string
                   excludeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.
                     items:
                       type: number
                     type: array
@@ -904,13 +904,13 @@ spec:
                     description: The ID of the Backup Protected Virtual Machine.
                     type: string
                   includeDiskLuns:
-                    description: A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.
+                    description: A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.
                     items:
                       type: number
                     type: array
                     x-kubernetes-list-type: set
                   protectionState:
-                    description: Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.
+                    description: Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.
                     type: string
                   recoveryVaultName:
                     description: Specifies the name of the Recovery Services Vault to use. Changing this forces a new resource to be created.
@@ -919,7 +919,7 @@ spec:
                     description: Specifies the name of the Resource Group associated with the Recovery Services Vault to use. Changing this forces a new resource to be created.
                     type: string
                   sourceVmId:
-                    description: Specifies the ID of the VM to backup. Changing this forces a new resource to be created.
+                    description: Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.
                     type: string
                 type: object
               conditions:

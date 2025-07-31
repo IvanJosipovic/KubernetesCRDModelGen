@@ -78,7 +78,7 @@ public partial class V1beta1KafkaClusterSpecForProviderExtension
 
     /// <summary>The workspace key of the log analytics extension.</summary>
     [JsonPropertyName("primaryKeySecretRef")]
-    public V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderExtensionPrimaryKeySecretRef? PrimaryKeySecretRef { get; set; }
 }
 
 /// <summary>The password used for the Ambari Portal.</summary>
@@ -104,7 +104,7 @@ public partial class V1beta1KafkaClusterSpecForProviderGateway
 {
     /// <summary>The password used for the Ambari Portal.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderGatewayPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("username")]
@@ -138,7 +138,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresAmbari
 
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderMetastoresAmbariPasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
@@ -176,7 +176,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresHive
 
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderMetastoresHivePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
@@ -214,7 +214,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMetastoresOozie
 
     /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderMetastoresOoziePasswordSecretRef? PasswordSecretRef { get; set; }
 
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
@@ -269,7 +269,7 @@ public partial class V1beta1KafkaClusterSpecForProviderMonitor
 
     /// <summary>The Operations Management Suite (OMS) workspace key.</summary>
     [JsonPropertyName("primaryKeySecretRef")]
-    public V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderMonitorPrimaryKeySecretRef? PrimaryKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -558,7 +558,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecForProviderRolesHeadNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecForProviderRolesHeadNodeScriptActions>? ScriptActions { get; set; }
 
@@ -586,7 +586,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesHeadNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -689,7 +689,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeScriptActions>? ScriptActions { get; set; }
 
@@ -709,15 +709,11 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNode
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1KafkaClusterSpecForProviderRolesKafkaManagementNodeSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("username")]
-    public string? Username { get; set; }
-
     /// <summary>The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -824,7 +820,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecForProviderRolesWorkerNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecForProviderRolesWorkerNodeScriptActions>? ScriptActions { get; set; }
 
@@ -856,7 +852,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesWorkerNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -959,7 +955,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecForProviderRolesZookeeperNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecForProviderRolesZookeeperNodeScriptActions>? ScriptActions { get; set; }
 
@@ -987,7 +983,7 @@ public partial class V1beta1KafkaClusterSpecForProviderRolesZookeeperNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -1048,7 +1044,7 @@ public partial class V1beta1KafkaClusterSpecForProviderSecurityProfile
 
     /// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("domainUserPasswordSecretRef")]
-    public V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef DomainUserPasswordSecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderSecurityProfileDomainUserPasswordSecretRef? DomainUserPasswordSecretRef { get; set; }
 
     /// <summary>The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("domainUsername")]
@@ -1146,7 +1142,7 @@ public partial class V1beta1KafkaClusterSpecForProviderStorageAccount
 
     /// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageAccountKeySecretRef")]
-    public V1beta1KafkaClusterSpecForProviderStorageAccountStorageAccountKeySecretRef StorageAccountKeySecretRef { get; set; }
+    public V1beta1KafkaClusterSpecForProviderStorageAccountStorageAccountKeySecretRef? StorageAccountKeySecretRef { get; set; }
 
     /// <summary>The ID of the Storage Container. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageContainerId")]
@@ -1326,6 +1322,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderDiskEncryption
     public string? KeyVaultManagedIdentityId { get; set; }
 }
 
+/// <summary>The workspace key of the log analytics extension.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderExtensionPrimaryKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderExtension
@@ -1333,15 +1346,57 @@ public partial class V1beta1KafkaClusterSpecInitProviderExtension
     /// <summary>The workspace ID of the log analytics extension.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
+
+    /// <summary>The workspace key of the log analytics extension.</summary>
+    [JsonPropertyName("primaryKeySecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderExtensionPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
+}
+
+/// <summary>The password used for the Ambari Portal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderGatewayPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderGateway
 {
+    /// <summary>The password used for the Ambari Portal.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderGatewayPasswordSecretRef PasswordSecretRef { get; set; }
+
     /// <summary>The username used for the Ambari Portal. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
+}
+
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbariPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1352,6 +1407,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderMetastoresAmbariPasswordSecretRef PasswordSecretRef { get; set; }
+
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
     public string? Server { get; set; }
@@ -1359,6 +1418,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresAmbari
     /// <summary>The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
+}
+
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHivePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1369,6 +1445,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderMetastoresHivePasswordSecretRef PasswordSecretRef { get; set; }
+
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
     public string? Server { get; set; }
@@ -1378,6 +1458,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresHive
     public string? Username { get; set; }
 }
 
+/// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOoziePasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
@@ -1385,6 +1482,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastoresOozie
     /// <summary>The external Oozie metastore's existing SQL database. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
+
+    /// <summary>The Password associated with the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderMetastoresOoziePasswordSecretRef PasswordSecretRef { get; set; }
 
     /// <summary>The fully-qualified domain name (FQDN) of the SQL server to use for the external Oozie metastore. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("server")]
@@ -1412,6 +1513,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderMetastores
     public IList<V1beta1KafkaClusterSpecInitProviderMetastoresOozie>? Oozie { get; set; }
 }
 
+/// <summary>The Operations Management Suite (OMS) workspace key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderMonitorPrimaryKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderMonitor
@@ -1419,6 +1537,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderMonitor
     /// <summary>The Operations Management Suite (OMS) workspace ID.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
+
+    /// <summary>The Operations Management Suite (OMS) workspace key.</summary>
+    [JsonPropertyName("primaryKeySecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderMonitorPrimaryKeySecretRef PrimaryKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -1651,7 +1773,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecInitProviderRolesHeadNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecInitProviderRolesHeadNodeScriptActions>? ScriptActions { get; set; }
 
@@ -1679,7 +1801,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesHeadNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -1782,7 +1904,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeScriptActions>? ScriptActions { get; set; }
 
@@ -1802,15 +1924,11 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNode
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1KafkaClusterSpecInitProviderRolesKafkaManagementNodeSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>The Username of the local administrator for the Zookeeper Nodes. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("username")]
-    public string? Username { get; set; }
-
     /// <summary>The ID of the Virtual Network where the Zookeeper Nodes should be provisioned within. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -1917,7 +2035,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecInitProviderRolesWorkerNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecInitProviderRolesWorkerNodeScriptActions>? ScriptActions { get; set; }
 
@@ -1949,7 +2067,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesWorkerNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -2052,7 +2170,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodePasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterSpecInitProviderRolesZookeeperNodeScriptActions>? ScriptActions { get; set; }
 
@@ -2080,7 +2198,7 @@ public partial class V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -2106,6 +2224,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderRoles
     public IList<V1beta1KafkaClusterSpecInitProviderRolesZookeeperNode>? ZookeeperNode { get; set; }
 }
 
+/// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfileDomainUserPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
@@ -2122,6 +2257,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
+    /// <summary>The user password of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("domainUserPasswordSecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderSecurityProfileDomainUserPasswordSecretRef DomainUserPasswordSecretRef { get; set; }
+
     /// <summary>The username of the Azure Active Directory Domain. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("domainUsername")]
     public string? DomainUsername { get; set; }
@@ -2133,6 +2272,23 @@ public partial class V1beta1KafkaClusterSpecInitProviderSecurityProfile
     /// <summary>The User Assigned Identity for the HDInsight Cluster. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("msiResourceId")]
     public string? MsiResourceId { get; set; }
+}
+
+/// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KafkaClusterSpecInitProviderStorageAccountStorageAccountKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2198,6 +2354,10 @@ public partial class V1beta1KafkaClusterSpecInitProviderStorageAccount
     /// <summary>Is this the Default Storage Account for the HDInsight Hadoop Cluster? Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("isDefault")]
     public bool? IsDefault { get; set; }
+
+    /// <summary>The Access Key which should be used to connect to the Storage Account. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("storageAccountKeySecretRef")]
+    public V1beta1KafkaClusterSpecInitProviderStorageAccountStorageAccountKeySecretRef StorageAccountKeySecretRef { get; set; }
 
     /// <summary>The ID of the Storage Container. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageContainerId")]
@@ -2681,7 +2841,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
 {
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterStatusAtProviderRolesHeadNodeScriptActions>? ScriptActions { get; set; }
 
@@ -2701,7 +2861,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesHeadNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -2727,7 +2887,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
 {
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNodeScriptActions>? ScriptActions { get; set; }
 
@@ -2747,7 +2907,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesKafkaManagementNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -2777,7 +2937,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
     [JsonPropertyName("numberOfDisksPerNode")]
     public double? NumberOfDisksPerNode { get; set; }
 
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterStatusAtProviderRolesWorkerNodeScriptActions>? ScriptActions { get; set; }
 
@@ -2801,7 +2961,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesWorkerNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }
@@ -2827,7 +2987,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
 {
-    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below.</summary>
+    /// <summary>The script action which will run on the cluster. One or more script_actions blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scriptActions")]
     public IList<V1beta1KafkaClusterStatusAtProviderRolesZookeeperNodeScriptActions>? ScriptActions { get; set; }
 
@@ -2847,7 +3007,7 @@ public partial class V1beta1KafkaClusterStatusAtProviderRolesZookeeperNode
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
 
-    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Size of the Virtual Machine which should be used as the Zookeeper Nodes. Possible values are ExtraSmall, Small, Medium, Large, ExtraLarge, A5, A6, A7, A8, A9, A10, A11, Standard_A1_V2, Standard_A2_V2, Standard_A2m_V2, Standard_A3, Standard_A4_V2, Standard_A4m_V2, Standard_A8_V2, Standard_A8m_V2, Standard_D1, Standard_D2, Standard_D3, Standard_D4, Standard_D11, Standard_D12, Standard_D13, Standard_D14, Standard_D1_V2, Standard_D2_V2, Standard_D3_V2, Standard_D4_V2, Standard_D5_V2, Standard_D11_V2, Standard_D12_V2, Standard_D13_V2, Standard_D14_V2, Standard_DS1_V2, Standard_DS2_V2, Standard_DS3_V2, Standard_DS4_V2, Standard_DS5_V2, Standard_DS11_V2, Standard_DS12_V2, Standard_DS13_V2, Standard_DS14_V2, Standard_E2_V3, Standard_E4_V3, Standard_E8_V3, Standard_E16_V3, Standard_E20_V3, Standard_E32_V3, Standard_E64_V3, Standard_E64i_V3, Standard_E2s_V3, Standard_E4s_V3, Standard_E8s_V3, Standard_E16s_V3, Standard_E20s_V3, Standard_E32s_V3, Standard_E64s_V3, Standard_E64is_V3, Standard_D2a_V4, Standard_D4a_V4, Standard_D8a_V4, Standard_D16a_V4, Standard_D32a_V4, Standard_D48a_V4, Standard_D64a_V4, Standard_D96a_V4, Standard_E2a_V4, Standard_E4a_V4, Standard_E8a_V4, Standard_E16a_V4, Standard_E20a_V4, Standard_E32a_V4, Standard_E48a_V4, Standard_E64a_V4, Standard_E96a_V4, Standard_D2ads_V5, Standard_D4ads_V5, Standard_D8ads_V5, Standard_D16ads_V5, Standard_D32ads_V5, Standard_D48ads_V5, Standard_D64ads_V5, Standard_D96ads_V5, Standard_E2ads_V5, Standard_E4ads_V5, Standard_E8ads_V5, Standard_E16ads_V5, Standard_E20ads_V5, Standard_E32ads_V5, Standard_E48ads_V5, Standard_E64ads_V5, Standard_E96ads_V5, Standard_G1, Standard_G2, Standard_G3, Standard_G4, Standard_G5, Standard_F2s_V2, Standard_F4s_V2, Standard_F8s_V2, Standard_F16s_V2, Standard_F32s_V2, Standard_F64s_V2, Standard_F72s_V2, Standard_GS1, Standard_GS2, Standard_GS3, Standard_GS4, Standard_GS5 and Standard_NC24. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 }

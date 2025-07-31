@@ -89,13 +89,9 @@ public partial class V1beta1RouteTableSpecForProviderRoute
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteTableSpecForProvider
 {
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.</summary>
     [JsonPropertyName("bgpRoutePropagationEnabled")]
     public bool? BgpRoutePropagationEnabled { get; set; }
-
-    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.</summary>
-    [JsonPropertyName("disableBgpRoutePropagation")]
-    public bool? DisableBgpRoutePropagation { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -147,13 +143,9 @@ public partial class V1beta1RouteTableSpecInitProviderRoute
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteTableSpecInitProvider
 {
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.</summary>
     [JsonPropertyName("bgpRoutePropagationEnabled")]
     public bool? BgpRoutePropagationEnabled { get; set; }
-
-    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.</summary>
-    [JsonPropertyName("disableBgpRoutePropagation")]
-    public bool? DisableBgpRoutePropagation { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -325,13 +317,9 @@ public partial class V1beta1RouteTableStatusAtProviderRoute
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteTableStatusAtProvider
 {
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.</summary>
     [JsonPropertyName("bgpRoutePropagationEnabled")]
     public bool? BgpRoutePropagationEnabled { get; set; }
-
-    /// <summary>Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.</summary>
-    [JsonPropertyName("disableBgpRoutePropagation")]
-    public bool? DisableBgpRoutePropagation { get; set; }
 
     /// <summary>The Route Table ID.</summary>
     [JsonPropertyName("id")]

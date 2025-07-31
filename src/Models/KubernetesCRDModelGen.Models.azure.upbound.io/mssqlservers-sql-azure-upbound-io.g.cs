@@ -8,9 +8,26 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
-/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordWoSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -427,9 +444,17 @@ public partial class V1beta1MSSQLServerSpecForProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
     [JsonPropertyName("administratorLoginPasswordSecretRef")]
     public V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoSecretRef")]
+    public V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordWoSecretRef? AdministratorLoginPasswordWoSecretRef { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
 
     /// <summary>An azuread_administrator block as defined below.</summary>
     [JsonPropertyName("azureadAdministrator")]
@@ -438,6 +463,10 @@ public partial class V1beta1MSSQLServerSpecForProvider
     /// <summary>The connection policy the server will use. Possible values are Default, Proxy, and Redirect. Defaults to Default.</summary>
     [JsonPropertyName("connectionPolicy")]
     public string? ConnectionPolicy { get; set; }
+
+    /// <summary>Whether to enable the Express Vulnerability Assessment Configuration. Defaults to false.</summary>
+    [JsonPropertyName("expressVulnerabilityAssessmentEnabled")]
+    public bool? ExpressVulnerabilityAssessmentEnabled { get; set; }
 
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
@@ -455,7 +484,7 @@ public partial class V1beta1MSSQLServerSpecForProvider
     [JsonPropertyName("outboundNetworkRestrictionEnabled")]
     public bool? OutboundNetworkRestrictionEnabled { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id. Required if type is UserAssigned and should be combined with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id. Required if type within the identity block is set to either SystemAssigned, UserAssigned or UserAssigned and should be set at same time as setting identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 
@@ -504,9 +533,26 @@ public partial class V1beta1MSSQLServerSpecForProvider
     public string? Version { get; set; }
 }
 
-/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+/// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordWoSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -867,9 +913,17 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy. Required unless azuread_authentication_only in the azuread_administrator block is true.</summary>
+    /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
     [JsonPropertyName("administratorLoginPasswordSecretRef")]
     public V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoSecretRef")]
+    public V1beta1MSSQLServerSpecInitProviderAdministratorLoginPasswordWoSecretRef? AdministratorLoginPasswordWoSecretRef { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
 
     /// <summary>An azuread_administrator block as defined below.</summary>
     [JsonPropertyName("azureadAdministrator")]
@@ -878,6 +932,10 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     /// <summary>The connection policy the server will use. Possible values are Default, Proxy, and Redirect. Defaults to Default.</summary>
     [JsonPropertyName("connectionPolicy")]
     public string? ConnectionPolicy { get; set; }
+
+    /// <summary>Whether to enable the Express Vulnerability Assessment Configuration. Defaults to false.</summary>
+    [JsonPropertyName("expressVulnerabilityAssessmentEnabled")]
+    public bool? ExpressVulnerabilityAssessmentEnabled { get; set; }
 
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
@@ -895,7 +953,7 @@ public partial class V1beta1MSSQLServerSpecInitProvider
     [JsonPropertyName("outboundNetworkRestrictionEnabled")]
     public bool? OutboundNetworkRestrictionEnabled { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id. Required if type is UserAssigned and should be combined with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id. Required if type within the identity block is set to either SystemAssigned, UserAssigned or UserAssigned and should be set at same time as setting identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 
@@ -1114,6 +1172,10 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
+
     /// <summary>An azuread_administrator block as defined below.</summary>
     [JsonPropertyName("azureadAdministrator")]
     public IList<V1beta1MSSQLServerStatusAtProviderAzureadAdministrator>? AzureadAdministrator { get; set; }
@@ -1121,6 +1183,10 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     /// <summary>The connection policy the server will use. Possible values are Default, Proxy, and Redirect. Defaults to Default.</summary>
     [JsonPropertyName("connectionPolicy")]
     public string? ConnectionPolicy { get; set; }
+
+    /// <summary>Whether to enable the Express Vulnerability Assessment Configuration. Defaults to false.</summary>
+    [JsonPropertyName("expressVulnerabilityAssessmentEnabled")]
+    public bool? ExpressVulnerabilityAssessmentEnabled { get; set; }
 
     /// <summary>The fully qualified domain name of the Azure SQL Server (e.g. myServerName.database.windows.net)</summary>
     [JsonPropertyName("fullyQualifiedDomainName")]
@@ -1146,7 +1212,7 @@ public partial class V1beta1MSSQLServerStatusAtProvider
     [JsonPropertyName("outboundNetworkRestrictionEnabled")]
     public bool? OutboundNetworkRestrictionEnabled { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id. Required if type is UserAssigned and should be combined with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id. Required if type within the identity block is set to either SystemAssigned, UserAssigned or UserAssigned and should be set at same time as setting identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 

@@ -124,7 +124,7 @@ public partial class V1beta1ConfigurationSpecForProviderEncryptionKeyVaultKeyIde
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecForProviderEncryption
 {
-    /// <summary>Specifies the client id of the identity which will be used to access key vault.</summary>
+    /// <summary>Specifies the client ID of the identity which will be used to access key vault.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
 
@@ -221,7 +221,7 @@ public partial class V1beta1ConfigurationSpecForProviderIdentity
     [JsonPropertyName("identityIdsSelector")]
     public V1beta1ConfigurationSpecForProviderIdentityIdentityIdsSelector? IdentityIdsSelector { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned (to enable both).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -299,6 +299,14 @@ public partial class V1beta1ConfigurationSpecForProviderResourceGroupNameSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecForProvider
 {
+    /// <summary>The data plane proxy authentication mode. Possible values are Local and Pass-through. Defaults to Local.</summary>
+    [JsonPropertyName("dataPlaneProxyAuthenticationMode")]
+    public string? DataPlaneProxyAuthenticationMode { get; set; }
+
+    /// <summary>Whether data plane proxy private link delegation is enabled. Defaults to false.</summary>
+    [JsonPropertyName("dataPlaneProxyPrivateLinkDelegationEnabled")]
+    public bool? DataPlaneProxyPrivateLinkDelegationEnabled { get; set; }
+
     /// <summary>An encryption block as defined below.</summary>
     [JsonPropertyName("encryption")]
     public IList<V1beta1ConfigurationSpecForProviderEncryption>? Encryption { get; set; }
@@ -339,7 +347,7 @@ public partial class V1beta1ConfigurationSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1ConfigurationSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The SKU name of the App Configuration. Possible values are free and standard. Defaults to free.</summary>
+    /// <summary>The SKU name of the App Configuration. Possible values are free, developer, standard and premium. Defaults to free.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -468,7 +476,7 @@ public partial class V1beta1ConfigurationSpecInitProviderEncryptionKeyVaultKeyId
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecInitProviderEncryption
 {
-    /// <summary>Specifies the client id of the identity which will be used to access key vault.</summary>
+    /// <summary>Specifies the client ID of the identity which will be used to access key vault.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
 
@@ -565,7 +573,7 @@ public partial class V1beta1ConfigurationSpecInitProviderIdentity
     [JsonPropertyName("identityIdsSelector")]
     public V1beta1ConfigurationSpecInitProviderIdentityIdentityIdsSelector? IdentityIdsSelector { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned (to enable both).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -587,6 +595,14 @@ public partial class V1beta1ConfigurationSpecInitProviderReplica
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecInitProvider
 {
+    /// <summary>The data plane proxy authentication mode. Possible values are Local and Pass-through. Defaults to Local.</summary>
+    [JsonPropertyName("dataPlaneProxyAuthenticationMode")]
+    public string? DataPlaneProxyAuthenticationMode { get; set; }
+
+    /// <summary>Whether data plane proxy private link delegation is enabled. Defaults to false.</summary>
+    [JsonPropertyName("dataPlaneProxyPrivateLinkDelegationEnabled")]
+    public bool? DataPlaneProxyPrivateLinkDelegationEnabled { get; set; }
+
     /// <summary>An encryption block as defined below.</summary>
     [JsonPropertyName("encryption")]
     public IList<V1beta1ConfigurationSpecInitProviderEncryption>? Encryption { get; set; }
@@ -615,7 +631,7 @@ public partial class V1beta1ConfigurationSpecInitProvider
     [JsonPropertyName("replica")]
     public IList<V1beta1ConfigurationSpecInitProviderReplica>? Replica { get; set; }
 
-    /// <summary>The SKU name of the App Configuration. Possible values are free and standard. Defaults to free.</summary>
+    /// <summary>The SKU name of the App Configuration. Possible values are free, developer, standard and premium. Defaults to free.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -764,7 +780,7 @@ public partial class V1beta1ConfigurationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProviderEncryption
 {
-    /// <summary>Specifies the client id of the identity which will be used to access key vault.</summary>
+    /// <summary>Specifies the client ID of the identity which will be used to access key vault.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
 
@@ -789,7 +805,7 @@ public partial class V1beta1ConfigurationStatusAtProviderIdentity
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this App Configuration. Possible values are SystemAssigned, UserAssigned, and SystemAssigned, UserAssigned (to enable both).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -798,7 +814,7 @@ public partial class V1beta1ConfigurationStatusAtProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProviderPrimaryReadKey
 {
-    /// <summary>The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.</summary>
+    /// <summary>The Connection String for this Access Key - consisting of the Endpoint, ID, and Secret.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
 
@@ -815,7 +831,7 @@ public partial class V1beta1ConfigurationStatusAtProviderPrimaryReadKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProviderPrimaryWriteKey
 {
-    /// <summary>The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.</summary>
+    /// <summary>The Connection String for this Access Key - consisting of the Endpoint, ID, and Secret.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
 
@@ -853,7 +869,7 @@ public partial class V1beta1ConfigurationStatusAtProviderReplica
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProviderSecondaryReadKey
 {
-    /// <summary>The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.</summary>
+    /// <summary>The Connection String for this Access Key - consisting of the Endpoint, ID, and Secret.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
 
@@ -870,7 +886,7 @@ public partial class V1beta1ConfigurationStatusAtProviderSecondaryReadKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProviderSecondaryWriteKey
 {
-    /// <summary>The Connection String for this Access Key - comprising of the Endpoint, ID and Secret.</summary>
+    /// <summary>The Connection String for this Access Key - consisting of the Endpoint, ID, and Secret.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
 
@@ -887,6 +903,14 @@ public partial class V1beta1ConfigurationStatusAtProviderSecondaryWriteKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationStatusAtProvider
 {
+    /// <summary>The data plane proxy authentication mode. Possible values are Local and Pass-through. Defaults to Local.</summary>
+    [JsonPropertyName("dataPlaneProxyAuthenticationMode")]
+    public string? DataPlaneProxyAuthenticationMode { get; set; }
+
+    /// <summary>Whether data plane proxy private link delegation is enabled. Defaults to false.</summary>
+    [JsonPropertyName("dataPlaneProxyPrivateLinkDelegationEnabled")]
+    public bool? DataPlaneProxyPrivateLinkDelegationEnabled { get; set; }
+
     /// <summary>An encryption block as defined below.</summary>
     [JsonPropertyName("encryption")]
     public IList<V1beta1ConfigurationStatusAtProviderEncryption>? Encryption { get; set; }
@@ -943,7 +967,7 @@ public partial class V1beta1ConfigurationStatusAtProvider
     [JsonPropertyName("secondaryWriteKey")]
     public IList<V1beta1ConfigurationStatusAtProviderSecondaryWriteKey>? SecondaryWriteKey { get; set; }
 
-    /// <summary>The SKU name of the App Configuration. Possible values are free and standard. Defaults to free.</summary>
+    /// <summary>The SKU name of the App Configuration. Possible values are free, developer, standard and premium. Defaults to free.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 

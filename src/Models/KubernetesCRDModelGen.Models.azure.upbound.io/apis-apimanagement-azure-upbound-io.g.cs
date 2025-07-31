@@ -102,7 +102,7 @@ public partial class V1beta1APISpecForProviderImport
     [JsonPropertyName("contentFormat")]
     public string? ContentFormat { get; set; }
 
-    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline.</summary>
+    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. The URL must be accessible and return a valid document; otherwise, deployment may fail.</summary>
     [JsonPropertyName("contentValue")]
     public string? ContentValue { get; set; }
 
@@ -299,10 +299,6 @@ public partial class V1beta1APISpecForProvider
     [JsonPropertyName("serviceUrl")]
     public string? ServiceUrl { get; set; }
 
-    /// <summary>Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to false.</summary>
-    [JsonPropertyName("soapPassThrough")]
-    public bool? SoapPassThrough { get; set; }
-
     /// <summary>The API id of the source API, which could be in format azurerm_api_management_api.example.id or in format azurerm_api_management_api.example.id;rev=1</summary>
     [JsonPropertyName("sourceApiId")]
     public string? SourceApiId { get; set; }
@@ -370,7 +366,7 @@ public partial class V1beta1APISpecInitProviderImport
     [JsonPropertyName("contentFormat")]
     public string? ContentFormat { get; set; }
 
-    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline.</summary>
+    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. The URL must be accessible and return a valid document; otherwise, deployment may fail.</summary>
     [JsonPropertyName("contentValue")]
     public string? ContentValue { get; set; }
 
@@ -482,10 +478,6 @@ public partial class V1beta1APISpecInitProvider
     /// <summary>Absolute URL of the backend service implementing this API.</summary>
     [JsonPropertyName("serviceUrl")]
     public string? ServiceUrl { get; set; }
-
-    /// <summary>Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to false.</summary>
-    [JsonPropertyName("soapPassThrough")]
-    public bool? SoapPassThrough { get; set; }
 
     /// <summary>The API id of the source API, which could be in format azurerm_api_management_api.example.id or in format azurerm_api_management_api.example.id;rev=1</summary>
     [JsonPropertyName("sourceApiId")]
@@ -686,7 +678,7 @@ public partial class V1beta1APIStatusAtProviderImport
     [JsonPropertyName("contentFormat")]
     public string? ContentFormat { get; set; }
 
-    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline.</summary>
+    /// <summary>The Content from which the API Definition should be imported. When a content_format of *-link-* is specified this must be a URL, otherwise this must be defined inline. The URL must be accessible and return a valid document; otherwise, deployment may fail.</summary>
     [JsonPropertyName("contentValue")]
     public string? ContentValue { get; set; }
 
@@ -822,10 +814,6 @@ public partial class V1beta1APIStatusAtProvider
     /// <summary>Absolute URL of the backend service implementing this API.</summary>
     [JsonPropertyName("serviceUrl")]
     public string? ServiceUrl { get; set; }
-
-    /// <summary>Should this API expose a SOAP frontend, rather than a HTTP frontend? Defaults to false.</summary>
-    [JsonPropertyName("soapPassThrough")]
-    public bool? SoapPassThrough { get; set; }
 
     /// <summary>The API id of the source API, which could be in format azurerm_api_management_api.example.id or in format azurerm_api_management_api.example.id;rev=1</summary>
     [JsonPropertyName("sourceApiId")]

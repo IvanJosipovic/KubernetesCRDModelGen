@@ -122,7 +122,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStora
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicy
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -133,9 +133,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRef
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -143,12 +143,12 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRefPolicy? Policy { get; set; }
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicy
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -159,9 +159,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelector
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -173,7 +173,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorks
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -209,16 +209,20 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecForProvider
     public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderStorageAccountIdsSelector? StorageAccountIdsSelector { get; set; }
 
     /// <summary>The resource ID of the Log Analytics Workspace. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
+    [JsonPropertyName("workspaceId")]
+    public string? WorkspaceId { get; set; }
+
+    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdRef")]
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdRef? WorkspaceIdRef { get; set; }
+
+    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdSelector")]
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
+
+    /// <summary>The ID of the Log Analytics Linked Storage Account.</summary>
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
-
-    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
-    [JsonPropertyName("workspaceResourceIdRef")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdRef? WorkspaceResourceIdRef { get; set; }
-
-    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
-    [JsonPropertyName("workspaceResourceIdSelector")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecForProviderWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -335,7 +339,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStor
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicy
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -346,9 +350,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
+/// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRef
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -356,12 +360,12 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRefPolicy? Policy { get; set; }
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicy
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -372,9 +376,9 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
+/// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelector
+public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -386,7 +390,7 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWork
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelectorPolicy? Policy { get; set; }
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -422,16 +426,20 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountSpecInitProvider
     public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderStorageAccountIdsSelector? StorageAccountIdsSelector { get; set; }
 
     /// <summary>The resource ID of the Log Analytics Workspace. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
+    [JsonPropertyName("workspaceId")]
+    public string? WorkspaceId { get; set; }
+
+    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdRef")]
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdRef? WorkspaceIdRef { get; set; }
+
+    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceId.</summary>
+    [JsonPropertyName("workspaceIdSelector")]
+    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
+
+    /// <summary>The ID of the Log Analytics Linked Storage Account.</summary>
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
-
-    /// <summary>Reference to a Workspace in operationalinsights to populate workspaceResourceId.</summary>
-    [JsonPropertyName("workspaceResourceIdRef")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdRef? WorkspaceResourceIdRef { get; set; }
-
-    /// <summary>Selector for a Workspace in operationalinsights to populate workspaceResourceId.</summary>
-    [JsonPropertyName("workspaceResourceIdSelector")]
-    public V1beta1LogAnalyticsLinkedStorageAccountSpecInitProviderWorkspaceResourceIdSelector? WorkspaceResourceIdSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -587,6 +595,10 @@ public partial class V1beta1LogAnalyticsLinkedStorageAccountStatusAtProvider
     public IList<string>? StorageAccountIds { get; set; }
 
     /// <summary>The resource ID of the Log Analytics Workspace. Changing this forces a new Log Analytics Linked Storage Account to be created.</summary>
+    [JsonPropertyName("workspaceId")]
+    public string? WorkspaceId { get; set; }
+
+    /// <summary>The ID of the Log Analytics Linked Storage Account.</summary>
     [JsonPropertyName("workspaceResourceId")]
     public string? WorkspaceResourceId { get; set; }
 }

@@ -42,10 +42,6 @@ public partial class V1beta1SnapshotSpecForProviderEncryptionSettings
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1SnapshotSpecForProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1SnapshotSpecForProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
@@ -269,10 +265,6 @@ public partial class V1beta1SnapshotSpecInitProviderEncryptionSettings
     /// <summary>A disk_encryption_key block as defined below.</summary>
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1SnapshotSpecInitProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]
@@ -561,10 +553,6 @@ public partial class V1beta1SnapshotStatusAtProviderEncryptionSettings
     /// <summary>A disk_encryption_key block as defined below.</summary>
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1SnapshotStatusAtProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]

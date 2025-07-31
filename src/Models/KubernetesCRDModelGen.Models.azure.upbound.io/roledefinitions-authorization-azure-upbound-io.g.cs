@@ -8,6 +8,62 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecForProviderAssignableScopesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderAssignableScopesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecForProviderAssignableScopesSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProviderPermissions
@@ -29,13 +85,77 @@ public partial class V1beta1RoleDefinitionSpecForProviderPermissions
     public IList<string>? NotDataActions { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderScopeRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderScopeRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecForProviderScopeRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderScopeSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecForProviderScopeSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecForProviderScopeSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecForProvider
 {
-    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
+    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333 , or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
     [JsonPropertyName("assignableScopes")]
     public IList<string>? AssignableScopes { get; set; }
+
+    /// <summary>References to ManagementGroup in management to populate assignableScopes.</summary>
+    [JsonPropertyName("assignableScopesRefs")]
+    public IList<V1beta1RoleDefinitionSpecForProviderAssignableScopesRefs>? AssignableScopesRefs { get; set; }
+
+    /// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
+    [JsonPropertyName("assignableScopesSelector")]
+    public V1beta1RoleDefinitionSpecForProviderAssignableScopesSelector? AssignableScopesSelector { get; set; }
 
     /// <summary>A description of the Role Definition.</summary>
     [JsonPropertyName("description")]
@@ -53,9 +173,73 @@ public partial class V1beta1RoleDefinitionSpecForProvider
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
+    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
+
+    /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
+    [JsonPropertyName("scopeRef")]
+    public V1beta1RoleDefinitionSpecForProviderScopeRef? ScopeRef { get; set; }
+
+    /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
+    [JsonPropertyName("scopeSelector")]
+    public V1beta1RoleDefinitionSpecForProviderScopeSelector? ScopeSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -79,13 +263,77 @@ public partial class V1beta1RoleDefinitionSpecInitProviderPermissions
     public IList<string>? NotDataActions { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderScopeRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderScopeRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecInitProviderScopeRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1RoleDefinitionSpecInitProviderScopeSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1RoleDefinitionSpecInitProviderScopeSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionSpecInitProvider
 {
-    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
+    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333 , or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
     [JsonPropertyName("assignableScopes")]
     public IList<string>? AssignableScopes { get; set; }
+
+    /// <summary>References to ManagementGroup in management to populate assignableScopes.</summary>
+    [JsonPropertyName("assignableScopesRefs")]
+    public IList<V1beta1RoleDefinitionSpecInitProviderAssignableScopesRefs>? AssignableScopesRefs { get; set; }
+
+    /// <summary>Selector for a list of ManagementGroup in management to populate assignableScopes.</summary>
+    [JsonPropertyName("assignableScopesSelector")]
+    public V1beta1RoleDefinitionSpecInitProviderAssignableScopesSelector? AssignableScopesSelector { get; set; }
 
     /// <summary>A description of the Role Definition.</summary>
     [JsonPropertyName("description")]
@@ -103,9 +351,17 @@ public partial class V1beta1RoleDefinitionSpecInitProvider
     [JsonPropertyName("roleDefinitionId")]
     public string? RoleDefinitionId { get; set; }
 
-    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
+    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
+
+    /// <summary>Reference to a ManagementGroup in management to populate scope.</summary>
+    [JsonPropertyName("scopeRef")]
+    public V1beta1RoleDefinitionSpecInitProviderScopeRef? ScopeRef { get; set; }
+
+    /// <summary>Selector for a ManagementGroup in management to populate scope.</summary>
+    [JsonPropertyName("scopeSelector")]
+    public V1beta1RoleDefinitionSpecInitProviderScopeSelector? ScopeSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -265,7 +521,7 @@ public partial class V1beta1RoleDefinitionStatusAtProviderPermissions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RoleDefinitionStatusAtProvider
 {
-    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
+    /// <summary>One or more assignable scopes for this Role Definition, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333 , or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM.</summary>
     [JsonPropertyName("assignableScopes")]
     public IList<string>? AssignableScopes { get; set; }
 
@@ -293,7 +549,7 @@ public partial class V1beta1RoleDefinitionStatusAtProvider
     [JsonPropertyName("roleDefinitionResourceId")]
     public string? RoleDefinitionResourceId { get; set; }
 
-    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
+    /// <summary>The scope at which the Role Definition applies to, such as /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333, /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup, /providers/Microsoft.Management/managementGroups/0b1f6471-1bf0-4dda-aec3-111122223333, or /subscriptions/0b1f6471-1bf0-4dda-aec3-111122223333/resourceGroups/myGroup/providers/Microsoft.Compute/virtualMachines/myVM. It is recommended to use the first entry of the assignable_scopes. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("scope")]
     public string? Scope { get; set; }
 }

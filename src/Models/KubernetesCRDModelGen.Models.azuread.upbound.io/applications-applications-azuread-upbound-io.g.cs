@@ -8,6 +8,62 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.applications.azuread.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderApiKnownClientApplicationsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderApiKnownClientApplicationsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ApplicationSpecForProviderApiKnownClientApplicationsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderApiKnownClientApplicationsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Application in applications to populate knownClientApplications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecForProviderApiKnownClientApplicationsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ApplicationSpecForProviderApiKnownClientApplicationsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApiOauth2PermissionScope
@@ -49,9 +105,17 @@ public partial class V1beta1ApplicationSpecForProviderApiOauth2PermissionScope
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderApi
 {
-    /// <summary>A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
+    /// <summary>A set of client IDs, used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
     [JsonPropertyName("knownClientApplications")]
     public IList<string>? KnownClientApplications { get; set; }
+
+    /// <summary>References to Application in applications to populate knownClientApplications.</summary>
+    [JsonPropertyName("knownClientApplicationsRefs")]
+    public IList<V1beta1ApplicationSpecForProviderApiKnownClientApplicationsRefs>? KnownClientApplicationsRefs { get; set; }
+
+    /// <summary>Selector for a list of Application in applications to populate knownClientApplications.</summary>
+    [JsonPropertyName("knownClientApplicationsSelector")]
+    public V1beta1ApplicationSpecForProviderApiKnownClientApplicationsSelector? KnownClientApplicationsSelector { get; set; }
 
     /// <summary>Allows an application to use claims mapping without specifying a custom signing key. Defaults to false. Allows an application to use claims mapping without specifying a custom signing key</summary>
     [JsonPropertyName("mappedClaimsEnabled")]
@@ -323,7 +387,7 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("featureTags")]
     public IList<V1beta1ApplicationSpecForProviderFeatureTags>? FeatureTags { get; set; }
 
-    /// <summary>Configures the groups claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
+    /// <summary>A set of strings containing membership claims issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
     [JsonPropertyName("groupMembershipClaims")]
     public IList<string>? GroupMembershipClaims { get; set; }
 
@@ -408,6 +472,62 @@ public partial class V1beta1ApplicationSpecForProvider
     public IList<V1beta1ApplicationSpecForProviderWeb>? Web { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Application in applications to populate knownClientApplications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApiOauth2PermissionScope
@@ -449,9 +569,17 @@ public partial class V1beta1ApplicationSpecInitProviderApiOauth2PermissionScope
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProviderApi
 {
-    /// <summary>A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
+    /// <summary>A set of client IDs, used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
     [JsonPropertyName("knownClientApplications")]
     public IList<string>? KnownClientApplications { get; set; }
+
+    /// <summary>References to Application in applications to populate knownClientApplications.</summary>
+    [JsonPropertyName("knownClientApplicationsRefs")]
+    public IList<V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsRefs>? KnownClientApplicationsRefs { get; set; }
+
+    /// <summary>Selector for a list of Application in applications to populate knownClientApplications.</summary>
+    [JsonPropertyName("knownClientApplicationsSelector")]
+    public V1beta1ApplicationSpecInitProviderApiKnownClientApplicationsSelector? KnownClientApplicationsSelector { get; set; }
 
     /// <summary>Allows an application to use claims mapping without specifying a custom signing key. Defaults to false. Allows an application to use claims mapping without specifying a custom signing key</summary>
     [JsonPropertyName("mappedClaimsEnabled")]
@@ -723,7 +851,7 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("featureTags")]
     public IList<V1beta1ApplicationSpecInitProviderFeatureTags>? FeatureTags { get; set; }
 
-    /// <summary>Configures the groups claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
+    /// <summary>A set of strings containing membership claims issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
     [JsonPropertyName("groupMembershipClaims")]
     public IList<string>? GroupMembershipClaims { get; set; }
 
@@ -981,7 +1109,7 @@ public partial class V1beta1ApplicationStatusAtProviderApiOauth2PermissionScope
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProviderApi
 {
-    /// <summary>A set of application IDs (client IDs), used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
+    /// <summary>A set of client IDs, used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app</summary>
     [JsonPropertyName("knownClientApplications")]
     public IList<string>? KnownClientApplications { get; set; }
 
@@ -1243,10 +1371,6 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("appRoleIds")]
     public IDictionary<string, string>? AppRoleIds { get; set; }
 
-    /// <summary>The Application ID (also called Client ID)</summary>
-    [JsonPropertyName("applicationId")]
-    public string? ApplicationId { get; set; }
-
     /// <summary>The Client ID for the application. The Client ID (also called Application ID)</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
@@ -1275,7 +1399,7 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("featureTags")]
     public IList<V1beta1ApplicationStatusAtProviderFeatureTags>? FeatureTags { get; set; }
 
-    /// <summary>Configures the groups claim issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
+    /// <summary>A set of strings containing membership claims issued in a user or OAuth 2.0 access token that the app expects. Possible values are None, SecurityGroup, DirectoryRole, ApplicationGroup or All. Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects</summary>
     [JsonPropertyName("groupMembershipClaims")]
     public IList<string>? GroupMembershipClaims { get; set; }
 

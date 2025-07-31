@@ -374,6 +374,10 @@ public partial class V1beta1CustomDomainStatusAtProvider
     [JsonPropertyName("containerAppEnvironmentCertificateId")]
     public string? ContainerAppEnvironmentCertificateId { get; set; }
 
+    /// <summary>The ID of the Container App Environment Managed Certificate to use.</summary>
+    [JsonPropertyName("containerAppEnvironmentManagedCertificateId")]
+    public string? ContainerAppEnvironmentManagedCertificateId { get; set; }
+
     /// <summary>The ID of the Container App to which this Custom Domain should be bound. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("containerAppId")]
     public string? ContainerAppId { get; set; }

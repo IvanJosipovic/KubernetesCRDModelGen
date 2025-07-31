@@ -290,6 +290,10 @@ public partial class V1beta1MonitorDataCollectionEndpointStatusAtProvider
     [JsonPropertyName("logsIngestionEndpoint")]
     public string? LogsIngestionEndpoint { get; set; }
 
+    /// <summary>The endpoint used for ingesting metrics, e.g., https://mydce-abcd.eastus-1.metrics.ingest.monitor.azure.com.</summary>
+    [JsonPropertyName("metricsIngestionEndpoint")]
+    public string? MetricsIngestionEndpoint { get; set; }
+
     /// <summary>Whether network access from public internet to the Data Collection Endpoint are allowed. Possible values are true and false. Default to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }

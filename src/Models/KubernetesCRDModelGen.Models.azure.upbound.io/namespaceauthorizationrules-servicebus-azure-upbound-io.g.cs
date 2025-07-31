@@ -68,11 +68,11 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceId
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecForProvider
 {
-    /// <summary>Grants listen access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants listen access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("listen")]
     public bool? Listen { get; set; }
 
-    /// <summary>Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
+    /// <summary>Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
     [JsonPropertyName("manage")]
     public bool? Manage { get; set; }
 
@@ -88,7 +88,7 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProvider
     [JsonPropertyName("namespaceIdSelector")]
     public V1beta1NamespaceAuthorizationRuleSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
 
-    /// <summary>Grants send access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants send access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
@@ -97,15 +97,15 @@ public partial class V1beta1NamespaceAuthorizationRuleSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceAuthorizationRuleSpecInitProvider
 {
-    /// <summary>Grants listen access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants listen access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("listen")]
     public bool? Listen { get; set; }
 
-    /// <summary>Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
+    /// <summary>Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
     [JsonPropertyName("manage")]
     public bool? Manage { get; set; }
 
-    /// <summary>Grants send access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants send access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }
@@ -250,11 +250,11 @@ public partial class V1beta1NamespaceAuthorizationRuleStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Grants listen access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants listen access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("listen")]
     public bool? Listen { get; set; }
 
-    /// <summary>Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
+    /// <summary>Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.</summary>
     [JsonPropertyName("manage")]
     public bool? Manage { get; set; }
 
@@ -262,7 +262,7 @@ public partial class V1beta1NamespaceAuthorizationRuleStatusAtProvider
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
 
-    /// <summary>Grants send access to this this Authorization Rule. Defaults to false.</summary>
+    /// <summary>Grants send access to this Authorization Rule. Defaults to false.</summary>
     [JsonPropertyName("send")]
     public bool? Send { get; set; }
 }

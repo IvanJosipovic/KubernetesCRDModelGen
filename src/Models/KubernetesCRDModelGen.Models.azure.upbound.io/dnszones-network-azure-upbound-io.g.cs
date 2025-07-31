@@ -76,10 +76,6 @@ public partial class V1beta1DNSZoneSpecForProviderSoaRecord
     [JsonPropertyName("expireTime")]
     public double? ExpireTime { get; set; }
 
-    /// <summary>The domain name of the authoritative name server for the SOA record. If not set, computed value from Azure will be used.</summary>
-    [JsonPropertyName("hostName")]
-    public string? HostName { get; set; }
-
     /// <summary>The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to 300.</summary>
     [JsonPropertyName("minimumTtl")]
     public double? MinimumTtl { get; set; }
@@ -141,10 +137,6 @@ public partial class V1beta1DNSZoneSpecInitProviderSoaRecord
     /// <summary>The expire time for the SOA record. Defaults to 2419200.</summary>
     [JsonPropertyName("expireTime")]
     public double? ExpireTime { get; set; }
-
-    /// <summary>The domain name of the authoritative name server for the SOA record. If not set, computed value from Azure will be used.</summary>
-    [JsonPropertyName("hostName")]
-    public string? HostName { get; set; }
 
     /// <summary>The minimum Time To Live for the SOA record. By convention, it is used to determine the negative caching duration. Defaults to 300.</summary>
     [JsonPropertyName("minimumTtl")]

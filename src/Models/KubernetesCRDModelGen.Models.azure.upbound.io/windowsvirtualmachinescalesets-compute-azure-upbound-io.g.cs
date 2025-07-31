@@ -40,7 +40,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAddition
 {
     /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("contentSecretRef")]
-    public V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+    public V1beta1WindowsVirtualMachineScaleSetSpecForProviderAdditionalUnattendContentContentSecretRef? ContentSecretRef { get; set; }
 
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
@@ -76,7 +76,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderAutomati
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -252,7 +252,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryA
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -263,27 +263,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryA
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Windows Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -710,19 +689,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderSpotRest
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -831,10 +797,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderGalleryApplications>? GalleryApplications { get; set; }
-
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
     public string? HealthProbeId { get; set; }
@@ -915,10 +877,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("scaleIn")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderScaleIn>? ScaleIn { get; set; }
 
-    /// <summary>Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.</summary>
-    [JsonPropertyName("scaleInPolicy")]
-    public string? ScaleInPolicy { get; set; }
-
     /// <summary>One or more secret blocks as defined below.</summary>
     [JsonPropertyName("secret")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderSecret>? Secret { get; set; }
@@ -951,10 +909,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminateNotification>? TerminateNotification { get; set; }
-
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecForProviderTerminationNotification>? TerminationNotification { get; set; }
@@ -983,7 +937,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -997,13 +951,51 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditio
     public bool? UltraSsdEnabled { get; set; }
 }
 
+/// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalUnattendContentContentSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalUnattendContent
 {
+    /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("contentSecretRef")]
+    public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
     public string? Setting { get; set; }
+}
+
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1018,7 +1010,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAutomat
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -1194,7 +1186,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGallery
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -1205,27 +1197,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGallery
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Windows Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -1596,19 +1567,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSpotRes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1644,6 +1602,10 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     /// <summary>One or more additional_unattend_content blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("additionalUnattendContent")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdditionalUnattendContent>? AdditionalUnattendContent { get; set; }
+
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1WindowsVirtualMachineScaleSetSpecInitProviderAdminPasswordSecretRef AdminPasswordSecretRef { get; set; }
 
     /// <summary>The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
@@ -1713,10 +1675,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderGalleryApplications>? GalleryApplications { get; set; }
-
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
     public string? HealthProbeId { get; set; }
@@ -1785,10 +1743,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("scaleIn")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderScaleIn>? ScaleIn { get; set; }
 
-    /// <summary>Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.</summary>
-    [JsonPropertyName("scaleInPolicy")]
-    public string? ScaleInPolicy { get; set; }
-
     /// <summary>One or more secret blocks as defined below.</summary>
     [JsonPropertyName("secret")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderSecret>? Secret { get; set; }
@@ -1821,10 +1775,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminateNotification>? TerminateNotification { get; set; }
-
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1WindowsVirtualMachineScaleSetSpecInitProviderTerminationNotification>? TerminationNotification { get; set; }
@@ -1853,7 +1803,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -2020,7 +1970,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderAutomat
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -2158,7 +2108,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGallery
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -2169,27 +2119,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGallery
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Windows Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -2504,19 +2433,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSpotRes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2617,10 +2533,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetStatusAtProviderGalleryApplications>? GalleryApplications { get; set; }
-
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
     public string? HealthProbeId { get; set; }
@@ -2697,10 +2609,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("scaleIn")]
     public IList<V1beta1WindowsVirtualMachineScaleSetStatusAtProviderScaleIn>? ScaleIn { get; set; }
 
-    /// <summary>Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.</summary>
-    [JsonPropertyName("scaleInPolicy")]
-    public string? ScaleInPolicy { get; set; }
-
     /// <summary>One or more secret blocks as defined below.</summary>
     [JsonPropertyName("secret")]
     public IList<V1beta1WindowsVirtualMachineScaleSetStatusAtProviderSecret>? Secret { get; set; }
@@ -2732,10 +2640,6 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
     /// <summary>A mapping of tags which should be assigned to this Virtual Machine Scale Set.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1WindowsVirtualMachineScaleSetStatusAtProviderTerminateNotification>? TerminateNotification { get; set; }
 
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
@@ -2769,7 +2673,7 @@ public partial class V1beta1WindowsVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }

@@ -140,6 +140,10 @@ public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionSpecFor
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLManagedInstanceTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
 
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the name of the MS SQL Managed Instance. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managedInstanceId")]
     public string? ManagedInstanceId { get; set; }
@@ -228,6 +232,10 @@ public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionSpecIni
     /// <summary>Selector for a Key in keyvault to populate keyVaultKeyId.</summary>
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLManagedInstanceTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
+
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -377,6 +385,10 @@ public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionStatusA
     /// <summary>To use customer managed keys from Azure Key Vault, provide the AKV Key ID. To use service managed keys, omit this field.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
 
     /// <summary>Specifies the name of the MS SQL Managed Instance. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("managedInstanceId")]

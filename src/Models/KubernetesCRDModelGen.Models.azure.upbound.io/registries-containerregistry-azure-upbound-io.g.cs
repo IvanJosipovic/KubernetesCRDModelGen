@@ -68,10 +68,6 @@ public partial class V1beta1RegistrySpecForProviderEncryptionIdentityClientIdSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecForProviderEncryption
 {
-    /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
     /// <summary>The client ID of the managed identity associated with the encryption key.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
@@ -200,83 +196,6 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSetIpRule
     public string? IpRange { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetwork
-{
-    /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
-    [JsonPropertyName("action")]
-    public string? Action { get; set; }
-
-    /// <summary>The ID of the Container Registry.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-
-    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdRef")]
-    public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdRef? SubnetIdRef { get; set; }
-
-    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdSelector")]
-    public V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecForProviderNetworkRuleSet
@@ -288,10 +207,6 @@ public partial class V1beta1RegistrySpecForProviderNetworkRuleSet
     /// <summary>One or more ip_rule blocks as defined below.</summary>
     [JsonPropertyName("ipRule")]
     public IList<V1beta1RegistrySpecForProviderNetworkRuleSetIpRule>? IpRule { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("virtualNetwork")]
-    public IList<V1beta1RegistrySpecForProviderNetworkRuleSetVirtualNetwork>? VirtualNetwork { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -352,35 +267,13 @@ public partial class V1beta1RegistrySpecForProviderResourceGroupNameSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderRetentionPolicy
-{
-    /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecForProviderTrustPolicy
-{
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecForProvider
 {
     /// <summary>Specifies whether the admin user is enabled. Defaults to false.</summary>
     [JsonPropertyName("adminEnabled")]
     public bool? AdminEnabled { get; set; }
 
-    /// <summary>Whether allows anonymous (unauthenticated) pull access to this Container Registry? This is only supported on resources with the Standard or Premium SKU.</summary>
+    /// <summary>Whether to allow anonymous (unauthenticated) pull access to this Container Registry. This is only supported on resources with the Standard or Premium SKU.</summary>
     [JsonPropertyName("anonymousPullEnabled")]
     public bool? AnonymousPullEnabled { get; set; }
 
@@ -396,7 +289,7 @@ public partial class V1beta1RegistrySpecForProvider
     [JsonPropertyName("exportPolicyEnabled")]
     public bool? ExportPolicyEnabled { get; set; }
 
-    /// <summary>A georeplications block as documented below.</summary>
+    /// <summary>One or more georeplications blocks as documented below.</summary>
     [JsonPropertyName("georeplications")]
     public IList<V1beta1RegistrySpecForProviderGeoreplications>? Georeplications { get; set; }
 
@@ -408,7 +301,7 @@ public partial class V1beta1RegistrySpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network-restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
     [JsonPropertyName("networkRuleBypassOption")]
     public string? NetworkRuleBypassOption { get; set; }
 
@@ -436,9 +329,9 @@ public partial class V1beta1RegistrySpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1RegistrySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>A retention_policy block as documented below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1RegistrySpecForProviderRetentionPolicy>? RetentionPolicy { get; set; }
+    /// <summary>The number of days to retain and untagged manifest after which it gets purged. Defaults to 7.</summary>
+    [JsonPropertyName("retentionPolicyInDays")]
+    public double? RetentionPolicyInDays { get; set; }
 
     /// <summary>The SKU name of the container registry. Possible values are Basic, Standard and Premium.</summary>
     [JsonPropertyName("sku")]
@@ -448,9 +341,9 @@ public partial class V1beta1RegistrySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A trust_policy block as documented below.</summary>
-    [JsonPropertyName("trustPolicy")]
-    public IList<V1beta1RegistrySpecForProviderTrustPolicy>? TrustPolicy { get; set; }
+    /// <summary>Boolean value that indicated whether trust policy is enabled. Defaults to false.</summary>
+    [JsonPropertyName("trustPolicyEnabled")]
+    public bool? TrustPolicyEnabled { get; set; }
 
     /// <summary>Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("zoneRedundancyEnabled")]
@@ -517,10 +410,6 @@ public partial class V1beta1RegistrySpecInitProviderEncryptionIdentityClientIdSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecInitProviderEncryption
 {
-    /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
     /// <summary>The client ID of the managed identity associated with the encryption key.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
@@ -649,83 +538,6 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetIpRule
     public string? IpRange { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork
-{
-    /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
-    [JsonPropertyName("action")]
-    public string? Action { get; set; }
-
-    /// <summary>The ID of the Container Registry.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-
-    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdRef")]
-    public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdRef? SubnetIdRef { get; set; }
-
-    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdSelector")]
-    public V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetworkSubnetIdSelector? SubnetIdSelector { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecInitProviderNetworkRuleSet
@@ -737,32 +549,6 @@ public partial class V1beta1RegistrySpecInitProviderNetworkRuleSet
     /// <summary>One or more ip_rule blocks as defined below.</summary>
     [JsonPropertyName("ipRule")]
     public IList<V1beta1RegistrySpecInitProviderNetworkRuleSetIpRule>? IpRule { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("virtualNetwork")]
-    public IList<V1beta1RegistrySpecInitProviderNetworkRuleSetVirtualNetwork>? VirtualNetwork { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderRetentionPolicy
-{
-    /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistrySpecInitProviderTrustPolicy
-{
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -773,7 +559,7 @@ public partial class V1beta1RegistrySpecInitProvider
     [JsonPropertyName("adminEnabled")]
     public bool? AdminEnabled { get; set; }
 
-    /// <summary>Whether allows anonymous (unauthenticated) pull access to this Container Registry? This is only supported on resources with the Standard or Premium SKU.</summary>
+    /// <summary>Whether to allow anonymous (unauthenticated) pull access to this Container Registry. This is only supported on resources with the Standard or Premium SKU.</summary>
     [JsonPropertyName("anonymousPullEnabled")]
     public bool? AnonymousPullEnabled { get; set; }
 
@@ -789,7 +575,7 @@ public partial class V1beta1RegistrySpecInitProvider
     [JsonPropertyName("exportPolicyEnabled")]
     public bool? ExportPolicyEnabled { get; set; }
 
-    /// <summary>A georeplications block as documented below.</summary>
+    /// <summary>One or more georeplications blocks as documented below.</summary>
     [JsonPropertyName("georeplications")]
     public IList<V1beta1RegistrySpecInitProviderGeoreplications>? Georeplications { get; set; }
 
@@ -801,7 +587,7 @@ public partial class V1beta1RegistrySpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network-restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
     [JsonPropertyName("networkRuleBypassOption")]
     public string? NetworkRuleBypassOption { get; set; }
 
@@ -817,9 +603,9 @@ public partial class V1beta1RegistrySpecInitProvider
     [JsonPropertyName("quarantinePolicyEnabled")]
     public bool? QuarantinePolicyEnabled { get; set; }
 
-    /// <summary>A retention_policy block as documented below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1RegistrySpecInitProviderRetentionPolicy>? RetentionPolicy { get; set; }
+    /// <summary>The number of days to retain and untagged manifest after which it gets purged. Defaults to 7.</summary>
+    [JsonPropertyName("retentionPolicyInDays")]
+    public double? RetentionPolicyInDays { get; set; }
 
     /// <summary>The SKU name of the container registry. Possible values are Basic, Standard and Premium.</summary>
     [JsonPropertyName("sku")]
@@ -829,9 +615,9 @@ public partial class V1beta1RegistrySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A trust_policy block as documented below.</summary>
-    [JsonPropertyName("trustPolicy")]
-    public IList<V1beta1RegistrySpecInitProviderTrustPolicy>? TrustPolicy { get; set; }
+    /// <summary>Boolean value that indicated whether trust policy is enabled. Defaults to false.</summary>
+    [JsonPropertyName("trustPolicyEnabled")]
+    public bool? TrustPolicyEnabled { get; set; }
 
     /// <summary>Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("zoneRedundancyEnabled")]
@@ -974,10 +760,6 @@ public partial class V1beta1RegistrySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryStatusAtProviderEncryption
 {
-    /// <summary>Boolean value that indicates whether encryption is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
     /// <summary>The client ID of the managed identity associated with the encryption key.</summary>
     [JsonPropertyName("identityClientId")]
     public string? IdentityClientId { get; set; }
@@ -1044,19 +826,6 @@ public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetIpRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistryStatusAtProviderNetworkRuleSetVirtualNetwork
-{
-    /// <summary>The behaviour for requests matching this rule. At this time the only supported value is Allow</summary>
-    [JsonPropertyName("action")]
-    public string? Action { get; set; }
-
-    /// <summary>The ID of the Container Registry.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryStatusAtProviderNetworkRuleSet
 {
     /// <summary>The behaviour for requests matching no rules. Either Allow or Deny. Defaults to Allow</summary>
@@ -1066,32 +835,6 @@ public partial class V1beta1RegistryStatusAtProviderNetworkRuleSet
     /// <summary>One or more ip_rule blocks as defined below.</summary>
     [JsonPropertyName("ipRule")]
     public IList<V1beta1RegistryStatusAtProviderNetworkRuleSetIpRule>? IpRule { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("virtualNetwork")]
-    public IList<V1beta1RegistryStatusAtProviderNetworkRuleSetVirtualNetwork>? VirtualNetwork { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistryStatusAtProviderRetentionPolicy
-{
-    /// <summary>The number of days to retain an untagged manifest after which it gets purged. Default is 7.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1RegistryStatusAtProviderTrustPolicy
-{
-    /// <summary>Boolean value that indicates whether the policy is enabled.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 }
 
 /// <summary></summary>
@@ -1106,7 +849,7 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("adminUsername")]
     public string? AdminUsername { get; set; }
 
-    /// <summary>Whether allows anonymous (unauthenticated) pull access to this Container Registry? This is only supported on resources with the Standard or Premium SKU.</summary>
+    /// <summary>Whether to allow anonymous (unauthenticated) pull access to this Container Registry. This is only supported on resources with the Standard or Premium SKU.</summary>
     [JsonPropertyName("anonymousPullEnabled")]
     public bool? AnonymousPullEnabled { get; set; }
 
@@ -1122,7 +865,7 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("exportPolicyEnabled")]
     public bool? ExportPolicyEnabled { get; set; }
 
-    /// <summary>A georeplications block as documented below.</summary>
+    /// <summary>One or more georeplications blocks as documented below.</summary>
     [JsonPropertyName("georeplications")]
     public IList<V1beta1RegistryStatusAtProviderGeoreplications>? Georeplications { get; set; }
 
@@ -1142,7 +885,7 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("loginServer")]
     public string? LoginServer { get; set; }
 
-    /// <summary>Whether to allow trusted Azure services to access a network restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
+    /// <summary>Whether to allow trusted Azure services to access a network-restricted Container Registry? Possible values are None and AzureServices. Defaults to AzureServices.</summary>
     [JsonPropertyName("networkRuleBypassOption")]
     public string? NetworkRuleBypassOption { get; set; }
 
@@ -1162,9 +905,9 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>A retention_policy block as documented below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1RegistryStatusAtProviderRetentionPolicy>? RetentionPolicy { get; set; }
+    /// <summary>The number of days to retain and untagged manifest after which it gets purged. Defaults to 7.</summary>
+    [JsonPropertyName("retentionPolicyInDays")]
+    public double? RetentionPolicyInDays { get; set; }
 
     /// <summary>The SKU name of the container registry. Possible values are Basic, Standard and Premium.</summary>
     [JsonPropertyName("sku")]
@@ -1174,9 +917,9 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A trust_policy block as documented below.</summary>
-    [JsonPropertyName("trustPolicy")]
-    public IList<V1beta1RegistryStatusAtProviderTrustPolicy>? TrustPolicy { get; set; }
+    /// <summary>Boolean value that indicated whether trust policy is enabled. Defaults to false.</summary>
+    [JsonPropertyName("trustPolicyEnabled")]
+    public bool? TrustPolicyEnabled { get; set; }
 
     /// <summary>Whether zone redundancy is enabled for this Container Registry? Changing this forces a new resource to be created. Defaults to false.</summary>
     [JsonPropertyName("zoneRedundancyEnabled")]

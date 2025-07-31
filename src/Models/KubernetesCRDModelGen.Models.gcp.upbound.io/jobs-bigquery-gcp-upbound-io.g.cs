@@ -162,6 +162,174 @@ public partial class V1beta1JobSpecForProviderCopyDestinationTable
     public V1beta1JobSpecForProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesDatasetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesProjectIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesProjectIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesProjectIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesTableIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderCopySourceTablesTableIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderCopySourceTablesTableIdSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCopySourceTables
@@ -170,13 +338,37 @@ public partial class V1beta1JobSpecForProviderCopySourceTables
     [JsonPropertyName("datasetId")]
     public string? DatasetId { get; set; }
 
+    /// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
+    [JsonPropertyName("datasetIdRef")]
+    public V1beta1JobSpecForProviderCopySourceTablesDatasetIdRef? DatasetIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
+    [JsonPropertyName("datasetIdSelector")]
+    public V1beta1JobSpecForProviderCopySourceTablesDatasetIdSelector? DatasetIdSelector { get; set; }
+
     /// <summary>The ID of the project containing this table.</summary>
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
+    /// <summary>Reference to a Table in bigquery to populate projectId.</summary>
+    [JsonPropertyName("projectIdRef")]
+    public V1beta1JobSpecForProviderCopySourceTablesProjectIdRef? ProjectIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate projectId.</summary>
+    [JsonPropertyName("projectIdSelector")]
+    public V1beta1JobSpecForProviderCopySourceTablesProjectIdSelector? ProjectIdSelector { get; set; }
+
     /// <summary>The table. Can be specified {{table_id}} if project_id and dataset_id are also set, or of the form projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}} if not.</summary>
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
+
+    /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
+    [JsonPropertyName("tableIdRef")]
+    public V1beta1JobSpecForProviderCopySourceTablesTableIdRef? TableIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
+    [JsonPropertyName("tableIdSelector")]
+    public V1beta1JobSpecForProviderCopySourceTablesTableIdSelector? TableIdSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -1205,6 +1397,174 @@ public partial class V1beta1JobSpecInitProviderCopyDestinationTable
     public V1beta1JobSpecInitProviderCopyDestinationTableTableIdSelector? TableIdSelector { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesProjectIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate projectId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Table in bigquery to populate tableId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesTableIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Table in bigquery to populate tableId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderCopySourceTablesTableIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderCopySourceTablesTableIdSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCopySourceTables
@@ -1213,13 +1573,37 @@ public partial class V1beta1JobSpecInitProviderCopySourceTables
     [JsonPropertyName("datasetId")]
     public string? DatasetId { get; set; }
 
+    /// <summary>Reference to a Table in bigquery to populate datasetId.</summary>
+    [JsonPropertyName("datasetIdRef")]
+    public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdRef? DatasetIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate datasetId.</summary>
+    [JsonPropertyName("datasetIdSelector")]
+    public V1beta1JobSpecInitProviderCopySourceTablesDatasetIdSelector? DatasetIdSelector { get; set; }
+
     /// <summary>The ID of the project containing this table.</summary>
     [JsonPropertyName("projectId")]
     public string? ProjectId { get; set; }
 
+    /// <summary>Reference to a Table in bigquery to populate projectId.</summary>
+    [JsonPropertyName("projectIdRef")]
+    public V1beta1JobSpecInitProviderCopySourceTablesProjectIdRef? ProjectIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate projectId.</summary>
+    [JsonPropertyName("projectIdSelector")]
+    public V1beta1JobSpecInitProviderCopySourceTablesProjectIdSelector? ProjectIdSelector { get; set; }
+
     /// <summary>The table. Can be specified {{table_id}} if project_id and dataset_id are also set, or of the form projects/{{project}}/datasets/{{dataset_id}}/tables/{{table_id}} if not.</summary>
     [JsonPropertyName("tableId")]
     public string? TableId { get; set; }
+
+    /// <summary>Reference to a Table in bigquery to populate tableId.</summary>
+    [JsonPropertyName("tableIdRef")]
+    public V1beta1JobSpecInitProviderCopySourceTablesTableIdRef? TableIdRef { get; set; }
+
+    /// <summary>Selector for a Table in bigquery to populate tableId.</summary>
+    [JsonPropertyName("tableIdSelector")]
+    public V1beta1JobSpecInitProviderCopySourceTablesTableIdSelector? TableIdSelector { get; set; }
 }
 
 /// <summary></summary>
@@ -2723,7 +3107,7 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("copy")]
     public IList<V1beta1JobStatusAtProviderCopy>? Copy { get; set; }
 
-    /// <summary></summary>
+    /// <summary>for all of the labels present on the resource.</summary>
     [JsonPropertyName("effectiveLabels")]
     public IDictionary<string, string>? EffectiveLabels { get; set; }
 

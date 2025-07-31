@@ -21,7 +21,7 @@ public partial class V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWo
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+/// <summary>Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWorkspaceIdRef
 {
@@ -47,7 +47,7 @@ public partial class V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWo
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+/// <summary>Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWorkspaceIdSelector
 {
@@ -114,15 +114,15 @@ public partial class V1beta1SentinelAlertRuleFusionSpecForProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>Reference to a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+    /// <summary>Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdRef")]
     public V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWorkspaceIdRef? LogAnalyticsWorkspaceIdRef { get; set; }
 
-    /// <summary>Selector for a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+    /// <summary>Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
 
-    /// <summary>The name which should be used for this Sentinel Fusion Alert Rule. Changing this forces a new Sentinel Fusion Alert Rule to be created.</summary>
+    /// <summary>The Name of the source subtype under a given source signal in Fusion detection. Refer to Fusion alert rule template for supported values.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -144,7 +144,7 @@ public partial class V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsW
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+/// <summary>Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsWorkspaceIdRef
 {
@@ -170,7 +170,7 @@ public partial class V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsW
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+/// <summary>Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsWorkspaceIdSelector
 {
@@ -237,15 +237,15 @@ public partial class V1beta1SentinelAlertRuleFusionSpecInitProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>Reference to a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+    /// <summary>Reference to a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdRef")]
     public V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsWorkspaceIdRef? LogAnalyticsWorkspaceIdRef { get; set; }
 
-    /// <summary>Selector for a LogAnalyticsSolution in operationsmanagement to populate logAnalyticsWorkspaceId.</summary>
+    /// <summary>Selector for a SentinelLogAnalyticsWorkspaceOnboarding in securityinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1SentinelAlertRuleFusionSpecInitProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
 
-    /// <summary>The name which should be used for this Sentinel Fusion Alert Rule. Changing this forces a new Sentinel Fusion Alert Rule to be created.</summary>
+    /// <summary>The Name of the source subtype under a given source signal in Fusion detection. Refer to Fusion alert rule template for supported values.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -440,7 +440,7 @@ public partial class V1beta1SentinelAlertRuleFusionStatusAtProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>The name which should be used for this Sentinel Fusion Alert Rule. Changing this forces a new Sentinel Fusion Alert Rule to be created.</summary>
+    /// <summary>The Name of the source subtype under a given source signal in Fusion detection. Refer to Fusion alert rule template for supported values.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

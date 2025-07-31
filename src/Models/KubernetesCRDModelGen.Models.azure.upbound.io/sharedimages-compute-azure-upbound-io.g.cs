@@ -178,6 +178,10 @@ public partial class V1beta1SharedImageSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies if the Shared Image supports NVMe disks. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskControllerTypeNvmeEnabled")]
+    public bool? DiskControllerTypeNvmeEnabled { get; set; }
+
     /// <summary>One or more Disk Types not allowed for the Image. Possible values include Standard_LRS and Premium_LRS.</summary>
     [JsonPropertyName("diskTypesNotAllowed")]
     public IList<string>? DiskTypesNotAllowed { get; set; }
@@ -201,6 +205,10 @@ public partial class V1beta1SharedImageSpecForProvider
     /// <summary>Selector for a SharedImageGallery in compute to populate galleryName.</summary>
     [JsonPropertyName("galleryNameSelector")]
     public V1beta1SharedImageSpecForProviderGalleryNameSelector? GalleryNameSelector { get; set; }
+
+    /// <summary>Specifies if the Shared Image supports hibernation. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
 
     /// <summary>The generation of HyperV that the Virtual Machine used to create the Shared Image is based on. Possible values are V1 and V2. Defaults to V1. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hyperVGeneration")]
@@ -333,6 +341,10 @@ public partial class V1beta1SharedImageSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies if the Shared Image supports NVMe disks. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskControllerTypeNvmeEnabled")]
+    public bool? DiskControllerTypeNvmeEnabled { get; set; }
+
     /// <summary>One or more Disk Types not allowed for the Image. Possible values include Standard_LRS and Premium_LRS.</summary>
     [JsonPropertyName("diskTypesNotAllowed")]
     public IList<string>? DiskTypesNotAllowed { get; set; }
@@ -344,6 +356,10 @@ public partial class V1beta1SharedImageSpecInitProvider
     /// <summary>The End User Licence Agreement for the Shared Image. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("eula")]
     public string? Eula { get; set; }
+
+    /// <summary>Specifies if the Shared Image supports hibernation. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
 
     /// <summary>The generation of HyperV that the Virtual Machine used to create the Shared Image is based on. Possible values are V1 and V2. Defaults to V1. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hyperVGeneration")]
@@ -596,6 +612,10 @@ public partial class V1beta1SharedImageStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Specifies if the Shared Image supports NVMe disks. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskControllerTypeNvmeEnabled")]
+    public bool? DiskControllerTypeNvmeEnabled { get; set; }
+
     /// <summary>One or more Disk Types not allowed for the Image. Possible values include Standard_LRS and Premium_LRS.</summary>
     [JsonPropertyName("diskTypesNotAllowed")]
     public IList<string>? DiskTypesNotAllowed { get; set; }
@@ -611,6 +631,10 @@ public partial class V1beta1SharedImageStatusAtProvider
     /// <summary>Specifies the name of the Shared Image Gallery in which this Shared Image should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("galleryName")]
     public string? GalleryName { get; set; }
+
+    /// <summary>Specifies if the Shared Image supports hibernation. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("hibernationEnabled")]
+    public bool? HibernationEnabled { get; set; }
 
     /// <summary>The generation of HyperV that the Virtual Machine used to create the Shared Image is based on. Possible values are V1 and V2. Defaults to V1. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hyperVGeneration")]

@@ -176,7 +176,7 @@ public partial class V1beta1SparkPoolSpecForProvider
     [JsonPropertyName("sparkLogFolder")]
     public string? SparkLogFolder { get; set; }
 
-    /// <summary>The Apache Spark version. Possible values are 2.4 , 3.1 , 3.2 and 3.3. Defaults to 2.4.</summary>
+    /// <summary>The Apache Spark version. Possible values are 3.2, 3.3, and 3.4.</summary>
     [JsonPropertyName("sparkVersion")]
     public string? SparkVersion { get; set; }
 
@@ -309,7 +309,7 @@ public partial class V1beta1SparkPoolSpecInitProvider
     [JsonPropertyName("sparkLogFolder")]
     public string? SparkLogFolder { get; set; }
 
-    /// <summary>The Apache Spark version. Possible values are 2.4 , 3.1 , 3.2 and 3.3. Defaults to 2.4.</summary>
+    /// <summary>The Apache Spark version. Possible values are 3.2, 3.3, and 3.4.</summary>
     [JsonPropertyName("sparkVersion")]
     public string? SparkVersion { get; set; }
 
@@ -566,7 +566,7 @@ public partial class V1beta1SparkPoolStatusAtProvider
     [JsonPropertyName("sparkLogFolder")]
     public string? SparkLogFolder { get; set; }
 
-    /// <summary>The Apache Spark version. Possible values are 2.4 , 3.1 , 3.2 and 3.3. Defaults to 2.4.</summary>
+    /// <summary>The Apache Spark version. Possible values are 3.2, 3.3, and 3.4.</summary>
     [JsonPropertyName("sparkVersion")]
     public string? SparkVersion { get; set; }
 

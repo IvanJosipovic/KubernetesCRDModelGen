@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: botconnections.botservice.azure.upbound.io
 spec:
   group: botservice.azure.upbound.io
@@ -297,12 +297,6 @@ spec:
                   serviceProviderName:
                     description: The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.
                     type: string
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: A mapping of tags to assign to the resource.
-                    type: object
-                    x-kubernetes-map-type: granular
                 type: object
               initProvider:
                 description: >-
@@ -361,12 +355,6 @@ spec:
                   serviceProviderName:
                     description: The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.
                     type: string
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: A mapping of tags to assign to the resource.
-                    type: object
-                    x-kubernetes-map-type: granular
                 required:
                 - clientSecretSecretRef
                 type: object
@@ -619,12 +607,6 @@ spec:
                   serviceProviderName:
                     description: The name of the service provider that will be associated with this connection. Changing this forces a new resource to be created.
                     type: string
-                  tags:
-                    additionalProperties:
-                      type: string
-                    description: A mapping of tags to assign to the resource.
-                    type: object
-                    x-kubernetes-map-type: granular
                 type: object
               conditions:
                 description: Conditions of the resource.

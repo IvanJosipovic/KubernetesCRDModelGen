@@ -142,7 +142,7 @@ public partial class V1beta1TrafficManagerExternalEndpointSpecForProvider
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
@@ -213,7 +213,7 @@ public partial class V1beta1TrafficManagerExternalEndpointSpecInitProvider
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
@@ -424,7 +424,7 @@ public partial class V1beta1TrafficManagerExternalEndpointStatusAtProvider
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }

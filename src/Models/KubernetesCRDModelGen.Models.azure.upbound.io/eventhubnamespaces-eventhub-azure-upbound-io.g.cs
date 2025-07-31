@@ -220,11 +220,11 @@ public partial class V1beta1EventHubNamespaceSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</summary>
+    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 40.</summary>
     [JsonPropertyName("maximumThroughputUnits")]
     public double? MaximumThroughputUnits { get; set; }
 
-    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -255,10 +255,6 @@ public partial class V1beta1EventHubNamespaceSpecForProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to false.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary></summary>
@@ -417,11 +413,11 @@ public partial class V1beta1EventHubNamespaceSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</summary>
+    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 40.</summary>
     [JsonPropertyName("maximumThroughputUnits")]
     public double? MaximumThroughputUnits { get; set; }
 
-    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -440,10 +436,6 @@ public partial class V1beta1EventHubNamespaceSpecInitProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to false.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -682,11 +674,11 @@ public partial class V1beta1EventHubNamespaceStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.</summary>
+    /// <summary>Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 40.</summary>
     [JsonPropertyName("maximumThroughputUnits")]
     public double? MaximumThroughputUnits { get; set; }
 
-    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary>The minimum supported TLS version for this EventHub Namespace. Valid values are: 1.0, 1.1 and 1.2. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -709,10 +701,6 @@ public partial class V1beta1EventHubNamespaceStatusAtProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Specifies if the EventHub Namespace should be Zone Redundant (created across Availability Zones). Changing this forces a new resource to be created. Defaults to false.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: windowsvirtualmachinescalesets.compute.azure.upbound.io
 spec:
   group: compute.azure.upbound.io
@@ -117,8 +117,6 @@ spec:
                         setting:
                           description: The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.
                           type: string
-                      required:
-                      - contentSecretRef
                       type: object
                     type: array
                   adminPasswordSecretRef:
@@ -152,7 +150,7 @@ spec:
                           description: Should the automatic instance repair be enabled on this Virtual Machine Scale Set?
                           type: boolean
                         gracePeriod:
-                          description: Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.
+                          description: Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).
                           type: string
                       type: object
                     type: array
@@ -329,29 +327,13 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value. Changing this forces a new resource to be created.
                           type: string
                         versionId:
                           description: Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -772,9 +754,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -844,18 +823,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    items:
-                      properties:
-                        enabled:
-                          description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                          type: boolean
-                        timeout:
-                          description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                          type: string
-                      type: object
-                    type: array
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     items:
@@ -896,7 +863,7 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array
@@ -937,11 +904,47 @@ spec:
                     description: One or more additional_unattend_content blocks as defined below. Changing this forces a new resource to be created.
                     items:
                       properties:
+                        contentSecretRef:
+                          description: The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.
+                          properties:
+                            key:
+                              description: The key to select.
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                            namespace:
+                              description: Namespace of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          - namespace
+                          type: object
                         setting:
                           description: The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.
                           type: string
+                      required:
+                      - contentSecretRef
                       type: object
                     type: array
+                  adminPasswordSecretRef:
+                    description: The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   adminUsername:
                     description: The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.
                     type: string
@@ -956,7 +959,7 @@ spec:
                           description: Should the automatic instance repair be enabled on this Virtual Machine Scale Set?
                           type: boolean
                         gracePeriod:
-                          description: Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.
+                          description: Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).
                           type: string
                       type: object
                     type: array
@@ -1133,29 +1136,13 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value. Changing this forces a new resource to be created.
                           type: string
                         versionId:
                           description: Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -1487,9 +1474,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -1559,18 +1543,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    items:
-                      properties:
-                        enabled:
-                          description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                          type: boolean
-                        timeout:
-                          description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                          type: string
-                      type: object
-                    type: array
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     items:
@@ -1611,11 +1583,13 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                required:
+                - adminPasswordSecretRef
                 type: object
               managementPolicies:
                 default:
@@ -1877,7 +1851,7 @@ spec:
                           description: Should the automatic instance repair be enabled on this Virtual Machine Scale Set?
                           type: boolean
                         gracePeriod:
-                          description: Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.
+                          description: Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).
                           type: string
                       type: object
                     type: array
@@ -2020,29 +1994,13 @@ spec:
                           description: Specifies the URI to an Azure Blob that will replace the default configuration for the package if provided. Changing this forces a new resource to be created.
                           type: string
                         order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
+                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
                           type: number
                         tag:
                           description: Specifies a passthrough value for more generic context. This field can be any valid string value. Changing this forces a new resource to be created.
                           type: string
                         versionId:
                           description: Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -2300,9 +2258,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -2372,18 +2327,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    items:
-                      properties:
-                        enabled:
-                          description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                          type: boolean
-                        timeout:
-                          description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                          type: string
-                      type: object
-                    type: array
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     items:
@@ -2427,7 +2370,7 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array
@@ -2809,22 +2752,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
                   healthProbeId:
                     description: The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.
                     type: string
@@ -3230,9 +3157,6 @@ spec:
                         description: The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are Default, NewestVM and OldestVM, defaults to Default. For more information about scale in policy, please refer to this doc.
                         type: string
                     type: object
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -3298,16 +3222,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    properties:
-                      enabled:
-                        description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                        type: boolean
-                      timeout:
-                        description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                        type: string
-                    type: object
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     properties:
@@ -3346,7 +3260,7 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array
@@ -3616,22 +3530,6 @@ spec:
                           type: string
                         versionId:
                           description: Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
                           type: string
                       type: object
                     type: array
@@ -3951,9 +3849,6 @@ spec:
                         description: The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are Default, NewestVM and OldestVM, defaults to Default. For more information about scale in policy, please refer to this doc.
                         type: string
                     type: object
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -4019,16 +3914,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    properties:
-                      enabled:
-                        description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                        type: boolean
-                      timeout:
-                        description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                        type: string
-                    type: object
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     properties:
@@ -4067,7 +3952,7 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array
@@ -4478,22 +4363,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  galleryApplications:
-                    items:
-                      properties:
-                        configurationReferenceBlobUri:
-                          type: string
-                        order:
-                          description: Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.
-                          type: number
-                        packageReferenceId:
-                          description: The ID of the Windows Virtual Machine Scale Set.
-                          type: string
-                        tag:
-                          description: The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.
-                          type: string
-                      type: object
-                    type: array
                   healthProbeId:
                     description: The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.
                     type: string
@@ -4736,9 +4605,6 @@ spec:
                         description: The scale-in policy rule that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled in. Possible values for the scale-in policy rules are Default, NewestVM and OldestVM, defaults to Default. For more information about scale in policy, please refer to this doc.
                         type: string
                     type: object
-                  scaleInPolicy:
-                    description: 'Deprecated: scaleInPolicy will be removed in favour of the scaleIn code block.'
-                    type: string
                   secret:
                     description: One or more secret blocks as defined below.
                     items:
@@ -4804,16 +4670,6 @@ spec:
                     description: A mapping of tags which should be assigned to this Virtual Machine Scale Set.
                     type: object
                     x-kubernetes-map-type: granular
-                  terminateNotification:
-                    description: A terminate_notification block as defined below.
-                    properties:
-                      enabled:
-                        description: Should the terminate notification be enabled on this Virtual Machine Scale Set?
-                        type: boolean
-                      timeout:
-                        description: Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.
-                        type: string
-                    type: object
                   terminationNotification:
                     description: A termination_notification block as defined below.
                     properties:
@@ -4855,7 +4711,7 @@ spec:
                     description: Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
                   zones:
-                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located. Changing this forces a new Windows Virtual Machine Scale Set to be created.
+                    description: Specifies a list of Availability Zones in which this Windows Virtual Machine Scale Set should be located.
                     items:
                       type: string
                     type: array

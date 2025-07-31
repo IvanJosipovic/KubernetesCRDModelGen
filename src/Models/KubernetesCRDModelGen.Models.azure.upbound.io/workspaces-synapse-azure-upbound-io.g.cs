@@ -10,23 +10,6 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.synapse.azure.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceSpecForProviderAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderAzureDevopsRepo
 {
     /// <summary>Specifies the Azure DevOps account name.</summary>
@@ -349,24 +332,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceSpecForProviderSqlAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
-}
-
-/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided customer_managed_key must be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProviderSqlAdministratorLoginPasswordSecretRef
 {
@@ -443,10 +409,6 @@ public partial class V1beta1WorkspaceSpecForProviderStorageDataLakeGen2Filesyste
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProvider
 {
-    /// <summary>An aad_admin block as defined below.</summary>
-    [JsonPropertyName("aadAdmin")]
-    public IList<V1beta1WorkspaceSpecForProviderAadAdmin>? AadAdmin { get; set; }
-
     /// <summary>An azure_devops_repo block as defined below.</summary>
     [JsonPropertyName("azureDevopsRepo")]
     public IList<V1beta1WorkspaceSpecForProviderAzureDevopsRepo>? AzureDevopsRepo { get; set; }
@@ -527,15 +489,11 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>An sql_aad_admin block as defined below.</summary>
-    [JsonPropertyName("sqlAadAdmin")]
-    public IList<V1beta1WorkspaceSpecForProviderSqlAadAdmin>? SqlAadAdmin { get; set; }
-
-    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLogin")]
     public string? SqlAdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    /// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLoginPasswordSecretRef")]
     public V1beta1WorkspaceSpecForProviderSqlAdministratorLoginPasswordSecretRef? SqlAdministratorLoginPasswordSecretRef { get; set; }
 
@@ -558,23 +516,6 @@ public partial class V1beta1WorkspaceSpecForProvider
     /// <summary>A mapping of tags which should be assigned to the Synapse Workspace.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceSpecInitProviderAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
 }
 
 /// <summary></summary>
@@ -845,24 +786,7 @@ public partial class V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSel
     public V1beta1WorkspaceSpecInitProviderManagedResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceSpecInitProviderSqlAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
-}
-
-/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+/// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided customer_managed_key must be provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProviderSqlAdministratorLoginPasswordSecretRef
 {
@@ -939,10 +863,6 @@ public partial class V1beta1WorkspaceSpecInitProviderStorageDataLakeGen2Filesyst
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProvider
 {
-    /// <summary>An aad_admin block as defined below.</summary>
-    [JsonPropertyName("aadAdmin")]
-    public IList<V1beta1WorkspaceSpecInitProviderAadAdmin>? AadAdmin { get; set; }
-
     /// <summary>An azure_devops_repo block as defined below.</summary>
     [JsonPropertyName("azureDevopsRepo")]
     public IList<V1beta1WorkspaceSpecInitProviderAzureDevopsRepo>? AzureDevopsRepo { get; set; }
@@ -1011,15 +931,11 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("purviewId")]
     public string? PurviewId { get; set; }
 
-    /// <summary>An sql_aad_admin block as defined below.</summary>
-    [JsonPropertyName("sqlAadAdmin")]
-    public IList<V1beta1WorkspaceSpecInitProviderSqlAadAdmin>? SqlAadAdmin { get; set; }
-
-    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLogin")]
     public string? SqlAdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    /// <summary>The Password associated with the sql_administrator_login for the SQL administrator. If this is not provided customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLoginPasswordSecretRef")]
     public V1beta1WorkspaceSpecInitProviderSqlAdministratorLoginPasswordSecretRef? SqlAdministratorLoginPasswordSecretRef { get; set; }
 
@@ -1178,23 +1094,6 @@ public partial class V1beta1WorkspaceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceStatusAtProviderAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProviderAzureDevopsRepo
 {
     /// <summary>Specifies the Azure DevOps account name.</summary>
@@ -1295,29 +1194,8 @@ public partial class V1beta1WorkspaceStatusAtProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkspaceStatusAtProviderSqlAadAdmin
-{
-    /// <summary>The login name of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("login")]
-    public string? Login { get; set; }
-
-    /// <summary>The object id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("objectId")]
-    public string? ObjectId { get; set; }
-
-    /// <summary>The tenant id of the Azure AD Administrator of this Synapse Workspace SQL.</summary>
-    [JsonPropertyName("tenantId")]
-    public string? TenantId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProvider
 {
-    /// <summary>An aad_admin block as defined below.</summary>
-    [JsonPropertyName("aadAdmin")]
-    public IList<V1beta1WorkspaceStatusAtProviderAadAdmin>? AadAdmin { get; set; }
-
     /// <summary>An azure_devops_repo block as defined below.</summary>
     [JsonPropertyName("azureDevopsRepo")]
     public IList<V1beta1WorkspaceStatusAtProviderAzureDevopsRepo>? AzureDevopsRepo { get; set; }
@@ -1330,7 +1208,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("computeSubnetId")]
     public string? ComputeSubnetId { get; set; }
 
-    /// <summary>A list of Connectivity endpoints for this Synapse Workspace.</summary>
+    /// <summary>A map of Connectivity endpoints for this Synapse Workspace. Possible key values are dev, sql, sqlOnDemand, and web.</summary>
     [JsonPropertyName("connectivityEndpoints")]
     public IDictionary<string, string>? ConnectivityEndpoints { get; set; }
 
@@ -1382,11 +1260,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>An sql_aad_admin block as defined below.</summary>
-    [JsonPropertyName("sqlAadAdmin")]
-    public IList<V1beta1WorkspaceStatusAtProviderSqlAadAdmin>? SqlAadAdmin { get; set; }
-
-    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided aad_admin or customer_managed_key must be provided.</summary>
+    /// <summary>Specifies The login name of the SQL administrator. Changing this forces a new resource to be created. If this is not provided customer_managed_key must be provided.</summary>
     [JsonPropertyName("sqlAdministratorLogin")]
     public string? SqlAdministratorLogin { get; set; }
 

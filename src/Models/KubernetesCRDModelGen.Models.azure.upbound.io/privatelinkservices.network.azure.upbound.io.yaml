@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: privatelinkservices.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -90,6 +90,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  destinationIpAddress:
+                    description: The destination IP address of the Private Link Service.
+                    type: string
                   enableProxyProtocol:
                     description: Should the Private Link Service support the Proxy Protocol?
                     type: boolean
@@ -344,6 +347,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  destinationIpAddress:
+                    description: The destination IP address of the Private Link Service.
+                    type: string
                   enableProxyProtocol:
                     description: Should the Private Link Service support the Proxy Protocol?
                     type: boolean
@@ -690,8 +696,6 @@ spec:
             - forProvider
             type: object
             x-kubernetes-validations:
-            - message: spec.forProvider.loadBalancerFrontendIpConfigurationIds is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.loadBalancerFrontendIpConfigurationIds) || (has(self.initProvider) && has(self.initProvider.loadBalancerFrontendIpConfigurationIds))"
             - message: spec.forProvider.location is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.location) || (has(self.initProvider) && has(self.initProvider.location))"
             - message: spec.forProvider.natIpConfiguration is a required parameter
@@ -710,6 +714,9 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  destinationIpAddress:
+                    description: The destination IP address of the Private Link Service.
+                    type: string
                   enableProxyProtocol:
                     description: Should the Private Link Service support the Proxy Protocol?
                     type: boolean

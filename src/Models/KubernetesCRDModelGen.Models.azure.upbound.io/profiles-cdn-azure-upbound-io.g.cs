@@ -313,7 +313,7 @@ public partial class V1beta1ProfileStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Profile is the Schema for the Profiles API. Manages a CDN Profile to create a collection of CDN Endpoints.</summary>
+/// <summary>Profile is the Schema for the Profiles API. Manages a CDN (classic) Profile to create a collection of CDN Endpoints.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Profile : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProfileSpec>, IStatus<V1beta1ProfileStatus>
@@ -343,7 +343,7 @@ public partial class V1beta1Profile : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     public V1beta1ProfileStatus? Status { get; set; }
 }
 
-/// <summary>Profile is the Schema for the Profiles API. Manages a CDN Profile to create a collection of CDN Endpoints.</summary>
+/// <summary>Profile is the Schema for the Profiles API. Manages a CDN (classic) Profile to create a collection of CDN Endpoints.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Profile>

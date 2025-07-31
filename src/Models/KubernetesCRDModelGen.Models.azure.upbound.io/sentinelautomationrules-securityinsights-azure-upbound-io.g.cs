@@ -58,23 +58,6 @@ public partial class V1beta1SentinelAutomationRuleSpecForProviderActionPlaybook
     public string? TenantId { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SentinelAutomationRuleSpecForProviderCondition
-{
-    /// <summary>The operator to use for evaluate the condition. Possible values include: Equals, NotEquals, Contains, NotContains, StartsWith, NotStartsWith, EndsWith, NotEndsWith.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>The property to use for evaluate the condition. Possible values are AccountAadTenantId, AccountAadUserId, AccountNTDomain, AccountName, AccountObjectGuid, AccountPUID, AccountSid, AccountUPNSuffix, AlertAnalyticRuleIds, AlertProductNames, AzureResourceResourceId, AzureResourceSubscriptionId, CloudApplicationAppId, CloudApplicationAppName, DNSDomainName, FileDirectory, FileHashValue, FileName, HostAzureID, HostNTDomain, HostName, HostNetBiosName, HostOSVersion, IPAddress, IncidentCustomDetailsKey, IncidentCustomDetailsValue, IncidentDescription, IncidentLabel, IncidentProviderName, IncidentRelatedAnalyticRuleIds, IncidentSeverity, IncidentStatus, IncidentTactics, IncidentTitle, IncidentUpdatedBySource, IoTDeviceId, IoTDeviceModel, IoTDeviceName, IoTDeviceOperatingSystem, IoTDeviceType, IoTDeviceVendor, MailMessageDeliveryAction, MailMessageDeliveryLocation, MailMessageP1Sender, MailMessageP2Sender, MailMessageRecipient, MailMessageSenderIP, MailMessageSubject, MailboxDisplayName, MailboxPrimaryAddress, MailboxUPN, MalwareCategory, MalwareName, ProcessCommandLine, ProcessId, RegistryKey, RegistryValueData and Url.</summary>
-    [JsonPropertyName("property")]
-    public string? Property { get; set; }
-
-    /// <summary>Specifies a list of values to use for evaluate the condition.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAutomationRuleSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -142,10 +125,6 @@ public partial class V1beta1SentinelAutomationRuleSpecForProvider
     /// <summary>One or more action_playbook blocks as defined below.</summary>
     [JsonPropertyName("actionPlaybook")]
     public IList<V1beta1SentinelAutomationRuleSpecForProviderActionPlaybook>? ActionPlaybook { get; set; }
-
-    /// <summary>One or more condition blocks as defined below.</summary>
-    [JsonPropertyName("condition")]
-    public IList<V1beta1SentinelAutomationRuleSpecForProviderCondition>? Condition { get; set; }
 
     /// <summary>A JSON array of one or more condition JSON objects as is defined here.</summary>
     [JsonPropertyName("conditionJson")]
@@ -242,23 +221,6 @@ public partial class V1beta1SentinelAutomationRuleSpecInitProviderActionPlaybook
     public string? TenantId { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SentinelAutomationRuleSpecInitProviderCondition
-{
-    /// <summary>The operator to use for evaluate the condition. Possible values include: Equals, NotEquals, Contains, NotContains, StartsWith, NotStartsWith, EndsWith, NotEndsWith.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>The property to use for evaluate the condition. Possible values are AccountAadTenantId, AccountAadUserId, AccountNTDomain, AccountName, AccountObjectGuid, AccountPUID, AccountSid, AccountUPNSuffix, AlertAnalyticRuleIds, AlertProductNames, AzureResourceResourceId, AzureResourceSubscriptionId, CloudApplicationAppId, CloudApplicationAppName, DNSDomainName, FileDirectory, FileHashValue, FileName, HostAzureID, HostNTDomain, HostName, HostNetBiosName, HostOSVersion, IPAddress, IncidentCustomDetailsKey, IncidentCustomDetailsValue, IncidentDescription, IncidentLabel, IncidentProviderName, IncidentRelatedAnalyticRuleIds, IncidentSeverity, IncidentStatus, IncidentTactics, IncidentTitle, IncidentUpdatedBySource, IoTDeviceId, IoTDeviceModel, IoTDeviceName, IoTDeviceOperatingSystem, IoTDeviceType, IoTDeviceVendor, MailMessageDeliveryAction, MailMessageDeliveryLocation, MailMessageP1Sender, MailMessageP2Sender, MailMessageRecipient, MailMessageSenderIP, MailMessageSubject, MailboxDisplayName, MailboxPrimaryAddress, MailboxUPN, MalwareCategory, MalwareName, ProcessCommandLine, ProcessId, RegistryKey, RegistryValueData and Url.</summary>
-    [JsonPropertyName("property")]
-    public string? Property { get; set; }
-
-    /// <summary>Specifies a list of values to use for evaluate the condition.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAutomationRuleSpecInitProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -326,10 +288,6 @@ public partial class V1beta1SentinelAutomationRuleSpecInitProvider
     /// <summary>One or more action_playbook blocks as defined below.</summary>
     [JsonPropertyName("actionPlaybook")]
     public IList<V1beta1SentinelAutomationRuleSpecInitProviderActionPlaybook>? ActionPlaybook { get; set; }
-
-    /// <summary>One or more condition blocks as defined below.</summary>
-    [JsonPropertyName("condition")]
-    public IList<V1beta1SentinelAutomationRuleSpecInitProviderCondition>? Condition { get; set; }
 
     /// <summary>A JSON array of one or more condition JSON objects as is defined here.</summary>
     [JsonPropertyName("conditionJson")]
@@ -560,23 +518,6 @@ public partial class V1beta1SentinelAutomationRuleStatusAtProviderActionPlaybook
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1SentinelAutomationRuleStatusAtProviderCondition
-{
-    /// <summary>The operator to use for evaluate the condition. Possible values include: Equals, NotEquals, Contains, NotContains, StartsWith, NotStartsWith, EndsWith, NotEndsWith.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>The property to use for evaluate the condition. Possible values are AccountAadTenantId, AccountAadUserId, AccountNTDomain, AccountName, AccountObjectGuid, AccountPUID, AccountSid, AccountUPNSuffix, AlertAnalyticRuleIds, AlertProductNames, AzureResourceResourceId, AzureResourceSubscriptionId, CloudApplicationAppId, CloudApplicationAppName, DNSDomainName, FileDirectory, FileHashValue, FileName, HostAzureID, HostNTDomain, HostName, HostNetBiosName, HostOSVersion, IPAddress, IncidentCustomDetailsKey, IncidentCustomDetailsValue, IncidentDescription, IncidentLabel, IncidentProviderName, IncidentRelatedAnalyticRuleIds, IncidentSeverity, IncidentStatus, IncidentTactics, IncidentTitle, IncidentUpdatedBySource, IoTDeviceId, IoTDeviceModel, IoTDeviceName, IoTDeviceOperatingSystem, IoTDeviceType, IoTDeviceVendor, MailMessageDeliveryAction, MailMessageDeliveryLocation, MailMessageP1Sender, MailMessageP2Sender, MailMessageRecipient, MailMessageSenderIP, MailMessageSubject, MailboxDisplayName, MailboxPrimaryAddress, MailboxUPN, MalwareCategory, MalwareName, ProcessCommandLine, ProcessId, RegistryKey, RegistryValueData and Url.</summary>
-    [JsonPropertyName("property")]
-    public string? Property { get; set; }
-
-    /// <summary>Specifies a list of values to use for evaluate the condition.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAutomationRuleStatusAtProvider
 {
     /// <summary>One or more action_incident blocks as defined below.</summary>
@@ -586,10 +527,6 @@ public partial class V1beta1SentinelAutomationRuleStatusAtProvider
     /// <summary>One or more action_playbook blocks as defined below.</summary>
     [JsonPropertyName("actionPlaybook")]
     public IList<V1beta1SentinelAutomationRuleStatusAtProviderActionPlaybook>? ActionPlaybook { get; set; }
-
-    /// <summary>One or more condition blocks as defined below.</summary>
-    [JsonPropertyName("condition")]
-    public IList<V1beta1SentinelAutomationRuleStatusAtProviderCondition>? Condition { get; set; }
 
     /// <summary>A JSON array of one or more condition JSON objects as is defined here.</summary>
     [JsonPropertyName("conditionJson")]

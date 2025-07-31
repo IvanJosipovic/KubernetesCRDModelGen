@@ -270,6 +270,10 @@ public partial class V1beta1StreamInputBlobSpecForProviderStreamAnalyticsJobName
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecForProvider
 {
+    /// <summary>The authentication mode for the Stream Analytics Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
+    [JsonPropertyName("authenticationMode")]
+    public string? AuthenticationMode { get; set; }
+
     /// <summary>The date format. Wherever {date} appears in path_pattern, the value of this property is used as the date format instead.</summary>
     [JsonPropertyName("dateFormat")]
     public string? DateFormat { get; set; }
@@ -414,6 +418,23 @@ public partial class V1beta1StreamInputBlobSpecInitProviderSerialization
     /// <summary>The serialization format used for incoming data streams. Possible values are Avro, Csv and Json.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1StreamInputBlobSpecInitProviderStorageAccountKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -588,6 +609,10 @@ public partial class V1beta1StreamInputBlobSpecInitProviderStreamAnalyticsJobNam
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobSpecInitProvider
 {
+    /// <summary>The authentication mode for the Stream Analytics Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
+    [JsonPropertyName("authenticationMode")]
+    public string? AuthenticationMode { get; set; }
+
     /// <summary>The date format. Wherever {date} appears in path_pattern, the value of this property is used as the date format instead.</summary>
     [JsonPropertyName("dateFormat")]
     public string? DateFormat { get; set; }
@@ -615,6 +640,10 @@ public partial class V1beta1StreamInputBlobSpecInitProvider
     /// <summary>A serialization block as defined below.</summary>
     [JsonPropertyName("serialization")]
     public IList<V1beta1StreamInputBlobSpecInitProviderSerialization>? Serialization { get; set; }
+
+    /// <summary>The Access Key which should be used to connect to this Storage Account.</summary>
+    [JsonPropertyName("storageAccountKeySecretRef")]
+    public V1beta1StreamInputBlobSpecInitProviderStorageAccountKeySecretRef StorageAccountKeySecretRef { get; set; }
 
     /// <summary>The name of the Storage Account.</summary>
     [JsonPropertyName("storageAccountName")]
@@ -810,6 +839,10 @@ public partial class V1beta1StreamInputBlobStatusAtProviderSerialization
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamInputBlobStatusAtProvider
 {
+    /// <summary>The authentication mode for the Stream Analytics Input. Possible values are Msi and ConnectionString. Defaults to ConnectionString.</summary>
+    [JsonPropertyName("authenticationMode")]
+    public string? AuthenticationMode { get; set; }
+
     /// <summary>The date format. Wherever {date} appears in path_pattern, the value of this property is used as the date format instead.</summary>
     [JsonPropertyName("dateFormat")]
     public string? DateFormat { get; set; }

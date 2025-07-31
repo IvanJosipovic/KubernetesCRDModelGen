@@ -341,7 +341,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderAuthSettingsV2A
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -692,7 +692,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderBackup
 
     /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
     [JsonPropertyName("storageAccountUrlSecretRef")]
-    public V1beta1WindowsFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+    public V1beta1WindowsFunctionAppSlotSpecForProviderBackupStorageAccountUrlSecretRef? StorageAccountUrlSecretRef { get; set; }
 }
 
 /// <summary>The connection string value. The connection string value.</summary>
@@ -726,7 +726,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStrin
 
     /// <summary>The connection string value. The connection string value.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1WindowsFunctionAppSlotSpecForProviderConnectionStringValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -849,19 +849,19 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigAppli
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfigApplicationStack
 {
-    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
+    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0, v8.0 and v9.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0`, `v7.0`, `v8.0` and `v9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16 and ~18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16, ~18, ~20, and ~22. The version of Node to use. Possible values include `~12`, `~14`, `~16`, `~18`, `~20` and `~22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The PowerShell Core version to use. Possible values are 7, and 7.2. The PowerShell Core version to use. Possible values are `7`, and `7.2`</summary>
+    /// <summary>The PowerShell Core version to use. Possible values are 7, 7.2, and 7.4. The PowerShell Core version to use. Possible values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
@@ -1219,7 +1219,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -1231,7 +1231,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022 The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -1247,7 +1247,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -1255,7 +1255,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Web App use a 32-bit worker.</summary>
+    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Function App use a 32-bit worker.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -1295,7 +1295,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
     [JsonPropertyName("accessKeySecretRef")]
-    public V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+    public V1beta1WindowsFunctionAppSlotSpecForProviderStorageAccountAccessKeySecretRef? AccessKeySecretRef { get; set; }
 
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
@@ -1558,6 +1558,10 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
@@ -1569,6 +1573,10 @@ public partial class V1beta1WindowsFunctionAppSlotSpecForProvider
     /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecForProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
+
+    /// <summary>Specifies whether traffic for the image pull should be routed over virtual network. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
@@ -1908,7 +1916,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderAuthSettingsV2
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -2224,6 +2232,23 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackup
@@ -2239,6 +2264,27 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderBackup
     /// <summary>a schedule block as detailed below.</summary>
     [JsonPropertyName("schedule")]
     public IList<V1beta1WindowsFunctionAppSlotSpecInitProviderBackupSchedule>? Schedule { get; set; }
+
+    /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+    [JsonPropertyName("storageAccountUrlSecretRef")]
+    public V1beta1WindowsFunctionAppSlotSpecInitProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+}
+
+/// <summary>The connection string value. The connection string value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStringValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -2252,6 +2298,10 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStri
     /// <summary>Type of database. Possible values include: APIHub, Custom, DocDb, EventHub, MySQL, NotificationHub, PostgreSQL, RedisCache, ServiceBus, SQLAzure, and SQLServer. Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>The connection string value. The connection string value.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1WindowsFunctionAppSlotSpecInitProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2318,19 +2368,19 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigAppl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfigApplicationStack
 {
-    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
+    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0, v8.0 and v9.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0`, `v7.0`, `v8.0` and `v9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16 and ~18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16, ~18, ~20, and ~22. The version of Node to use. Possible values include `~12`, `~14`, `~16`, `~18`, `~20` and `~22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The PowerShell Core version to use. Possible values are 7, and 7.2. The PowerShell Core version to use. Possible values are `7`, and `7.2`</summary>
+    /// <summary>The PowerShell Core version to use. Possible values are 7, 7.2, and 7.4. The PowerShell Core version to use. Possible values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
@@ -2688,7 +2738,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -2700,7 +2750,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022 The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -2716,7 +2766,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -2724,7 +2774,7 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Web App use a 32-bit worker.</summary>
+    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Function App use a 32-bit worker.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -2741,10 +2791,31 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderSiteConfig
     public double? WorkerCount { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
 {
+    /// <summary>The Access key for the storage account.</summary>
+    [JsonPropertyName("accessKeySecretRef")]
+    public V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
@@ -2764,23 +2835,6 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccount
     /// <summary>The Azure Storage Type. Possible values include AzureFiles.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
-}
-
-/// <summary>The access key which will be used to access the storage account for the Function App Slot. The access key which will be used to access the storage account for the Function App Slot.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WindowsFunctionAppSlotSpecInitProviderStorageAccountAccessKeySecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -3011,6 +3065,10 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
@@ -3022,6 +3080,10 @@ public partial class V1beta1WindowsFunctionAppSlotSpecInitProvider
     /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1WindowsFunctionAppSlotSpecInitProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
+
+    /// <summary>Specifies whether traffic for the image pull should be routed over virtual network. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
@@ -3367,7 +3429,7 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderAuthSettingsV2
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -3783,19 +3845,19 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigAppS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfigApplicationStack
 {
-    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0 and v8.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0` and `v7.0`</summary>
+    /// <summary>The version of .Net. Possible values are v3.0, v4.0, v6.0, v7.0, v8.0 and v9.0. Defaults to v4.0. The version of .Net. Possible values are `v3.0`, `v4.0`, `v6.0`, `v7.0`, `v8.0` and `v9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11` and `17`</summary>
+    /// <summary>The version of Java to use. Possible values are 1.8, 11 and 17 (In-Preview). The version of Java to use. Possible values are `1.8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16 and ~18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to use. Possible values are ~12, ~14, ~16, ~18, ~20, and ~22. The version of Node to use. Possible values include `~12`, `~14`, `~16`, `~18`, `~20` and `~22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The PowerShell Core version to use. Possible values are 7, and 7.2. The PowerShell Core version to use. Possible values are `7`, and `7.2`</summary>
+    /// <summary>The PowerShell Core version to use. Possible values are 7, 7.2, and 7.4. The PowerShell Core version to use. Possible values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
@@ -4021,7 +4083,7 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -4033,7 +4095,7 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022 The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022`</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -4049,7 +4111,7 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -4061,7 +4123,7 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProviderSiteConfig
     [JsonPropertyName("scmUseMainIpRestriction")]
     public bool? ScmUseMainIpRestriction { get; set; }
 
-    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Web App use a 32-bit worker.</summary>
+    /// <summary>Should the Windows Web App use a 32-bit worker. Defaults to true. Should the Windows Function App use a 32-bit worker.</summary>
     [JsonPropertyName("use32BitWorker")]
     public bool? Use32BitWorker { get; set; }
 
@@ -4247,9 +4309,17 @@ public partial class V1beta1WindowsFunctionAppSlotStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App Slot for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
+
+    /// <summary>Specifies whether traffic for the image pull should be routed over virtual network. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]

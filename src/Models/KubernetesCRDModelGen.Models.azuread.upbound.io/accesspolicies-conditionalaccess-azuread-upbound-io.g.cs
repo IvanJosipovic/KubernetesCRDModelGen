@@ -195,6 +195,10 @@ public partial class V1beta1AccessPolicySpecForProviderConditions
     [JsonPropertyName("devices")]
     public IList<V1beta1AccessPolicySpecForProviderConditionsDevices>? Devices { get; set; }
 
+    /// <summary>The insider risk level in the policy. Possible values are: minor, moderate, elevated, unknownFutureValue.</summary>
+    [JsonPropertyName("insiderRiskLevels")]
+    public string? InsiderRiskLevels { get; set; }
+
     /// <summary>A locations block as documented below, which specifies locations included in and excluded from the policy.</summary>
     [JsonPropertyName("locations")]
     public IList<V1beta1AccessPolicySpecForProviderConditionsLocations>? Locations { get; set; }
@@ -224,7 +228,7 @@ public partial class V1beta1AccessPolicySpecForProviderConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProviderGrantControls
 {
-    /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
+    /// <summary>ID of an Authentication Strength Policy to use in this policy. When using a hard-coded ID, the UUID value should be prefixed with: /policies/authenticationStrengthPolicies/.</summary>
     [JsonPropertyName("authenticationStrengthPolicyId")]
     public string? AuthenticationStrengthPolicyId { get; set; }
 
@@ -494,6 +498,10 @@ public partial class V1beta1AccessPolicySpecInitProviderConditions
     [JsonPropertyName("devices")]
     public IList<V1beta1AccessPolicySpecInitProviderConditionsDevices>? Devices { get; set; }
 
+    /// <summary>The insider risk level in the policy. Possible values are: minor, moderate, elevated, unknownFutureValue.</summary>
+    [JsonPropertyName("insiderRiskLevels")]
+    public string? InsiderRiskLevels { get; set; }
+
     /// <summary>A locations block as documented below, which specifies locations included in and excluded from the policy.</summary>
     [JsonPropertyName("locations")]
     public IList<V1beta1AccessPolicySpecInitProviderConditionsLocations>? Locations { get; set; }
@@ -523,7 +531,7 @@ public partial class V1beta1AccessPolicySpecInitProviderConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProviderGrantControls
 {
-    /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
+    /// <summary>ID of an Authentication Strength Policy to use in this policy. When using a hard-coded ID, the UUID value should be prefixed with: /policies/authenticationStrengthPolicies/.</summary>
     [JsonPropertyName("authenticationStrengthPolicyId")]
     public string? AuthenticationStrengthPolicyId { get; set; }
 
@@ -925,6 +933,10 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditions
     [JsonPropertyName("devices")]
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsDevices>? Devices { get; set; }
 
+    /// <summary>The insider risk level in the policy. Possible values are: minor, moderate, elevated, unknownFutureValue.</summary>
+    [JsonPropertyName("insiderRiskLevels")]
+    public string? InsiderRiskLevels { get; set; }
+
     /// <summary>A locations block as documented below, which specifies locations included in and excluded from the policy.</summary>
     [JsonPropertyName("locations")]
     public IList<V1beta1AccessPolicyStatusAtProviderConditionsLocations>? Locations { get; set; }
@@ -954,7 +966,7 @@ public partial class V1beta1AccessPolicyStatusAtProviderConditions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProviderGrantControls
 {
-    /// <summary>ID of an Authentication Strength Policy to use in this policy.</summary>
+    /// <summary>ID of an Authentication Strength Policy to use in this policy. When using a hard-coded ID, the UUID value should be prefixed with: /policies/authenticationStrengthPolicies/.</summary>
     [JsonPropertyName("authenticationStrengthPolicyId")]
     public string? AuthenticationStrengthPolicyId { get; set; }
 
@@ -1031,6 +1043,10 @@ public partial class V1beta1AccessPolicyStatusAtProvider
     /// <summary>The ID of the Conditional Access Policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>The ID of the Conditional Access Policy. The object ID of the policy</summary>
+    [JsonPropertyName("objectId")]
+    public string? ObjectId { get; set; }
 
     /// <summary>A session_controls block as documented below, which specifies the session controls that are enforced after sign-in.</summary>
     [JsonPropertyName("sessionControls")]

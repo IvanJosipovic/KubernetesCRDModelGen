@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLogRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -33,54 +33,29 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLog
     [JsonPropertyName("categoryGroup")]
     public string? CategoryGroup { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingSpecForProviderLogRetentionPolicy
+public partial class V1beta1MonitorDiagnosticSettingSpecForProviderEnabledMetric
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Is this Retention Policy enabled?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingSpecForProviderLog
-{
-    /// <summary>The name of a Diagnostic Log Category for this Resource.</summary>
+    /// <summary>The name of a Diagnostic Metric Category for this Resource.</summary>
     [JsonPropertyName("category")]
     public string? Category { get; set; }
-
-    /// <summary>The name of a Diagnostic Log Category Group for this Resource.</summary>
-    [JsonPropertyName("categoryGroup")]
-    public string? CategoryGroup { get; set; }
-
-    /// <summary>Is this Diagnostic Log enabled? Defaults to true.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>A retention_policy block as defined below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1MonitorDiagnosticSettingSpecForProviderLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetricRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -93,11 +68,11 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProviderMetric
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 
-    /// <summary>Is this Diagnostic Metric enabled? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
@@ -166,6 +141,10 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
     [JsonPropertyName("enabledLog")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderEnabledLog>? EnabledLog { get; set; }
 
+    /// <summary>One or more enabled_metric blocks as defined below.</summary>
+    [JsonPropertyName("enabledMetric")]
+    public IList<V1beta1MonitorDiagnosticSettingSpecForProviderEnabledMetric>? EnabledMetric { get; set; }
+
     /// <summary>Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data.</summary>
     [JsonPropertyName("eventhubAuthorizationRuleId")]
     public string? EventhubAuthorizationRuleId { get; set; }
@@ -173,10 +152,6 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
     /// <summary>Specifies the name of the Event Hub where Diagnostics Data should be sent.</summary>
     [JsonPropertyName("eventhubName")]
     public string? EventhubName { get; set; }
-
-    /// <summary>One or more log blocks as defined below.</summary>
-    [JsonPropertyName("log")]
-    public IList<V1beta1MonitorDiagnosticSettingSpecForProviderLog>? Log { get; set; }
 
     /// <summary>Possible values are AzureDiagnostics and Dedicated. When set to Dedicated, logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.</summary>
     [JsonPropertyName("logAnalyticsDestinationType")]
@@ -186,7 +161,7 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>One or more metric blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("metric")]
     public IList<V1beta1MonitorDiagnosticSettingSpecForProviderMetric>? Metric { get; set; }
 
@@ -219,11 +194,11 @@ public partial class V1beta1MonitorDiagnosticSettingSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLogRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -240,54 +215,29 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLog
     [JsonPropertyName("categoryGroup")]
     public string? CategoryGroup { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderLogRetentionPolicy
+public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledMetric
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Is this Retention Policy enabled?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderLog
-{
-    /// <summary>The name of a Diagnostic Log Category for this Resource.</summary>
+    /// <summary>The name of a Diagnostic Metric Category for this Resource.</summary>
     [JsonPropertyName("category")]
     public string? Category { get; set; }
-
-    /// <summary>The name of a Diagnostic Log Category Group for this Resource.</summary>
-    [JsonPropertyName("categoryGroup")]
-    public string? CategoryGroup { get; set; }
-
-    /// <summary>Is this Diagnostic Log enabled? Defaults to true.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>A retention_policy block as defined below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetricRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -300,11 +250,11 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProviderMetric
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 
-    /// <summary>Is this Diagnostic Metric enabled? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
@@ -373,6 +323,10 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProvider
     [JsonPropertyName("enabledLog")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledLog>? EnabledLog { get; set; }
 
+    /// <summary>One or more enabled_metric blocks as defined below.</summary>
+    [JsonPropertyName("enabledMetric")]
+    public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderEnabledMetric>? EnabledMetric { get; set; }
+
     /// <summary>Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data.</summary>
     [JsonPropertyName("eventhubAuthorizationRuleId")]
     public string? EventhubAuthorizationRuleId { get; set; }
@@ -380,10 +334,6 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProvider
     /// <summary>Specifies the name of the Event Hub where Diagnostics Data should be sent.</summary>
     [JsonPropertyName("eventhubName")]
     public string? EventhubName { get; set; }
-
-    /// <summary>One or more log blocks as defined below.</summary>
-    [JsonPropertyName("log")]
-    public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderLog>? Log { get; set; }
 
     /// <summary>Possible values are AzureDiagnostics and Dedicated. When set to Dedicated, logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.</summary>
     [JsonPropertyName("logAnalyticsDestinationType")]
@@ -393,7 +343,7 @@ public partial class V1beta1MonitorDiagnosticSettingSpecInitProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>One or more metric blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("metric")]
     public IList<V1beta1MonitorDiagnosticSettingSpecInitProviderMetric>? Metric { get; set; }
 
@@ -558,11 +508,11 @@ public partial class V1beta1MonitorDiagnosticSettingSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLogRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -579,54 +529,29 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLog
     [JsonPropertyName("categoryGroup")]
     public string? CategoryGroup { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderLogRetentionPolicy
+public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledMetric
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
-    [JsonPropertyName("days")]
-    public double? Days { get; set; }
-
-    /// <summary>Is this Retention Policy enabled?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderLog
-{
-    /// <summary>The name of a Diagnostic Log Category for this Resource.</summary>
+    /// <summary>The name of a Diagnostic Metric Category for this Resource.</summary>
     [JsonPropertyName("category")]
     public string? Category { get; set; }
-
-    /// <summary>The name of a Diagnostic Log Category Group for this Resource.</summary>
-    [JsonPropertyName("categoryGroup")]
-    public string? CategoryGroup { get; set; }
-
-    /// <summary>Is this Diagnostic Log enabled? Defaults to true.</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>A retention_policy block as defined below.</summary>
-    [JsonPropertyName("retentionPolicy")]
-    public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderLogRetentionPolicy>? RetentionPolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetricRetentionPolicy
 {
-    /// <summary>The number of days for which this Retention Policy should apply.</summary>
+    /// <summary></summary>
     [JsonPropertyName("days")]
     public double? Days { get; set; }
 
-    /// <summary>Is this Retention Policy enabled?</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -639,11 +564,11 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProviderMetric
     [JsonPropertyName("category")]
     public string? Category { get; set; }
 
-    /// <summary>Is this Diagnostic Metric enabled? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>A retention_policy block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("retentionPolicy")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderMetricRetentionPolicy>? RetentionPolicy { get; set; }
 }
@@ -655,6 +580,10 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProvider
     /// <summary>One or more enabled_log blocks as defined below.</summary>
     [JsonPropertyName("enabledLog")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledLog>? EnabledLog { get; set; }
+
+    /// <summary>One or more enabled_metric blocks as defined below.</summary>
+    [JsonPropertyName("enabledMetric")]
+    public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderEnabledMetric>? EnabledMetric { get; set; }
 
     /// <summary>Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data.</summary>
     [JsonPropertyName("eventhubAuthorizationRuleId")]
@@ -668,10 +597,6 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>One or more log blocks as defined below.</summary>
-    [JsonPropertyName("log")]
-    public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderLog>? Log { get; set; }
-
     /// <summary>Possible values are AzureDiagnostics and Dedicated. When set to Dedicated, logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.</summary>
     [JsonPropertyName("logAnalyticsDestinationType")]
     public string? LogAnalyticsDestinationType { get; set; }
@@ -680,7 +605,7 @@ public partial class V1beta1MonitorDiagnosticSettingStatusAtProvider
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
-    /// <summary>One or more metric blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("metric")]
     public IList<V1beta1MonitorDiagnosticSettingStatusAtProviderMetric>? Metric { get; set; }
 

@@ -92,10 +92,6 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecForProvider
     [JsonPropertyName("policyAssignmentIdSelector")]
     public V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdSelector? PolicyAssignmentIdSelector { get; set; }
 
-    /// <summary>The unique ID for the policy definition within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
-    [JsonPropertyName("policyDefinitionId")]
-    public string? PolicyDefinitionId { get; set; }
-
     /// <summary>The unique ID for the policy definition reference within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
     [JsonPropertyName("policyDefinitionReferenceId")]
     public string? PolicyDefinitionReferenceId { get; set; }
@@ -196,10 +192,6 @@ public partial class V1beta1SubscriptionPolicyRemediationSpecInitProvider
     /// <summary>Selector for a SubscriptionPolicyAssignment in authorization to populate policyAssignmentId.</summary>
     [JsonPropertyName("policyAssignmentIdSelector")]
     public V1beta1SubscriptionPolicyRemediationSpecInitProviderPolicyAssignmentIdSelector? PolicyAssignmentIdSelector { get; set; }
-
-    /// <summary>The unique ID for the policy definition within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
-    [JsonPropertyName("policyDefinitionId")]
-    public string? PolicyDefinitionId { get; set; }
 
     /// <summary>The unique ID for the policy definition reference within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
     [JsonPropertyName("policyDefinitionReferenceId")]
@@ -373,10 +365,6 @@ public partial class V1beta1SubscriptionPolicyRemediationStatusAtProvider
     /// <summary>The ID of the Policy Assignment that should be remediated.</summary>
     [JsonPropertyName("policyAssignmentId")]
     public string? PolicyAssignmentId { get; set; }
-
-    /// <summary>The unique ID for the policy definition within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
-    [JsonPropertyName("policyDefinitionId")]
-    public string? PolicyDefinitionId { get; set; }
 
     /// <summary>The unique ID for the policy definition reference within the policy set definition that should be remediated. Required when the policy assignment being remediated assigns a policy set definition.</summary>
     [JsonPropertyName("policyDefinitionReferenceId")]

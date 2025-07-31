@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: integrationruntimeazures.datafactory.azure.upbound.io
 spec:
   group: datafactory.azure.upbound.io
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   cleanupEnabled:
-                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.
                     type: boolean
                   computeType:
                     description: Compute type of the cluster which will execute data flow job. Valid values are General, ComputeOptimized and MemoryOptimized. Defaults to General.
@@ -218,7 +218,7 @@ spec:
                   autoscaler.
                 properties:
                   cleanupEnabled:
-                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.
                     type: boolean
                   computeType:
                     description: Compute type of the cluster which will execute data flow job. Valid values are General, ComputeOptimized and MemoryOptimized. Defaults to General.
@@ -456,7 +456,7 @@ spec:
               atProvider:
                 properties:
                   cleanupEnabled:
-                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
+                    description: Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Defaults to true.
                     type: boolean
                   computeType:
                     description: Compute type of the cluster which will execute data flow job. Valid values are General, ComputeOptimized and MemoryOptimized. Defaults to General.

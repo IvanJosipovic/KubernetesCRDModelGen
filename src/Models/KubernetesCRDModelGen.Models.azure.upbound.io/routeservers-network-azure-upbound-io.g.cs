@@ -180,9 +180,13 @@ public partial class V1beta1RouteServerSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerSpecForProvider
 {
-    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s)</summary>
+    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s).</summary>
     [JsonPropertyName("branchToBranchTrafficEnabled")]
     public bool? BranchToBranchTrafficEnabled { get; set; }
+
+    /// <summary>The hub routing preference. Valid values are ASPath, ExpressRoute or VpnGateway. Defaults to ExpressRoute.</summary>
+    [JsonPropertyName("hubRoutingPreference")]
+    public string? HubRoutingPreference { get; set; }
 
     /// <summary>Specifies the supported Azure location where the Route Server should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -349,9 +353,13 @@ public partial class V1beta1RouteServerSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerSpecInitProvider
 {
-    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s)</summary>
+    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s).</summary>
     [JsonPropertyName("branchToBranchTrafficEnabled")]
     public bool? BranchToBranchTrafficEnabled { get; set; }
+
+    /// <summary>The hub routing preference. Valid values are ASPath, ExpressRoute or VpnGateway. Defaults to ExpressRoute.</summary>
+    [JsonPropertyName("hubRoutingPreference")]
+    public string? HubRoutingPreference { get; set; }
 
     /// <summary>Specifies the supported Azure location where the Route Server should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -526,11 +534,15 @@ public partial class V1beta1RouteServerSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerStatusAtProvider
 {
-    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s)</summary>
+    /// <summary>Whether to enable route exchange between Azure Route Server and the gateway(s).</summary>
     [JsonPropertyName("branchToBranchTrafficEnabled")]
     public bool? BranchToBranchTrafficEnabled { get; set; }
 
-    /// <summary>The ID of the Route Server .</summary>
+    /// <summary>The hub routing preference. Valid values are ASPath, ExpressRoute or VpnGateway. Defaults to ExpressRoute.</summary>
+    [JsonPropertyName("hubRoutingPreference")]
+    public string? HubRoutingPreference { get; set; }
+
+    /// <summary>The ID of the Route Server.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 

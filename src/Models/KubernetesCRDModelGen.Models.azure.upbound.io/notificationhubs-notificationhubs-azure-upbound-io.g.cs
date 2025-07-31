@@ -47,7 +47,41 @@ public partial class V1beta1NotificationHubSpecForProviderApnsCredential
 
     /// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
     [JsonPropertyName("tokenSecretRef")]
-    public V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef TokenSecretRef { get; set; }
+    public V1beta1NotificationHubSpecForProviderApnsCredentialTokenSecretRef? TokenSecretRef { get; set; }
+}
+
+/// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecForProviderBrowserCredentialVapidPrivateKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecForProviderBrowserCredential
+{
+    /// <summary>The subject name of web push.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+
+    /// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
+    [JsonPropertyName("vapidPrivateKeySecretRef")]
+    public V1beta1NotificationHubSpecForProviderBrowserCredentialVapidPrivateKeySecretRef? VapidPrivateKeySecretRef { get; set; }
+
+    /// <summary>The Voluntary Application Server Identification (VAPID) public key.</summary>
+    [JsonPropertyName("vapidPublicKey")]
+    public string? VapidPublicKey { get; set; }
 }
 
 /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
@@ -73,7 +107,7 @@ public partial class V1beta1NotificationHubSpecForProviderGcmCredential
 {
     /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
     [JsonPropertyName("apiKeySecretRef")]
-    public V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySecretRef ApiKeySecretRef { get; set; }
+    public V1beta1NotificationHubSpecForProviderGcmCredentialApiKeySecretRef? ApiKeySecretRef { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -196,6 +230,10 @@ public partial class V1beta1NotificationHubSpecForProvider
     [JsonPropertyName("apnsCredential")]
     public IList<V1beta1NotificationHubSpecForProviderApnsCredential>? ApnsCredential { get; set; }
 
+    /// <summary>A browser_credential block as defined below.</summary>
+    [JsonPropertyName("browserCredential")]
+    public IList<V1beta1NotificationHubSpecForProviderBrowserCredential>? BrowserCredential { get; set; }
+
     /// <summary>A gcm_credential block as defined below.</summary>
     [JsonPropertyName("gcmCredential")]
     public IList<V1beta1NotificationHubSpecForProviderGcmCredential>? GcmCredential { get; set; }
@@ -233,6 +271,23 @@ public partial class V1beta1NotificationHubSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecInitProviderApnsCredentialTokenSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
@@ -252,12 +307,70 @@ public partial class V1beta1NotificationHubSpecInitProviderApnsCredential
     /// <summary>The ID of the team the Token.</summary>
     [JsonPropertyName("teamId")]
     public string? TeamId { get; set; }
+
+    /// <summary>The Push Token associated with the Apple Developer Account. This is the contents of the key downloaded from the Apple Developer Portal between the -----BEGIN PRIVATE KEY----- and -----END PRIVATE KEY----- blocks.</summary>
+    [JsonPropertyName("tokenSecretRef")]
+    public V1beta1NotificationHubSpecInitProviderApnsCredentialTokenSecretRef TokenSecretRef { get; set; }
+}
+
+/// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecInitProviderBrowserCredentialVapidPrivateKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecInitProviderBrowserCredential
+{
+    /// <summary>The subject name of web push.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+
+    /// <summary>The Voluntary Application Server Identification (VAPID) private key.</summary>
+    [JsonPropertyName("vapidPrivateKeySecretRef")]
+    public V1beta1NotificationHubSpecInitProviderBrowserCredentialVapidPrivateKeySecretRef VapidPrivateKeySecretRef { get; set; }
+
+    /// <summary>The Voluntary Application Server Identification (VAPID) public key.</summary>
+    [JsonPropertyName("vapidPublicKey")]
+    public string? VapidPublicKey { get; set; }
+}
+
+/// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubSpecInitProviderGcmCredentialApiKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubSpecInitProviderGcmCredential
 {
+    /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
+    [JsonPropertyName("apiKeySecretRef")]
+    public V1beta1NotificationHubSpecInitProviderGcmCredentialApiKeySecretRef ApiKeySecretRef { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -267,6 +380,10 @@ public partial class V1beta1NotificationHubSpecInitProvider
     /// <summary>A apns_credential block as defined below.</summary>
     [JsonPropertyName("apnsCredential")]
     public IList<V1beta1NotificationHubSpecInitProviderApnsCredential>? ApnsCredential { get; set; }
+
+    /// <summary>A browser_credential block as defined below.</summary>
+    [JsonPropertyName("browserCredential")]
+    public IList<V1beta1NotificationHubSpecInitProviderBrowserCredential>? BrowserCredential { get; set; }
 
     /// <summary>A gcm_credential block as defined below.</summary>
     [JsonPropertyName("gcmCredential")]
@@ -434,6 +551,19 @@ public partial class V1beta1NotificationHubStatusAtProviderApnsCredential
     public string? TeamId { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NotificationHubStatusAtProviderBrowserCredential
+{
+    /// <summary>The subject name of web push.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+
+    /// <summary>The Voluntary Application Server Identification (VAPID) public key.</summary>
+    [JsonPropertyName("vapidPublicKey")]
+    public string? VapidPublicKey { get; set; }
+}
+
 /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef
@@ -457,7 +587,7 @@ public partial class V1beta1NotificationHubStatusAtProviderGcmCredential
 {
     /// <summary>The API Key associated with the Google Cloud Messaging service.</summary>
     [JsonPropertyName("apiKeySecretRef")]
-    public V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef ApiKeySecretRef { get; set; }
+    public V1beta1NotificationHubStatusAtProviderGcmCredentialApiKeySecretRef? ApiKeySecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -467,6 +597,10 @@ public partial class V1beta1NotificationHubStatusAtProvider
     /// <summary>A apns_credential block as defined below.</summary>
     [JsonPropertyName("apnsCredential")]
     public IList<V1beta1NotificationHubStatusAtProviderApnsCredential>? ApnsCredential { get; set; }
+
+    /// <summary>A browser_credential block as defined below.</summary>
+    [JsonPropertyName("browserCredential")]
+    public IList<V1beta1NotificationHubStatusAtProviderBrowserCredential>? BrowserCredential { get; set; }
 
     /// <summary>A gcm_credential block as defined below.</summary>
     [JsonPropertyName("gcmCredential")]

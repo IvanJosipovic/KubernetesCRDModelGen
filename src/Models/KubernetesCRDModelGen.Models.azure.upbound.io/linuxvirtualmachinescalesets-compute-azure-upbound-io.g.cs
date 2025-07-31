@@ -38,7 +38,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminPassw
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -59,7 +59,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderAutomaticI
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -235,7 +235,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApp
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -246,27 +246,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApp
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Linux Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -689,19 +668,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderSpotRestor
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -796,10 +762,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProvider
     /// <summary>One or more gallery_application blocks as defined below.</summary>
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApplication>? GalleryApplication { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetSpecForProviderGalleryApplications>? GalleryApplications { get; set; }
 
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
@@ -909,10 +871,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminateNotification>? TerminateNotification { get; set; }
-
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecForProviderTerminationNotification>? TerminationNotification { get; set; }
@@ -933,7 +891,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located. Changing this forces a new Linux Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -968,7 +926,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminPass
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -989,7 +947,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderAutomatic
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -1165,7 +1123,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryAp
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -1176,27 +1134,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryAp
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Linux Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -1563,19 +1500,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderSpotResto
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -1670,10 +1594,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
     /// <summary>One or more gallery_application blocks as defined below.</summary>
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryApplication>? GalleryApplication { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderGalleryApplications>? GalleryApplications { get; set; }
 
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
@@ -1771,10 +1691,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminateNotification>? TerminateNotification { get; set; }
-
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1LinuxVirtualMachineScaleSetSpecInitProviderTerminationNotification>? TerminationNotification { get; set; }
@@ -1795,7 +1711,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located. Changing this forces a new Linux Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -1945,7 +1861,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdditiona
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -1966,7 +1882,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderAutomatic
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time (in minutes, between 30 and 90) for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. The time duration should be specified in ISO 8601 format. Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -2104,7 +2020,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryAp
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -2115,27 +2031,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryAp
     /// <summary>Specifies the Gallery Application Version resource ID. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("versionId")]
     public string? VersionId { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryApplications
-{
-    /// <summary></summary>
-    [JsonPropertyName("configurationReferenceBlobUri")]
-    public string? ConfigurationReferenceBlobUri { get; set; }
-
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("order")]
-    public double? Order { get; set; }
-
-    /// <summary>The ID of the Linux Virtual Machine Scale Set.</summary>
-    [JsonPropertyName("packageReferenceId")]
-    public string? PackageReferenceId { get; set; }
-
-    /// <summary>The IP Tag associated with the Public IP, such as SQL or Storage. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("tag")]
-    public string? Tag { get; set; }
 }
 
 /// <summary></summary>
@@ -2446,19 +2341,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSpotResto
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminateNotification
-{
-    /// <summary>Should the terminate notification be enabled on this Virtual Machine Scale Set?</summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
-    /// <summary>Length of time (in minutes, between 5 and 15) a notification to be sent to the VM on the instance metadata server till the VM gets deleted. The time duration should be specified in ISO 8601 format. Defaults to PT5M.</summary>
-    [JsonPropertyName("timeout")]
-    public string? Timeout { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminationNotification
 {
     /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set?</summary>
@@ -2546,10 +2428,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("galleryApplications")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderGalleryApplications>? GalleryApplications { get; set; }
-
     /// <summary>The ID of a Load Balancer Probe which should be used to determine the health of an instance. This is Required and can only be specified when upgrade_mode is set to Automatic or Rolling.</summary>
     [JsonPropertyName("healthProbeId")]
     public string? HealthProbeId { get; set; }
@@ -2622,10 +2500,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("scaleIn")]
     public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderScaleIn>? ScaleIn { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("scaleInPolicy")]
-    public string? ScaleInPolicy { get; set; }
-
     /// <summary>One or more secret blocks as defined below.</summary>
     [JsonPropertyName("secret")]
     public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderSecret>? Secret { get; set; }
@@ -2658,10 +2532,6 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A terminate_notification block as defined below.</summary>
-    [JsonPropertyName("terminateNotification")]
-    public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminateNotification>? TerminateNotification { get; set; }
-
     /// <summary>A termination_notification block as defined below.</summary>
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1LinuxVirtualMachineScaleSetStatusAtProviderTerminationNotification>? TerminationNotification { get; set; }
@@ -2686,7 +2556,7 @@ public partial class V1beta1LinuxVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located. Changing this forces a new Linux Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Linux Virtual Machine Scale Set should be located.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }

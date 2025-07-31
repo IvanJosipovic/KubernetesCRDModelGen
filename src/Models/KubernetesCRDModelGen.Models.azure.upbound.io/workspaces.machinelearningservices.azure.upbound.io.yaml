@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: workspaces.machinelearningservices.azure.upbound.io
 spec:
   group: machinelearningservices.azure.upbound.io
@@ -773,11 +773,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   resourceGroupName:
                     description: Specifies the name of the Resource Group in which the Machine Learning Workspace should exist. Changing this forces a new resource to be created.
@@ -1779,11 +1776,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   serverlessCompute:
                     description: A serverless_compute block as defined below.
@@ -2299,11 +2293,8 @@ spec:
                   primaryUserAssignedIdentity:
                     description: The user assigned identity id that represents the workspace identity.
                     type: string
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   resourceGroupName:
                     description: Specifies the name of the Resource Group in which the Machine Learning Workspace should exist. Changing this forces a new resource to be created.
@@ -3153,11 +3144,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   resourceGroupName:
                     description: Specifies the name of the Resource Group in which the Machine Learning Workspace should exist. Changing this forces a new resource to be created.
@@ -4149,11 +4137,8 @@ spec:
                             type: string
                         type: object
                     type: object
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   serverlessCompute:
                     description: A serverless_compute block as defined below.
@@ -4659,11 +4644,8 @@ spec:
                   primaryUserAssignedIdentity:
                     description: The user assigned identity id that represents the workspace identity.
                     type: string
-                  publicAccessBehindVirtualNetworkEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind a VNet. Changing this forces a new resource to be created.
-                    type: boolean
                   publicNetworkAccessEnabled:
-                    description: Enable public access when this Machine Learning Workspace is behind VNet.
+                    description: Enable public access when this Machine Learning Workspace is behind VNet. Defaults to true.
                     type: boolean
                   resourceGroupName:
                     description: Specifies the name of the Resource Group in which the Machine Learning Workspace should exist. Changing this forces a new resource to be created.

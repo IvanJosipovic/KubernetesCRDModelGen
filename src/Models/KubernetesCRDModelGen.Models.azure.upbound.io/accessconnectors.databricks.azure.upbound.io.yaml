@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: accessconnectors.databricks.azure.upbound.io
 spec:
   group: databricks.azure.upbound.io
@@ -641,7 +641,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       type:
-                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values include SystemAssigned or UserAssigned.
+                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.
                         type: string
                     type: object
                   location:
@@ -775,7 +775,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       type:
-                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values include SystemAssigned or UserAssigned.
+                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.
                         type: string
                     type: object
                   location:
@@ -1023,7 +1023,7 @@ spec:
                         description: The Tenant ID of the System Assigned Managed Service Identity that is configured on this Access Connector.
                         type: string
                       type:
-                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values include SystemAssigned or UserAssigned.
+                        description: Specifies the type of Managed Service Identity that should be configured on the Databricks Access Connector. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned.
                         type: string
                     type: object
                   location:

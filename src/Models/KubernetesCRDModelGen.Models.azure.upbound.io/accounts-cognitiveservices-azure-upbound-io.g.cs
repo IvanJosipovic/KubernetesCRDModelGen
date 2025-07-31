@@ -132,6 +132,10 @@ public partial class V1beta1AccountSpecForProviderNetworkAclsVirtualNetworkRules
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderNetworkAcls
 {
+    /// <summary>Whether to allow trusted Azure Services to access the service. Possible values are None and AzureServices.</summary>
+    [JsonPropertyName("bypass")]
+    public string? Bypass { get; set; }
+
     /// <summary>The Default Action to use when no rules match from ip_rules / virtual_network_rules. Possible values are Allow and Deny.</summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
@@ -226,7 +230,7 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("customQuestionAnsweringSearchServiceKeySecretRef")]
     public V1beta1AccountSpecForProviderCustomQuestionAnsweringSearchServiceKeySecretRef? CustomQuestionAnsweringSearchServiceKeySecretRef { get; set; }
 
-    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://&lt;custom_subdomain_name&gt;.openai.azure.com/.  Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("customSubdomainName")]
     public string? CustomSubdomainName { get; set; }
 
@@ -439,6 +443,10 @@ public partial class V1beta1AccountSpecInitProviderNetworkAclsVirtualNetworkRule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderNetworkAcls
 {
+    /// <summary>Whether to allow trusted Azure Services to access the service. Possible values are None and AzureServices.</summary>
+    [JsonPropertyName("bypass")]
+    public string? Bypass { get; set; }
+
     /// <summary>The Default Action to use when no rules match from ip_rules / virtual_network_rules. Possible values are Allow and Deny.</summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
@@ -477,7 +485,7 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("customQuestionAnsweringSearchServiceKeySecretRef")]
     public V1beta1AccountSpecInitProviderCustomQuestionAnsweringSearchServiceKeySecretRef? CustomQuestionAnsweringSearchServiceKeySecretRef { get; set; }
 
-    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://&lt;custom_subdomain_name&gt;.openai.azure.com/.  Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("customSubdomainName")]
     public string? CustomSubdomainName { get; set; }
 
@@ -737,6 +745,10 @@ public partial class V1beta1AccountStatusAtProviderNetworkAclsVirtualNetworkRule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderNetworkAcls
 {
+    /// <summary>Whether to allow trusted Azure Services to access the service. Possible values are None and AzureServices.</summary>
+    [JsonPropertyName("bypass")]
+    public string? Bypass { get; set; }
+
     /// <summary>The Default Action to use when no rules match from ip_rules / virtual_network_rules. Possible values are Allow and Deny.</summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
@@ -771,7 +783,7 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("customQuestionAnsweringSearchServiceId")]
     public string? CustomQuestionAnsweringSearchServiceId { get; set; }
 
-    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. Changing this forces a new resource to be created.</summary>
+    /// <summary>The subdomain name used for token-based authentication. This property is required when network_acls is specified. This property is also required when using the OpenAI service with libraries which assume the Azure OpenAI endpoint is a subdomain on https://openai.azure.com/, eg. https://&lt;custom_subdomain_name&gt;.openai.azure.com/.  Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("customSubdomainName")]
     public string? CustomSubdomainName { get; set; }
 

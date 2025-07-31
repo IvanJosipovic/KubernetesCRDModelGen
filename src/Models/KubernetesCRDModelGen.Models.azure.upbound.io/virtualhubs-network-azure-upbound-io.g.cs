@@ -173,7 +173,7 @@ public partial class V1beta1VirtualHubSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router.</summary>
+    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.</summary>
     [JsonPropertyName("virtualRouterAutoScaleMinCapacity")]
     public double? VirtualRouterAutoScaleMinCapacity { get; set; }
 
@@ -287,7 +287,7 @@ public partial class V1beta1VirtualHubSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router.</summary>
+    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.</summary>
     [JsonPropertyName("virtualRouterAutoScaleMinCapacity")]
     public double? VirtualRouterAutoScaleMinCapacity { get; set; }
 
@@ -493,7 +493,7 @@ public partial class V1beta1VirtualHubStatusAtProvider
     [JsonPropertyName("virtualRouterAsn")]
     public double? VirtualRouterAsn { get; set; }
 
-    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router.</summary>
+    /// <summary>Minimum instance capacity for the scaling configuration of the Virtual Hub Router. Defaults to 2.</summary>
     [JsonPropertyName("virtualRouterAutoScaleMinCapacity")]
     public double? VirtualRouterAutoScaleMinCapacity { get; set; }
 

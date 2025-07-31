@@ -91,53 +91,6 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilterDimension
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotDimension
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNotTag
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecForProviderFilterNot
-{
-    /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
-    [JsonPropertyName("dimension")]
-    public IList<V1beta1BudgetManagementGroupSpecForProviderFilterNotDimension>? Dimension { get; set; }
-
-    /// <summary>One tag block as defined below to filter the budget on. Conflicts with dimension.</summary>
-    [JsonPropertyName("tag")]
-    public IList<V1beta1BudgetManagementGroupSpecForProviderFilterNotTag>? Tag { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetManagementGroupSpecForProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -160,10 +113,6 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderFilter
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("dimension")]
     public IList<V1beta1BudgetManagementGroupSpecForProviderFilterDimension>? Dimension { get; set; }
-
-    /// <summary>A not block as defined below to filter the budget on. This is deprecated as the API no longer supports it and will be removed in version 4.0 of the provider.</summary>
-    [JsonPropertyName("not")]
-    public IList<V1beta1BudgetManagementGroupSpecForProviderFilterNot>? Not { get; set; }
 
     /// <summary>One or more tag blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("tag")]
@@ -246,7 +195,7 @@ public partial class V1beta1BudgetManagementGroupSpecForProviderNotification
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 
-    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual.</summary>
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
@@ -392,53 +341,6 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterDimension
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotDimension
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNotTag
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterNot
-{
-    /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
-    [JsonPropertyName("dimension")]
-    public IList<V1beta1BudgetManagementGroupSpecInitProviderFilterNotDimension>? Dimension { get; set; }
-
-    /// <summary>One tag block as defined below to filter the budget on. Conflicts with dimension.</summary>
-    [JsonPropertyName("tag")]
-    public IList<V1beta1BudgetManagementGroupSpecInitProviderFilterNotTag>? Tag { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetManagementGroupSpecInitProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -461,10 +363,6 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderFilter
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("dimension")]
     public IList<V1beta1BudgetManagementGroupSpecInitProviderFilterDimension>? Dimension { get; set; }
-
-    /// <summary>A not block as defined below to filter the budget on. This is deprecated as the API no longer supports it and will be removed in version 4.0 of the provider.</summary>
-    [JsonPropertyName("not")]
-    public IList<V1beta1BudgetManagementGroupSpecInitProviderFilterNot>? Not { get; set; }
 
     /// <summary>One or more tag blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("tag")]
@@ -547,7 +445,7 @@ public partial class V1beta1BudgetManagementGroupSpecInitProviderNotification
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 
-    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual.</summary>
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }
@@ -761,53 +659,6 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterDimension
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotDimension
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNotTag
-{
-    /// <summary>The name of the tag to use for the filter.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
-
-    /// <summary>The operator to use for comparison. The allowed values are In. Defaults to In.</summary>
-    [JsonPropertyName("operator")]
-    public string? Operator { get; set; }
-
-    /// <summary>Specifies a list of values for the tag.</summary>
-    [JsonPropertyName("values")]
-    public IList<string>? Values { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterNot
-{
-    /// <summary>One dimension block as defined below to filter the budget on. Conflicts with tag.</summary>
-    [JsonPropertyName("dimension")]
-    public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterNotDimension>? Dimension { get; set; }
-
-    /// <summary>One tag block as defined below to filter the budget on. Conflicts with dimension.</summary>
-    [JsonPropertyName("tag")]
-    public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterNotTag>? Tag { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetManagementGroupStatusAtProviderFilterTag
 {
     /// <summary>The name of the tag to use for the filter.</summary>
@@ -830,10 +681,6 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderFilter
     /// <summary>One or more dimension blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("dimension")]
     public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterDimension>? Dimension { get; set; }
-
-    /// <summary>A not block as defined below to filter the budget on. This is deprecated as the API no longer supports it and will be removed in version 4.0 of the provider.</summary>
-    [JsonPropertyName("not")]
-    public IList<V1beta1BudgetManagementGroupStatusAtProviderFilterNot>? Not { get; set; }
 
     /// <summary>One or more tag blocks as defined below to filter the budget on.</summary>
     [JsonPropertyName("tag")]
@@ -860,7 +707,7 @@ public partial class V1beta1BudgetManagementGroupStatusAtProviderNotification
     [JsonPropertyName("threshold")]
     public double? Threshold { get; set; }
 
-    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of threshold for the notification. This determines whether the notification is triggered by forecasted costs or actual costs. The allowed values are Actual and Forecasted. Default is Actual.</summary>
     [JsonPropertyName("thresholdType")]
     public string? ThresholdType { get; set; }
 }

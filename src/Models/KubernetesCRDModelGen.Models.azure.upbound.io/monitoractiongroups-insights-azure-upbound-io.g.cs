@@ -117,10 +117,6 @@ public partial class V1beta1MonitorActionGroupSpecForProviderEmailReceiver
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecForProviderEventHubReceiver
 {
-    /// <summary>The resource ID of the respective Event Hub.</summary>
-    [JsonPropertyName("eventHubId")]
-    public string? EventHubId { get; set; }
-
     /// <summary>The name of the specific Event Hub queue.</summary>
     [JsonPropertyName("eventHubName")]
     public string? EventHubName { get; set; }
@@ -506,10 +502,6 @@ public partial class V1beta1MonitorActionGroupSpecInitProviderEmailReceiver
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupSpecInitProviderEventHubReceiver
 {
-    /// <summary>The resource ID of the respective Event Hub.</summary>
-    [JsonPropertyName("eventHubId")]
-    public string? EventHubId { get; set; }
-
     /// <summary>The name of the specific Event Hub queue.</summary>
     [JsonPropertyName("eventHubName")]
     public string? EventHubName { get; set; }
@@ -959,10 +951,6 @@ public partial class V1beta1MonitorActionGroupStatusAtProviderEmailReceiver
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorActionGroupStatusAtProviderEventHubReceiver
 {
-    /// <summary>The resource ID of the respective Event Hub.</summary>
-    [JsonPropertyName("eventHubId")]
-    public string? EventHubId { get; set; }
-
     /// <summary>The name of the specific Event Hub queue.</summary>
     [JsonPropertyName("eventHubName")]
     public string? EventHubName { get; set; }

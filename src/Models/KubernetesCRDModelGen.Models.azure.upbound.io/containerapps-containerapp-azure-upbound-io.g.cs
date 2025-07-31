@@ -96,19 +96,31 @@ public partial class V1beta1ContainerAppSpecForProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAppSpecForProviderIngressCustomDomain
+public partial class V1beta1ContainerAppSpecForProviderIngressCors
 {
-    /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
-    [JsonPropertyName("certificateBindingType")]
-    public string? CertificateBindingType { get; set; }
+    /// <summary>Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentialsEnabled")]
+    public bool? AllowCredentialsEnabled { get; set; }
 
-    /// <summary>The ID of the Container App Environment Certificate.</summary>
-    [JsonPropertyName("certificateId")]
-    public string? CertificateId { get; set; }
+    /// <summary>Specifies the list of request headers that are permitted in the actual request.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
 
-    /// <summary>The name of the Volume to be mounted in the container. The hostname of the Certificate. Must be the CN or a named SAN in the certificate.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>Specifies the list of origins that are allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>Specifies the list of headers exposed to the browser in the response to a cross-origin request.</summary>
+    [JsonPropertyName("exposedHeaders")]
+    public IList<string>? ExposedHeaders { get; set; }
+
+    /// <summary>Specifies the number of seconds that the browser can cache the results of a preflight request.</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
 }
 
 /// <summary></summary>
@@ -161,9 +173,13 @@ public partial class V1beta1ContainerAppSpecForProviderIngress
     [JsonPropertyName("allowInsecureConnections")]
     public bool? AllowInsecureConnections { get; set; }
 
-    /// <summary>One or more custom_domain block as detailed below.</summary>
-    [JsonPropertyName("customDomain")]
-    public IList<V1beta1ContainerAppSpecForProviderIngressCustomDomain>? CustomDomain { get; set; }
+    /// <summary>The client certificate mode for the Ingress. Possible values are require, accept, and ignore. Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.</summary>
+    [JsonPropertyName("clientCertificateMode")]
+    public string? ClientCertificateMode { get; set; }
+
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1ContainerAppSpecForProviderIngressCors>? Cors { get; set; }
 
     /// <summary>The exposed port on the container for the Ingress traffic. The exposed port on the container for the Ingress traffic.</summary>
     [JsonPropertyName("exposedPort")]
@@ -390,7 +406,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLivenessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -402,7 +418,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerLiveness
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The time in seconds to wait after the container has started before the probe is started. The time in seconds to wait after the container has started before the probe is started.</summary>
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.</summary>
     [JsonPropertyName("initialDelay")]
     public double? InitialDelay { get; set; }
 
@@ -444,7 +460,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadinessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -455,6 +471,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerReadines
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -498,7 +518,7 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -509,6 +529,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerStartupP
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -542,6 +566,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateContainerVolumeMo
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -685,6 +713,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateInitContainerVolu
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -758,6 +790,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecForProviderTemplateVolume
 {
+    /// <summary>Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751. Mount options used while mounting the AzureFile. Must be a comma-separated string.</summary>
+    [JsonPropertyName("mountOptions")]
+    public string? MountOptions { get; set; }
+
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -811,6 +847,10 @@ public partial class V1beta1ContainerAppSpecForProviderTemplate
     [JsonPropertyName("tcpScaleRule")]
     public IList<V1beta1ContainerAppSpecForProviderTemplateTcpScaleRule>? TcpScaleRule { get; set; }
 
+    /// <summary>The time in seconds after the container is sent the termination signal before the process if forcibly killed. The time in seconds after the container is sent the termination signal before the process if forcibly killed.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public double? TerminationGracePeriodSeconds { get; set; }
+
     /// <summary>A volume block as detailed below.</summary>
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppSpecForProviderTemplateVolume>? Volume { get; set; }
@@ -843,6 +883,10 @@ public partial class V1beta1ContainerAppSpecForProvider
     /// <summary>An ingress block as detailed below.</summary>
     [JsonPropertyName("ingress")]
     public IList<V1beta1ContainerAppSpecForProviderIngress>? Ingress { get; set; }
+
+    /// <summary>The maximum of inactive revisions allowed for this Container App.</summary>
+    [JsonPropertyName("maxInactiveRevisions")]
+    public double? MaxInactiveRevisions { get; set; }
 
     /// <summary>A registry block as detailed below.</summary>
     [JsonPropertyName("registry")]
@@ -969,19 +1013,31 @@ public partial class V1beta1ContainerAppSpecInitProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ContainerAppSpecInitProviderIngressCustomDomain
+public partial class V1beta1ContainerAppSpecInitProviderIngressCors
 {
-    /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
-    [JsonPropertyName("certificateBindingType")]
-    public string? CertificateBindingType { get; set; }
+    /// <summary>Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentialsEnabled")]
+    public bool? AllowCredentialsEnabled { get; set; }
 
-    /// <summary>The ID of the Container App Environment Certificate.</summary>
-    [JsonPropertyName("certificateId")]
-    public string? CertificateId { get; set; }
+    /// <summary>Specifies the list of request headers that are permitted in the actual request.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
 
-    /// <summary>The name of the Volume to be mounted in the container. The hostname of the Certificate. Must be the CN or a named SAN in the certificate.</summary>
-    [JsonPropertyName("name")]
-    public string? Name { get; set; }
+    /// <summary>Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>Specifies the list of origins that are allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>Specifies the list of headers exposed to the browser in the response to a cross-origin request.</summary>
+    [JsonPropertyName("exposedHeaders")]
+    public IList<string>? ExposedHeaders { get; set; }
+
+    /// <summary>Specifies the number of seconds that the browser can cache the results of a preflight request.</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
 }
 
 /// <summary></summary>
@@ -1034,9 +1090,13 @@ public partial class V1beta1ContainerAppSpecInitProviderIngress
     [JsonPropertyName("allowInsecureConnections")]
     public bool? AllowInsecureConnections { get; set; }
 
-    /// <summary>One or more custom_domain block as detailed below.</summary>
-    [JsonPropertyName("customDomain")]
-    public IList<V1beta1ContainerAppSpecInitProviderIngressCustomDomain>? CustomDomain { get; set; }
+    /// <summary>The client certificate mode for the Ingress. Possible values are require, accept, and ignore. Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.</summary>
+    [JsonPropertyName("clientCertificateMode")]
+    public string? ClientCertificateMode { get; set; }
+
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1ContainerAppSpecInitProviderIngressCors>? Cors { get; set; }
 
     /// <summary>The exposed port on the container for the Ingress traffic. The exposed port on the container for the Ingress traffic.</summary>
     [JsonPropertyName("exposedPort")]
@@ -1207,7 +1267,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -1219,7 +1279,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerLivenes
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The time in seconds to wait after the container has started before the probe is started. The time in seconds to wait after the container has started before the probe is started.</summary>
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.</summary>
     [JsonPropertyName("initialDelay")]
     public double? InitialDelay { get; set; }
 
@@ -1261,7 +1321,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadinessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -1272,6 +1332,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerReadine
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -1315,7 +1379,7 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartupProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -1326,6 +1390,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerStartup
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -1359,6 +1427,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateContainerVolumeM
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -1502,6 +1574,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateInitContainerVol
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -1575,6 +1651,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppSpecInitProviderTemplateVolume
 {
+    /// <summary>Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751. Mount options used while mounting the AzureFile. Must be a comma-separated string.</summary>
+    [JsonPropertyName("mountOptions")]
+    public string? MountOptions { get; set; }
+
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -1628,6 +1708,10 @@ public partial class V1beta1ContainerAppSpecInitProviderTemplate
     [JsonPropertyName("tcpScaleRule")]
     public IList<V1beta1ContainerAppSpecInitProviderTemplateTcpScaleRule>? TcpScaleRule { get; set; }
 
+    /// <summary>The time in seconds after the container is sent the termination signal before the process if forcibly killed. The time in seconds after the container is sent the termination signal before the process if forcibly killed.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public double? TerminationGracePeriodSeconds { get; set; }
+
     /// <summary>A volume block as detailed below.</summary>
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppSpecInitProviderTemplateVolume>? Volume { get; set; }
@@ -1660,6 +1744,10 @@ public partial class V1beta1ContainerAppSpecInitProvider
     /// <summary>An ingress block as detailed below.</summary>
     [JsonPropertyName("ingress")]
     public IList<V1beta1ContainerAppSpecInitProviderIngress>? Ingress { get; set; }
+
+    /// <summary>The maximum of inactive revisions allowed for this Container App.</summary>
+    [JsonPropertyName("maxInactiveRevisions")]
+    public double? MaxInactiveRevisions { get; set; }
 
     /// <summary>A registry block as detailed below.</summary>
     [JsonPropertyName("registry")]
@@ -1858,9 +1946,38 @@ public partial class V1beta1ContainerAppStatusAtProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ContainerAppStatusAtProviderIngressCors
+{
+    /// <summary>Whether user credentials are allowed in the cross-origin request is enabled. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentialsEnabled")]
+    public bool? AllowCredentialsEnabled { get; set; }
+
+    /// <summary>Specifies the list of request headers that are permitted in the actual request.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
+
+    /// <summary>Specifies the list of HTTP methods are allowed when accessing the resource in a cross-origin request.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>Specifies the list of origins that are allowed to make cross-origin calls.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>Specifies the list of headers exposed to the browser in the response to a cross-origin request.</summary>
+    [JsonPropertyName("exposedHeaders")]
+    public IList<string>? ExposedHeaders { get; set; }
+
+    /// <summary>Specifies the number of seconds that the browser can cache the results of a preflight request.</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
 {
-    /// <summary>The Binding type. Possible values include Disabled and SniEnabled. Defaults to Disabled. The Binding type. Possible values include `Disabled` and `SniEnabled`. Defaults to `Disabled`</summary>
+    /// <summary>The Binding type.</summary>
     [JsonPropertyName("certificateBindingType")]
     public string? CertificateBindingType { get; set; }
 
@@ -1868,7 +1985,7 @@ public partial class V1beta1ContainerAppStatusAtProviderIngressCustomDomain
     [JsonPropertyName("certificateId")]
     public string? CertificateId { get; set; }
 
-    /// <summary>The name of the Volume to be mounted in the container. The hostname of the Certificate. Must be the CN or a named SAN in the certificate.</summary>
+    /// <summary>The hostname of the Certificate.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1922,6 +2039,14 @@ public partial class V1beta1ContainerAppStatusAtProviderIngress
     /// <summary>Should this ingress allow insecure connections? Should this ingress allow insecure connections?</summary>
     [JsonPropertyName("allowInsecureConnections")]
     public bool? AllowInsecureConnections { get; set; }
+
+    /// <summary>The client certificate mode for the Ingress. Possible values are require, accept, and ignore. Client certificate mode for mTLS authentication. Ignore indicates server drops client certificate on forwarding. Accept indicates server forwards client certificate but does not require a client certificate. Require indicates server requires a client certificate.</summary>
+    [JsonPropertyName("clientCertificateMode")]
+    public string? ClientCertificateMode { get; set; }
+
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1ContainerAppStatusAtProviderIngressCors>? Cors { get; set; }
 
     /// <summary>One or more custom_domain block as detailed below.</summary>
     [JsonPropertyName("customDomain")]
@@ -2058,7 +2183,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -2070,7 +2195,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerLivenes
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The time in seconds to wait after the container has started before the probe is started. The time in seconds to wait after the container has started before the probe is started.</summary>
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `1` seconds.</summary>
     [JsonPropertyName("initialDelay")]
     public double? InitialDelay { get; set; }
 
@@ -2116,7 +2241,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadinessProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -2127,6 +2252,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerReadine
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -2170,7 +2299,7 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartupProbe
 {
-    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 10. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `10`. Defaults to `3`.</summary>
+    /// <summary>The number of consecutive failures required to consider this probe as failed. Possible values are between 1 and 30. Defaults to 3. The number of consecutive failures required to consider this probe as failed. Possible values are between `1` and `30`. Defaults to `3`.</summary>
     [JsonPropertyName("failureCountThreshold")]
     public double? FailureCountThreshold { get; set; }
 
@@ -2181,6 +2310,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerStartup
     /// <summary>The value for the host header which should be sent with this probe. If unspecified, the IP Address of the Pod is used as the host header. Setting a value for Host in headers can be used to override this for HTTP and HTTPS type probes. The probe hostname. Defaults to the pod IP address. Setting a value for `Host` in `headers` can be used to override this for `http` and `https` type probes.</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
+
+    /// <summary>The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between 0 and 60. Defaults to 0 seconds. The number of seconds elapsed after the container has started before the probe is initiated. Possible values are between `0` and `60`. Defaults to `0` seconds.</summary>
+    [JsonPropertyName("initialDelay")]
+    public double? InitialDelay { get; set; }
 
     /// <summary>How often, in seconds, the probe should run. Possible values are between 1 and 240. Defaults to 10 How often, in seconds, the probe should run. Possible values are between `1` and `240`. Defaults to `10`</summary>
     [JsonPropertyName("intervalSeconds")]
@@ -2218,6 +2351,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateContainerVolumeM
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -2365,6 +2502,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateInitContainerVol
     /// <summary>The path in the container at which to mount this volume. The path in the container at which to mount this volume.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
+
+    /// <summary>The sub path of the volume to be mounted in the container. The sub path of the volume to be mounted in the container.</summary>
+    [JsonPropertyName("subPath")]
+    public string? SubPath { get; set; }
 }
 
 /// <summary></summary>
@@ -2442,6 +2583,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAppStatusAtProviderTemplateVolume
 {
+    /// <summary>Mount options used while mounting the AzureFile. Must be a comma-separated string e.g. dir_mode=0751,file_mode=0751. Mount options used while mounting the AzureFile. Must be a comma-separated string.</summary>
+    [JsonPropertyName("mountOptions")]
+    public string? MountOptions { get; set; }
+
     /// <summary>The name of the Volume to be mounted in the container. The name of the volume.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -2495,6 +2640,10 @@ public partial class V1beta1ContainerAppStatusAtProviderTemplate
     [JsonPropertyName("tcpScaleRule")]
     public IList<V1beta1ContainerAppStatusAtProviderTemplateTcpScaleRule>? TcpScaleRule { get; set; }
 
+    /// <summary>The time in seconds after the container is sent the termination signal before the process if forcibly killed. The time in seconds after the container is sent the termination signal before the process if forcibly killed.</summary>
+    [JsonPropertyName("terminationGracePeriodSeconds")]
+    public double? TerminationGracePeriodSeconds { get; set; }
+
     /// <summary>A volume block as detailed below.</summary>
     [JsonPropertyName("volume")]
     public IList<V1beta1ContainerAppStatusAtProviderTemplateVolume>? Volume { get; set; }
@@ -2535,6 +2684,10 @@ public partial class V1beta1ContainerAppStatusAtProvider
     /// <summary>The location this Container App is deployed in. This is the same as the Environment in which it is deployed.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The maximum of inactive revisions allowed for this Container App.</summary>
+    [JsonPropertyName("maxInactiveRevisions")]
+    public double? MaxInactiveRevisions { get; set; }
 
     /// <summary>A list of the Public IP Addresses which the Container App uses for outbound network access.</summary>
     [JsonPropertyName("outboundIpAddresses")]

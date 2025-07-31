@@ -64,7 +64,7 @@ public partial class V1beta1MSSQLJobCredentialSpecForProviderJobAgentIdSelector
     public V1beta1MSSQLJobCredentialSpecForProviderJobAgentIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>The password part of the credential.</summary>
+/// <summary>The password to use for this Elastic Job credential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLJobCredentialSpecForProviderPasswordSecretRef
 {
@@ -97,16 +97,24 @@ public partial class V1beta1MSSQLJobCredentialSpecForProvider
     [JsonPropertyName("jobAgentIdSelector")]
     public V1beta1MSSQLJobCredentialSpecForProviderJobAgentIdSelector? JobAgentIdSelector { get; set; }
 
-    /// <summary>The password part of the credential.</summary>
+    /// <summary>The password to use for this Elastic Job credential.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1MSSQLJobCredentialSpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The username part of the credential.</summary>
+    /// <summary>The password to use for this Elastic Job credential.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for password_wo. This property should be incremented when updating password_wo.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
+    /// <summary>The username to use for this Elastic Job credential.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
 
-/// <summary>The password part of the credential.</summary>
+/// <summary>The password to use for this Elastic Job credential.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLJobCredentialSpecInitProviderPasswordSecretRef
 {
@@ -127,11 +135,19 @@ public partial class V1beta1MSSQLJobCredentialSpecInitProviderPasswordSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLJobCredentialSpecInitProvider
 {
-    /// <summary>The password part of the credential.</summary>
+    /// <summary>The password to use for this Elastic Job credential.</summary>
     [JsonPropertyName("passwordSecretRef")]
-    public V1beta1MSSQLJobCredentialSpecInitProviderPasswordSecretRef PasswordSecretRef { get; set; }
+    public V1beta1MSSQLJobCredentialSpecInitProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>The username part of the credential.</summary>
+    /// <summary>The password to use for this Elastic Job credential.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for password_wo. This property should be incremented when updating password_wo.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
+    /// <summary>The username to use for this Elastic Job credential.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -280,7 +296,15 @@ public partial class V1beta1MSSQLJobCredentialStatusAtProvider
     [JsonPropertyName("jobAgentId")]
     public string? JobAgentId { get; set; }
 
-    /// <summary>The username part of the credential.</summary>
+    /// <summary>The password to use for this Elastic Job credential.</summary>
+    [JsonPropertyName("passwordWo")]
+    public string? PasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for password_wo. This property should be incremented when updating password_wo.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
+    /// <summary>The username to use for this Elastic Job credential.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }

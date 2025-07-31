@@ -81,6 +81,10 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("division")]
     public string? Division { get; set; }
 
+    /// <summary>The hire date of the user, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). The hire date of the user, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`).</summary>
+    [JsonPropertyName("employeeHireDate")]
+    public string? EmployeeHireDate { get; set; }
+
     /// <summary>The employee identifier assigned to the user by the organisation. The employee identifier assigned to the user by the organisation</summary>
     [JsonPropertyName("employeeId")]
     public string? EmployeeId { get; set; }
@@ -242,6 +246,10 @@ public partial class V1beta1UserSpecInitProvider
     /// <summary>The name of the division in which the user works. The name of the division in which the user works.</summary>
     [JsonPropertyName("division")]
     public string? Division { get; set; }
+
+    /// <summary>The hire date of the user, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). The hire date of the user, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`).</summary>
+    [JsonPropertyName("employeeHireDate")]
+    public string? EmployeeHireDate { get; set; }
 
     /// <summary>The employee identifier assigned to the user by the organisation. The employee identifier assigned to the user by the organisation</summary>
     [JsonPropertyName("employeeId")]
@@ -527,6 +535,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>The name of the division in which the user works. The name of the division in which the user works.</summary>
     [JsonPropertyName("division")]
     public string? Division { get; set; }
+
+    /// <summary>The hire date of the user, formatted as an RFC3339 date string (e.g. 2018-01-01T01:02:03Z). The hire date of the user, formatted as an RFC3339 date string (e.g. `2018-01-01T01:02:03Z`).</summary>
+    [JsonPropertyName("employeeHireDate")]
+    public string? EmployeeHireDate { get; set; }
 
     /// <summary>The employee identifier assigned to the user by the organisation. The employee identifier assigned to the user by the organisation</summary>
     [JsonPropertyName("employeeId")]

@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: attacheddatabaseconfigurations.kusto.azure.upbound.io
 spec:
   group: kusto.azure.upbound.io
@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
@@ -174,7 +177,7 @@ spec:
                         type: object
                     type: object
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   clusterResourceIdRef:
                     description: Reference to a Cluster in kusto to populate clusterResourceId.
@@ -514,6 +517,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
@@ -604,7 +610,7 @@ spec:
                         type: object
                     type: object
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   clusterResourceIdRef:
                     description: Reference to a Cluster in kusto to populate clusterResourceId.
@@ -1145,11 +1151,14 @@ spec:
                     items:
                       type: string
                     type: array
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   databaseName:
                     description: The name of the database which you would like to attach, use * if you want to follow all current and future databases. Changing this forces a new resource to be created.
@@ -1345,6 +1354,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
@@ -1435,7 +1447,7 @@ spec:
                         type: object
                     type: object
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   clusterResourceIdRef:
                     description: Reference to a Cluster in kusto to populate clusterResourceId.
@@ -1773,6 +1785,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
@@ -1863,7 +1878,7 @@ spec:
                         type: object
                     type: object
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   clusterResourceIdRef:
                     description: Reference to a Cluster in kusto to populate clusterResourceId.
@@ -2402,11 +2417,14 @@ spec:
                     items:
                       type: string
                     type: array
+                  clusterId:
+                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    type: string
                   clusterName:
                     description: Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.
                     type: string
                   clusterResourceId:
-                    description: The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.
+                    description: The Kusto Attached Database Configuration ID.
                     type: string
                   databaseName:
                     description: The name of the database which you would like to attach, use * if you want to follow all current and future databases. Changing this forces a new resource to be created.

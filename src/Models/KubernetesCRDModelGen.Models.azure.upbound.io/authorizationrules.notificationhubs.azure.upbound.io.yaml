@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: authorizationrules.notificationhubs.azure.upbound.io
 spec:
   group: notificationhubs.azure.upbound.io
@@ -621,14 +621,8 @@ spec:
                   notificationHubName:
                     description: The name of the Notification Hub for which the Authorization Rule should be created. Changing this forces a new resource to be created.
                     type: string
-                  primaryAccessKey:
-                    description: The Primary Access Key associated with this Authorization Rule.
-                    type: string
                   resourceGroupName:
                     description: The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.
-                    type: string
-                  secondaryAccessKey:
-                    description: The Secondary Access Key associated with this Authorization Rule.
                     type: string
                   send:
                     description: Does this Authorization Rule have Send access to the Notification Hub? Defaults to false.

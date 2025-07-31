@@ -81,7 +81,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificateSecretRef
 {
@@ -100,7 +100,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalCertificat
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy
+public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -111,9 +111,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRef
+public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -121,12 +121,12 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRefPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicy
+public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -137,9 +137,9 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelector
+public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -151,7 +151,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultId
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelectorPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -162,7 +162,7 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecForProviderDeveloperPortalCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecForProviderDeveloperPortalCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -170,23 +170,27 @@ public partial class V1beta1CustomDomainSpecForProviderDeveloperPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdRef")]
+    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdRef? KeyVaultCertificateIdRef { get; set; }
+
+    /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdSelector")]
+    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultCertificateIdSelector? KeyVaultCertificateIdSelector { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
-
-    /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdRef")]
-    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdRef? KeyVaultIdRef { get; set; }
-
-    /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdSelector")]
-    public V1beta1CustomDomainSpecForProviderDeveloperPortalKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 
     /// <summary>Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.</summary>
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -208,7 +212,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificatePasswor
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretRef
 {
@@ -227,7 +231,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayCertificateSecretR
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicy
+public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -238,9 +242,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolic
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef
+public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -248,12 +252,12 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRefPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicy
+public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -264,9 +268,9 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
+public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -278,7 +282,7 @@ public partial class V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelectorPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -289,7 +293,7 @@ public partial class V1beta1CustomDomainSpecForProviderGateway
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecForProviderGatewayCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecForProviderGatewayCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -301,23 +305,27 @@ public partial class V1beta1CustomDomainSpecForProviderGateway
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdRef")]
+    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdRef? KeyVaultCertificateIdRef { get; set; }
+
+    /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdSelector")]
+    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultCertificateIdSelector? KeyVaultCertificateIdSelector { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
-
-    /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdRef")]
-    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdRef? KeyVaultIdRef { get; set; }
-
-    /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdSelector")]
-    public V1beta1CustomDomainSpecForProviderGatewayKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 
     /// <summary>Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.</summary>
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -339,7 +347,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagementCertificatePass
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderManagementCertificateSecretRef
 {
@@ -364,7 +372,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecForProviderManagementCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecForProviderManagementCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -372,7 +380,11 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -380,7 +392,7 @@ public partial class V1beta1CustomDomainSpecForProviderManagement
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -402,7 +414,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortalCertificatePassword
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderPortalCertificateSecretRef
 {
@@ -427,7 +439,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecForProviderPortalCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecForProviderPortalCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -435,7 +447,11 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -443,7 +459,7 @@ public partial class V1beta1CustomDomainSpecForProviderPortal
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -465,7 +481,7 @@ public partial class V1beta1CustomDomainSpecForProviderScmCertificatePasswordSec
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecForProviderScmCertificateSecretRef
 {
@@ -490,7 +506,7 @@ public partial class V1beta1CustomDomainSpecForProviderScm
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecForProviderScmCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecForProviderScmCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -498,7 +514,11 @@ public partial class V1beta1CustomDomainSpecForProviderScm
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -506,7 +526,7 @@ public partial class V1beta1CustomDomainSpecForProviderScm
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -565,7 +585,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificateSecretRef
 {
@@ -584,7 +604,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalCertifica
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicy
+public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -595,9 +615,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRef
+public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -605,12 +625,12 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRefPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicy
+public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -621,9 +641,9 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector
+public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -635,7 +655,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultI
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelectorPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -646,7 +666,7 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecInitProviderDeveloperPortalCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -654,23 +674,27 @@ public partial class V1beta1CustomDomainSpecInitProviderDeveloperPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdRef")]
+    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdRef? KeyVaultCertificateIdRef { get; set; }
+
+    /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdSelector")]
+    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultCertificateIdSelector? KeyVaultCertificateIdSelector { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
-
-    /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdRef")]
-    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdRef? KeyVaultIdRef { get; set; }
-
-    /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdSelector")]
-    public V1beta1CustomDomainSpecInitProviderDeveloperPortalKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 
     /// <summary>Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.</summary>
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -692,7 +716,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswo
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecretRef
 {
@@ -711,7 +735,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayCertificateSecret
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicy
+public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -722,9 +746,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPoli
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef
+public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -732,12 +756,12 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRefPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicy
+public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -748,9 +772,9 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
+/// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelector
+public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -762,7 +786,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelecto
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelectorPolicy? Policy { get; set; }
+    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -773,7 +797,7 @@ public partial class V1beta1CustomDomainSpecInitProviderGateway
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecInitProviderGatewayCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecInitProviderGatewayCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -785,23 +809,27 @@ public partial class V1beta1CustomDomainSpecInitProviderGateway
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>Reference to a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdRef")]
+    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdRef? KeyVaultCertificateIdRef { get; set; }
+
+    /// <summary>Selector for a Certificate in keyvault to populate keyVaultCertificateId.</summary>
+    [JsonPropertyName("keyVaultCertificateIdSelector")]
+    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultCertificateIdSelector? KeyVaultCertificateIdSelector { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
-
-    /// <summary>Reference to a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdRef")]
-    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdRef? KeyVaultIdRef { get; set; }
-
-    /// <summary>Selector for a Certificate in keyvault to populate keyVaultId.</summary>
-    [JsonPropertyName("keyVaultIdSelector")]
-    public V1beta1CustomDomainSpecInitProviderGatewayKeyVaultIdSelector? KeyVaultIdSelector { get; set; }
 
     /// <summary>Should Client Certificate Negotiation be enabled for this Hostname? Defaults to false.</summary>
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -823,7 +851,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagementCertificatePas
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderManagementCertificateSecretRef
 {
@@ -848,7 +876,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecInitProviderManagementCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecInitProviderManagementCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -856,7 +884,11 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -864,7 +896,7 @@ public partial class V1beta1CustomDomainSpecInitProviderManagement
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -886,7 +918,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortalCertificatePasswor
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderPortalCertificateSecretRef
 {
@@ -911,7 +943,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecInitProviderPortalCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecInitProviderPortalCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -919,7 +951,11 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -927,7 +963,7 @@ public partial class V1beta1CustomDomainSpecInitProviderPortal
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -949,7 +985,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSe
     public string Namespace { get; set; }
 }
 
-/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+/// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef
 {
@@ -974,7 +1010,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1CustomDomainSpecInitProviderScmCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
 
-    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_id.)</summary>
+    /// <summary>The Base64 Encoded Certificate. (Mutually exclusive with key_vault_certificate_id.)</summary>
     [JsonPropertyName("certificateSecretRef")]
     public V1beta1CustomDomainSpecInitProviderScmCertificateSecretRef? CertificateSecretRef { get; set; }
 
@@ -982,7 +1018,11 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -990,7 +1030,7 @@ public partial class V1beta1CustomDomainSpecInitProviderScm
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 }
@@ -1172,7 +1212,11 @@ public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1180,7 +1224,7 @@ public partial class V1beta1CustomDomainStatusAtProviderDeveloperPortal
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 
@@ -1217,7 +1261,11 @@ public partial class V1beta1CustomDomainStatusAtProviderGateway
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1225,7 +1273,7 @@ public partial class V1beta1CustomDomainStatusAtProviderGateway
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 
@@ -1258,7 +1306,11 @@ public partial class V1beta1CustomDomainStatusAtProviderManagement
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1266,7 +1318,7 @@ public partial class V1beta1CustomDomainStatusAtProviderManagement
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 
@@ -1299,7 +1351,11 @@ public partial class V1beta1CustomDomainStatusAtProviderPortal
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1307,7 +1363,7 @@ public partial class V1beta1CustomDomainStatusAtProviderPortal
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 
@@ -1340,7 +1396,11 @@ public partial class V1beta1CustomDomainStatusAtProviderScm
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Custom Domain.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1348,7 +1408,7 @@ public partial class V1beta1CustomDomainStatusAtProviderScm
     [JsonPropertyName("negotiateClientCertificate")]
     public bool? NegotiateClientCertificate { get; set; }
 
-    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the keyVault containing the SSL certificate.</summary>
+    /// <summary>System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to the key vault containing the SSL certificate.</summary>
     [JsonPropertyName("sslKeyvaultIdentityClientId")]
     public string? SslKeyvaultIdentityClientId { get; set; }
 
@@ -1440,7 +1500,7 @@ public partial class V1beta1CustomDomainStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a API Management Custom Domain.</summary>
+/// <summary>CustomDomain is the Schema for the CustomDomains API. Manages an API Management Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomDomainSpec>, IStatus<V1beta1CustomDomainStatus>
@@ -1470,7 +1530,7 @@ public partial class V1beta1CustomDomain : IKubernetesObject<V1ObjectMeta>, ISpe
     public V1beta1CustomDomainStatus? Status { get; set; }
 }
 
-/// <summary>CustomDomain is the Schema for the CustomDomains API. Manages a API Management Custom Domain.</summary>
+/// <summary>CustomDomain is the Schema for the CustomDomains API. Manages an API Management Custom Domain.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CustomDomainList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomDomain>

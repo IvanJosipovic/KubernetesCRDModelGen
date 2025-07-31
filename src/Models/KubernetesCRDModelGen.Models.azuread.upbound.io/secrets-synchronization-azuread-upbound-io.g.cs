@@ -102,7 +102,7 @@ public partial class V1beta1SecretSpecForProvider
     [JsonPropertyName("credential")]
     public IList<V1beta1SecretSpecForProviderCredential>? Credential { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -209,7 +209,7 @@ public partial class V1beta1SecretSpecInitProvider
     [JsonPropertyName("credential")]
     public IList<V1beta1SecretSpecInitProviderCredential>? Credential { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -375,7 +375,7 @@ public partial class V1beta1SecretStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization secrets should be stored. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization secret should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 }

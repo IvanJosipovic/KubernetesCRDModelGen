@@ -84,7 +84,7 @@ public partial class V1beta1NamespaceSchemaGroupSpecForProvider
     [JsonPropertyName("schemaCompatibility")]
     public string? SchemaCompatibility { get; set; }
 
-    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown and Json. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("schemaType")]
     public string? SchemaType { get; set; }
 }
@@ -97,7 +97,7 @@ public partial class V1beta1NamespaceSchemaGroupSpecInitProvider
     [JsonPropertyName("schemaCompatibility")]
     public string? SchemaCompatibility { get; set; }
 
-    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown and Json. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("schemaType")]
     public string? SchemaType { get; set; }
 }
@@ -250,7 +250,7 @@ public partial class V1beta1NamespaceSchemaGroupStatusAtProvider
     [JsonPropertyName("schemaCompatibility")]
     public string? SchemaCompatibility { get; set; }
 
-    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Type of this schema group. Possible values are Avro, Unknown and Json. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("schemaType")]
     public string? SchemaType { get; set; }
 }

@@ -187,7 +187,7 @@ public partial class V1beta1VPNGatewaySpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1VPNGatewaySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("routingPreference")]
     public string? RoutingPreference { get; set; }
 
@@ -323,7 +323,7 @@ public partial class V1beta1VPNGatewaySpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("routingPreference")]
     public string? RoutingPreference { get; set; }
 
@@ -549,6 +549,23 @@ public partial class V1beta1VPNGatewayStatusAtProviderBgpSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VPNGatewayStatusAtProviderIpConfiguration
+{
+    /// <summary>The identifier of the IP configuration for the VPN Gateway.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The private IP address of this IP configuration.</summary>
+    [JsonPropertyName("privateIpAddress")]
+    public string? PrivateIpAddress { get; set; }
+
+    /// <summary>The public IP address of this IP configuration.</summary>
+    [JsonPropertyName("publicIpAddress")]
+    public string? PublicIpAddress { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNGatewayStatusAtProvider
 {
     /// <summary>Is BGP route translation for NAT on this VPN Gateway enabled? Defaults to false.</summary>
@@ -563,6 +580,10 @@ public partial class V1beta1VPNGatewayStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>An ip_configuration block as defined below.</summary>
+    [JsonPropertyName("ipConfiguration")]
+    public IList<V1beta1VPNGatewayStatusAtProviderIpConfiguration>? IpConfiguration { get; set; }
+
     /// <summary>The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
@@ -571,7 +592,7 @@ public partial class V1beta1VPNGatewayStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("routingPreference")]
     public string? RoutingPreference { get; set; }
 

@@ -120,7 +120,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProviderServerN
     public V1beta1MSSQLServerSecurityAlertPolicySpecForProviderServerNameSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Specifies the identifier key of the Threat Detection audit storage account. This is mandatory when you use storage_endpoint to specify a storage account blob endpoint.</summary>
+/// <summary>Specifies the primary access key of the Threat Detection audit logs blob storage endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProviderStorageAccountAccessKeySecretRef
 {
@@ -201,7 +201,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProvider
     [JsonPropertyName("disabledAlerts")]
     public IList<string>? DisabledAlerts { get; set; }
 
-    /// <summary>Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to false.</summary>
+    /// <summary>Are the alerts sent to the account administrators? Possible values are true or false. Defaults to false.</summary>
     [JsonPropertyName("emailAccountAdmins")]
     public bool? EmailAccountAdmins { get; set; }
 
@@ -221,7 +221,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1MSSQLServerSecurityAlertPolicySpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Specifies the number of days to keep in the Threat Detection audit logs. Defaults to 0.</summary>
+    /// <summary>Specifies the number of days to keep the Threat Detection audit logs. Defaults to 0.</summary>
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 
@@ -237,15 +237,15 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProvider
     [JsonPropertyName("serverNameSelector")]
     public V1beta1MSSQLServerSecurityAlertPolicySpecForProviderServerNameSelector? ServerNameSelector { get; set; }
 
-    /// <summary>Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Possible values are Disabled, Enabled and New.</summary>
+    /// <summary>Specifies the state of the policy. Possible values are Disabled or Enabled.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>Specifies the identifier key of the Threat Detection audit storage account. This is mandatory when you use storage_endpoint to specify a storage account blob endpoint.</summary>
+    /// <summary>Specifies the primary access key of the Threat Detection audit logs blob storage endpoint.</summary>
     [JsonPropertyName("storageAccountAccessKeySecretRef")]
     public V1beta1MSSQLServerSecurityAlertPolicySpecForProviderStorageAccountAccessKeySecretRef? StorageAccountAccessKeySecretRef { get; set; }
 
-    /// <summary>Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.</summary>
+    /// <summary>Specifies the blob storage endpoint that will hold all Threat Detection audit logs (e.g., https://example.blob.core.windows.net).</summary>
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
 
@@ -258,7 +258,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecForProvider
     public V1beta1MSSQLServerSecurityAlertPolicySpecForProviderStorageEndpointSelector? StorageEndpointSelector { get; set; }
 }
 
-/// <summary>Specifies the identifier key of the Threat Detection audit storage account. This is mandatory when you use storage_endpoint to specify a storage account blob endpoint.</summary>
+/// <summary>Specifies the primary access key of the Threat Detection audit logs blob storage endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSecurityAlertPolicySpecInitProviderStorageAccountAccessKeySecretRef
 {
@@ -339,7 +339,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecInitProvider
     [JsonPropertyName("disabledAlerts")]
     public IList<string>? DisabledAlerts { get; set; }
 
-    /// <summary>Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to false.</summary>
+    /// <summary>Are the alerts sent to the account administrators? Possible values are true or false. Defaults to false.</summary>
     [JsonPropertyName("emailAccountAdmins")]
     public bool? EmailAccountAdmins { get; set; }
 
@@ -347,19 +347,19 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicySpecInitProvider
     [JsonPropertyName("emailAddresses")]
     public IList<string>? EmailAddresses { get; set; }
 
-    /// <summary>Specifies the number of days to keep in the Threat Detection audit logs. Defaults to 0.</summary>
+    /// <summary>Specifies the number of days to keep the Threat Detection audit logs. Defaults to 0.</summary>
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 
-    /// <summary>Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Possible values are Disabled, Enabled and New.</summary>
+    /// <summary>Specifies the state of the policy. Possible values are Disabled or Enabled.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>Specifies the identifier key of the Threat Detection audit storage account. This is mandatory when you use storage_endpoint to specify a storage account blob endpoint.</summary>
+    /// <summary>Specifies the primary access key of the Threat Detection audit logs blob storage endpoint.</summary>
     [JsonPropertyName("storageAccountAccessKeySecretRef")]
     public V1beta1MSSQLServerSecurityAlertPolicySpecInitProviderStorageAccountAccessKeySecretRef? StorageAccountAccessKeySecretRef { get; set; }
 
-    /// <summary>Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.</summary>
+    /// <summary>Specifies the blob storage endpoint that will hold all Threat Detection audit logs (e.g., https://example.blob.core.windows.net).</summary>
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
 
@@ -512,7 +512,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicyStatusAtProvider
     [JsonPropertyName("disabledAlerts")]
     public IList<string>? DisabledAlerts { get; set; }
 
-    /// <summary>Boolean flag which specifies if the alert is sent to the account administrators or not. Defaults to false.</summary>
+    /// <summary>Are the alerts sent to the account administrators? Possible values are true or false. Defaults to false.</summary>
     [JsonPropertyName("emailAccountAdmins")]
     public bool? EmailAccountAdmins { get; set; }
 
@@ -528,7 +528,7 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicyStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>Specifies the number of days to keep in the Threat Detection audit logs. Defaults to 0.</summary>
+    /// <summary>Specifies the number of days to keep the Threat Detection audit logs. Defaults to 0.</summary>
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 
@@ -536,11 +536,11 @@ public partial class V1beta1MSSQLServerSecurityAlertPolicyStatusAtProvider
     [JsonPropertyName("serverName")]
     public string? ServerName { get; set; }
 
-    /// <summary>Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database server. Possible values are Disabled, Enabled and New.</summary>
+    /// <summary>Specifies the state of the policy. Possible values are Disabled or Enabled.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.</summary>
+    /// <summary>Specifies the blob storage endpoint that will hold all Threat Detection audit logs (e.g., https://example.blob.core.windows.net).</summary>
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
 }
