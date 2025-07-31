@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: subscriptioncostmanagementexports.costmanagement.azure.upbound.io
 spec:
   group: costmanagement.azure.upbound.io
@@ -197,6 +197,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   name:
                     description: Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
                     type: string
@@ -434,6 +437,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   name:
                     description: Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
                     type: string
@@ -789,6 +795,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   id:
                     description: The ID of the Cost Management Export for this Subscription.
                     type: string
@@ -1050,6 +1059,9 @@ spec:
                         description: The path of the directory where exports will be uploaded. Changing this forces a new resource to be created.
                         type: string
                     type: object
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   name:
                     description: Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
                     type: string
@@ -1283,6 +1295,9 @@ spec:
                         description: The path of the directory where exports will be uploaded. Changing this forces a new resource to be created.
                         type: string
                     type: object
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   name:
                     description: Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.
                     type: string
@@ -1634,6 +1649,9 @@ spec:
                         description: The path of the directory where exports will be uploaded. Changing this forces a new resource to be created.
                         type: string
                     type: object
+                  fileFormat:
+                    description: Format for export. Valid values are Csv only. Default is Csv.
+                    type: string
                   id:
                     description: The ID of the Cost Management Export for this Subscription.
                     type: string

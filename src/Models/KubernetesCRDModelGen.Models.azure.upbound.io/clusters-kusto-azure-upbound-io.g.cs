@@ -23,6 +23,19 @@ public partial class V1beta1ClusterSpecForProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderLanguageExtensions
+{
+    /// <summary></summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>The name of the SKU. Possible values are Dev(No SLA)_Standard_D11_v2, Dev(No SLA)_Standard_E2a_v4, Standard_D14_v2, Standard_D11_v2, Standard_D16d_v5, Standard_D13_v2, Standard_D12_v2, Standard_DS14_v2+4TB_PS, Standard_DS14_v2+3TB_PS, Standard_DS13_v2+1TB_PS, Standard_DS13_v2+2TB_PS, Standard_D32d_v5, Standard_D32d_v4, Standard_EC8ads_v5, Standard_EC8as_v5+1TB_PS, Standard_EC8as_v5+2TB_PS, Standard_EC16ads_v5, Standard_EC16as_v5+4TB_PS, Standard_EC16as_v5+3TB_PS, Standard_E80ids_v4, Standard_E8a_v4, Standard_E8ads_v5, Standard_E8as_v5+1TB_PS, Standard_E8as_v5+2TB_PS, Standard_E8as_v4+1TB_PS, Standard_E8as_v4+2TB_PS, Standard_E8d_v5, Standard_E8d_v4, Standard_E8s_v5+1TB_PS, Standard_E8s_v5+2TB_PS, Standard_E8s_v4+1TB_PS, Standard_E8s_v4+2TB_PS, Standard_E4a_v4, Standard_E4ads_v5, Standard_E4d_v5, Standard_E4d_v4, Standard_E16a_v4, Standard_E16ads_v5, Standard_E16as_v5+4TB_PS, Standard_E16as_v5+3TB_PS, Standard_E16as_v4+4TB_PS, Standard_E16as_v4+3TB_PS, Standard_E16d_v5, Standard_E16d_v4, Standard_E16s_v5+4TB_PS, Standard_E16s_v5+3TB_PS, Standard_E16s_v4+4TB_PS, Standard_E16s_v4+3TB_PS, Standard_E64i_v3, Standard_E2a_v4, Standard_E2ads_v5, Standard_E2d_v5, Standard_E2d_v4, Standard_L8as_v3, Standard_L8s, Standard_L8s_v3, Standard_L8s_v2, Standard_L4s, Standard_L16as_v3, Standard_L16s, Standard_L16s_v3, Standard_L16s_v2, Standard_L32as_v3 and Standard_L32s_v3.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderOptimizedAutoScale
 {
     /// <summary>The maximum number of allowed instances. Must between 0 and 1000.</summary>
@@ -208,17 +221,13 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("doubleEncryptionEnabled")]
     public bool? DoubleEncryptionEnabled { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("engine")]
-    public string? Engine { get; set; }
-
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ClusterSpecForProviderIdentity>? Identity { get; set; }
 
     /// <summary>An list of language_extensions to enable. Valid values are: PYTHON, PYTHON_3.10.8 and R. PYTHON is used to specify Python 3.6.5 image and PYTHON_3.10.8 is used to specify Python 3.10.8 image. Note that PYTHON_3.10.8 is only available in skus which support nested virtualization.</summary>
     [JsonPropertyName("languageExtensions")]
-    public IList<string>? LanguageExtensions { get; set; }
+    public IList<V1beta1ClusterSpecForProviderLanguageExtensions>? LanguageExtensions { get; set; }
 
     /// <summary>The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -272,7 +281,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("trustedExternalTenants")]
     public IList<string>? TrustedExternalTenants { get; set; }
 
-    /// <summary>A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A virtual_network_configuration block as defined below.</summary>
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ClusterSpecForProviderVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 
@@ -292,6 +301,19 @@ public partial class V1beta1ClusterSpecInitProviderIdentity
     /// <summary>Specifies the type of Managed Service Identity that is configured on this Kusto Cluster. Possible values are: SystemAssigned, UserAssigned and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderLanguageExtensions
+{
+    /// <summary></summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>The name of the SKU. Possible values are Dev(No SLA)_Standard_D11_v2, Dev(No SLA)_Standard_E2a_v4, Standard_D14_v2, Standard_D11_v2, Standard_D16d_v5, Standard_D13_v2, Standard_D12_v2, Standard_DS14_v2+4TB_PS, Standard_DS14_v2+3TB_PS, Standard_DS13_v2+1TB_PS, Standard_DS13_v2+2TB_PS, Standard_D32d_v5, Standard_D32d_v4, Standard_EC8ads_v5, Standard_EC8as_v5+1TB_PS, Standard_EC8as_v5+2TB_PS, Standard_EC16ads_v5, Standard_EC16as_v5+4TB_PS, Standard_EC16as_v5+3TB_PS, Standard_E80ids_v4, Standard_E8a_v4, Standard_E8ads_v5, Standard_E8as_v5+1TB_PS, Standard_E8as_v5+2TB_PS, Standard_E8as_v4+1TB_PS, Standard_E8as_v4+2TB_PS, Standard_E8d_v5, Standard_E8d_v4, Standard_E8s_v5+1TB_PS, Standard_E8s_v5+2TB_PS, Standard_E8s_v4+1TB_PS, Standard_E8s_v4+2TB_PS, Standard_E4a_v4, Standard_E4ads_v5, Standard_E4d_v5, Standard_E4d_v4, Standard_E16a_v4, Standard_E16ads_v5, Standard_E16as_v5+4TB_PS, Standard_E16as_v5+3TB_PS, Standard_E16as_v4+4TB_PS, Standard_E16as_v4+3TB_PS, Standard_E16d_v5, Standard_E16d_v4, Standard_E16s_v5+4TB_PS, Standard_E16s_v5+3TB_PS, Standard_E16s_v4+4TB_PS, Standard_E16s_v4+3TB_PS, Standard_E64i_v3, Standard_E2a_v4, Standard_E2ads_v5, Standard_E2d_v5, Standard_E2d_v4, Standard_L8as_v3, Standard_L8s, Standard_L8s_v3, Standard_L8s_v2, Standard_L4s, Standard_L16as_v3, Standard_L16s, Standard_L16s_v3, Standard_L16s_v2, Standard_L32as_v3 and Standard_L32s_v3.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
 }
 
 /// <summary></summary>
@@ -425,17 +447,13 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("doubleEncryptionEnabled")]
     public bool? DoubleEncryptionEnabled { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("engine")]
-    public string? Engine { get; set; }
-
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ClusterSpecInitProviderIdentity>? Identity { get; set; }
 
     /// <summary>An list of language_extensions to enable. Valid values are: PYTHON, PYTHON_3.10.8 and R. PYTHON is used to specify Python 3.6.5 image and PYTHON_3.10.8 is used to specify Python 3.10.8 image. Note that PYTHON_3.10.8 is only available in skus which support nested virtualization.</summary>
     [JsonPropertyName("languageExtensions")]
-    public IList<string>? LanguageExtensions { get; set; }
+    public IList<V1beta1ClusterSpecInitProviderLanguageExtensions>? LanguageExtensions { get; set; }
 
     /// <summary>The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -477,7 +495,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("trustedExternalTenants")]
     public IList<string>? TrustedExternalTenants { get; set; }
 
-    /// <summary>A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A virtual_network_configuration block as defined below.</summary>
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 
@@ -641,6 +659,19 @@ public partial class V1beta1ClusterStatusAtProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderLanguageExtensions
+{
+    /// <summary></summary>
+    [JsonPropertyName("image")]
+    public string? Image { get; set; }
+
+    /// <summary>The name of the SKU. Possible values are Dev(No SLA)_Standard_D11_v2, Dev(No SLA)_Standard_E2a_v4, Standard_D14_v2, Standard_D11_v2, Standard_D16d_v5, Standard_D13_v2, Standard_D12_v2, Standard_DS14_v2+4TB_PS, Standard_DS14_v2+3TB_PS, Standard_DS13_v2+1TB_PS, Standard_DS13_v2+2TB_PS, Standard_D32d_v5, Standard_D32d_v4, Standard_EC8ads_v5, Standard_EC8as_v5+1TB_PS, Standard_EC8as_v5+2TB_PS, Standard_EC16ads_v5, Standard_EC16as_v5+4TB_PS, Standard_EC16as_v5+3TB_PS, Standard_E80ids_v4, Standard_E8a_v4, Standard_E8ads_v5, Standard_E8as_v5+1TB_PS, Standard_E8as_v5+2TB_PS, Standard_E8as_v4+1TB_PS, Standard_E8as_v4+2TB_PS, Standard_E8d_v5, Standard_E8d_v4, Standard_E8s_v5+1TB_PS, Standard_E8s_v5+2TB_PS, Standard_E8s_v4+1TB_PS, Standard_E8s_v4+2TB_PS, Standard_E4a_v4, Standard_E4ads_v5, Standard_E4d_v5, Standard_E4d_v4, Standard_E16a_v4, Standard_E16ads_v5, Standard_E16as_v5+4TB_PS, Standard_E16as_v5+3TB_PS, Standard_E16as_v4+4TB_PS, Standard_E16as_v4+3TB_PS, Standard_E16d_v5, Standard_E16d_v4, Standard_E16s_v5+4TB_PS, Standard_E16s_v5+3TB_PS, Standard_E16s_v4+4TB_PS, Standard_E16s_v4+3TB_PS, Standard_E64i_v3, Standard_E2a_v4, Standard_E2ads_v5, Standard_E2d_v5, Standard_E2d_v4, Standard_L8as_v3, Standard_L8s, Standard_L8s_v3, Standard_L8s_v2, Standard_L4s, Standard_L16as_v3, Standard_L16s, Standard_L16s_v3, Standard_L16s_v2, Standard_L32as_v3 and Standard_L32s_v3.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderOptimizedAutoScale
 {
     /// <summary>The maximum number of allowed instances. Must between 0 and 1000.</summary>
@@ -710,10 +741,6 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("doubleEncryptionEnabled")]
     public bool? DoubleEncryptionEnabled { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("engine")]
-    public string? Engine { get; set; }
-
     /// <summary>The Kusto Cluster ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -724,7 +751,7 @@ public partial class V1beta1ClusterStatusAtProvider
 
     /// <summary>An list of language_extensions to enable. Valid values are: PYTHON, PYTHON_3.10.8 and R. PYTHON is used to specify Python 3.6.5 image and PYTHON_3.10.8 is used to specify Python 3.10.8 image. Note that PYTHON_3.10.8 is only available in skus which support nested virtualization.</summary>
     [JsonPropertyName("languageExtensions")]
-    public IList<string>? LanguageExtensions { get; set; }
+    public IList<V1beta1ClusterStatusAtProviderLanguageExtensions>? LanguageExtensions { get; set; }
 
     /// <summary>The location where the Kusto Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -774,7 +801,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
-    /// <summary>A virtual_network_configuration block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A virtual_network_configuration block as defined below.</summary>
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 

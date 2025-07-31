@@ -12,43 +12,43 @@ namespace KubernetesCRDModelGen.Models.containerservice.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubeletConfig
 {
-    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
     [JsonPropertyName("allowedUnsafeSysctls")]
     public IList<string>? AllowedUnsafeSysctls { get; set; }
 
-    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2.</summary>
     [JsonPropertyName("containerLogMaxLine")]
     public double? ContainerLogMaxLine { get; set; }
 
-    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated.</summary>
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
-    /// <summary>Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU CFS quota period value.</summary>
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static, Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static,</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcHighThreshold")]
     public double? ImageGcHighThreshold { get; set; }
 
-    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcLowThreshold")]
     public double? ImageGcLowThreshold { get; set; }
 
-    /// <summary>Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of processes per pod.</summary>
     [JsonPropertyName("podMaxPid")]
     public double? PodMaxPid { get; set; }
 
-    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node.</summary>
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
@@ -113,119 +113,119 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesCl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfigSysctlConfig
 {
-    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
     [JsonPropertyName("fsAioMaxNr")]
     public double? FsAioMaxNr { get; set; }
 
-    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500.</summary>
     [JsonPropertyName("fsFileMax")]
     public double? FsFileMax { get; set; }
 
-    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152.</summary>
     [JsonPropertyName("fsInotifyMaxUserWatches")]
     public double? FsInotifyMaxUserWatches { get; set; }
 
-    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500.</summary>
     [JsonPropertyName("fsNrOpen")]
     public double? FsNrOpen { get; set; }
 
-    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785.</summary>
     [JsonPropertyName("kernelThreadsMax")]
     public double? KernelThreadsMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000.</summary>
     [JsonPropertyName("netCoreNetdevMaxBacklog")]
     public double? NetCoreNetdevMaxBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304.</summary>
     [JsonPropertyName("netCoreOptmemMax")]
     public double? NetCoreOptmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemDefault")]
     public double? NetCoreRmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemMax")]
     public double? NetCoreRmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000.</summary>
     [JsonPropertyName("netCoreSomaxconn")]
     public double? NetCoreSomaxconn { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemDefault")]
     public double? NetCoreWmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemMax")]
     public double? NetCoreWmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMax")]
     public double? NetIpv4IpLocalPortRangeMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMin")]
     public double? NetIpv4IpLocalPortRangeMin { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh1")]
     public double? NetIpv4NeighDefaultGcThresh1 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh2")]
     public double? NetIpv4NeighDefaultGcThresh2 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh3")]
     public double? NetIpv4NeighDefaultGcThresh3 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120.</summary>
     [JsonPropertyName("netIpv4TcpFinTimeout")]
     public double? NetIpv4TcpFinTimeout { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveIntvl")]
     public double? NetIpv4TcpKeepaliveIntvl { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveProbes")]
     public double? NetIpv4TcpKeepaliveProbes { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveTime")]
     public double? NetIpv4TcpKeepaliveTime { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000.</summary>
     [JsonPropertyName("netIpv4TcpMaxSynBacklog")]
     public double? NetIpv4TcpMaxSynBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000.</summary>
     [JsonPropertyName("netIpv4TcpMaxTwBuckets")]
     public double? NetIpv4TcpMaxTwBuckets { get; set; }
 
-    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled?</summary>
     [JsonPropertyName("netIpv4TcpTwReuse")]
     public bool? NetIpv4TcpTwReuse { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288.</summary>
     [JsonPropertyName("netNetfilterNfConntrackBuckets")]
     public double? NetNetfilterNfConntrackBuckets { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152.</summary>
     [JsonPropertyName("netNetfilterNfConntrackMax")]
     public double? NetNetfilterNfConntrackMax { get; set; }
 
-    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144.</summary>
     [JsonPropertyName("vmMaxMapCount")]
     public double? VmMaxMapCount { get; set; }
 
-    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmSwappiness")]
     public double? VmSwappiness { get; set; }
 
-    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
@@ -234,19 +234,19 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfig
 {
-    /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the size of swap file on each node in MB.</summary>
     [JsonPropertyName("swapFileSizeMb")]
     public double? SwapFileSizeMb { get; set; }
 
-    /// <summary>A sysctl_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A sysctl_config block as defined below.</summary>
     [JsonPropertyName("sysctlConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfigSysctlConfig>? SysctlConfig { get; set; }
 
-    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageDefrag")]
     public string? TransparentHugePageDefrag { get; set; }
 
-    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
@@ -353,7 +353,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSetti
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
 
-    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node.</summary>
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
@@ -427,31 +427,19 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
 {
+    /// <summary>Whether to enable auto-scaler.</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Whether to enable auto-scaler.</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should each node have a Public IP Address? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are Deallocate and Delete. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("evictionPolicy")]
     public string? EvictionPolicy { get; set; }
 
-    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("fipsEnabled")]
     public bool? FipsEnabled { get; set; }
 
@@ -459,15 +447,19 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
 
+    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
+
     /// <summary>The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
     public string? HostGroupId { get; set; }
 
-    /// <summary>A kubelet_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A kubelet_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
@@ -483,7 +475,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("kubernetesClusterIdSelector")]
     public V1beta1KubernetesClusterNodePoolSpecForProviderKubernetesClusterIdSelector? KubernetesClusterIdSelector { get; set; }
 
-    /// <summary>A linux_os_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A linux_os_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("linuxOsConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderLinuxOsConfig>? LinuxOsConfig { get; set; }
 
@@ -491,13 +483,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("maxCount")]
     public double? MaxCount { get; set; }
 
-    /// <summary>The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</summary>
+    /// <summary>The maximum number of pods that can run on each agent. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.</summary>
     [JsonPropertyName("minCount")]
@@ -519,7 +507,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should each node have a Public IP Address? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
 
@@ -531,15 +523,15 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("orchestratorVersion")]
     public string? OrchestratorVersion { get; set; }
 
-    /// <summary>The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Agent Operating System disk size in GB. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskSizeGb")]
     public double? OsDiskSizeGb { get; set; }
 
-    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -547,7 +539,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 
-    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("podSubnetId")]
     public string? PodSubnetId { get; set; }
 
@@ -571,7 +563,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("scaleDownMode")]
     public string? ScaleDownMode { get; set; }
 
-    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
 
@@ -583,7 +575,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the temporary node pool used to cycle the node pool when one of the relevant properties are updated.</summary>
+    [JsonPropertyName("temporaryNameForRotation")]
+    public string? TemporaryNameForRotation { get; set; }
+
+    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 
@@ -591,11 +587,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("upgradeSettings")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderUpgradeSettings>? UpgradeSettings { get; set; }
 
-    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 
-    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vnetSubnetId")]
     public string? VnetSubnetId { get; set; }
 
@@ -611,11 +607,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
     [JsonPropertyName("windowsProfile")]
     public IList<V1beta1KubernetesClusterNodePoolSpecForProviderWindowsProfile>? WindowsProfile { get; set; }
 
-    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.</summary>
+    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -624,43 +620,43 @@ public partial class V1beta1KubernetesClusterNodePoolSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConfig
 {
-    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
     [JsonPropertyName("allowedUnsafeSysctls")]
     public IList<string>? AllowedUnsafeSysctls { get; set; }
 
-    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2.</summary>
     [JsonPropertyName("containerLogMaxLine")]
     public double? ContainerLogMaxLine { get; set; }
 
-    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated.</summary>
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
-    /// <summary>Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU CFS quota period value.</summary>
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static, Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static,</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcHighThreshold")]
     public double? ImageGcHighThreshold { get; set; }
 
-    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcLowThreshold")]
     public double? ImageGcLowThreshold { get; set; }
 
-    /// <summary>Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of processes per pod.</summary>
     [JsonPropertyName("podMaxPid")]
     public double? PodMaxPid { get; set; }
 
-    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node.</summary>
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
@@ -669,119 +665,119 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfigSysctlConfig
 {
-    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
     [JsonPropertyName("fsAioMaxNr")]
     public double? FsAioMaxNr { get; set; }
 
-    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500.</summary>
     [JsonPropertyName("fsFileMax")]
     public double? FsFileMax { get; set; }
 
-    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152.</summary>
     [JsonPropertyName("fsInotifyMaxUserWatches")]
     public double? FsInotifyMaxUserWatches { get; set; }
 
-    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500.</summary>
     [JsonPropertyName("fsNrOpen")]
     public double? FsNrOpen { get; set; }
 
-    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785.</summary>
     [JsonPropertyName("kernelThreadsMax")]
     public double? KernelThreadsMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000.</summary>
     [JsonPropertyName("netCoreNetdevMaxBacklog")]
     public double? NetCoreNetdevMaxBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304.</summary>
     [JsonPropertyName("netCoreOptmemMax")]
     public double? NetCoreOptmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemDefault")]
     public double? NetCoreRmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemMax")]
     public double? NetCoreRmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000.</summary>
     [JsonPropertyName("netCoreSomaxconn")]
     public double? NetCoreSomaxconn { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemDefault")]
     public double? NetCoreWmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemMax")]
     public double? NetCoreWmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMax")]
     public double? NetIpv4IpLocalPortRangeMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMin")]
     public double? NetIpv4IpLocalPortRangeMin { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh1")]
     public double? NetIpv4NeighDefaultGcThresh1 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh2")]
     public double? NetIpv4NeighDefaultGcThresh2 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh3")]
     public double? NetIpv4NeighDefaultGcThresh3 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120.</summary>
     [JsonPropertyName("netIpv4TcpFinTimeout")]
     public double? NetIpv4TcpFinTimeout { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveIntvl")]
     public double? NetIpv4TcpKeepaliveIntvl { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveProbes")]
     public double? NetIpv4TcpKeepaliveProbes { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveTime")]
     public double? NetIpv4TcpKeepaliveTime { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000.</summary>
     [JsonPropertyName("netIpv4TcpMaxSynBacklog")]
     public double? NetIpv4TcpMaxSynBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000.</summary>
     [JsonPropertyName("netIpv4TcpMaxTwBuckets")]
     public double? NetIpv4TcpMaxTwBuckets { get; set; }
 
-    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled?</summary>
     [JsonPropertyName("netIpv4TcpTwReuse")]
     public bool? NetIpv4TcpTwReuse { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288.</summary>
     [JsonPropertyName("netNetfilterNfConntrackBuckets")]
     public double? NetNetfilterNfConntrackBuckets { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152.</summary>
     [JsonPropertyName("netNetfilterNfConntrackMax")]
     public double? NetNetfilterNfConntrackMax { get; set; }
 
-    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144.</summary>
     [JsonPropertyName("vmMaxMapCount")]
     public double? VmMaxMapCount { get; set; }
 
-    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmSwappiness")]
     public double? VmSwappiness { get; set; }
 
-    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
@@ -790,19 +786,19 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfig
 {
-    /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the size of swap file on each node in MB.</summary>
     [JsonPropertyName("swapFileSizeMb")]
     public double? SwapFileSizeMb { get; set; }
 
-    /// <summary>A sysctl_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A sysctl_config block as defined below.</summary>
     [JsonPropertyName("sysctlConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfigSysctlConfig>? SysctlConfig { get; set; }
 
-    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageDefrag")]
     public string? TransparentHugePageDefrag { get; set; }
 
-    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
@@ -909,7 +905,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSett
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
 
-    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node.</summary>
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
@@ -983,31 +979,19 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
 {
+    /// <summary>Whether to enable auto-scaler.</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Whether to enable auto-scaler.</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should each node have a Public IP Address? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are Deallocate and Delete. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("evictionPolicy")]
     public string? EvictionPolicy { get; set; }
 
-    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("fipsEnabled")]
     public bool? FipsEnabled { get; set; }
 
@@ -1015,19 +999,23 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
 
+    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
+
     /// <summary>The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
     public string? HostGroupId { get; set; }
 
-    /// <summary>A kubelet_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A kubelet_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
-    /// <summary>A linux_os_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A linux_os_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("linuxOsConfig")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderLinuxOsConfig>? LinuxOsConfig { get; set; }
 
@@ -1035,13 +1023,9 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("maxCount")]
     public double? MaxCount { get; set; }
 
-    /// <summary>The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</summary>
+    /// <summary>The maximum number of pods that can run on each agent. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.</summary>
     [JsonPropertyName("minCount")]
@@ -1063,7 +1047,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should each node have a Public IP Address? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
 
@@ -1075,15 +1063,15 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("orchestratorVersion")]
     public string? OrchestratorVersion { get; set; }
 
-    /// <summary>The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Agent Operating System disk size in GB. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskSizeGb")]
     public double? OsDiskSizeGb { get; set; }
 
-    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -1091,7 +1079,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 
-    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("podSubnetId")]
     public string? PodSubnetId { get; set; }
 
@@ -1115,7 +1103,7 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("scaleDownMode")]
     public string? ScaleDownMode { get; set; }
 
-    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
 
@@ -1127,7 +1115,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the temporary node pool used to cycle the node pool when one of the relevant properties are updated.</summary>
+    [JsonPropertyName("temporaryNameForRotation")]
+    public string? TemporaryNameForRotation { get; set; }
+
+    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 
@@ -1135,11 +1127,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("upgradeSettings")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderUpgradeSettings>? UpgradeSettings { get; set; }
 
-    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 
-    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vnetSubnetId")]
     public string? VnetSubnetId { get; set; }
 
@@ -1155,11 +1147,11 @@ public partial class V1beta1KubernetesClusterNodePoolSpecInitProvider
     [JsonPropertyName("windowsProfile")]
     public IList<V1beta1KubernetesClusterNodePoolSpecInitProviderWindowsProfile>? WindowsProfile { get; set; }
 
-    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.</summary>
+    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -1300,43 +1292,43 @@ public partial class V1beta1KubernetesClusterNodePoolSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConfig
 {
-    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *). Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the allow list of unsafe sysctls command or patterns (ending in *).</summary>
     [JsonPropertyName("allowedUnsafeSysctls")]
     public IList<string>? AllowedUnsafeSysctls { get; set; }
 
-    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of container log files that can be present for a container. must be at least 2.</summary>
     [JsonPropertyName("containerLogMaxLine")]
     public double? ContainerLogMaxLine { get; set; }
 
-    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum size (e.g. 10MB) of container log file before it is rotated.</summary>
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
-    /// <summary>Specifies the CPU CFS quota period value. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU CFS quota period value.</summary>
     [JsonPropertyName("cpuCfsQuotaPeriod")]
     public string? CpuCfsQuotaPeriod { get; set; }
 
-    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static, Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the CPU Manager policy to use. Possible values are none and static,</summary>
     [JsonPropertyName("cpuManagerPolicy")]
     public string? CpuManagerPolicy { get; set; }
 
-    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage above which image garbage collection is always run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcHighThreshold")]
     public double? ImageGcHighThreshold { get; set; }
 
-    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the percent of disk usage lower than which image garbage collection is never run. Must be between 0 and 100.</summary>
     [JsonPropertyName("imageGcLowThreshold")]
     public double? ImageGcLowThreshold { get; set; }
 
-    /// <summary>Specifies the maximum number of processes per pod. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the maximum number of processes per pod.</summary>
     [JsonPropertyName("podMaxPid")]
     public double? PodMaxPid { get; set; }
 
-    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Topology Manager policy to use. Possible values are none, best-effort, restricted or single-numa-node.</summary>
     [JsonPropertyName("topologyManagerPolicy")]
     public string? TopologyManagerPolicy { get; set; }
 }
@@ -1345,119 +1337,119 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfigSysctlConfig
 {
-    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.aio-max-nr. Must be between 65536 and 6553500.</summary>
     [JsonPropertyName("fsAioMaxNr")]
     public double? FsAioMaxNr { get; set; }
 
-    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.file-max. Must be between 8192 and 12000500.</summary>
     [JsonPropertyName("fsFileMax")]
     public double? FsFileMax { get; set; }
 
-    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.inotify.max_user_watches. Must be between 781250 and 2097152.</summary>
     [JsonPropertyName("fsInotifyMaxUserWatches")]
     public double? FsInotifyMaxUserWatches { get; set; }
 
-    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting fs.nr_open. Must be between 8192 and 20000500.</summary>
     [JsonPropertyName("fsNrOpen")]
     public double? FsNrOpen { get; set; }
 
-    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting kernel.threads-max. Must be between 20 and 513785.</summary>
     [JsonPropertyName("kernelThreadsMax")]
     public double? KernelThreadsMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.netdev_max_backlog. Must be between 1000 and 3240000.</summary>
     [JsonPropertyName("netCoreNetdevMaxBacklog")]
     public double? NetCoreNetdevMaxBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.optmem_max. Must be between 20480 and 4194304.</summary>
     [JsonPropertyName("netCoreOptmemMax")]
     public double? NetCoreOptmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemDefault")]
     public double? NetCoreRmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.rmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreRmemMax")]
     public double? NetCoreRmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.somaxconn. Must be between 4096 and 3240000.</summary>
     [JsonPropertyName("netCoreSomaxconn")]
     public double? NetCoreSomaxconn { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_default. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemDefault")]
     public double? NetCoreWmemDefault { get; set; }
 
-    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.core.wmem_max. Must be between 212992 and 134217728.</summary>
     [JsonPropertyName("netCoreWmemMax")]
     public double? NetCoreWmemMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range max value. Must be between 32768 and 65535.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMax")]
     public double? NetIpv4IpLocalPortRangeMax { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.ip_local_port_range min value. Must be between 1024 and 60999.</summary>
     [JsonPropertyName("netIpv4IpLocalPortRangeMin")]
     public double? NetIpv4IpLocalPortRangeMin { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh1. Must be between 128 and 80000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh1")]
     public double? NetIpv4NeighDefaultGcThresh1 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh2. Must be between 512 and 90000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh2")]
     public double? NetIpv4NeighDefaultGcThresh2 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.neigh.default.gc_thresh3. Must be between 1024 and 100000.</summary>
     [JsonPropertyName("netIpv4NeighDefaultGcThresh3")]
     public double? NetIpv4NeighDefaultGcThresh3 { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_fin_timeout. Must be between 5 and 120.</summary>
     [JsonPropertyName("netIpv4TcpFinTimeout")]
     public double? NetIpv4TcpFinTimeout { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_intvl. Must be between 10 and 90.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveIntvl")]
     public double? NetIpv4TcpKeepaliveIntvl { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_probes. Must be between 1 and 15.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveProbes")]
     public double? NetIpv4TcpKeepaliveProbes { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_keepalive_time. Must be between 30 and 432000.</summary>
     [JsonPropertyName("netIpv4TcpKeepaliveTime")]
     public double? NetIpv4TcpKeepaliveTime { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_syn_backlog. Must be between 128 and 3240000.</summary>
     [JsonPropertyName("netIpv4TcpMaxSynBacklog")]
     public double? NetIpv4TcpMaxSynBacklog { get; set; }
 
-    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.ipv4.tcp_max_tw_buckets. Must be between 8000 and 1440000.</summary>
     [JsonPropertyName("netIpv4TcpMaxTwBuckets")]
     public double? NetIpv4TcpMaxTwBuckets { get; set; }
 
-    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Is sysctl setting net.ipv4.tcp_tw_reuse enabled?</summary>
     [JsonPropertyName("netIpv4TcpTwReuse")]
     public bool? NetIpv4TcpTwReuse { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_buckets. Must be between 65536 and 524288.</summary>
     [JsonPropertyName("netNetfilterNfConntrackBuckets")]
     public double? NetNetfilterNfConntrackBuckets { get; set; }
 
-    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting net.netfilter.nf_conntrack_max. Must be between 131072 and 2097152.</summary>
     [JsonPropertyName("netNetfilterNfConntrackMax")]
     public double? NetNetfilterNfConntrackMax { get; set; }
 
-    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.max_map_count. Must be between 65530 and 262144.</summary>
     [JsonPropertyName("vmMaxMapCount")]
     public double? VmMaxMapCount { get; set; }
 
-    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.swappiness. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmSwappiness")]
     public double? VmSwappiness { get; set; }
 
-    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100. Changing this forces a new resource to be created.</summary>
+    /// <summary>The sysctl setting vm.vfs_cache_pressure. Must be between 0 and 100.</summary>
     [JsonPropertyName("vmVfsCachePressure")]
     public double? VmVfsCachePressure { get; set; }
 }
@@ -1466,19 +1458,19 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfig
 {
-    /// <summary>Specifies the size of swap file on each node in MB. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the size of swap file on each node in MB.</summary>
     [JsonPropertyName("swapFileSizeMb")]
     public double? SwapFileSizeMb { get; set; }
 
-    /// <summary>A sysctl_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A sysctl_config block as defined below.</summary>
     [JsonPropertyName("sysctlConfig")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfigSysctlConfig>? SysctlConfig { get; set; }
 
-    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>specifies the defrag configuration for Transparent Huge Page. Possible values are always, defer, defer+madvise, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageDefrag")]
     public string? TransparentHugePageDefrag { get; set; }
 
-    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Transparent Huge Page enabled configuration. Possible values are always, madvise and never.</summary>
     [JsonPropertyName("transparentHugePageEnabled")]
     public string? TransparentHugePageEnabled { get; set; }
 }
@@ -1529,7 +1521,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSett
     [JsonPropertyName("maxSurge")]
     public string? MaxSurge { get; set; }
 
-    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node. Defaults to 0.</summary>
+    /// <summary>The amount of time in minutes to wait after draining a node and before reimaging and moving on to next node.</summary>
     [JsonPropertyName("nodeSoakDurationInMinutes")]
     public double? NodeSoakDurationInMinutes { get; set; }
 }
@@ -1547,37 +1539,29 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
 {
+    /// <summary>Whether to enable auto-scaler.</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Whether to enable auto-scaler.</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should each node have a Public IP Address? Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>The Eviction Policy which should be used for Virtual Machines within the Virtual Machine Scale Set powering this Node Pool. Possible values are Deallocate and Delete. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("evictionPolicy")]
     public string? EvictionPolicy { get; set; }
 
-    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this forces a new resource to be created.</summary>
+    /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("fipsEnabled")]
     public bool? FipsEnabled { get; set; }
 
     /// <summary>Specifies the GPU MIG instance profile for supported GPU VM SKU. The allowed values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
+
+    /// <summary>Should the nodes in this Node Pool have host encryption enabled? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
 
     /// <summary>The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
@@ -1587,11 +1571,11 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A kubelet_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A kubelet_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
@@ -1599,7 +1583,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("kubernetesClusterId")]
     public string? KubernetesClusterId { get; set; }
 
-    /// <summary>A linux_os_config block as defined below. Changing this forces a new resource to be created.</summary>
+    /// <summary>A linux_os_config block as defined below. Changing this requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("linuxOsConfig")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderLinuxOsConfig>? LinuxOsConfig { get; set; }
 
@@ -1607,13 +1591,9 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("maxCount")]
     public double? MaxCount { get; set; }
 
-    /// <summary>The maximum number of pods that can run on each agent. Changing this forces a new resource to be created.</summary>
+    /// <summary>The maximum number of pods that can run on each agent. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count.</summary>
     [JsonPropertyName("minCount")]
@@ -1635,7 +1615,11 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should each node have a Public IP Address? Changing this property requires specifying temporary_name_for_rotation.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
 
@@ -1647,15 +1631,15 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("orchestratorVersion")]
     public string? OrchestratorVersion { get; set; }
 
-    /// <summary>The Agent Operating System disk size in GB. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Agent Operating System disk size in GB. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskSizeGb")]
     public double? OsDiskSizeGb { get; set; }
 
-    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of disk which should be used for the Operating System. Possible values are Ephemeral and Managed. Defaults to Managed. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise it forces a new resource to be created.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -1663,7 +1647,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("osType")]
     public string? OsType { get; set; }
 
-    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where the pods in the Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("podSubnetId")]
     public string? PodSubnetId { get; set; }
 
@@ -1679,7 +1663,7 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("scaleDownMode")]
     public string? ScaleDownMode { get; set; }
 
-    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Snapshot which should be used to create this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("snapshotId")]
     public string? SnapshotId { get; set; }
 
@@ -1691,7 +1675,11 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the temporary node pool used to cycle the node pool when one of the relevant properties are updated.</summary>
+    [JsonPropertyName("temporaryNameForRotation")]
+    public string? TemporaryNameForRotation { get; set; }
+
+    /// <summary>Used to specify whether the UltraSSD is enabled in the Node Pool. Defaults to false. See the documentation for more information. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("ultraSsdEnabled")]
     public bool? UltraSsdEnabled { get; set; }
 
@@ -1699,11 +1687,11 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("upgradeSettings")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderUpgradeSettings>? UpgradeSettings { get; set; }
 
-    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU which should be used for the Virtual Machines used in this Node Pool. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vmSize")]
     public string? VmSize { get; set; }
 
-    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Subnet where this Node Pool should exist. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("vnetSubnetId")]
     public string? VnetSubnetId { get; set; }
 
@@ -1711,11 +1699,11 @@ public partial class V1beta1KubernetesClusterNodePoolStatusAtProvider
     [JsonPropertyName("windowsProfile")]
     public IList<V1beta1KubernetesClusterNodePoolStatusAtProviderWindowsProfile>? WindowsProfile { get; set; }
 
-    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer, WasmWasi and KataMshvVmIsolation.</summary>
+    /// <summary>Used to specify the workload runtime. Allowed values are OCIContainer and WasmWasi.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this forces a new Kubernetes Cluster Node Pool to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones in which this Kubernetes Cluster Node Pool should be located. Changing this property requires specifying temporary_name_for_rotation.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }

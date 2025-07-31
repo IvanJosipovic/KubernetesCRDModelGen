@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: backupvaults.dataprotection.azure.upbound.io
 spec:
   group: dataprotection.azure.upbound.io
@@ -84,6 +84,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -96,6 +99,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -195,7 +201,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:
@@ -226,6 +232,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -238,6 +247,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -248,7 +260,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:
@@ -477,6 +489,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -498,6 +513,9 @@ spec:
                           type: string
                       type: object
                     type: array
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -511,7 +529,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:
@@ -653,6 +671,9 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -663,6 +684,9 @@ spec:
                         description: Specifies the type of Managed Service Identity that should be configured on this Backup Vault. The only possible value is SystemAssigned.
                         type: string
                     type: object
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -762,7 +786,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:
@@ -793,6 +817,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -803,6 +830,9 @@ spec:
                         description: Specifies the type of Managed Service Identity that should be configured on this Backup Vault. The only possible value is SystemAssigned.
                         type: string
                     type: object
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -813,7 +843,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:
@@ -1042,6 +1072,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  crossRegionRestoreEnabled:
+                    description: Whether to enable cross-region restore for the Backup Vault.
+                    type: boolean
                   datastoreType:
                     description: Specifies the type of the data store. Possible values are ArchiveStore, OperationalStore, SnapshotStore and VaultStore. Changing this forces a new resource to be created.
                     type: string
@@ -1061,6 +1094,9 @@ spec:
                         description: Specifies the type of Managed Service Identity that should be configured on this Backup Vault. The only possible value is SystemAssigned.
                         type: string
                     type: object
+                  immutability:
+                    description: The state of immutability for this Backup Vault. Possible values are Disabled, Locked, and Unlocked. Defaults to Disabled. Changing this from Locked to anything else forces a new Backup Vault to be created.
+                    type: string
                   location:
                     description: The Azure Region where the Backup Vault should exist. Changing this forces a new Backup Vault to be created.
                     type: string
@@ -1074,7 +1110,7 @@ spec:
                     description: The soft delete retention duration for this Backup Vault. Possible values are between 14 and 180. Defaults to 14.
                     type: number
                   softDelete:
-                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off and On. Defaults to On.
+                    description: The state of soft delete for this Backup Vault. Possible values are AlwaysOn, Off, and On. Defaults to On.
                     type: string
                   tags:
                     additionalProperties:

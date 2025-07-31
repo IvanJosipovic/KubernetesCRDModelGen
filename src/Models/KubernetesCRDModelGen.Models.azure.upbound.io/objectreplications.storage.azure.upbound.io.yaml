@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: objectreplications.storage.azure.upbound.io
 spec:
   group: storage.azure.upbound.io
@@ -181,7 +181,7 @@ spec:
                           description: 'The time after which the Block Blobs created will be copies to the destination. Possible values are OnlyNewObjects, Everything and time in RFC3339 format: 2006-01-02T15:04:00Z. Defaults to OnlyNewObjects.'
                           type: string
                         destinationContainerName:
-                          description: The destination storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The destination storage container name.
                           type: string
                         destinationContainerNameRef:
                           description: Reference to a Container in storage to populate destinationContainerName.
@@ -276,7 +276,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         sourceContainerName:
-                          description: The source storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The source storage container name.
                           type: string
                         sourceContainerNameRef:
                           description: Reference to a Container in storage to populate sourceContainerName.
@@ -575,7 +575,7 @@ spec:
                           description: 'The time after which the Block Blobs created will be copies to the destination. Possible values are OnlyNewObjects, Everything and time in RFC3339 format: 2006-01-02T15:04:00Z. Defaults to OnlyNewObjects.'
                           type: string
                         destinationContainerName:
-                          description: The destination storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The destination storage container name.
                           type: string
                         destinationContainerNameRef:
                           description: Reference to a Container in storage to populate destinationContainerName.
@@ -670,7 +670,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         sourceContainerName:
-                          description: The source storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The source storage container name.
                           type: string
                         sourceContainerNameRef:
                           description: Reference to a Container in storage to populate sourceContainerName.
@@ -1083,7 +1083,7 @@ spec:
                           description: 'The time after which the Block Blobs created will be copies to the destination. Possible values are OnlyNewObjects, Everything and time in RFC3339 format: 2006-01-02T15:04:00Z. Defaults to OnlyNewObjects.'
                           type: string
                         destinationContainerName:
-                          description: The destination storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The destination storage container name.
                           type: string
                         filterOutBlobsWithPrefix:
                           description: Specifies a list of filters prefixes, the blobs whose names begin with which will be replicated.
@@ -1094,7 +1094,7 @@ spec:
                         name:
                           type: string
                         sourceContainerName:
-                          description: The source storage container name. Changing this forces a new Storage Object Replication to be created.
+                          description: The source storage container name.
                           type: string
                       type: object
                     type: array

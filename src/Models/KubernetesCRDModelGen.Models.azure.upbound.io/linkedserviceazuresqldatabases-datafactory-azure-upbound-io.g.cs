@@ -106,6 +106,10 @@ public partial class V1beta1LinkedServiceAzureSQLDatabaseSpecForProvider
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
 
+    /// <summary>The name of a User-assigned Managed Identity. Use this argument to authenticate against the linked resource using a User-assigned Managed Identity.</summary>
+    [JsonPropertyName("credentialName")]
+    public string? CredentialName { get; set; }
+
     /// <summary>The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.</summary>
     [JsonPropertyName("dataFactoryId")]
     public string? DataFactoryId { get; set; }
@@ -196,6 +200,10 @@ public partial class V1beta1LinkedServiceAzureSQLDatabaseSpecInitProvider
     /// <summary>The connection string in which to authenticate with Azure SQL Database. Exactly one of either connection_string or key_vault_connection_string is required.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
+
+    /// <summary>The name of a User-assigned Managed Identity. Use this argument to authenticate against the linked resource using a User-assigned Managed Identity.</summary>
+    [JsonPropertyName("credentialName")]
+    public string? CredentialName { get; set; }
 
     /// <summary>The description for the Data Factory Linked Service Azure SQL Database.</summary>
     [JsonPropertyName("description")]
@@ -407,6 +415,10 @@ public partial class V1beta1LinkedServiceAzureSQLDatabaseStatusAtProvider
     /// <summary>The connection string in which to authenticate with Azure SQL Database. Exactly one of either connection_string or key_vault_connection_string is required.</summary>
     [JsonPropertyName("connectionString")]
     public string? ConnectionString { get; set; }
+
+    /// <summary>The name of a User-assigned Managed Identity. Use this argument to authenticate against the linked resource using a User-assigned Managed Identity.</summary>
+    [JsonPropertyName("credentialName")]
+    public string? CredentialName { get; set; }
 
     /// <summary>The Data Factory ID in which to associate the Linked Service with. Changing this forces a new resource.</summary>
     [JsonPropertyName("dataFactoryId")]

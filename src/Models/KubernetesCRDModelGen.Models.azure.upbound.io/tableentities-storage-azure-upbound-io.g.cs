@@ -10,62 +10,6 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderStorageAccountNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderStorageAccountNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderStorageAccountNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderStorageAccountNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProviderStorageTableIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -120,62 +64,6 @@ public partial class V1beta1TableEntitySpecForProviderStorageTableIdSelector
     public V1beta1TableEntitySpecForProviderStorageTableIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderTableNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Table in storage to populate tableName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderTableNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecForProviderTableNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderTableNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Table in storage to populate tableName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecForProviderTableNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecForProviderTableNameSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecForProvider
@@ -192,18 +80,6 @@ public partial class V1beta1TableEntitySpecForProvider
     [JsonPropertyName("rowKey")]
     public string? RowKey { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
-
-    /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameRef")]
-    public V1beta1TableEntitySpecForProviderStorageAccountNameRef? StorageAccountNameRef { get; set; }
-
-    /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameSelector")]
-    public V1beta1TableEntitySpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
-
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageTableId")]
     public string? StorageTableId { get; set; }
@@ -215,74 +91,6 @@ public partial class V1beta1TableEntitySpecForProvider
     /// <summary>Selector for a Table in storage to populate storageTableId.</summary>
     [JsonPropertyName("storageTableIdSelector")]
     public V1beta1TableEntitySpecForProviderStorageTableIdSelector? StorageTableIdSelector { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("tableName")]
-    public string? TableName { get; set; }
-
-    /// <summary>Reference to a Table in storage to populate tableName.</summary>
-    [JsonPropertyName("tableNameRef")]
-    public V1beta1TableEntitySpecForProviderTableNameRef? TableNameRef { get; set; }
-
-    /// <summary>Selector for a Table in storage to populate tableName.</summary>
-    [JsonPropertyName("tableNameSelector")]
-    public V1beta1TableEntitySpecForProviderTableNameSelector? TableNameSelector { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderStorageAccountNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderStorageAccountNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderStorageAccountNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderStorageAccountNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -341,62 +149,6 @@ public partial class V1beta1TableEntitySpecInitProviderStorageTableIdSelector
     public V1beta1TableEntitySpecInitProviderStorageTableIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderTableNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Table in storage to populate tableName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderTableNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecInitProviderTableNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderTableNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Table in storage to populate tableName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TableEntitySpecInitProviderTableNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1TableEntitySpecInitProviderTableNameSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableEntitySpecInitProvider
@@ -413,18 +165,6 @@ public partial class V1beta1TableEntitySpecInitProvider
     [JsonPropertyName("rowKey")]
     public string? RowKey { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
-
-    /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameRef")]
-    public V1beta1TableEntitySpecInitProviderStorageAccountNameRef? StorageAccountNameRef { get; set; }
-
-    /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameSelector")]
-    public V1beta1TableEntitySpecInitProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
-
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageTableId")]
     public string? StorageTableId { get; set; }
@@ -436,18 +176,6 @@ public partial class V1beta1TableEntitySpecInitProvider
     /// <summary>Selector for a Table in storage to populate storageTableId.</summary>
     [JsonPropertyName("storageTableIdSelector")]
     public V1beta1TableEntitySpecInitProviderStorageTableIdSelector? StorageTableIdSelector { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("tableName")]
-    public string? TableName { get; set; }
-
-    /// <summary>Reference to a Table in storage to populate tableName.</summary>
-    [JsonPropertyName("tableNameRef")]
-    public V1beta1TableEntitySpecInitProviderTableNameRef? TableNameRef { get; set; }
-
-    /// <summary>Selector for a Table in storage to populate tableName.</summary>
-    [JsonPropertyName("tableNameSelector")]
-    public V1beta1TableEntitySpecInitProviderTableNameSelector? TableNameSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -602,17 +330,9 @@ public partial class V1beta1TableEntityStatusAtProvider
     [JsonPropertyName("rowKey")]
     public string? RowKey { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
-
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageTableId")]
     public string? StorageTableId { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("tableName")]
-    public string? TableName { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

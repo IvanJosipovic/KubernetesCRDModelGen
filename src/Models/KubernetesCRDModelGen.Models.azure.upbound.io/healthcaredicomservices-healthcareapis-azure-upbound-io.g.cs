@@ -10,6 +10,31 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceSpecForProviderCors
+{
+    /// <summary>Whether to allow credentials in CORS. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentials")]
+    public bool? AllowCredentials { get; set; }
+
+    /// <summary>A list of allowed headers for CORS.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
+
+    /// <summary>A list of allowed methods for CORS.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>A list of allowed origins for CORS.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>The maximum age in seconds for the CORS configuration (must be between 0 and 99998 inclusive).</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceSpecForProviderIdentity
 {
     /// <summary>A list of User Assigned Identity IDs which should be assigned to this Healthcare DICOM service.</summary>
@@ -19,6 +44,19 @@ public partial class V1beta1HealthcareDICOMServiceSpecForProviderIdentity
     /// <summary>The type of identity used for the Healthcare DICOM service. Possible values are UserAssigned, SystemAssigned and SystemAssigned, UserAssigned. If UserAssigned is set, an identity_ids must be set as well.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceSpecForProviderStorage
+{
+    /// <summary>The filesystem name of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("fileSystemName")]
+    public string? FileSystemName { get; set; }
+
+    /// <summary>The resource ID of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -81,6 +119,18 @@ public partial class V1beta1HealthcareDICOMServiceSpecForProviderWorkspaceIdSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceSpecForProvider
 {
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1HealthcareDICOMServiceSpecForProviderCors>? Cors { get; set; }
+
+    /// <summary>If data partitions are enabled or not. Defaults to false. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("dataPartitionsEnabled")]
+    public bool? DataPartitionsEnabled { get; set; }
+
+    /// <summary>The URL of the key to use for encryption as part of the customer-managed key encryption settings. For more details, refer to the Azure Customer-Managed Keys Overview.</summary>
+    [JsonPropertyName("encryptionKeyUrl")]
+    public string? EncryptionKeyUrl { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1HealthcareDICOMServiceSpecForProviderIdentity>? Identity { get; set; }
@@ -93,11 +143,15 @@ public partial class V1beta1HealthcareDICOMServiceSpecForProvider
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
+    /// <summary>A storage block as defined below.</summary>
+    [JsonPropertyName("storage")]
+    public IList<V1beta1HealthcareDICOMServiceSpecForProviderStorage>? Storage { get; set; }
+
     /// <summary>A mapping of tags to assign to the Healthcare DICOM Service.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Specifies the id of the Healthcare Workspace where the Healthcare DICOM Service should exist. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    /// <summary>Specifies the ID of the Healthcare Workspace where the Healthcare DICOM Service should exist. Changing this forces a new Healthcare DICOM Service to be created.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
@@ -108,6 +162,31 @@ public partial class V1beta1HealthcareDICOMServiceSpecForProvider
     /// <summary>Selector for a HealthcareWorkspace in healthcareapis to populate workspaceId.</summary>
     [JsonPropertyName("workspaceIdSelector")]
     public V1beta1HealthcareDICOMServiceSpecForProviderWorkspaceIdSelector? WorkspaceIdSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceSpecInitProviderCors
+{
+    /// <summary>Whether to allow credentials in CORS. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentials")]
+    public bool? AllowCredentials { get; set; }
+
+    /// <summary>A list of allowed headers for CORS.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
+
+    /// <summary>A list of allowed methods for CORS.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>A list of allowed origins for CORS.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>The maximum age in seconds for the CORS configuration (must be between 0 and 99998 inclusive).</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
 }
 
 /// <summary></summary>
@@ -123,10 +202,35 @@ public partial class V1beta1HealthcareDICOMServiceSpecInitProviderIdentity
     public string? Type { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceSpecInitProviderStorage
+{
+    /// <summary>The filesystem name of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("fileSystemName")]
+    public string? FileSystemName { get; set; }
+
+    /// <summary>The resource ID of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceSpecInitProvider
 {
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1HealthcareDICOMServiceSpecInitProviderCors>? Cors { get; set; }
+
+    /// <summary>If data partitions are enabled or not. Defaults to false. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("dataPartitionsEnabled")]
+    public bool? DataPartitionsEnabled { get; set; }
+
+    /// <summary>The URL of the key to use for encryption as part of the customer-managed key encryption settings. For more details, refer to the Azure Customer-Managed Keys Overview.</summary>
+    [JsonPropertyName("encryptionKeyUrl")]
+    public string? EncryptionKeyUrl { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1HealthcareDICOMServiceSpecInitProviderIdentity>? Identity { get; set; }
@@ -138,6 +242,10 @@ public partial class V1beta1HealthcareDICOMServiceSpecInitProvider
     /// <summary>Whether to enabled public networks when data plane traffic coming from public networks while private endpoint is enabled. Defaults to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
+
+    /// <summary>A storage block as defined below.</summary>
+    [JsonPropertyName("storage")]
+    public IList<V1beta1HealthcareDICOMServiceSpecInitProviderStorage>? Storage { get; set; }
 
     /// <summary>A mapping of tags to assign to the Healthcare DICOM Service.</summary>
     [JsonPropertyName("tags")]
@@ -291,6 +399,31 @@ public partial class V1beta1HealthcareDICOMServiceStatusAtProviderAuthentication
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceStatusAtProviderCors
+{
+    /// <summary>Whether to allow credentials in CORS. Defaults to false.</summary>
+    [JsonPropertyName("allowCredentials")]
+    public bool? AllowCredentials { get; set; }
+
+    /// <summary>A list of allowed headers for CORS.</summary>
+    [JsonPropertyName("allowedHeaders")]
+    public IList<string>? AllowedHeaders { get; set; }
+
+    /// <summary>A list of allowed methods for CORS.</summary>
+    [JsonPropertyName("allowedMethods")]
+    public IList<string>? AllowedMethods { get; set; }
+
+    /// <summary>A list of allowed origins for CORS.</summary>
+    [JsonPropertyName("allowedOrigins")]
+    public IList<string>? AllowedOrigins { get; set; }
+
+    /// <summary>The maximum age in seconds for the CORS configuration (must be between 0 and 99998 inclusive).</summary>
+    [JsonPropertyName("maxAgeInSeconds")]
+    public double? MaxAgeInSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceStatusAtProviderIdentity
 {
     /// <summary>A list of User Assigned Identity IDs which should be assigned to this Healthcare DICOM service.</summary>
@@ -325,11 +458,36 @@ public partial class V1beta1HealthcareDICOMServiceStatusAtProviderPrivateEndpoin
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1HealthcareDICOMServiceStatusAtProviderStorage
+{
+    /// <summary>The filesystem name of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("fileSystemName")]
+    public string? FileSystemName { get; set; }
+
+    /// <summary>The resource ID of connected storage account. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceStatusAtProvider
 {
     /// <summary>The authentication block as defined below.</summary>
     [JsonPropertyName("authentication")]
     public IList<V1beta1HealthcareDICOMServiceStatusAtProviderAuthentication>? Authentication { get; set; }
+
+    /// <summary>A cors block as defined below.</summary>
+    [JsonPropertyName("cors")]
+    public IList<V1beta1HealthcareDICOMServiceStatusAtProviderCors>? Cors { get; set; }
+
+    /// <summary>If data partitions are enabled or not. Defaults to false. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    [JsonPropertyName("dataPartitionsEnabled")]
+    public bool? DataPartitionsEnabled { get; set; }
+
+    /// <summary>The URL of the key to use for encryption as part of the customer-managed key encryption settings. For more details, refer to the Azure Customer-Managed Keys Overview.</summary>
+    [JsonPropertyName("encryptionKeyUrl")]
+    public string? EncryptionKeyUrl { get; set; }
 
     /// <summary>The ID of the Healthcare DICOM Service.</summary>
     [JsonPropertyName("id")]
@@ -355,11 +513,15 @@ public partial class V1beta1HealthcareDICOMServiceStatusAtProvider
     [JsonPropertyName("serviceUrl")]
     public string? ServiceUrl { get; set; }
 
+    /// <summary>A storage block as defined below.</summary>
+    [JsonPropertyName("storage")]
+    public IList<V1beta1HealthcareDICOMServiceStatusAtProviderStorage>? Storage { get; set; }
+
     /// <summary>A mapping of tags to assign to the Healthcare DICOM Service.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Specifies the id of the Healthcare Workspace where the Healthcare DICOM Service should exist. Changing this forces a new Healthcare DICOM Service to be created.</summary>
+    /// <summary>Specifies the ID of the Healthcare Workspace where the Healthcare DICOM Service should exist. Changing this forces a new Healthcare DICOM Service to be created.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }

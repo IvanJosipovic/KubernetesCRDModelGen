@@ -136,6 +136,10 @@ public partial class V1beta1PoolSpecForProvider
     [JsonPropertyName("accountNameSelector")]
     public V1beta1PoolSpecForProviderAccountNameSelector? AccountNameSelector { get; set; }
 
+    /// <summary>Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.</summary>
+    [JsonPropertyName("coolAccessEnabled")]
+    public bool? CoolAccessEnabled { get; set; }
+
     /// <summary>The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
@@ -144,7 +148,7 @@ public partial class V1beta1PoolSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>QoS Type of the pool. Valid values include Auto or Manual.</summary>
+    /// <summary>QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.</summary>
     [JsonPropertyName("qosType")]
     public string? QosType { get; set; }
 
@@ -164,7 +168,7 @@ public partial class V1beta1PoolSpecForProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 1 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 
@@ -177,6 +181,10 @@ public partial class V1beta1PoolSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolSpecInitProvider
 {
+    /// <summary>Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.</summary>
+    [JsonPropertyName("coolAccessEnabled")]
+    public bool? CoolAccessEnabled { get; set; }
+
     /// <summary>The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
@@ -185,7 +193,7 @@ public partial class V1beta1PoolSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>QoS Type of the pool. Valid values include Auto or Manual.</summary>
+    /// <summary>QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.</summary>
     [JsonPropertyName("qosType")]
     public string? QosType { get; set; }
 
@@ -193,7 +201,7 @@ public partial class V1beta1PoolSpecInitProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 1 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 
@@ -342,6 +350,10 @@ public partial class V1beta1PoolStatusAtProvider
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
 
+    /// <summary>Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.</summary>
+    [JsonPropertyName("coolAccessEnabled")]
+    public bool? CoolAccessEnabled { get; set; }
+
     /// <summary>The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("encryptionType")]
     public string? EncryptionType { get; set; }
@@ -354,7 +366,7 @@ public partial class V1beta1PoolStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>QoS Type of the pool. Valid values include Auto or Manual.</summary>
+    /// <summary>QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.</summary>
     [JsonPropertyName("qosType")]
     public string? QosType { get; set; }
 
@@ -366,7 +378,7 @@ public partial class V1beta1PoolStatusAtProvider
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Provisioned size of the pool in TB. Value must be between 2 and 2048.</summary>
+    /// <summary>Provisioned size of the pool in TB. Value must be between 1 and 2048.</summary>
     [JsonPropertyName("sizeInTb")]
     public double? SizeInTb { get; set; }
 

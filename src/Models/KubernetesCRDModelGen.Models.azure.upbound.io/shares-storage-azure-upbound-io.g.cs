@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ShareSpecForProviderAclAccessPolicy
 {
-    /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid untilWhen using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 
@@ -20,7 +20,7 @@ public partial class V1beta1ShareSpecForProviderAclAccessPolicy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 
-    /// <summary>The time at which this Access Policy should be valid from, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid from. When using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
@@ -40,7 +40,7 @@ public partial class V1beta1ShareSpecForProviderAcl
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareSpecForProviderStorageAccountNameRefPolicy
+public partial class V1beta1ShareSpecForProviderStorageAccountIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -51,9 +51,9 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameRefPolicy
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareSpecForProviderStorageAccountNameRef
+public partial class V1beta1ShareSpecForProviderStorageAccountIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -61,12 +61,12 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1ShareSpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
+    public V1beta1ShareSpecForProviderStorageAccountIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy
+public partial class V1beta1ShareSpecForProviderStorageAccountIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -77,9 +77,9 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareSpecForProviderStorageAccountNameSelector
+public partial class V1beta1ShareSpecForProviderStorageAccountIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -91,7 +91,7 @@ public partial class V1beta1ShareSpecForProviderStorageAccountNameSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1ShareSpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
+    public V1beta1ShareSpecForProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -119,23 +119,27 @@ public partial class V1beta1ShareSpecForProvider
     public double? Quota { get; set; }
 
     /// <summary>Specifies the storage account in which to create the share. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+    [JsonPropertyName("storageAccountIdRef")]
+    public V1beta1ShareSpecForProviderStorageAccountIdRef? StorageAccountIdRef { get; set; }
+
+    /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+    [JsonPropertyName("storageAccountIdSelector")]
+    public V1beta1ShareSpecForProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
+
+    /// <summary>Specifies the storage account in which to create the share. Changing this forces a new resource to be created. This property is deprecated in favour of storage_account_id.</summary>
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
-
-    /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameRef")]
-    public V1beta1ShareSpecForProviderStorageAccountNameRef? StorageAccountNameRef { get; set; }
-
-    /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameSelector")]
-    public V1beta1ShareSpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ShareSpecInitProviderAclAccessPolicy
 {
-    /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid untilWhen using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 
@@ -143,7 +147,7 @@ public partial class V1beta1ShareSpecInitProviderAclAccessPolicy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 
-    /// <summary>The time at which this Access Policy should be valid from, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid from. When using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
@@ -159,6 +163,62 @@ public partial class V1beta1ShareSpecInitProviderAcl
     /// <summary>The ID which should be used for this Shared Identifier.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ShareSpecInitProviderStorageAccountIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ShareSpecInitProviderStorageAccountIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ShareSpecInitProviderStorageAccountIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ShareSpecInitProviderStorageAccountIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ShareSpecInitProviderStorageAccountIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ShareSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -184,6 +244,18 @@ public partial class V1beta1ShareSpecInitProvider
     /// <summary>The maximum size of the share, in gigabytes.</summary>
     [JsonPropertyName("quota")]
     public double? Quota { get; set; }
+
+    /// <summary>Specifies the storage account in which to create the share. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>Reference to a Account in storage to populate storageAccountId.</summary>
+    [JsonPropertyName("storageAccountIdRef")]
+    public V1beta1ShareSpecInitProviderStorageAccountIdRef? StorageAccountIdRef { get; set; }
+
+    /// <summary>Selector for a Account in storage to populate storageAccountId.</summary>
+    [JsonPropertyName("storageAccountIdSelector")]
+    public V1beta1ShareSpecInitProviderStorageAccountIdSelector? StorageAccountIdSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -322,7 +394,7 @@ public partial class V1beta1ShareSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ShareStatusAtProviderAclAccessPolicy
 {
-    /// <summary>The time at which this Access Policy should be valid until, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid untilWhen using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("expiry")]
     public string? Expiry { get; set; }
 
@@ -330,7 +402,7 @@ public partial class V1beta1ShareStatusAtProviderAclAccessPolicy
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 
-    /// <summary>The time at which this Access Policy should be valid from, in ISO8601 format.</summary>
+    /// <summary>The time at which this Access Policy should be valid from. When using storage_account_id this should be in RFC3339 format. If using the deprecated storage_account_name property, this uses the ISO8601 format.</summary>
     [JsonPropertyName("start")]
     public string? Start { get; set; }
 }
@@ -381,6 +453,10 @@ public partial class V1beta1ShareStatusAtProvider
     public string? ResourceManagerId { get; set; }
 
     /// <summary>Specifies the storage account in which to create the share. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("storageAccountId")]
+    public string? StorageAccountId { get; set; }
+
+    /// <summary>Specifies the storage account in which to create the share. Changing this forces a new resource to be created. This property is deprecated in favour of storage_account_id.</summary>
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 

@@ -81,7 +81,7 @@ public partial class V1beta1WorkspaceSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecForProvider
 {
-    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    /// <summary>Specifies if the log Analytics Workspace allows users accessing to data associated with the resources they have permission to view, without permission to workspace. Defaults to true.</summary>
     [JsonPropertyName("allowResourceOnlyPermissions")]
     public bool? AllowResourceOnlyPermissions { get; set; }
 
@@ -113,9 +113,13 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("internetQueryEnabled")]
     public bool? InternetQueryEnabled { get; set; }
 
-    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthenticationDisabled")]
     public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should allow local authentication methods in addition to Microsoft Entra (Azure AD). Defaults to true.</summary>
+    [JsonPropertyName("localAuthenticationEnabled")]
+    public bool? LocalAuthenticationEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -137,11 +141,11 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1WorkspaceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    /// <summary>The workspace data retention in days. Possible values are between 30 and 730.</summary>
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 
-    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, PerGB2018, and LACluster. Defaults to PerGB2018.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -167,7 +171,7 @@ public partial class V1beta1WorkspaceSpecInitProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceSpecInitProvider
 {
-    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    /// <summary>Specifies if the log Analytics Workspace allows users accessing to data associated with the resources they have permission to view, without permission to workspace. Defaults to true.</summary>
     [JsonPropertyName("allowResourceOnlyPermissions")]
     public bool? AllowResourceOnlyPermissions { get; set; }
 
@@ -199,9 +203,13 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("internetQueryEnabled")]
     public bool? InternetQueryEnabled { get; set; }
 
-    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthenticationDisabled")]
     public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should allow local authentication methods in addition to Microsoft Entra (Azure AD). Defaults to true.</summary>
+    [JsonPropertyName("localAuthenticationEnabled")]
+    public bool? LocalAuthenticationEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -211,11 +219,11 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("reservationCapacityInGbPerDay")]
     public double? ReservationCapacityInGbPerDay { get; set; }
 
-    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    /// <summary>The workspace data retention in days. Possible values are between 30 and 730.</summary>
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 
-    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, PerGB2018, and LACluster. Defaults to PerGB2018.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -381,7 +389,7 @@ public partial class V1beta1WorkspaceStatusAtProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkspaceStatusAtProvider
 {
-    /// <summary>Specifies if the log Analytics Workspace allow users accessing to data associated with resources they have permission to view, without permission to workspace. Defaults to true.</summary>
+    /// <summary>Specifies if the log Analytics Workspace allows users accessing to data associated with the resources they have permission to view, without permission to workspace. Defaults to true.</summary>
     [JsonPropertyName("allowResourceOnlyPermissions")]
     public bool? AllowResourceOnlyPermissions { get; set; }
 
@@ -417,9 +425,13 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("internetQueryEnabled")]
     public bool? InternetQueryEnabled { get; set; }
 
-    /// <summary>Specifies if the log Analytics workspace should enforce authentication using Azure AD. Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthenticationDisabled")]
     public bool? LocalAuthenticationDisabled { get; set; }
+
+    /// <summary>Specifies if the log Analytics workspace should allow local authentication methods in addition to Microsoft Entra (Azure AD). Defaults to true.</summary>
+    [JsonPropertyName("localAuthenticationEnabled")]
+    public bool? LocalAuthenticationEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -433,11 +445,11 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>The workspace data retention in days. Possible values are either 7 (Free Tier only) or range between 30 and 730.</summary>
+    /// <summary>The workspace data retention in days. Possible values are between 30 and 730.</summary>
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
 
-    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are Free, PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, and PerGB2018 (new SKU as of 2018-04-03). Defaults to PerGB2018.</summary>
+    /// <summary>Specifies the SKU of the Log Analytics Workspace. Possible values are PerNode, Premium, Standard, Standalone, Unlimited, CapacityReservation, PerGB2018, and LACluster. Defaults to PerGB2018.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 

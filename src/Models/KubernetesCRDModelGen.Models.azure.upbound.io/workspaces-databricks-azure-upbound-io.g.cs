@@ -128,11 +128,11 @@ public partial class V1beta1WorkspaceSpecForProviderCustomParameters
     [JsonPropertyName("machineLearningWorkspaceId")]
     public string? MachineLearningWorkspaceId { get; set; }
 
-    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets. Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets (only for workspace with managed virtual network). Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("natGatewayName")]
     public string? NatGatewayName { get; set; }
 
-    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to false.</summary>
+    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("noPublicIp")]
     public bool? NoPublicIp { get; set; }
 
@@ -152,7 +152,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomParameters
     [JsonPropertyName("privateSubnetNetworkSecurityGroupAssociationId")]
     public string? PrivateSubnetNetworkSecurityGroupAssociationId { get; set; }
 
-    /// <summary>Name of the Public IP for No Public IP workspace with managed vNet. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the Public IP for No Public IP workspace with managed virtual network. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicIpName")]
     public string? PublicIpName { get; set; }
 
@@ -176,7 +176,7 @@ public partial class V1beta1WorkspaceSpecForProviderCustomParameters
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 
-    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS. Changing this forces a new resource to be created.</summary>
+    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS.</summary>
     [JsonPropertyName("storageAccountSkuName")]
     public string? StorageAccountSkuName { get; set; }
 
@@ -187,6 +187,27 @@ public partial class V1beta1WorkspaceSpecForProviderCustomParameters
     /// <summary>Address prefix for Managed virtual network. Defaults to 10.139. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vnetAddressPrefix")]
     public string? VnetAddressPrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecForProviderEnhancedSecurityCompliance
+{
+    /// <summary>Enables automatic cluster updates for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("automaticClusterUpdateEnabled")]
+    public bool? AutomaticClusterUpdateEnabled { get; set; }
+
+    /// <summary>Enables compliance security profile for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("complianceSecurityProfileEnabled")]
+    public bool? ComplianceSecurityProfileEnabled { get; set; }
+
+    /// <summary>A list of standards to enforce on this workspace. Possible values include HIPAA and PCI_DSS.</summary>
+    [JsonPropertyName("complianceSecurityProfileStandards")]
+    public IList<string>? ComplianceSecurityProfileStandards { get; set; }
+
+    /// <summary>Enables enhanced security monitoring for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("enhancedSecurityMonitoringEnabled")]
+    public bool? EnhancedSecurityMonitoringEnabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -321,11 +342,15 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("defaultStorageFirewallEnabled")]
     public bool? DefaultStorageFirewallEnabled { get; set; }
 
+    /// <summary>An enhanced_security_compliance block as documented below. This feature is only valid if sku is set to premium.</summary>
+    [JsonPropertyName("enhancedSecurityCompliance")]
+    public IList<V1beta1WorkspaceSpecForProviderEnhancedSecurityCompliance>? EnhancedSecurityCompliance { get; set; }
+
     /// <summary>Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace. Changing this forces a new resource to be created.</summary>
+    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace with managed virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("loadBalancerBackendAddressPoolId")]
     public string? LoadBalancerBackendAddressPoolId { get; set; }
 
@@ -514,11 +539,11 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomParameters
     [JsonPropertyName("machineLearningWorkspaceId")]
     public string? MachineLearningWorkspaceId { get; set; }
 
-    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets. Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets (only for workspace with managed virtual network). Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("natGatewayName")]
     public string? NatGatewayName { get; set; }
 
-    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to false.</summary>
+    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("noPublicIp")]
     public bool? NoPublicIp { get; set; }
 
@@ -538,7 +563,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomParameters
     [JsonPropertyName("privateSubnetNetworkSecurityGroupAssociationId")]
     public string? PrivateSubnetNetworkSecurityGroupAssociationId { get; set; }
 
-    /// <summary>Name of the Public IP for No Public IP workspace with managed vNet. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the Public IP for No Public IP workspace with managed virtual network. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicIpName")]
     public string? PublicIpName { get; set; }
 
@@ -562,7 +587,7 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomParameters
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 
-    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS. Changing this forces a new resource to be created.</summary>
+    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS.</summary>
     [JsonPropertyName("storageAccountSkuName")]
     public string? StorageAccountSkuName { get; set; }
 
@@ -573,6 +598,27 @@ public partial class V1beta1WorkspaceSpecInitProviderCustomParameters
     /// <summary>Address prefix for Managed virtual network. Defaults to 10.139. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vnetAddressPrefix")]
     public string? VnetAddressPrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceSpecInitProviderEnhancedSecurityCompliance
+{
+    /// <summary>Enables automatic cluster updates for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("automaticClusterUpdateEnabled")]
+    public bool? AutomaticClusterUpdateEnabled { get; set; }
+
+    /// <summary>Enables compliance security profile for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("complianceSecurityProfileEnabled")]
+    public bool? ComplianceSecurityProfileEnabled { get; set; }
+
+    /// <summary>A list of standards to enforce on this workspace. Possible values include HIPAA and PCI_DSS.</summary>
+    [JsonPropertyName("complianceSecurityProfileStandards")]
+    public IList<string>? ComplianceSecurityProfileStandards { get; set; }
+
+    /// <summary>Enables enhanced security monitoring for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("enhancedSecurityMonitoringEnabled")]
+    public bool? EnhancedSecurityMonitoringEnabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -651,11 +697,15 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("defaultStorageFirewallEnabled")]
     public bool? DefaultStorageFirewallEnabled { get; set; }
 
+    /// <summary>An enhanced_security_compliance block as documented below. This feature is only valid if sku is set to premium.</summary>
+    [JsonPropertyName("enhancedSecurityCompliance")]
+    public IList<V1beta1WorkspaceSpecInitProviderEnhancedSecurityCompliance>? EnhancedSecurityCompliance { get; set; }
+
     /// <summary>Is the Databricks File System root file system enabled with a secondary layer of encryption with platform managed keys? Possible values are true or false. Defaults to false. This field is only valid if the Databricks Workspace sku is set to premium. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace. Changing this forces a new resource to be created.</summary>
+    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace with managed virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("loadBalancerBackendAddressPoolId")]
     public string? LoadBalancerBackendAddressPoolId { get; set; }
 
@@ -852,11 +902,11 @@ public partial class V1beta1WorkspaceStatusAtProviderCustomParameters
     [JsonPropertyName("machineLearningWorkspaceId")]
     public string? MachineLearningWorkspaceId { get; set; }
 
-    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets. Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets (only for workspace with managed virtual network). Defaults to nat-gateway. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("natGatewayName")]
     public string? NatGatewayName { get; set; }
 
-    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to false.</summary>
+    /// <summary>Are public IP Addresses not allowed? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("noPublicIp")]
     public bool? NoPublicIp { get; set; }
 
@@ -868,7 +918,7 @@ public partial class V1beta1WorkspaceStatusAtProviderCustomParameters
     [JsonPropertyName("privateSubnetNetworkSecurityGroupAssociationId")]
     public string? PrivateSubnetNetworkSecurityGroupAssociationId { get; set; }
 
-    /// <summary>Name of the Public IP for No Public IP workspace with managed vNet. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
+    /// <summary>Name of the Public IP for No Public IP workspace with managed virtual network. Defaults to nat-gw-public-ip. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicIpName")]
     public string? PublicIpName { get; set; }
 
@@ -884,7 +934,7 @@ public partial class V1beta1WorkspaceStatusAtProviderCustomParameters
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }
 
-    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS. Changing this forces a new resource to be created.</summary>
+    /// <summary>Storage account SKU name. Possible values include Standard_LRS, Standard_GRS, Standard_RAGRS, Standard_GZRS, Standard_RAGZRS, Standard_ZRS, Premium_LRS or Premium_ZRS. Defaults to Standard_GRS.</summary>
     [JsonPropertyName("storageAccountSkuName")]
     public string? StorageAccountSkuName { get; set; }
 
@@ -895,6 +945,27 @@ public partial class V1beta1WorkspaceStatusAtProviderCustomParameters
     /// <summary>Address prefix for Managed virtual network. Defaults to 10.139. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("vnetAddressPrefix")]
     public string? VnetAddressPrefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkspaceStatusAtProviderEnhancedSecurityCompliance
+{
+    /// <summary>Enables automatic cluster updates for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("automaticClusterUpdateEnabled")]
+    public bool? AutomaticClusterUpdateEnabled { get; set; }
+
+    /// <summary>Enables compliance security profile for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("complianceSecurityProfileEnabled")]
+    public bool? ComplianceSecurityProfileEnabled { get; set; }
+
+    /// <summary>A list of standards to enforce on this workspace. Possible values include HIPAA and PCI_DSS.</summary>
+    [JsonPropertyName("complianceSecurityProfileStandards")]
+    public IList<string>? ComplianceSecurityProfileStandards { get; set; }
+
+    /// <summary>Enables enhanced security monitoring for this workspace. Defaults to false.</summary>
+    [JsonPropertyName("enhancedSecurityMonitoringEnabled")]
+    public bool? EnhancedSecurityMonitoringEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -955,6 +1026,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("diskEncryptionSetId")]
     public string? DiskEncryptionSetId { get; set; }
 
+    /// <summary>An enhanced_security_compliance block as documented below. This feature is only valid if sku is set to premium.</summary>
+    [JsonPropertyName("enhancedSecurityCompliance")]
+    public IList<V1beta1WorkspaceStatusAtProviderEnhancedSecurityCompliance>? EnhancedSecurityCompliance { get; set; }
+
     /// <summary>The ID of the Databricks Workspace in the Azure management plane.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -963,7 +1038,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace. Changing this forces a new resource to be created.</summary>
+    /// <summary>Resource ID of the Outbound Load balancer Backend Address Pool for Secure Cluster Connectivity (No Public IP) workspace with managed virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("loadBalancerBackendAddressPoolId")]
     public string? LoadBalancerBackendAddressPoolId { get; set; }
 

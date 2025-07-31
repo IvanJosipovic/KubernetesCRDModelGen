@@ -111,6 +111,14 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecForProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecForProvider
 {
+    /// <summary>The condition that limits the resources that the role can be assigned to. See the official conditions documentation for details. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("condition")]
+    public string? Condition { get; set; }
+
+    /// <summary>The version of the condition. Supported values include 2.0. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("conditionVersion")]
+    public string? ConditionVersion { get; set; }
+
     /// <summary>The justification of the role assignment. Changing this forces a new resource to be created. The justification for this eligible role assignment</summary>
     [JsonPropertyName("justification")]
     public string? Justification { get; set; }
@@ -247,6 +255,14 @@ public partial class V1beta1PimEligibleRoleAssignmentSpecInitProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentSpecInitProvider
 {
+    /// <summary>The condition that limits the resources that the role can be assigned to. See the official conditions documentation for details. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("condition")]
+    public string? Condition { get; set; }
+
+    /// <summary>The version of the condition. Supported values include 2.0. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("conditionVersion")]
+    public string? ConditionVersion { get; set; }
+
     /// <summary>The justification of the role assignment. Changing this forces a new resource to be created. The justification for this eligible role assignment</summary>
     [JsonPropertyName("justification")]
     public string? Justification { get; set; }
@@ -459,6 +475,14 @@ public partial class V1beta1PimEligibleRoleAssignmentStatusAtProviderTicket
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PimEligibleRoleAssignmentStatusAtProvider
 {
+    /// <summary>The condition that limits the resources that the role can be assigned to. See the official conditions documentation for details. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("condition")]
+    public string? Condition { get; set; }
+
+    /// <summary>The version of the condition. Supported values include 2.0. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("conditionVersion")]
+    public string? ConditionVersion { get; set; }
+
     /// <summary>The ID of the PIM Eligible Role Assignment.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

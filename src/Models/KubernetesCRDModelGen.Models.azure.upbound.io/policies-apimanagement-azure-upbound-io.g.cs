@@ -80,7 +80,7 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("apiManagementIdSelector")]
     public V1beta1PolicySpecForProviderApiManagementIdSelector? ApiManagementIdSelector { get; set; }
 
-    /// <summary>The XML Content for this Policy as a string.</summary>
+    /// <summary>The XML Content for this Policy as a string. To integrate frontend and backend services in Azure API Management, utilize the set-backend-service policy, specifying the base-url value. Typically, this value corresponds to the url property defined in the azurerm_api_management_backend configuration.</summary>
     [JsonPropertyName("xmlContent")]
     public string? XmlContent { get; set; }
 
@@ -93,7 +93,7 @@ public partial class V1beta1PolicySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProvider
 {
-    /// <summary>The XML Content for this Policy as a string.</summary>
+    /// <summary>The XML Content for this Policy as a string. To integrate frontend and backend services in Azure API Management, utilize the set-backend-service policy, specifying the base-url value. Typically, this value corresponds to the url property defined in the azurerm_api_management_backend configuration.</summary>
     [JsonPropertyName("xmlContent")]
     public string? XmlContent { get; set; }
 
@@ -246,7 +246,7 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The XML Content for this Policy as a string.</summary>
+    /// <summary>The XML Content for this Policy as a string. To integrate frontend and backend services in Azure API Management, utilize the set-backend-service policy, specifying the base-url value. Typically, this value corresponds to the url property defined in the azurerm_api_management_backend configuration.</summary>
     [JsonPropertyName("xmlContent")]
     public string? XmlContent { get; set; }
 

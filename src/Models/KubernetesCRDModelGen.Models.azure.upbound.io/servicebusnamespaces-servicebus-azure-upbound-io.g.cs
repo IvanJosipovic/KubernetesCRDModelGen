@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecForProviderCustomerManagedKey
 {
-    /// <summary>The ID of the User Assigned Identity that has access to the key.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("identityId")]
     public string? IdentityId { get; set; }
 
-    /// <summary>Used to specify whether enable Infrastructure Encryption (Double Encryption). Changing this forces a new resource to be created.</summary>
+    /// <summary>Used to specify whether enable Infrastructure Encryption. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this ServiceBus Namespace.</summary>
+    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this Service Bus Namespace.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 }
@@ -29,11 +29,11 @@ public partial class V1beta1ServiceBusNamespaceSpecForProviderCustomerManagedKey
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecForProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this ServiceBus namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this ServiceBus Namespace. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -98,11 +98,11 @@ public partial class V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSetNetw
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSetNetworkRules
 {
-    /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ignoreMissingVnetServiceEndpoint")]
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 
-    /// <summary>The Subnet ID which should be able to access this ServiceBus Namespace.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -119,23 +119,23 @@ public partial class V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSetNetw
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSet
 {
-    /// <summary>Specifies the default action for the Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
+    /// <summary></summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
 
-    /// <summary>One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ipRules")]
     public IList<string>? IpRules { get; set; }
 
-    /// <summary>One or more network_rules blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRules")]
     public IList<V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSetNetworkRules>? NetworkRules { get; set; }
 
-    /// <summary>Whether to allow traffic over public network. Possible values are true and false. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>Are Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration? See Trusted Microsoft Services</summary>
+    /// <summary></summary>
     [JsonPropertyName("trustedServicesAllowed")]
     public bool? TrustedServicesAllowed { get; set; }
 }
@@ -200,43 +200,43 @@ public partial class V1beta1ServiceBusNamespaceSpecForProviderResourceGroupNameS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecForProvider
 {
-    /// <summary>Specifies the capacity. When sku is Premium, capacity can be 1, 2, 4, 8 or 16. When sku is Basic or Standard, capacity can be 0 only.</summary>
+    /// <summary></summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
 
-    /// <summary>An customer_managed_key block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("customerManagedKey")]
     public IList<V1beta1ServiceBusNamespaceSpecForProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ServiceBusNamespaceSpecForProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Whether or not SAS authentication is enabled for the Service Bus namespace. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
 
-    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The minimum supported TLS version for this Service Bus Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary></summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary>An network_rule_set block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRuleSet")]
     public IList<V1beta1ServiceBusNamespaceSpecForProviderNetworkRuleSet>? NetworkRuleSet { get; set; }
 
-    /// <summary>Specifies the number messaging partitions. Only valid when sku is Premium and the minimum number is 1. Possible values include 0, 1, 2, and 4. Defaults to 0 for Standard, Basic namespace. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("premiumMessagingPartitions")]
     public double? PremiumMessagingPartitions { get; set; }
 
-    /// <summary>Is public network access enabled for the Service Bus Namespace? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>The name of the resource group in which to Changing this forces a new resource to be created. create the namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -248,32 +248,28 @@ public partial class V1beta1ServiceBusNamespaceSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1ServiceBusNamespaceSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Defines which tier to use. Options are Basic, Standard or Premium. Please note that setting this field to Premium will force the creation of a new resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
-    /// <summary>A mapping of tags to assign to the resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Whether or not this resource is zone redundant. sku needs to be Premium. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecInitProviderCustomerManagedKey
 {
-    /// <summary>The ID of the User Assigned Identity that has access to the key.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("identityId")]
     public string? IdentityId { get; set; }
 
-    /// <summary>Used to specify whether enable Infrastructure Encryption (Double Encryption). Changing this forces a new resource to be created.</summary>
+    /// <summary>Used to specify whether enable Infrastructure Encryption. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this ServiceBus Namespace.</summary>
+    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this Service Bus Namespace.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 }
@@ -282,11 +278,11 @@ public partial class V1beta1ServiceBusNamespaceSpecInitProviderCustomerManagedKe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecInitProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this ServiceBus namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this ServiceBus Namespace. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -351,11 +347,11 @@ public partial class V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSetNet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSetNetworkRules
 {
-    /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ignoreMissingVnetServiceEndpoint")]
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 
-    /// <summary>The Subnet ID which should be able to access this ServiceBus Namespace.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -372,23 +368,23 @@ public partial class V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSetNet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSet
 {
-    /// <summary>Specifies the default action for the Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
+    /// <summary></summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
 
-    /// <summary>One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ipRules")]
     public IList<string>? IpRules { get; set; }
 
-    /// <summary>One or more network_rules blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRules")]
     public IList<V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSetNetworkRules>? NetworkRules { get; set; }
 
-    /// <summary>Whether to allow traffic over public network. Possible values are true and false. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>Are Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration? See Trusted Microsoft Services</summary>
+    /// <summary></summary>
     [JsonPropertyName("trustedServicesAllowed")]
     public bool? TrustedServicesAllowed { get; set; }
 }
@@ -397,53 +393,49 @@ public partial class V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceSpecInitProvider
 {
-    /// <summary>Specifies the capacity. When sku is Premium, capacity can be 1, 2, 4, 8 or 16. When sku is Basic or Standard, capacity can be 0 only.</summary>
+    /// <summary></summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
 
-    /// <summary>An customer_managed_key block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("customerManagedKey")]
     public IList<V1beta1ServiceBusNamespaceSpecInitProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ServiceBusNamespaceSpecInitProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Whether or not SAS authentication is enabled for the Service Bus namespace. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
 
-    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The minimum supported TLS version for this Service Bus Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary></summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary>An network_rule_set block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRuleSet")]
     public IList<V1beta1ServiceBusNamespaceSpecInitProviderNetworkRuleSet>? NetworkRuleSet { get; set; }
 
-    /// <summary>Specifies the number messaging partitions. Only valid when sku is Premium and the minimum number is 1. Possible values include 0, 1, 2, and 4. Defaults to 0 for Standard, Basic namespace. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("premiumMessagingPartitions")]
     public double? PremiumMessagingPartitions { get; set; }
 
-    /// <summary>Is public network access enabled for the Service Bus Namespace? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>Defines which tier to use. Options are Basic, Standard or Premium. Please note that setting this field to Premium will force the creation of a new resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
-    /// <summary>A mapping of tags to assign to the resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Whether or not this resource is zone redundant. sku needs to be Premium. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -582,15 +574,15 @@ public partial class V1beta1ServiceBusNamespaceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceStatusAtProviderCustomerManagedKey
 {
-    /// <summary>The ID of the User Assigned Identity that has access to the key.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("identityId")]
     public string? IdentityId { get; set; }
 
-    /// <summary>Used to specify whether enable Infrastructure Encryption (Double Encryption). Changing this forces a new resource to be created.</summary>
+    /// <summary>Used to specify whether enable Infrastructure Encryption. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("infrastructureEncryptionEnabled")]
     public bool? InfrastructureEncryptionEnabled { get; set; }
 
-    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this ServiceBus Namespace.</summary>
+    /// <summary>The ID of the Key Vault Key which should be used to Encrypt the data in this Service Bus Namespace.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 }
@@ -599,19 +591,19 @@ public partial class V1beta1ServiceBusNamespaceStatusAtProviderCustomerManagedKe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceStatusAtProviderIdentity
 {
-    /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this ServiceBus namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>The Principal ID for the Service Principal associated with the Managed Service Identity of this ServiceBus Namespace.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>The Tenant ID for the Service Principal associated with the Managed Service Identity of this ServiceBus Namespace.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this ServiceBus Namespace. Possible values are SystemAssigned, UserAssigned, SystemAssigned, UserAssigned (to enable both).</summary>
+    /// <summary></summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -620,11 +612,11 @@ public partial class V1beta1ServiceBusNamespaceStatusAtProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSetNetworkRules
 {
-    /// <summary>Should the ServiceBus Namespace Network Rule Set ignore missing Virtual Network Service Endpoint option in the Subnet? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ignoreMissingVnetServiceEndpoint")]
     public bool? IgnoreMissingVnetServiceEndpoint { get; set; }
 
-    /// <summary>The Subnet ID which should be able to access this ServiceBus Namespace.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 }
@@ -633,23 +625,23 @@ public partial class V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSetNet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSet
 {
-    /// <summary>Specifies the default action for the Network Rule Set. Possible values are Allow and Deny. Defaults to Allow.</summary>
+    /// <summary></summary>
     [JsonPropertyName("defaultAction")]
     public string? DefaultAction { get; set; }
 
-    /// <summary>One or more IP Addresses, or CIDR Blocks which should be able to access the ServiceBus Namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("ipRules")]
     public IList<string>? IpRules { get; set; }
 
-    /// <summary>One or more network_rules blocks as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRules")]
     public IList<V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSetNetworkRules>? NetworkRules { get; set; }
 
-    /// <summary>Whether to allow traffic over public network. Possible values are true and false. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>Are Azure Services that are known and trusted for this resource type are allowed to bypass firewall configuration? See Trusted Microsoft Services</summary>
+    /// <summary></summary>
     [JsonPropertyName("trustedServicesAllowed")]
     public bool? TrustedServicesAllowed { get; set; }
 }
@@ -658,65 +650,61 @@ public partial class V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceBusNamespaceStatusAtProvider
 {
-    /// <summary>Specifies the capacity. When sku is Premium, capacity can be 1, 2, 4, 8 or 16. When sku is Basic or Standard, capacity can be 0 only.</summary>
+    /// <summary></summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
 
-    /// <summary>An customer_managed_key block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("customerManagedKey")]
     public IList<V1beta1ServiceBusNamespaceStatusAtProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
 
-    /// <summary>The URL to access the ServiceBus Namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The ServiceBus Namespace ID.</summary>
+    /// <summary>The Service Bus Namespace ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ServiceBusNamespaceStatusAtProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Whether or not SAS authentication is enabled for the Service Bus namespace. Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("localAuthEnabled")]
     public bool? LocalAuthEnabled { get; set; }
 
-    /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The minimum supported TLS version for this Service Bus Namespace. Valid values are: 1.0, 1.1 and 1.2. The current default minimum TLS version is 1.2.</summary>
+    /// <summary></summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary>An network_rule_set block as defined below.</summary>
+    /// <summary></summary>
     [JsonPropertyName("networkRuleSet")]
     public IList<V1beta1ServiceBusNamespaceStatusAtProviderNetworkRuleSet>? NetworkRuleSet { get; set; }
 
-    /// <summary>Specifies the number messaging partitions. Only valid when sku is Premium and the minimum number is 1. Possible values include 0, 1, 2, and 4. Defaults to 0 for Standard, Basic namespace. Changing this forces a new resource to be created.</summary>
+    /// <summary></summary>
     [JsonPropertyName("premiumMessagingPartitions")]
     public double? PremiumMessagingPartitions { get; set; }
 
-    /// <summary>Is public network access enabled for the Service Bus Namespace? Defaults to true.</summary>
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
-    /// <summary>The name of the resource group in which to Changing this forces a new resource to be created. create the namespace.</summary>
+    /// <summary></summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>Defines which tier to use. Options are Basic, Standard or Premium. Please note that setting this field to Premium will force the creation of a new resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
-    /// <summary>A mapping of tags to assign to the resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Whether or not this resource is zone redundant. sku needs to be Premium. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("zoneRedundant")]
-    public bool? ZoneRedundant { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -765,7 +753,7 @@ public partial class V1beta1ServiceBusNamespaceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ServiceBusNamespace is the Schema for the ServiceBusNamespaces API. Manages a ServiceBus Namespace.</summary>
+/// <summary>ServiceBusNamespace is the Schema for the ServiceBusNamespaces API. Manages a Service Bus Namespace Customer Managed Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServiceBusNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceBusNamespaceSpec>, IStatus<V1beta1ServiceBusNamespaceStatus>
@@ -795,7 +783,7 @@ public partial class V1beta1ServiceBusNamespace : IKubernetesObject<V1ObjectMeta
     public V1beta1ServiceBusNamespaceStatus? Status { get; set; }
 }
 
-/// <summary>ServiceBusNamespace is the Schema for the ServiceBusNamespaces API. Manages a ServiceBus Namespace.</summary>
+/// <summary>ServiceBusNamespace is the Schema for the ServiceBusNamespaces API. Manages a Service Bus Namespace Customer Managed Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServiceBusNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceBusNamespace>

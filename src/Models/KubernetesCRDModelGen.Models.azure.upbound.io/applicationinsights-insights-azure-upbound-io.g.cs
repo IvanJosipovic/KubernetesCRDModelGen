@@ -128,11 +128,11 @@ public partial class V1beta1ApplicationInsightsSpecForProvider
     [JsonPropertyName("applicationType")]
     public string? ApplicationType { get; set; }
 
-    /// <summary>Specifies the Application Insights component daily data volume cap in GB.</summary>
+    /// <summary>Specifies the Application Insights component daily data volume cap in GB. Defaults to 100.</summary>
     [JsonPropertyName("dailyDataCapInGb")]
     public double? DailyDataCapInGb { get; set; }
 
-    /// <summary>Specifies if a notification email will be send when the daily data volume cap is met.</summary>
+    /// <summary>Specifies if a notification email will be sent when the daily data volume cap is met. Defaults to false.</summary>
     [JsonPropertyName("dailyDataCapNotificationsDisabled")]
     public bool? DailyDataCapNotificationsDisabled { get; set; }
 
@@ -261,11 +261,11 @@ public partial class V1beta1ApplicationInsightsSpecInitProvider
     [JsonPropertyName("applicationType")]
     public string? ApplicationType { get; set; }
 
-    /// <summary>Specifies the Application Insights component daily data volume cap in GB.</summary>
+    /// <summary>Specifies the Application Insights component daily data volume cap in GB. Defaults to 100.</summary>
     [JsonPropertyName("dailyDataCapInGb")]
     public double? DailyDataCapInGb { get; set; }
 
-    /// <summary>Specifies if a notification email will be send when the daily data volume cap is met.</summary>
+    /// <summary>Specifies if a notification email will be sent when the daily data volume cap is met. Defaults to false.</summary>
     [JsonPropertyName("dailyDataCapNotificationsDisabled")]
     public bool? DailyDataCapNotificationsDisabled { get; set; }
 
@@ -462,11 +462,11 @@ public partial class V1beta1ApplicationInsightsStatusAtProvider
     [JsonPropertyName("applicationType")]
     public string? ApplicationType { get; set; }
 
-    /// <summary>Specifies the Application Insights component daily data volume cap in GB.</summary>
+    /// <summary>Specifies the Application Insights component daily data volume cap in GB. Defaults to 100.</summary>
     [JsonPropertyName("dailyDataCapInGb")]
     public double? DailyDataCapInGb { get; set; }
 
-    /// <summary>Specifies if a notification email will be send when the daily data volume cap is met.</summary>
+    /// <summary>Specifies if a notification email will be sent when the daily data volume cap is met. Defaults to false.</summary>
     [JsonPropertyName("dailyDataCapNotificationsDisabled")]
     public bool? DailyDataCapNotificationsDisabled { get; set; }
 

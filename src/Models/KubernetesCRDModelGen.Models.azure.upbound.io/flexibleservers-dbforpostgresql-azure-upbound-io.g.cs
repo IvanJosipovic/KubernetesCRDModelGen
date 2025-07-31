@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.upbound.io;
-/// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+/// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef
 {
@@ -29,11 +29,11 @@ public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderAuthentication
 {
-    /// <summary>Whether or not Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
+    /// <summary>Whether Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
     [JsonPropertyName("activeDirectoryAuthEnabled")]
     public bool? ActiveDirectoryAuthEnabled { get; set; }
 
-    /// <summary>Whether or not password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
+    /// <summary>Whether password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
     [JsonPropertyName("passwordAuthEnabled")]
     public bool? PasswordAuthEnabled { get; set; }
 
@@ -46,19 +46,19 @@ public partial class V1beta1FlexibleServerSpecForProviderAuthentication
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderCustomerManagedKey
 {
-    /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
+    /// <summary>The versioned ID of the geo backup Key Vault Key.</summary>
     [JsonPropertyName("geoBackupKeyVaultKeyId")]
     public string? GeoBackupKeyVaultKeyId { get; set; }
 
-    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Should be added with identity_ids. It can't cross region and need identity in same region as geo backup.</summary>
+    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("geoBackupUserAssignedIdentityId")]
     public string? GeoBackupUserAssignedIdentityId { get; set; }
 
-    /// <summary>The ID of the Key Vault Key.</summary>
+    /// <summary>The versioned/versionless ID of the Key Vault Key.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Should be added with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
@@ -140,7 +140,7 @@ public partial class V1beta1FlexibleServerSpecForProviderIdentity
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. The only possible value is UserAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. Possible values are UserAssigned, SystemAssigned and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -282,9 +282,17 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
     [JsonPropertyName("administratorPasswordSecretRef")]
     public V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
 
     /// <summary>An authentication block as defined below.</summary>
     [JsonPropertyName("authentication")]
@@ -302,7 +310,7 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("backupRetentionDays")]
     public double? BackupRetentionDays { get; set; }
 
-    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, PointInTimeRestore, Replica and Update.</summary>
+    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, GeoRestore, PointInTimeRestore, Replica, ReviveDropped and Update.</summary>
     [JsonPropertyName("createMode")]
     public string? CreateMode { get; set; }
 
@@ -342,7 +350,7 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("maintenanceWindow")]
     public IList<V1beta1FlexibleServerSpecForProviderMaintenanceWindow>? MaintenanceWindow { get; set; }
 
-    /// <summary>The point in time to restore from source_server_id when create_mode is PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The point in time to restore from source_server_id when create_mode is GeoRestore, PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("pointInTimeRestoreTimeInUtc")]
     public string? PointInTimeRestoreTimeInUtc { get; set; }
 
@@ -382,7 +390,7 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is GeoRestore, PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("sourceServerId")]
     public string? SourceServerId { get; set; }
 
@@ -407,7 +415,7 @@ public partial class V1beta1FlexibleServerSpecForProvider
     public string? Zone { get; set; }
 }
 
-/// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+/// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef
 {
@@ -428,11 +436,11 @@ public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderAuthentication
 {
-    /// <summary>Whether or not Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
+    /// <summary>Whether Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
     [JsonPropertyName("activeDirectoryAuthEnabled")]
     public bool? ActiveDirectoryAuthEnabled { get; set; }
 
-    /// <summary>Whether or not password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
+    /// <summary>Whether password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
     [JsonPropertyName("passwordAuthEnabled")]
     public bool? PasswordAuthEnabled { get; set; }
 
@@ -445,19 +453,19 @@ public partial class V1beta1FlexibleServerSpecInitProviderAuthentication
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecInitProviderCustomerManagedKey
 {
-    /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
+    /// <summary>The versioned ID of the geo backup Key Vault Key.</summary>
     [JsonPropertyName("geoBackupKeyVaultKeyId")]
     public string? GeoBackupKeyVaultKeyId { get; set; }
 
-    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Should be added with identity_ids. It can't cross region and need identity in same region as geo backup.</summary>
+    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("geoBackupUserAssignedIdentityId")]
     public string? GeoBackupUserAssignedIdentityId { get; set; }
 
-    /// <summary>The ID of the Key Vault Key.</summary>
+    /// <summary>The versioned/versionless ID of the Key Vault Key.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Should be added with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
@@ -539,7 +547,7 @@ public partial class V1beta1FlexibleServerSpecInitProviderIdentity
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. The only possible value is UserAssigned.</summary>
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. Possible values are UserAssigned, SystemAssigned and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -625,9 +633,17 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Required when create_mode is Default and authentication.password_auth_enabled is true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
     [JsonPropertyName("administratorPasswordSecretRef")]
     public V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
 
     /// <summary>An authentication block as defined below.</summary>
     [JsonPropertyName("authentication")]
@@ -641,7 +657,7 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("backupRetentionDays")]
     public double? BackupRetentionDays { get; set; }
 
-    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, PointInTimeRestore, Replica and Update.</summary>
+    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, GeoRestore, PointInTimeRestore, Replica, ReviveDropped and Update.</summary>
     [JsonPropertyName("createMode")]
     public string? CreateMode { get; set; }
 
@@ -681,7 +697,7 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("maintenanceWindow")]
     public IList<V1beta1FlexibleServerSpecInitProviderMaintenanceWindow>? MaintenanceWindow { get; set; }
 
-    /// <summary>The point in time to restore from source_server_id when create_mode is PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The point in time to restore from source_server_id when create_mode is GeoRestore, PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("pointInTimeRestoreTimeInUtc")]
     public string? PointInTimeRestoreTimeInUtc { get; set; }
 
@@ -709,7 +725,7 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is GeoRestore, PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("sourceServerId")]
     public string? SourceServerId { get; set; }
 
@@ -870,11 +886,11 @@ public partial class V1beta1FlexibleServerSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderAuthentication
 {
-    /// <summary>Whether or not Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
+    /// <summary>Whether Active Directory authentication is allowed to access the PostgreSQL Flexible Server. Defaults to false.</summary>
     [JsonPropertyName("activeDirectoryAuthEnabled")]
     public bool? ActiveDirectoryAuthEnabled { get; set; }
 
-    /// <summary>Whether or not password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
+    /// <summary>Whether password authentication is allowed to access the PostgreSQL Flexible Server. Defaults to true.</summary>
     [JsonPropertyName("passwordAuthEnabled")]
     public bool? PasswordAuthEnabled { get; set; }
 
@@ -887,19 +903,19 @@ public partial class V1beta1FlexibleServerStatusAtProviderAuthentication
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerStatusAtProviderCustomerManagedKey
 {
-    /// <summary>The ID of the geo backup Key Vault Key. It can't cross region and need Customer Managed Key in same region as geo backup.</summary>
+    /// <summary>The versioned ID of the geo backup Key Vault Key.</summary>
     [JsonPropertyName("geoBackupKeyVaultKeyId")]
     public string? GeoBackupKeyVaultKeyId { get; set; }
 
-    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Should be added with identity_ids. It can't cross region and need identity in same region as geo backup.</summary>
+    /// <summary>The geo backup user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("geoBackupUserAssignedIdentityId")]
     public string? GeoBackupUserAssignedIdentityId { get; set; }
 
-    /// <summary>The ID of the Key Vault Key.</summary>
+    /// <summary>The versioned/versionless ID of the Key Vault Key.</summary>
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 
-    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Should be added with identity_ids.</summary>
+    /// <summary>Specifies the primary user managed identity id for a Customer Managed Key. Must be added to identity.identity_ids.</summary>
     [JsonPropertyName("primaryUserAssignedIdentityId")]
     public string? PrimaryUserAssignedIdentityId { get; set; }
 }
@@ -925,7 +941,15 @@ public partial class V1beta1FlexibleServerStatusAtProviderIdentity
     [JsonPropertyName("identityIds")]
     public IList<string>? IdentityIds { get; set; }
 
-    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. The only possible value is UserAssigned.</summary>
+    /// <summary>The Principal ID associated with this Managed Service Identity.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The Tenant ID associated with this Managed Service Identity.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Flexible Server. Possible values are UserAssigned, SystemAssigned and SystemAssigned, UserAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -955,6 +979,14 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
+
     /// <summary>An authentication block as defined below.</summary>
     [JsonPropertyName("authentication")]
     public IList<V1beta1FlexibleServerStatusAtProviderAuthentication>? Authentication { get; set; }
@@ -967,7 +999,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("backupRetentionDays")]
     public double? BackupRetentionDays { get; set; }
 
-    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, PointInTimeRestore, Replica and Update.</summary>
+    /// <summary>The creation mode which can be used to restore or replicate existing servers. Possible values are Default, GeoRestore, PointInTimeRestore, Replica, ReviveDropped and Update.</summary>
     [JsonPropertyName("createMode")]
     public string? CreateMode { get; set; }
 
@@ -1007,7 +1039,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("maintenanceWindow")]
     public IList<V1beta1FlexibleServerStatusAtProviderMaintenanceWindow>? MaintenanceWindow { get; set; }
 
-    /// <summary>The point in time to restore from source_server_id when create_mode is PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The point in time to restore from source_server_id when create_mode is GeoRestore, PointInTimeRestore. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("pointInTimeRestoreTimeInUtc")]
     public string? PointInTimeRestoreTimeInUtc { get; set; }
 
@@ -1015,7 +1047,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("privateDnsZoneId")]
     public string? PrivateDnsZoneId { get; set; }
 
-    /// <summary>Is public network access enabled?</summary>
+    /// <summary>Specifies whether this PostgreSQL Flexible Server is publicly accessible. Defaults to true.</summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
@@ -1031,7 +1063,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
+    /// <summary>The resource ID of the source PostgreSQL Flexible Server to be restored. Required when create_mode is GeoRestore, PointInTimeRestore or Replica. Changing this forces a new PostgreSQL Flexible Server to be created.</summary>
     [JsonPropertyName("sourceServerId")]
     public string? SourceServerId { get; set; }
 

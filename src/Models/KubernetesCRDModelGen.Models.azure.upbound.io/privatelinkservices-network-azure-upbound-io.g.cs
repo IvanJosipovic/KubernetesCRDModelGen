@@ -161,6 +161,10 @@ public partial class V1beta1PrivateLinkServiceSpecForProvider
     [JsonPropertyName("autoApprovalSubscriptionIds")]
     public IList<string>? AutoApprovalSubscriptionIds { get; set; }
 
+    /// <summary>The destination IP address of the Private Link Service.</summary>
+    [JsonPropertyName("destinationIpAddress")]
+    public string? DestinationIpAddress { get; set; }
+
     /// <summary>Should the Private Link Service support the Proxy Protocol?</summary>
     [JsonPropertyName("enableProxyProtocol")]
     public bool? EnableProxyProtocol { get; set; }
@@ -298,6 +302,10 @@ public partial class V1beta1PrivateLinkServiceSpecInitProvider
     /// <summary>A list of Subscription UUID/GUID's that will be automatically be able to use this Private Link Service.</summary>
     [JsonPropertyName("autoApprovalSubscriptionIds")]
     public IList<string>? AutoApprovalSubscriptionIds { get; set; }
+
+    /// <summary>The destination IP address of the Private Link Service.</summary>
+    [JsonPropertyName("destinationIpAddress")]
+    public string? DestinationIpAddress { get; set; }
 
     /// <summary>Should the Private Link Service support the Proxy Protocol?</summary>
     [JsonPropertyName("enableProxyProtocol")]
@@ -496,6 +504,10 @@ public partial class V1beta1PrivateLinkServiceStatusAtProvider
     /// <summary>A list of Subscription UUID/GUID's that will be automatically be able to use this Private Link Service.</summary>
     [JsonPropertyName("autoApprovalSubscriptionIds")]
     public IList<string>? AutoApprovalSubscriptionIds { get; set; }
+
+    /// <summary>The destination IP address of the Private Link Service.</summary>
+    [JsonPropertyName("destinationIpAddress")]
+    public string? DestinationIpAddress { get; set; }
 
     /// <summary>Should the Private Link Service support the Proxy Protocol?</summary>
     [JsonPropertyName("enableProxyProtocol")]

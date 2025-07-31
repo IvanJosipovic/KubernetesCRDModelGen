@@ -402,17 +402,9 @@ public partial class V1beta1AuthorizationRuleStatusAtProvider
     [JsonPropertyName("notificationHubName")]
     public string? NotificationHubName { get; set; }
 
-    /// <summary>The Primary Access Key associated with this Authorization Rule.</summary>
-    [JsonPropertyName("primaryAccessKey")]
-    public string? PrimaryAccessKey { get; set; }
-
     /// <summary>The name of the Resource Group in which the Notification Hub Namespace exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
-
-    /// <summary>The Secondary Access Key associated with this Authorization Rule.</summary>
-    [JsonPropertyName("secondaryAccessKey")]
-    public string? SecondaryAccessKey { get; set; }
 
     /// <summary>Does this Authorization Rule have Send access to the Notification Hub? Defaults to false.</summary>
     [JsonPropertyName("send")]

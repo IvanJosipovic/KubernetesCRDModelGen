@@ -261,7 +261,7 @@ public partial class V1beta1LoadBalancerSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1LoadBalancerSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -459,7 +459,7 @@ public partial class V1beta1LoadBalancerSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -693,7 +693,7 @@ public partial class V1beta1LoadBalancerStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Azure Load Balancer. Accepted values are Basic, Standard and Gateway. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 

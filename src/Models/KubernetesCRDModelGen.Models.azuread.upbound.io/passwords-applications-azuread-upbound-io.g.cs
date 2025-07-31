@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.applications.azuread.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecForProviderApplicationObjectIdRefPolicy
+public partial class V1beta1PasswordSpecForProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -21,9 +21,9 @@ public partial class V1beta1PasswordSpecForProviderApplicationObjectIdRefPolicy
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecForProviderApplicationObjectIdRef
+public partial class V1beta1PasswordSpecForProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -31,12 +31,12 @@ public partial class V1beta1PasswordSpecForProviderApplicationObjectIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PasswordSpecForProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1PasswordSpecForProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecForProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1PasswordSpecForProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -47,9 +47,9 @@ public partial class V1beta1PasswordSpecForProviderApplicationObjectIdSelectorPo
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecForProviderApplicationObjectIdSelector
+public partial class V1beta1PasswordSpecForProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -61,7 +61,7 @@ public partial class V1beta1PasswordSpecForProviderApplicationObjectIdSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PasswordSpecForProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PasswordSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -72,17 +72,13 @@ public partial class V1beta1PasswordSpecForProvider
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
 
-    /// <summary>The object ID of the application for which this password should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
+    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdRef")]
+    public V1beta1PasswordSpecForProviderApplicationIdRef? ApplicationIdRef { get; set; }
 
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1PasswordSpecForProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1PasswordSpecForProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
+    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdSelector")]
+    public V1beta1PasswordSpecForProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
     /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
     [JsonPropertyName("displayName")]
@@ -107,7 +103,7 @@ public partial class V1beta1PasswordSpecForProvider
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdRefPolicy
+public partial class V1beta1PasswordSpecInitProviderApplicationIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -118,9 +114,9 @@ public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdRefPolicy
     public string? Resolve { get; set; }
 }
 
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Reference to a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdRef
+public partial class V1beta1PasswordSpecInitProviderApplicationIdRef
 {
     /// <summary>Name of the referenced object.</summary>
     [JsonPropertyName("name")]
@@ -128,12 +124,12 @@ public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdRef
 
     /// <summary>Policies for referencing.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PasswordSpecInitProviderApplicationObjectIdRefPolicy? Policy { get; set; }
+    public V1beta1PasswordSpecInitProviderApplicationIdRefPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for selection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdSelectorPolicy
+public partial class V1beta1PasswordSpecInitProviderApplicationIdSelectorPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
     [JsonPropertyName("resolution")]
@@ -144,9 +140,9 @@ public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdSelectorP
     public string? Resolve { get; set; }
 }
 
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
+/// <summary>Selector for a Application in applications to populate applicationId.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdSelector
+public partial class V1beta1PasswordSpecInitProviderApplicationIdSelector
 {
     /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
     [JsonPropertyName("matchControllerRef")]
@@ -158,7 +154,7 @@ public partial class V1beta1PasswordSpecInitProviderApplicationObjectIdSelector
 
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
-    public V1beta1PasswordSpecInitProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
+    public V1beta1PasswordSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -169,17 +165,13 @@ public partial class V1beta1PasswordSpecInitProvider
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
 
-    /// <summary>The object ID of the application for which this password should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
+    /// <summary>Reference to a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdRef")]
+    public V1beta1PasswordSpecInitProviderApplicationIdRef? ApplicationIdRef { get; set; }
 
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1PasswordSpecInitProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1PasswordSpecInitProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
+    /// <summary>Selector for a Application in applications to populate applicationId.</summary>
+    [JsonPropertyName("applicationIdSelector")]
+    public V1beta1PasswordSpecInitProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
 
     /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
     [JsonPropertyName("displayName")]
@@ -341,10 +333,6 @@ public partial class V1beta1PasswordStatusAtProvider
     /// <summary>The resource ID of the application for which this password should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this password should be created</summary>
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
-
-    /// <summary>The object ID of the application for which this password should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
 
     /// <summary>A display name for the password. Changing this field forces a new resource to be created. A display name for the password</summary>
     [JsonPropertyName("displayName")]

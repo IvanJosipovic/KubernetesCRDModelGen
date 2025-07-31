@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.upbound.io;
-/// <summary>The Password associated with the administrator_login for the PostgreSQL Server. Required when create_mode is Default.</summary>
+/// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecForProviderAdministratorLoginPasswordSecretRef
 {
@@ -148,9 +148,17 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server. Required when create_mode is Default.</summary>
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
     [JsonPropertyName("administratorLoginPasswordSecretRef")]
     public V1beta1ServerSpecForProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
+    [JsonPropertyName("administratorLoginPasswordWo")]
+    public string? AdministratorLoginPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
 
     /// <summary>Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.</summary>
     [JsonPropertyName("autoGrowEnabled")]
@@ -233,6 +241,23 @@ public partial class V1beta1ServerSpecForProvider
     public string? Version { get; set; }
 }
 
+/// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServerSpecInitProviderAdministratorLoginPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecInitProviderIdentity
@@ -240,6 +265,23 @@ public partial class V1beta1ServerSpecInitProviderIdentity
     /// <summary>Specifies the type of Managed Service Identity that should be configured on this PostgreSQL Server. The only possible value is SystemAssigned.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+}
+
+/// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServerSpecInitProviderThreatDetectionPolicyStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -266,6 +308,10 @@ public partial class V1beta1ServerSpecInitProviderThreatDetectionPolicy
     [JsonPropertyName("retentionDays")]
     public double? RetentionDays { get; set; }
 
+    /// <summary>Specifies the identifier key of the Threat Detection audit storage account.</summary>
+    [JsonPropertyName("storageAccountAccessKeySecretRef")]
+    public V1beta1ServerSpecInitProviderThreatDetectionPolicyStorageAccountAccessKeySecretRef? StorageAccountAccessKeySecretRef { get; set; }
+
     /// <summary>Specifies the blob storage endpoint (e.g. https://example.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.</summary>
     [JsonPropertyName("storageEndpoint")]
     public string? StorageEndpoint { get; set; }
@@ -278,6 +324,18 @@ public partial class V1beta1ServerSpecInitProvider
     /// <summary>The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
+    [JsonPropertyName("administratorLoginPasswordSecretRef")]
+    public V1beta1ServerSpecInitProviderAdministratorLoginPasswordSecretRef? AdministratorLoginPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
+    [JsonPropertyName("administratorLoginPasswordWo")]
+    public string? AdministratorLoginPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
 
     /// <summary>Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.</summary>
     [JsonPropertyName("autoGrowEnabled")]
@@ -533,6 +591,14 @@ public partial class V1beta1ServerStatusAtProvider
     /// <summary>The Administrator login for the PostgreSQL Server. Required when create_mode is Default. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the PostgreSQL Server.</summary>
+    [JsonPropertyName("administratorLoginPasswordWo")]
+    public string? AdministratorLoginPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_login_password_wo. This property should be incremented when updating administrator_login_password_wo.</summary>
+    [JsonPropertyName("administratorLoginPasswordWoVersion")]
+    public double? AdministratorLoginPasswordWoVersion { get; set; }
 
     /// <summary>Enable/Disable auto-growing of the storage. Storage auto-grow prevents your server from running out of storage and becoming read-only. If storage auto grow is enabled, the storage automatically grows without impacting the workload. Defaults to true.</summary>
     [JsonPropertyName("autoGrowEnabled")]

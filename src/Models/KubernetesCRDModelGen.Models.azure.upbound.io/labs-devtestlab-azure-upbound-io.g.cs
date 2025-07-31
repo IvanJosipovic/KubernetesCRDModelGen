@@ -84,10 +84,6 @@ public partial class V1beta1LabSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1LabSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The type of storage used by the Dev Test Lab. Possible values are Standard and Premium. Defaults to Premium.</summary>
-    [JsonPropertyName("storageType")]
-    public string? StorageType { get; set; }
-
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -100,10 +96,6 @@ public partial class V1beta1LabSpecInitProvider
     /// <summary>Specifies the supported Azure location where the Dev Test Lab should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
-
-    /// <summary>The type of storage used by the Dev Test Lab. Possible values are Standard and Premium. Defaults to Premium.</summary>
-    [JsonPropertyName("storageType")]
-    public string? StorageType { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
@@ -277,10 +269,6 @@ public partial class V1beta1LabStatusAtProvider
     /// <summary>The name of the resource group under which the Dev Test Lab resource has to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
-
-    /// <summary>The type of storage used by the Dev Test Lab. Possible values are Standard and Premium. Defaults to Premium.</summary>
-    [JsonPropertyName("storageType")]
-    public string? StorageType { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]

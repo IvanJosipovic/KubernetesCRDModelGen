@@ -29,11 +29,11 @@ public partial class V1beta1SecurityCenterSubscriptionPricingSpecForProvider
     [JsonPropertyName("extension")]
     public IList<V1beta1SecurityCenterSubscriptionPricingSpecForProviderExtension>? Extension { get; set; }
 
-    /// <summary>The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
+    /// <summary>The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values.</summary>
+    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("subplan")]
     public string? Subplan { get; set; }
 
@@ -63,11 +63,11 @@ public partial class V1beta1SecurityCenterSubscriptionPricingSpecInitProvider
     [JsonPropertyName("extension")]
     public IList<V1beta1SecurityCenterSubscriptionPricingSpecInitProviderExtension>? Extension { get; set; }
 
-    /// <summary>The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
+    /// <summary>The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values.</summary>
+    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("subplan")]
     public string? Subplan { get; set; }
 
@@ -233,11 +233,11 @@ public partial class V1beta1SecurityCenterSubscriptionPricingStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
+    /// <summary>The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values.</summary>
+    /// <summary>Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("subplan")]
     public string? Subplan { get; set; }
 

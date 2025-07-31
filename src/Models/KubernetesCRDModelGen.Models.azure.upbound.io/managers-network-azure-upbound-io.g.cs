@@ -81,15 +81,15 @@ public partial class V1beta1ManagerSpecForProviderScope
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerSpecForProvider
 {
-    /// <summary>A description of the network manager.</summary>
+    /// <summary>A description of the Network Manager.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Specifies the Azure Region where the Network Managers should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Azure Region where the Network Manager should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the name of the Resource Group where the Network Managers should exist. Changing this forces a new Network Managers to be created.</summary>
+    /// <summary>Specifies the name of the Resource Group where the Network Manager should exist. Changing this forces a new Network Manager to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -105,11 +105,11 @@ public partial class V1beta1ManagerSpecForProvider
     [JsonPropertyName("scope")]
     public IList<V1beta1ManagerSpecForProviderScope>? Scope { get; set; }
 
-    /// <summary>A list of configuration deployment type. Possible values are Connectivity and SecurityAdmin, corresponds to if Connectivity Configuration and Security Admin Configuration is allowed for the Network Manager.</summary>
+    /// <summary>A list of configuration deployment types. Possible values are Connectivity, SecurityAdmin and Routing, which specify whether Connectivity Configuration, Security Admin Configuration or Routing Configuration are allowed for the Network Manager.</summary>
     [JsonPropertyName("scopeAccesses")]
     public IList<string>? ScopeAccesses { get; set; }
 
-    /// <summary>A mapping of tags which should be assigned to the Network Managers.</summary>
+    /// <summary>A mapping of tags which should be assigned to the Network Manager.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -131,11 +131,11 @@ public partial class V1beta1ManagerSpecInitProviderScope
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerSpecInitProvider
 {
-    /// <summary>A description of the network manager.</summary>
+    /// <summary>A description of the Network Manager.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Specifies the Azure Region where the Network Managers should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Azure Region where the Network Manager should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -143,11 +143,11 @@ public partial class V1beta1ManagerSpecInitProvider
     [JsonPropertyName("scope")]
     public IList<V1beta1ManagerSpecInitProviderScope>? Scope { get; set; }
 
-    /// <summary>A list of configuration deployment type. Possible values are Connectivity and SecurityAdmin, corresponds to if Connectivity Configuration and Security Admin Configuration is allowed for the Network Manager.</summary>
+    /// <summary>A list of configuration deployment types. Possible values are Connectivity, SecurityAdmin and Routing, which specify whether Connectivity Configuration, Security Admin Configuration or Routing Configuration are allowed for the Network Manager.</summary>
     [JsonPropertyName("scopeAccesses")]
     public IList<string>? ScopeAccesses { get; set; }
 
-    /// <summary>A mapping of tags which should be assigned to the Network Managers.</summary>
+    /// <summary>A mapping of tags which should be assigned to the Network Manager.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -322,19 +322,19 @@ public partial class V1beta1ManagerStatusAtProvider
     [JsonPropertyName("crossTenantScopes")]
     public IList<V1beta1ManagerStatusAtProviderCrossTenantScopes>? CrossTenantScopes { get; set; }
 
-    /// <summary>A description of the network manager.</summary>
+    /// <summary>A description of the Network Manager.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the Network Managers.</summary>
+    /// <summary>The ID of the Network Manager.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Specifies the Azure Region where the Network Managers should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Azure Region where the Network Manager should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>Specifies the name of the Resource Group where the Network Managers should exist. Changing this forces a new Network Managers to be created.</summary>
+    /// <summary>Specifies the name of the Resource Group where the Network Manager should exist. Changing this forces a new Network Manager to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -342,11 +342,11 @@ public partial class V1beta1ManagerStatusAtProvider
     [JsonPropertyName("scope")]
     public IList<V1beta1ManagerStatusAtProviderScope>? Scope { get; set; }
 
-    /// <summary>A list of configuration deployment type. Possible values are Connectivity and SecurityAdmin, corresponds to if Connectivity Configuration and Security Admin Configuration is allowed for the Network Manager.</summary>
+    /// <summary>A list of configuration deployment types. Possible values are Connectivity, SecurityAdmin and Routing, which specify whether Connectivity Configuration, Security Admin Configuration or Routing Configuration are allowed for the Network Manager.</summary>
     [JsonPropertyName("scopeAccesses")]
     public IList<string>? ScopeAccesses { get; set; }
 
-    /// <summary>A mapping of tags which should be assigned to the Network Managers.</summary>
+    /// <summary>A mapping of tags which should be assigned to the Network Manager.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -397,7 +397,7 @@ public partial class V1beta1ManagerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Manager is the Schema for the Managers API. Manages a Network Managers.</summary>
+/// <summary>Manager is the Schema for the Managers API. Manages a Network Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Manager : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ManagerSpec>, IStatus<V1beta1ManagerStatus>
@@ -427,7 +427,7 @@ public partial class V1beta1Manager : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     public V1beta1ManagerStatus? Status { get; set; }
 }
 
-/// <summary>Manager is the Schema for the Managers API. Manages a Network Managers.</summary>
+/// <summary>Manager is the Schema for the Managers API. Manages a Network Manager.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ManagerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Manager>

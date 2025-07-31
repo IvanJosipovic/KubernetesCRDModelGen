@@ -68,11 +68,11 @@ public partial class V1beta1JobSpecForProviderServicePrincipalIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProvider
 {
-    /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
+    /// <summary>Whether the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization job should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this synchronization job should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -149,11 +149,11 @@ public partial class V1beta1JobSpecInitProviderServicePrincipalIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProvider
 {
-    /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
+    /// <summary>Whether the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization job should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this synchronization job should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -323,7 +323,7 @@ public partial class V1beta1JobStatusAtProviderSchedule
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProvider
 {
-    /// <summary>Whether or not the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
+    /// <summary>Whether the provisioning job is enabled. Default state is true. Whether or not the synchronization job is enabled</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -335,7 +335,7 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("schedule")]
     public IList<V1beta1JobStatusAtProviderSchedule>? Schedule { get; set; }
 
-    /// <summary>The object ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this synchronization job should be created</summary>
+    /// <summary>The ID of the service principal for which this synchronization job should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this synchronization job should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 

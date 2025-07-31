@@ -180,7 +180,7 @@ public partial class V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecForProvider
 {
-    /// <summary>Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.</summary>
+    /// <summary>Specifies the ID of the backup policy to use.</summary>
     [JsonPropertyName("backupPolicyId")]
     public string? BackupPolicyId { get; set; }
 
@@ -192,15 +192,15 @@ public partial class V1beta1BackupProtectedVMSpecForProvider
     [JsonPropertyName("backupPolicyIdSelector")]
     public V1beta1BackupProtectedVMSpecForProviderBackupPolicyIdSelector? BackupPolicyIdSelector { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.</summary>
     [JsonPropertyName("excludeDiskLuns")]
     public IList<double>? ExcludeDiskLuns { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.</summary>
     [JsonPropertyName("includeDiskLuns")]
     public IList<double>? IncludeDiskLuns { get; set; }
 
-    /// <summary>Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.</summary>
+    /// <summary>Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.</summary>
     [JsonPropertyName("protectionState")]
     public string? ProtectionState { get; set; }
 
@@ -228,7 +228,7 @@ public partial class V1beta1BackupProtectedVMSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1BackupProtectedVMSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Specifies the ID of the VM to backup. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
@@ -405,7 +405,7 @@ public partial class V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMSpecInitProvider
 {
-    /// <summary>Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.</summary>
+    /// <summary>Specifies the ID of the backup policy to use.</summary>
     [JsonPropertyName("backupPolicyId")]
     public string? BackupPolicyId { get; set; }
 
@@ -417,15 +417,15 @@ public partial class V1beta1BackupProtectedVMSpecInitProvider
     [JsonPropertyName("backupPolicyIdSelector")]
     public V1beta1BackupProtectedVMSpecInitProviderBackupPolicyIdSelector? BackupPolicyIdSelector { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.</summary>
     [JsonPropertyName("excludeDiskLuns")]
     public IList<double>? ExcludeDiskLuns { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.</summary>
     [JsonPropertyName("includeDiskLuns")]
     public IList<double>? IncludeDiskLuns { get; set; }
 
-    /// <summary>Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.</summary>
+    /// <summary>Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.</summary>
     [JsonPropertyName("protectionState")]
     public string? ProtectionState { get; set; }
 
@@ -453,7 +453,7 @@ public partial class V1beta1BackupProtectedVMSpecInitProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1BackupProtectedVMSpecInitProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Specifies the ID of the VM to backup. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
@@ -594,11 +594,11 @@ public partial class V1beta1BackupProtectedVMSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupProtectedVMStatusAtProvider
 {
-    /// <summary>Specifies the id of the backup policy to use. Required in creation or when protection_stopped is not specified.</summary>
+    /// <summary>Specifies the ID of the backup policy to use.</summary>
     [JsonPropertyName("backupPolicyId")]
     public string? BackupPolicyId { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be excluded for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be excluded for VM Protection.</summary>
     [JsonPropertyName("excludeDiskLuns")]
     public IList<double>? ExcludeDiskLuns { get; set; }
 
@@ -606,11 +606,11 @@ public partial class V1beta1BackupProtectedVMStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A list of Disks' Logical Unit Numbers(LUN) to be included for VM Protection.</summary>
+    /// <summary>A list of Disks' Logical Unit Numbers (LUN) to be included for VM Protection.</summary>
     [JsonPropertyName("includeDiskLuns")]
     public IList<double>? IncludeDiskLuns { get; set; }
 
-    /// <summary>Specifies Protection state of the backup. Possible values are Invalid, IRPending, Protected, ProtectionStopped, ProtectionError and ProtectionPaused.</summary>
+    /// <summary>Specifies Protection state of the backup. Possible values are Protected, BackupsSuspended, and ProtectionStopped.</summary>
     [JsonPropertyName("protectionState")]
     public string? ProtectionState { get; set; }
 
@@ -622,7 +622,7 @@ public partial class V1beta1BackupProtectedVMStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>Specifies the ID of the VM to backup. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the ID of the virtual machine to back up. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sourceVmId")]
     public string? SourceVmId { get; set; }
 }
@@ -673,7 +673,7 @@ public partial class V1beta1BackupProtectedVMStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected VM.</summary>
+/// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BackupProtectedVM : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BackupProtectedVMSpec>, IStatus<V1beta1BackupProtectedVMStatus>
@@ -703,7 +703,7 @@ public partial class V1beta1BackupProtectedVM : IKubernetesObject<V1ObjectMeta>,
     public V1beta1BackupProtectedVMStatus? Status { get; set; }
 }
 
-/// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected VM.</summary>
+/// <summary>BackupProtectedVM is the Schema for the BackupProtectedVMs API. Manages an Azure Backup Protected Virtual Machine.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BackupProtectedVMList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupProtectedVM>

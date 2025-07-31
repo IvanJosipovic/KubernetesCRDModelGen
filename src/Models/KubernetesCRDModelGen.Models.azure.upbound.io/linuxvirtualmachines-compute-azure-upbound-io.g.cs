@@ -42,7 +42,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminPasswordSecre
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecForProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -89,7 +89,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -451,11 +451,11 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1LinuxVirtualMachineSpecForProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1LinuxVirtualMachineSpecForProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.</summary>
+    /// <summary>Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC, UBUNTU_PRO.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 
@@ -567,7 +567,7 @@ public partial class V1beta1LinuxVirtualMachineSpecForProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 
@@ -614,7 +614,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminPasswordSecr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineSpecInitProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -661,7 +661,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplicatio
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -967,11 +967,11 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProvider
     [JsonPropertyName("galleryApplication")]
     public IList<V1beta1LinuxVirtualMachineSpecInitProviderGalleryApplication>? GalleryApplication { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1LinuxVirtualMachineSpecInitProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.</summary>
+    /// <summary>Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC, UBUNTU_PRO.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 
@@ -1071,7 +1071,7 @@ public partial class V1beta1LinuxVirtualMachineSpecInitProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 
@@ -1233,7 +1233,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdditionalCapabil
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxVirtualMachineStatusAtProviderAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -1263,7 +1263,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderGalleryApplicatio
     [JsonPropertyName("configurationBlobUri")]
     public string? ConfigurationBlobUri { get; set; }
 
-    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2,147,483,647.</summary>
+    /// <summary>Specifies the order in which the packages have to be installed. Possible values are between 0 and 2147483647. Defaults to 0.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
@@ -1333,6 +1333,10 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProviderOsDisk
     /// <summary>The Size of the Internal OS Disk in GB, if you wish to vary from the size used in the image this Virtual Machine is sourced from.</summary>
     [JsonPropertyName("diskSizeGb")]
     public double? DiskSizeGb { get; set; }
+
+    /// <summary>The ID of the OS disk.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
 
     /// <summary>The name which should be used for the Internal OS Disk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
@@ -1517,11 +1521,11 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>An identity block as defined below.</summary>
+    /// <summary>An identity block as documented below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1LinuxVirtualMachineStatusAtProviderIdentity>? Identity { get; set; }
 
-    /// <summary>Specifies the BYOL Type for this Virtual Machine. Possible values are RHEL_BYOS and SLES_BYOS.</summary>
+    /// <summary>Specifies the License Type for this Virtual Machine. Possible values are RHEL_BYOS, RHEL_BASE, RHEL_EUS, RHEL_SAPAPPS, RHEL_SAPHA, RHEL_BASESAPAPPS, RHEL_BASESAPHA, SLES_BYOS, SLES_SAP, SLES_HPC, UBUNTU_PRO.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 
@@ -1637,7 +1641,7 @@ public partial class V1beta1LinuxVirtualMachineStatusAtProvider
     [JsonPropertyName("virtualMachineScaleSetId")]
     public string? VirtualMachineScaleSetId { get; set; }
 
-    /// <summary>Specifies whether VMAgent Platform Updates is enabled. Defaults to false.</summary>
+    /// <summary>Are Virtual Machine Agent Platform Updates enabled on this Virtual Machine?</summary>
     [JsonPropertyName("vmAgentPlatformUpdatesEnabled")]
     public bool? VmAgentPlatformUpdatesEnabled { get; set; }
 

@@ -64,62 +64,6 @@ public partial class V1beta1CertificateSpecForProviderApplicationIdSelector
     public V1beta1CertificateSpecForProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecForProviderApplicationObjectIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecForProviderApplicationObjectIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1CertificateSpecForProviderApplicationObjectIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecForProviderApplicationObjectIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecForProviderApplicationObjectIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1CertificateSpecForProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary>The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the encoding argument. The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecForProviderValueSecretRef
@@ -152,18 +96,6 @@ public partial class V1beta1CertificateSpecForProvider
     /// <summary>Selector for a Application in applications to populate applicationId.</summary>
     [JsonPropertyName("applicationIdSelector")]
     public V1beta1CertificateSpecForProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
-
-    /// <summary>The object ID of the application for which this certificate should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1CertificateSpecForProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1CertificateSpecForProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
 
     /// <summary>Specifies the encoding used for the supplied certificate data. Must be one of pem, base64 or hex. Defaults to pem. Specifies the encoding used for the supplied certificate data</summary>
     [JsonPropertyName("encoding")]
@@ -250,62 +182,6 @@ public partial class V1beta1CertificateSpecInitProviderApplicationIdSelector
     public V1beta1CertificateSpecInitProviderApplicationIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecInitProviderApplicationObjectIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecInitProviderApplicationObjectIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1CertificateSpecInitProviderApplicationObjectIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecInitProviderApplicationObjectIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1CertificateSpecInitProviderApplicationObjectIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1CertificateSpecInitProviderApplicationObjectIdSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary>The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the encoding argument. The certificate data, which can be PEM encoded, base64 encoded DER or hexadecimal encoded DER. See also the `encoding` argument</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateSpecInitProviderValueSecretRef
@@ -338,18 +214,6 @@ public partial class V1beta1CertificateSpecInitProvider
     /// <summary>Selector for a Application in applications to populate applicationId.</summary>
     [JsonPropertyName("applicationIdSelector")]
     public V1beta1CertificateSpecInitProviderApplicationIdSelector? ApplicationIdSelector { get; set; }
-
-    /// <summary>The object ID of the application for which this certificate should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
-
-    /// <summary>Reference to a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdRef")]
-    public V1beta1CertificateSpecInitProviderApplicationObjectIdRef? ApplicationObjectIdRef { get; set; }
-
-    /// <summary>Selector for a Application in applications to populate applicationObjectId.</summary>
-    [JsonPropertyName("applicationObjectIdSelector")]
-    public V1beta1CertificateSpecInitProviderApplicationObjectIdSelector? ApplicationObjectIdSelector { get; set; }
 
     /// <summary>Specifies the encoding used for the supplied certificate data. Must be one of pem, base64 or hex. Defaults to pem. Specifies the encoding used for the supplied certificate data</summary>
     [JsonPropertyName("encoding")]
@@ -519,10 +383,6 @@ public partial class V1beta1CertificateStatusAtProvider
     /// <summary>The resource ID of the application for which this certificate should be created. Changing this field forces a new resource to be created. The resource ID of the application for which this certificate should be created</summary>
     [JsonPropertyName("applicationId")]
     public string? ApplicationId { get; set; }
-
-    /// <summary>The object ID of the application for which this certificate should be created</summary>
-    [JsonPropertyName("applicationObjectId")]
-    public string? ApplicationObjectId { get; set; }
 
     /// <summary>Specifies the encoding used for the supplied certificate data. Must be one of pem, base64 or hex. Defaults to pem. Specifies the encoding used for the supplied certificate data</summary>
     [JsonPropertyName("encoding")]

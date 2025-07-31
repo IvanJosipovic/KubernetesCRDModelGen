@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: vpngateways.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -216,7 +216,7 @@ spec:
                         type: object
                     type: object
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.
@@ -382,7 +382,7 @@ spec:
                     description: The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.
@@ -774,6 +774,21 @@ spec:
                   id:
                     description: The ID of the VPN Gateway.
                     type: string
+                  ipConfiguration:
+                    description: An ip_configuration block as defined below.
+                    items:
+                      properties:
+                        id:
+                          description: The identifier of the IP configuration for the VPN Gateway.
+                          type: string
+                        privateIpAddress:
+                          description: The private IP address of this IP configuration.
+                          type: string
+                        publicIpAddress:
+                          description: The public IP address of this IP configuration.
+                          type: string
+                      type: object
+                    type: array
                   location:
                     description: The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
@@ -781,7 +796,7 @@ spec:
                     description: The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.
@@ -1055,7 +1070,7 @@ spec:
                         type: object
                     type: object
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.
@@ -1215,7 +1230,7 @@ spec:
                     description: The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.
@@ -1601,6 +1616,21 @@ spec:
                   id:
                     description: The ID of the VPN Gateway.
                     type: string
+                  ipConfiguration:
+                    description: An ip_configuration block as defined below.
+                    items:
+                      properties:
+                        id:
+                          description: The identifier of the IP configuration for the VPN Gateway.
+                          type: string
+                        privateIpAddress:
+                          description: The private IP address of this IP configuration.
+                          type: string
+                        publicIpAddress:
+                          description: The public IP address of this IP configuration.
+                          type: string
+                      type: object
+                    type: array
                   location:
                     description: The Azure location where this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
@@ -1608,7 +1638,7 @@ spec:
                     description: The Name of the Resource Group in which this VPN Gateway should be created. Changing this forces a new resource to be created.
                     type: string
                   routingPreference:
-                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Changing this forces a new resource to be created.
+                    description: Azure routing preference lets you to choose how your traffic routes between Azure and the internet. You can choose to route traffic either via the Microsoft network (default value, Microsoft Network), or via the ISP network (public internet, set to Internet). More context of the configuration can be found in the Microsoft Docs to create a VPN Gateway. Defaults to Microsoft Network. Changing this forces a new resource to be created.
                     type: string
                   scaleUnit:
                     description: The Scale Unit for this VPN Gateway. Defaults to 1.

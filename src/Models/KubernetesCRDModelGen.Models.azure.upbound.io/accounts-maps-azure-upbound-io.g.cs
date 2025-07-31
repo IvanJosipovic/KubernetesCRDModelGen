@@ -119,7 +119,7 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
 
-    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -199,7 +199,7 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
 
-    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
@@ -411,7 +411,7 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("localAuthenticationEnabled")]
     public bool? LocalAuthenticationEnabled { get; set; }
 
-    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created. Defaults to global.</summary>
+    /// <summary>The Location in which the Azure Maps Account should be provisioned. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 

@@ -310,7 +310,7 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. Changing this forces a new resource to be created. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
+    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
@@ -321,6 +321,10 @@ public partial class V1beta1EnvironmentSpecForProvider
     /// <summary>Selector for a Workspace in operationalinsights to populate logAnalyticsWorkspaceId.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1EnvironmentSpecForProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
+
+    /// <summary>Where the application logs will be saved for this Container Apps Managed Environment. Possible values include log-analytics and azure-monitor. Omitting this value will result in logs being streamed only.</summary>
+    [JsonPropertyName("logsDestination")]
+    public string? LogsDestination { get; set; }
 
     /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
     [JsonPropertyName("mutualTlsEnabled")]
@@ -342,7 +346,7 @@ public partial class V1beta1EnvironmentSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The profile of the workload to scope the container app execution. A workload_profile block as defined below.</summary>
+    /// <summary>One or more workload_profile blocks as defined below.</summary>
     [JsonPropertyName("workloadProfile")]
     public IList<V1beta1EnvironmentSpecForProviderWorkloadProfile>? WorkloadProfile { get; set; }
 
@@ -597,7 +601,7 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. Changing this forces a new resource to be created. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
+    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
 
@@ -609,6 +613,10 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("logAnalyticsWorkspaceIdSelector")]
     public V1beta1EnvironmentSpecInitProviderLogAnalyticsWorkspaceIdSelector? LogAnalyticsWorkspaceIdSelector { get; set; }
 
+    /// <summary>Where the application logs will be saved for this Container Apps Managed Environment. Possible values include log-analytics and azure-monitor. Omitting this value will result in logs being streamed only.</summary>
+    [JsonPropertyName("logsDestination")]
+    public string? LogsDestination { get; set; }
+
     /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
     [JsonPropertyName("mutualTlsEnabled")]
     public bool? MutualTlsEnabled { get; set; }
@@ -617,7 +625,7 @@ public partial class V1beta1EnvironmentSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The profile of the workload to scope the container app execution. A workload_profile block as defined below.</summary>
+    /// <summary>One or more workload_profile blocks as defined below.</summary>
     [JsonPropertyName("workloadProfile")]
     public IList<V1beta1EnvironmentSpecInitProviderWorkloadProfile>? WorkloadProfile { get; set; }
 
@@ -815,9 +823,13 @@ public partial class V1beta1EnvironmentStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. Changing this forces a new resource to be created. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
+    /// <summary>The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to. The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to.</summary>
     [JsonPropertyName("logAnalyticsWorkspaceId")]
     public string? LogAnalyticsWorkspaceId { get; set; }
+
+    /// <summary>Where the application logs will be saved for this Container Apps Managed Environment. Possible values include log-analytics and azure-monitor. Omitting this value will result in logs being streamed only.</summary>
+    [JsonPropertyName("logsDestination")]
+    public string? LogsDestination { get; set; }
 
     /// <summary>Should mutual transport layer security (mTLS) be enabled? Defaults to false. Should mutual transport layer security (mTLS) be enabled? Defaults to `false`. **Note:** This feature is in public preview. Enabling mTLS for your applications may increase response latency and reduce maximum throughput in high-load scenarios.</summary>
     [JsonPropertyName("mutualTlsEnabled")]
@@ -843,7 +855,7 @@ public partial class V1beta1EnvironmentStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The profile of the workload to scope the container app execution. A workload_profile block as defined below.</summary>
+    /// <summary>One or more workload_profile blocks as defined below.</summary>
     [JsonPropertyName("workloadProfile")]
     public IList<V1beta1EnvironmentStatusAtProviderWorkloadProfile>? WorkloadProfile { get; set; }
 

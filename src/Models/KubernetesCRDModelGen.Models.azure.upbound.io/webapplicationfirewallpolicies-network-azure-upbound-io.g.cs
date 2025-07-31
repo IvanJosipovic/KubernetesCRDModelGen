@@ -41,7 +41,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRul
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, UrlDecode and UrlEncode.</summary>
+    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode and UrlEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -50,7 +50,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRul
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRules
 {
-    /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
+    /// <summary>Type of action. Possible values are Allow, Block, JSChallenge and Log.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -112,7 +112,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -142,7 +142,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
-    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
+    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block, JSChallenge and Log. JSChallenge is only valid for rulesets of type Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -159,10 +159,6 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
-    /// <summary></summary>
-    [JsonPropertyName("disabledRules")]
-    public IList<string>? DisabledRules { get; set; }
-
     /// <summary>One or more rule block defined below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1WebApplicationFirewallPolicySpecForProviderManagedRulesManagedRuleSetRuleGroupOverrideRule>? Rule { get; set; }
@@ -184,7 +180,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderManagedRu
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -244,6 +240,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>- Whether the firewall should block a request with upload size greater then file_upload_limit_in_mb.</summary>
+    [JsonPropertyName("fileUploadEnforcement")]
+    public bool? FileUploadEnforcement { get; set; }
+
     /// <summary>The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.</summary>
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
@@ -267,6 +267,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecForProviderPolicySet
     /// <summary>Is Request Body Inspection enabled? Defaults to true.</summary>
     [JsonPropertyName("requestBodyCheck")]
     public bool? RequestBodyCheck { get; set; }
+
+    /// <summary>Whether the firewall should block a request with body size greater then max_request_body_size_in_kb. Defaults to true.</summary>
+    [JsonPropertyName("requestBodyEnforcement")]
+    public bool? RequestBodyEnforcement { get; set; }
 
     /// <summary>Specifies the maximum request body inspection limit in KB for the Web Application Firewall. Defaults to 128.</summary>
     [JsonPropertyName("requestBodyInspectLimitInKb")]
@@ -399,7 +403,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRu
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, UrlDecode and UrlEncode.</summary>
+    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode and UrlEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -408,7 +412,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderCustomRules
 {
-    /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
+    /// <summary>Type of action. Possible values are Allow, Block, JSChallenge and Log.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -470,7 +474,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -500,7 +504,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
-    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
+    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block, JSChallenge and Log. JSChallenge is only valid for rulesets of type Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -517,10 +521,6 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
-    /// <summary></summary>
-    [JsonPropertyName("disabledRules")]
-    public IList<string>? DisabledRules { get; set; }
-
     /// <summary>One or more rule block defined below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1WebApplicationFirewallPolicySpecInitProviderManagedRulesManagedRuleSetRuleGroupOverrideRule>? Rule { get; set; }
@@ -542,7 +542,7 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderManagedR
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -602,6 +602,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>- Whether the firewall should block a request with upload size greater then file_upload_limit_in_mb.</summary>
+    [JsonPropertyName("fileUploadEnforcement")]
+    public bool? FileUploadEnforcement { get; set; }
+
     /// <summary>The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.</summary>
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
@@ -625,6 +629,10 @@ public partial class V1beta1WebApplicationFirewallPolicySpecInitProviderPolicySe
     /// <summary>Is Request Body Inspection enabled? Defaults to true.</summary>
     [JsonPropertyName("requestBodyCheck")]
     public bool? RequestBodyCheck { get; set; }
+
+    /// <summary>Whether the firewall should block a request with body size greater then max_request_body_size_in_kb. Defaults to true.</summary>
+    [JsonPropertyName("requestBodyEnforcement")]
+    public bool? RequestBodyEnforcement { get; set; }
 
     /// <summary>Specifies the maximum request body inspection limit in KB for the Web Application Firewall. Defaults to 128.</summary>
     [JsonPropertyName("requestBodyInspectLimitInKb")]
@@ -821,7 +829,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRu
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, UrlDecode and UrlEncode.</summary>
+    /// <summary>A list of transformations to do before the match is attempted. Possible values are HtmlEntityDecode, Lowercase, RemoveNulls, Trim, Uppercase, UrlDecode and UrlEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -830,7 +838,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderCustomRules
 {
-    /// <summary>Type of action. Possible values are Allow, Block and Log.</summary>
+    /// <summary>Type of action. Possible values are Allow, Block, JSChallenge and Log.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -892,7 +900,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -922,7 +930,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSetRuleGroupOverrideRule
 {
-    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block and Log.</summary>
+    /// <summary>Describes the override action to be applied when rule matches. Possible values are Allow, AnomalyScoring, Block, JSChallenge and Log. JSChallenge is only valid for rulesets of type Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -939,10 +947,6 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSetRuleGroupOverride
 {
-    /// <summary></summary>
-    [JsonPropertyName("disabledRules")]
-    public IList<string>? DisabledRules { get; set; }
-
     /// <summary>One or more rule block defined below.</summary>
     [JsonPropertyName("rule")]
     public IList<V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedRulesManagedRuleSetRuleGroupOverrideRule>? Rule { get; set; }
@@ -964,7 +968,7 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderManagedR
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The rule set version. Possible values: 0.1, 1.0, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
+    /// <summary>The rule set version. Possible values: 0.1, 1.0, 1.1, 2.1, 2.2.9, 3.0, 3.1 and 3.2.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -1024,6 +1028,10 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>- Whether the firewall should block a request with upload size greater then file_upload_limit_in_mb.</summary>
+    [JsonPropertyName("fileUploadEnforcement")]
+    public bool? FileUploadEnforcement { get; set; }
+
     /// <summary>The File Upload Limit in MB. Accepted values are in the range 1 to 4000. Defaults to 100.</summary>
     [JsonPropertyName("fileUploadLimitInMb")]
     public double? FileUploadLimitInMb { get; set; }
@@ -1047,6 +1055,10 @@ public partial class V1beta1WebApplicationFirewallPolicyStatusAtProviderPolicySe
     /// <summary>Is Request Body Inspection enabled? Defaults to true.</summary>
     [JsonPropertyName("requestBodyCheck")]
     public bool? RequestBodyCheck { get; set; }
+
+    /// <summary>Whether the firewall should block a request with body size greater then max_request_body_size_in_kb. Defaults to true.</summary>
+    [JsonPropertyName("requestBodyEnforcement")]
+    public bool? RequestBodyEnforcement { get; set; }
 
     /// <summary>Specifies the maximum request body inspection limit in KB for the Web Application Firewall. Defaults to 128.</summary>
     [JsonPropertyName("requestBodyInspectLimitInKb")]

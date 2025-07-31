@@ -92,7 +92,7 @@ public partial class V1beta1PowerBIEmbeddedSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1PowerBIEmbeddedSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6.</summary>
+    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6, A7 and A8.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
@@ -117,7 +117,7 @@ public partial class V1beta1PowerBIEmbeddedSpecInitProvider
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6.</summary>
+    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6, A7 and A8.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
@@ -282,7 +282,7 @@ public partial class V1beta1PowerBIEmbeddedStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6.</summary>
+    /// <summary>Sets the PowerBI Embedded's pricing level's SKU. Possible values include: A1, A2, A3, A4, A5, A6, A7 and A8.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 

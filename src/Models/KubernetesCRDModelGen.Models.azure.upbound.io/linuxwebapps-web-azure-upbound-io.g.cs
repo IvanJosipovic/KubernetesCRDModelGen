@@ -341,7 +341,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderAuthSettingsV2ActiveDirect
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -692,7 +692,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderBackup
 
     /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
     [JsonPropertyName("storageAccountUrlSecretRef")]
-    public V1beta1LinuxWebAppSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+    public V1beta1LinuxWebAppSpecForProviderBackupStorageAccountUrlSecretRef? StorageAccountUrlSecretRef { get; set; }
 }
 
 /// <summary>The connection string value. The connection string value.</summary>
@@ -726,7 +726,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderConnectionString
 
     /// <summary>The connection string value. The connection string value.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1LinuxWebAppSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1LinuxWebAppSpecForProviderConnectionStringValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -763,7 +763,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderLogsApplicationLogsAzureBl
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecForProviderLogsApplicationLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppSpecForProviderLogsApplicationLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
@@ -799,7 +799,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderLogsHttpLogsAzureBlobStora
 
     /// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
     [JsonPropertyName("sasurlSecretRef")]
-    public V1beta1LinuxWebAppSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef SasurlSecretRef { get; set; }
+    public V1beta1LinuxWebAppSpecForProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef? SasurlSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -819,7 +819,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderLogsHttpLogsFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecForProviderLogsHttpLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppSpecForProviderLogsHttpLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
@@ -982,17 +982,9 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfigApplicationStack
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecForProviderSiteConfigApplicationStack
 {
-    /// <summary></summary>
-    [JsonPropertyName("dockerImage")]
-    public string? DockerImage { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. appsvc/staticsite:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerImageTag")]
-    public string? DockerImageTag { get; set; }
 
     /// <summary>The User Name to use for authentication against the registry to pull the image.</summary>
     [JsonPropertyName("dockerRegistryPasswordSecretRef")]
@@ -1006,7 +998,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfigApplicationStack
     [JsonPropertyName("dockerRegistryUsername")]
     public string? DockerRegistryUsername { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0 and 8.0.</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0, 8.0 and 9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -1022,19 +1014,19 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfigApplicationStack
     [JsonPropertyName("javaServerVersion")]
     public string? JavaServerVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Possible values include 8, 11, and 17.</summary>
+    /// <summary>The Version of Java to use. Possible values include 8, 11, 17, and 21.</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.</summary>
+    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts, 20-lts and 22-lts. This property conflicts with java_version.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.</summary>
+    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.</summary>
     [JsonPropertyName("phpVersion")]
     public string? PhpVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.</summary>
+    /// <summary>The version of Python to run. Possible values include 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -1080,10 +1072,6 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfigAutoHealSettingT
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -1455,10 +1443,6 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1LinuxWebAppSpecForProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled? Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1LinuxWebAppSpecForProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -1483,7 +1467,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -1515,7 +1499,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -1523,7 +1507,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022.</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -1596,7 +1580,7 @@ public partial class V1beta1LinuxWebAppSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
     [JsonPropertyName("accessKeySecretRef")]
-    public V1beta1LinuxWebAppSpecForProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+    public V1beta1LinuxWebAppSpecForProviderStorageAccountAccessKeySecretRef? AccessKeySecretRef { get; set; }
 
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
@@ -1786,6 +1770,10 @@ public partial class V1beta1LinuxWebAppSpecForProvider
     /// <summary>A mapping of tags which should be assigned to the Linux Web App.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
@@ -2141,7 +2129,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderAuthSettingsV2ActiveDirec
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -2457,6 +2445,23 @@ public partial class V1beta1LinuxWebAppSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSpecInitProviderBackupStorageAccountUrlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecInitProviderBackup
@@ -2472,6 +2477,27 @@ public partial class V1beta1LinuxWebAppSpecInitProviderBackup
     /// <summary>A schedule block as defined below.</summary>
     [JsonPropertyName("schedule")]
     public IList<V1beta1LinuxWebAppSpecInitProviderBackupSchedule>? Schedule { get; set; }
+
+    /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+    [JsonPropertyName("storageAccountUrlSecretRef")]
+    public V1beta1LinuxWebAppSpecInitProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+}
+
+/// <summary>The connection string value. The connection string value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSpecInitProviderConnectionStringValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -2485,6 +2511,10 @@ public partial class V1beta1LinuxWebAppSpecInitProviderConnectionString
     /// <summary>Type of database. Possible values include: MySQL, SQLServer, SQLAzure, Custom, NotificationHub, ServiceBus, EventHub, APIHub, DocDb, RedisCache, and PostgreSQL. Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>The connection string value. The connection string value.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1LinuxWebAppSpecInitProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2521,13 +2551,30 @@ public partial class V1beta1LinuxWebAppSpecInitProviderLogsApplicationLogsAzureB
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecInitProviderLogsApplicationLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppSpecInitProviderLogsApplicationLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
     /// <summary>Log level. Possible values include: Off, Verbose, Information, Warning, and Error.</summary>
     [JsonPropertyName("fileSystemLevel")]
     public string? FileSystemLevel { get; set; }
+}
+
+/// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSpecInitProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -2537,6 +2584,10 @@ public partial class V1beta1LinuxWebAppSpecInitProviderLogsHttpLogsAzureBlobStor
     /// <summary>The retention period in days. A value of 0 means no retention.</summary>
     [JsonPropertyName("retentionInDays")]
     public double? RetentionInDays { get; set; }
+
+    /// <summary>SAS url to an Azure blob container with read/write/list/delete permissions.</summary>
+    [JsonPropertyName("sasurlSecretRef")]
+    public V1beta1LinuxWebAppSpecInitProviderLogsHttpLogsAzureBlobStorageSasurlSecretRef SasurlSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2556,7 +2607,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderLogsHttpLogsFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecInitProviderLogsHttpLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppSpecInitProviderLogsHttpLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
@@ -2663,17 +2714,9 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfigApplicationStac
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfigApplicationStack
 {
-    /// <summary></summary>
-    [JsonPropertyName("dockerImage")]
-    public string? DockerImage { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. appsvc/staticsite:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerImageTag")]
-    public string? DockerImageTag { get; set; }
 
     /// <summary>The User Name to use for authentication against the registry to pull the image.</summary>
     [JsonPropertyName("dockerRegistryPasswordSecretRef")]
@@ -2687,7 +2730,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfigApplicationStac
     [JsonPropertyName("dockerRegistryUsername")]
     public string? DockerRegistryUsername { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0 and 8.0.</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0, 8.0 and 9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -2703,19 +2746,19 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfigApplicationStac
     [JsonPropertyName("javaServerVersion")]
     public string? JavaServerVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Possible values include 8, 11, and 17.</summary>
+    /// <summary>The Version of Java to use. Possible values include 8, 11, 17, and 21.</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.</summary>
+    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts, 20-lts and 22-lts. This property conflicts with java_version.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.</summary>
+    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.</summary>
     [JsonPropertyName("phpVersion")]
     public string? PhpVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.</summary>
+    /// <summary>The version of Python to run. Possible values include 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -2761,10 +2804,6 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfigAutoHealSetting
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -3136,10 +3175,6 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1LinuxWebAppSpecInitProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled? Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1LinuxWebAppSpecInitProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -3164,7 +3199,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -3196,7 +3231,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -3204,7 +3239,7 @@ public partial class V1beta1LinuxWebAppSpecInitProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022.</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -3254,10 +3289,31 @@ public partial class V1beta1LinuxWebAppSpecInitProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxWebAppSpecInitProviderStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppSpecInitProviderStorageAccount
 {
+    /// <summary>The Access key for the storage account.</summary>
+    [JsonPropertyName("accessKeySecretRef")]
+    public V1beta1LinuxWebAppSpecInitProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
@@ -3434,6 +3490,10 @@ public partial class V1beta1LinuxWebAppSpecInitProvider
     /// <summary>A mapping of tags which should be assigned to the Linux Web App.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
@@ -3795,7 +3855,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderAuthSettingsV2ActiveDirec
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -4215,7 +4275,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderLogsApplicationLogsAzureB
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppStatusAtProviderLogsApplicationLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppStatusAtProviderLogsApplicationLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
@@ -4250,7 +4310,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderLogsHttpLogsFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppStatusAtProviderLogsHttpLogs
 {
-    /// <summary>A azure_blob_storage_http block as defined below.</summary>
+    /// <summary>A azure_blob_storage_http block as defined above.</summary>
     [JsonPropertyName("azureBlobStorage")]
     public IList<V1beta1LinuxWebAppStatusAtProviderLogsHttpLogsAzureBlobStorage>? AzureBlobStorage { get; set; }
 
@@ -4284,17 +4344,9 @@ public partial class V1beta1LinuxWebAppStatusAtProviderLogs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfigApplicationStack
 {
-    /// <summary></summary>
-    [JsonPropertyName("dockerImage")]
-    public string? DockerImage { get; set; }
-
     /// <summary>The docker image, including tag, to be used. e.g. appsvc/staticsite:latest.</summary>
     [JsonPropertyName("dockerImageName")]
     public string? DockerImageName { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("dockerImageTag")]
-    public string? DockerImageTag { get; set; }
 
     /// <summary>The URL of the container registry where the docker_image_name is located. e.g. https://index.docker.io or https://mcr.microsoft.com. This value is required with docker_image_name.</summary>
     [JsonPropertyName("dockerRegistryUrl")]
@@ -4304,7 +4356,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfigApplicationStac
     [JsonPropertyName("dockerRegistryUsername")]
     public string? DockerRegistryUsername { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0 and 8.0.</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 5.0, 6.0, 7.0, 8.0 and 9.0.</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
@@ -4320,19 +4372,19 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfigApplicationStac
     [JsonPropertyName("javaServerVersion")]
     public string? JavaServerVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Possible values include 8, 11, and 17.</summary>
+    /// <summary>The Version of Java to use. Possible values include 8, 11, 17, and 21.</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts and 20-lts. This property conflicts with java_version.</summary>
+    /// <summary>The version of Node to run. Possible values include 12-lts, 14-lts, 16-lts, 18-lts, 20-lts and 22-lts. This property conflicts with java_version.</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1 and 8.2.</summary>
+    /// <summary>The version of PHP to run. Possible values are 7.4, 8.0, 8.1, 8.2 and 8.3.</summary>
     [JsonPropertyName("phpVersion")]
     public string? PhpVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values include 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12.</summary>
+    /// <summary>The version of Python to run. Possible values include 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -4378,10 +4430,6 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfigAutoHealSetting
     /// <summary>The time interval in the form hh:mm:ss.</summary>
     [JsonPropertyName("interval")]
     public string? Interval { get; set; }
-
-    /// <summary>The path to which this rule status code applies.</summary>
-    [JsonPropertyName("path")]
-    public string? Path { get; set; }
 
     /// <summary>The threshold of time passed to qualify as a Slow Request in hh:mm:ss.</summary>
     [JsonPropertyName("timeTaken")]
@@ -4625,10 +4673,6 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfig
     [JsonPropertyName("applicationStack")]
     public IList<V1beta1LinuxWebAppStatusAtProviderSiteConfigApplicationStack>? ApplicationStack { get; set; }
 
-    /// <summary>Should Auto heal rules be enabled? Required with auto_heal_setting.</summary>
-    [JsonPropertyName("autoHealEnabled")]
-    public bool? AutoHealEnabled { get; set; }
-
     /// <summary>A auto_heal_setting block as defined above. Required with auto_heal.</summary>
     [JsonPropertyName("autoHealSetting")]
     public IList<V1beta1LinuxWebAppStatusAtProviderSiteConfigAutoHealSetting>? AutoHealSetting { get; set; }
@@ -4657,7 +4701,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -4693,7 +4737,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -4701,7 +4745,7 @@ public partial class V1beta1LinuxWebAppStatusAtProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019 and VS2022.</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -4907,6 +4951,10 @@ public partial class V1beta1LinuxWebAppStatusAtProvider
     /// <summary>A mapping of tags which should be assigned to the Linux Web App.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
 
     /// <summary>The subnet id which will be used by this Web App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]

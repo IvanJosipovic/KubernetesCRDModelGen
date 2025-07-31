@@ -16,7 +16,7 @@ public partial class V1beta1DNSCAARecordSpecForProviderRecord
     [JsonPropertyName("flags")]
     public double? Flags { get; set; }
 
-    /// <summary>A property tag, options are issue, issuewild and iodef.</summary>
+    /// <summary>A property tag, options are issue, issuewild, iodef, and contactemail.</summary>
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
@@ -186,7 +186,7 @@ public partial class V1beta1DNSCAARecordSpecInitProviderRecord
     [JsonPropertyName("flags")]
     public double? Flags { get; set; }
 
-    /// <summary>A property tag, options are issue, issuewild and iodef.</summary>
+    /// <summary>A property tag, options are issue, issuewild, iodef, and contactemail.</summary>
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 
@@ -352,7 +352,7 @@ public partial class V1beta1DNSCAARecordStatusAtProviderRecord
     [JsonPropertyName("flags")]
     public double? Flags { get; set; }
 
-    /// <summary>A property tag, options are issue, issuewild and iodef.</summary>
+    /// <summary>A property tag, options are issue, issuewild, iodef, and contactemail.</summary>
     [JsonPropertyName("tag")]
     public string? Tag { get; set; }
 

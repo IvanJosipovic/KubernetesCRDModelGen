@@ -16,6 +16,10 @@ public partial class V1beta1LocationSpecForProviderCountry
     [JsonPropertyName("countriesAndRegions")]
     public IList<string>? CountriesAndRegions { get; set; }
 
+    /// <summary>Method of detecting country the user is located in. Possible values are clientIpAddress for IP-based location and authenticatorAppGps for Authenticator app GPS-based location.  Defaults to clientIpAddress.</summary>
+    [JsonPropertyName("countryLookupMethod")]
+    public string? CountryLookupMethod { get; set; }
+
     /// <summary>Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to false.</summary>
     [JsonPropertyName("includeUnknownCountriesAndRegions")]
     public bool? IncludeUnknownCountriesAndRegions { get; set; }
@@ -58,6 +62,10 @@ public partial class V1beta1LocationSpecInitProviderCountry
     /// <summary>List of countries and/or regions in two-letter format specified by ISO 3166-2.</summary>
     [JsonPropertyName("countriesAndRegions")]
     public IList<string>? CountriesAndRegions { get; set; }
+
+    /// <summary>Method of detecting country the user is located in. Possible values are clientIpAddress for IP-based location and authenticatorAppGps for Authenticator app GPS-based location.  Defaults to clientIpAddress.</summary>
+    [JsonPropertyName("countryLookupMethod")]
+    public string? CountryLookupMethod { get; set; }
 
     /// <summary>Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to false.</summary>
     [JsonPropertyName("includeUnknownCountriesAndRegions")]
@@ -233,6 +241,10 @@ public partial class V1beta1LocationStatusAtProviderCountry
     /// <summary>List of countries and/or regions in two-letter format specified by ISO 3166-2.</summary>
     [JsonPropertyName("countriesAndRegions")]
     public IList<string>? CountriesAndRegions { get; set; }
+
+    /// <summary>Method of detecting country the user is located in. Possible values are clientIpAddress for IP-based location and authenticatorAppGps for Authenticator app GPS-based location.  Defaults to clientIpAddress.</summary>
+    [JsonPropertyName("countryLookupMethod")]
+    public string? CountryLookupMethod { get; set; }
 
     /// <summary>Whether IP addresses that don't map to a country or region should be included in the named location. Defaults to false.</summary>
     [JsonPropertyName("includeUnknownCountriesAndRegions")]

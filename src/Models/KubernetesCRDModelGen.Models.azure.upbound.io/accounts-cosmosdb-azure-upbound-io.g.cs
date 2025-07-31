@@ -46,7 +46,7 @@ public partial class V1beta1AccountSpecForProviderBackup
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderCapabilities
 {
-    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
+    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -432,18 +432,6 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("defaultIdentityType")]
     public string? DefaultIdentityType { get; set; }
 
-    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableAutomaticFailover")]
-    public bool? EnableAutomaticFailover { get; set; }
-
-    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableFreeTier")]
-    public bool? EnableFreeTier { get; set; }
-
-    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableMultipleWriteLocations")]
-    public bool? EnableMultipleWriteLocations { get; set; }
-
     /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("freeTierEnabled")]
     public bool? FreeTierEnabled { get; set; }
@@ -456,9 +444,9 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("identity")]
     public IList<V1beta1AccountSpecForProviderIdentity>? Identity { get; set; }
 
-    /// <summary>CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.</summary>
+    /// <summary>A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].</summary>
     [JsonPropertyName("ipRangeFilter")]
-    public string? IpRangeFilter { get; set; }
+    public IList<string>? IpRangeFilter { get; set; }
 
     /// <summary>Enables virtual network filtering for this Cosmos DB account.</summary>
     [JsonPropertyName("isVirtualNetworkFilterEnabled")]
@@ -480,11 +468,15 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.</summary>
     [JsonPropertyName("minimalTlsVersion")]
     public string? MinimalTlsVersion { get; set; }
 
-    /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
+    /// <summary>The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
 
@@ -575,7 +567,7 @@ public partial class V1beta1AccountSpecInitProviderBackup
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderCapabilities
 {
-    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
+    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -905,18 +897,6 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("defaultIdentityType")]
     public string? DefaultIdentityType { get; set; }
 
-    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableAutomaticFailover")]
-    public bool? EnableAutomaticFailover { get; set; }
-
-    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableFreeTier")]
-    public bool? EnableFreeTier { get; set; }
-
-    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableMultipleWriteLocations")]
-    public bool? EnableMultipleWriteLocations { get; set; }
-
     /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("freeTierEnabled")]
     public bool? FreeTierEnabled { get; set; }
@@ -929,9 +909,9 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("identity")]
     public IList<V1beta1AccountSpecInitProviderIdentity>? Identity { get; set; }
 
-    /// <summary>CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.</summary>
+    /// <summary>A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].</summary>
     [JsonPropertyName("ipRangeFilter")]
-    public string? IpRangeFilter { get; set; }
+    public IList<string>? IpRangeFilter { get; set; }
 
     /// <summary>Enables virtual network filtering for this Cosmos DB account.</summary>
     [JsonPropertyName("isVirtualNetworkFilterEnabled")]
@@ -953,11 +933,15 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.</summary>
     [JsonPropertyName("minimalTlsVersion")]
     public string? MinimalTlsVersion { get; set; }
 
-    /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
+    /// <summary>The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
 
@@ -1168,7 +1152,7 @@ public partial class V1beta1AccountStatusAtProviderBackup
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderCapabilities
 {
-    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
+    /// <summary>The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -1382,18 +1366,6 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("defaultIdentityType")]
     public string? DefaultIdentityType { get; set; }
 
-    /// <summary>Enable automatic failover for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableAutomaticFailover")]
-    public bool? EnableAutomaticFailover { get; set; }
-
-    /// <summary>Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enableFreeTier")]
-    public bool? EnableFreeTier { get; set; }
-
-    /// <summary>Enable multiple write locations for this Cosmos DB account.</summary>
-    [JsonPropertyName("enableMultipleWriteLocations")]
-    public bool? EnableMultipleWriteLocations { get; set; }
-
     /// <summary>The endpoint used to connect to the CosmosDB account.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
@@ -1414,9 +1386,9 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("identity")]
     public IList<V1beta1AccountStatusAtProviderIdentity>? Identity { get; set; }
 
-    /// <summary>CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.</summary>
+    /// <summary>A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].</summary>
     [JsonPropertyName("ipRangeFilter")]
-    public string? IpRangeFilter { get; set; }
+    public IList<string>? IpRangeFilter { get; set; }
 
     /// <summary>Enables virtual network filtering for this Cosmos DB account.</summary>
     [JsonPropertyName("isVirtualNetworkFilterEnabled")]
@@ -1438,11 +1410,15 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("managedHsmKeyId")]
+    public string? ManagedHsmKeyId { get; set; }
+
     /// <summary>Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.</summary>
     [JsonPropertyName("minimalTlsVersion")]
     public string? MinimalTlsVersion { get; set; }
 
-    /// <summary>The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.</summary>
+    /// <summary>The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.</summary>
     [JsonPropertyName("mongoServerVersion")]
     public string? MongoServerVersion { get; set; }
 

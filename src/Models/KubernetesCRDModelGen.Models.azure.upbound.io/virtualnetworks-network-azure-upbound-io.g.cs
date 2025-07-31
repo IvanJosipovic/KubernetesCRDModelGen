@@ -30,6 +30,19 @@ public partial class V1beta1VirtualNetworkSpecForProviderEncryption
     public string? Enforcement { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecForProviderIpAddressPool
+{
+    /// <summary>The ID of the Network Manager IP Address Management (IPAM) Pool.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The number of IP addresses to allocated to the Virtual Network. The value must be a string that represents a positive number, e.g., "100".</summary>
+    [JsonPropertyName("numberOfIpAddresses")]
+    public string? NumberOfIpAddresses { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkSpecForProviderResourceGroupNameRefPolicy
@@ -118,9 +131,17 @@ public partial class V1beta1VirtualNetworkSpecForProvider
     [JsonPropertyName("flowTimeoutInMinutes")]
     public double? FlowTimeoutInMinutes { get; set; }
 
+    /// <summary>One or two ip_address_pool blocks as defined below. Only one association of each IP type(IPv4 or IPv6) is allowed.</summary>
+    [JsonPropertyName("ipAddressPool")]
+    public IList<V1beta1VirtualNetworkSpecForProviderIpAddressPool>? IpAddressPool { get; set; }
+
     /// <summary>The location/region where the virtual network is created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The Private Endpoint VNet Policies for the Virtual Network. Possible values are Disabled and Basic. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointVnetPolicies")]
+    public string? PrivateEndpointVnetPolicies { get; set; }
 
     /// <summary>The name of the resource group in which to create the virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
@@ -161,6 +182,19 @@ public partial class V1beta1VirtualNetworkSpecInitProviderEncryption
     public string? Enforcement { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkSpecInitProviderIpAddressPool
+{
+    /// <summary>The ID of the Network Manager IP Address Management (IPAM) Pool.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The number of IP addresses to allocated to the Virtual Network. The value must be a string that represents a positive number, e.g., "100".</summary>
+    [JsonPropertyName("numberOfIpAddresses")]
+    public string? NumberOfIpAddresses { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkSpecInitProvider
@@ -193,9 +227,17 @@ public partial class V1beta1VirtualNetworkSpecInitProvider
     [JsonPropertyName("flowTimeoutInMinutes")]
     public double? FlowTimeoutInMinutes { get; set; }
 
+    /// <summary>One or two ip_address_pool blocks as defined below. Only one association of each IP type(IPv4 or IPv6) is allowed.</summary>
+    [JsonPropertyName("ipAddressPool")]
+    public IList<V1beta1VirtualNetworkSpecInitProviderIpAddressPool>? IpAddressPool { get; set; }
+
     /// <summary>The location/region where the virtual network is created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The Private Endpoint VNet Policies for the Virtual Network. Possible values are Disabled and Basic. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointVnetPolicies")]
+    public string? PrivateEndpointVnetPolicies { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
@@ -358,11 +400,62 @@ public partial class V1beta1VirtualNetworkStatusAtProviderEncryption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkStatusAtProviderIpAddressPool
+{
+    /// <summary>The list of IP address prefixes allocated to the Virtual Network.</summary>
+    [JsonPropertyName("allocatedIpAddressPrefixes")]
+    public IList<string>? AllocatedIpAddressPrefixes { get; set; }
+
+    /// <summary>The ID of the Network Manager IP Address Management (IPAM) Pool.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The number of IP addresses to allocated to the Virtual Network. The value must be a string that represents a positive number, e.g., "100".</summary>
+    [JsonPropertyName("numberOfIpAddresses")]
+    public string? NumberOfIpAddresses { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkStatusAtProviderSubnetDelegationServiceDelegation
+{
+    /// <summary>A list of Actions which should be delegated. This list is specific to the service to delegate to. Possible values are Microsoft.Network/networkinterfaces/*, Microsoft.Network/publicIPAddresses/join/action, Microsoft.Network/publicIPAddresses/read, Microsoft.Network/virtualNetworks/read, Microsoft.Network/virtualNetworks/subnets/action, Microsoft.Network/virtualNetworks/subnets/join/action, Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action, and Microsoft.Network/virtualNetworks/subnets/unprepareNetworkPolicies/action.</summary>
+    [JsonPropertyName("actions")]
+    public IList<string>? Actions { get; set; }
+
+    /// <summary>The name of the subnet.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VirtualNetworkStatusAtProviderSubnetDelegation
+{
+    /// <summary>The name of the subnet.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>A service_delegation block as defined below.</summary>
+    [JsonPropertyName("serviceDelegation")]
+    public IList<V1beta1VirtualNetworkStatusAtProviderSubnetDelegationServiceDelegation>? ServiceDelegation { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualNetworkStatusAtProviderSubnet
 {
-    /// <summary>The address prefix to use for the subnet.</summary>
-    [JsonPropertyName("addressPrefix")]
-    public string? AddressPrefix { get; set; }
+    /// <summary>The address prefixes to use for the subnet.</summary>
+    [JsonPropertyName("addressPrefixes")]
+    public IList<string>? AddressPrefixes { get; set; }
+
+    /// <summary>Enable default outbound access to the internet for the subnet. Defaults to true.</summary>
+    [JsonPropertyName("defaultOutboundAccessEnabled")]
+    public bool? DefaultOutboundAccessEnabled { get; set; }
+
+    /// <summary>One or more delegation blocks as defined below.</summary>
+    [JsonPropertyName("delegation")]
+    public IList<V1beta1VirtualNetworkStatusAtProviderSubnetDelegation>? Delegation { get; set; }
 
     /// <summary>The ID of this subnet.</summary>
     [JsonPropertyName("id")]
@@ -372,9 +465,29 @@ public partial class V1beta1VirtualNetworkStatusAtProviderSubnet
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The Network Security Group to associate with the subnet. (Referenced by id, ie. azurerm_network_security_group.example.id)</summary>
+    /// <summary>Enable or Disable network policies for the private endpoint on the subnet. Possible values are Disabled, Enabled, NetworkSecurityGroupEnabled and RouteTableEnabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointNetworkPolicies")]
+    public string? PrivateEndpointNetworkPolicies { get; set; }
+
+    /// <summary>Enable or Disable network policies for the private link service on the subnet. Defaults to true.</summary>
+    [JsonPropertyName("privateLinkServiceNetworkPoliciesEnabled")]
+    public bool? PrivateLinkServiceNetworkPoliciesEnabled { get; set; }
+
+    /// <summary>The ID of the Route Table that should be associated with this subnet.</summary>
+    [JsonPropertyName("routeTableId")]
+    public string? RouteTableId { get; set; }
+
+    /// <summary>The Network Security Group to associate with the subnet. (Referenced by id, i.e. azurerm_network_security_group.example.id)</summary>
     [JsonPropertyName("securityGroup")]
     public string? SecurityGroup { get; set; }
+
+    /// <summary>The list of IDs of Service Endpoint Policies to associate with the subnet.</summary>
+    [JsonPropertyName("serviceEndpointPolicyIds")]
+    public IList<string>? ServiceEndpointPolicyIds { get; set; }
+
+    /// <summary>The list of Service endpoints to associate with the subnet. Possible values include: Microsoft.AzureActiveDirectory, Microsoft.AzureCosmosDB, Microsoft.ContainerRegistry, Microsoft.EventHub, Microsoft.KeyVault, Microsoft.ServiceBus, Microsoft.Sql, Microsoft.Storage, Microsoft.Storage.Global and Microsoft.Web.</summary>
+    [JsonPropertyName("serviceEndpoints")]
+    public IList<string>? ServiceEndpoints { get; set; }
 }
 
 /// <summary></summary>
@@ -409,17 +522,25 @@ public partial class V1beta1VirtualNetworkStatusAtProvider
     [JsonPropertyName("flowTimeoutInMinutes")]
     public double? FlowTimeoutInMinutes { get; set; }
 
-    /// <summary>The GUID of the virtual network.</summary>
+    /// <summary>The GUID of the Virtual Network.</summary>
     [JsonPropertyName("guid")]
     public string? Guid { get; set; }
 
-    /// <summary>The virtual NetworkConfiguration ID.</summary>
+    /// <summary>The Virtual Network ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>One or two ip_address_pool blocks as defined below. Only one association of each IP type(IPv4 or IPv6) is allowed.</summary>
+    [JsonPropertyName("ipAddressPool")]
+    public IList<V1beta1VirtualNetworkStatusAtProviderIpAddressPool>? IpAddressPool { get; set; }
 
     /// <summary>The location/region where the virtual network is created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>The Private Endpoint VNet Policies for the Virtual Network. Possible values are Disabled and Basic. Defaults to Disabled.</summary>
+    [JsonPropertyName("privateEndpointVnetPolicies")]
+    public string? PrivateEndpointVnetPolicies { get; set; }
 
     /// <summary>The name of the resource group in which to create the virtual network. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

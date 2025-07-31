@@ -156,7 +156,7 @@ public partial class V1beta1ClusterPrincipalAssignmentSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1ClusterPrincipalAssignmentSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
-    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin and AllDatabasesViewer. Changing this forces a new resource to be created.</summary>
+    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin, AllDatabasesViewer, and AllDatabasesMonitor. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1beta1ClusterPrincipalAssignmentSpecInitProvider
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin and AllDatabasesViewer. Changing this forces a new resource to be created.</summary>
+    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin, AllDatabasesViewer, and AllDatabasesMonitor. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 
@@ -346,7 +346,7 @@ public partial class V1beta1ClusterPrincipalAssignmentStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
-    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin and AllDatabasesViewer. Changing this forces a new resource to be created.</summary>
+    /// <summary>The cluster role assigned to the principal. Valid values include AllDatabasesAdmin, AllDatabasesViewer, and AllDatabasesMonitor. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("role")]
     public string? Role { get; set; }
 

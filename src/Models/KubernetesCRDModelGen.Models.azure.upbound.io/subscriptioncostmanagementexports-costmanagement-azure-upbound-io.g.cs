@@ -170,6 +170,10 @@ public partial class V1beta1SubscriptionCostManagementExportSpecForProvider
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1SubscriptionCostManagementExportSpecForProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
 
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
     /// <summary>Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -360,6 +364,10 @@ public partial class V1beta1SubscriptionCostManagementExportSpecInitProvider
     /// <summary>A export_data_storage_location block as defined below.</summary>
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1SubscriptionCostManagementExportSpecInitProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
+
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
 
     /// <summary>Specifies the name of the Cost Management Export. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
@@ -563,6 +571,10 @@ public partial class V1beta1SubscriptionCostManagementExportStatusAtProvider
     /// <summary>A export_data_storage_location block as defined below.</summary>
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1SubscriptionCostManagementExportStatusAtProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
+
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
 
     /// <summary>The ID of the Cost Management Export for this Subscription.</summary>
     [JsonPropertyName("id")]

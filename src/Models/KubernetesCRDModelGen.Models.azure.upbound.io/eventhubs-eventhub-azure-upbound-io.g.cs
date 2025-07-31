@@ -60,6 +60,62 @@ public partial class V1beta1EventHubSpecForProviderCaptureDescription
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecForProviderNamespaceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecForProviderNamespaceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventHubSpecForProviderNamespaceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecForProviderNamespaceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecForProviderNamespaceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventHubSpecForProviderNamespaceIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubSpecForProviderNamespaceNameRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -182,7 +238,19 @@ public partial class V1beta1EventHubSpecForProvider
     [JsonPropertyName("messageRetention")]
     public double? MessageRetention { get; set; }
 
-    /// <summary>Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the ID of the EventHub Namespace. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("namespaceId")]
+    public string? NamespaceId { get; set; }
+
+    /// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceId.</summary>
+    [JsonPropertyName("namespaceIdRef")]
+    public V1beta1EventHubSpecForProviderNamespaceIdRef? NamespaceIdRef { get; set; }
+
+    /// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceId.</summary>
+    [JsonPropertyName("namespaceIdSelector")]
+    public V1beta1EventHubSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
+
+    /// <summary>Specifies the name of the EventHub resource. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("namespaceName")]
     public string? NamespaceName { get; set; }
 
@@ -198,7 +266,7 @@ public partial class V1beta1EventHubSpecForProvider
     [JsonPropertyName("partitionCount")]
     public double? PartitionCount { get; set; }
 
-    /// <summary>The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the EventHub resource. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -265,6 +333,62 @@ public partial class V1beta1EventHubSpecInitProviderCaptureDescription
     public bool? SkipEmptyArchives { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecInitProviderNamespaceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecInitProviderNamespaceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventHubSpecInitProviderNamespaceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecInitProviderNamespaceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventHubSpecInitProviderNamespaceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventHubSpecInitProviderNamespaceIdSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventHubSpecInitProvider
@@ -276,6 +400,18 @@ public partial class V1beta1EventHubSpecInitProvider
     /// <summary>Specifies the number of days to retain the events for this Event Hub.</summary>
     [JsonPropertyName("messageRetention")]
     public double? MessageRetention { get; set; }
+
+    /// <summary>Specifies the ID of the EventHub Namespace. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("namespaceId")]
+    public string? NamespaceId { get; set; }
+
+    /// <summary>Reference to a EventHubNamespace in eventhub to populate namespaceId.</summary>
+    [JsonPropertyName("namespaceIdRef")]
+    public V1beta1EventHubSpecInitProviderNamespaceIdRef? NamespaceIdRef { get; set; }
+
+    /// <summary>Selector for a EventHubNamespace in eventhub to populate namespaceId.</summary>
+    [JsonPropertyName("namespaceIdSelector")]
+    public V1beta1EventHubSpecInitProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
 
     /// <summary>Specifies the current number of shards on the Event Hub.</summary>
     [JsonPropertyName("partitionCount")]
@@ -484,7 +620,11 @@ public partial class V1beta1EventHubStatusAtProvider
     [JsonPropertyName("messageRetention")]
     public double? MessageRetention { get; set; }
 
-    /// <summary>Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the ID of the EventHub Namespace. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("namespaceId")]
+    public string? NamespaceId { get; set; }
+
+    /// <summary>Specifies the name of the EventHub resource. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("namespaceName")]
     public string? NamespaceName { get; set; }
 
@@ -496,7 +636,7 @@ public partial class V1beta1EventHubStatusAtProvider
     [JsonPropertyName("partitionIds")]
     public IList<string>? PartitionIds { get; set; }
 
-    /// <summary>The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the name of the EventHub resource. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 

@@ -408,6 +408,10 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>The Resource Manager ID of this Storage Table. The Resource Manager ID of this Storage Table.</summary>
+    [JsonPropertyName("resourceManagerId")]
+    public string? ResourceManagerId { get; set; }
+
     /// <summary>Specifies the storage account in which to create the storage table. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageAccountName")]
     public string? StorageAccountName { get; set; }

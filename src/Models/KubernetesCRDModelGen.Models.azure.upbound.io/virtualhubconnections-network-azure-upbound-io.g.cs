@@ -182,6 +182,10 @@ public partial class V1beta1VirtualHubConnectionSpecForProviderRouting
     [JsonPropertyName("staticVnetLocalRouteOverrideCriteria")]
     public string? StaticVnetLocalRouteOverrideCriteria { get; set; }
 
+    /// <summary>Whether the static routes should be propagated to the Virtual Hub. Defaults to true.</summary>
+    [JsonPropertyName("staticVnetPropagateStaticRoutesEnabled")]
+    public bool? StaticVnetPropagateStaticRoutesEnabled { get; set; }
+
     /// <summary>A static_vnet_route block as defined below.</summary>
     [JsonPropertyName("staticVnetRoute")]
     public IList<V1beta1VirtualHubConnectionSpecForProviderRoutingStaticVnetRoute>? StaticVnetRoute { get; set; }
@@ -454,6 +458,10 @@ public partial class V1beta1VirtualHubConnectionSpecInitProviderRouting
     [JsonPropertyName("staticVnetLocalRouteOverrideCriteria")]
     public string? StaticVnetLocalRouteOverrideCriteria { get; set; }
 
+    /// <summary>Whether the static routes should be propagated to the Virtual Hub. Defaults to true.</summary>
+    [JsonPropertyName("staticVnetPropagateStaticRoutesEnabled")]
+    public bool? StaticVnetPropagateStaticRoutesEnabled { get; set; }
+
     /// <summary>A static_vnet_route block as defined below.</summary>
     [JsonPropertyName("staticVnetRoute")]
     public IList<V1beta1VirtualHubConnectionSpecInitProviderRoutingStaticVnetRoute>? StaticVnetRoute { get; set; }
@@ -669,6 +677,10 @@ public partial class V1beta1VirtualHubConnectionStatusAtProviderRouting
     /// <summary>The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("staticVnetLocalRouteOverrideCriteria")]
     public string? StaticVnetLocalRouteOverrideCriteria { get; set; }
+
+    /// <summary>Whether the static routes should be propagated to the Virtual Hub. Defaults to true.</summary>
+    [JsonPropertyName("staticVnetPropagateStaticRoutesEnabled")]
+    public bool? StaticVnetPropagateStaticRoutesEnabled { get; set; }
 
     /// <summary>A static_vnet_route block as defined below.</summary>
     [JsonPropertyName("staticVnetRoute")]

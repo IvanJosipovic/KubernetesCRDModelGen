@@ -68,43 +68,31 @@ public partial class V1beta1TopicSpecForProviderNamespaceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecForProvider
 {
-    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes.</summary>
+    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
+    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes. (PT10M)</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
-    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document.</summary>
+    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document. Defaults to 256.</summary>
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document. Defaults to 5120.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
@@ -120,7 +108,7 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("namespaceIdSelector")]
     public V1beta1TopicSpecForProviderNamespaceIdSelector? NamespaceIdSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 
@@ -141,47 +129,35 @@ public partial class V1beta1TopicSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicSpecInitProvider
 {
-    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes.</summary>
+    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
+    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes. (PT10M)</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
-    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document.</summary>
+    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document. Defaults to 256.</summary>
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document. Defaults to 5120.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 
@@ -334,35 +310,23 @@ public partial class V1beta1TopicSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicStatusAtProvider
 {
-    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes.</summary>
+    /// <summary>The ISO 8601 timespan duration of the idle interval after which the Topic is automatically deleted, minimum of 5 minutes. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself.</summary>
+    /// <summary>The ISO 8601 timespan duration of TTL of messages sent to this topic if no TTL value is set on the message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
 
-    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to 10 minutes. (PT10M)</summary>
+    /// <summary>The ISO 8601 timespan duration during which duplicates can be detected. Defaults to PT10M (10 Minutes).</summary>
     [JsonPropertyName("duplicateDetectionHistoryTimeWindow")]
     public string? DuplicateDetectionHistoryTimeWindow { get; set; }
 
-    /// <summary>Boolean flag which controls if server-side batched operations are enabled.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
-
     /// <summary>Boolean flag which controls whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.</summary>
-    [JsonPropertyName("enableExpress")]
-    public bool? EnableExpress { get; set; }
-
-    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("enablePartitioning")]
-    public bool? EnablePartitioning { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("expressEnabled")]
     public bool? ExpressEnabled { get; set; }
 
@@ -370,11 +334,11 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document.</summary>
+    /// <summary>Integer value which controls the maximum size of a message allowed on the topic for Premium SKU. For supported values see the "Large messages support" section of this document. Defaults to 256.</summary>
     [JsonPropertyName("maxMessageSizeInKilobytes")]
     public double? MaxMessageSizeInKilobytes { get; set; }
 
-    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document.</summary>
+    /// <summary>Integer value which controls the size of memory allocated for the topic. For supported values see the "Queue/topic size" section of this document. Defaults to 5120.</summary>
     [JsonPropertyName("maxSizeInMegabytes")]
     public double? MaxSizeInMegabytes { get; set; }
 
@@ -382,7 +346,7 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether to enable the topic to be partitioned across multiple message brokers. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("partitioningEnabled")]
     public bool? PartitioningEnabled { get; set; }
 

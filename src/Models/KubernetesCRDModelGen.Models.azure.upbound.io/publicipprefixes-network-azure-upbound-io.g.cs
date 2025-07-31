@@ -96,6 +96,10 @@ public partial class V1beta1PublicIPPrefixSpecForProvider
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
+    /// <summary>The SKU Tier that should be used for the Public IP. Possible values are Regional and Global. Defaults to Regional. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuTier")]
+    public string? SkuTier { get; set; }
+
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -124,6 +128,10 @@ public partial class V1beta1PublicIPPrefixSpecInitProvider
     /// <summary>The SKU of the Public IP Prefix. Accepted values are Standard. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
+
+    /// <summary>The SKU Tier that should be used for the Public IP. Possible values are Regional and Global. Defaults to Regional. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuTier")]
+    public string? SkuTier { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
@@ -297,6 +305,10 @@ public partial class V1beta1PublicIPPrefixStatusAtProvider
     /// <summary>The SKU of the Public IP Prefix. Accepted values are Standard. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
+
+    /// <summary>The SKU Tier that should be used for the Public IP. Possible values are Regional and Global. Defaults to Regional. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuTier")]
+    public string? SkuTier { get; set; }
 
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]

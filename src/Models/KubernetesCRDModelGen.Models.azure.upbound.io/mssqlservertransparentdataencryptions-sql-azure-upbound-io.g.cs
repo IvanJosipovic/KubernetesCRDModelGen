@@ -140,7 +140,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecForProvider
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecForProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
 
-    /// <summary>The ID of the MSSQL encryption protector</summary>
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
     [JsonPropertyName("managedHsmKeyId")]
     public string? ManagedHsmKeyId { get; set; }
 
@@ -233,7 +233,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionSpecInitProvider
     [JsonPropertyName("keyVaultKeyIdSelector")]
     public V1beta1MSSQLServerTransparentDataEncryptionSpecInitProviderKeyVaultKeyIdSelector? KeyVaultKeyIdSelector { get; set; }
 
-    /// <summary>The ID of the MSSQL encryption protector</summary>
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
     [JsonPropertyName("managedHsmKeyId")]
     public string? ManagedHsmKeyId { get; set; }
 }
@@ -386,7 +386,7 @@ public partial class V1beta1MSSQLServerTransparentDataEncryptionStatusAtProvider
     [JsonPropertyName("keyVaultKeyId")]
     public string? KeyVaultKeyId { get; set; }
 
-    /// <summary>The ID of the MSSQL encryption protector</summary>
+    /// <summary>To use customer managed keys from a managed HSM, provide the Managed HSM Key ID. To use service managed keys, omit this field.</summary>
     [JsonPropertyName("managedHsmKeyId")]
     public string? ManagedHsmKeyId { get; set; }
 

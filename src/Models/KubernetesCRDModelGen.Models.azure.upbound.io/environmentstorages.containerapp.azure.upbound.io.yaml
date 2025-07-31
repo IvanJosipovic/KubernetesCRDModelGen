@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: environmentstorages.containerapp.azure.upbound.io
 spec:
   group: containerapp.azure.upbound.io
@@ -294,6 +294,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  nfsServerUrl:
+                    description: The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.
+                    type: string
                   shareName:
                     description: >-
                       The name of the Azure Storage Share to use. Changing this forces a new resource to be created.
@@ -527,6 +530,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  nfsServerUrl:
+                    description: The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.
+                    type: string
                   shareName:
                     description: >-
                       The name of the Azure Storage Share to use. Changing this forces a new resource to be created.
@@ -619,8 +625,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                required:
-                - accessKeySecretRef
                 type: object
               managementPolicies:
                 default:
@@ -831,8 +835,6 @@ spec:
             - forProvider
             type: object
             x-kubernetes-validations:
-            - message: spec.forProvider.accessKeySecretRef is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.accessKeySecretRef)"
             - message: spec.forProvider.accessMode is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.accessMode) || (has(self.initProvider) && has(self.initProvider.accessMode))"
           status:
@@ -860,6 +862,9 @@ spec:
                     type: string
                   id:
                     description: The ID of the Container App Environment Storage
+                    type: string
+                  nfsServerUrl:
+                    description: The NFS server to use for the Azure File Share, the format will be yourstorageaccountname.file.core.windows.net. Changing this forces a new resource to be created.
                     type: string
                   shareName:
                     description: >-

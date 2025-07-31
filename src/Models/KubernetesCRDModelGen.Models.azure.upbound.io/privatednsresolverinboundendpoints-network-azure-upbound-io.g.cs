@@ -64,7 +64,7 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointSpecForProviderIpCo
     public V1beta1PrivateDNSResolverInboundEndpointSpecForProviderIpConfigurationsSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverInboundEndpointSpecForProviderIpConfigurations
 {
@@ -149,9 +149,9 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointSpecForProviderPriv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverInboundEndpointSpecForProvider
 {
-    /// <summary>Can be specified multiple times to define multiple IP configurations. Each ip_configurations block as defined below.</summary>
+    /// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1beta1PrivateDNSResolverInboundEndpointSpecForProviderIpConfigurations>? IpConfigurations { get; set; }
+    public V1beta1PrivateDNSResolverInboundEndpointSpecForProviderIpConfigurations? IpConfigurations { get; set; }
 
     /// <summary>Specifies the Azure Region where the Private DNS Resolver Inbound Endpoint should exist. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("location")]
@@ -230,7 +230,7 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpC
     public V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpConfigurationsSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpConfigurations
 {
@@ -259,9 +259,9 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverInboundEndpointSpecInitProvider
 {
-    /// <summary>Can be specified multiple times to define multiple IP configurations. Each ip_configurations block as defined below.</summary>
+    /// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpConfigurations>? IpConfigurations { get; set; }
+    public V1beta1PrivateDNSResolverInboundEndpointSpecInitProviderIpConfigurations? IpConfigurations { get; set; }
 
     /// <summary>Specifies the Azure Region where the Private DNS Resolver Inbound Endpoint should exist. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("location")]
@@ -404,7 +404,7 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointSpec
     public V1beta1PrivateDNSResolverInboundEndpointSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSResolverInboundEndpointStatusAtProviderIpConfigurations
 {
@@ -429,9 +429,9 @@ public partial class V1beta1PrivateDNSResolverInboundEndpointStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Can be specified multiple times to define multiple IP configurations. Each ip_configurations block as defined below.</summary>
+    /// <summary>One ip_configurations block as defined below. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("ipConfigurations")]
-    public IList<V1beta1PrivateDNSResolverInboundEndpointStatusAtProviderIpConfigurations>? IpConfigurations { get; set; }
+    public V1beta1PrivateDNSResolverInboundEndpointStatusAtProviderIpConfigurations? IpConfigurations { get; set; }
 
     /// <summary>Specifies the Azure Region where the Private DNS Resolver Inbound Endpoint should exist. Changing this forces a new Private DNS Resolver Inbound Endpoint to be created.</summary>
     [JsonPropertyName("location")]

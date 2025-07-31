@@ -29,7 +29,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderAut
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 30 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT30M to PT90M). Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -436,7 +436,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsProfileLinuxConfigurationAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -531,7 +531,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsP
 {
     /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("contentSecretRef")]
-    public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsProfileWindowsConfigurationAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsProfileWindowsConfigurationAdditionalUnattendContentContentSecretRef? ContentSecretRef { get; set; }
 
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
@@ -604,7 +604,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsP
 
     /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminPasswordSecretRef")]
-    public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsProfileWindowsConfigurationAdminPasswordSecretRef AdminPasswordSecretRef { get; set; }
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderOsProfileWindowsConfigurationAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
 
     /// <summary>The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
@@ -752,6 +752,52 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderRes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderRollingUpgradePolicy
+{
+    /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
+    [JsonPropertyName("crossZoneUpgradesEnabled")]
+    public bool? CrossZoneUpgradesEnabled { get; set; }
+
+    /// <summary>The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</summary>
+    [JsonPropertyName("maxBatchInstancePercent")]
+    public double? MaxBatchInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.</summary>
+    [JsonPropertyName("maxUnhealthyInstancePercent")]
+    public double? MaxUnhealthyInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.</summary>
+    [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
+    public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
+
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
+    /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 duration format.</summary>
+    [JsonPropertyName("pauseTimeBetweenBatches")]
+    public string? PauseTimeBetweenBatches { get; set; }
+
+    /// <summary>Upgrade all unhealthy instances in a scale set before any healthy instances. Possible values are true or false.</summary>
+    [JsonPropertyName("prioritizeUnhealthyInstancesEnabled")]
+    public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderSkuProfile
+{
+    /// <summary>Specifies the allocation strategy for the virtual machine scale set based on which the VMs will be allocated. Possible values are LowestPrice and CapacityOptimized.</summary>
+    [JsonPropertyName("allocationStrategy")]
+    public string? AllocationStrategy { get; set; }
+
+    /// <summary>Specifies the VM sizes for the virtual machine scale set.</summary>
+    [JsonPropertyName("vmSizes")]
+    public IList<string>? VmSizes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -775,7 +821,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderSou
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderTerminationNotification
 {
-    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false</summary>
+    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -909,6 +955,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("resourceGroupNameSelector")]
     public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
 
+    /// <summary>A rolling_upgrade_policy block as defined below. This is Required when upgrade_mode is set to Rolling and cannot be specified when upgrade_mode is set to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("rollingUpgradePolicy")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderRollingUpgradePolicy>? RollingUpgradePolicy { get; set; }
+
     /// <summary>Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Possible values are true or false.</summary>
     [JsonPropertyName("singlePlacementGroup")]
     public bool? SinglePlacementGroup { get; set; }
@@ -916,6 +966,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProvider
     /// <summary>The name of the SKU to be used by this Virtual Machine Scale Set. Valid values include: any of the General purpose, Compute optimized, Memory optimized, Storage optimized, GPU optimized, FPGA optimized, High performance, or Previous generation virtual machine SKUs.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
+
+    /// <summary>An sku_profile block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuProfile")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderSkuProfile>? SkuProfile { get; set; }
 
     /// <summary>The ID of an Image which each Virtual Machine in this Scale Set should be based on. Possible Image ID types include Image IDs, Shared Image IDs, Shared Image Version IDs, Community Gallery Image IDs, Community Gallery Image Version IDs, Shared Gallery Image IDs and Shared Gallery Image Version IDs.</summary>
     [JsonPropertyName("sourceImageId")]
@@ -933,6 +987,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderTerminationNotification>? TerminationNotification { get; set; }
 
+    /// <summary>Specifies how upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are Automatic, Manual and Rolling. Defaults to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("upgradeMode")]
+    public string? UpgradeMode { get; set; }
+
     /// <summary>The Base64-Encoded User Data which should be used for this Virtual Machine Scale Set.</summary>
     [JsonPropertyName("userDataBase64SecretRef")]
     public V1beta1OrchestratedVirtualMachineScaleSetSpecForProviderUserDataBase64SecretRef? UserDataBase64SecretRef { get; set; }
@@ -941,7 +999,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecForProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances. Changing this forces a new Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -967,7 +1025,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderAu
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 30 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT30M to PT90M). Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -1374,7 +1432,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -1446,13 +1504,51 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileLinuxConfigurationSecret>? Secret { get; set; }
 }
 
+/// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdditionalUnattendContentContentSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdditionalUnattendContent
 {
+    /// <summary>The XML formatted content that is added to the unattend.xml file for the specified path and component. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("contentSecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdditionalUnattendContentContentSecretRef ContentSecretRef { get; set; }
+
     /// <summary>The name of the setting to which the content applies. Possible values are AutoLogon and FirstLogonCommands. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("setting")]
     public string? Setting { get; set; }
+}
+
+/// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdminPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -1501,6 +1597,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOs
     /// <summary>One or more additional_unattend_content blocks as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("additionalUnattendContent")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdditionalUnattendContent>? AdditionalUnattendContent { get; set; }
+
+    /// <summary>The Password which should be used for the local-administrator on this Virtual Machine. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("adminPasswordSecretRef")]
+    public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderOsProfileWindowsConfigurationAdminPasswordSecretRef AdminPasswordSecretRef { get; set; }
 
     /// <summary>The username of the local administrator on each Virtual Machine Scale Set instance. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
@@ -1592,6 +1692,52 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderPr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderRollingUpgradePolicy
+{
+    /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
+    [JsonPropertyName("crossZoneUpgradesEnabled")]
+    public bool? CrossZoneUpgradesEnabled { get; set; }
+
+    /// <summary>The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</summary>
+    [JsonPropertyName("maxBatchInstancePercent")]
+    public double? MaxBatchInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.</summary>
+    [JsonPropertyName("maxUnhealthyInstancePercent")]
+    public double? MaxUnhealthyInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.</summary>
+    [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
+    public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
+
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
+    /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 duration format.</summary>
+    [JsonPropertyName("pauseTimeBetweenBatches")]
+    public string? PauseTimeBetweenBatches { get; set; }
+
+    /// <summary>Upgrade all unhealthy instances in a scale set before any healthy instances. Possible values are true or false.</summary>
+    [JsonPropertyName("prioritizeUnhealthyInstancesEnabled")]
+    public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderSkuProfile
+{
+    /// <summary>Specifies the allocation strategy for the virtual machine scale set based on which the VMs will be allocated. Possible values are LowestPrice and CapacityOptimized.</summary>
+    [JsonPropertyName("allocationStrategy")]
+    public string? AllocationStrategy { get; set; }
+
+    /// <summary>Specifies the VM sizes for the virtual machine scale set.</summary>
+    [JsonPropertyName("vmSizes")]
+    public IList<string>? VmSizes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -1615,7 +1761,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderSo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderTerminationNotification
 {
-    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false</summary>
+    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -1737,6 +1883,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("proximityPlacementGroupId")]
     public string? ProximityPlacementGroupId { get; set; }
 
+    /// <summary>A rolling_upgrade_policy block as defined below. This is Required when upgrade_mode is set to Rolling and cannot be specified when upgrade_mode is set to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("rollingUpgradePolicy")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderRollingUpgradePolicy>? RollingUpgradePolicy { get; set; }
+
     /// <summary>Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Possible values are true or false.</summary>
     [JsonPropertyName("singlePlacementGroup")]
     public bool? SinglePlacementGroup { get; set; }
@@ -1744,6 +1894,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProvider
     /// <summary>The name of the SKU to be used by this Virtual Machine Scale Set. Valid values include: any of the General purpose, Compute optimized, Memory optimized, Storage optimized, GPU optimized, FPGA optimized, High performance, or Previous generation virtual machine SKUs.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
+
+    /// <summary>An sku_profile block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuProfile")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderSkuProfile>? SkuProfile { get; set; }
 
     /// <summary>The ID of an Image which each Virtual Machine in this Scale Set should be based on. Possible Image ID types include Image IDs, Shared Image IDs, Shared Image Version IDs, Community Gallery Image IDs, Community Gallery Image Version IDs, Shared Gallery Image IDs and Shared Gallery Image Version IDs.</summary>
     [JsonPropertyName("sourceImageId")]
@@ -1761,6 +1915,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("terminationNotification")]
     public IList<V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderTerminationNotification>? TerminationNotification { get; set; }
 
+    /// <summary>Specifies how upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are Automatic, Manual and Rolling. Defaults to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("upgradeMode")]
+    public string? UpgradeMode { get; set; }
+
     /// <summary>The Base64-Encoded User Data which should be used for this Virtual Machine Scale Set.</summary>
     [JsonPropertyName("userDataBase64SecretRef")]
     public V1beta1OrchestratedVirtualMachineScaleSetSpecInitProviderUserDataBase64SecretRef? UserDataBase64SecretRef { get; set; }
@@ -1769,7 +1927,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetSpecInitProvider
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances. Changing this forces a new Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -1927,7 +2085,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderAu
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 30 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT30M to PT90M). Defaults to PT30M.</summary>
+    /// <summary>Amount of time for which automatic repairs will be delayed. The grace period starts right after the VM is found unhealthy. Possible values are between 10 and 90 minutes. The time duration should be specified in ISO 8601 format (e.g. PT10M to PT90M).</summary>
     [JsonPropertyName("gracePeriod")]
     public string? GracePeriod { get; set; }
 }
@@ -2215,7 +2373,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderOs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderOsProfileLinuxConfigurationAdminSshKey
 {
-    /// <summary>The Public Key which should be used for authentication, which needs to be at least 2048-bit and in ssh-rsa format.</summary>
+    /// <summary>The Public Key which should be used for authentication, which needs to be in ssh-rsa format with at least 2048-bit or in ssh-ed25519 format.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -2425,6 +2583,52 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderPr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderRollingUpgradePolicy
+{
+    /// <summary>Should the Virtual Machine Scale Set ignore the Azure Zone boundaries when constructing upgrade batches? Possible values are true or false.</summary>
+    [JsonPropertyName("crossZoneUpgradesEnabled")]
+    public bool? CrossZoneUpgradesEnabled { get; set; }
+
+    /// <summary>The maximum percent of total virtual machine instances that will be upgraded simultaneously by the rolling upgrade in one batch. As this is a maximum, unhealthy instances in previous or future batches can cause the percentage of instances in a batch to decrease to ensure higher reliability.</summary>
+    [JsonPropertyName("maxBatchInstancePercent")]
+    public double? MaxBatchInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of the total virtual machine instances in the scale set that can be simultaneously unhealthy, either as a result of being upgraded, or by being found in an unhealthy state by the virtual machine health checks before the rolling upgrade aborts. This constraint will be checked prior to starting any batch.</summary>
+    [JsonPropertyName("maxUnhealthyInstancePercent")]
+    public double? MaxUnhealthyInstancePercent { get; set; }
+
+    /// <summary>The maximum percentage of upgraded virtual machine instances that can be found to be in an unhealthy state. This check will happen after each batch is upgraded. If this percentage is ever exceeded, the rolling update aborts.</summary>
+    [JsonPropertyName("maxUnhealthyUpgradedInstancePercent")]
+    public double? MaxUnhealthyUpgradedInstancePercent { get; set; }
+
+    /// <summary>Create new virtual machines to upgrade the scale set, rather than updating the existing virtual machines. Existing virtual machines will be deleted once the new virtual machines are created for each batch. Possible values are true or false.</summary>
+    [JsonPropertyName("maximumSurgeInstancesEnabled")]
+    public bool? MaximumSurgeInstancesEnabled { get; set; }
+
+    /// <summary>The wait time between completing the update for all virtual machines in one batch and starting the next batch. The time duration should be specified in ISO 8601 duration format.</summary>
+    [JsonPropertyName("pauseTimeBetweenBatches")]
+    public string? PauseTimeBetweenBatches { get; set; }
+
+    /// <summary>Upgrade all unhealthy instances in a scale set before any healthy instances. Possible values are true or false.</summary>
+    [JsonPropertyName("prioritizeUnhealthyInstancesEnabled")]
+    public bool? PrioritizeUnhealthyInstancesEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderSkuProfile
+{
+    /// <summary>Specifies the allocation strategy for the virtual machine scale set based on which the VMs will be allocated. Possible values are LowestPrice and CapacityOptimized.</summary>
+    [JsonPropertyName("allocationStrategy")]
+    public string? AllocationStrategy { get; set; }
+
+    /// <summary>Specifies the VM sizes for the virtual machine scale set.</summary>
+    [JsonPropertyName("vmSizes")]
+    public IList<string>? VmSizes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderSourceImageReference
 {
     /// <summary>Specifies the offer of the image used to create the virtual machines. Changing this forces a new resource to be created.</summary>
@@ -2448,7 +2652,7 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderSo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderTerminationNotification
 {
-    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false</summary>
+    /// <summary>Should the termination notification be enabled on this Virtual Machine Scale Set? Possible values true or false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -2561,6 +2765,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
+    /// <summary>A rolling_upgrade_policy block as defined below. This is Required when upgrade_mode is set to Rolling and cannot be specified when upgrade_mode is set to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("rollingUpgradePolicy")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderRollingUpgradePolicy>? RollingUpgradePolicy { get; set; }
+
     /// <summary>Should this Virtual Machine Scale Set be limited to a Single Placement Group, which means the number of instances will be capped at 100 Virtual Machines. Possible values are true or false.</summary>
     [JsonPropertyName("singlePlacementGroup")]
     public bool? SinglePlacementGroup { get; set; }
@@ -2568,6 +2776,10 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProvider
     /// <summary>The name of the SKU to be used by this Virtual Machine Scale Set. Valid values include: any of the General purpose, Compute optimized, Memory optimized, Storage optimized, GPU optimized, FPGA optimized, High performance, or Previous generation virtual machine SKUs.</summary>
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
+
+    /// <summary>An sku_profile block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("skuProfile")]
+    public IList<V1beta1OrchestratedVirtualMachineScaleSetStatusAtProviderSkuProfile>? SkuProfile { get; set; }
 
     /// <summary>The ID of an Image which each Virtual Machine in this Scale Set should be based on. Possible Image ID types include Image IDs, Shared Image IDs, Shared Image Version IDs, Community Gallery Image IDs, Community Gallery Image Version IDs, Shared Gallery Image IDs and Shared Gallery Image Version IDs.</summary>
     [JsonPropertyName("sourceImageId")]
@@ -2589,11 +2801,15 @@ public partial class V1beta1OrchestratedVirtualMachineScaleSetStatusAtProvider
     [JsonPropertyName("uniqueId")]
     public string? UniqueId { get; set; }
 
+    /// <summary>Specifies how upgrades (e.g. changing the Image/SKU) should be performed to Virtual Machine Instances. Possible values are Automatic, Manual and Rolling. Defaults to Manual. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("upgradeMode")]
+    public string? UpgradeMode { get; set; }
+
     /// <summary>Should the Virtual Machines in this Scale Set be strictly evenly distributed across Availability Zones? Defaults to false. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("zoneBalance")]
     public bool? ZoneBalance { get; set; }
 
-    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances. Changing this forces a new Virtual Machine Scale Set to be created.</summary>
+    /// <summary>Specifies a list of Availability Zones across which the Virtual Machine Scale Set will create instances.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }

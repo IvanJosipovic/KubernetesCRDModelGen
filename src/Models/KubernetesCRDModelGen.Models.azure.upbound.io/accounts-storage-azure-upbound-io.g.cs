@@ -206,7 +206,7 @@ public partial class V1beta1AccountSpecForProviderImmutabilityPolicy
     [JsonPropertyName("periodSinceCreationInDays")]
     public double? PeriodSinceCreationInDays { get; set; }
 
-    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.</summary>
+    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
@@ -363,7 +363,7 @@ public partial class V1beta1AccountSpecForProviderQueuePropertiesHourMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProviderQueuePropertiesLogging
 {
-    /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
+    /// <summary>(Defaults to 1 hour) Used when deleting the Storage Account.</summary>
     [JsonPropertyName("delete")]
     public bool? Delete { get; set; }
 
@@ -605,7 +605,7 @@ public partial class V1beta1AccountSpecForProviderStaticWebsite
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecForProvider
 {
-    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
+    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.</summary>
     [JsonPropertyName("accessTier")]
     public string? AccessTier { get; set; }
 
@@ -637,7 +637,7 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("blobProperties")]
     public IList<V1beta1AccountSpecForProviderBlobProperties>? BlobProperties { get; set; }
 
-    /// <summary>Should cross Tenant replication be enabled? Defaults to true.</summary>
+    /// <summary>Should cross Tenant replication be enabled? Defaults to false.</summary>
     [JsonPropertyName("crossTenantReplicationEnabled")]
     public bool? CrossTenantReplicationEnabled { get; set; }
 
@@ -662,10 +662,6 @@ public partial class V1beta1AccountSpecForProvider
     public string? EdgeZone { get; set; }
 
     /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
-    [JsonPropertyName("enableHttpsTrafficOnly")]
-    public bool? EnableHttpsTrafficOnly { get; set; }
-
-    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
     [JsonPropertyName("httpsTrafficOnlyEnabled")]
     public bool? HttpsTrafficOnlyEnabled { get; set; }
 
@@ -685,7 +681,7 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("isHnsEnabled")]
     public bool? IsHnsEnabled { get; set; }
 
-    /// <summary>Is Large File Share Enabled?</summary>
+    /// <summary>Are Large File Shares Enabled? Defaults to false.</summary>
     [JsonPropertyName("largeFileShareEnabled")]
     public bool? LargeFileShareEnabled { get; set; }
 
@@ -964,7 +960,7 @@ public partial class V1beta1AccountSpecInitProviderImmutabilityPolicy
     [JsonPropertyName("periodSinceCreationInDays")]
     public double? PeriodSinceCreationInDays { get; set; }
 
-    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.</summary>
+    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
@@ -1121,7 +1117,7 @@ public partial class V1beta1AccountSpecInitProviderQueuePropertiesHourMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProviderQueuePropertiesLogging
 {
-    /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
+    /// <summary>(Defaults to 1 hour) Used when deleting the Storage Account.</summary>
     [JsonPropertyName("delete")]
     public bool? Delete { get; set; }
 
@@ -1307,7 +1303,7 @@ public partial class V1beta1AccountSpecInitProviderStaticWebsite
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSpecInitProvider
 {
-    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
+    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.</summary>
     [JsonPropertyName("accessTier")]
     public string? AccessTier { get; set; }
 
@@ -1339,7 +1335,7 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("blobProperties")]
     public IList<V1beta1AccountSpecInitProviderBlobProperties>? BlobProperties { get; set; }
 
-    /// <summary>Should cross Tenant replication be enabled? Defaults to true.</summary>
+    /// <summary>Should cross Tenant replication be enabled? Defaults to false.</summary>
     [JsonPropertyName("crossTenantReplicationEnabled")]
     public bool? CrossTenantReplicationEnabled { get; set; }
 
@@ -1364,10 +1360,6 @@ public partial class V1beta1AccountSpecInitProvider
     public string? EdgeZone { get; set; }
 
     /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
-    [JsonPropertyName("enableHttpsTrafficOnly")]
-    public bool? EnableHttpsTrafficOnly { get; set; }
-
-    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
     [JsonPropertyName("httpsTrafficOnlyEnabled")]
     public bool? HttpsTrafficOnlyEnabled { get; set; }
 
@@ -1387,7 +1379,7 @@ public partial class V1beta1AccountSpecInitProvider
     [JsonPropertyName("isHnsEnabled")]
     public bool? IsHnsEnabled { get; set; }
 
-    /// <summary>Is Large File Share Enabled?</summary>
+    /// <summary>Are Large File Shares Enabled? Defaults to false.</summary>
     [JsonPropertyName("largeFileShareEnabled")]
     public bool? LargeFileShareEnabled { get; set; }
 
@@ -1794,7 +1786,7 @@ public partial class V1beta1AccountStatusAtProviderImmutabilityPolicy
     [JsonPropertyName("periodSinceCreationInDays")]
     public double? PeriodSinceCreationInDays { get; set; }
 
-    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted.</summary>
+    /// <summary>Defines the mode of the policy. Disabled state disables the policy, Unlocked state allows increase and decrease of immutability retention time and also allows toggling allowProtectedAppendWrites property, Locked state only allows the increase of the immutability retention time. A policy can only be created in a Disabled or Unlocked state and can be toggled between the two states. Only a policy in an Unlocked state can transition to a Locked state which cannot be reverted. Changing from Locked forces a new resource to be created.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
@@ -1887,7 +1879,7 @@ public partial class V1beta1AccountStatusAtProviderQueuePropertiesHourMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProviderQueuePropertiesLogging
 {
-    /// <summary>(Defaults to 60 minutes) Used when deleting the Storage Account.</summary>
+    /// <summary>(Defaults to 1 hour) Used when deleting the Storage Account.</summary>
     [JsonPropertyName("delete")]
     public bool? Delete { get; set; }
 
@@ -2073,7 +2065,7 @@ public partial class V1beta1AccountStatusAtProviderStaticWebsite
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProvider
 {
-    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot and Cool, defaults to Hot.</summary>
+    /// <summary>Defines the access tier for BlobStorage, FileStorage and StorageV2 accounts. Valid options are Hot, Cool, Cold and Premium. Defaults to Hot.</summary>
     [JsonPropertyName("accessTier")]
     public string? AccessTier { get; set; }
 
@@ -2105,7 +2097,7 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("blobProperties")]
     public IList<V1beta1AccountStatusAtProviderBlobProperties>? BlobProperties { get; set; }
 
-    /// <summary>Should cross Tenant replication be enabled? Defaults to true.</summary>
+    /// <summary>Should cross Tenant replication be enabled? Defaults to false.</summary>
     [JsonPropertyName("crossTenantReplicationEnabled")]
     public bool? CrossTenantReplicationEnabled { get; set; }
 
@@ -2128,10 +2120,6 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>Specifies the Edge Zone within the Azure Region where this Storage Account should exist. Changing this forces a new Storage Account to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
-
-    /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
-    [JsonPropertyName("enableHttpsTrafficOnly")]
-    public bool? EnableHttpsTrafficOnly { get; set; }
 
     /// <summary>Boolean flag which forces HTTPS if enabled, see here for more information. Defaults to true.</summary>
     [JsonPropertyName("httpsTrafficOnlyEnabled")]
@@ -2157,7 +2145,7 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("isHnsEnabled")]
     public bool? IsHnsEnabled { get; set; }
 
-    /// <summary>Is Large File Share Enabled?</summary>
+    /// <summary>Are Large File Shares Enabled? Defaults to false.</summary>
     [JsonPropertyName("largeFileShareEnabled")]
     public bool? LargeFileShareEnabled { get; set; }
 

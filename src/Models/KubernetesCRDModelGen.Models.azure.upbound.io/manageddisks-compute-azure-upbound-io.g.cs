@@ -42,10 +42,6 @@ public partial class V1beta1ManagedDiskSpecForProviderEncryptionSettings
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1ManagedDiskSpecForProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
-
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]
     public IList<V1beta1ManagedDiskSpecForProviderEncryptionSettingsKeyEncryptionKey>? KeyEncryptionKey { get; set; }
@@ -353,10 +349,6 @@ public partial class V1beta1ManagedDiskSpecInitProviderEncryptionSettings
     /// <summary>A disk_encryption_key block as defined above.</summary>
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1ManagedDiskSpecInitProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]
@@ -729,10 +721,6 @@ public partial class V1beta1ManagedDiskStatusAtProviderEncryptionSettings
     /// <summary>A disk_encryption_key block as defined above.</summary>
     [JsonPropertyName("diskEncryptionKey")]
     public IList<V1beta1ManagedDiskStatusAtProviderEncryptionSettingsDiskEncryptionKey>? DiskEncryptionKey { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enabled")]
-    public bool? Enabled { get; set; }
 
     /// <summary>A key_encryption_key block as defined below.</summary>
     [JsonPropertyName("keyEncryptionKey")]

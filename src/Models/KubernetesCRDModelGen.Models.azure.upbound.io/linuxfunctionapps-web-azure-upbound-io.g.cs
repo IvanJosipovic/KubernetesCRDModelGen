@@ -341,7 +341,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsV2ActiveD
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -692,7 +692,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderBackup
 
     /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
     [JsonPropertyName("storageAccountUrlSecretRef")]
-    public V1beta1LinuxFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+    public V1beta1LinuxFunctionAppSpecForProviderBackupStorageAccountUrlSecretRef? StorageAccountUrlSecretRef { get; set; }
 }
 
 /// <summary>The connection string value. The connection string value.</summary>
@@ -726,7 +726,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderConnectionString
 
     /// <summary>The connection string value. The connection string value.</summary>
     [JsonPropertyName("valueSecretRef")]
-    public V1beta1LinuxFunctionAppSpecForProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
+    public V1beta1LinuxFunctionAppSpecForProviderConnectionStringValueSecretRef? ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -968,23 +968,23 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplication
     [JsonPropertyName("docker")]
     public IList<V1beta1LinuxFunctionAppSpecForProviderSiteConfigApplicationStackDocker>? Docker { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0 and 8.0. The version of .Net. Possible values are `3.1`, `6.0` and `7.0`</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0, 8.0 and 9.0. The version of .Net. Possible values are `3.1`, `6.0`, `7.0`, `8.0` and `9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11, 17, 21. The version of Java to use. Possible values are `8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12, 14, 16 and 18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to run. Possible values include 12, 14, 16, 18 20 and 22. The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PowerShell Core to run. Possible values are 7, and 7.2. The version of PowerShell Core to use. Possibles values are `7`, and `7.2`</summary>
+    /// <summary>The version of PowerShell Core to run. Possible values are 7, 7.2, and 7.4. The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values are 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
+    /// <summary>The version of Python to run. Possible values are 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -1318,7 +1318,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -1346,7 +1346,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -1358,7 +1358,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022. The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022“</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -1374,7 +1374,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and  `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -1435,7 +1435,7 @@ public partial class V1beta1LinuxFunctionAppSpecForProviderStorageAccount
 {
     /// <summary>The Access key for the storage account.</summary>
     [JsonPropertyName("accessKeySecretRef")]
-    public V1beta1LinuxFunctionAppSpecForProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+    public V1beta1LinuxFunctionAppSpecForProviderStorageAccountAccessKeySecretRef? AccessKeySecretRef { get; set; }
 
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
@@ -1718,6 +1718,10 @@ public partial class V1beta1LinuxFunctionAppSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
@@ -1729,6 +1733,10 @@ public partial class V1beta1LinuxFunctionAppSpecForProvider
     /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1LinuxFunctionAppSpecForProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
+
+    /// <summary>Should the traffic for the image pull be routed over virtual network enabled. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
@@ -2072,7 +2080,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderAuthSettingsV2Active
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -2388,6 +2396,23 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderBackupSchedule
     public string? StartTime { get; set; }
 }
 
+/// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxFunctionAppSpecInitProviderBackupStorageAccountUrlSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxFunctionAppSpecInitProviderBackup
@@ -2403,6 +2428,27 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderBackup
     /// <summary>A schedule block as defined below.</summary>
     [JsonPropertyName("schedule")]
     public IList<V1beta1LinuxFunctionAppSpecInitProviderBackupSchedule>? Schedule { get; set; }
+
+    /// <summary>The SAS URL to the container. The SAS URL to the container.</summary>
+    [JsonPropertyName("storageAccountUrlSecretRef")]
+    public V1beta1LinuxFunctionAppSpecInitProviderBackupStorageAccountUrlSecretRef StorageAccountUrlSecretRef { get; set; }
+}
+
+/// <summary>The connection string value. The connection string value.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxFunctionAppSpecInitProviderConnectionStringValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -2416,6 +2462,10 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderConnectionString
     /// <summary>Type of database. Possible values include: MySQL, SQLServer, SQLAzure, Custom, NotificationHub, ServiceBus, EventHub, APIHub, DocDb, RedisCache, and PostgreSQL. Type of database. Possible values include: `MySQL`, `SQLServer`, `SQLAzure`, `Custom`, `NotificationHub`, `ServiceBus`, `EventHub`, `APIHub`, `DocDb`, `RedisCache`, and `PostgreSQL`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>The connection string value. The connection string value.</summary>
+    [JsonPropertyName("valueSecretRef")]
+    public V1beta1LinuxFunctionAppSpecInitProviderConnectionStringValueSecretRef ValueSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -2657,23 +2707,23 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicatio
     [JsonPropertyName("docker")]
     public IList<V1beta1LinuxFunctionAppSpecInitProviderSiteConfigApplicationStackDocker>? Docker { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0 and 8.0. The version of .Net. Possible values are `3.1`, `6.0` and `7.0`</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0, 8.0 and 9.0. The version of .Net. Possible values are `3.1`, `6.0`, `7.0`, `8.0` and `9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11, 17, 21. The version of Java to use. Possible values are `8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12, 14, 16 and 18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to run. Possible values include 12, 14, 16, 18 20 and 22. The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PowerShell Core to run. Possible values are 7, and 7.2. The version of PowerShell Core to use. Possibles values are `7`, and `7.2`</summary>
+    /// <summary>The version of PowerShell Core to run. Possible values are 7, 7.2, and 7.4. The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values are 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
+    /// <summary>The version of Python to run. Possible values are 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -3007,7 +3057,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -3035,7 +3085,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -3047,7 +3097,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022. The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022“</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -3063,7 +3113,7 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and  `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -3101,10 +3151,31 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderStickySettings
     public IList<string>? ConnectionStringNames { get; set; }
 }
 
+/// <summary>The Access key for the storage account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountAccessKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccount
 {
+    /// <summary>The Access key for the storage account.</summary>
+    [JsonPropertyName("accessKeySecretRef")]
+    public V1beta1LinuxFunctionAppSpecInitProviderStorageAccountAccessKeySecretRef AccessKeySecretRef { get; set; }
+
     /// <summary>The Name of the Storage Account.</summary>
     [JsonPropertyName("accountName")]
     public string? AccountName { get; set; }
@@ -3124,23 +3195,6 @@ public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccount
     /// <summary>The Azure Storage Type. Possible values include AzureFiles and AzureBlob.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
-}
-
-/// <summary>The access key which will be used to access the backend storage account for the Function App. Conflicts with storage_uses_managed_identity. The access key which will be used to access the storage account for the Function App.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LinuxFunctionAppSpecInitProviderStorageAccountAccessKeySecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -3403,6 +3457,10 @@ public partial class V1beta1LinuxFunctionAppSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
@@ -3414,6 +3472,10 @@ public partial class V1beta1LinuxFunctionAppSpecInitProvider
     /// <summary>Selector for a Subnet in network to populate virtualNetworkSubnetId.</summary>
     [JsonPropertyName("virtualNetworkSubnetIdSelector")]
     public V1beta1LinuxFunctionAppSpecInitProviderVirtualNetworkSubnetIdSelector? VirtualNetworkSubnetIdSelector { get; set; }
+
+    /// <summary>Should the traffic for the image pull be routed over virtual network enabled. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]
@@ -3763,7 +3825,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderAuthSettingsV2Active
     [JsonPropertyName("loginParameters")]
     public IDictionary<string, string>? LoginParameters { get; set; }
 
-    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/v2.0/{tenant-guid}/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
+    /// <summary>The Azure Tenant Endpoint for the Authenticating Tenant. e.g. https://login.microsoftonline.com/{tenant-guid}/v2.0/ The Azure Tenant Endpoint for the Authenticating Tenant. e.g. `https://login.microsoftonline.com/v2.0/{tenant-guid}/`.</summary>
     [JsonPropertyName("tenantAuthEndpoint")]
     public string? TenantAuthEndpoint { get; set; }
 
@@ -4200,23 +4262,23 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicatio
     [JsonPropertyName("docker")]
     public IList<V1beta1LinuxFunctionAppStatusAtProviderSiteConfigApplicationStackDocker>? Docker { get; set; }
 
-    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0 and 8.0. The version of .Net. Possible values are `3.1`, `6.0` and `7.0`</summary>
+    /// <summary>The version of .NET to use. Possible values include 3.1, 6.0, 7.0, 8.0 and 9.0. The version of .Net. Possible values are `3.1`, `6.0`, `7.0`, `8.0` and `9.0`</summary>
     [JsonPropertyName("dotnetVersion")]
     public string? DotnetVersion { get; set; }
 
-    /// <summary>The Version of Java to use. Supported versions include 8, 11 &amp; 17. The version of Java to use. Possible values are `8`, `11`, and `17`</summary>
+    /// <summary>The Version of Java to use. Supported versions include 8, 11, 17, 21. The version of Java to use. Possible values are `8`, `11`, `17`, and `21`</summary>
     [JsonPropertyName("javaVersion")]
     public string? JavaVersion { get; set; }
 
-    /// <summary>The version of Node to run. Possible values include 12, 14, 16 and 18. The version of Node to use. Possible values include `12`, `14`, `16` and `18`</summary>
+    /// <summary>The version of Node to run. Possible values include 12, 14, 16, 18 20 and 22. The version of Node to use. Possible values include `12`, `14`, `16`, `18`, `20` and `22`</summary>
     [JsonPropertyName("nodeVersion")]
     public string? NodeVersion { get; set; }
 
-    /// <summary>The version of PowerShell Core to run. Possible values are 7, and 7.2. The version of PowerShell Core to use. Possibles values are `7`, and `7.2`</summary>
+    /// <summary>The version of PowerShell Core to run. Possible values are 7, 7.2, and 7.4. The version of PowerShell Core to use. Possibles values are `7`, `7.2`, and `7.4`</summary>
     [JsonPropertyName("powershellCoreVersion")]
     public string? PowershellCoreVersion { get; set; }
 
-    /// <summary>The version of Python to run. Possible values are 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
+    /// <summary>The version of Python to run. Possible values are 3.13, 3.12, 3.11, 3.10, 3.9, 3.8 and 3.7. The version of Python to use. Possible values include `3.13`, `3.12`, `3.11`, `3.10`, `3.9`, `3.8`, and `3.7`.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -4418,7 +4480,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
     [JsonPropertyName("ftpsState")]
     public string? FtpsState { get; set; }
 
-    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Defaults to `10`. Only valid in conjunction with `health_check_path`</summary>
+    /// <summary>The amount of time in minutes that a node can be unhealthy before being removed from the load balancer. Possible values are between 2 and 10. Only valid in conjunction with health_check_path. The amount of time in minutes that a node is unhealthy before being removed from the load balancer. Possible values are between `2` and `10`. Only valid in conjunction with `health_check_path`</summary>
     [JsonPropertyName("healthCheckEvictionTimeInMin")]
     public double? HealthCheckEvictionTimeInMin { get; set; }
 
@@ -4450,7 +4512,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
     [JsonPropertyName("managedPipelineMode")]
     public string? ManagedPipelineMode { get; set; }
 
-    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>The configures the minimum version of TLS required for SSL requests. Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. The configures the minimum version of TLS required for SSL requests. Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
@@ -4462,7 +4524,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
     [JsonPropertyName("remoteDebuggingEnabled")]
     public bool? RemoteDebuggingEnabled { get; set; }
 
-    /// <summary>The Remote Debugging Version. Possible values include VS2017, VS2019, and VS2022. The Remote Debugging Version. Possible values include `VS2017`, `VS2019`, and `VS2022“</summary>
+    /// <summary>The Remote Debugging Version. Currently only VS2022 is supported. The Remote Debugging Version. Currently only `VS2022` is supported.</summary>
     [JsonPropertyName("remoteDebuggingVersion")]
     public string? RemoteDebuggingVersion { get; set; }
 
@@ -4478,7 +4540,7 @@ public partial class V1beta1LinuxFunctionAppStatusAtProviderSiteConfig
     [JsonPropertyName("scmIpRestrictionDefaultAction")]
     public string? ScmIpRestrictionDefaultAction { get; set; }
 
-    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, and 1.2. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, and  `1.2`. Defaults to `1.2`.</summary>
+    /// <summary>Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: 1.0, 1.1, 1.2 and 1.3. Defaults to 1.2. Configures the minimum version of TLS required for SSL requests to the SCM site Possible values include: `1.0`, `1.1`, `1.2` and  `1.3`. Defaults to `1.2`.</summary>
     [JsonPropertyName("scmMinimumTlsVersion")]
     public string? ScmMinimumTlsVersion { get; set; }
 
@@ -4697,9 +4759,17 @@ public partial class V1beta1LinuxFunctionAppStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Whether backup and restore operations over the linked virtual network are enabled. Defaults to false.</summary>
+    [JsonPropertyName("virtualNetworkBackupRestoreEnabled")]
+    public bool? VirtualNetworkBackupRestoreEnabled { get; set; }
+
     /// <summary>The subnet id which will be used by this Function App for regional virtual network integration.</summary>
     [JsonPropertyName("virtualNetworkSubnetId")]
     public string? VirtualNetworkSubnetId { get; set; }
+
+    /// <summary>Should the traffic for the image pull be routed over virtual network enabled. Defaults to false. Is container image pull over virtual network enabled? Defaults to `false`.</summary>
+    [JsonPropertyName("vnetImagePullEnabled")]
+    public bool? VnetImagePullEnabled { get; set; }
 
     /// <summary>Should the default WebDeploy Basic Authentication publishing credentials enabled. Defaults to true.</summary>
     [JsonPropertyName("webdeployPublishBasicAuthenticationEnabled")]

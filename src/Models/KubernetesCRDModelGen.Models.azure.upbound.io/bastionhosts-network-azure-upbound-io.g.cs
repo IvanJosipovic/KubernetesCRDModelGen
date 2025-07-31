@@ -253,11 +253,15 @@ public partial class V1beta1BastionHostSpecForProvider
     [JsonPropertyName("scaleUnits")]
     public double? ScaleUnits { get; set; }
 
+    /// <summary>Is Session Recording feature enabled for the Bastion Host. Defaults to false.</summary>
+    [JsonPropertyName("sessionRecordingEnabled")]
+    public bool? SessionRecordingEnabled { get; set; }
+
     /// <summary>Is Shareable Link feature enabled for the Bastion Host. Defaults to false.</summary>
     [JsonPropertyName("shareableLinkEnabled")]
     public bool? ShareableLinkEnabled { get; set; }
 
-    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.</summary>
+    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -272,6 +276,10 @@ public partial class V1beta1BastionHostSpecForProvider
     /// <summary>The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
+
+    /// <summary>Specifies a list of Availability Zones in which this Public Bastion Host should be located. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("zones")]
+    public IList<string>? Zones { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -451,11 +459,15 @@ public partial class V1beta1BastionHostSpecInitProvider
     [JsonPropertyName("scaleUnits")]
     public double? ScaleUnits { get; set; }
 
+    /// <summary>Is Session Recording feature enabled for the Bastion Host. Defaults to false.</summary>
+    [JsonPropertyName("sessionRecordingEnabled")]
+    public bool? SessionRecordingEnabled { get; set; }
+
     /// <summary>Is Shareable Link feature enabled for the Bastion Host. Defaults to false.</summary>
     [JsonPropertyName("shareableLinkEnabled")]
     public bool? ShareableLinkEnabled { get; set; }
 
-    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.</summary>
+    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -470,6 +482,10 @@ public partial class V1beta1BastionHostSpecInitProvider
     /// <summary>The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
+
+    /// <summary>Specifies a list of Availability Zones in which this Public Bastion Host should be located. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("zones")]
+    public IList<string>? Zones { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -665,11 +681,15 @@ public partial class V1beta1BastionHostStatusAtProvider
     [JsonPropertyName("scaleUnits")]
     public double? ScaleUnits { get; set; }
 
+    /// <summary>Is Session Recording feature enabled for the Bastion Host. Defaults to false.</summary>
+    [JsonPropertyName("sessionRecordingEnabled")]
+    public bool? SessionRecordingEnabled { get; set; }
+
     /// <summary>Is Shareable Link feature enabled for the Bastion Host. Defaults to false.</summary>
     [JsonPropertyName("shareableLinkEnabled")]
     public bool? ShareableLinkEnabled { get; set; }
 
-    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic and Standard. Defaults to Basic.</summary>
+    /// <summary>The SKU of the Bastion Host. Accepted values are Developer, Basic, Standard and Premium. Defaults to Basic.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -684,6 +704,10 @@ public partial class V1beta1BastionHostStatusAtProvider
     /// <summary>The ID of the Virtual Network for the Developer Bastion Host. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("virtualNetworkId")]
     public string? VirtualNetworkId { get; set; }
+
+    /// <summary>Specifies a list of Availability Zones in which this Public Bastion Host should be located. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("zones")]
+    public IList<string>? Zones { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

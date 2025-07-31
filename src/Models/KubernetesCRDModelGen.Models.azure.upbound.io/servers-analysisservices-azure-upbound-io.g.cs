@@ -110,10 +110,6 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("backupBlobContainerUriSecretRef")]
     public V1beta1ServerSpecForProviderBackupBlobContainerUriSecretRef? BackupBlobContainerUriSecretRef { get; set; }
 
-    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
-    [JsonPropertyName("enablePowerBiService")]
-    public bool? EnablePowerBiService { get; set; }
-
     /// <summary>One or more ipv4_firewall_rule block(s) as defined below.</summary>
     [JsonPropertyName("ipv4FirewallRule")]
     public IList<V1beta1ServerSpecForProviderIpv4FirewallRule>? Ipv4FirewallRule { get; set; }
@@ -126,11 +122,11 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
     [JsonPropertyName("powerBiServiceEnabled")]
     public bool? PowerBiServiceEnabled { get; set; }
 
-    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
+    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations. Defaults to All.</summary>
     [JsonPropertyName("querypoolConnectionMode")]
     public string? QuerypoolConnectionMode { get; set; }
 
@@ -257,10 +253,6 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("backupBlobContainerUriSecretRef")]
     public V1beta1ServerSpecInitProviderBackupBlobContainerUriSecretRef? BackupBlobContainerUriSecretRef { get; set; }
 
-    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
-    [JsonPropertyName("enablePowerBiService")]
-    public bool? EnablePowerBiService { get; set; }
-
     /// <summary>One or more ipv4_firewall_rule block(s) as defined below.</summary>
     [JsonPropertyName("ipv4FirewallRule")]
     public IList<V1beta1ServerSpecInitProviderIpv4FirewallRule>? Ipv4FirewallRule { get; set; }
@@ -273,11 +265,11 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
     [JsonPropertyName("powerBiServiceEnabled")]
     public bool? PowerBiServiceEnabled { get; set; }
 
-    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
+    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations. Defaults to All.</summary>
     [JsonPropertyName("querypoolConnectionMode")]
     public string? QuerypoolConnectionMode { get; set; }
 
@@ -459,10 +451,6 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("adminUsers")]
     public IList<string>? AdminUsers { get; set; }
 
-    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
-    [JsonPropertyName("enablePowerBiService")]
-    public bool? EnablePowerBiService { get; set; }
-
     /// <summary>The ID of the Analysis Services Server.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -479,11 +467,11 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Indicates if the Power BI service is allowed to access or not.</summary>
     [JsonPropertyName("powerBiServiceEnabled")]
     public bool? PowerBiServiceEnabled { get; set; }
 
-    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations.</summary>
+    /// <summary>Controls how the read-write server is used in the query pool. If this value is set to All then read-write servers are also used for queries. Otherwise with ReadOnly these servers do not participate in query operations. Defaults to All.</summary>
     [JsonPropertyName("querypoolConnectionMode")]
     public string? QuerypoolConnectionMode { get; set; }
 

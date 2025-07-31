@@ -184,7 +184,7 @@ public partial class V1beta1ObjectReplicationSpecForProviderRules
     [JsonPropertyName("copyBlobsCreatedAfter")]
     public string? CopyBlobsCreatedAfter { get; set; }
 
-    /// <summary>The destination storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The destination storage container name.</summary>
     [JsonPropertyName("destinationContainerName")]
     public string? DestinationContainerName { get; set; }
 
@@ -200,7 +200,7 @@ public partial class V1beta1ObjectReplicationSpecForProviderRules
     [JsonPropertyName("filterOutBlobsWithPrefix")]
     public IList<string>? FilterOutBlobsWithPrefix { get; set; }
 
-    /// <summary>The source storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The source storage container name.</summary>
     [JsonPropertyName("sourceContainerName")]
     public string? SourceContainerName { get; set; }
 
@@ -478,7 +478,7 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRules
     [JsonPropertyName("copyBlobsCreatedAfter")]
     public string? CopyBlobsCreatedAfter { get; set; }
 
-    /// <summary>The destination storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The destination storage container name.</summary>
     [JsonPropertyName("destinationContainerName")]
     public string? DestinationContainerName { get; set; }
 
@@ -494,7 +494,7 @@ public partial class V1beta1ObjectReplicationSpecInitProviderRules
     [JsonPropertyName("filterOutBlobsWithPrefix")]
     public IList<string>? FilterOutBlobsWithPrefix { get; set; }
 
-    /// <summary>The source storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The source storage container name.</summary>
     [JsonPropertyName("sourceContainerName")]
     public string? SourceContainerName { get; set; }
 
@@ -736,7 +736,7 @@ public partial class V1beta1ObjectReplicationStatusAtProviderRules
     [JsonPropertyName("copyBlobsCreatedAfter")]
     public string? CopyBlobsCreatedAfter { get; set; }
 
-    /// <summary>The destination storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The destination storage container name.</summary>
     [JsonPropertyName("destinationContainerName")]
     public string? DestinationContainerName { get; set; }
 
@@ -748,7 +748,7 @@ public partial class V1beta1ObjectReplicationStatusAtProviderRules
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The source storage container name. Changing this forces a new Storage Object Replication to be created.</summary>
+    /// <summary>The source storage container name.</summary>
     [JsonPropertyName("sourceContainerName")]
     public string? SourceContainerName { get; set; }
 }

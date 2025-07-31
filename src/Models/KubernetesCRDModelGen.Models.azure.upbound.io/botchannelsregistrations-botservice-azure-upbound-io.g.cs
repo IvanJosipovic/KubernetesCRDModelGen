@@ -113,13 +113,9 @@ public partial class V1beta1BotChannelsRegistrationSpecForProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The icon URL to visually identify the Bot Channels Registration.</summary>
+    /// <summary>The icon URL to visually identify the Bot Channels Registration. Defaults to https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png.</summary>
     [JsonPropertyName("iconUrl")]
     public string? IconUrl { get; set; }
-
-    /// <summary>Is the Bot Channels Registration in an isolated network?</summary>
-    [JsonPropertyName("isolatedNetworkEnabled")]
-    public bool? IsolatedNetworkEnabled { get; set; }
 
     /// <summary>The supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -267,13 +263,9 @@ public partial class V1beta1BotChannelsRegistrationSpecInitProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The icon URL to visually identify the Bot Channels Registration.</summary>
+    /// <summary>The icon URL to visually identify the Bot Channels Registration. Defaults to https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png.</summary>
     [JsonPropertyName("iconUrl")]
     public string? IconUrl { get; set; }
-
-    /// <summary>Is the Bot Channels Registration in an isolated network?</summary>
-    [JsonPropertyName("isolatedNetworkEnabled")]
-    public bool? IsolatedNetworkEnabled { get; set; }
 
     /// <summary>The supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -476,17 +468,13 @@ public partial class V1beta1BotChannelsRegistrationStatusAtProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The icon URL to visually identify the Bot Channels Registration.</summary>
+    /// <summary>The icon URL to visually identify the Bot Channels Registration. Defaults to https://docs.botframework.com/static/devportal/client/images/bot-framework-default.png.</summary>
     [JsonPropertyName("iconUrl")]
     public string? IconUrl { get; set; }
 
     /// <summary>The ID of the Bot Channels Registration.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
-
-    /// <summary>Is the Bot Channels Registration in an isolated network?</summary>
-    [JsonPropertyName("isolatedNetworkEnabled")]
-    public bool? IsolatedNetworkEnabled { get; set; }
 
     /// <summary>The supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]

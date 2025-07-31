@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: securitycentersubscriptionpricings.security.azure.upbound.io
 spec:
   group: security.azure.upbound.io
@@ -100,10 +100,10 @@ spec:
                       type: object
                     type: array
                   resourceType:
-                    description: The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
+                    description: The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
                     type: string
                   subplan:
-                    description: Resource type pricing subplan. Contact your MSFT representative for possible values.
+                    description: Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.
                     type: string
                   tier:
                     description: The pricing tier to use. Possible values are Free and Standard.
@@ -147,10 +147,10 @@ spec:
                       type: object
                     type: array
                   resourceType:
-                    description: The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
+                    description: The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
                     type: string
                   subplan:
-                    description: Resource type pricing subplan. Contact your MSFT representative for possible values.
+                    description: Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.
                     type: string
                   tier:
                     description: The pricing tier to use. Possible values are Free and Standard.
@@ -391,10 +391,10 @@ spec:
                     description: The subscription pricing ID.
                     type: string
                   resourceType:
-                    description: The resource type this setting affects. Possible values are Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
+                    description: The resource type this setting affects. Possible values are AI, Api, AppServices, ContainerRegistry, KeyVaults, KubernetesService, SqlServers, SqlServerVirtualMachines, StorageAccounts, VirtualMachines, Arm, Dns, OpenSourceRelationalDatabases, Containers, CosmosDbs and CloudPosture. Defaults to VirtualMachines
                     type: string
                   subplan:
-                    description: Resource type pricing subplan. Contact your MSFT representative for possible values.
+                    description: Resource type pricing subplan. Contact your MSFT representative for possible values. Changing this forces a new resource to be created.
                     type: string
                   tier:
                     description: The pricing tier to use. Possible values are Free and Standard.

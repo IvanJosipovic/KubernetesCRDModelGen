@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: frontdoorcustomdomains.cdn.azure.upbound.io
 spec:
   group: cdn.azure.upbound.io
@@ -987,7 +987,7 @@ spec:
                         description: Defines the source of the SSL certificate. Possible values include CustomerCertificate and ManagedCertificate. Defaults to ManagedCertificate.
                         type: string
                       minimumTlsVersion:
-                        description: TLS protocol version that will be used for Https. Possible values include TLS10 and TLS12. Defaults to TLS12.
+                        description: TLS protocol version that will be used for Https. Possible values are TLS12. Defaults to TLS12.
                         type: string
                     type: object
                 type: object
@@ -1115,7 +1115,7 @@ spec:
                         description: Defines the source of the SSL certificate. Possible values include CustomerCertificate and ManagedCertificate. Defaults to ManagedCertificate.
                         type: string
                       minimumTlsVersion:
-                        description: TLS protocol version that will be used for Https. Possible values include TLS10 and TLS12. Defaults to TLS12.
+                        description: TLS protocol version that will be used for Https. Possible values are TLS12. Defaults to TLS12.
                         type: string
                     type: object
                 type: object
@@ -1362,7 +1362,7 @@ spec:
                         description: Defines the source of the SSL certificate. Possible values include CustomerCertificate and ManagedCertificate. Defaults to ManagedCertificate.
                         type: string
                       minimumTlsVersion:
-                        description: TLS protocol version that will be used for Https. Possible values include TLS10 and TLS12. Defaults to TLS12.
+                        description: TLS protocol version that will be used for Https. Possible values are TLS12. Defaults to TLS12.
                         type: string
                     type: object
                   validationToken:

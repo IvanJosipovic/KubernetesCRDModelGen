@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: monitordatacollectionrules.insights.azure.upbound.io
 spec:
   group: insights.azure.upbound.io
@@ -277,7 +277,7 @@ spec:
                                   type: string
                                 type: array
                               format:
-                                description: The data format of the log files. possible value is text.
+                                description: The data format of the log files. Possible values are text and json.
                                 type: string
                               name:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
@@ -317,7 +317,7 @@ spec:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
                                 type: string
                               samplingFrequencyInSeconds:
-                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
+                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
                                 type: number
                               streams:
                                 description: Specifies a list of streams that this data source will be sent to. A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
@@ -1096,7 +1096,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array
@@ -1322,7 +1322,7 @@ spec:
                                   type: string
                                 type: array
                               format:
-                                description: The data format of the log files. possible value is text.
+                                description: The data format of the log files. Possible values are text and json.
                                 type: string
                               name:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
@@ -1362,7 +1362,7 @@ spec:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
                                 type: string
                               samplingFrequencyInSeconds:
-                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
+                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
                                 type: number
                               streams:
                                 description: Specifies a list of streams that this data source will be sent to. A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
@@ -2052,7 +2052,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array
@@ -2390,7 +2390,7 @@ spec:
                                   type: string
                                 type: array
                               format:
-                                description: The data format of the log files. possible value is text.
+                                description: The data format of the log files. Possible values are text and json.
                                 type: string
                               name:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
@@ -2430,7 +2430,7 @@ spec:
                                 description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
                                 type: string
                               samplingFrequencyInSeconds:
-                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
+                                description: The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.
                                 type: number
                               streams:
                                 description: Specifies a list of streams that this data source will be sent to. A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
@@ -2702,7 +2702,7 @@ spec:
                             type: object
                           type: array
                         streamName:
-                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks.
+                          description: The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.
                           type: string
                       type: object
                     type: array
@@ -3036,7 +3036,7 @@ spec:
                                 type: string
                               type: array
                             format:
-                              description: The data format of the log files. possible value is text.
+                              description: The data format of the log files. Possible values are text and json.
                               type: string
                             name:
                               description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
@@ -4063,7 +4063,7 @@ spec:
                                 type: string
                               type: array
                             format:
-                              description: The data format of the log files. possible value is text.
+                              description: The data format of the log files. Possible values are text and json.
                               type: string
                             name:
                               description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.
@@ -5113,7 +5113,7 @@ spec:
                                 type: string
                               type: array
                             format:
-                              description: The data format of the log files. possible value is text.
+                              description: The data format of the log files. Possible values are text and json.
                               type: string
                             name:
                               description: The name which should be used for this data source. This name should be unique across all data sources regardless of type within the Data Collection Rule.

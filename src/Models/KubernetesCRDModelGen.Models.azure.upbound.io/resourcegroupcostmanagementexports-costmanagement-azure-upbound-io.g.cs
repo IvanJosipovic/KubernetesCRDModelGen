@@ -170,6 +170,10 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecForProvider
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
 
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
+
     /// <summary>The date the export will stop capturing information.</summary>
     [JsonPropertyName("recurrencePeriodEndDate")]
     public string? RecurrencePeriodEndDate { get; set; }
@@ -356,6 +360,10 @@ public partial class V1beta1ResourceGroupCostManagementExportSpecInitProvider
     /// <summary>A export_data_storage_location block as defined below.</summary>
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1ResourceGroupCostManagementExportSpecInitProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
+
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
 
     /// <summary>The date the export will stop capturing information.</summary>
     [JsonPropertyName("recurrencePeriodEndDate")]
@@ -555,6 +563,10 @@ public partial class V1beta1ResourceGroupCostManagementExportStatusAtProvider
     /// <summary>A export_data_storage_location block as defined below.</summary>
     [JsonPropertyName("exportDataStorageLocation")]
     public IList<V1beta1ResourceGroupCostManagementExportStatusAtProviderExportDataStorageLocation>? ExportDataStorageLocation { get; set; }
+
+    /// <summary>Format for export. Valid values are Csv only. Default is Csv.</summary>
+    [JsonPropertyName("fileFormat")]
+    public string? FileFormat { get; set; }
 
     /// <summary>The ID of the Cost Management Export for this Resource Group.</summary>
     [JsonPropertyName("id")]

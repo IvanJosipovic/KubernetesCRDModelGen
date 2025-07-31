@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: managedclusters.servicefabric.azure.upbound.io
 spec:
   group: servicefabric.azure.upbound.io
@@ -364,6 +364,95 @@ spec:
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
                     type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
+                    type: string
+                  subnetIdRef:
+                    description: Reference to a Subnet in network to populate subnetId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  subnetIdSelector:
+                    description: Selector for a Subnet in network to populate subnetId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   tags:
                     additionalProperties:
                       type: string
@@ -570,9 +659,115 @@ spec:
                           type: string
                       type: object
                     type: array
+                  passwordSecretRef:
+                    description: Administrator password for the VMs that will be created as part of this cluster.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
                     type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
+                    type: string
+                  subnetIdRef:
+                    description: Reference to a Subnet in network to populate subnetId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  subnetIdSelector:
+                    description: Selector for a Subnet in network to populate subnetId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   tags:
                     additionalProperties:
                       type: string
@@ -990,6 +1185,9 @@ spec:
                     type: string
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
+                    type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
                     type: string
                   tags:
                     additionalProperties:
@@ -1413,6 +1611,95 @@ spec:
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
                     type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
+                    type: string
+                  subnetIdRef:
+                    description: Reference to a Subnet in network to populate subnetId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  subnetIdSelector:
+                    description: Selector for a Subnet in network to populate subnetId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   tags:
                     additionalProperties:
                       type: string
@@ -1635,6 +1922,95 @@ spec:
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
                     type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
+                    type: string
+                  subnetIdRef:
+                    description: Reference to a Subnet in network to populate subnetId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  subnetIdSelector:
+                    description: Selector for a Subnet in network to populate subnetId.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   tags:
                     additionalProperties:
                       type: string
@@ -2048,6 +2424,9 @@ spec:
                     type: string
                   sku:
                     description: SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.
+                    type: string
+                  subnetId:
+                    description: The resource ID of the Subnet. Changing this forces a new Resource Group to be created.
                     type: string
                   tags:
                     additionalProperties:

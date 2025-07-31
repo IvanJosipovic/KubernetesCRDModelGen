@@ -93,7 +93,7 @@ public partial class V1beta1SQLPoolSpecForProvider
     [JsonPropertyName("dataEncrypted")]
     public bool? DataEncrypted { get; set; }
 
-    /// <summary>Is geo-backup policy enabled? Possible values include true or false. Defaults to true.</summary>
+    /// <summary>Is geo-backup policy enabled? Defaults to true.</summary>
     [JsonPropertyName("geoBackupPolicyEnabled")]
     public bool? GeoBackupPolicyEnabled { get; set; }
 
@@ -109,7 +109,7 @@ public partial class V1beta1SQLPoolSpecForProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created. Defaults to GRS.</summary>
+    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 
@@ -159,7 +159,7 @@ public partial class V1beta1SQLPoolSpecInitProvider
     [JsonPropertyName("dataEncrypted")]
     public bool? DataEncrypted { get; set; }
 
-    /// <summary>Is geo-backup policy enabled? Possible values include true or false. Defaults to true.</summary>
+    /// <summary>Is geo-backup policy enabled? Defaults to true.</summary>
     [JsonPropertyName("geoBackupPolicyEnabled")]
     public bool? GeoBackupPolicyEnabled { get; set; }
 
@@ -175,7 +175,7 @@ public partial class V1beta1SQLPoolSpecInitProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created. Defaults to GRS.</summary>
+    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 
@@ -345,7 +345,7 @@ public partial class V1beta1SQLPoolStatusAtProvider
     [JsonPropertyName("dataEncrypted")]
     public bool? DataEncrypted { get; set; }
 
-    /// <summary>Is geo-backup policy enabled? Possible values include true or false. Defaults to true.</summary>
+    /// <summary>Is geo-backup policy enabled? Defaults to true.</summary>
     [JsonPropertyName("geoBackupPolicyEnabled")]
     public bool? GeoBackupPolicyEnabled { get; set; }
 
@@ -365,7 +365,7 @@ public partial class V1beta1SQLPoolStatusAtProvider
     [JsonPropertyName("skuName")]
     public string? SkuName { get; set; }
 
-    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created. Defaults to GRS.</summary>
+    /// <summary>The storage account type that will be used to store backups for this Synapse SQL Pool. Possible values are LRS or GRS. Changing this forces a new Synapse SQL Pool to be created.</summary>
     [JsonPropertyName("storageAccountType")]
     public string? StorageAccountType { get; set; }
 

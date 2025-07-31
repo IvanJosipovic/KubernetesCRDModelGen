@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: namespaceauthorizationrules.servicebus.azure.upbound.io
 spec:
   group: servicebus.azure.upbound.io
@@ -85,10 +85,10 @@ spec:
               forProvider:
                 properties:
                   listen:
-                    description: Grants listen access to this this Authorization Rule. Defaults to false.
+                    description: Grants listen access to this Authorization Rule. Defaults to false.
                     type: boolean
                   manage:
-                    description: Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
+                    description: Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
                     type: boolean
                   namespaceId:
                     description: Specifies the ID of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -180,7 +180,7 @@ spec:
                         type: object
                     type: object
                   send:
-                    description: Grants send access to this this Authorization Rule. Defaults to false.
+                    description: Grants send access to this Authorization Rule. Defaults to false.
                     type: boolean
                 type: object
               initProvider:
@@ -206,13 +206,13 @@ spec:
                   autoscaler.
                 properties:
                   listen:
-                    description: Grants listen access to this this Authorization Rule. Defaults to false.
+                    description: Grants listen access to this Authorization Rule. Defaults to false.
                     type: boolean
                   manage:
-                    description: Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
+                    description: Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
                     type: boolean
                   send:
-                    description: Grants send access to this this Authorization Rule. Defaults to false.
+                    description: Grants send access to this Authorization Rule. Defaults to false.
                     type: boolean
                 type: object
               managementPolicies:
@@ -432,16 +432,16 @@ spec:
                     description: The ServiceBus Topic ID.
                     type: string
                   listen:
-                    description: Grants listen access to this this Authorization Rule. Defaults to false.
+                    description: Grants listen access to this Authorization Rule. Defaults to false.
                     type: boolean
                   manage:
-                    description: Grants manage access to this this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
+                    description: Grants manage access to this Authorization Rule. When this property is true - both listen and send must be too. Defaults to false.
                     type: boolean
                   namespaceId:
                     description: Specifies the ID of the ServiceBus Namespace. Changing this forces a new resource to be created.
                     type: string
                   send:
-                    description: Grants send access to this this Authorization Rule. Defaults to false.
+                    description: Grants send access to this Authorization Rule. Defaults to false.
                     type: boolean
                 type: object
               conditions:

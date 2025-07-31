@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: routetables.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -85,9 +85,7 @@ spec:
               forProvider:
                 properties:
                   bgpRoutePropagationEnabled:
-                    type: boolean
-                  disableBgpRoutePropagation:
-                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
+                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.
                     type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -229,9 +227,7 @@ spec:
                   autoscaler.
                 properties:
                   bgpRoutePropagationEnabled:
-                    type: boolean
-                  disableBgpRoutePropagation:
-                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
+                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.
                     type: boolean
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -478,9 +474,7 @@ spec:
               atProvider:
                 properties:
                   bgpRoutePropagationEnabled:
-                    type: boolean
-                  disableBgpRoutePropagation:
-                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. True means disable.
+                    description: Boolean flag which controls propagation of routes learned by BGP on that route table. Defaults to true.
                     type: boolean
                   id:
                     description: The Route Table ID.

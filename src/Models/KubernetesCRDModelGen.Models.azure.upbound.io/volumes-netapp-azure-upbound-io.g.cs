@@ -120,6 +120,23 @@ public partial class V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSel
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VolumeSpecForProviderDataProtectionBackupPolicy
+{
+    /// <summary>Resource ID of the backup policy to apply to the volume. The ID of the backup policy to associate with this volume.</summary>
+    [JsonPropertyName("backupPolicyId")]
+    public string? BackupPolicyId { get; set; }
+
+    /// <summary>Resource ID of the backup backup vault to associate this volume to. The ID of the backup vault to associate with this volume.</summary>
+    [JsonPropertyName("backupVaultId")]
+    public string? BackupVaultId { get; set; }
+
+    /// <summary>Enables the backup policy on the volume, defaults to true. If set to false, the backup policy will not be enabled on this volume, thus disabling scheduled backups.</summary>
+    [JsonPropertyName("policyEnabled")]
+    public bool? PolicyEnabled { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeSpecForProviderDataProtectionReplicationRemoteVolumeResourceIdRefPolicy
@@ -519,7 +536,7 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("azureVmwareDataStoreEnabled")]
     public bool? AzureVmwareDataStoreEnabled { get; set; }
 
-    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name, account_name and pool_name. Changing this forces a new resource to be created.</summary>
+    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name and account_name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("createFromSnapshotResourceId")]
     public string? CreateFromSnapshotResourceId { get; set; }
 
@@ -530,6 +547,10 @@ public partial class V1beta1VolumeSpecForProvider
     /// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
     [JsonPropertyName("createFromSnapshotResourceIdSelector")]
     public V1beta1VolumeSpecForProviderCreateFromSnapshotResourceIdSelector? CreateFromSnapshotResourceIdSelector { get; set; }
+
+    /// <summary>A data_protection_backup_policy block as defined below.</summary>
+    [JsonPropertyName("dataProtectionBackupPolicy")]
+    public IList<V1beta1VolumeSpecForProviderDataProtectionBackupPolicy>? DataProtectionBackupPolicy { get; set; }
 
     /// <summary>A data_protection_replication block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dataProtectionReplication")]
@@ -547,13 +568,17 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("exportPolicyRule")]
     public IList<V1beta1VolumeSpecForProviderExportPolicyRule>? ExportPolicyRule { get; set; }
 
-    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Changing this forces a new resource to be created. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
     [JsonPropertyName("kerberosEnabled")]
     public bool? KerberosEnabled { get; set; }
 
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
+
+    /// <summary>A boolean specifying if the volume is a large volume. Defaults to false. Indicates whether the volume is a large volume.</summary>
+    [JsonPropertyName("largeVolumeEnabled")]
+    public bool? LargeVolumeEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -563,7 +588,7 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("networkFeatures")]
     public string? NetworkFeatures { get; set; }
 
-    /// <summary>The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.</summary>
+    /// <summary>The name of the NetApp pool in which the NetApp Volume should be created.</summary>
     [JsonPropertyName("poolName")]
     public string? PoolName { get; set; }
 
@@ -595,23 +620,27 @@ public partial class V1beta1VolumeSpecForProvider
     [JsonPropertyName("securityStyle")]
     public string? SecurityStyle { get; set; }
 
-    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra. Changing this forces a new resource to be created.</summary>
+    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra.</summary>
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Enable SMB encryption. Changing this forces a new resource to be created. SMB3 encryption option should be used only for SMB/DualProtocol volumes. Using it for any other workloads is not supported.</summary>
+    [JsonPropertyName("smb3ProtocolEncryptionEnabled")]
+    public bool? Smb3ProtocolEncryptionEnabled { get; set; }
+
+    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable access based enumeration setting for SMB/Dual Protocol volume. When enabled, users who do not have permission to access a shared folder or file underneath it, do not see that shared resource displayed in their environment.</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
 
-    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    /// <summary>Enable SMB Continuous Availability. Changing this forces a new resource to be created. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
     [JsonPropertyName("smbContinuousAvailabilityEnabled")]
     public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
-    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable non browsable share setting for SMB/Dual Protocol volume. When enabled, it restricts windows clients to browse the share</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]
     public bool? SmbNonBrowsableEnabled { get; set; }
 
-    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.</summary>
+    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible. Defaults to true.</summary>
     [JsonPropertyName("snapshotDirectoryVisible")]
     public bool? SnapshotDirectoryVisible { get; set; }
 
@@ -702,6 +731,23 @@ public partial class V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSe
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VolumeSpecInitProviderDataProtectionBackupPolicy
+{
+    /// <summary>Resource ID of the backup policy to apply to the volume. The ID of the backup policy to associate with this volume.</summary>
+    [JsonPropertyName("backupPolicyId")]
+    public string? BackupPolicyId { get; set; }
+
+    /// <summary>Resource ID of the backup backup vault to associate this volume to. The ID of the backup vault to associate with this volume.</summary>
+    [JsonPropertyName("backupVaultId")]
+    public string? BackupVaultId { get; set; }
+
+    /// <summary>Enables the backup policy on the volume, defaults to true. If set to false, the backup policy will not be enabled on this volume, thus disabling scheduled backups.</summary>
+    [JsonPropertyName("policyEnabled")]
+    public bool? PolicyEnabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -979,7 +1025,7 @@ public partial class V1beta1VolumeSpecInitProvider
     [JsonPropertyName("azureVmwareDataStoreEnabled")]
     public bool? AzureVmwareDataStoreEnabled { get; set; }
 
-    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name, account_name and pool_name. Changing this forces a new resource to be created.</summary>
+    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name and account_name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("createFromSnapshotResourceId")]
     public string? CreateFromSnapshotResourceId { get; set; }
 
@@ -990,6 +1036,10 @@ public partial class V1beta1VolumeSpecInitProvider
     /// <summary>Selector for a Snapshot in netapp to populate createFromSnapshotResourceId.</summary>
     [JsonPropertyName("createFromSnapshotResourceIdSelector")]
     public V1beta1VolumeSpecInitProviderCreateFromSnapshotResourceIdSelector? CreateFromSnapshotResourceIdSelector { get; set; }
+
+    /// <summary>A data_protection_backup_policy block as defined below.</summary>
+    [JsonPropertyName("dataProtectionBackupPolicy")]
+    public IList<V1beta1VolumeSpecInitProviderDataProtectionBackupPolicy>? DataProtectionBackupPolicy { get; set; }
 
     /// <summary>A data_protection_replication block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dataProtectionReplication")]
@@ -1007,13 +1057,17 @@ public partial class V1beta1VolumeSpecInitProvider
     [JsonPropertyName("exportPolicyRule")]
     public IList<V1beta1VolumeSpecInitProviderExportPolicyRule>? ExportPolicyRule { get; set; }
 
-    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Changing this forces a new resource to be created. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
     [JsonPropertyName("kerberosEnabled")]
     public bool? KerberosEnabled { get; set; }
 
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
+
+    /// <summary>A boolean specifying if the volume is a large volume. Defaults to false. Indicates whether the volume is a large volume.</summary>
+    [JsonPropertyName("largeVolumeEnabled")]
+    public bool? LargeVolumeEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -1031,23 +1085,27 @@ public partial class V1beta1VolumeSpecInitProvider
     [JsonPropertyName("securityStyle")]
     public string? SecurityStyle { get; set; }
 
-    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra. Changing this forces a new resource to be created.</summary>
+    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra.</summary>
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Enable SMB encryption. Changing this forces a new resource to be created. SMB3 encryption option should be used only for SMB/DualProtocol volumes. Using it for any other workloads is not supported.</summary>
+    [JsonPropertyName("smb3ProtocolEncryptionEnabled")]
+    public bool? Smb3ProtocolEncryptionEnabled { get; set; }
+
+    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable access based enumeration setting for SMB/Dual Protocol volume. When enabled, users who do not have permission to access a shared folder or file underneath it, do not see that shared resource displayed in their environment.</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
 
-    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    /// <summary>Enable SMB Continuous Availability. Changing this forces a new resource to be created. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
     [JsonPropertyName("smbContinuousAvailabilityEnabled")]
     public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
-    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable non browsable share setting for SMB/Dual Protocol volume. When enabled, it restricts windows clients to browse the share</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]
     public bool? SmbNonBrowsableEnabled { get; set; }
 
-    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.</summary>
+    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible. Defaults to true.</summary>
     [JsonPropertyName("snapshotDirectoryVisible")]
     public bool? SnapshotDirectoryVisible { get; set; }
 
@@ -1218,6 +1276,23 @@ public partial class V1beta1VolumeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VolumeStatusAtProviderDataProtectionBackupPolicy
+{
+    /// <summary>Resource ID of the backup policy to apply to the volume. The ID of the backup policy to associate with this volume.</summary>
+    [JsonPropertyName("backupPolicyId")]
+    public string? BackupPolicyId { get; set; }
+
+    /// <summary>Resource ID of the backup backup vault to associate this volume to. The ID of the backup vault to associate with this volume.</summary>
+    [JsonPropertyName("backupVaultId")]
+    public string? BackupVaultId { get; set; }
+
+    /// <summary>Enables the backup policy on the volume, defaults to true. If set to false, the backup policy will not be enabled on this volume, thus disabling scheduled backups.</summary>
+    [JsonPropertyName("policyEnabled")]
+    public bool? PolicyEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeStatusAtProviderDataProtectionReplication
 {
     /// <summary>The endpoint type, default value is dst for destination.</summary>
@@ -1311,9 +1386,13 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("azureVmwareDataStoreEnabled")]
     public bool? AzureVmwareDataStoreEnabled { get; set; }
 
-    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name, account_name and pool_name. Changing this forces a new resource to be created.</summary>
+    /// <summary>Creates volume from snapshot. Following properties must be the same as the original volume where the snapshot was taken from: protocols, subnet_id, location, service_level, resource_group_name and account_name. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("createFromSnapshotResourceId")]
     public string? CreateFromSnapshotResourceId { get; set; }
+
+    /// <summary>A data_protection_backup_policy block as defined below.</summary>
+    [JsonPropertyName("dataProtectionBackupPolicy")]
+    public IList<V1beta1VolumeStatusAtProviderDataProtectionBackupPolicy>? DataProtectionBackupPolicy { get; set; }
 
     /// <summary>A data_protection_replication block as defined below. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dataProtectionReplication")]
@@ -1335,13 +1414,17 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
+    /// <summary>Enable to allow Kerberos secured volumes. Requires appropriate export rules. Changing this forces a new resource to be created. Enable to allow Kerberos secured volumes. Requires appropriate export rules as well as the parent `azurerm_netapp_account` having a defined AD connection.</summary>
     [JsonPropertyName("kerberosEnabled")]
     public bool? KerberosEnabled { get; set; }
 
     /// <summary>The Private Endpoint ID for Key Vault, which is required when using customer-managed keys. This is required with encryption_key_source. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyVaultPrivateEndpointId")]
     public string? KeyVaultPrivateEndpointId { get; set; }
+
+    /// <summary>A boolean specifying if the volume is a large volume. Defaults to false. Indicates whether the volume is a large volume.</summary>
+    [JsonPropertyName("largeVolumeEnabled")]
+    public bool? LargeVolumeEnabled { get; set; }
 
     /// <summary>Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("location")]
@@ -1355,7 +1438,7 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("networkFeatures")]
     public string? NetworkFeatures { get; set; }
 
-    /// <summary>The name of the NetApp pool in which the NetApp Volume should be created. Changing this forces a new resource to be created.</summary>
+    /// <summary>The name of the NetApp pool in which the NetApp Volume should be created.</summary>
     [JsonPropertyName("poolName")]
     public string? PoolName { get; set; }
 
@@ -1371,23 +1454,27 @@ public partial class V1beta1VolumeStatusAtProvider
     [JsonPropertyName("securityStyle")]
     public string? SecurityStyle { get; set; }
 
-    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra. Changing this forces a new resource to be created.</summary>
+    /// <summary>The target performance of the file system. Valid values include Premium, Standard, or Ultra.</summary>
     [JsonPropertyName("serviceLevel")]
     public string? ServiceLevel { get; set; }
 
-    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Enable SMB encryption. Changing this forces a new resource to be created. SMB3 encryption option should be used only for SMB/DualProtocol volumes. Using it for any other workloads is not supported.</summary>
+    [JsonPropertyName("smb3ProtocolEncryptionEnabled")]
+    public bool? Smb3ProtocolEncryptionEnabled { get; set; }
+
+    /// <summary>Limits enumeration of files and folders (that is, listing the contents) in SMB only to users with allowed access on the share. For instance, if a user doesn't have access to read a file or folder in a share with access-based enumeration enabled, then the file or folder doesn't show up in directory listings. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable access based enumeration setting for SMB/Dual Protocol volume. When enabled, users who do not have permission to access a shared folder or file underneath it, do not see that shared resource displayed in their environment.</summary>
     [JsonPropertyName("smbAccessBasedEnumerationEnabled")]
     public bool? SmbAccessBasedEnumerationEnabled { get; set; }
 
-    /// <summary>Enable SMB Continuous Availability. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
+    /// <summary>Enable SMB Continuous Availability. Changing this forces a new resource to be created. Continuous availability option should be used only for SQL and FSLogix workloads. Using it for any other SMB workloads is not supported.</summary>
     [JsonPropertyName("smbContinuousAvailabilityEnabled")]
     public bool? SmbContinuousAvailabilityEnabled { get; set; }
 
-    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files</summary>
+    /// <summary>Limits clients from browsing for an SMB share by hiding the share from view in Windows Explorer or when listing shares in "net view." Only end users that know the absolute paths to the share are able to find the share. Defaults to false. For more information, please refer to Understand NAS share permissions in Azure NetApp Files Enable non browsable share setting for SMB/Dual Protocol volume. When enabled, it restricts windows clients to browse the share</summary>
     [JsonPropertyName("smbNonBrowsableEnabled")]
     public bool? SmbNonBrowsableEnabled { get; set; }
 
-    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible, default value is true.</summary>
+    /// <summary>Specifies whether the .snapshot (NFS clients) or ~snapshot (SMB clients) path of a volume is visible. Defaults to true.</summary>
     [JsonPropertyName("snapshotDirectoryVisible")]
     public bool? SnapshotDirectoryVisible { get; set; }
 

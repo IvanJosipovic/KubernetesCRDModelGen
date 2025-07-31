@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: accounts.purview.azure.upbound.io
 spec:
   group: purview.azure.upbound.io
@@ -102,6 +102,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string
@@ -330,6 +333,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string
@@ -647,6 +653,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  awsExternalId:
+                    description: Configured in AWS to allow use of the role arn used for scanning
+                    type: string
                   catalogEndpoint:
                     description: Catalog endpoint.
                     type: string
@@ -680,6 +689,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string
@@ -863,6 +875,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string
@@ -1089,6 +1104,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string
@@ -1406,6 +1424,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  awsExternalId:
+                    description: Configured in AWS to allow use of the role arn used for scanning
+                    type: string
                   catalogEndpoint:
                     description: Catalog endpoint.
                     type: string
@@ -1437,6 +1458,9 @@ spec:
                   location:
                     description: The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.
                     type: string
+                  managedEventHubEnabled:
+                    description: Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.
+                    type: boolean
                   managedResourceGroupName:
                     description: The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.
                     type: string

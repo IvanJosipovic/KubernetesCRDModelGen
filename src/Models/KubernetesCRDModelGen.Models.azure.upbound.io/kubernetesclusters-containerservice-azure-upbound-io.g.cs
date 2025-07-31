@@ -81,62 +81,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderAciConnectorLinux
     public V1beta1KubernetesClusterSpecForProviderAciConnectorLinuxSubnetNameSelector? SubnetNameSelector { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfile
@@ -144,22 +88,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderApiServerAccessProfi
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
     [JsonPropertyName("authorizedIpRanges")]
     public IList<string>? AuthorizedIpRanges { get; set; }
-
-    /// <summary>The ID of the Subnet where the API server endpoint is delegated to.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-
-    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdRef")]
-    public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdRef? SubnetIdRef { get; set; }
-
-    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdSelector")]
-    public V1beta1KubernetesClusterSpecForProviderApiServerAccessProfileSubnetIdSelector? SubnetIdSelector { get; set; }
-
-    /// <summary>Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration.</summary>
-    [JsonPropertyName("vnetIntegrationEnabled")]
-    public bool? VnetIntegrationEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -170,6 +98,14 @@ public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
     [JsonPropertyName("balanceSimilarNodeGroups")]
     public bool? BalanceSimilarNodeGroups { get; set; }
 
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from empty nodes. Defaults to false.</summary>
+    [JsonPropertyName("daemonsetEvictionForEmptyNodesEnabled")]
+    public bool? DaemonsetEvictionForEmptyNodesEnabled { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from non-empty nodes. Defaults to true.</summary>
+    [JsonPropertyName("daemonsetEvictionForOccupiedNodesEnabled")]
+    public bool? DaemonsetEvictionForOccupiedNodesEnabled { get; set; }
+
     /// <summary>Maximum number of empty nodes that can be deleted at the same time. Defaults to 10.</summary>
     [JsonPropertyName("emptyBulkDeleteMax")]
     public string? EmptyBulkDeleteMax { get; set; }
@@ -177,6 +113,10 @@ public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
     /// <summary>Expander to use. Possible values are least-waste, priority, most-pods and random. Defaults to random.</summary>
     [JsonPropertyName("expander")]
     public string? Expander { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be ignored when calculating resource utilization for scale down. Defaults to false.</summary>
+    [JsonPropertyName("ignoreDaemonsetsUtilizationEnabled")]
+    public bool? IgnoreDaemonsetsUtilizationEnabled { get; set; }
 
     /// <summary>Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to 600.</summary>
     [JsonPropertyName("maxGracefulTerminationSec")]
@@ -235,23 +175,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
-/// <summary>The Server Secret of an Azure Active Directory Application.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControl
@@ -263,22 +186,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderAzureActiveDirectory
     /// <summary>Is Role Based Access Control based on Azure AD enabled?</summary>
     [JsonPropertyName("azureRbacEnabled")]
     public bool? AzureRbacEnabled { get; set; }
-
-    /// <summary>The Client ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("clientAppId")]
-    public string? ClientAppId { get; set; }
-
-    /// <summary>Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.</summary>
-    [JsonPropertyName("managed")]
-    public bool? Managed { get; set; }
-
-    /// <summary>The Server ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("serverAppId")]
-    public string? ServerAppId { get; set; }
-
-    /// <summary>The Server Secret of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("serverAppSecretSecretRef")]
-    public V1beta1KubernetesClusterSpecForProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef? ServerAppSecretSecretRef { get; set; }
 
     /// <summary>The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.</summary>
     [JsonPropertyName("tenantId")]
@@ -310,7 +217,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubel
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled?</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
@@ -648,25 +555,13 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetS
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
 {
+    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? temporary_name_for_rotation must be specified when changing this block. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("fipsEnabled")]
@@ -676,6 +571,10 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
 
+    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Host Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
     public string? HostGroupId { get; set; }
@@ -684,7 +583,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterSpecForProviderDefaultNodePoolKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. temporary_name_for_rotation must be specified when changing this block.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
@@ -699,10 +598,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     /// <summary>The maximum number of pods that can run on each agent. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist in this Node Pool. If specified this must be between 1 and 1000.</summary>
     [JsonPropertyName("minCount")]
@@ -724,13 +619,13 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterSpecForProviderDefaultNodePoolNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("nodeTaints")]
-    public IList<string>? NodeTaints { get; set; }
 
     /// <summary>Enabling this option will taint default node pool with CriticalAddonsOnly=true:NoSchedule taint. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("onlyCriticalAddonsEnabled")]
@@ -748,7 +643,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. temporary_name_for_rotation must be specified when attempting a change.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise temporary_name_for_rotation must be specified when attempting a change.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -784,7 +679,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("temporaryNameForRotation")]
     public string? TemporaryNameForRotation { get; set; }
 
-    /// <summary>The type of Node Pool which should be created. Possible values are AvailabilitySet and VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of Node Pool which should be created. Possible values are VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -812,7 +707,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderDefaultNodePool
     [JsonPropertyName("vnetSubnetIdSelector")]
     public V1beta1KubernetesClusterSpecForProviderDefaultNodePoolVnetSubnetIdSelector? VnetSubnetIdSelector { get; set; }
 
-    /// <summary>Specifies the workload runtime used by the node pool. Possible values are OCIContainer and KataMshvVmIsolation.</summary>
+    /// <summary>Specifies the workload runtime used by the node pool. Possible value is OCIContainer.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
@@ -1042,7 +937,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKeyVaultSecretsProvi
     [JsonPropertyName("secretRotationEnabled")]
     public bool? SecretRotationEnabled { get; set; }
 
-    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation is true. Defaults to 2m.</summary>
+    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation_enabled is true. Defaults to 2m.</summary>
     [JsonPropertyName("secretRotationInterval")]
     public string? SecretRotationInterval { get; set; }
 }
@@ -1068,7 +963,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderKubeletIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderLinuxProfileSshKey
 {
-    /// <summary>The Public SSH Key used to access the cluster.</summary>
+    /// <summary>The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyData")]
     public string? KeyData { get; set; }
 }
@@ -1142,7 +1037,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAutoUpgrade
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -1150,7 +1045,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowAut
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -1200,7 +1095,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNodeOs
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -1208,7 +1103,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderMaintenanceWindowNod
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -1267,11 +1162,15 @@ public partial class V1beta1KubernetesClusterSpecForProviderMonitorMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBalancerProfile
 {
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>The type of the managed inbound Load Balancer Backend Pool. Possible values are NodeIP and NodeIPConfiguration. Defaults to NodeIPConfiguration. See the documentation for more information.</summary>
+    [JsonPropertyName("backendPoolType")]
+    public string? BackendPoolType { get; set; }
+
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 
@@ -1296,11 +1195,11 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileLoadBa
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfileNatGatewayProfile
 {
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 }
@@ -1312,14 +1211,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dnsServiceIp")]
     public string? DnsServiceIp { get; set; }
-
-    /// <summary>IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("dockerBridgeCidr")]
-    public string? DockerBridgeCidr { get; set; }
-
-    /// <summary>Specifies the eBPF data plane used for building the Kubernetes network. Possible value is cilium. Disabling this forces a new resource to be created.</summary>
-    [JsonPropertyName("ebpfDataPlane")]
-    public string? EbpfDataPlane { get; set; }
 
     /// <summary>Specifies a list of IP versions the Kubernetes Cluster will use to assign IP addresses to its nodes and pods. Possible values are IPv4 and/or IPv6. IPv4 must always be specified. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("ipVersions")]
@@ -1357,19 +1248,11 @@ public partial class V1beta1KubernetesClusterSpecForProviderNetworkProfile
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
 
-    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpAddressIds")]
-    public IList<string>? OutboundIpAddressIds { get; set; }
-
-    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpPrefixIds")]
-    public IList<string>? OutboundIpPrefixIds { get; set; }
-
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
     public string? OutboundType { get; set; }
 
-    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet. Changing this forces a new resource to be created.</summary>
+    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet or network_plugin_mode is set to overlay. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("podCidr")]
     public string? PodCidr { get; set; }
 
@@ -1555,6 +1438,10 @@ public partial class V1beta1KubernetesClusterSpecForProviderServiceMeshProfile
     /// <summary>The mode of the service mesh. Possible value is Istio.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
+
+    /// <summary>Specify 1 or 2 Istio control plane revisions for managing minor upgrades using the canary upgrade process. For example, create the resource with revisions set to ["asm-1-20"], or leave it empty (the revisions will only be known after apply). To start the canary upgrade, change revisions to ["asm-1-20", "asm-1-21"]. To roll back the canary upgrade, revert to ["asm-1-20"]. To confirm the upgrade, change to ["asm-1-21"].</summary>
+    [JsonPropertyName("revisions")]
+    public IList<string>? Revisions { get; set; }
 }
 
 /// <summary>The Client Secret for the Service Principal.</summary>
@@ -1584,7 +1471,7 @@ public partial class V1beta1KubernetesClusterSpecForProviderServicePrincipal
 
     /// <summary>The Client Secret for the Service Principal.</summary>
     [JsonPropertyName("clientSecretSecretRef")]
-    public V1beta1KubernetesClusterSpecForProviderServicePrincipalClientSecretSecretRef ClientSecretSecretRef { get; set; }
+    public V1beta1KubernetesClusterSpecForProviderServicePrincipalClientSecretSecretRef? ClientSecretSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -1599,10 +1486,6 @@ public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
     [JsonPropertyName("diskDriverEnabled")]
     public bool? DiskDriverEnabled { get; set; }
 
-    /// <summary>Disk CSI Driver version to be used. Possible values are v1 and v2. Defaults to v1.</summary>
-    [JsonPropertyName("diskDriverVersion")]
-    public string? DiskDriverVersion { get; set; }
-
     /// <summary>Is the File CSI driver enabled? Defaults to true.</summary>
     [JsonPropertyName("fileDriverEnabled")]
     public bool? FileDriverEnabled { get; set; }
@@ -1614,12 +1497,21 @@ public partial class V1beta1KubernetesClusterSpecForProviderStorageProfile
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecForProviderUpgradeOverride
+{
+    /// <summary>Specifies the duration, in RFC 3339 format (e.g., 2025-10-01T13:00:00Z), the upgrade_override values are effective. This field must be set for the upgrade_override values to take effect. The date-time must be within the next 30 days.</summary>
+    [JsonPropertyName("effectiveUntil")]
+    public string? EffectiveUntil { get; set; }
+
+    /// <summary>Whether to force upgrade the cluster. Possible values are true or false.</summary>
+    [JsonPropertyName("forceUpgradeEnabled")]
+    public bool? ForceUpgradeEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecForProviderWebAppRouting
 {
-    /// <summary>The Kubernetes Managed Cluster ID.</summary>
-    [JsonPropertyName("dnsZoneId")]
-    public string? DnsZoneId { get; set; }
-
     /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
     [JsonPropertyName("dnsZoneIds")]
     public IList<string>? DnsZoneIds { get; set; }
@@ -1701,17 +1593,13 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     [JsonPropertyName("apiServerAccessProfile")]
     public IList<V1beta1KubernetesClusterSpecForProviderApiServerAccessProfile>? ApiServerAccessProfile { get; set; }
 
-    /// <summary>Deprecated in favor of `spec.forProvider.apiServerAccessProfile[0].authorizedIpRanges`</summary>
-    [JsonPropertyName("apiServerAuthorizedIpRanges")]
-    public IList<string>? ApiServerAuthorizedIpRanges { get; set; }
-
     /// <summary>A auto_scaler_profile block as defined below.</summary>
     [JsonPropertyName("autoScalerProfile")]
     public IList<V1beta1KubernetesClusterSpecForProviderAutoScalerProfile>? AutoScalerProfile { get; set; }
 
     /// <summary>The upgrade channel for this Kubernetes Cluster. Possible values are patch, rapid, node-image and stable. Omitting this field sets this value to none.</summary>
-    [JsonPropertyName("automaticChannelUpgrade")]
-    public string? AutomaticChannelUpgrade { get; set; }
+    [JsonPropertyName("automaticUpgradeChannel")]
+    public string? AutomaticUpgradeChannel { get; set; }
 
     /// <summary>A azure_active_directory_role_based_access_control block as defined below.</summary>
     [JsonPropertyName("azureActiveDirectoryRoleBasedAccessControl")]
@@ -1729,11 +1617,7 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     [JsonPropertyName("costAnalysisEnabled")]
     public bool? CostAnalysisEnabled { get; set; }
 
-    /// <summary>A list of up to 10 base64 encoded CAs that will be added to the trust store on nodes with the custom_ca_trust_enabled feature enabled.</summary>
-    [JsonPropertyName("customCaTrustCertificatesBase64")]
-    public IList<string>? CustomCaTrustCertificatesBase64 { get; set; }
-
-    /// <summary>A default_node_pool block as defined below.</summary>
+    /// <summary>Specifies configuration for "System" mode node pool. A default_node_pool block as defined below.</summary>
     [JsonPropertyName("defaultNodePool")]
     public IList<V1beta1KubernetesClusterSpecForProviderDefaultNodePool>? DefaultNodePool { get; set; }
 
@@ -1749,13 +1633,9 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     [JsonPropertyName("dnsPrefixPrivateCluster")]
     public string? DnsPrefixPrivateCluster { get; set; }
 
-    /// <summary>Specifies the Edge Zone within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Extended Zone (formerly called Edge Zone) within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enablePodSecurityPolicy")]
-    public bool? EnablePodSecurityPolicy { get; set; }
 
     /// <summary>Should HTTP Application Routing be enabled?</summary>
     [JsonPropertyName("httpApplicationRoutingEnabled")]
@@ -1773,7 +1653,7 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     [JsonPropertyName("imageCleanerEnabled")]
     public bool? ImageCleanerEnabled { get; set; }
 
-    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 48.</summary>
+    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 0.</summary>
     [JsonPropertyName("imageCleanerIntervalHours")]
     public double? ImageCleanerIntervalHours { get; set; }
 
@@ -1833,9 +1713,9 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     [JsonPropertyName("networkProfile")]
     public IList<V1beta1KubernetesClusterSpecForProviderNetworkProfile>? NetworkProfile { get; set; }
 
-    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None.</summary>
-    [JsonPropertyName("nodeOsChannelUpgrade")]
-    public string? NodeOsChannelUpgrade { get; set; }
+    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None. Defaults to NodeImage.</summary>
+    [JsonPropertyName("nodeOsUpgradeChannel")]
+    public string? NodeOsUpgradeChannel { get; set; }
 
     /// <summary>The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.</summary>
     [JsonPropertyName("nodeResourceGroup")]
@@ -1872,10 +1752,6 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     /// <summary>Selector for a PrivateDNSZone in network to populate privateDnsZoneId.</summary>
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1KubernetesClusterSpecForProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
-
-    /// <summary>Whether public network access is allowed for this Kubernetes Cluster. Defaults to true.</summary>
-    [JsonPropertyName("publicNetworkAccessEnabled")]
-    public bool? PublicNetworkAccessEnabled { get; set; }
 
     /// <summary>Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
@@ -1920,6 +1796,10 @@ public partial class V1beta1KubernetesClusterSpecForProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A upgrade_override block as defined below.</summary>
+    [JsonPropertyName("upgradeOverride")]
+    public IList<V1beta1KubernetesClusterSpecForProviderUpgradeOverride>? UpgradeOverride { get; set; }
 
     /// <summary>A web_app_routing block as defined below.</summary>
     [JsonPropertyName("webAppRouting")]
@@ -2011,62 +1891,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAciConnectorLinux
     public V1beta1KubernetesClusterSpecInitProviderAciConnectorLinuxSubnetNameSelector? SubnetNameSelector { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelectorPolicy? Policy { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfile
@@ -2074,22 +1898,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderApiServerAccessProf
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
     [JsonPropertyName("authorizedIpRanges")]
     public IList<string>? AuthorizedIpRanges { get; set; }
-
-    /// <summary>The ID of the Subnet where the API server endpoint is delegated to.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-
-    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdRef")]
-    public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdRef? SubnetIdRef { get; set; }
-
-    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
-    [JsonPropertyName("subnetIdSelector")]
-    public V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfileSubnetIdSelector? SubnetIdSelector { get; set; }
-
-    /// <summary>Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration.</summary>
-    [JsonPropertyName("vnetIntegrationEnabled")]
-    public bool? VnetIntegrationEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -2100,6 +1908,14 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
     [JsonPropertyName("balanceSimilarNodeGroups")]
     public bool? BalanceSimilarNodeGroups { get; set; }
 
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from empty nodes. Defaults to false.</summary>
+    [JsonPropertyName("daemonsetEvictionForEmptyNodesEnabled")]
+    public bool? DaemonsetEvictionForEmptyNodesEnabled { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from non-empty nodes. Defaults to true.</summary>
+    [JsonPropertyName("daemonsetEvictionForOccupiedNodesEnabled")]
+    public bool? DaemonsetEvictionForOccupiedNodesEnabled { get; set; }
+
     /// <summary>Maximum number of empty nodes that can be deleted at the same time. Defaults to 10.</summary>
     [JsonPropertyName("emptyBulkDeleteMax")]
     public string? EmptyBulkDeleteMax { get; set; }
@@ -2107,6 +1923,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
     /// <summary>Expander to use. Possible values are least-waste, priority, most-pods and random. Defaults to random.</summary>
     [JsonPropertyName("expander")]
     public string? Expander { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be ignored when calculating resource utilization for scale down. Defaults to false.</summary>
+    [JsonPropertyName("ignoreDaemonsetsUtilizationEnabled")]
+    public bool? IgnoreDaemonsetsUtilizationEnabled { get; set; }
 
     /// <summary>Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to 600.</summary>
     [JsonPropertyName("maxGracefulTerminationSec")]
@@ -2165,23 +1985,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile
     public bool? SkipNodesWithSystemPods { get; set; }
 }
 
-/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef
-{
-    /// <summary>The key to select.</summary>
-    [JsonPropertyName("key")]
-    public string Key { get; set; }
-
-    /// <summary>Name of the secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Namespace of the secret.</summary>
-    [JsonPropertyName("namespace")]
-    public string Namespace { get; set; }
-}
-
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControl
@@ -2193,22 +1996,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderAzureActiveDirector
     /// <summary>Is Role Based Access Control based on Azure AD enabled?</summary>
     [JsonPropertyName("azureRbacEnabled")]
     public bool? AzureRbacEnabled { get; set; }
-
-    /// <summary>The Client ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("clientAppId")]
-    public string? ClientAppId { get; set; }
-
-    /// <summary>Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.</summary>
-    [JsonPropertyName("managed")]
-    public bool? Managed { get; set; }
-
-    /// <summary>The Server ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("serverAppId")]
-    public string? ServerAppId { get; set; }
-
-    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
-    [JsonPropertyName("serverAppSecretSecretRef")]
-    public V1beta1KubernetesClusterSpecInitProviderAzureActiveDirectoryRoleBasedAccessControlServerAppSecretSecretRef? ServerAppSecretSecretRef { get; set; }
 
     /// <summary>The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.</summary>
     [JsonPropertyName("tenantId")]
@@ -2240,7 +2027,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKube
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled?</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
@@ -2578,25 +2365,13 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
 {
+    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? temporary_name_for_rotation must be specified when changing this block. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("fipsEnabled")]
@@ -2606,6 +2381,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
 
+    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Host Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
     public string? HostGroupId { get; set; }
@@ -2614,7 +2393,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. temporary_name_for_rotation must be specified when changing this block.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
@@ -2629,10 +2408,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     /// <summary>The maximum number of pods that can run on each agent. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist in this Node Pool. If specified this must be between 1 and 1000.</summary>
     [JsonPropertyName("minCount")]
@@ -2654,13 +2429,13 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("nodeTaints")]
-    public IList<string>? NodeTaints { get; set; }
 
     /// <summary>Enabling this option will taint default node pool with CriticalAddonsOnly=true:NoSchedule taint. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("onlyCriticalAddonsEnabled")]
@@ -2678,7 +2453,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. temporary_name_for_rotation must be specified when attempting a change.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise temporary_name_for_rotation must be specified when attempting a change.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -2714,7 +2489,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("temporaryNameForRotation")]
     public string? TemporaryNameForRotation { get; set; }
 
-    /// <summary>The type of Node Pool which should be created. Possible values are AvailabilitySet and VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of Node Pool which should be created. Possible values are VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -2742,7 +2517,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderDefaultNodePool
     [JsonPropertyName("vnetSubnetIdSelector")]
     public V1beta1KubernetesClusterSpecInitProviderDefaultNodePoolVnetSubnetIdSelector? VnetSubnetIdSelector { get; set; }
 
-    /// <summary>Specifies the workload runtime used by the node pool. Possible values are OCIContainer and KataMshvVmIsolation.</summary>
+    /// <summary>Specifies the workload runtime used by the node pool. Possible value is OCIContainer.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
@@ -2972,7 +2747,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKeyVaultSecretsProv
     [JsonPropertyName("secretRotationEnabled")]
     public bool? SecretRotationEnabled { get; set; }
 
-    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation is true. Defaults to 2m.</summary>
+    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation_enabled is true. Defaults to 2m.</summary>
     [JsonPropertyName("secretRotationInterval")]
     public string? SecretRotationInterval { get; set; }
 }
@@ -2998,7 +2773,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderKubeletIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderLinuxProfileSshKey
 {
-    /// <summary>The Public SSH Key used to access the cluster.</summary>
+    /// <summary>The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyData")]
     public string? KeyData { get; set; }
 }
@@ -3072,7 +2847,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAutoUpgrade
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -3080,7 +2855,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowAu
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -3130,7 +2905,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNodeOs
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -3138,7 +2913,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMaintenanceWindowNo
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -3197,11 +2972,15 @@ public partial class V1beta1KubernetesClusterSpecInitProviderMonitorMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadBalancerProfile
 {
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>The type of the managed inbound Load Balancer Backend Pool. Possible values are NodeIP and NodeIPConfiguration. Defaults to NodeIPConfiguration. See the documentation for more information.</summary>
+    [JsonPropertyName("backendPoolType")]
+    public string? BackendPoolType { get; set; }
+
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 
@@ -3226,11 +3005,11 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileLoadB
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfileNatGatewayProfile
 {
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 }
@@ -3242,14 +3021,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dnsServiceIp")]
     public string? DnsServiceIp { get; set; }
-
-    /// <summary>IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("dockerBridgeCidr")]
-    public string? DockerBridgeCidr { get; set; }
-
-    /// <summary>Specifies the eBPF data plane used for building the Kubernetes network. Possible value is cilium. Disabling this forces a new resource to be created.</summary>
-    [JsonPropertyName("ebpfDataPlane")]
-    public string? EbpfDataPlane { get; set; }
 
     /// <summary>Specifies a list of IP versions the Kubernetes Cluster will use to assign IP addresses to its nodes and pods. Possible values are IPv4 and/or IPv6. IPv4 must always be specified. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("ipVersions")]
@@ -3287,19 +3058,11 @@ public partial class V1beta1KubernetesClusterSpecInitProviderNetworkProfile
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
 
-    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpAddressIds")]
-    public IList<string>? OutboundIpAddressIds { get; set; }
-
-    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpPrefixIds")]
-    public IList<string>? OutboundIpPrefixIds { get; set; }
-
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
     public string? OutboundType { get; set; }
 
-    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet. Changing this forces a new resource to be created.</summary>
+    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet or network_plugin_mode is set to overlay. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("podCidr")]
     public string? PodCidr { get; set; }
 
@@ -3429,6 +3192,27 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServiceMeshProfile
     /// <summary>The mode of the service mesh. Possible value is Istio.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
+
+    /// <summary>Specify 1 or 2 Istio control plane revisions for managing minor upgrades using the canary upgrade process. For example, create the resource with revisions set to ["asm-1-20"], or leave it empty (the revisions will only be known after apply). To start the canary upgrade, change revisions to ["asm-1-20", "asm-1-21"]. To roll back the canary upgrade, revert to ["asm-1-20"]. To confirm the upgrade, change to ["asm-1-21"].</summary>
+    [JsonPropertyName("revisions")]
+    public IList<string>? Revisions { get; set; }
+}
+
+/// <summary>The Client Secret for the Service Principal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipalClientSecretSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -3438,6 +3222,10 @@ public partial class V1beta1KubernetesClusterSpecInitProviderServicePrincipal
     /// <summary>The Client ID for the Service Principal.</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
+
+    /// <summary>The Client Secret for the Service Principal.</summary>
+    [JsonPropertyName("clientSecretSecretRef")]
+    public V1beta1KubernetesClusterSpecInitProviderServicePrincipalClientSecretSecretRef ClientSecretSecretRef { get; set; }
 }
 
 /// <summary></summary>
@@ -3452,10 +3240,6 @@ public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
     [JsonPropertyName("diskDriverEnabled")]
     public bool? DiskDriverEnabled { get; set; }
 
-    /// <summary>Disk CSI Driver version to be used. Possible values are v1 and v2. Defaults to v1.</summary>
-    [JsonPropertyName("diskDriverVersion")]
-    public string? DiskDriverVersion { get; set; }
-
     /// <summary>Is the File CSI driver enabled? Defaults to true.</summary>
     [JsonPropertyName("fileDriverEnabled")]
     public bool? FileDriverEnabled { get; set; }
@@ -3467,12 +3251,21 @@ public partial class V1beta1KubernetesClusterSpecInitProviderStorageProfile
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterSpecInitProviderUpgradeOverride
+{
+    /// <summary>Specifies the duration, in RFC 3339 format (e.g., 2025-10-01T13:00:00Z), the upgrade_override values are effective. This field must be set for the upgrade_override values to take effect. The date-time must be within the next 30 days.</summary>
+    [JsonPropertyName("effectiveUntil")]
+    public string? EffectiveUntil { get; set; }
+
+    /// <summary>Whether to force upgrade the cluster. Possible values are true or false.</summary>
+    [JsonPropertyName("forceUpgradeEnabled")]
+    public bool? ForceUpgradeEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterSpecInitProviderWebAppRouting
 {
-    /// <summary>The Kubernetes Managed Cluster ID.</summary>
-    [JsonPropertyName("dnsZoneId")]
-    public string? DnsZoneId { get; set; }
-
     /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
     [JsonPropertyName("dnsZoneIds")]
     public IList<string>? DnsZoneIds { get; set; }
@@ -3514,7 +3307,7 @@ public partial class V1beta1KubernetesClusterSpecInitProviderWindowsProfile
 {
     /// <summary>The Admin Password for Windows VMs. Length must be between 14 and 123 characters.</summary>
     [JsonPropertyName("adminPasswordSecretRef")]
-    public V1beta1KubernetesClusterSpecInitProviderWindowsProfileAdminPasswordSecretRef? AdminPasswordSecretRef { get; set; }
+    public V1beta1KubernetesClusterSpecInitProviderWindowsProfileAdminPasswordSecretRef AdminPasswordSecretRef { get; set; }
 
     /// <summary>The Admin Username for Windows VMs. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("adminUsername")]
@@ -3554,17 +3347,13 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("apiServerAccessProfile")]
     public IList<V1beta1KubernetesClusterSpecInitProviderApiServerAccessProfile>? ApiServerAccessProfile { get; set; }
 
-    /// <summary>Deprecated in favor of `spec.forProvider.apiServerAccessProfile[0].authorizedIpRanges`</summary>
-    [JsonPropertyName("apiServerAuthorizedIpRanges")]
-    public IList<string>? ApiServerAuthorizedIpRanges { get; set; }
-
     /// <summary>A auto_scaler_profile block as defined below.</summary>
     [JsonPropertyName("autoScalerProfile")]
     public IList<V1beta1KubernetesClusterSpecInitProviderAutoScalerProfile>? AutoScalerProfile { get; set; }
 
     /// <summary>The upgrade channel for this Kubernetes Cluster. Possible values are patch, rapid, node-image and stable. Omitting this field sets this value to none.</summary>
-    [JsonPropertyName("automaticChannelUpgrade")]
-    public string? AutomaticChannelUpgrade { get; set; }
+    [JsonPropertyName("automaticUpgradeChannel")]
+    public string? AutomaticUpgradeChannel { get; set; }
 
     /// <summary>A azure_active_directory_role_based_access_control block as defined below.</summary>
     [JsonPropertyName("azureActiveDirectoryRoleBasedAccessControl")]
@@ -3582,11 +3371,7 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("costAnalysisEnabled")]
     public bool? CostAnalysisEnabled { get; set; }
 
-    /// <summary>A list of up to 10 base64 encoded CAs that will be added to the trust store on nodes with the custom_ca_trust_enabled feature enabled.</summary>
-    [JsonPropertyName("customCaTrustCertificatesBase64")]
-    public IList<string>? CustomCaTrustCertificatesBase64 { get; set; }
-
-    /// <summary>A default_node_pool block as defined below.</summary>
+    /// <summary>Specifies configuration for "System" mode node pool. A default_node_pool block as defined below.</summary>
     [JsonPropertyName("defaultNodePool")]
     public IList<V1beta1KubernetesClusterSpecInitProviderDefaultNodePool>? DefaultNodePool { get; set; }
 
@@ -3602,13 +3387,9 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("dnsPrefixPrivateCluster")]
     public string? DnsPrefixPrivateCluster { get; set; }
 
-    /// <summary>Specifies the Edge Zone within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Extended Zone (formerly called Edge Zone) within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enablePodSecurityPolicy")]
-    public bool? EnablePodSecurityPolicy { get; set; }
 
     /// <summary>Should HTTP Application Routing be enabled?</summary>
     [JsonPropertyName("httpApplicationRoutingEnabled")]
@@ -3626,7 +3407,7 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("imageCleanerEnabled")]
     public bool? ImageCleanerEnabled { get; set; }
 
-    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 48.</summary>
+    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 0.</summary>
     [JsonPropertyName("imageCleanerIntervalHours")]
     public double? ImageCleanerIntervalHours { get; set; }
 
@@ -3686,9 +3467,9 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("networkProfile")]
     public IList<V1beta1KubernetesClusterSpecInitProviderNetworkProfile>? NetworkProfile { get; set; }
 
-    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None.</summary>
-    [JsonPropertyName("nodeOsChannelUpgrade")]
-    public string? NodeOsChannelUpgrade { get; set; }
+    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None. Defaults to NodeImage.</summary>
+    [JsonPropertyName("nodeOsUpgradeChannel")]
+    public string? NodeOsUpgradeChannel { get; set; }
 
     /// <summary>The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.</summary>
     [JsonPropertyName("nodeResourceGroup")]
@@ -3726,10 +3507,6 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1KubernetesClusterSpecInitProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
 
-    /// <summary>Whether public network access is allowed for this Kubernetes Cluster. Defaults to true.</summary>
-    [JsonPropertyName("publicNetworkAccessEnabled")]
-    public bool? PublicNetworkAccessEnabled { get; set; }
-
     /// <summary>Whether Role Based Access Control for the Kubernetes Cluster should be enabled. Defaults to true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("roleBasedAccessControlEnabled")]
     public bool? RoleBasedAccessControlEnabled { get; set; }
@@ -3761,6 +3538,10 @@ public partial class V1beta1KubernetesClusterSpecInitProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A upgrade_override block as defined below.</summary>
+    [JsonPropertyName("upgradeOverride")]
+    public IList<V1beta1KubernetesClusterSpecInitProviderUpgradeOverride>? UpgradeOverride { get; set; }
 
     /// <summary>A web_app_routing block as defined below.</summary>
     [JsonPropertyName("webAppRouting")]
@@ -3948,14 +3729,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderApiServerAccessProf
     /// <summary>Set of authorized IP ranges to allow access to API server, e.g. ["198.51.100.0/24"].</summary>
     [JsonPropertyName("authorizedIpRanges")]
     public IList<string>? AuthorizedIpRanges { get; set; }
-
-    /// <summary>The ID of the Subnet where the API server endpoint is delegated to.</summary>
-    [JsonPropertyName("subnetId")]
-    public string? SubnetId { get; set; }
-
-    /// <summary>Should API Server VNet Integration be enabled? For more details please visit Use API Server VNet Integration.</summary>
-    [JsonPropertyName("vnetIntegrationEnabled")]
-    public bool? VnetIntegrationEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -3966,6 +3739,14 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
     [JsonPropertyName("balanceSimilarNodeGroups")]
     public bool? BalanceSimilarNodeGroups { get; set; }
 
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from empty nodes. Defaults to false.</summary>
+    [JsonPropertyName("daemonsetEvictionForEmptyNodesEnabled")]
+    public bool? DaemonsetEvictionForEmptyNodesEnabled { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be gracefully terminated from non-empty nodes. Defaults to true.</summary>
+    [JsonPropertyName("daemonsetEvictionForOccupiedNodesEnabled")]
+    public bool? DaemonsetEvictionForOccupiedNodesEnabled { get; set; }
+
     /// <summary>Maximum number of empty nodes that can be deleted at the same time. Defaults to 10.</summary>
     [JsonPropertyName("emptyBulkDeleteMax")]
     public string? EmptyBulkDeleteMax { get; set; }
@@ -3973,6 +3754,10 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile
     /// <summary>Expander to use. Possible values are least-waste, priority, most-pods and random. Defaults to random.</summary>
     [JsonPropertyName("expander")]
     public string? Expander { get; set; }
+
+    /// <summary>Whether DaemonSet pods will be ignored when calculating resource utilization for scale down. Defaults to false.</summary>
+    [JsonPropertyName("ignoreDaemonsetsUtilizationEnabled")]
+    public bool? IgnoreDaemonsetsUtilizationEnabled { get; set; }
 
     /// <summary>Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to 600.</summary>
     [JsonPropertyName("maxGracefulTerminationSec")]
@@ -4043,18 +3828,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderAzureActiveDirector
     [JsonPropertyName("azureRbacEnabled")]
     public bool? AzureRbacEnabled { get; set; }
 
-    /// <summary>The Client ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("clientAppId")]
-    public string? ClientAppId { get; set; }
-
-    /// <summary>Is the Azure Active Directory integration Managed, meaning that Azure will create/manage the Service Principal used for integration.</summary>
-    [JsonPropertyName("managed")]
-    public bool? Managed { get; set; }
-
-    /// <summary>The Server ID of an Azure Active Directory Application.</summary>
-    [JsonPropertyName("serverAppId")]
-    public string? ServerAppId { get; set; }
-
     /// <summary>The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.</summary>
     [JsonPropertyName("tenantId")]
     public string? TenantId { get; set; }
@@ -4085,7 +3858,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKube
     [JsonPropertyName("containerLogMaxSizeMb")]
     public double? ContainerLogMaxSizeMb { get; set; }
 
-    /// <summary>Is CPU CFS quota enforcement for containers enabled?</summary>
+    /// <summary>Is CPU CFS quota enforcement for containers enabled? Defaults to true.</summary>
     [JsonPropertyName("cpuCfsQuotaEnabled")]
     public bool? CpuCfsQuotaEnabled { get; set; }
 
@@ -4311,25 +4084,13 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolUpgr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
 {
+    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
+    [JsonPropertyName("autoScalingEnabled")]
+    public bool? AutoScalingEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Capacity Reservation Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("capacityReservationGroupId")]
     public string? CapacityReservationGroupId { get; set; }
-
-    /// <summary>Specifies whether to trust a Custom CA.</summary>
-    [JsonPropertyName("customCaTrustEnabled")]
-    public bool? CustomCaTrustEnabled { get; set; }
-
-    /// <summary>Should the Kubernetes Auto Scaler be enabled for this Node Pool?</summary>
-    [JsonPropertyName("enableAutoScaling")]
-    public bool? EnableAutoScaling { get; set; }
-
-    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableHostEncryption")]
-    public bool? EnableHostEncryption { get; set; }
-
-    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
-    [JsonPropertyName("enableNodePublicIp")]
-    public bool? EnableNodePublicIp { get; set; }
 
     /// <summary>Should the nodes in this Node Pool have Federal Information Processing Standard enabled? temporary_name_for_rotation must be specified when changing this block. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("fipsEnabled")]
@@ -4339,6 +4100,10 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("gpuInstance")]
     public string? GpuInstance { get; set; }
 
+    /// <summary>Should the nodes in the Default Node Pool have host encryption enabled? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("hostEncryptionEnabled")]
+    public bool? HostEncryptionEnabled { get; set; }
+
     /// <summary>Specifies the ID of the Host Group within which this AKS Cluster should be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("hostGroupId")]
     public string? HostGroupId { get; set; }
@@ -4347,7 +4112,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("kubeletConfig")]
     public IList<V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolKubeletConfig>? KubeletConfig { get; set; }
 
-    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary.</summary>
+    /// <summary>The type of disk used by kubelet. Possible values are OS and Temporary. temporary_name_for_rotation must be specified when changing this block.</summary>
     [JsonPropertyName("kubeletDiskType")]
     public string? KubeletDiskType { get; set; }
 
@@ -4362,10 +4127,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     /// <summary>The maximum number of pods that can run on each agent. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("maxPods")]
     public double? MaxPods { get; set; }
-
-    /// <summary>A base64-encoded string which will be written to /etc/motd after decoding. This allows customization of the message of the day for Linux nodes. It cannot be specified for Windows nodes and must be a static string (i.e. will be printed raw and not executed as a script). Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("messageOfTheDay")]
-    public string? MessageOfTheDay { get; set; }
 
     /// <summary>The minimum number of nodes which should exist in this Node Pool. If specified this must be between 1 and 1000.</summary>
     [JsonPropertyName("minCount")]
@@ -4387,13 +4148,13 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("nodeNetworkProfile")]
     public IList<V1beta1KubernetesClusterStatusAtProviderDefaultNodePoolNodeNetworkProfile>? NodeNetworkProfile { get; set; }
 
-    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. enable_node_public_ip should be true. Changing this forces a new resource to be created.</summary>
+    /// <summary>Should nodes in this Node Pool have a Public IP Address? temporary_name_for_rotation must be specified when changing this property.</summary>
+    [JsonPropertyName("nodePublicIpEnabled")]
+    public bool? NodePublicIpEnabled { get; set; }
+
+    /// <summary>Resource ID for the Public IP Addresses Prefix for the nodes in this Node Pool. node_public_ip_enabled should be true. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("nodePublicIpPrefixId")]
     public string? NodePublicIpPrefixId { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("nodeTaints")]
-    public IList<string>? NodeTaints { get; set; }
 
     /// <summary>Enabling this option will taint default node pool with CriticalAddonsOnly=true:NoSchedule taint. temporary_name_for_rotation must be specified when changing this property.</summary>
     [JsonPropertyName("onlyCriticalAddonsEnabled")]
@@ -4411,7 +4172,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("osDiskType")]
     public string? OsDiskType { get; set; }
 
-    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. temporary_name_for_rotation must be specified when attempting a change.</summary>
+    /// <summary>Specifies the OS SKU used by the agent pool. Possible values are AzureLinux, Ubuntu, Windows2019 and Windows2022. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated. Changing this from AzureLinux or Ubuntu to AzureLinux or Ubuntu will not replace the resource, otherwise temporary_name_for_rotation must be specified when attempting a change.</summary>
     [JsonPropertyName("osSku")]
     public string? OsSku { get; set; }
 
@@ -4439,7 +4200,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("temporaryNameForRotation")]
     public string? TemporaryNameForRotation { get; set; }
 
-    /// <summary>The type of Node Pool which should be created. Possible values are AvailabilitySet and VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
+    /// <summary>The type of Node Pool which should be created. Possible values are VirtualMachineScaleSets. Defaults to VirtualMachineScaleSets. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -4459,7 +4220,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderDefaultNodePool
     [JsonPropertyName("vnetSubnetId")]
     public string? VnetSubnetId { get; set; }
 
-    /// <summary>Specifies the workload runtime used by the node pool. Possible values are OCIContainer and KataMshvVmIsolation.</summary>
+    /// <summary>Specifies the workload runtime used by the node pool. Possible value is OCIContainer.</summary>
     [JsonPropertyName("workloadRuntime")]
     public string? WorkloadRuntime { get; set; }
 
@@ -4594,7 +4355,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKeyVaultSecretsProv
     [JsonPropertyName("secretRotationEnabled")]
     public bool? SecretRotationEnabled { get; set; }
 
-    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation is true. Defaults to 2m.</summary>
+    /// <summary>The interval to poll for secret rotation. This attribute is only set when secret_rotation_enabled is true. Defaults to 2m.</summary>
     [JsonPropertyName("secretRotationInterval")]
     public string? SecretRotationInterval { get; set; }
 }
@@ -4620,7 +4381,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderKubeletIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderLinuxProfileSshKey
 {
-    /// <summary>The Public SSH Key used to access the cluster.</summary>
+    /// <summary>The Public SSH Key used to access the cluster. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("keyData")]
     public string? KeyData { get; set; }
 }
@@ -4694,7 +4455,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAutoUpgrade
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -4702,7 +4463,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowAu
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -4752,7 +4513,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNodeOs
 {
-    /// <summary>The day of the month for the maintenance run. Required in combination with RelativeMonthly frequency. Value between 0 and 31 (inclusive).</summary>
+    /// <summary>The day of the month for the maintenance run. Required in combination with AbsoluteMonthly frequency. Value between 0 and 31 (inclusive).</summary>
     [JsonPropertyName("dayOfMonth")]
     public double? DayOfMonth { get; set; }
 
@@ -4760,7 +4521,7 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMaintenanceWindowNo
     [JsonPropertyName("dayOfWeek")]
     public string? DayOfWeek { get; set; }
 
-    /// <summary>The duration of the window for maintenance to run in hours.</summary>
+    /// <summary>The duration of the window for maintenance to run in hours. Possible options are between 4 to 24.</summary>
     [JsonPropertyName("duration")]
     public double? Duration { get; set; }
 
@@ -4819,15 +4580,19 @@ public partial class V1beta1KubernetesClusterStatusAtProviderMonitorMetrics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileLoadBalancerProfile
 {
+    /// <summary>The type of the managed inbound Load Balancer Backend Pool. Possible values are NodeIP and NodeIPConfiguration. Defaults to NodeIPConfiguration. See the documentation for more information.</summary>
+    [JsonPropertyName("backendPoolType")]
+    public string? BackendPoolType { get; set; }
+
     /// <summary>The outcome (resource IDs) of the specified arguments.</summary>
     [JsonPropertyName("effectiveOutboundIps")]
     public IList<string>? EffectiveOutboundIps { get; set; }
 
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 
@@ -4856,11 +4621,11 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfileNatGa
     [JsonPropertyName("effectiveOutboundIps")]
     public IList<string>? EffectiveOutboundIps { get; set; }
 
-    /// <summary>Desired outbound flow idle timeout in minutes for the cluster load balancer. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
+    /// <summary>Desired outbound flow idle timeout in minutes for the managed nat gateway. Must be between 4 and 120 inclusive. Defaults to 4.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 
-    /// <summary>Count of desired managed outbound IPs for the cluster load balancer. Must be between 1 and 100 inclusive.</summary>
+    /// <summary>Count of desired managed outbound IPs for the managed nat gateway. Must be between 1 and 16 inclusive.</summary>
     [JsonPropertyName("managedOutboundIpCount")]
     public double? ManagedOutboundIpCount { get; set; }
 }
@@ -4872,14 +4637,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
     /// <summary>IP address within the Kubernetes service address range that will be used by cluster service discovery (kube-dns). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("dnsServiceIp")]
     public string? DnsServiceIp { get; set; }
-
-    /// <summary>IP address (in CIDR notation) used as the Docker bridge IP address on nodes. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("dockerBridgeCidr")]
-    public string? DockerBridgeCidr { get; set; }
-
-    /// <summary>Specifies the eBPF data plane used for building the Kubernetes network. Possible value is cilium. Disabling this forces a new resource to be created.</summary>
-    [JsonPropertyName("ebpfDataPlane")]
-    public string? EbpfDataPlane { get; set; }
 
     /// <summary>Specifies a list of IP versions the Kubernetes Cluster will use to assign IP addresses to its nodes and pods. Possible values are IPv4 and/or IPv6. IPv4 must always be specified. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("ipVersions")]
@@ -4917,19 +4674,11 @@ public partial class V1beta1KubernetesClusterStatusAtProviderNetworkProfile
     [JsonPropertyName("networkPolicy")]
     public string? NetworkPolicy { get; set; }
 
-    /// <summary>The ID of the Public IP Addresses which should be used for outbound communication for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpAddressIds")]
-    public IList<string>? OutboundIpAddressIds { get; set; }
-
-    /// <summary>The ID of the outbound Public IP Address Prefixes which should be used for the cluster load balancer.</summary>
-    [JsonPropertyName("outboundIpPrefixIds")]
-    public IList<string>? OutboundIpPrefixIds { get; set; }
-
     /// <summary>The outbound (egress) routing method which should be used for this Kubernetes Cluster. Possible values are loadBalancer, userDefinedRouting, managedNATGateway and userAssignedNATGateway. Defaults to loadBalancer. More information on supported migration paths for outbound_type can be found in this documentation.</summary>
     [JsonPropertyName("outboundType")]
     public string? OutboundType { get; set; }
 
-    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet. Changing this forces a new resource to be created.</summary>
+    /// <summary>The CIDR to use for pod IP addresses. This field can only be set when network_plugin is set to kubenet or network_plugin_mode is set to overlay. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("podCidr")]
     public string? PodCidr { get; set; }
 
@@ -5024,6 +4773,10 @@ public partial class V1beta1KubernetesClusterStatusAtProviderServiceMeshProfile
     /// <summary>The mode of the service mesh. Possible value is Istio.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
+
+    /// <summary>Specify 1 or 2 Istio control plane revisions for managing minor upgrades using the canary upgrade process. For example, create the resource with revisions set to ["asm-1-20"], or leave it empty (the revisions will only be known after apply). To start the canary upgrade, change revisions to ["asm-1-20", "asm-1-21"]. To roll back the canary upgrade, revert to ["asm-1-20"]. To confirm the upgrade, change to ["asm-1-21"].</summary>
+    [JsonPropertyName("revisions")]
+    public IList<string>? Revisions { get; set; }
 }
 
 /// <summary></summary>
@@ -5047,10 +4800,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
     [JsonPropertyName("diskDriverEnabled")]
     public bool? DiskDriverEnabled { get; set; }
 
-    /// <summary>Disk CSI Driver version to be used. Possible values are v1 and v2. Defaults to v1.</summary>
-    [JsonPropertyName("diskDriverVersion")]
-    public string? DiskDriverVersion { get; set; }
-
     /// <summary>Is the File CSI driver enabled? Defaults to true.</summary>
     [JsonPropertyName("fileDriverEnabled")]
     public bool? FileDriverEnabled { get; set; }
@@ -5058,6 +4807,19 @@ public partial class V1beta1KubernetesClusterStatusAtProviderStorageProfile
     /// <summary>Is the Snapshot Controller enabled? Defaults to true.</summary>
     [JsonPropertyName("snapshotControllerEnabled")]
     public bool? SnapshotControllerEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1KubernetesClusterStatusAtProviderUpgradeOverride
+{
+    /// <summary>Specifies the duration, in RFC 3339 format (e.g., 2025-10-01T13:00:00Z), the upgrade_override values are effective. This field must be set for the upgrade_override values to take effect. The date-time must be within the next 30 days.</summary>
+    [JsonPropertyName("effectiveUntil")]
+    public string? EffectiveUntil { get; set; }
+
+    /// <summary>Whether to force upgrade the cluster. Possible values are true or false.</summary>
+    [JsonPropertyName("forceUpgradeEnabled")]
+    public bool? ForceUpgradeEnabled { get; set; }
 }
 
 /// <summary></summary>
@@ -5081,10 +4843,6 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRoutingWebApp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KubernetesClusterStatusAtProviderWebAppRouting
 {
-    /// <summary>The Kubernetes Managed Cluster ID.</summary>
-    [JsonPropertyName("dnsZoneId")]
-    public string? DnsZoneId { get; set; }
-
     /// <summary>Specifies the list of the DNS Zone IDs in which DNS entries are created for applications deployed to the cluster when Web App Routing is enabled. If not using Bring-Your-Own DNS zones this property should be set to an empty list.</summary>
     [JsonPropertyName("dnsZoneIds")]
     public IList<string>? DnsZoneIds { get; set; }
@@ -5132,17 +4890,9 @@ public partial class V1beta1KubernetesClusterStatusAtProviderWorkloadAutoscalerP
     [JsonPropertyName("kedaEnabled")]
     public bool? KedaEnabled { get; set; }
 
-    /// <summary>Which resources values should be controlled.</summary>
-    [JsonPropertyName("verticalPodAutoscalerControlledValues")]
-    public string? VerticalPodAutoscalerControlledValues { get; set; }
-
     /// <summary>Specifies whether Vertical Pod Autoscaler should be enabled.</summary>
     [JsonPropertyName("verticalPodAutoscalerEnabled")]
     public bool? VerticalPodAutoscalerEnabled { get; set; }
-
-    /// <summary>How the autoscaler applies changes to pod resources.</summary>
-    [JsonPropertyName("verticalPodAutoscalerUpdateMode")]
-    public string? VerticalPodAutoscalerUpdateMode { get; set; }
 }
 
 /// <summary></summary>
@@ -5157,17 +4907,13 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("apiServerAccessProfile")]
     public IList<V1beta1KubernetesClusterStatusAtProviderApiServerAccessProfile>? ApiServerAccessProfile { get; set; }
 
-    /// <summary>Deprecated in favor of `spec.forProvider.apiServerAccessProfile[0].authorizedIpRanges`</summary>
-    [JsonPropertyName("apiServerAuthorizedIpRanges")]
-    public IList<string>? ApiServerAuthorizedIpRanges { get; set; }
-
     /// <summary>A auto_scaler_profile block as defined below.</summary>
     [JsonPropertyName("autoScalerProfile")]
     public IList<V1beta1KubernetesClusterStatusAtProviderAutoScalerProfile>? AutoScalerProfile { get; set; }
 
     /// <summary>The upgrade channel for this Kubernetes Cluster. Possible values are patch, rapid, node-image and stable. Omitting this field sets this value to none.</summary>
-    [JsonPropertyName("automaticChannelUpgrade")]
-    public string? AutomaticChannelUpgrade { get; set; }
+    [JsonPropertyName("automaticUpgradeChannel")]
+    public string? AutomaticUpgradeChannel { get; set; }
 
     /// <summary>A azure_active_directory_role_based_access_control block as defined below.</summary>
     [JsonPropertyName("azureActiveDirectoryRoleBasedAccessControl")]
@@ -5189,11 +4935,7 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("currentKubernetesVersion")]
     public string? CurrentKubernetesVersion { get; set; }
 
-    /// <summary>A list of up to 10 base64 encoded CAs that will be added to the trust store on nodes with the custom_ca_trust_enabled feature enabled.</summary>
-    [JsonPropertyName("customCaTrustCertificatesBase64")]
-    public IList<string>? CustomCaTrustCertificatesBase64 { get; set; }
-
-    /// <summary>A default_node_pool block as defined below.</summary>
+    /// <summary>Specifies configuration for "System" mode node pool. A default_node_pool block as defined below.</summary>
     [JsonPropertyName("defaultNodePool")]
     public IList<V1beta1KubernetesClusterStatusAtProviderDefaultNodePool>? DefaultNodePool { get; set; }
 
@@ -5209,13 +4951,9 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("dnsPrefixPrivateCluster")]
     public string? DnsPrefixPrivateCluster { get; set; }
 
-    /// <summary>Specifies the Edge Zone within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>Specifies the Extended Zone (formerly called Edge Zone) within the Azure Region where this Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("enablePodSecurityPolicy")]
-    public bool? EnablePodSecurityPolicy { get; set; }
 
     /// <summary>The FQDN of the Azure Kubernetes Managed Cluster.</summary>
     [JsonPropertyName("fqdn")]
@@ -5245,7 +4983,7 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("imageCleanerEnabled")]
     public bool? ImageCleanerEnabled { get; set; }
 
-    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 48.</summary>
+    /// <summary>Specifies the interval in hours when images should be cleaned up. Defaults to 0.</summary>
     [JsonPropertyName("imageCleanerIntervalHours")]
     public double? ImageCleanerIntervalHours { get; set; }
 
@@ -5305,9 +5043,9 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("networkProfile")]
     public IList<V1beta1KubernetesClusterStatusAtProviderNetworkProfile>? NetworkProfile { get; set; }
 
-    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None.</summary>
-    [JsonPropertyName("nodeOsChannelUpgrade")]
-    public string? NodeOsChannelUpgrade { get; set; }
+    /// <summary>The upgrade channel for this Kubernetes Cluster Nodes' OS Image. Possible values are Unmanaged, SecurityPatch, NodeImage and None. Defaults to NodeImage.</summary>
+    [JsonPropertyName("nodeOsUpgradeChannel")]
+    public string? NodeOsUpgradeChannel { get; set; }
 
     /// <summary>The auto-generated Resource Group which contains the resources for this Managed Kubernetes Cluster.</summary>
     [JsonPropertyName("nodeResourceGroup")]
@@ -5353,10 +5091,6 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     [JsonPropertyName("privateFqdn")]
     public string? PrivateFqdn { get; set; }
 
-    /// <summary>Whether public network access is allowed for this Kubernetes Cluster. Defaults to true.</summary>
-    [JsonPropertyName("publicNetworkAccessEnabled")]
-    public bool? PublicNetworkAccessEnabled { get; set; }
-
     /// <summary>Specifies the Resource Group where the Managed Kubernetes Cluster should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -5392,6 +5126,10 @@ public partial class V1beta1KubernetesClusterStatusAtProvider
     /// <summary>A mapping of tags to assign to the resource.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>A upgrade_override block as defined below.</summary>
+    [JsonPropertyName("upgradeOverride")]
+    public IList<V1beta1KubernetesClusterStatusAtProviderUpgradeOverride>? UpgradeOverride { get; set; }
 
     /// <summary>A web_app_routing block as defined below.</summary>
     [JsonPropertyName("webAppRouting")]

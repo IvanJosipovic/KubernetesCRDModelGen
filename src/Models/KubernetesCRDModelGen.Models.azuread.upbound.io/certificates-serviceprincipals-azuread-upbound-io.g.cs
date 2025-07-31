@@ -101,7 +101,7 @@ public partial class V1beta1CertificateSpecForProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -219,7 +219,7 @@ public partial class V1beta1CertificateSpecInitProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -400,7 +400,7 @@ public partial class V1beta1CertificateStatusAtProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>The object ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
+    /// <summary>The ID of the service principal for which this certificate should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this certificate should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 

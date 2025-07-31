@@ -320,7 +320,7 @@ public partial class V1beta1FrontdoorOriginSpecForProviderPrivateLink
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 
-    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, web and sites.</summary>
+    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, Gateway, managedEnvironments, sites, web and web_secondary.</summary>
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
@@ -348,10 +348,6 @@ public partial class V1beta1FrontdoorOriginSpecForProvider
     /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
-
-    /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
-    [JsonPropertyName("healthProbesEnabled")]
-    public bool? HealthProbesEnabled { get; set; }
 
     /// <summary>The IPv4 address, IPv6 address or Domain name of the Origin.</summary>
     [JsonPropertyName("hostName")]
@@ -654,7 +650,7 @@ public partial class V1beta1FrontdoorOriginSpecInitProviderPrivateLink
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 
-    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, web and sites.</summary>
+    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, Gateway, managedEnvironments, sites, web and web_secondary.</summary>
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
@@ -670,10 +666,6 @@ public partial class V1beta1FrontdoorOriginSpecInitProvider
     /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
-
-    /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
-    [JsonPropertyName("healthProbesEnabled")]
-    public bool? HealthProbesEnabled { get; set; }
 
     /// <summary>The IPv4 address, IPv6 address or Domain name of the Origin.</summary>
     [JsonPropertyName("hostName")]
@@ -868,7 +860,7 @@ public partial class V1beta1FrontdoorOriginStatusAtProviderPrivateLink
     [JsonPropertyName("requestMessage")]
     public string? RequestMessage { get; set; }
 
-    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, web and sites.</summary>
+    /// <summary>Specifies the type of target for this Private Link Endpoint. Possible values are blob, blob_secondary, Gateway, managedEnvironments, sites, web and web_secondary.</summary>
     [JsonPropertyName("targetType")]
     public string? TargetType { get; set; }
 }
@@ -888,10 +880,6 @@ public partial class V1beta1FrontdoorOriginStatusAtProvider
     /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
-
-    /// <summary>Should the origin be enabled? Possible values are true or false. Defaults to true.</summary>
-    [JsonPropertyName("healthProbesEnabled")]
-    public bool? HealthProbesEnabled { get; set; }
 
     /// <summary>The IPv4 address, IPv6 address or Domain name of the Origin.</summary>
     [JsonPropertyName("hostName")]

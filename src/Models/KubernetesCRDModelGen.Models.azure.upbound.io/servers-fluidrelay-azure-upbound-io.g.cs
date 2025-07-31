@@ -10,6 +10,19 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.fluidrelay.azure.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServerSpecForProviderCustomerManagedKey
+{
+    /// <summary>The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.</summary>
+    [JsonPropertyName("keyVaultKeyId")]
+    public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.</summary>
+    [JsonPropertyName("userAssignedIdentityId")]
+    public string? UserAssignedIdentityId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecForProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Fluid Relay Service.</summary>
@@ -81,6 +94,10 @@ public partial class V1beta1ServerSpecForProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecForProvider
 {
+    /// <summary>A customer_managed_key block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("customerManagedKey")]
+    public IList<V1beta1ServerSpecForProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ServerSpecForProviderIdentity>? Identity { get; set; }
@@ -112,6 +129,19 @@ public partial class V1beta1ServerSpecForProvider
     /// <summary>A mapping of tags which should be assigned to the Fluid Relay Server.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServerSpecInitProviderCustomerManagedKey
+{
+    /// <summary>The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.</summary>
+    [JsonPropertyName("keyVaultKeyId")]
+    public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.</summary>
+    [JsonPropertyName("userAssignedIdentityId")]
+    public string? UserAssignedIdentityId { get; set; }
 }
 
 /// <summary></summary>
@@ -187,6 +217,10 @@ public partial class V1beta1ServerSpecInitProviderResourceGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecInitProvider
 {
+    /// <summary>A customer_managed_key block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("customerManagedKey")]
+    public IList<V1beta1ServerSpecInitProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
+
     /// <summary>An identity block as defined below.</summary>
     [JsonPropertyName("identity")]
     public IList<V1beta1ServerSpecInitProviderIdentity>? Identity { get; set; }
@@ -354,6 +388,19 @@ public partial class V1beta1ServerSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ServerStatusAtProviderCustomerManagedKey
+{
+    /// <summary>The Key Vault Key Id that will be used to encrypt the Fluid Relay Server.</summary>
+    [JsonPropertyName("keyVaultKeyId")]
+    public string? KeyVaultKeyId { get; set; }
+
+    /// <summary>The User Assigned Managed Identity ID to be used for accessing the Customer Managed Key for encryption.</summary>
+    [JsonPropertyName("userAssignedIdentityId")]
+    public string? UserAssignedIdentityId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerStatusAtProviderIdentity
 {
     /// <summary>Specifies a list of User Assigned Managed Identity IDs to be assigned to this Fluid Relay Service.</summary>
@@ -377,6 +424,10 @@ public partial class V1beta1ServerStatusAtProviderIdentity
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerStatusAtProvider
 {
+    /// <summary>A customer_managed_key block as defined below. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("customerManagedKey")]
+    public IList<V1beta1ServerStatusAtProviderCustomerManagedKey>? CustomerManagedKey { get; set; }
+
     /// <summary>The Fluid tenantId for this server.</summary>
     [JsonPropertyName("frsTenantId")]
     public string? FrsTenantId { get; set; }

@@ -214,7 +214,7 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecForProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1TrafficManagerNestedEndpointSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
@@ -357,7 +357,7 @@ public partial class V1beta1TrafficManagerNestedEndpointSpecInitProvider
     [JsonPropertyName("targetResourceIdSelector")]
     public V1beta1TrafficManagerNestedEndpointSpecInitProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }
@@ -576,7 +576,7 @@ public partial class V1beta1TrafficManagerNestedEndpointStatusAtProvider
     [JsonPropertyName("targetResourceId")]
     public string? TargetResourceId { get; set; }
 
-    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000.</summary>
+    /// <summary>Specifies how much traffic should be distributed to this endpoint, this must be specified for Profiles using the Weighted traffic routing method. Valid values are between 1 and 1000. Defaults to 1.</summary>
     [JsonPropertyName("weight")]
     public double? Weight { get; set; }
 }

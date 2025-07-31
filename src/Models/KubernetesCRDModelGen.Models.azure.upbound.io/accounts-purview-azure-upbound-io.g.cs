@@ -145,6 +145,10 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
+    /// <summary>Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.</summary>
+    [JsonPropertyName("managedEventHubEnabled")]
+    public bool? ManagedEventHubEnabled { get; set; }
+
     /// <summary>The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.</summary>
     [JsonPropertyName("managedResourceGroupName")]
     public string? ManagedResourceGroupName { get; set; }
@@ -258,6 +262,10 @@ public partial class V1beta1AccountSpecInitProvider
     /// <summary>The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.</summary>
+    [JsonPropertyName("managedEventHubEnabled")]
+    public bool? ManagedEventHubEnabled { get; set; }
 
     /// <summary>The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.</summary>
     [JsonPropertyName("managedResourceGroupName")]
@@ -454,6 +462,10 @@ public partial class V1beta1AccountStatusAtProviderManagedResources
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountStatusAtProvider
 {
+    /// <summary>Configured in AWS to allow use of the role arn used for scanning</summary>
+    [JsonPropertyName("awsExternalId")]
+    public string? AwsExternalId { get; set; }
+
     /// <summary>Catalog endpoint.</summary>
     [JsonPropertyName("catalogEndpoint")]
     public string? CatalogEndpoint { get; set; }
@@ -473,6 +485,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>The Azure Region where the Purview Account should exist. Changing this forces a new Purview Account to be created.</summary>
     [JsonPropertyName("location")]
     public string? Location { get; set; }
+
+    /// <summary>Whether the Purview Account should create a managed Event Hub Namespace. Defaults to true.</summary>
+    [JsonPropertyName("managedEventHubEnabled")]
+    public bool? ManagedEventHubEnabled { get; set; }
 
     /// <summary>The name which should be used for the new Resource Group where Purview Account creates the managed resources. Changing this forces a new Purview Account to be created.</summary>
     [JsonPropertyName("managedResourceGroupName")]

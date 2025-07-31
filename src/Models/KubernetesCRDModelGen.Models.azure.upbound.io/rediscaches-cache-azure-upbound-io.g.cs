@@ -109,17 +109,13 @@ public partial class V1beta1RedisCacheSpecForProviderRedisConfiguration
     [JsonPropertyName("aofStorageConnectionString1SecretRef")]
     public V1beta1RedisCacheSpecForProviderRedisConfigurationAofStorageConnectionString1SecretRef? AofStorageConnectionString1SecretRef { get; set; }
 
-    /// <summary></summary>
+    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
     [JsonPropertyName("authenticationEnabled")]
     public bool? AuthenticationEnabled { get; set; }
 
-    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
+    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
     public string? DataPersistenceAuthenticationMethod { get; set; }
-
-    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
-    [JsonPropertyName("enableAuthentication")]
-    public bool? EnableAuthentication { get; set; }
 
     /// <summary>Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.</summary>
     [JsonPropertyName("maxfragmentationmemoryReserved")]
@@ -278,13 +274,13 @@ public partial class V1beta1RedisCacheSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecForProvider
 {
+    /// <summary>Whether access key authentication is enabled? Defaults to true. active_directory_authentication_enabled must be set to true to disable access key authentication.</summary>
+    [JsonPropertyName("accessKeysAuthenticationEnabled")]
+    public bool? AccessKeysAuthenticationEnabled { get; set; }
+
     /// <summary>The size of the Redis cache to deploy. Valid values for a SKU family of C (Basic/Standard) are 0, 1, 2, 3, 4, 5, 6, and for P (Premium) family are 1, 2, 3, 4, 5.</summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
-
-    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
-    [JsonPropertyName("enableNonSslPort")]
-    public bool? EnableNonSslPort { get; set; }
 
     /// <summary>The SKU family/pricing group to use. Valid values are C (for Basic/Standard SKU family) and P (for Premium)</summary>
     [JsonPropertyName("family")]
@@ -302,7 +298,7 @@ public partial class V1beta1RedisCacheSpecForProvider
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
     [JsonPropertyName("nonSslPortEnabled")]
     public bool? NonSslPortEnabled { get; set; }
 
@@ -322,7 +318,7 @@ public partial class V1beta1RedisCacheSpecForProvider
     [JsonPropertyName("redisConfiguration")]
     public IList<V1beta1RedisCacheSpecForProviderRedisConfiguration>? RedisConfiguration { get; set; }
 
-    /// <summary>Redis version. Only major version needed. Valid values: 4, 6.</summary>
+    /// <summary>Redis version. Only major version needed. Possible values are 4 and 6. Defaults to 6.</summary>
     [JsonPropertyName("redisVersion")]
     public string? RedisVersion { get; set; }
 
@@ -480,17 +476,13 @@ public partial class V1beta1RedisCacheSpecInitProviderRedisConfiguration
     [JsonPropertyName("aofStorageConnectionString1SecretRef")]
     public V1beta1RedisCacheSpecInitProviderRedisConfigurationAofStorageConnectionString1SecretRef? AofStorageConnectionString1SecretRef { get; set; }
 
-    /// <summary></summary>
+    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
     [JsonPropertyName("authenticationEnabled")]
     public bool? AuthenticationEnabled { get; set; }
 
-    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
+    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
     public string? DataPersistenceAuthenticationMethod { get; set; }
-
-    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
-    [JsonPropertyName("enableAuthentication")]
-    public bool? EnableAuthentication { get; set; }
 
     /// <summary>Value in megabytes reserved to accommodate for memory fragmentation. Defaults are shown below.</summary>
     [JsonPropertyName("maxfragmentationmemoryReserved")]
@@ -593,13 +585,13 @@ public partial class V1beta1RedisCacheSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheSpecInitProvider
 {
+    /// <summary>Whether access key authentication is enabled? Defaults to true. active_directory_authentication_enabled must be set to true to disable access key authentication.</summary>
+    [JsonPropertyName("accessKeysAuthenticationEnabled")]
+    public bool? AccessKeysAuthenticationEnabled { get; set; }
+
     /// <summary>The size of the Redis cache to deploy. Valid values for a SKU family of C (Basic/Standard) are 0, 1, 2, 3, 4, 5, 6, and for P (Premium) family are 1, 2, 3, 4, 5.</summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
-
-    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
-    [JsonPropertyName("enableNonSslPort")]
-    public bool? EnableNonSslPort { get; set; }
 
     /// <summary>The SKU family/pricing group to use. Valid values are C (for Basic/Standard SKU family) and P (for Premium)</summary>
     [JsonPropertyName("family")]
@@ -617,7 +609,7 @@ public partial class V1beta1RedisCacheSpecInitProvider
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
     [JsonPropertyName("nonSslPortEnabled")]
     public bool? NonSslPortEnabled { get; set; }
 
@@ -637,7 +629,7 @@ public partial class V1beta1RedisCacheSpecInitProvider
     [JsonPropertyName("redisConfiguration")]
     public IList<V1beta1RedisCacheSpecInitProviderRedisConfiguration>? RedisConfiguration { get; set; }
 
-    /// <summary>Redis version. Only major version needed. Valid values: 4, 6.</summary>
+    /// <summary>Redis version. Only major version needed. Possible values are 4 and 6. Defaults to 6.</summary>
     [JsonPropertyName("redisVersion")]
     public string? RedisVersion { get; set; }
 
@@ -864,17 +856,13 @@ public partial class V1beta1RedisCacheStatusAtProviderRedisConfiguration
     [JsonPropertyName("aofBackupEnabled")]
     public bool? AofBackupEnabled { get; set; }
 
-    /// <summary></summary>
+    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
     [JsonPropertyName("authenticationEnabled")]
     public bool? AuthenticationEnabled { get; set; }
 
-    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity. Defaults to SAS.</summary>
+    /// <summary>Preferred auth method to communicate to storage account used for data persistence. Possible values are SAS and ManagedIdentity.</summary>
     [JsonPropertyName("dataPersistenceAuthenticationMethod")]
     public string? DataPersistenceAuthenticationMethod { get; set; }
-
-    /// <summary>If set to false, the Redis instance will be accessible without authentication. Defaults to true.</summary>
-    [JsonPropertyName("enableAuthentication")]
-    public bool? EnableAuthentication { get; set; }
 
     /// <summary>Returns the max number of connected clients at the same time.</summary>
     [JsonPropertyName("maxclients")]
@@ -921,13 +909,13 @@ public partial class V1beta1RedisCacheStatusAtProviderRedisConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheStatusAtProvider
 {
+    /// <summary>Whether access key authentication is enabled? Defaults to true. active_directory_authentication_enabled must be set to true to disable access key authentication.</summary>
+    [JsonPropertyName("accessKeysAuthenticationEnabled")]
+    public bool? AccessKeysAuthenticationEnabled { get; set; }
+
     /// <summary>The size of the Redis cache to deploy. Valid values for a SKU family of C (Basic/Standard) are 0, 1, 2, 3, 4, 5, 6, and for P (Premium) family are 1, 2, 3, 4, 5.</summary>
     [JsonPropertyName("capacity")]
     public double? Capacity { get; set; }
-
-    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
-    [JsonPropertyName("enableNonSslPort")]
-    public bool? EnableNonSslPort { get; set; }
 
     /// <summary>The SKU family/pricing group to use. Valid values are C (for Basic/Standard SKU family) and P (for Premium)</summary>
     [JsonPropertyName("family")]
@@ -953,7 +941,7 @@ public partial class V1beta1RedisCacheStatusAtProvider
     [JsonPropertyName("minimumTlsVersion")]
     public string? MinimumTlsVersion { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Enable the non-SSL port (6379) - disabled by default.</summary>
     [JsonPropertyName("nonSslPortEnabled")]
     public bool? NonSslPortEnabled { get; set; }
 
@@ -977,7 +965,7 @@ public partial class V1beta1RedisCacheStatusAtProvider
     [JsonPropertyName("redisConfiguration")]
     public IList<V1beta1RedisCacheStatusAtProviderRedisConfiguration>? RedisConfiguration { get; set; }
 
-    /// <summary>Redis version. Only major version needed. Valid values: 4, 6.</summary>
+    /// <summary>Redis version. Only major version needed. Possible values are 4 and 6. Defaults to 6.</summary>
     [JsonPropertyName("redisVersion")]
     public string? RedisVersion { get; set; }
 

@@ -16,7 +16,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRuleMatc
     [JsonPropertyName("matchValues")]
     public IList<string>? MatchValues { get; set; }
 
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
@@ -24,15 +24,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRuleMatc
     [JsonPropertyName("negationCondition")]
     public bool? NegationCondition { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
-    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode or URLEncode.</summary>
+    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode, or URLEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -41,7 +41,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRuleMatc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRule
 {
-    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
+    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -76,17 +76,51 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderCustomRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleExclusion
+public partial class V1beta1FrontdoorFirewallPolicySpecForProviderLogScrubbingScrubbingRule
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
+    [JsonPropertyName("selector")]
+    public string? Selector { get; set; }
+}
+
+/// <summary>A log_scrubbing block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicySpecForProviderLogScrubbing
+{
+    /// <summary>Is log scrubbing enabled? Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>One or more scrubbing_rule blocks as defined below.</summary>
+    [JsonPropertyName("scrubbingRule")]
+    public IList<V1beta1FrontdoorFirewallPolicySpecForProviderLogScrubbingScrubbingRule>? ScrubbingRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleExclusion
+{
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
+    [JsonPropertyName("matchVariable")]
+    public string? MatchVariable { get; set; }
+
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -95,15 +129,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleExc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -112,15 +146,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideRuleExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -129,11 +163,11 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverrideRule
 {
-    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DRS 1.1 and below are Allow, Log, Block, and Redirect. For DRS 2.0 and above the possible values are Log or AnomalyScoring.</summary>
+    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DefaultRuleSet 1.1 and below are Allow, Log, Block, or Redirect. Possible values for DefaultRuleSet 2.0 and above are Log or AnomalyScoring. Possible values for Microsoft_BotManagerRuleSet are Allow, Log, Block, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>Is the managed rule override enabled or disabled. Defaults to false</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -167,7 +201,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOve
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRule
 {
-    /// <summary>The action to perform for all DRS rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the DRS you are using. Possible values include Allow, Log, Block, and Redirect.</summary>
+    /// <summary>The action to perform for all default rule set rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the default rule set you are using. Possible values include Allow, Log, Block, or Redirect.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -179,11 +213,11 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProviderManagedRule
     [JsonPropertyName("override")]
     public IList<V1beta1FrontdoorFirewallPolicySpecForProviderManagedRuleOverride>? Override { get; set; }
 
-    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection or Microsoft_BotManagerRuleSet.</summary>
+    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection, or Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which DRS type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0 or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the value must be 1.0.</summary>
+    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which default rule set type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0, or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the possible values include 1.0 and 1.1.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -320,6 +354,14 @@ public partial class V1beta1FrontdoorFirewallPolicySpecForProvider
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
+    /// <summary>Specifies the JavaScript challenge cookie lifetime in minutes, after which the user will be revalidated. Possible values are between 5 to 1440 minutes. Defaults to 30 minutes.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
+
+    /// <summary>A log_scrubbing block as defined below.</summary>
+    [JsonPropertyName("logScrubbing")]
+    public V1beta1FrontdoorFirewallPolicySpecForProviderLogScrubbing? LogScrubbing { get; set; }
+
     /// <summary>One or more managed_rule blocks as defined below.</summary>
     [JsonPropertyName("managedRule")]
     public IList<V1beta1FrontdoorFirewallPolicySpecForProviderManagedRule>? ManagedRule { get; set; }
@@ -373,7 +415,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRuleMat
     [JsonPropertyName("matchValues")]
     public IList<string>? MatchValues { get; set; }
 
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
@@ -381,15 +423,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRuleMat
     [JsonPropertyName("negationCondition")]
     public bool? NegationCondition { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
-    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode or URLEncode.</summary>
+    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode, or URLEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -398,7 +440,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRuleMat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRule
 {
-    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
+    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -433,17 +475,51 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderCustomRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleExclusion
+public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderLogScrubbingScrubbingRule
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
+    [JsonPropertyName("selector")]
+    public string? Selector { get; set; }
+}
+
+/// <summary>A log_scrubbing block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderLogScrubbing
+{
+    /// <summary>Is log scrubbing enabled? Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>One or more scrubbing_rule blocks as defined below.</summary>
+    [JsonPropertyName("scrubbingRule")]
+    public IList<V1beta1FrontdoorFirewallPolicySpecInitProviderLogScrubbingScrubbingRule>? ScrubbingRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleExclusion
+{
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
+    [JsonPropertyName("matchVariable")]
+    public string? MatchVariable { get; set; }
+
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -452,15 +528,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleEx
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -469,15 +545,15 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideRuleExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -486,11 +562,11 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverrideRule
 {
-    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DRS 1.1 and below are Allow, Log, Block, and Redirect. For DRS 2.0 and above the possible values are Log or AnomalyScoring.</summary>
+    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DefaultRuleSet 1.1 and below are Allow, Log, Block, or Redirect. Possible values for DefaultRuleSet 2.0 and above are Log or AnomalyScoring. Possible values for Microsoft_BotManagerRuleSet are Allow, Log, Block, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>Is the managed rule override enabled or disabled. Defaults to false</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -524,7 +600,7 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRule
 {
-    /// <summary>The action to perform for all DRS rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the DRS you are using. Possible values include Allow, Log, Block, and Redirect.</summary>
+    /// <summary>The action to perform for all default rule set rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the default rule set you are using. Possible values include Allow, Log, Block, or Redirect.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -536,11 +612,11 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRule
     [JsonPropertyName("override")]
     public IList<V1beta1FrontdoorFirewallPolicySpecInitProviderManagedRuleOverride>? Override { get; set; }
 
-    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection or Microsoft_BotManagerRuleSet.</summary>
+    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection, or Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which DRS type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0 or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the value must be 1.0.</summary>
+    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which default rule set type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0, or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the possible values include 1.0 and 1.1.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -620,6 +696,14 @@ public partial class V1beta1FrontdoorFirewallPolicySpecInitProvider
     /// <summary>Is the Front Door Firewall Policy enabled? Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary>Specifies the JavaScript challenge cookie lifetime in minutes, after which the user will be revalidated. Possible values are between 5 to 1440 minutes. Defaults to 30 minutes.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
+
+    /// <summary>A log_scrubbing block as defined below.</summary>
+    [JsonPropertyName("logScrubbing")]
+    public V1beta1FrontdoorFirewallPolicySpecInitProviderLogScrubbing? LogScrubbing { get; set; }
 
     /// <summary>One or more managed_rule blocks as defined below.</summary>
     [JsonPropertyName("managedRule")]
@@ -794,7 +878,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRuleMat
     [JsonPropertyName("matchValues")]
     public IList<string>? MatchValues { get; set; }
 
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
@@ -802,15 +886,15 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRuleMat
     [JsonPropertyName("negationCondition")]
     public bool? NegationCondition { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 
-    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode or URLEncode.</summary>
+    /// <summary>Up to 5 transforms to apply. Possible values are Lowercase, RemoveNulls, Trim, Uppercase, URLDecode, or URLEncode.</summary>
     [JsonPropertyName("transforms")]
     public IList<string>? Transforms { get; set; }
 }
@@ -819,7 +903,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRuleMat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRule
 {
-    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, or Redirect.</summary>
+    /// <summary>The action to perform when the rule is matched. Possible values are Allow, Block, Log, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -854,17 +938,51 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderCustomRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleExclusion
+public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderLogScrubbingScrubbingRule
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
+    [JsonPropertyName("selector")]
+    public string? Selector { get; set; }
+}
+
+/// <summary>A log_scrubbing block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderLogScrubbing
+{
+    /// <summary>Is log scrubbing enabled? Possible values are true or false. Defaults to true.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>One or more scrubbing_rule blocks as defined below.</summary>
+    [JsonPropertyName("scrubbingRule")]
+    public IList<V1beta1FrontdoorFirewallPolicyStatusAtProviderLogScrubbingScrubbingRule>? ScrubbingRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleExclusion
+{
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
+    [JsonPropertyName("matchVariable")]
+    public string? MatchVariable { get; set; }
+
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
+    [JsonPropertyName("operator")]
+    public string? Operator { get; set; }
+
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -873,15 +991,15 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleEx
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -890,15 +1008,15 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideRuleExclusion
 {
-    /// <summary>The request variable to compare with. Possible values are Cookies, PostArgs, QueryString, RemoteAddr, RequestBody, RequestHeader, RequestMethod, RequestUri, or SocketAddr.</summary>
+    /// <summary>The variable to be scrubbed from the logs. Possible values include QueryStringArgNames, RequestBodyJsonArgNames, RequestBodyPostArgNames, RequestCookieNames, RequestHeaderNames, RequestIPAddress, or RequestUri.</summary>
     [JsonPropertyName("matchVariable")]
     public string? MatchVariable { get; set; }
 
-    /// <summary>Comparison type to use for matching with the variable value. Possible values are Any, BeginsWith, Contains, EndsWith, Equal, GeoMatch, GreaterThan, GreaterThanOrEqual, IPMatch, LessThan, LessThanOrEqual or RegEx.</summary>
+    /// <summary>When the match_variable is a collection, operate on the selector to specify which elements in the collection this scrubbing_rule applies to. Possible values are Equals or EqualsAny. Defaults to Equals.</summary>
     [JsonPropertyName("operator")]
     public string? Operator { get; set; }
 
-    /// <summary>Match against a specific key if the match_variable is QueryString, PostArgs, RequestHeader or Cookies.</summary>
+    /// <summary>When the match_variable is a collection, the operator is used to specify which elements in the collection this scrubbing_rule applies to.</summary>
     [JsonPropertyName("selector")]
     public string? Selector { get; set; }
 }
@@ -907,11 +1025,11 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverrideRule
 {
-    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DRS 1.1 and below are Allow, Log, Block, and Redirect. For DRS 2.0 and above the possible values are Log or AnomalyScoring.</summary>
+    /// <summary>The action to be applied when the managed rule matches or when the anomaly score is 5 or greater. Possible values for DefaultRuleSet 1.1 and below are Allow, Log, Block, or Redirect. Possible values for DefaultRuleSet 2.0 and above are Log or AnomalyScoring. Possible values for Microsoft_BotManagerRuleSet are Allow, Log, Block, Redirect, or JSChallenge.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>Is the managed rule override enabled or disabled. Defaults to false</summary>
+    /// <summary>Is this scrubbing_rule enabled? Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -945,7 +1063,7 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRule
 {
-    /// <summary>The action to perform for all DRS rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the DRS you are using. Possible values include Allow, Log, Block, and Redirect.</summary>
+    /// <summary>The action to perform for all default rule set rules when the managed rule is matched or when the anomaly score is 5 or greater depending on which version of the default rule set you are using. Possible values include Allow, Log, Block, or Redirect.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -957,11 +1075,11 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRule
     [JsonPropertyName("override")]
     public IList<V1beta1FrontdoorFirewallPolicyStatusAtProviderManagedRuleOverride>? Override { get; set; }
 
-    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection or Microsoft_BotManagerRuleSet.</summary>
+    /// <summary>The name of the managed rule to use with this resource. Possible values include DefaultRuleSet, Microsoft_DefaultRuleSet, BotProtection, or Microsoft_BotManagerRuleSet.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which DRS type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0 or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the value must be 1.0.</summary>
+    /// <summary>The version of the managed rule to use with this resource. Possible values depends on which default rule set type you are using, for the DefaultRuleSet type the possible values include 1.0 or preview-0.1. For Microsoft_DefaultRuleSet the possible values include 1.1, 2.0, or 2.1. For BotProtection the value must be preview-0.1 and for Microsoft_BotManagerRuleSet the possible values include 1.0 and 1.1.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
@@ -993,6 +1111,14 @@ public partial class V1beta1FrontdoorFirewallPolicyStatusAtProvider
     /// <summary>The ID of the Front Door Firewall Policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Specifies the JavaScript challenge cookie lifetime in minutes, after which the user will be revalidated. Possible values are between 5 to 1440 minutes. Defaults to 30 minutes.</summary>
+    [JsonPropertyName("jsChallengeCookieExpirationInMinutes")]
+    public double? JsChallengeCookieExpirationInMinutes { get; set; }
+
+    /// <summary>A log_scrubbing block as defined below.</summary>
+    [JsonPropertyName("logScrubbing")]
+    public V1beta1FrontdoorFirewallPolicyStatusAtProviderLogScrubbing? LogScrubbing { get; set; }
 
     /// <summary>One or more managed_rule blocks as defined below.</summary>
     [JsonPropertyName("managedRule")]

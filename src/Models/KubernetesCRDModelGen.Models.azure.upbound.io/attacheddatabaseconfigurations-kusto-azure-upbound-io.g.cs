@@ -265,6 +265,10 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderSharing
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProvider
 {
+    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
     /// <summary>Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
@@ -277,7 +281,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecForProvider
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameSelector? ClusterNameSelector { get; set; }
 
-    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Kusto Attached Database Configuration ID.</summary>
     [JsonPropertyName("clusterResourceId")]
     public string? ClusterResourceId { get; set; }
 
@@ -587,6 +591,10 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProviderSharing
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachedDatabaseConfigurationSpecInitProvider
 {
+    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
     /// <summary>Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
@@ -599,7 +607,7 @@ public partial class V1beta1AttachedDatabaseConfigurationSpecInitProvider
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1AttachedDatabaseConfigurationSpecInitProviderClusterNameSelector? ClusterNameSelector { get; set; }
 
-    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Kusto Attached Database Configuration ID.</summary>
     [JsonPropertyName("clusterResourceId")]
     public string? ClusterResourceId { get; set; }
 
@@ -821,11 +829,15 @@ public partial class V1beta1AttachedDatabaseConfigurationStatusAtProvider
     [JsonPropertyName("attachedDatabaseNames")]
     public IList<string>? AttachedDatabaseNames { get; set; }
 
+    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("clusterId")]
+    public string? ClusterId { get; set; }
+
     /// <summary>Specifies the name of the Kusto Cluster for which the configuration will be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
-    /// <summary>The resource id of the cluster where the databases you would like to attach reside. Changing this forces a new resource to be created.</summary>
+    /// <summary>The Kusto Attached Database Configuration ID.</summary>
     [JsonPropertyName("clusterResourceId")]
     public string? ClusterResourceId { get; set; }
 

@@ -247,6 +247,62 @@ public partial class V1beta1WatcherFlowLogSpecForProviderStorageAccountIdSelecto
 
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WatcherFlowLogSpecForProviderTrafficAnalyticsWorkspaceIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -410,7 +466,7 @@ public partial class V1beta1WatcherFlowLogSpecForProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Network Watcher.</summary>
     [JsonPropertyName("networkSecurityGroupId")]
     public string? NetworkSecurityGroupId { get; set; }
 
@@ -466,11 +522,23 @@ public partial class V1beta1WatcherFlowLogSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>The ID of the Resource for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("targetResourceId")]
+    public string? TargetResourceId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
+    [JsonPropertyName("targetResourceIdRef")]
+    public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdRef? TargetResourceIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
+    [JsonPropertyName("targetResourceIdSelector")]
+    public V1beta1WatcherFlowLogSpecForProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
+
     /// <summary>A traffic_analytics block as documented below.</summary>
     [JsonPropertyName("trafficAnalytics")]
     public IList<V1beta1WatcherFlowLogSpecForProviderTrafficAnalytics>? TrafficAnalytics { get; set; }
 
-    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2.</summary>
+    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2. Defaults to 1.</summary>
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
@@ -598,6 +666,62 @@ public partial class V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelect
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1WatcherFlowLogSpecInitProviderStorageAccountIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -765,7 +889,7 @@ public partial class V1beta1WatcherFlowLogSpecInitProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Network Watcher.</summary>
     [JsonPropertyName("networkSecurityGroupId")]
     public string? NetworkSecurityGroupId { get; set; }
 
@@ -797,11 +921,23 @@ public partial class V1beta1WatcherFlowLogSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>The ID of the Resource for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("targetResourceId")]
+    public string? TargetResourceId { get; set; }
+
+    /// <summary>Reference to a SecurityGroup in network to populate targetResourceId.</summary>
+    [JsonPropertyName("targetResourceIdRef")]
+    public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdRef? TargetResourceIdRef { get; set; }
+
+    /// <summary>Selector for a SecurityGroup in network to populate targetResourceId.</summary>
+    [JsonPropertyName("targetResourceIdSelector")]
+    public V1beta1WatcherFlowLogSpecInitProviderTargetResourceIdSelector? TargetResourceIdSelector { get; set; }
+
     /// <summary>A traffic_analytics block as documented below.</summary>
     [JsonPropertyName("trafficAnalytics")]
     public IList<V1beta1WatcherFlowLogSpecInitProviderTrafficAnalytics>? TrafficAnalytics { get; set; }
 
-    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2.</summary>
+    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2. Defaults to 1.</summary>
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
@@ -992,7 +1128,7 @@ public partial class V1beta1WatcherFlowLogStatusAtProvider
     [JsonPropertyName("location")]
     public string? Location { get; set; }
 
-    /// <summary>The ID of the Network Security Group for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Network Watcher.</summary>
     [JsonPropertyName("networkSecurityGroupId")]
     public string? NetworkSecurityGroupId { get; set; }
 
@@ -1016,11 +1152,15 @@ public partial class V1beta1WatcherFlowLogStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>The ID of the Resource for which to enable flow logs for. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("targetResourceId")]
+    public string? TargetResourceId { get; set; }
+
     /// <summary>A traffic_analytics block as documented below.</summary>
     [JsonPropertyName("trafficAnalytics")]
     public IList<V1beta1WatcherFlowLogStatusAtProviderTrafficAnalytics>? TrafficAnalytics { get; set; }
 
-    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2.</summary>
+    /// <summary>The version (revision) of the flow log. Possible values are 1 and 2. Defaults to 1.</summary>
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }

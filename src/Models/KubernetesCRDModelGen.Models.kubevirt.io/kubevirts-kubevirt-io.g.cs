@@ -301,12 +301,20 @@ public partial class KubeVirtSpecConfigurationDeveloperConfigurationLogVerbosity
     /// <summary></summary>
     [JsonPropertyName("virtOperator")]
     public int? VirtOperator { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("virtSynchronizationController")]
+    public int? VirtSynchronizationController { get; set; }
 }
 
 /// <summary>DeveloperConfiguration holds developer options</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class KubeVirtSpecConfigurationDeveloperConfiguration
 {
+    /// <summary>Enable the ability to pprof profile KubeVirt control plane</summary>
+    [JsonPropertyName("clusterProfiler")]
+    public bool? ClusterProfiler { get; set; }
+
     /// <summary>For each requested virtual CPU, CPUAllocationRatio defines how much physical CPU to request per VMI from the hosting node. The value is in fraction of a CPU thread (or core on non-hyperthreaded nodes). For example, a value of 1 means 1 physical CPU thread per VMI CPU thread. A value of 100 would be 1% of a physical thread allocated for each requested VMI thread. This option has no effect on VMIs that request dedicated CPUs. More information at: https://kubevirt.io/user-guide/operations/node_overcommit/#node-cpu-allocation-ratio Defaults to 10</summary>
     [JsonPropertyName("cpuAllocationRatio")]
     public int? CpuAllocationRatio { get; set; }
@@ -2365,6 +2373,10 @@ public partial class KubeVirtSpec
     [JsonPropertyName("serviceMonitorNamespace")]
     public string? ServiceMonitorNamespace { get; set; }
 
+    /// <summary>Specify the port to listen on for VMI status synchronization traffic. Default is 9185</summary>
+    [JsonPropertyName("synchronizationPort")]
+    public string? SynchronizationPort { get; set; }
+
     /// <summary>Specifies if kubevirt can be deleted if workloads are still present. This is mainly a precaution to avoid accidental data loss</summary>
     [JsonPropertyName("uninstallStrategy")]
     public string? UninstallStrategy { get; set; }
@@ -2483,6 +2495,10 @@ public partial class KubeVirtStatus
     /// <summary>KubeVirtPhase is a label for the phase of a KubeVirt deployment at the current time.</summary>
     [JsonPropertyName("phase")]
     public string? Phase { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("synchronizationAddresses")]
+    public IList<string>? SynchronizationAddresses { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("targetDeploymentConfig")]

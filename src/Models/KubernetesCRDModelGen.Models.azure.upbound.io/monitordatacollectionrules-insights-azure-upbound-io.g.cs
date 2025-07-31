@@ -183,7 +183,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesL
     [JsonPropertyName("filePatterns")]
     public IList<string>? FilePatterns { get; set; }
 
-    /// <summary>The data format of the log files. possible value is text.</summary>
+    /// <summary>The data format of the log files. Possible values are text and json.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -212,7 +212,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderDataSourcesP
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
+    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
     [JsonPropertyName("samplingFrequencyInSeconds")]
     public double? SamplingFrequencyInSeconds { get; set; }
 
@@ -919,7 +919,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclar
     [JsonPropertyName("column")]
     public IList<V1beta1MonitorDataCollectionRuleSpecForProviderStreamDeclarationColumn>? Column { get; set; }
 
-    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks.</summary>
+    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.</summary>
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
@@ -1164,7 +1164,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("filePatterns")]
     public IList<string>? FilePatterns { get; set; }
 
-    /// <summary>The data format of the log files. possible value is text.</summary>
+    /// <summary>The data format of the log files. Possible values are text and json.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -1193,7 +1193,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderDataSources
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
+    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
     [JsonPropertyName("samplingFrequencyInSeconds")]
     public double? SamplingFrequencyInSeconds { get; set; }
 
@@ -1844,7 +1844,7 @@ public partial class V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDecla
     [JsonPropertyName("column")]
     public IList<V1beta1MonitorDataCollectionRuleSpecInitProviderStreamDeclarationColumn>? Column { get; set; }
 
-    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks.</summary>
+    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.</summary>
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }
@@ -2153,7 +2153,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("filePatterns")]
     public IList<string>? FilePatterns { get; set; }
 
-    /// <summary>The data format of the log files. possible value is text.</summary>
+    /// <summary>The data format of the log files. Possible values are text and json.</summary>
     [JsonPropertyName("format")]
     public string? Format { get; set; }
 
@@ -2182,7 +2182,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderDataSources
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 300 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
+    /// <summary>The number of seconds between consecutive counter measurements (samples). The value should be integer between 1 and 1800 inclusive. sampling_frequency_in_seconds must be equal to 60 seconds for counters collected with Microsoft-InsightsMetrics stream.</summary>
     [JsonPropertyName("samplingFrequencyInSeconds")]
     public double? SamplingFrequencyInSeconds { get; set; }
 
@@ -2521,7 +2521,7 @@ public partial class V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDecla
     [JsonPropertyName("column")]
     public IList<V1beta1MonitorDataCollectionRuleStatusAtProviderStreamDeclarationColumn>? Column { get; set; }
 
-    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks.</summary>
+    /// <summary>The name of the custom stream. This name should be unique across all stream_declaration blocks and must begin with a prefix of Custom-.</summary>
     [JsonPropertyName("streamName")]
     public string? StreamName { get; set; }
 }

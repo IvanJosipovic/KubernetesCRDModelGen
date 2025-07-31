@@ -10,118 +10,6 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderShareNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Share in storage to populate shareName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderShareNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecForProviderShareNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderShareNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Share in storage to populate shareName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderShareNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecForProviderShareNameSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderStorageAccountNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderStorageAccountNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecForProviderStorageAccountNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderStorageAccountNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecForProviderStorageAccountNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecForProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ShareDirectorySpecForProviderStorageShareIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -188,30 +76,6 @@ public partial class V1beta1ShareDirectorySpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("shareName")]
-    public string? ShareName { get; set; }
-
-    /// <summary>Reference to a Share in storage to populate shareName.</summary>
-    [JsonPropertyName("shareNameRef")]
-    public V1beta1ShareDirectorySpecForProviderShareNameRef? ShareNameRef { get; set; }
-
-    /// <summary>Selector for a Share in storage to populate shareName.</summary>
-    [JsonPropertyName("shareNameSelector")]
-    public V1beta1ShareDirectorySpecForProviderShareNameSelector? ShareNameSelector { get; set; }
-
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
-
-    /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameRef")]
-    public V1beta1ShareDirectorySpecForProviderStorageAccountNameRef? StorageAccountNameRef { get; set; }
-
-    /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameSelector")]
-    public V1beta1ShareDirectorySpecForProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
-
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageShareId")]
     public string? StorageShareId { get; set; }
@@ -223,118 +87,6 @@ public partial class V1beta1ShareDirectorySpecForProvider
     /// <summary>Selector for a Share in storage to populate storageShareId.</summary>
     [JsonPropertyName("storageShareIdSelector")]
     public V1beta1ShareDirectorySpecForProviderStorageShareIdSelector? StorageShareIdSelector { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderShareNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Share in storage to populate shareName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderShareNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecInitProviderShareNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderShareNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Share in storage to populate shareName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderShareNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecInitProviderShareNameSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderStorageAccountNameRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderStorageAccountNameRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecInitProviderStorageAccountNameRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Policies for selection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderStorageAccountNameSelectorPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ShareDirectorySpecInitProviderStorageAccountNameSelector
-{
-    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
-    [JsonPropertyName("matchControllerRef")]
-    public bool? MatchControllerRef { get; set; }
-
-    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
-    [JsonPropertyName("matchLabels")]
-    public IDictionary<string, string>? MatchLabels { get; set; }
-
-    /// <summary>Policies for selection.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ShareDirectorySpecInitProviderStorageAccountNameSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -404,30 +156,6 @@ public partial class V1beta1ShareDirectorySpecInitProvider
     /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("shareName")]
-    public string? ShareName { get; set; }
-
-    /// <summary>Reference to a Share in storage to populate shareName.</summary>
-    [JsonPropertyName("shareNameRef")]
-    public V1beta1ShareDirectorySpecInitProviderShareNameRef? ShareNameRef { get; set; }
-
-    /// <summary>Selector for a Share in storage to populate shareName.</summary>
-    [JsonPropertyName("shareNameSelector")]
-    public V1beta1ShareDirectorySpecInitProviderShareNameSelector? ShareNameSelector { get; set; }
-
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
-
-    /// <summary>Reference to a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameRef")]
-    public V1beta1ShareDirectorySpecInitProviderStorageAccountNameRef? StorageAccountNameRef { get; set; }
-
-    /// <summary>Selector for a Account in storage to populate storageAccountName.</summary>
-    [JsonPropertyName("storageAccountNameSelector")]
-    public V1beta1ShareDirectorySpecInitProviderStorageAccountNameSelector? StorageAccountNameSelector { get; set; }
 
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageShareId")]
@@ -589,14 +317,6 @@ public partial class V1beta1ShareDirectoryStatusAtProvider
     /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("shareName")]
-    public string? ShareName { get; set; }
-
-    /// <summary>The name (or path) of the Directory that should be created within this File Share. Changing this forces a new resource to be created.</summary>
-    [JsonPropertyName("storageAccountName")]
-    public string? StorageAccountName { get; set; }
 
     /// <summary>The Storage Share ID in which this file will be placed into. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("storageShareId")]

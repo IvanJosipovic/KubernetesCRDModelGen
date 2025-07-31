@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: pools.netapp.azure.upbound.io
 spec:
   group: netapp.azure.upbound.io
@@ -173,6 +173,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  coolAccessEnabled:
+                    description: Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.
+                    type: boolean
                   encryptionType:
                     description: The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.
                     type: string
@@ -180,7 +183,7 @@ spec:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
                   qosType:
-                    description: QoS Type of the pool. Valid values include Auto or Manual.
+                    description: QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.
                     type: string
                   resourceGroupName:
                     description: The name of the resource group where the NetApp Pool should be created. Changing this forces a new resource to be created.
@@ -275,7 +278,7 @@ spec:
                     description: The service level of the file system. Valid values include Premium, Standard, and Ultra. Changing this forces a new resource to be created.
                     type: string
                   sizeInTb:
-                    description: Provisioned size of the pool in TB. Value must be between 2 and 2048.
+                    description: Provisioned size of the pool in TB. Value must be between 1 and 2048.
                     type: number
                   tags:
                     additionalProperties:
@@ -306,6 +309,9 @@ spec:
 
                   autoscaler.
                 properties:
+                  coolAccessEnabled:
+                    description: Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.
+                    type: boolean
                   encryptionType:
                     description: The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.
                     type: string
@@ -313,13 +319,13 @@ spec:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
                   qosType:
-                    description: QoS Type of the pool. Valid values include Auto or Manual.
+                    description: QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.
                     type: string
                   serviceLevel:
                     description: The service level of the file system. Valid values include Premium, Standard, and Ultra. Changing this forces a new resource to be created.
                     type: string
                   sizeInTb:
-                    description: Provisioned size of the pool in TB. Value must be between 2 and 2048.
+                    description: Provisioned size of the pool in TB. Value must be between 1 and 2048.
                     type: number
                   tags:
                     additionalProperties:
@@ -551,6 +557,9 @@ spec:
                   accountName:
                     description: The name of the NetApp account in which the NetApp Pool should be created. Changing this forces a new resource to be created.
                     type: string
+                  coolAccessEnabled:
+                    description: Whether the NetApp Pool can hold cool access enabled volumes. Defaults to false.
+                    type: boolean
                   encryptionType:
                     description: The encryption type of the pool. Valid values include Single, and Double. Defaults to Single. Changing this forces a new resource to be created.
                     type: string
@@ -561,7 +570,7 @@ spec:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
                   qosType:
-                    description: QoS Type of the pool. Valid values include Auto or Manual.
+                    description: QoS Type of the pool. Valid values include Auto or Manual. Defaults to Auto.
                     type: string
                   resourceGroupName:
                     description: The name of the resource group where the NetApp Pool should be created. Changing this forces a new resource to be created.
@@ -570,7 +579,7 @@ spec:
                     description: The service level of the file system. Valid values include Premium, Standard, and Ultra. Changing this forces a new resource to be created.
                     type: string
                   sizeInTb:
-                    description: Provisioned size of the pool in TB. Value must be between 2 and 2048.
+                    description: Provisioned size of the pool in TB. Value must be between 1 and 2048.
                     type: number
                   tags:
                     additionalProperties:

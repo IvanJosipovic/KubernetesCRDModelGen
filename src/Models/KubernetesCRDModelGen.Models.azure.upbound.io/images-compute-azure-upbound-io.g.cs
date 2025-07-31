@@ -20,6 +20,10 @@ public partial class V1beta1ImageSpecForProviderDataDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskEncryptionSetId")]
+    public string? DiskEncryptionSetId { get; set; }
+
     /// <summary>Specifies the logical unit number of the data disk.</summary>
     [JsonPropertyName("lun")]
     public double? Lun { get; set; }
@@ -31,6 +35,10 @@ public partial class V1beta1ImageSpecForProviderDataDisk
     /// <summary>Specifies the size of the image to be created. The target size can't be smaller than the source size.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary></summary>
@@ -45,7 +53,7 @@ public partial class V1beta1ImageSpecForProviderOsDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
-    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this image. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("diskEncryptionSetId")]
     public string? DiskEncryptionSetId { get; set; }
 
@@ -64,6 +72,10 @@ public partial class V1beta1ImageSpecForProviderOsDisk
     /// <summary>Specifies the size of the image to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -179,6 +191,10 @@ public partial class V1beta1ImageSpecInitProviderDataDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskEncryptionSetId")]
+    public string? DiskEncryptionSetId { get; set; }
+
     /// <summary>Specifies the logical unit number of the data disk.</summary>
     [JsonPropertyName("lun")]
     public double? Lun { get; set; }
@@ -190,6 +206,10 @@ public partial class V1beta1ImageSpecInitProviderDataDisk
     /// <summary>Specifies the size of the image to be created. The target size can't be smaller than the source size.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary></summary>
@@ -204,7 +224,7 @@ public partial class V1beta1ImageSpecInitProviderOsDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
-    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this image. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("diskEncryptionSetId")]
     public string? DiskEncryptionSetId { get; set; }
 
@@ -223,6 +243,10 @@ public partial class V1beta1ImageSpecInitProviderOsDisk
     /// <summary>Specifies the size of the image to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -402,6 +426,10 @@ public partial class V1beta1ImageStatusAtProviderDataDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("diskEncryptionSetId")]
+    public string? DiskEncryptionSetId { get; set; }
+
     /// <summary>Specifies the logical unit number of the data disk.</summary>
     [JsonPropertyName("lun")]
     public double? Lun { get; set; }
@@ -413,6 +441,10 @@ public partial class V1beta1ImageStatusAtProviderDataDisk
     /// <summary>Specifies the size of the image to be created. The target size can't be smaller than the source size.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary></summary>
@@ -427,7 +459,7 @@ public partial class V1beta1ImageStatusAtProviderOsDisk
     [JsonPropertyName("caching")]
     public string? Caching { get; set; }
 
-    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this image. Changing this forces a new resource to be created.</summary>
+    /// <summary>The ID of the Disk Encryption Set which should be used to encrypt this disk. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("diskEncryptionSetId")]
     public string? DiskEncryptionSetId { get; set; }
 
@@ -446,6 +478,10 @@ public partial class V1beta1ImageStatusAtProviderOsDisk
     /// <summary>Specifies the size of the image to be created. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
+
+    /// <summary>The type of Storage Disk to use. Possible values are Premium_LRS, PremiumV2_LRS, Premium_ZRS, Standard_LRS, StandardSSD_LRS, StandardSSD_ZRS and UltraSSD_LRS. Changing this forces a new resource to be created. The type of storage disk</summary>
+    [JsonPropertyName("storageType")]
+    public string? StorageType { get; set; }
 }
 
 /// <summary></summary>

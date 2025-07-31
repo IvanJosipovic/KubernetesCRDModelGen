@@ -8,6 +8,19 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorProfileSpecForProviderIdentity
+{
+    /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The type of managed identity to assign. Possible values are SystemAssigned, UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorProfileSpecForProviderResourceGroupNameRefPolicy
@@ -68,6 +81,10 @@ public partial class V1beta1FrontdoorProfileSpecForProviderResourceGroupNameSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorProfileSpecForProvider
 {
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1FrontdoorProfileSpecForProviderIdentity? Identity { get; set; }
+
     /// <summary>The name of the Resource Group where this Front Door Profile should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
@@ -93,10 +110,27 @@ public partial class V1beta1FrontdoorProfileSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorProfileSpecInitProviderIdentity
+{
+    /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The type of managed identity to assign. Possible values are SystemAssigned, UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorProfileSpecInitProvider
 {
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1FrontdoorProfileSpecInitProviderIdentity? Identity { get; set; }
+
     /// <summary>Specifies the maximum response timeout in seconds. Possible values are between 16 and 240 seconds (inclusive). Defaults to 120 seconds.</summary>
     [JsonPropertyName("responseTimeoutSeconds")]
     public double? ResponseTimeoutSeconds { get; set; }
@@ -242,6 +276,27 @@ public partial class V1beta1FrontdoorProfileSpec
     public V1beta1FrontdoorProfileSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>An identity block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FrontdoorProfileStatusAtProviderIdentity
+{
+    /// <summary>- A list of one or more Resource IDs for User Assigned Managed identities to assign. Required when type is set to UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("identityIds")]
+    public IList<string>? IdentityIds { get; set; }
+
+    /// <summary>The ID of this Front Door Profile.</summary>
+    [JsonPropertyName("principalId")]
+    public string? PrincipalId { get; set; }
+
+    /// <summary>The ID of this Front Door Profile.</summary>
+    [JsonPropertyName("tenantId")]
+    public string? TenantId { get; set; }
+
+    /// <summary>The type of managed identity to assign. Possible values are SystemAssigned, UserAssigned or SystemAssigned, UserAssigned.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorProfileStatusAtProvider
@@ -249,6 +304,10 @@ public partial class V1beta1FrontdoorProfileStatusAtProvider
     /// <summary>The ID of this Front Door Profile.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>An identity block as defined below.</summary>
+    [JsonPropertyName("identity")]
+    public V1beta1FrontdoorProfileStatusAtProviderIdentity? Identity { get; set; }
 
     /// <summary>The name of the Resource Group where this Front Door Profile should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]

@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.upbound.io;
-/// <summary>The Password associated with the administrator_login for the MySQL Flexible Server. Required when create_mode is Default.</summary>
+/// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef
 {
@@ -273,6 +273,10 @@ public partial class V1beta1FlexibleServerSpecForProviderStorage
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
+    /// <summary>Should Storage Log On Disk be enabled? Defaults to false.</summary>
+    [JsonPropertyName("logOnDiskEnabled")]
+    public bool? LogOnDiskEnabled { get; set; }
+
     /// <summary>The max storage allowed for the MySQL Flexible Server. Possible values are between 20 and 16384.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
@@ -286,9 +290,17 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
 
-    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server. Required when create_mode is Default.</summary>
+    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
     [JsonPropertyName("administratorPasswordSecretRef")]
     public V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
 
     /// <summary>The backup retention days for the MySQL Flexible Server. Possible values are between 1 and 35 days. Defaults to 7.</summary>
     [JsonPropertyName("backupRetentionDays")]
@@ -350,6 +362,10 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1FlexibleServerSpecForProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
 
+    /// <summary>Whether approved public traffic is allowed through the firewall to this server. Possible values are Enabled and Disabled.</summary>
+    [JsonPropertyName("publicNetworkAccess")]
+    public string? PublicNetworkAccess { get; set; }
+
     /// <summary>The replication role. Possible value is None.</summary>
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
@@ -382,13 +398,30 @@ public partial class V1beta1FlexibleServerSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21. Changing this forces a new MySQL Flexible Server to be created.</summary>
+    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
     /// <summary>Specifies the Availability Zone in which this MySQL Flexible Server should be located. Possible values are 1, 2 and 3.</summary>
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
+}
+
+/// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
@@ -583,6 +616,10 @@ public partial class V1beta1FlexibleServerSpecInitProviderStorage
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
+    /// <summary>Should Storage Log On Disk be enabled? Defaults to false.</summary>
+    [JsonPropertyName("logOnDiskEnabled")]
+    public bool? LogOnDiskEnabled { get; set; }
+
     /// <summary>The max storage allowed for the MySQL Flexible Server. Possible values are between 20 and 16384.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
@@ -595,6 +632,18 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     /// <summary>The Administrator login for the MySQL Flexible Server. Required when create_mode is Default. Changing this forces a new MySQL Flexible Server to be created.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordSecretRef")]
+    public V1beta1FlexibleServerSpecInitProviderAdministratorPasswordSecretRef? AdministratorPasswordSecretRef { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
 
     /// <summary>The backup retention days for the MySQL Flexible Server. Possible values are between 1 and 35 days. Defaults to 7.</summary>
     [JsonPropertyName("backupRetentionDays")]
@@ -656,6 +705,10 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("privateDnsZoneIdSelector")]
     public V1beta1FlexibleServerSpecInitProviderPrivateDnsZoneIdSelector? PrivateDnsZoneIdSelector { get; set; }
 
+    /// <summary>Whether approved public traffic is allowed through the firewall to this server. Possible values are Enabled and Disabled.</summary>
+    [JsonPropertyName("publicNetworkAccess")]
+    public string? PublicNetworkAccess { get; set; }
+
     /// <summary>The replication role. Possible value is None.</summary>
     [JsonPropertyName("replicationRole")]
     public string? ReplicationRole { get; set; }
@@ -676,7 +729,7 @@ public partial class V1beta1FlexibleServerSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21. Changing this forces a new MySQL Flexible Server to be created.</summary>
+    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
@@ -897,6 +950,10 @@ public partial class V1beta1FlexibleServerStatusAtProviderStorage
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
+    /// <summary>Should Storage Log On Disk be enabled? Defaults to false.</summary>
+    [JsonPropertyName("logOnDiskEnabled")]
+    public bool? LogOnDiskEnabled { get; set; }
+
     /// <summary>The max storage allowed for the MySQL Flexible Server. Possible values are between 20 and 16384.</summary>
     [JsonPropertyName("sizeGb")]
     public double? SizeGb { get; set; }
@@ -909,6 +966,14 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     /// <summary>The Administrator login for the MySQL Flexible Server. Required when create_mode is Default. Changing this forces a new MySQL Flexible Server to be created.</summary>
     [JsonPropertyName("administratorLogin")]
     public string? AdministratorLogin { get; set; }
+
+    /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
+    [JsonPropertyName("administratorPasswordWo")]
+    public string? AdministratorPasswordWo { get; set; }
+
+    /// <summary>An integer value used to trigger an update for administrator_password_wo. This property should be incremented when updating administrator_password_wo.</summary>
+    [JsonPropertyName("administratorPasswordWoVersion")]
+    public double? AdministratorPasswordWoVersion { get; set; }
 
     /// <summary>The backup retention days for the MySQL Flexible Server. Possible values are between 1 and 35 days. Defaults to 7.</summary>
     [JsonPropertyName("backupRetentionDays")]
@@ -962,7 +1027,11 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("privateDnsZoneId")]
     public string? PrivateDnsZoneId { get; set; }
 
-    /// <summary>Is the public network access enabled?</summary>
+    /// <summary>Whether approved public traffic is allowed through the firewall to this server. Possible values are Enabled and Disabled.</summary>
+    [JsonPropertyName("publicNetworkAccess")]
+    public string? PublicNetworkAccess { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("publicNetworkAccessEnabled")]
     public bool? PublicNetworkAccessEnabled { get; set; }
 
@@ -994,7 +1063,7 @@ public partial class V1beta1FlexibleServerStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21. Changing this forces a new MySQL Flexible Server to be created.</summary>
+    /// <summary>The version of the MySQL Flexible Server to use. Possible values are 5.7, and 8.0.21.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 

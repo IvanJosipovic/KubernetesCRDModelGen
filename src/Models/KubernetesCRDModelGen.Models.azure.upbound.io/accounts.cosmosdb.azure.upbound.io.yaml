@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: accounts.cosmosdb.azure.upbound.io
 spec:
   group: cosmosdb.azure.upbound.io
@@ -131,7 +131,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -194,15 +194,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    description: Enable automatic failover for this Cosmos DB account.
-                    type: boolean
-                  enableFreeTier:
-                    description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    description: Enable multiple write locations for this Cosmos DB account.
-                    type: boolean
                   freeTierEnabled:
                     description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
@@ -326,8 +317,11 @@ spec:
                       type: object
                     type: array
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -343,11 +337,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.
@@ -678,7 +675,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -741,15 +738,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    description: Enable automatic failover for this Cosmos DB account.
-                    type: boolean
-                  enableFreeTier:
-                    description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    description: Enable multiple write locations for this Cosmos DB account.
-                    type: boolean
                   freeTierEnabled:
                     description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
@@ -873,8 +861,11 @@ spec:
                       type: object
                     type: array
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -890,11 +881,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.
@@ -1336,7 +1330,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -1399,15 +1393,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    description: Enable automatic failover for this Cosmos DB account.
-                    type: boolean
-                  enableFreeTier:
-                    description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    description: Enable multiple write locations for this Cosmos DB account.
-                    type: boolean
                   endpoint:
                     description: The endpoint used to connect to the CosmosDB account.
                     type: string
@@ -1457,8 +1442,11 @@ spec:
                       type: object
                     type: array
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -1474,11 +1462,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.
@@ -1754,7 +1745,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -1811,12 +1802,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    type: boolean
-                  enableFreeTier:
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    type: boolean
                   freeTierEnabled:
                     description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
@@ -1938,8 +1923,11 @@ spec:
                         type: string
                     type: object
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -1955,11 +1943,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.
@@ -2284,7 +2275,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -2341,12 +2332,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    type: boolean
-                  enableFreeTier:
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    type: boolean
                   freeTierEnabled:
                     description: Enable the Free Tier pricing option for this Cosmos DB account. Defaults to false. Changing this forces a new resource to be created.
                     type: boolean
@@ -2468,8 +2453,11 @@ spec:
                         type: string
                     type: object
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -2485,11 +2473,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.
@@ -2925,7 +2916,7 @@ spec:
                     items:
                       properties:
                         name:
-                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnablePartialUniqueIndex, EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
+                          description: The capability to enable - Possible values are AllowSelfServeUpgradeToMongo36, DeleteAllItemsByPartitionKey, DisableRateLimitingResponses, EnableAggregationPipeline, EnableCassandra, EnableGremlin, EnableMongo, EnableMongo16MBDocumentSupport, EnableMongoRetryableWrites, EnableMongoRoleBasedAccessControl, EnableNoSQLVectorSearch, EnableNoSQLFullTextSearch, EnablePartialUniqueIndex,  EnableServerless, EnableTable, EnableTtlOnCustomPath, EnableUniqueCompoundNestedDocs, MongoDBv3.4 and mongoEnableDocLevelTTL.
                           type: string
                       type: object
                     type: array
@@ -2982,12 +2973,6 @@ spec:
                   defaultIdentityType:
                     description: The default identity for accessing Key Vault. Possible values are FirstPartyIdentity, SystemAssignedIdentity or UserAssignedIdentity. Defaults to FirstPartyIdentity.
                     type: string
-                  enableAutomaticFailover:
-                    type: boolean
-                  enableFreeTier:
-                    type: boolean
-                  enableMultipleWriteLocations:
-                    type: boolean
                   endpoint:
                     description: The endpoint used to connect to the CosmosDB account.
                     type: string
@@ -3035,8 +3020,11 @@ spec:
                         type: string
                     type: object
                   ipRangeFilter:
-                    description: 'CosmosDB Firewall Support: This value specifies the set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. IP addresses/ranges must be comma separated and must not contain any spaces.'
-                    type: string
+                    description: A set of IP addresses or IP address ranges in CIDR form to be included as the allowed list of client IPs for a given database account. For example ["55.0.1.0/24", "55.0.2.0/24"].
+                    items:
+                      type: string
+                    type: array
+                    x-kubernetes-list-type: set
                   isVirtualNetworkFilterEnabled:
                     description: Enables virtual network filtering for this Cosmos DB account.
                     type: boolean
@@ -3052,11 +3040,14 @@ spec:
                   location:
                     description: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
                     type: string
+                  managedHsmKeyId:
+                    description: A versionless Managed HSM Key ID for CMK encryption. Changing this forces a new resource to be created.
+                    type: string
                   minimalTlsVersion:
                     description: 'Specifies the minimal TLS version for the CosmosDB account. Possible values are: Tls, Tls11, and Tls12. Defaults to Tls12.'
                     type: string
                   mongoServerVersion:
-                    description: The Server Version of a MongoDB account. Possible values are 4.2, 4.0, 3.6, and 3.2.
+                    description: The Server Version of a MongoDB account. Possible values are 7.0, 6.0, 5.0, 4.2, 4.0, 3.6, and 3.2.
                     type: string
                   multipleWriteLocationsEnabled:
                     description: Enable multiple write locations for this Cosmos DB account.

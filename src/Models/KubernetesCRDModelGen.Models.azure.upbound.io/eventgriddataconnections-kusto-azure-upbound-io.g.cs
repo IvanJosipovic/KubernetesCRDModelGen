@@ -385,6 +385,10 @@ public partial class V1beta1EventGridDataConnectionSpecForProvider
     public string? DatabaseRoutingType { get; set; }
 
     /// <summary>The resource ID of the event grid that is subscribed to the storage account events.</summary>
+    [JsonPropertyName("eventgridEventSubscriptionId")]
+    public string? EventgridEventSubscriptionId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("eventgridResourceId")]
     public string? EventgridResourceId { get; set; }
 
@@ -417,6 +421,10 @@ public partial class V1beta1EventGridDataConnectionSpecForProvider
     public string? Location { get; set; }
 
     /// <summary>Empty for non-managed identity based data connection. For system assigned identity, provide cluster resource Id. For user assigned identity (UAI) provide the UAI resource Id.</summary>
+    [JsonPropertyName("managedIdentityId")]
+    public string? ManagedIdentityId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("managedIdentityResourceId")]
     public string? ManagedIdentityResourceId { get; set; }
 
@@ -642,6 +650,10 @@ public partial class V1beta1EventGridDataConnectionSpecInitProvider
     public string? DatabaseRoutingType { get; set; }
 
     /// <summary>The resource ID of the event grid that is subscribed to the storage account events.</summary>
+    [JsonPropertyName("eventgridEventSubscriptionId")]
+    public string? EventgridEventSubscriptionId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("eventgridResourceId")]
     public string? EventgridResourceId { get; set; }
 
@@ -674,6 +686,10 @@ public partial class V1beta1EventGridDataConnectionSpecInitProvider
     public string? Location { get; set; }
 
     /// <summary>Empty for non-managed identity based data connection. For system assigned identity, provide cluster resource Id. For user assigned identity (UAI) provide the UAI resource Id.</summary>
+    [JsonPropertyName("managedIdentityId")]
+    public string? ManagedIdentityId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("managedIdentityResourceId")]
     public string? ManagedIdentityResourceId { get; set; }
 
@@ -859,6 +875,10 @@ public partial class V1beta1EventGridDataConnectionStatusAtProvider
     public string? DatabaseRoutingType { get; set; }
 
     /// <summary>The resource ID of the event grid that is subscribed to the storage account events.</summary>
+    [JsonPropertyName("eventgridEventSubscriptionId")]
+    public string? EventgridEventSubscriptionId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("eventgridResourceId")]
     public string? EventgridResourceId { get; set; }
 
@@ -879,6 +899,10 @@ public partial class V1beta1EventGridDataConnectionStatusAtProvider
     public string? Location { get; set; }
 
     /// <summary>Empty for non-managed identity based data connection. For system assigned identity, provide cluster resource Id. For user assigned identity (UAI) provide the UAI resource Id.</summary>
+    [JsonPropertyName("managedIdentityId")]
+    public string? ManagedIdentityId { get; set; }
+
+    /// <summary>The ID of the Kusto Event Grid Data Connection.</summary>
     [JsonPropertyName("managedIdentityResourceId")]
     public string? ManagedIdentityResourceId { get; set; }
 

@@ -269,6 +269,62 @@ public partial class V1beta1ManagedClusterSpecForProviderResourceGroupNameSelect
     public V1beta1ManagedClusterSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecForProviderSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecForProviderSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ManagedClusterSpecForProviderSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecForProviderSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecForProviderSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ManagedClusterSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedClusterSpecForProvider
@@ -332,6 +388,18 @@ public partial class V1beta1ManagedClusterSpecForProvider
     /// <summary>SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
+
+    /// <summary>The resource ID of the Subnet. Changing this forces a new Resource Group to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1ManagedClusterSpecForProviderSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1ManagedClusterSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
     /// <summary>A mapping of tags which should be assigned to the Resource Group.</summary>
     [JsonPropertyName("tags")]
@@ -534,6 +602,79 @@ public partial class V1beta1ManagedClusterSpecInitProviderNodeType
     public string? VmSize { get; set; }
 }
 
+/// <summary>Administrator password for the VMs that will be created as part of this cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecInitProviderPasswordSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecInitProviderSubnetIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecInitProviderSubnetIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ManagedClusterSpecInitProviderSubnetIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecInitProviderSubnetIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagedClusterSpecInitProviderSubnetIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ManagedClusterSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedClusterSpecInitProvider
@@ -578,9 +719,25 @@ public partial class V1beta1ManagedClusterSpecInitProvider
     [JsonPropertyName("nodeType")]
     public IList<V1beta1ManagedClusterSpecInitProviderNodeType>? NodeType { get; set; }
 
+    /// <summary>Administrator password for the VMs that will be created as part of this cluster.</summary>
+    [JsonPropertyName("passwordSecretRef")]
+    public V1beta1ManagedClusterSpecInitProviderPasswordSecretRef? PasswordSecretRef { get; set; }
+
     /// <summary>SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
+
+    /// <summary>The resource ID of the Subnet. Changing this forces a new Resource Group to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
+
+    /// <summary>Reference to a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdRef")]
+    public V1beta1ManagedClusterSpecInitProviderSubnetIdRef? SubnetIdRef { get; set; }
+
+    /// <summary>Selector for a Subnet in network to populate subnetId.</summary>
+    [JsonPropertyName("subnetIdSelector")]
+    public V1beta1ManagedClusterSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
     /// <summary>A mapping of tags which should be assigned to the Resource Group.</summary>
     [JsonPropertyName("tags")]
@@ -974,6 +1131,10 @@ public partial class V1beta1ManagedClusterStatusAtProvider
     /// <summary>SKU for this cluster. Changing this forces a new resource to be created. Default is Basic, allowed values are either Basic or Standard.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
+
+    /// <summary>The resource ID of the Subnet. Changing this forces a new Resource Group to be created.</summary>
+    [JsonPropertyName("subnetId")]
+    public string? SubnetId { get; set; }
 
     /// <summary>A mapping of tags which should be assigned to the Resource Group.</summary>
     [JsonPropertyName("tags")]

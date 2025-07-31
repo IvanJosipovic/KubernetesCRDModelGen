@@ -172,6 +172,10 @@ public partial class V1beta1MSSQLManagedInstanceFailoverGroupSpecForProvider
     /// <summary>Failover policy for the read-only endpoint. Defaults to true.</summary>
     [JsonPropertyName("readonlyEndpointFailoverPolicyEnabled")]
     public bool? ReadonlyEndpointFailoverPolicyEnabled { get; set; }
+
+    /// <summary>The type of the secondary Managed Instance. Possible values are Geo, Standby. Defaults to Geo.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -334,6 +338,10 @@ public partial class V1beta1MSSQLManagedInstanceFailoverGroupSpecInitProvider
     /// <summary>Failover policy for the read-only endpoint. Defaults to true.</summary>
     [JsonPropertyName("readonlyEndpointFailoverPolicyEnabled")]
     public bool? ReadonlyEndpointFailoverPolicyEnabled { get; set; }
+
+    /// <summary>The type of the secondary Managed Instance. Possible values are Geo, Standby. Defaults to Geo.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -529,6 +537,10 @@ public partial class V1beta1MSSQLManagedInstanceFailoverGroupStatusAtProvider
     /// <summary>The local replication role of the Managed Instance Failover Group.</summary>
     [JsonPropertyName("role")]
     public string? Role { get; set; }
+
+    /// <summary>The type of the secondary Managed Instance. Possible values are Geo, Standby. Defaults to Geo.</summary>
+    [JsonPropertyName("secondaryType")]
+    public string? SecondaryType { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

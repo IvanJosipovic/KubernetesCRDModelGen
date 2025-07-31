@@ -84,6 +84,10 @@ public partial class V1beta1PublicIPSpecForProvider
     [JsonPropertyName("domainNameLabel")]
     public string? DomainNameLabel { get; set; }
 
+    /// <summary>Scope for the domain name label. If a domain name label scope is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system with a hashed value includes in FQDN. Possible values are NoReuse, ResourceGroupReuse, SubscriptionReuse and TenantReuse. Changing this forces a new Public IP to be created.</summary>
+    [JsonPropertyName("domainNameLabelScope")]
+    public string? DomainNameLabelScope { get; set; }
+
     /// <summary>Specifies the Edge Zone within the Azure Region where this Public IP should exist. Changing this forces a new Public IP to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
@@ -124,7 +128,7 @@ public partial class V1beta1PublicIPSpecForProvider
     [JsonPropertyName("reverseFqdn")]
     public string? ReverseFqdn { get; set; }
 
-    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -161,6 +165,10 @@ public partial class V1beta1PublicIPSpecInitProvider
     [JsonPropertyName("domainNameLabel")]
     public string? DomainNameLabel { get; set; }
 
+    /// <summary>Scope for the domain name label. If a domain name label scope is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system with a hashed value includes in FQDN. Possible values are NoReuse, ResourceGroupReuse, SubscriptionReuse and TenantReuse. Changing this forces a new Public IP to be created.</summary>
+    [JsonPropertyName("domainNameLabelScope")]
+    public string? DomainNameLabelScope { get; set; }
+
     /// <summary>Specifies the Edge Zone within the Azure Region where this Public IP should exist. Changing this forces a new Public IP to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
@@ -189,7 +197,7 @@ public partial class V1beta1PublicIPSpecInitProvider
     [JsonPropertyName("reverseFqdn")]
     public string? ReverseFqdn { get; set; }
 
-    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 
@@ -358,6 +366,10 @@ public partial class V1beta1PublicIPStatusAtProvider
     [JsonPropertyName("domainNameLabel")]
     public string? DomainNameLabel { get; set; }
 
+    /// <summary>Scope for the domain name label. If a domain name label scope is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system with a hashed value includes in FQDN. Possible values are NoReuse, ResourceGroupReuse, SubscriptionReuse and TenantReuse. Changing this forces a new Public IP to be created.</summary>
+    [JsonPropertyName("domainNameLabelScope")]
+    public string? DomainNameLabelScope { get; set; }
+
     /// <summary>Specifies the Edge Zone within the Azure Region where this Public IP should exist. Changing this forces a new Public IP to be created.</summary>
     [JsonPropertyName("edgeZone")]
     public string? EdgeZone { get; set; }
@@ -402,7 +414,7 @@ public partial class V1beta1PublicIPStatusAtProvider
     [JsonPropertyName("reverseFqdn")]
     public string? ReverseFqdn { get; set; }
 
-    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Basic. Changing this forces a new resource to be created.</summary>
+    /// <summary>The SKU of the Public IP. Accepted values are Basic and Standard. Defaults to Standard. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("sku")]
     public string? Sku { get; set; }
 

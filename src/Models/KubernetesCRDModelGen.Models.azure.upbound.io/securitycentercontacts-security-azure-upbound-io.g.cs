@@ -24,7 +24,7 @@ public partial class V1beta1SecurityCenterContactSpecForProvider
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The name of the Security Center Contact. Defaults to default1.</summary>
+    /// <summary>The name of the Security Center Contact. Changing this forces a new Security Center Contact to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -49,7 +49,7 @@ public partial class V1beta1SecurityCenterContactSpecInitProvider
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The name of the Security Center Contact. Defaults to default1.</summary>
+    /// <summary>The name of the Security Center Contact. Changing this forces a new Security Center Contact to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -206,11 +206,11 @@ public partial class V1beta1SecurityCenterContactStatusAtProvider
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The Security Center Contact ID.</summary>
+    /// <summary>The ID of the Security Center Contact.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the Security Center Contact. Defaults to default1.</summary>
+    /// <summary>The name of the Security Center Contact. Changing this forces a new Security Center Contact to be created.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 

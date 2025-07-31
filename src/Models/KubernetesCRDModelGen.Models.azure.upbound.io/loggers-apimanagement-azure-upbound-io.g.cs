@@ -64,6 +64,23 @@ public partial class V1beta1LoggerSpecForProviderApiManagementNameSelector
     public V1beta1LoggerSpecForProviderApiManagementNameSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The connection string of Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoggerSpecForProviderApplicationInsightsConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>The instrumentation key used to push data to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApplicationInsightsInstrumentationKeySecretRef
@@ -85,9 +102,13 @@ public partial class V1beta1LoggerSpecForProviderApplicationInsightsInstrumentat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecForProviderApplicationInsights
 {
+    /// <summary>The connection string of Application Insights.</summary>
+    [JsonPropertyName("connectionStringSecretRef")]
+    public V1beta1LoggerSpecForProviderApplicationInsightsConnectionStringSecretRef? ConnectionStringSecretRef { get; set; }
+
     /// <summary>The instrumentation key used to push data to Application Insights.</summary>
     [JsonPropertyName("instrumentationKeySecretRef")]
-    public V1beta1LoggerSpecForProviderApplicationInsightsInstrumentationKeySecretRef InstrumentationKeySecretRef { get; set; }
+    public V1beta1LoggerSpecForProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
 }
 
 /// <summary>The connection string of an EventHub Namespace.</summary>
@@ -297,16 +318,78 @@ public partial class V1beta1LoggerSpecForProvider
     public V1beta1LoggerSpecForProviderResourceIdSelector? ResourceIdSelector { get; set; }
 }
 
+/// <summary>The connection string of Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoggerSpecInitProviderApplicationInsightsConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>The instrumentation key used to push data to Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoggerSpecInitProviderApplicationInsightsInstrumentationKeySecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderApplicationInsights
 {
+    /// <summary>The connection string of Application Insights.</summary>
+    [JsonPropertyName("connectionStringSecretRef")]
+    public V1beta1LoggerSpecInitProviderApplicationInsightsConnectionStringSecretRef? ConnectionStringSecretRef { get; set; }
+
+    /// <summary>The instrumentation key used to push data to Application Insights.</summary>
+    [JsonPropertyName("instrumentationKeySecretRef")]
+    public V1beta1LoggerSpecInitProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
+}
+
+/// <summary>The connection string of an EventHub Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoggerSpecInitProviderEventhubConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerSpecInitProviderEventhub
 {
+    /// <summary>The connection string of an EventHub Namespace.</summary>
+    [JsonPropertyName("connectionStringSecretRef")]
+    public V1beta1LoggerSpecInitProviderEventhubConnectionStringSecretRef? ConnectionStringSecretRef { get; set; }
+
     /// <summary>The endpoint address of an EventHub Namespace. Required when client_id is set.</summary>
     [JsonPropertyName("endpointUri")]
     public string? EndpointUri { get; set; }
@@ -541,6 +624,23 @@ public partial class V1beta1LoggerSpec
     public V1beta1LoggerSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The connection string of Application Insights.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LoggerStatusAtProviderApplicationInsightsConnectionStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>The instrumentation key used to push data to Application Insights.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderApplicationInsightsInstrumentationKeySecretRef
@@ -562,9 +662,13 @@ public partial class V1beta1LoggerStatusAtProviderApplicationInsightsInstrumenta
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggerStatusAtProviderApplicationInsights
 {
+    /// <summary>The connection string of Application Insights.</summary>
+    [JsonPropertyName("connectionStringSecretRef")]
+    public V1beta1LoggerStatusAtProviderApplicationInsightsConnectionStringSecretRef? ConnectionStringSecretRef { get; set; }
+
     /// <summary>The instrumentation key used to push data to Application Insights.</summary>
     [JsonPropertyName("instrumentationKeySecretRef")]
-    public V1beta1LoggerStatusAtProviderApplicationInsightsInstrumentationKeySecretRef InstrumentationKeySecretRef { get; set; }
+    public V1beta1LoggerStatusAtProviderApplicationInsightsInstrumentationKeySecretRef? InstrumentationKeySecretRef { get; set; }
 }
 
 /// <summary></summary>

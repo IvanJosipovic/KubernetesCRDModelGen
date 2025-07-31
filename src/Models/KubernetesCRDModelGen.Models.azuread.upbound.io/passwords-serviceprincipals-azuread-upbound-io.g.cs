@@ -84,7 +84,7 @@ public partial class V1beta1PasswordSpecForProvider
     [JsonPropertyName("rotateWhenChanged")]
     public IDictionary<string, string>? RotateWhenChanged { get; set; }
 
-    /// <summary>The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this password should be created</summary>
+    /// <summary>The ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this password should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1beta1PasswordSpecInitProvider
     [JsonPropertyName("rotateWhenChanged")]
     public IDictionary<string, string>? RotateWhenChanged { get; set; }
 
-    /// <summary>The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this password should be created</summary>
+    /// <summary>The ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this password should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 
@@ -354,7 +354,7 @@ public partial class V1beta1PasswordStatusAtProvider
     [JsonPropertyName("rotateWhenChanged")]
     public IDictionary<string, string>? RotateWhenChanged { get; set; }
 
-    /// <summary>The object ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The object ID of the service principal for which this password should be created</summary>
+    /// <summary>The ID of the service principal for which this password should be created. Changing this field forces a new resource to be created. The ID of the service principal for which this password should be created</summary>
     [JsonPropertyName("servicePrincipalId")]
     public string? ServicePrincipalId { get; set; }
 

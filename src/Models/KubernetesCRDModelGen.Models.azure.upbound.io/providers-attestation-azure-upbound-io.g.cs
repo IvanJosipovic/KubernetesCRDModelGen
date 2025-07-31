@@ -8,19 +8,6 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.attestation.azure.upbound.io;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ProviderSpecForProviderPolicy
-{
-    /// <summary></summary>
-    [JsonPropertyName("data")]
-    public string? Data { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("environmentType")]
-    public string? EnvironmentType { get; set; }
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderSpecForProviderResourceGroupNameRefPolicy
@@ -89,10 +76,6 @@ public partial class V1beta1ProviderSpecForProvider
     [JsonPropertyName("openEnclavePolicyBase64")]
     public string? OpenEnclavePolicyBase64 { get; set; }
 
-    /// <summary></summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ProviderSpecForProviderPolicy>? Policy { get; set; }
-
     /// <summary>A valid X.509 certificate (Section 4 of RFC4648). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policySigningCertificateData")]
     public string? PolicySigningCertificateData { get; set; }
@@ -126,19 +109,6 @@ public partial class V1beta1ProviderSpecForProvider
     public string? TpmPolicyBase64 { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ProviderSpecInitProviderPolicy
-{
-    /// <summary></summary>
-    [JsonPropertyName("data")]
-    public string? Data { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("environmentType")]
-    public string? EnvironmentType { get; set; }
-}
-
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderSpecInitProvider
@@ -150,10 +120,6 @@ public partial class V1beta1ProviderSpecInitProvider
     /// <summary>Specifies the base64 URI Encoded RFC 7519 JWT that should be used for the Attestation Policy.</summary>
     [JsonPropertyName("openEnclavePolicyBase64")]
     public string? OpenEnclavePolicyBase64 { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ProviderSpecInitProviderPolicy>? Policy { get; set; }
 
     /// <summary>A valid X.509 certificate (Section 4 of RFC4648). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policySigningCertificateData")]
@@ -310,19 +276,6 @@ public partial class V1beta1ProviderSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ProviderStatusAtProviderPolicy
-{
-    /// <summary></summary>
-    [JsonPropertyName("data")]
-    public string? Data { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("environmentType")]
-    public string? EnvironmentType { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderStatusAtProvider
 {
     /// <summary>The URI of the Attestation Service.</summary>
@@ -340,10 +293,6 @@ public partial class V1beta1ProviderStatusAtProvider
     /// <summary>Specifies the base64 URI Encoded RFC 7519 JWT that should be used for the Attestation Policy.</summary>
     [JsonPropertyName("openEnclavePolicyBase64")]
     public string? OpenEnclavePolicyBase64 { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ProviderStatusAtProviderPolicy>? Policy { get; set; }
 
     /// <summary>A valid X.509 certificate (Section 4 of RFC4648). Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("policySigningCertificateData")]

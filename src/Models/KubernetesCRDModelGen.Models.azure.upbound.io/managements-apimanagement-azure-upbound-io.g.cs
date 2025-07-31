@@ -105,7 +105,7 @@ public partial class V1beta1ManagementSpecForProviderAdditionalLocation
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ManagementSpecForProviderAdditionalLocationVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 
-    /// <summary>A list of availability zones. Changing this forces a new resource to be created.</summary>
+    /// <summary>A list of availability zones.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -154,7 +154,7 @@ public partial class V1beta1ManagementSpecForProviderCertificate
 
     /// <summary>The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.</summary>
     [JsonPropertyName("encodedCertificateSecretRef")]
-    public V1beta1ManagementSpecForProviderCertificateEncodedCertificateSecretRef EncodedCertificateSecretRef { get; set; }
+    public V1beta1ManagementSpecForProviderCertificateEncodedCertificateSecretRef? EncodedCertificateSecretRef { get; set; }
 
     /// <summary>The name of the Certificate Store where this certificate should be stored. Possible values are CertificateAuthority and Root.</summary>
     [JsonPropertyName("storeName")]
@@ -214,24 +214,15 @@ public partial class V1beta1ManagementSpecForProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ManagementSpecForProviderPolicy
-{
-    /// <summary>The XML Content for this Policy.</summary>
-    [JsonPropertyName("xmlContent")]
-    public string? XmlContent { get; set; }
-
-    /// <summary>A link to an API Management Policy XML Document, which must be publicly available.</summary>
-    [JsonPropertyName("xmlLink")]
-    public string? XmlLink { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementSpecForProviderProtocols
 {
-    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableHttp2")]
     public bool? EnableHttp2 { get; set; }
+
+    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    [JsonPropertyName("http2Enabled")]
+    public bool? Http2Enabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -295,28 +286,52 @@ public partial class V1beta1ManagementSpecForProviderResourceGroupNameSelector
 public partial class V1beta1ManagementSpecForProviderSecurity
 {
     /// <summary>Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendSsl30Enabled")]
+    public bool? BackendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls10Enabled")]
+    public bool? BackendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls11Enabled")]
+    public bool? BackendTls11Enabled { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enableBackendSsl30")]
     public bool? EnableBackendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls10")]
     public bool? EnableBackendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls11")]
     public bool? EnableBackendTls11 { get; set; }
 
-    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendSsl30")]
     public bool? EnableFrontendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls10")]
     public bool? EnableFrontendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls11")]
     public bool? EnableFrontendTls11 { get; set; }
+
+    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendSsl30Enabled")]
+    public bool? FrontendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls10Enabled")]
+    public bool? FrontendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls11Enabled")]
+    public bool? FrontendTls11Enabled { get; set; }
 
     /// <summary>Should the TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA cipher be enabled? Defaults to false.</summary>
     [JsonPropertyName("tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled")]
@@ -524,10 +539,6 @@ public partial class V1beta1ManagementSpecForProvider
     [JsonPropertyName("notificationSenderEmail")]
     public string? NotificationSenderEmail { get; set; }
 
-    /// <summary>A policy block as defined below.</summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ManagementSpecForProviderPolicy>? Policy { get; set; }
-
     /// <summary>A protocols block as defined below.</summary>
     [JsonPropertyName("protocols")]
     public IList<V1beta1ManagementSpecForProviderProtocols>? Protocols { get; set; }
@@ -548,7 +559,7 @@ public partial class V1beta1ManagementSpecForProvider
     [JsonPropertyName("publisherName")]
     public string? PublisherName { get; set; }
 
-    /// <summary>The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 
@@ -694,7 +705,7 @@ public partial class V1beta1ManagementSpecInitProviderAdditionalLocation
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ManagementSpecInitProviderAdditionalLocationVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 
-    /// <summary>A list of availability zones. Changing this forces a new resource to be created.</summary>
+    /// <summary>A list of availability zones.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -716,6 +727,23 @@ public partial class V1beta1ManagementSpecInitProviderCertificateCertificatePass
     public string Namespace { get; set; }
 }
 
+/// <summary>The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ManagementSpecInitProviderCertificateEncodedCertificateSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementSpecInitProviderCertificate
@@ -723,6 +751,10 @@ public partial class V1beta1ManagementSpecInitProviderCertificate
     /// <summary>The password for the certificate.</summary>
     [JsonPropertyName("certificatePasswordSecretRef")]
     public V1beta1ManagementSpecInitProviderCertificateCertificatePasswordSecretRef? CertificatePasswordSecretRef { get; set; }
+
+    /// <summary>The Base64 Encoded PFX or Base64 Encoded X.509 Certificate.</summary>
+    [JsonPropertyName("encodedCertificateSecretRef")]
+    public V1beta1ManagementSpecInitProviderCertificateEncodedCertificateSecretRef EncodedCertificateSecretRef { get; set; }
 
     /// <summary>The name of the Certificate Store where this certificate should be stored. Possible values are CertificateAuthority and Root.</summary>
     [JsonPropertyName("storeName")]
@@ -782,24 +814,15 @@ public partial class V1beta1ManagementSpecInitProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ManagementSpecInitProviderPolicy
-{
-    /// <summary>The XML Content for this Policy.</summary>
-    [JsonPropertyName("xmlContent")]
-    public string? XmlContent { get; set; }
-
-    /// <summary>A link to an API Management Policy XML Document, which must be publicly available.</summary>
-    [JsonPropertyName("xmlLink")]
-    public string? XmlLink { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementSpecInitProviderProtocols
 {
-    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableHttp2")]
     public bool? EnableHttp2 { get; set; }
+
+    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    [JsonPropertyName("http2Enabled")]
+    public bool? Http2Enabled { get; set; }
 }
 
 /// <summary></summary>
@@ -807,28 +830,52 @@ public partial class V1beta1ManagementSpecInitProviderProtocols
 public partial class V1beta1ManagementSpecInitProviderSecurity
 {
     /// <summary>Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendSsl30Enabled")]
+    public bool? BackendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls10Enabled")]
+    public bool? BackendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls11Enabled")]
+    public bool? BackendTls11Enabled { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enableBackendSsl30")]
     public bool? EnableBackendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls10")]
     public bool? EnableBackendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls11")]
     public bool? EnableBackendTls11 { get; set; }
 
-    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendSsl30")]
     public bool? EnableFrontendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls10")]
     public bool? EnableFrontendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls11")]
     public bool? EnableFrontendTls11 { get; set; }
+
+    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendSsl30Enabled")]
+    public bool? FrontendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls10Enabled")]
+    public bool? FrontendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls11Enabled")]
+    public bool? FrontendTls11Enabled { get; set; }
 
     /// <summary>Should the TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA cipher be enabled? Defaults to false.</summary>
     [JsonPropertyName("tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled")]
@@ -1035,10 +1082,6 @@ public partial class V1beta1ManagementSpecInitProvider
     /// <summary>Email address from which the notification will be sent.</summary>
     [JsonPropertyName("notificationSenderEmail")]
     public string? NotificationSenderEmail { get; set; }
-
-    /// <summary>A policy block as defined below.</summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ManagementSpecInitProviderPolicy>? Policy { get; set; }
 
     /// <summary>A protocols block as defined below.</summary>
     [JsonPropertyName("protocols")]
@@ -1274,7 +1317,7 @@ public partial class V1beta1ManagementStatusAtProviderAdditionalLocation
     [JsonPropertyName("virtualNetworkConfiguration")]
     public IList<V1beta1ManagementStatusAtProviderAdditionalLocationVirtualNetworkConfiguration>? VirtualNetworkConfiguration { get; set; }
 
-    /// <summary>A list of availability zones. Changing this forces a new resource to be created.</summary>
+    /// <summary>A list of availability zones.</summary>
     [JsonPropertyName("zones")]
     public IList<string>? Zones { get; set; }
 }
@@ -1337,7 +1380,11 @@ public partial class V1beta1ManagementStatusAtProviderHostnameConfigurationDevel
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Service.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1378,7 +1425,11 @@ public partial class V1beta1ManagementStatusAtProviderHostnameConfigurationManag
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Service.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1419,7 +1470,11 @@ public partial class V1beta1ManagementStatusAtProviderHostnameConfigurationPorta
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Service.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1464,7 +1519,11 @@ public partial class V1beta1ManagementStatusAtProviderHostnameConfigurationProxy
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Service.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1505,7 +1564,11 @@ public partial class V1beta1ManagementStatusAtProviderHostnameConfigurationScm
     [JsonPropertyName("hostName")]
     public string? HostName { get; set; }
 
-    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type application/x-pkcs12.</summary>
+    /// <summary>The ID of the Key Vault Secret containing the SSL Certificate, which must be of the type application/x-pkcs12.</summary>
+    [JsonPropertyName("keyVaultCertificateId")]
+    public string? KeyVaultCertificateId { get; set; }
+
+    /// <summary>The ID of the API Management Service.</summary>
     [JsonPropertyName("keyVaultId")]
     public string? KeyVaultId { get; set; }
 
@@ -1574,24 +1637,15 @@ public partial class V1beta1ManagementStatusAtProviderIdentity
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ManagementStatusAtProviderPolicy
-{
-    /// <summary>The XML Content for this Policy.</summary>
-    [JsonPropertyName("xmlContent")]
-    public string? XmlContent { get; set; }
-
-    /// <summary>A link to an API Management Policy XML Document, which must be publicly available.</summary>
-    [JsonPropertyName("xmlLink")]
-    public string? XmlLink { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementStatusAtProviderProtocols
 {
-    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableHttp2")]
     public bool? EnableHttp2 { get; set; }
+
+    /// <summary>Should HTTP/2 be supported by the API Management Service? Defaults to false.</summary>
+    [JsonPropertyName("http2Enabled")]
+    public bool? Http2Enabled { get; set; }
 }
 
 /// <summary></summary>
@@ -1599,28 +1653,52 @@ public partial class V1beta1ManagementStatusAtProviderProtocols
 public partial class V1beta1ManagementStatusAtProviderSecurity
 {
     /// <summary>Should SSL 3.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendSsl30Enabled")]
+    public bool? BackendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls10Enabled")]
+    public bool? BackendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("backendTls11Enabled")]
+    public bool? BackendTls11Enabled { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("enableBackendSsl30")]
     public bool? EnableBackendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls10")]
     public bool? EnableBackendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the backend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableBackendTls11")]
     public bool? EnableBackendTls11 { get; set; }
 
-    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendSsl30")]
     public bool? EnableFrontendSsl30 { get; set; }
 
-    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls10")]
     public bool? EnableFrontendTls10 { get; set; }
 
-    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    /// <summary></summary>
     [JsonPropertyName("enableFrontendTls11")]
     public bool? EnableFrontendTls11 { get; set; }
+
+    /// <summary>Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendSsl30Enabled")]
+    public bool? FrontendSsl30Enabled { get; set; }
+
+    /// <summary>Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls10Enabled")]
+    public bool? FrontendTls10Enabled { get; set; }
+
+    /// <summary>Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to false.</summary>
+    [JsonPropertyName("frontendTls11Enabled")]
+    public bool? FrontendTls11Enabled { get; set; }
 
     /// <summary>Should the TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA cipher be enabled? Defaults to false.</summary>
     [JsonPropertyName("tlsEcdheEcdsaWithAes128CbcShaCiphersEnabled")]
@@ -1792,10 +1870,6 @@ public partial class V1beta1ManagementStatusAtProvider
     [JsonPropertyName("notificationSenderEmail")]
     public string? NotificationSenderEmail { get; set; }
 
-    /// <summary>A policy block as defined below.</summary>
-    [JsonPropertyName("policy")]
-    public IList<V1beta1ManagementStatusAtProviderPolicy>? Policy { get; set; }
-
     /// <summary>The URL for the Publisher Portal associated with this API Management service.</summary>
     [JsonPropertyName("portalUrl")]
     public string? PortalUrl { get; set; }
@@ -1828,7 +1902,7 @@ public partial class V1beta1ManagementStatusAtProvider
     [JsonPropertyName("publisherName")]
     public string? PublisherName { get; set; }
 
-    /// <summary>The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.</summary>
+    /// <summary>The name of the Resource Group in which the API Management Service should exist. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("resourceGroupName")]
     public string? ResourceGroupName { get; set; }
 

@@ -81,11 +81,11 @@ public partial class V1beta1SubscriptionSpecForProviderTopicIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecForProvider
 {
-    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.</summary>
+    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -105,13 +105,9 @@ public partial class V1beta1SubscriptionSpecForProvider
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
     public bool? DeadLetteringOnMessageExpiration { get; set; }
 
-    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</summary>
+    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the value used when TimeToLive is not set on a message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
-
-    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
 
     /// <summary>The name of a Queue or Topic to automatically forward Dead Letter messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
@@ -121,7 +117,7 @@ public partial class V1beta1SubscriptionSpecForProvider
     [JsonPropertyName("forwardTo")]
     public string? ForwardTo { get; set; }
 
-    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S .</summary>
+    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S . Defaults to PT1M.</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 
@@ -167,11 +163,11 @@ public partial class V1beta1SubscriptionSpecInitProviderClientScopedSubscription
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionSpecInitProvider
 {
-    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.</summary>
+    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -191,13 +187,9 @@ public partial class V1beta1SubscriptionSpecInitProvider
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
     public bool? DeadLetteringOnMessageExpiration { get; set; }
 
-    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</summary>
+    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the value used when TimeToLive is not set on a message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
-
-    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
 
     /// <summary>The name of a Queue or Topic to automatically forward Dead Letter messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
@@ -207,7 +199,7 @@ public partial class V1beta1SubscriptionSpecInitProvider
     [JsonPropertyName("forwardTo")]
     public string? ForwardTo { get; set; }
 
-    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S .</summary>
+    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S . Defaults to PT1M.</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 
@@ -377,11 +369,11 @@ public partial class V1beta1SubscriptionStatusAtProviderClientScopedSubscription
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionStatusAtProvider
 {
-    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M.</summary>
+    /// <summary>The idle interval after which the topic is automatically deleted as an ISO 8601 duration. The minimum duration is 5 minutes or PT5M. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("autoDeleteOnIdle")]
     public string? AutoDeleteOnIdle { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
     [JsonPropertyName("batchedOperationsEnabled")]
     public bool? BatchedOperationsEnabled { get; set; }
 
@@ -401,13 +393,9 @@ public partial class V1beta1SubscriptionStatusAtProvider
     [JsonPropertyName("deadLetteringOnMessageExpiration")]
     public bool? DeadLetteringOnMessageExpiration { get; set; }
 
-    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.</summary>
+    /// <summary>The Default message timespan to live as an ISO 8601 duration. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the value used when TimeToLive is not set on a message itself. Defaults to P10675199DT2H48M5.4775807S.</summary>
     [JsonPropertyName("defaultMessageTtl")]
     public string? DefaultMessageTtl { get; set; }
-
-    /// <summary>Boolean flag which controls whether the Subscription supports batched operations.</summary>
-    [JsonPropertyName("enableBatchedOperations")]
-    public bool? EnableBatchedOperations { get; set; }
 
     /// <summary>The name of a Queue or Topic to automatically forward Dead Letter messages to.</summary>
     [JsonPropertyName("forwardDeadLetteredMessagesTo")]
@@ -421,7 +409,7 @@ public partial class V1beta1SubscriptionStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S .</summary>
+    /// <summary>The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S . Defaults to PT1M.</summary>
     [JsonPropertyName("lockDuration")]
     public string? LockDuration { get; set; }
 

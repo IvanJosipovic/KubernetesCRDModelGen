@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.16.5
   name: virtualhubconnections.network.azure.upbound.io
 spec:
   group: network.azure.upbound.io
@@ -295,6 +295,9 @@ spec:
                         staticVnetLocalRouteOverrideCriteria:
                           description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                           type: string
+                        staticVnetPropagateStaticRoutesEnabled:
+                          description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                          type: boolean
                         staticVnetRoute:
                           description: A static_vnet_route block as defined below.
                           items:
@@ -638,6 +641,9 @@ spec:
                         staticVnetLocalRouteOverrideCriteria:
                           description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                           type: string
+                        staticVnetPropagateStaticRoutesEnabled:
+                          description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                          type: boolean
                         staticVnetRoute:
                           description: A static_vnet_route block as defined below.
                           items:
@@ -914,6 +920,9 @@ spec:
                         staticVnetLocalRouteOverrideCriteria:
                           description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                           type: string
+                        staticVnetPropagateStaticRoutesEnabled:
+                          description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                          type: boolean
                         staticVnetRoute:
                           description: A static_vnet_route block as defined below.
                           items:
@@ -1279,6 +1288,9 @@ spec:
                       staticVnetLocalRouteOverrideCriteria:
                         description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                         type: string
+                      staticVnetPropagateStaticRoutesEnabled:
+                        description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                        type: boolean
                       staticVnetRoute:
                         description: A static_vnet_route block as defined below.
                         items:
@@ -1618,6 +1630,9 @@ spec:
                       staticVnetLocalRouteOverrideCriteria:
                         description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                         type: string
+                      staticVnetPropagateStaticRoutesEnabled:
+                        description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                        type: boolean
                       staticVnetRoute:
                         description: A static_vnet_route block as defined below.
                         items:
@@ -1890,6 +1905,9 @@ spec:
                       staticVnetLocalRouteOverrideCriteria:
                         description: The static VNet local route override criteria that is used to determine whether NVA in spoke VNet is bypassed for traffic with destination in spoke VNet. Possible values are Contains and Equal. Defaults to Contains. Changing this forces a new resource to be created.
                         type: string
+                      staticVnetPropagateStaticRoutesEnabled:
+                        description: Whether the static routes should be propagated to the Virtual Hub. Defaults to true.
+                        type: boolean
                       staticVnetRoute:
                         description: A static_vnet_route block as defined below.
                         items:

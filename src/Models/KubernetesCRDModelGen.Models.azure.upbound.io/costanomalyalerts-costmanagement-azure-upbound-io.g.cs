@@ -28,6 +28,10 @@ public partial class V1beta1CostAnomalyAlertSpecForProvider
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 
+    /// <summary>The email address of the point of contact that should get the unsubscribe requests and notification emails.</summary>
+    [JsonPropertyName("notificationEmail")]
+    public string? NotificationEmail { get; set; }
+
     /// <summary>The ID of the Subscription this Cost Anomaly Alert is scoped to. Changing this forces a new resource to be created. When not supplied this defaults to the subscription configured in the provider.</summary>
     [JsonPropertyName("subscriptionId")]
     public string? SubscriptionId { get; set; }
@@ -52,6 +56,10 @@ public partial class V1beta1CostAnomalyAlertSpecInitProvider
     /// <summary>The message of the Cost Anomaly Alert. Maximum length of the message is 250.</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
+
+    /// <summary>The email address of the point of contact that should get the unsubscribe requests and notification emails.</summary>
+    [JsonPropertyName("notificationEmail")]
+    public string? NotificationEmail { get; set; }
 
     /// <summary>The ID of the Subscription this Cost Anomaly Alert is scoped to. Changing this forces a new resource to be created. When not supplied this defaults to the subscription configured in the provider.</summary>
     [JsonPropertyName("subscriptionId")]
@@ -213,6 +221,10 @@ public partial class V1beta1CostAnomalyAlertStatusAtProvider
     /// <summary>The message of the Cost Anomaly Alert. Maximum length of the message is 250.</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
+
+    /// <summary>The email address of the point of contact that should get the unsubscribe requests and notification emails.</summary>
+    [JsonPropertyName("notificationEmail")]
+    public string? NotificationEmail { get; set; }
 
     /// <summary>The ID of the Subscription this Cost Anomaly Alert is scoped to. Changing this forces a new resource to be created. When not supplied this defaults to the subscription configured in the provider.</summary>
     [JsonPropertyName("subscriptionId")]
