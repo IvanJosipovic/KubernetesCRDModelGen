@@ -303,11 +303,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("labelSelector")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecAffinityPodAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -405,11 +405,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("labelSelector")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecAffinityPodAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -507,11 +507,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("labelSelector")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecAffinityPodAntiAffinityPreferredDuringSchedulingIgnoredDuringExecutionPodAffinityTermLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -609,11 +609,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("labelSelector")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecAffinityPodAntiAffinityRequiredDuringSchedulingIgnoredDuringExecutionLabelSelector? LabelSelector { get; set; }
 
-    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key in (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both matchLabelKeys and labelSelector. Also, matchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("matchLabelKeys")]
     public IList<string>? MatchLabelKeys { get; set; }
 
-    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set. This is a beta field and requires enabling MatchLabelKeysInPodAffinity feature gate (enabled by default).</summary>
+    /// <summary>MismatchLabelKeys is a set of pod label keys to select which pods will be taken into consideration. The keys are used to lookup values from the incoming pod labels, those key-value labels are merged with `labelSelector` as `key notin (value)` to select the group of existing pods which pods will be taken into consideration for the incoming pod's pod (anti) affinity. Keys that don't exist in the incoming pod labels will be ignored. The default value is empty. The same key is forbidden to exist in both mismatchLabelKeys and labelSelector. Also, mismatchLabelKeys cannot be set when labelSelector isn't set.</summary>
     [JsonPropertyName("mismatchLabelKeys")]
     public IList<string>? MismatchLabelKeys { get; set; }
 
@@ -788,7 +788,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? Optional { get; set; }
 }
 
-/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersEnvFrom
 {
@@ -796,7 +796,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("configMapRef")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersEnvFromConfigMapRef? ConfigMapRef { get; set; }
 
-    /// <summary>An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.</summary>
+    /// <summary>Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -805,7 +805,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartExec
 {
@@ -827,7 +827,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartHttpGet
 {
@@ -852,7 +852,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartSleep
 {
@@ -861,7 +861,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartTcpSocket
 {
@@ -878,24 +878,24 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStart
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopExec
 {
@@ -917,7 +917,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopHttpGet
 {
@@ -942,7 +942,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopSleep
 {
@@ -951,7 +951,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopTcpSocket
 {
@@ -968,19 +968,19 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStop
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
@@ -996,9 +996,13 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
     [JsonPropertyName("preStop")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLifecyclePreStop? PreStop { get; set; }
+
+    /// <summary>StopSignal defines which signal will be sent to a container when it is being stopped. If not specified, the default is defined by the container runtime in use. StopSignal can only be set for Pods with a non-empty .spec.os.name</summary>
+    [JsonPropertyName("stopSignal")]
+    public string? StopSignal { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeExec
 {
@@ -1007,7 +1011,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeGrpc
 {
@@ -1033,7 +1037,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeHttpGet
 {
@@ -1058,7 +1062,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeTcpSocket
 {
@@ -1075,7 +1079,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeExec? Exec { get; set; }
 
@@ -1083,11 +1087,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeHttpGet? HttpGet { get; set; }
 
@@ -1103,7 +1107,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersLivenessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -1141,7 +1145,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Protocol { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeExec
 {
@@ -1150,7 +1154,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeGrpc
 {
@@ -1176,7 +1180,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeHttpGet
 {
@@ -1201,7 +1205,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeTcpSocket
 {
@@ -1218,7 +1222,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeExec? Exec { get; set; }
 
@@ -1226,11 +1230,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeHttpGet? HttpGet { get; set; }
 
@@ -1246,7 +1250,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersReadinessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -1436,7 +1440,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeExec
 {
@@ -1445,7 +1449,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeGrpc
 {
@@ -1471,7 +1475,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeHttpGet
 {
@@ -1496,7 +1500,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeTcpSocket
 {
@@ -1513,7 +1517,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeExec? Exec { get; set; }
 
@@ -1521,11 +1525,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeHttpGet? HttpGet { get; set; }
 
@@ -1541,7 +1545,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecContainersStartupProbeTcpSocket? TcpSocket { get; set; }
 
@@ -1705,11 +1709,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecDnsConfigOptions
 {
-    /// <summary>Required.</summary>
+    /// <summary>Name is this DNS resolver option's name. Required.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Value is this DNS resolver option's value.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1859,7 +1863,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? Optional { get; set; }
 }
 
-/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersEnvFrom
 {
@@ -1867,7 +1871,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("configMapRef")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersEnvFromConfigMapRef? ConfigMapRef { get; set; }
 
-    /// <summary>An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.</summary>
+    /// <summary>Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -1876,7 +1880,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartExec
 {
@@ -1898,7 +1902,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet
 {
@@ -1923,7 +1927,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep
 {
@@ -1932,7 +1936,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket
 {
@@ -1949,24 +1953,24 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStart
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopExec
 {
@@ -1988,7 +1992,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet
 {
@@ -2013,7 +2017,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep
 {
@@ -2022,7 +2026,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket
 {
@@ -2039,19 +2043,19 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStop
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
@@ -2067,9 +2071,13 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
     [JsonPropertyName("preStop")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLifecyclePreStop? PreStop { get; set; }
+
+    /// <summary>StopSignal defines which signal will be sent to a container when it is being stopped. If not specified, the default is defined by the container runtime in use. StopSignal can only be set for Pods with a non-empty .spec.os.name</summary>
+    [JsonPropertyName("stopSignal")]
+    public string? StopSignal { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeExec
 {
@@ -2078,7 +2086,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeGrpc
 {
@@ -2104,7 +2112,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet
 {
@@ -2129,7 +2137,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket
 {
@@ -2146,7 +2154,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeExec? Exec { get; set; }
 
@@ -2154,11 +2162,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeHttpGet? HttpGet { get; set; }
 
@@ -2174,7 +2182,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersLivenessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -2212,7 +2220,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Protocol { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeExec
 {
@@ -2221,7 +2229,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeGrpc
 {
@@ -2247,7 +2255,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet
 {
@@ -2272,7 +2280,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket
 {
@@ -2289,7 +2297,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeExec? Exec { get; set; }
 
@@ -2297,11 +2305,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeHttpGet? HttpGet { get; set; }
 
@@ -2317,7 +2325,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersReadinessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -2507,7 +2515,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeExec
 {
@@ -2516,7 +2524,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeGrpc
 {
@@ -2542,7 +2550,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeHttpGet
 {
@@ -2567,7 +2575,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket
 {
@@ -2584,7 +2592,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeExec? Exec { get; set; }
 
@@ -2592,11 +2600,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeHttpGet? HttpGet { get; set; }
 
@@ -2612,7 +2620,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecEphemeralContainersStartupProbeTcpSocket? TcpSocket { get; set; }
 
@@ -2926,7 +2934,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? Optional { get; set; }
 }
 
-/// <summary>EnvFromSource represents the source of a set of ConfigMaps</summary>
+/// <summary>EnvFromSource represents the source of a set of ConfigMaps or Secrets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersEnvFrom
 {
@@ -2934,7 +2942,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("configMapRef")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersEnvFromConfigMapRef? ConfigMapRef { get; set; }
 
-    /// <summary>An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.</summary>
+    /// <summary>Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -2943,7 +2951,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersEnvFromSecretRef? SecretRef { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartExec
 {
@@ -2965,7 +2973,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartHttpGet
 {
@@ -2990,7 +2998,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartSleep
 {
@@ -2999,7 +3007,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket
 {
@@ -3016,24 +3024,24 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStart
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePostStartTcpSocket? TcpSocket { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopExec
 {
@@ -3055,7 +3063,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopHttpGet
 {
@@ -3080,7 +3088,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+/// <summary>Sleep represents a duration that the container should sleep.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopSleep
 {
@@ -3089,7 +3097,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public long Seconds { get; set; }
 }
 
-/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+/// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket
 {
@@ -3106,19 +3114,19 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStop
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopExec? Exec { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopHttpGet? HttpGet { get; set; }
 
-    /// <summary>Sleep represents the duration that the container should sleep before being terminated.</summary>
+    /// <summary>Sleep represents a duration that the container should sleep.</summary>
     [JsonPropertyName("sleep")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopSleep? Sleep { get; set; }
 
-    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for the backward compatibility. There are no validation of this field and lifecycle hooks will fail in runtime when tcp handler is specified.</summary>
+    /// <summary>Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept for backward compatibility. There is no validation of this field and lifecycle hooks will fail at runtime when it is specified.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStopTcpSocket? TcpSocket { get; set; }
 }
@@ -3134,9 +3142,13 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     /// <summary>PreStop is called immediately before a container is terminated due to an API request or management event such as liveness/startup probe failure, preemption, resource contention, etc. The handler is not called if the container crashes or exits. The Pod's termination grace period countdown begins before the PreStop hook is executed. Regardless of the outcome of the handler, the container will eventually terminate within the Pod's termination grace period (unless delayed by finalizers). Other management of the container blocks until the hook completes or until the termination grace period is reached. More info: https://kubernetes.io/docs/concepts/containers/container-lifecycle-hooks/#container-hooks</summary>
     [JsonPropertyName("preStop")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLifecyclePreStop? PreStop { get; set; }
+
+    /// <summary>StopSignal defines which signal will be sent to a container when it is being stopped. If not specified, the default is defined by the container runtime in use. StopSignal can only be set for Pods with a non-empty .spec.os.name</summary>
+    [JsonPropertyName("stopSignal")]
+    public string? StopSignal { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeExec
 {
@@ -3145,7 +3157,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeGrpc
 {
@@ -3171,7 +3183,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeHttpGet
 {
@@ -3196,7 +3208,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeTcpSocket
 {
@@ -3213,7 +3225,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeExec? Exec { get; set; }
 
@@ -3221,11 +3233,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeHttpGet? HttpGet { get; set; }
 
@@ -3241,7 +3253,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersLivenessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -3279,7 +3291,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Protocol { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeExec
 {
@@ -3288,7 +3300,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeGrpc
 {
@@ -3314,7 +3326,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeHttpGet
 {
@@ -3339,7 +3351,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeTcpSocket
 {
@@ -3356,7 +3368,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeExec? Exec { get; set; }
 
@@ -3364,11 +3376,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeHttpGet? HttpGet { get; set; }
 
@@ -3384,7 +3396,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersReadinessProbeTcpSocket? TcpSocket { get; set; }
 
@@ -3574,7 +3586,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersSecurityContextWindowsOptions? WindowsOptions { get; set; }
 }
 
-/// <summary>Exec specifies the action to take.</summary>
+/// <summary>Exec specifies a command to execute in the container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeExec
 {
@@ -3583,7 +3595,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<string>? Command { get; set; }
 }
 
-/// <summary>GRPC specifies an action involving a GRPC port.</summary>
+/// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeGrpc
 {
@@ -3609,7 +3621,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string Value { get; set; }
 }
 
-/// <summary>HTTPGet specifies the http request to perform.</summary>
+/// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeHttpGet
 {
@@ -3634,7 +3646,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Scheme { get; set; }
 }
 
-/// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+/// <summary>TCPSocket specifies a connection to a TCP port.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeTcpSocket
 {
@@ -3651,7 +3663,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbe
 {
-    /// <summary>Exec specifies the action to take.</summary>
+    /// <summary>Exec specifies a command to execute in the container.</summary>
     [JsonPropertyName("exec")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeExec? Exec { get; set; }
 
@@ -3659,11 +3671,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("failureThreshold")]
     public int? FailureThreshold { get; set; }
 
-    /// <summary>GRPC specifies an action involving a GRPC port.</summary>
+    /// <summary>GRPC specifies a GRPC HealthCheckRequest.</summary>
     [JsonPropertyName("grpc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeGrpc? Grpc { get; set; }
 
-    /// <summary>HTTPGet specifies the http request to perform.</summary>
+    /// <summary>HTTPGet specifies an HTTP GET request to perform.</summary>
     [JsonPropertyName("httpGet")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeHttpGet? HttpGet { get; set; }
 
@@ -3679,7 +3691,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("successThreshold")]
     public int? SuccessThreshold { get; set; }
 
-    /// <summary>TCPSocket specifies an action involving a TCP port.</summary>
+    /// <summary>TCPSocket specifies a connection to a TCP port.</summary>
     [JsonPropertyName("tcpSocket")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainersStartupProbeTcpSocket? TcpSocket { get; set; }
 
@@ -3874,6 +3886,36 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? ResourceClaimTemplateName { get; set; }
 }
 
+/// <summary>ResourceClaim references one entry in PodSpec.ResourceClaims.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecResourcesClaims
+{
+    /// <summary>Name must match the name of one entry in pod.spec.resourceClaims of the Pod where this field is used. It makes that resource available inside a container.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Request is the name chosen for a request in the referenced claim. If empty, everything from the claim is made available, otherwise only the result of this request.</summary>
+    [JsonPropertyName("request")]
+    public string? Request { get; set; }
+}
+
+/// <summary>Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu" and "memory" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecResources
+{
+    /// <summary>Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable. It can only be set for containers.</summary>
+    [JsonPropertyName("claims")]
+    public IList<V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecResourcesClaims>? Claims { get; set; }
+
+    /// <summary>Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
+    [JsonPropertyName("limits")]
+    public IDictionary<string, IntstrIntOrString>? Limits { get; set; }
+
+    /// <summary>Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. Requests cannot exceed Limits. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/</summary>
+    [JsonPropertyName("requests")]
+    public IDictionary<string, IntstrIntOrString>? Requests { get; set; }
+}
+
 /// <summary>PodSchedulingGate is associated to a Pod to guard its scheduling.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecSchedulingGates
@@ -3992,6 +4034,10 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("runAsUser")]
     public long? RunAsUser { get; set; }
 
+    /// <summary>seLinuxChangePolicy defines how the container's SELinux label is applied to all volumes used by the Pod. It has no effect on nodes that do not support SELinux or to volumes does not support SELinux. Valid values are "MountOption" and "Recursive".  "Recursive" means relabeling of all files on all Pod volumes by the container runtime. This may be slow for large volumes, but allows mixing privileged and unprivileged Pods sharing the same volume on the same node.  "MountOption" mounts all eligible Pod volumes with `-o context` mount option. This requires all Pods that share the same volume to use the same SELinux label. It is not possible to share the same volume among privileged and unprivileged Pods. Eligible volumes are in-tree FibreChannel and iSCSI volumes, and all CSI volumes whose CSI driver announces SELinux support by setting spec.seLinuxMount: true in their CSIDriver instance. Other volumes are always re-labelled recursively. "MountOption" value is allowed only when SELinuxMount feature gate is enabled.  If not specified and SELinuxMount feature gate is enabled, "MountOption" is used. If not specified and SELinuxMount feature gate is disabled, "MountOption" is used for ReadWriteOncePod volumes and "Recursive" for all other volumes.  This field affects only Pods that have SELinux label set, either in PodSecurityContext or in SecurityContext of all containers.  All Pods that use the same volume should use the same seLinuxChangePolicy, otherwise some pods can get stuck in ContainerCreating state. Note that this field cannot be set when spec.os.name is windows.</summary>
+    [JsonPropertyName("seLinuxChangePolicy")]
+    public string? SeLinuxChangePolicy { get; set; }
+
     /// <summary>The SELinux context to be applied to all containers. If unspecified, the container runtime will allocate a random SELinux context for each container.  May also be set in SecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence for that container. Note that this field cannot be set when spec.os.name is windows.</summary>
     [JsonPropertyName("seLinuxOptions")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecSecurityContextSeLinuxOptions? SeLinuxOptions { get; set; }
@@ -4092,11 +4138,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("minDomains")]
     public int? MinDomains { get; set; }
 
-    /// <summary>NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector when calculating pod topology spread skew. Options are: - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations. - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.  If this value is nil, the behavior is equivalent to the Honor policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag.</summary>
+    /// <summary>NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector when calculating pod topology spread skew. Options are: - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations. - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.  If this value is nil, the behavior is equivalent to the Honor policy.</summary>
     [JsonPropertyName("nodeAffinityPolicy")]
     public string? NodeAffinityPolicy { get; set; }
 
-    /// <summary>NodeTaintsPolicy indicates how we will treat node taints when calculating pod topology spread skew. Options are: - Honor: nodes without taints, along with tainted nodes for which the incoming pod has a toleration, are included. - Ignore: node taints are ignored. All nodes are included.  If this value is nil, the behavior is equivalent to the Ignore policy. This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag.</summary>
+    /// <summary>NodeTaintsPolicy indicates how we will treat node taints when calculating pod topology spread skew. Options are: - Honor: nodes without taints, along with tainted nodes for which the incoming pod has a toleration, are included. - Ignore: node taints are ignored. All nodes are included.  If this value is nil, the behavior is equivalent to the Ignore policy.</summary>
     [JsonPropertyName("nodeTaintsPolicy")]
     public string? NodeTaintsPolicy { get; set; }
 
@@ -4109,7 +4155,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string WhenUnsatisfiable { get; set; }
 }
 
-/// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
+/// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree awsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAwsElasticBlockStore
 {
@@ -4130,7 +4176,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string VolumeID { get; set; }
 }
 
-/// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</summary>
+/// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. Deprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type are redirected to the disk.csi.azure.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAzureDisk
 {
@@ -4159,7 +4205,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? ReadOnly { get; set; }
 }
 
-/// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod.</summary>
+/// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod. Deprecated: AzureFile is deprecated. All operations for the in-tree azureFile type are redirected to the file.csi.azure.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAzureFile
 {
@@ -4185,7 +4231,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime</summary>
+/// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime. Deprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCephfs
 {
@@ -4223,7 +4269,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
+/// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. Deprecated: Cinder is deprecated. All operations for the in-tree cinder type are redirected to the cinder.csi.openstack.org CSI driver. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCinder
 {
@@ -4291,7 +4337,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).</summary>
+/// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCsi
 {
@@ -4596,7 +4642,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</summary>
+/// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. Deprecated: FlexVolume is deprecated. Consider using a CSIDriver instead.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFlexVolume
 {
@@ -4621,7 +4667,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFlexVolumeSecretRef? SecretRef { get; set; }
 }
 
-/// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running</summary>
+/// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running. Deprecated: Flocker is deprecated and the in-tree flocker type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFlocker
 {
@@ -4634,7 +4680,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? DatasetUUID { get; set; }
 }
 
-/// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
+/// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: GCEPersistentDisk is deprecated. All operations for the in-tree gcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGcePersistentDisk
 {
@@ -4655,7 +4701,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? ReadOnly { get; set; }
 }
 
-/// <summary>gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
+/// <summary>gitRepo represents a git repository at a particular revision. Deprecated: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGitRepo
 {
@@ -4672,7 +4718,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Revision { get; set; }
 }
 
-/// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
+/// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGlusterfs
 {
@@ -4702,7 +4748,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Type { get; set; }
 }
 
-/// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath). The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
+/// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath) before 1.33. The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesImage
 {
@@ -4803,7 +4849,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public bool? ReadOnly { get; set; }
 }
 
-/// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</summary>
+/// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine. Deprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesPhotonPersistentDisk
 {
@@ -4816,7 +4862,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string PdID { get; set; }
 }
 
-/// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine</summary>
+/// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine. Deprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type are redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesPortworxVolume
 {
@@ -5071,7 +5117,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public IList<V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesProjectedSources>? Sources { get; set; }
 }
 
-/// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime</summary>
+/// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime. Deprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesQuobyte
 {
@@ -5109,7 +5155,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
+/// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesRbd
 {
@@ -5155,7 +5201,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</summary>
+/// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. Deprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesScaleIO
 {
@@ -5247,7 +5293,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? Name { get; set; }
 }
 
-/// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.</summary>
+/// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes. Deprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesStorageos
 {
@@ -5272,7 +5318,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     public string? VolumeNamespace { get; set; }
 }
 
-/// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</summary>
+/// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine. Deprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type are redirected to the csi.vsphere.vmware.com CSI driver.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesVsphereVolume
 {
@@ -5297,23 +5343,23 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumes
 {
-    /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
+    /// <summary>awsElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: AWSElasticBlockStore is deprecated. All operations for the in-tree awsElasticBlockStore type are redirected to the ebs.csi.aws.com CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore</summary>
     [JsonPropertyName("awsElasticBlockStore")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAwsElasticBlockStore? AwsElasticBlockStore { get; set; }
 
-    /// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.</summary>
+    /// <summary>azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod. Deprecated: AzureDisk is deprecated. All operations for the in-tree azureDisk type are redirected to the disk.csi.azure.com CSI driver.</summary>
     [JsonPropertyName("azureDisk")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAzureDisk? AzureDisk { get; set; }
 
-    /// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod.</summary>
+    /// <summary>azureFile represents an Azure File Service mount on the host and bind mount to the pod. Deprecated: AzureFile is deprecated. All operations for the in-tree azureFile type are redirected to the file.csi.azure.com CSI driver.</summary>
     [JsonPropertyName("azureFile")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesAzureFile? AzureFile { get; set; }
 
-    /// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime</summary>
+    /// <summary>cephFS represents a Ceph FS mount on the host that shares a pod's lifetime. Deprecated: CephFS is deprecated and the in-tree cephfs type is no longer supported.</summary>
     [JsonPropertyName("cephfs")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCephfs? Cephfs { get; set; }
 
-    /// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
+    /// <summary>cinder represents a cinder volume attached and mounted on kubelets host machine. Deprecated: Cinder is deprecated. All operations for the in-tree cinder type are redirected to the cinder.csi.openstack.org CSI driver. More info: https://examples.k8s.io/mysql-cinder-pd/README.md</summary>
     [JsonPropertyName("cinder")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCinder? Cinder { get; set; }
 
@@ -5321,7 +5367,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("configMap")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesConfigMap? ConfigMap { get; set; }
 
-    /// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).</summary>
+    /// <summary>csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers.</summary>
     [JsonPropertyName("csi")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesCsi? Csi { get; set; }
 
@@ -5341,23 +5387,23 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("fc")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFc? Fc { get; set; }
 
-    /// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin.</summary>
+    /// <summary>flexVolume represents a generic volume resource that is provisioned/attached using an exec based plugin. Deprecated: FlexVolume is deprecated. Consider using a CSIDriver instead.</summary>
     [JsonPropertyName("flexVolume")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFlexVolume? FlexVolume { get; set; }
 
-    /// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running</summary>
+    /// <summary>flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running. Deprecated: Flocker is deprecated and the in-tree flocker type is no longer supported.</summary>
     [JsonPropertyName("flocker")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesFlocker? Flocker { get; set; }
 
-    /// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
+    /// <summary>gcePersistentDisk represents a GCE Disk resource that is attached to a kubelet's host machine and then exposed to the pod. Deprecated: GCEPersistentDisk is deprecated. All operations for the in-tree gcePersistentDisk type are redirected to the pd.csi.storage.gke.io CSI driver. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk</summary>
     [JsonPropertyName("gcePersistentDisk")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGcePersistentDisk? GcePersistentDisk { get; set; }
 
-    /// <summary>gitRepo represents a git repository at a particular revision. DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
+    /// <summary>gitRepo represents a git repository at a particular revision. Deprecated: GitRepo is deprecated. To provision a container with a git repo, mount an EmptyDir into an InitContainer that clones the repo using git, then mount the EmptyDir into the Pod's container.</summary>
     [JsonPropertyName("gitRepo")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGitRepo? GitRepo { get; set; }
 
-    /// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
+    /// <summary>glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime. Deprecated: Glusterfs is deprecated and the in-tree glusterfs type is no longer supported. More info: https://examples.k8s.io/volumes/glusterfs/README.md</summary>
     [JsonPropertyName("glusterfs")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesGlusterfs? Glusterfs { get; set; }
 
@@ -5365,7 +5411,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("hostPath")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesHostPath? HostPath { get; set; }
 
-    /// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath). The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
+    /// <summary>image represents an OCI object (a container image or artifact) pulled and mounted on the kubelet's host machine. The volume is resolved at pod startup depending on which PullPolicy value is provided:  - Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. - Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. - IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails.  The volume gets re-resolved if the pod gets deleted and recreated, which means that new remote content will become available on pod recreation. A failure to resolve or pull the image during pod startup will block containers from starting and may add significant latency. Failures will be retried using normal volume backoff and will be reported on the pod reason and message. The types of objects that may be mounted by this volume are defined by the container runtime implementation on a host machine and at minimum must include all valid types supported by the container image field. The OCI object gets mounted in a single directory (spec.containers[*].volumeMounts.mountPath) by merging the manifest layers in the same way as for container images. The volume will be mounted read-only (ro) and non-executable files (noexec). Sub path mounts for containers are not supported (spec.containers[*].volumeMounts.subpath) before 1.33. The field spec.securityContext.fsGroupChangePolicy has no effect on this volume type.</summary>
     [JsonPropertyName("image")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesImage? Image { get; set; }
 
@@ -5385,11 +5431,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("persistentVolumeClaim")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesPersistentVolumeClaim? PersistentVolumeClaim { get; set; }
 
-    /// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine</summary>
+    /// <summary>photonPersistentDisk represents a PhotonController persistent disk attached and mounted on kubelets host machine. Deprecated: PhotonPersistentDisk is deprecated and the in-tree photonPersistentDisk type is no longer supported.</summary>
     [JsonPropertyName("photonPersistentDisk")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesPhotonPersistentDisk? PhotonPersistentDisk { get; set; }
 
-    /// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine</summary>
+    /// <summary>portworxVolume represents a portworx volume attached and mounted on kubelets host machine. Deprecated: PortworxVolume is deprecated. All operations for the in-tree portworxVolume type are redirected to the pxd.portworx.com CSI driver when the CSIMigrationPortworx feature-gate is on.</summary>
     [JsonPropertyName("portworxVolume")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesPortworxVolume? PortworxVolume { get; set; }
 
@@ -5397,15 +5443,15 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("projected")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesProjected? Projected { get; set; }
 
-    /// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime</summary>
+    /// <summary>quobyte represents a Quobyte mount on the host that shares a pod's lifetime. Deprecated: Quobyte is deprecated and the in-tree quobyte type is no longer supported.</summary>
     [JsonPropertyName("quobyte")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesQuobyte? Quobyte { get; set; }
 
-    /// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
+    /// <summary>rbd represents a Rados Block Device mount on the host that shares a pod's lifetime. Deprecated: RBD is deprecated and the in-tree rbd type is no longer supported. More info: https://examples.k8s.io/volumes/rbd/README.md</summary>
     [JsonPropertyName("rbd")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesRbd? Rbd { get; set; }
 
-    /// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.</summary>
+    /// <summary>scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes. Deprecated: ScaleIO is deprecated and the in-tree scaleIO type is no longer supported.</summary>
     [JsonPropertyName("scaleIO")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesScaleIO? ScaleIO { get; set; }
 
@@ -5413,11 +5459,11 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("secret")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesSecret? Secret { get; set; }
 
-    /// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.</summary>
+    /// <summary>storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes. Deprecated: StorageOS is deprecated and the in-tree storageos type is no longer supported.</summary>
     [JsonPropertyName("storageos")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesStorageos? Storageos { get; set; }
 
-    /// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine</summary>
+    /// <summary>vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine. Deprecated: VsphereVolume is deprecated. All operations for the in-tree vsphereVolume type are redirected to the csi.vsphere.vmware.com CSI driver.</summary>
     [JsonPropertyName("vsphereVolume")]
     public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecVolumesVsphereVolume? VsphereVolume { get; set; }
 }
@@ -5486,7 +5532,7 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     [JsonPropertyName("imagePullSecrets")]
     public IList<V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecImagePullSecrets>? ImagePullSecrets { get; set; }
 
-    /// <summary>List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</summary>
+    /// <summary>List of initialization containers belonging to the pod. Init containers are executed in order prior to containers being started. If any init container fails, the pod is considered to have failed and is handled according to its restartPolicy. The name for an init container or normal container must be unique among all containers. Init containers may not have Lifecycle actions, Readiness probes, Liveness probes, or Startup probes. The resourceRequirements of an init container are taken into account during scheduling by finding the highest request/limit for each resource type, and then using the max of that value or the sum of the normal containers. Limits are applied to init containers in a similar fashion. Init containers cannot currently be added or removed. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/</summary>
     [JsonPropertyName("initContainers")]
     public IList<V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecInitContainers>? InitContainers { get; set; }
 
@@ -5525,6 +5571,10 @@ public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTem
     /// <summary>ResourceClaims defines which ResourceClaims must be allocated and reserved before the Pod is allowed to start. The resources will be made available to those containers which consume them by name.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable.</summary>
     [JsonPropertyName("resourceClaims")]
     public IList<V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecResourceClaims>? ResourceClaims { get; set; }
+
+    /// <summary>Resources is the total amount of CPU and Memory resources required by all containers in the pod. It supports specifying Requests and Limits for "cpu" and "memory" resource names only. ResourceClaims are not supported.  This field enables fine-grained control over resource allocation for the entire pod, allowing resource sharing among containers in a pod.  This is an alpha field and requires enabling the PodLevelResources feature gate.</summary>
+    [JsonPropertyName("resources")]
+    public V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateSpecTemplateSpecResources? Resources { get; set; }
 
     /// <summary>Restart policy for all containers within the pod. One of Always, OnFailure, Never. In some contexts, only a subset of those values may be permitted. Default to Always. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy</summary>
     [JsonPropertyName("restartPolicy")]
