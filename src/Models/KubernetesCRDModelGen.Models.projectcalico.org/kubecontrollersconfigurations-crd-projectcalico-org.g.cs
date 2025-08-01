@@ -39,6 +39,10 @@ public partial class V1KubeControllersConfigurationSpecControllersNodeHostEndpoi
     public IList<string>? InterfaceCIDRs { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("interfaceSelector")]
+    public string? InterfaceSelector { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 
@@ -199,6 +203,10 @@ public partial class V1KubeControllersConfigurationStatusRunningConfigController
     /// <summary></summary>
     [JsonPropertyName("interfaceCIDRs")]
     public IList<string>? InterfaceCIDRs { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("interfaceSelector")]
+    public string? InterfaceSelector { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("labels")]
