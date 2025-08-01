@@ -76,7 +76,7 @@ public partial class V1beta1LBTargetGroupAttachmentSpecForProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -329,6 +329,10 @@ public partial class V1beta1LBTargetGroupAttachmentStatusAtProvider
     /// <summary>The port on which targets receive traffic.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN of the target group with which to register targets.</summary>
     [JsonPropertyName("targetGroupArn")]

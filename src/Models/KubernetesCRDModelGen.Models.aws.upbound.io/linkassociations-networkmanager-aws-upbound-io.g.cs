@@ -180,7 +180,7 @@ public partial class V1beta1LinkAssociationSpecForProviderLinkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkAssociationSpecForProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -192,7 +192,7 @@ public partial class V1beta1LinkAssociationSpecForProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1LinkAssociationSpecForProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -204,7 +204,7 @@ public partial class V1beta1LinkAssociationSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1LinkAssociationSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 
@@ -215,10 +215,6 @@ public partial class V1beta1LinkAssociationSpecForProvider
     /// <summary>Selector for a Link in networkmanager to populate linkId.</summary>
     [JsonPropertyName("linkIdSelector")]
     public V1beta1LinkAssociationSpecForProviderLinkIdSelector? LinkIdSelector { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -363,11 +359,11 @@ public partial class V1beta1LinkAssociationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkAssociationStatusAtProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -375,7 +371,7 @@ public partial class V1beta1LinkAssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
@@ -426,7 +422,7 @@ public partial class V1beta1LinkAssociationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LinkAssociation is the Schema for the LinkAssociations API. Associates a link to a device.</summary>
+/// <summary>LinkAssociation is the Schema for the LinkAssociations API. Manages a Network Manager link association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LinkAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkAssociationSpec>, IStatus<V1beta1LinkAssociationStatus>
@@ -456,7 +452,7 @@ public partial class V1beta1LinkAssociation : IKubernetesObject<V1ObjectMeta>, I
     public V1beta1LinkAssociationStatus? Status { get; set; }
 }
 
-/// <summary>LinkAssociation is the Schema for the LinkAssociations API. Associates a link to a device.</summary>
+/// <summary>LinkAssociation is the Schema for the LinkAssociations API. Manages a Network Manager link association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LinkAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkAssociation>

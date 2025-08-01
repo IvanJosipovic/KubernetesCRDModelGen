@@ -225,7 +225,7 @@ public partial class V1beta1StreamSpecForProvider
     [JsonPropertyName("ledgerNameSelector")]
     public V1beta1StreamSpecForProviderLedgerNameSelector? LedgerNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -660,6 +660,10 @@ public partial class V1beta1StreamStatusAtProvider
     /// <summary>The name of the QLDB ledger.</summary>
     [JsonPropertyName("ledgerName")]
     public string? LedgerName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the IAM role that grants QLDB permissions for a journal stream to write data records to a Kinesis Data Streams resource.</summary>
     [JsonPropertyName("roleArn")]

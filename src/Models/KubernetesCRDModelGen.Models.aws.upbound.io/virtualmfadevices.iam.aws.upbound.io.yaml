@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   path:
-                    description: –  The path for the virtual MFA device.
+                    description: The path for the virtual MFA device.
                     type: string
                   tags:
                     additionalProperties:
@@ -120,7 +120,7 @@ spec:
                   autoscaler.
                 properties:
                   path:
-                    description: –  The path for the virtual MFA device.
+                    description: The path for the virtual MFA device.
                     type: string
                   tags:
                     additionalProperties:
@@ -360,7 +360,7 @@ spec:
                   id:
                     type: string
                   path:
-                    description: –  The path for the virtual MFA device.
+                    description: The path for the virtual MFA device.
                     type: string
                   qrCodePng:
                     description: A QR code PNG image that encodes otpauth://totp/$virtualMFADeviceName@$AccountName?secret=$Base32String where $virtualMFADeviceName is one of the create call arguments. AccountName is the user name if set (otherwise, the account ID), and Base32String is the seed in base32 format.

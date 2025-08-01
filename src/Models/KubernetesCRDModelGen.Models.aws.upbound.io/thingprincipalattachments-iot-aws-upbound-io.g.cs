@@ -136,7 +136,7 @@ public partial class V1beta1ThingPrincipalAttachmentSpecForProvider
     [JsonPropertyName("principalSelector")]
     public V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalSelector? PrincipalSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1ThingPrincipalAttachmentStatusAtProvider
     /// <summary>The AWS IoT Certificate ARN or Amazon Cognito Identity ID.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the thing.</summary>
     [JsonPropertyName("thing")]

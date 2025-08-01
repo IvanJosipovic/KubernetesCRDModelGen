@@ -37,7 +37,7 @@ public partial class V1beta1SlotTypeSpecForProvider
     [JsonPropertyName("enumerationValue")]
     public IList<V1beta1SlotTypeSpecForProviderEnumerationValue>? EnumerationValue { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -256,6 +256,10 @@ public partial class V1beta1SlotTypeStatusAtProvider
     /// <summary>The date when the $LATEST version of this slot type was updated.</summary>
     [JsonPropertyName("lastUpdatedDate")]
     public string? LastUpdatedDate { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Determines the slot resolution strategy that Amazon Lex uses to return slot type values. ORIGINAL_VALUE returns the value entered by the user if the user value is similar to the slot value. TOP_RESOLUTION returns the first value in the resolution list if there is a resolution list for the slot, otherwise null is returned. Defaults to ORIGINAL_VALUE.</summary>
     [JsonPropertyName("valueSelectionStrategy")]

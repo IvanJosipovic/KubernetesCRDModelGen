@@ -518,7 +518,7 @@ public partial class V1beta1WorkflowSpecForProvider
     [JsonPropertyName("onExceptionSteps")]
     public IList<V1beta1WorkflowSpecForProviderOnExceptionSteps>? OnExceptionSteps { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1635,6 +1635,10 @@ public partial class V1beta1WorkflowStatusAtProvider
     /// <summary>Specifies the steps (actions) to take if errors are encountered during execution of the workflow. See Workflow Steps below.</summary>
     [JsonPropertyName("onExceptionSteps")]
     public IList<V1beta1WorkflowStatusAtProviderOnExceptionSteps>? OnExceptionSteps { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies the details for the steps that are in the specified workflow. See Workflow Steps below.</summary>
     [JsonPropertyName("steps")]

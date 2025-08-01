@@ -84,7 +84,7 @@ public partial class V1beta1VaultSpecForProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1VaultSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -329,6 +329,10 @@ public partial class V1beta1VaultStatusAtProvider
     /// <summary>The number of recovery points that are stored in a backup vault.</summary>
     [JsonPropertyName("recoveryPoints")]
     public double? RecoveryPoints { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

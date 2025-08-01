@@ -19,6 +19,32 @@ public partial class V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistr
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecificationCapacityReservationTarget
+{
+    /// <summary>List of On-Demand Capacity Reservation Ids. Conflicts with capacity_reservation_resource_group_arns.</summary>
+    [JsonPropertyName("capacityReservationIds")]
+    public IList<string>? CapacityReservationIds { get; set; }
+
+    /// <summary>List of On-Demand Capacity Reservation Resource Group Arns. Conflicts with capacity_reservation_ids.</summary>
+    [JsonPropertyName("capacityReservationResourceGroupArns")]
+    public IList<string>? CapacityReservationResourceGroupArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecification
+{
+    /// <summary>Capacity Reservation preference helps you use Capacity Reservations efficiently by prioritizing reserved capacity in a Capacity Reservation before using On-Demand capacity. Valid values are default, capacity-reservations-only, capacity-reservations-first and none. Default is default.</summary>
+    [JsonPropertyName("capacityReservationPreference")]
+    public string? CapacityReservationPreference { get; set; }
+
+    /// <summary>Describes a target Capacity Reservation or Capacity Reservation resource group.</summary>
+    [JsonPropertyName("capacityReservationTarget")]
+    public IList<V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderInitialLifecycleHook
 {
     /// <summary></summary>
@@ -971,6 +997,10 @@ public partial class V1beta2AutoscalingGroupSpecForProvider
     [JsonPropertyName("capacityRebalance")]
     public bool? CapacityRebalance { get; set; }
 
+    /// <summary>Demand Capacity Reservations. See Capacity Reservation Specification below for more details.</summary>
+    [JsonPropertyName("capacityReservationSpecification")]
+    public IList<V1beta2AutoscalingGroupSpecForProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
+
     /// <summary>Reserved.</summary>
     [JsonPropertyName("context")]
     public string? Context { get; set; }
@@ -1083,7 +1113,7 @@ public partial class V1beta2AutoscalingGroupSpecForProvider
     [JsonPropertyName("protectFromScaleIn")]
     public bool? ProtectFromScaleIn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1147,6 +1177,32 @@ public partial class V1beta2AutoscalingGroupSpecInitProviderAvailabilityZoneDist
     /// <summary>The strategy to use for distributing capacity across the Availability Zones. Valid values are balanced-only and balanced-best-effort. Default is balanced-best-effort.</summary>
     [JsonPropertyName("capacityDistributionStrategy")]
     public string? CapacityDistributionStrategy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget
+{
+    /// <summary>List of On-Demand Capacity Reservation Ids. Conflicts with capacity_reservation_resource_group_arns.</summary>
+    [JsonPropertyName("capacityReservationIds")]
+    public IList<string>? CapacityReservationIds { get; set; }
+
+    /// <summary>List of On-Demand Capacity Reservation Resource Group Arns. Conflicts with capacity_reservation_ids.</summary>
+    [JsonPropertyName("capacityReservationResourceGroupArns")]
+    public IList<string>? CapacityReservationResourceGroupArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecification
+{
+    /// <summary>Capacity Reservation preference helps you use Capacity Reservations efficiently by prioritizing reserved capacity in a Capacity Reservation before using On-Demand capacity. Valid values are default, capacity-reservations-only, capacity-reservations-first and none. Default is default.</summary>
+    [JsonPropertyName("capacityReservationPreference")]
+    public string? CapacityReservationPreference { get; set; }
+
+    /// <summary>Describes a target Capacity Reservation or Capacity Reservation resource group.</summary>
+    [JsonPropertyName("capacityReservationTarget")]
+    public IList<V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
 /// <summary></summary>
@@ -2103,6 +2159,10 @@ public partial class V1beta2AutoscalingGroupSpecInitProvider
     [JsonPropertyName("capacityRebalance")]
     public bool? CapacityRebalance { get; set; }
 
+    /// <summary>Demand Capacity Reservations. See Capacity Reservation Specification below for more details.</summary>
+    [JsonPropertyName("capacityReservationSpecification")]
+    public IList<V1beta2AutoscalingGroupSpecInitProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
+
     /// <summary>Reserved.</summary>
     [JsonPropertyName("context")]
     public string? Context { get; set; }
@@ -2407,6 +2467,32 @@ public partial class V1beta2AutoscalingGroupStatusAtProviderAvailabilityZoneDist
     /// <summary>The strategy to use for distributing capacity across the Availability Zones. Valid values are balanced-only and balanced-best-effort. Default is balanced-best-effort.</summary>
     [JsonPropertyName("capacityDistributionStrategy")]
     public string? CapacityDistributionStrategy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget
+{
+    /// <summary>List of On-Demand Capacity Reservation Ids. Conflicts with capacity_reservation_resource_group_arns.</summary>
+    [JsonPropertyName("capacityReservationIds")]
+    public IList<string>? CapacityReservationIds { get; set; }
+
+    /// <summary>List of On-Demand Capacity Reservation Resource Group Arns. Conflicts with capacity_reservation_ids.</summary>
+    [JsonPropertyName("capacityReservationResourceGroupArns")]
+    public IList<string>? CapacityReservationResourceGroupArns { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecification
+{
+    /// <summary>Capacity Reservation preference helps you use Capacity Reservations efficiently by prioritizing reserved capacity in a Capacity Reservation before using On-Demand capacity. Valid values are default, capacity-reservations-only, capacity-reservations-first and none. Default is default.</summary>
+    [JsonPropertyName("capacityReservationPreference")]
+    public string? CapacityReservationPreference { get; set; }
+
+    /// <summary>Describes a target Capacity Reservation or Capacity Reservation resource group.</summary>
+    [JsonPropertyName("capacityReservationTarget")]
+    public IList<V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecificationCapacityReservationTarget>? CapacityReservationTarget { get; set; }
 }
 
 /// <summary></summary>
@@ -2951,6 +3037,10 @@ public partial class V1beta2AutoscalingGroupStatusAtProvider
     [JsonPropertyName("capacityRebalance")]
     public bool? CapacityRebalance { get; set; }
 
+    /// <summary>Demand Capacity Reservations. See Capacity Reservation Specification below for more details.</summary>
+    [JsonPropertyName("capacityReservationSpecification")]
+    public IList<V1beta2AutoscalingGroupStatusAtProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
+
     /// <summary>Reserved.</summary>
     [JsonPropertyName("context")]
     public string? Context { get; set; }
@@ -3058,6 +3148,10 @@ public partial class V1beta2AutoscalingGroupStatusAtProvider
     /// <summary>Whether newly launched instances are automatically protected from termination by Amazon EC2 Auto Scaling when scaling in. For more information about preventing instances from terminating on scale in, see Using instance scale-in protection in the Amazon EC2 Auto Scaling User Guide.</summary>
     [JsonPropertyName("protectFromScaleIn")]
     public bool? ProtectFromScaleIn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the service-linked role that the ASG will use to call other AWS services</summary>
     [JsonPropertyName("serviceLinkedRoleArn")]

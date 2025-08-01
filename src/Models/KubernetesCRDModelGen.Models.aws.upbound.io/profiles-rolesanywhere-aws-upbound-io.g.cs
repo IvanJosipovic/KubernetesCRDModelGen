@@ -84,10 +84,6 @@ public partial class V1beta1ProfileSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Specifies whether instance properties are required in CreateSession requests with this profile.</summary>
     [JsonPropertyName("requireInstanceProperties")]
     public bool? RequireInstanceProperties { get; set; }

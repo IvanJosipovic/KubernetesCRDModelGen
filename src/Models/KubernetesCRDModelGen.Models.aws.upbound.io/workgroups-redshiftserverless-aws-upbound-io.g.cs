@@ -21,6 +21,19 @@ public partial class V1beta1WorkgroupSpecForProviderConfigParameter
     public string? ParameterValue { get; set; }
 }
 
+/// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkgroupSpecForProviderPricePerformanceTarget
+{
+    /// <summary>Whether to enable price-performance scaling.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The price-performance scaling level. Valid values are 1 (LOW_COST), 25 (ECONOMICAL), 50 (BALANCED), 75 (RESOURCEFUL), and 100 (HIGH_PERFORMANCE).</summary>
+    [JsonPropertyName("level")]
+    public double? Level { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderSecurityGroupIdRefsPolicy
@@ -161,11 +174,15 @@ public partial class V1beta1WorkgroupSpecForProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+    [JsonPropertyName("pricePerformanceTarget")]
+    public V1beta1WorkgroupSpecForProviderPricePerformanceTarget? PricePerformanceTarget { get; set; }
+
     /// <summary>A value that specifies whether the workgroup can be accessed from a public network.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -196,6 +213,10 @@ public partial class V1beta1WorkgroupSpecForProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The name of the track for the workgroup. If it is current, you get the most up-to-date certified release version with the latest features, security updates, and performance enhancements. If it is trailing, you will be on the previous certified release. For more information, see the following AWS document.</summary>
+    [JsonPropertyName("trackName")]
+    public string? TrackName { get; set; }
 }
 
 /// <summary></summary>
@@ -209,6 +230,19 @@ public partial class V1beta1WorkgroupSpecInitProviderConfigParameter
     /// <summary>The value of the parameter to set.</summary>
     [JsonPropertyName("parameterValue")]
     public string? ParameterValue { get; set; }
+}
+
+/// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkgroupSpecInitProviderPricePerformanceTarget
+{
+    /// <summary>Whether to enable price-performance scaling.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The price-performance scaling level. Valid values are 1 (LOW_COST), 25 (ECONOMICAL), 50 (BALANCED), 75 (RESOURCEFUL), and 100 (HIGH_PERFORMANCE).</summary>
+    [JsonPropertyName("level")]
+    public double? Level { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -351,6 +385,10 @@ public partial class V1beta1WorkgroupSpecInitProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+    [JsonPropertyName("pricePerformanceTarget")]
+    public V1beta1WorkgroupSpecInitProviderPricePerformanceTarget? PricePerformanceTarget { get; set; }
+
     /// <summary>A value that specifies whether the workgroup can be accessed from a public network.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
@@ -382,6 +420,10 @@ public partial class V1beta1WorkgroupSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The name of the track for the workgroup. If it is current, you get the most up-to-date certified release version with the latest features, security updates, and performance enhancements. If it is trailing, you will be on the previous certified release. For more information, see the following AWS document.</summary>
+    [JsonPropertyName("trackName")]
+    public string? TrackName { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -584,6 +626,19 @@ public partial class V1beta1WorkgroupStatusAtProviderEndpoint
     public IList<V1beta1WorkgroupStatusAtProviderEndpointVpcEndpoint>? VpcEndpoint { get; set; }
 }
 
+/// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WorkgroupStatusAtProviderPricePerformanceTarget
+{
+    /// <summary>Whether to enable price-performance scaling.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The price-performance scaling level. Valid values are 1 (LOW_COST), 25 (ECONOMICAL), 50 (BALANCED), 75 (RESOURCEFUL), and 100 (HIGH_PERFORMANCE).</summary>
+    [JsonPropertyName("level")]
+    public double? Level { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupStatusAtProvider
@@ -624,9 +679,17 @@ public partial class V1beta1WorkgroupStatusAtProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
+    /// <summary>Price-performance scaling for the workgroup. See Price Performance Target below.</summary>
+    [JsonPropertyName("pricePerformanceTarget")]
+    public V1beta1WorkgroupStatusAtProviderPricePerformanceTarget? PricePerformanceTarget { get; set; }
+
     /// <summary>A value that specifies whether the workgroup can be accessed from a public network.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An array of security group IDs to associate with the workgroup.</summary>
     [JsonPropertyName("securityGroupIds")]
@@ -643,6 +706,10 @@ public partial class V1beta1WorkgroupStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>The name of the track for the workgroup. If it is current, you get the most up-to-date certified release version with the latest features, security updates, and performance enhancements. If it is trailing, you will be on the previous certified release. For more information, see the following AWS document.</summary>
+    [JsonPropertyName("trackName")]
+    public string? TrackName { get; set; }
 
     /// <summary>The Redshift Workgroup ID.</summary>
     [JsonPropertyName("workgroupId")]

@@ -216,7 +216,7 @@ spec:
                     type: array
                   region:
                     description: >-
-                      The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -537,7 +537,7 @@ spec:
                                 description: The AWS account ID that owns the Amazon S3 bucket that's associated with this Multi-Region Access Point.
                                 type: string
                               region:
-                                description: The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
+                                description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                                 type: string
                             type: object
                           type: array
@@ -548,6 +548,12 @@ spec:
                     type: string
                   id:
                     description: The AWS account ID and access point name separated by a colon (:).
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'The current status of the Multi-Region Access Point. One of: READY, INCONSISTENT_ACROSS_REGIONS, CREATING, PARTIALLY_CREATED, PARTIALLY_DELETED, DELETING.'
@@ -814,7 +820,7 @@ spec:
                     type: object
                   region:
                     description: >-
-                      The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -1128,7 +1134,7 @@ spec:
                               description: The AWS account ID that owns the Amazon S3 bucket that's associated with this Multi-Region Access Point.
                               type: string
                             region:
-                              description: The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.
+                              description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                               type: string
                           type: object
                         type: array
@@ -1138,6 +1144,12 @@ spec:
                     type: string
                   id:
                     description: The AWS account ID and access point name separated by a colon (:).
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'The current status of the Multi-Region Access Point. One of: READY, INCONSISTENT_ACROSS_REGIONS, CREATING, PARTIALLY_CREATED, PARTIALLY_DELETED, DELETING.'

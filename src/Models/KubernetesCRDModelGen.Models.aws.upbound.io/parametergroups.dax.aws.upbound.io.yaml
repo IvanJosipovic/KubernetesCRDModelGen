@@ -88,7 +88,7 @@ spec:
                     description: A description of the parameter group.
                     type: string
                   parameters:
-                    description: –  The parameters of the parameter group.
+                    description: The parameters of the parameter group.
                     items:
                       properties:
                         name:
@@ -100,7 +100,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -131,7 +134,7 @@ spec:
                     description: A description of the parameter group.
                     type: string
                   parameters:
-                    description: –  The parameters of the parameter group.
+                    description: The parameters of the parameter group.
                     items:
                       properties:
                         name:
@@ -363,7 +366,7 @@ spec:
                     description: The name of the parameter group.
                     type: string
                   parameters:
-                    description: –  The parameters of the parameter group.
+                    description: The parameters of the parameter group.
                     items:
                       properties:
                         name:
@@ -374,6 +377,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

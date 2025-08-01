@@ -391,7 +391,10 @@ spec:
                     description: Bool to control if instance is publicly accessible. Default is false.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   skipFinalSnapshot:
                     description: Determines whether a final DB snapshot is created before the DB instance is deleted.
@@ -1025,6 +1028,12 @@ spec:
                   publiclyAccessible:
                     description: Bool to control if instance is publicly accessible. Default is false.
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   skipFinalSnapshot:
                     description: Determines whether a final DB snapshot is created before the DB instance is deleted.
                     type: boolean
@@ -1047,7 +1056,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   writer:
-                    description: – Boolean indicating if this instance is writable. False indicates this instance is a read replica.
+                    description: Boolean indicating if this instance is writable. False indicates this instance is a read replica.
                     type: boolean
                 type: object
               conditions:

@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   applyImmediately:
-                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..
+                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.
                     type: boolean
                   autoMinorVersionUpgrade:
                     description: >-
@@ -102,11 +102,11 @@ spec:
                     description: Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are single-az or cross-az, default is single-az. If you want to choose cross-az, num_cache_nodes must be greater than 1.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
+                    description: Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.
                     type: string
                   engineVersion:
                     description: >-
-                      –  Version number of the cache engine to be used.
+                      Version number of the cache engine to be used.
 
                       If not set, defaults to the latest version.
 
@@ -148,7 +148,9 @@ spec:
                     type: array
                   maintenanceWindow:
                     description: >-
-                      ddd:hh24:mi (24H Clock UTC).
+                      Specifies the weekly time range for when maintenance
+
+                      on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
 
                       The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.
                     type: string
@@ -156,19 +158,26 @@ spec:
                     description: The IP versions for cache cluster connections. IPv6 is supported with Redis engine 6.2 onword or Memcached version 1.6.6 for all Nitro system instances. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: create the resource.
+                    description: >-
+                      The instance class used.
+
+                      See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS.
+
+                      See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached.
+
+                      For Memcached, changing this value will re-create the resource.
                     type: string
                   notificationTopicArn:
-                    description: east-1:012345678999:my_sns_topic.
+                    description: 'ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.'
                     type: string
                   numCacheNodes:
-                    description: –  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+                    description: The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
                     type: number
                   outpostMode:
                     description: Specify the outpost mode that will apply to the cache cluster creation. Valid values are "single-outpost" and "cross-outpost", however AWS currently only supports "single-outpost" mode.
                     type: string
                   parameterGroupName:
-                    description: –  The name of the parameter group to associate with this cache cluster.
+                    description: The name of the parameter group to associate with this cache cluster.
                     type: string
                   parameterGroupNameRef:
                     description: Reference to a ParameterGroup in elasticache to populate parameterGroupName.
@@ -257,7 +266,7 @@ spec:
                         type: object
                     type: object
                   port:
-                    description: create the resource.
+                    description: The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.
                     type: number
                   preferredAvailabilityZones:
                     description: 'List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of num_cache_nodes. If you want all the nodes in the same Availability Zone, use availability_zone instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.'
@@ -268,7 +277,10 @@ spec:
                     description: The outpost ARN in which the cache cluster will be created.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   replicationGroupId:
                     description: ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
@@ -449,13 +461,13 @@ spec:
                         type: object
                     type: object
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
+                    description: One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   snapshotArns:
-                    description: element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
+                    description: Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
                     items:
                       type: string
                     type: array
@@ -469,7 +481,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource. Cannot be provided with replication_group_id.
+                    description: Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.
                     type: string
                   subnetGroupNameRef:
                     description: Reference to a SubnetGroup in elasticache to populate subnetGroupName.
@@ -564,7 +576,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    description: Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
                     type: boolean
                 required:
                 - region
@@ -592,7 +604,7 @@ spec:
                   autoscaler.
                 properties:
                   applyImmediately:
-                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..
+                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.
                     type: boolean
                   autoMinorVersionUpgrade:
                     description: >-
@@ -609,11 +621,11 @@ spec:
                     description: Whether the nodes in this Memcached node group are created in a single Availability Zone or created across multiple Availability Zones in the cluster's region. Valid values for this parameter are single-az or cross-az, default is single-az. If you want to choose cross-az, num_cache_nodes must be greater than 1.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
+                    description: Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.
                     type: string
                   engineVersion:
                     description: >-
-                      –  Version number of the cache engine to be used.
+                      Version number of the cache engine to be used.
 
                       If not set, defaults to the latest version.
 
@@ -655,7 +667,9 @@ spec:
                     type: array
                   maintenanceWindow:
                     description: >-
-                      ddd:hh24:mi (24H Clock UTC).
+                      Specifies the weekly time range for when maintenance
+
+                      on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
 
                       The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.
                     type: string
@@ -663,19 +677,26 @@ spec:
                     description: The IP versions for cache cluster connections. IPv6 is supported with Redis engine 6.2 onword or Memcached version 1.6.6 for all Nitro system instances. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: create the resource.
+                    description: >-
+                      The instance class used.
+
+                      See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS.
+
+                      See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached.
+
+                      For Memcached, changing this value will re-create the resource.
                     type: string
                   notificationTopicArn:
-                    description: east-1:012345678999:my_sns_topic.
+                    description: 'ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.'
                     type: string
                   numCacheNodes:
-                    description: –  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+                    description: The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
                     type: number
                   outpostMode:
                     description: Specify the outpost mode that will apply to the cache cluster creation. Valid values are "single-outpost" and "cross-outpost", however AWS currently only supports "single-outpost" mode.
                     type: string
                   parameterGroupName:
-                    description: –  The name of the parameter group to associate with this cache cluster.
+                    description: The name of the parameter group to associate with this cache cluster.
                     type: string
                   parameterGroupNameRef:
                     description: Reference to a ParameterGroup in elasticache to populate parameterGroupName.
@@ -764,7 +785,7 @@ spec:
                         type: object
                     type: object
                   port:
-                    description: create the resource.
+                    description: The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.
                     type: number
                   preferredAvailabilityZones:
                     description: 'List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of num_cache_nodes. If you want all the nodes in the same Availability Zone, use availability_zone instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.'
@@ -953,13 +974,13 @@ spec:
                         type: object
                     type: object
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
+                    description: One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   snapshotArns:
-                    description: element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
+                    description: Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
                     items:
                       type: string
                     type: array
@@ -973,7 +994,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource. Cannot be provided with replication_group_id.
+                    description: Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.
                     type: string
                   subnetGroupNameRef:
                     description: Reference to a SubnetGroup in elasticache to populate subnetGroupName.
@@ -1068,7 +1089,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    description: Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
                     type: boolean
                 type: object
               managementPolicies:
@@ -1285,7 +1306,7 @@ spec:
               atProvider:
                 properties:
                   applyImmediately:
-                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..
+                    description: Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.
                     type: boolean
                   arn:
                     description: The ARN of the created ElastiCache Cluster.
@@ -1319,7 +1340,7 @@ spec:
                           description: The ARN of the created ElastiCache Cluster.
                           type: string
                         port:
-                          description: create the resource.
+                          description: The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.
                           type: number
                       type: object
                     type: array
@@ -1330,11 +1351,11 @@ spec:
                     description: (Memcached only) Configuration endpoint to allow host discovery.
                     type: string
                   engine:
-                    description: –  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.
+                    description: Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.
                     type: string
                   engineVersion:
                     description: >-
-                      –  Version number of the cache engine to be used.
+                      Version number of the cache engine to be used.
 
                       If not set, defaults to the latest version.
 
@@ -1381,7 +1402,9 @@ spec:
                     type: array
                   maintenanceWindow:
                     description: >-
-                      ddd:hh24:mi (24H Clock UTC).
+                      Specifies the weekly time range for when maintenance
+
+                      on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
 
                       The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.
                     type: string
@@ -1389,22 +1412,29 @@ spec:
                     description: The IP versions for cache cluster connections. IPv6 is supported with Redis engine 6.2 onword or Memcached version 1.6.6 for all Nitro system instances. Valid values are ipv4, ipv6 or dual_stack.
                     type: string
                   nodeType:
-                    description: create the resource.
+                    description: >-
+                      The instance class used.
+
+                      See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS.
+
+                      See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached.
+
+                      For Memcached, changing this value will re-create the resource.
                     type: string
                   notificationTopicArn:
-                    description: east-1:012345678999:my_sns_topic.
+                    description: 'ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.'
                     type: string
                   numCacheNodes:
-                    description: –  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
+                    description: The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.
                     type: number
                   outpostMode:
                     description: Specify the outpost mode that will apply to the cache cluster creation. Valid values are "single-outpost" and "cross-outpost", however AWS currently only supports "single-outpost" mode.
                     type: string
                   parameterGroupName:
-                    description: –  The name of the parameter group to associate with this cache cluster.
+                    description: The name of the parameter group to associate with this cache cluster.
                     type: string
                   port:
-                    description: create the resource.
+                    description: The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.
                     type: number
                   preferredAvailabilityZones:
                     description: 'List of the Availability Zones in which cache nodes are created. If you are creating your cluster in an Amazon VPC you can only locate nodes in Availability Zones that are associated with the subnets in the selected subnet group. The number of Availability Zones listed must equal the value of num_cache_nodes. If you want all the nodes in the same Availability Zone, use availability_zone instead, or repeat the Availability Zone multiple times in the list. Default: System chosen Availability Zones. Detecting drift of existing node availability zone is not currently supported. Updating this argument by itself to migrate existing node availability zones is not currently supported and will show a perpetual difference.'
@@ -1414,17 +1444,23 @@ spec:
                   preferredOutpostArn:
                     description: The outpost ARN in which the cache cluster will be created.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   replicationGroupId:
                     description: ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.
                     type: string
                   securityGroupIds:
-                    description: –  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
+                    description: One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   snapshotArns:
-                    description: element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
+                    description: Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.
                     items:
                       type: string
                     type: array
@@ -1438,7 +1474,7 @@ spec:
                     description: 'Daily time range (in UTC) during which ElastiCache will begin taking a daily snapshot of your cache cluster. Example: 05:00-09:00'
                     type: string
                   subnetGroupName:
-                    description: create the resource. Cannot be provided with replication_group_id.
+                    description: Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.
                     type: string
                   tags:
                     additionalProperties:
@@ -1453,7 +1489,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   transitEncryptionEnabled:
-                    description: Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
+                    description: Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.
                     type: boolean
                 type: object
               conditions:

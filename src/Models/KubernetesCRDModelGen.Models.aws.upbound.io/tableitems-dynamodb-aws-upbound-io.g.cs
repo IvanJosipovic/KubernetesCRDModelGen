@@ -80,7 +80,7 @@ public partial class V1beta1TableItemSpecForProvider
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -333,6 +333,10 @@ public partial class V1beta1TableItemStatusAtProvider
     /// <summary>Range key to use for lookups and identification of the item. Required if there is range key defined in the table.</summary>
     [JsonPropertyName("rangeKey")]
     public string? RangeKey { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Name of the table to contain the item.</summary>
     [JsonPropertyName("tableName")]

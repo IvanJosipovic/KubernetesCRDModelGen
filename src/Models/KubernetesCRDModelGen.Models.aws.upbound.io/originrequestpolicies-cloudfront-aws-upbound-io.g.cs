@@ -93,10 +93,6 @@ public partial class V1beta1OriginRequestPolicySpecForProvider
     /// <summary>Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.</summary>
     [JsonPropertyName("queryStringsConfig")]
     public IList<V1beta1OriginRequestPolicySpecForProviderQueryStringsConfig>? QueryStringsConfig { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary></summary>
@@ -388,6 +384,10 @@ public partial class V1beta1OriginRequestPolicyStatusAtProviderQueryStringsConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginRequestPolicyStatusAtProvider
 {
+    /// <summary>The origin request policy ARN.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>Comment to describe the origin request policy.</summary>
     [JsonPropertyName("comment")]
     public string? Comment { get; set; }

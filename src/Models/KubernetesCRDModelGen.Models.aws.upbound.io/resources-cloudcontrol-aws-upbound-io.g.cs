@@ -89,7 +89,7 @@ public partial class V1beta1ResourceSpecForProvider
     [JsonPropertyName("desiredState")]
     public string? DesiredState { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -371,6 +371,10 @@ public partial class V1beta1ResourceStatusAtProvider
     /// <summary>JSON string matching the CloudFormation resource type schema with current configuration. Underlying attributes can be referenced via the jsondecode() function, for example, jsondecode(data.aws_cloudcontrolapi_resource.example.properties)["example"].</summary>
     [JsonPropertyName("properties")]
     public string? Properties { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the IAM Role to assume for operations.</summary>
     [JsonPropertyName("roleArn")]

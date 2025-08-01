@@ -37,7 +37,7 @@ public partial class V1beta1VPCIpamSpecForProvider
     [JsonPropertyName("operatingRegions")]
     public IList<V1beta1VPCIpamSpecForProviderOperatingRegions>? OperatingRegions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -272,6 +272,10 @@ public partial class V1beta1VPCIpamStatusAtProvider
     /// <summary>The ID of the IPAM's public scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.</summary>
     [JsonPropertyName("publicDefaultScopeId")]
     public string? PublicDefaultScopeId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The number of scopes in the IPAM.</summary>
     [JsonPropertyName("scopeCount")]

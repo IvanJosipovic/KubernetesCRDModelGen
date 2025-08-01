@@ -265,7 +265,7 @@ public partial class V1beta1DefaultRouteTableSpecForProvider
     [JsonPropertyName("propagatingVgws")]
     public IList<string>? PropagatingVgws { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -752,6 +752,10 @@ public partial class V1beta1DefaultRouteTableStatusAtProvider
     /// <summary>List of virtual gateways for propagation.</summary>
     [JsonPropertyName("propagatingVgws")]
     public IList<string>? PropagatingVgws { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block of routes. Detailed below. This argument is processed in attribute-as-blocks mode. This means that omitting this argument is interpreted as ignoring any existing routes. To remove all managed routes an empty list should be specified. See the example above.</summary>
     [JsonPropertyName("route")]

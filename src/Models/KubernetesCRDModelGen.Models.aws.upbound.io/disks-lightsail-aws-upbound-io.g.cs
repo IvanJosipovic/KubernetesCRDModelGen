@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecForProvider
 {
-    /// <summary>The Availability Zone in which to create your disk.</summary>
+    /// <summary>Availability Zone in which to create the disk.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The size of the disk in GB.</summary>
+    /// <summary>Size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 
@@ -33,11 +33,11 @@ public partial class V1beta1DiskSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskSpecInitProvider
 {
-    /// <summary>The Availability Zone in which to create your disk.</summary>
+    /// <summary>Availability Zone in which to create the disk.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The size of the disk in GB.</summary>
+    /// <summary>Size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 
@@ -182,27 +182,31 @@ public partial class V1beta1DiskSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail disk.</summary>
+    /// <summary>ARN of the disk.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The Availability Zone in which to create your disk.</summary>
+    /// <summary>Availability Zone in which to create the disk.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The timestamp when the disk was created.</summary>
+    /// <summary>Date and time when the disk was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>The name of the disk (matches name).</summary>
+    /// <summary>Name of the disk (matches name).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The size of the disk in GB.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Size of the disk in GB.</summary>
     [JsonPropertyName("sizeInGb")]
     public double? SizeInGb { get; set; }
 
-    /// <summary>The support code for the disk. Include this code in your email to support when you have questions about a disk in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
+    /// <summary>Support code for the disk. Include this code in your email to support when you have questions about a disk in Lightsail.</summary>
     [JsonPropertyName("supportCode")]
     public string? SupportCode { get; set; }
 
@@ -210,7 +214,7 @@ public partial class V1beta1DiskStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -261,7 +265,7 @@ public partial class V1beta1DiskStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Disk is the Schema for the Disks API. Provides a Lightsail Disk resource</summary>
+/// <summary>Disk is the Schema for the Disks API. Manages a Lightsail block storage disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Disk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DiskSpec>, IStatus<V1beta1DiskStatus>
@@ -291,7 +295,7 @@ public partial class V1beta1Disk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     public V1beta1DiskStatus? Status { get; set; }
 }
 
-/// <summary>Disk is the Schema for the Disks API. Provides a Lightsail Disk resource</summary>
+/// <summary>Disk is the Schema for the Disks API. Manages a Lightsail block storage disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Disk>

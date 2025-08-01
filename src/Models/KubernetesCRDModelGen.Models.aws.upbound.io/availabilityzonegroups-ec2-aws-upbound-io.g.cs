@@ -16,7 +16,7 @@ public partial class V1beta1AvailabilityZoneGroupSpecForProvider
     [JsonPropertyName("optInStatus")]
     public string? OptInStatus { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -173,6 +173,10 @@ public partial class V1beta1AvailabilityZoneGroupStatusAtProvider
     /// <summary>Indicates whether to enable or disable Availability Zone Group. Valid values: opted-in or not-opted-in.</summary>
     [JsonPropertyName("optInStatus")]
     public string? OptInStatus { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

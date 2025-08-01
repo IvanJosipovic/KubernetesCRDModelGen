@@ -156,7 +156,7 @@ public partial class V1beta1TableReplicaSpecForProvider
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -485,6 +485,10 @@ public partial class V1beta1TableReplicaStatusAtProvider
     /// <summary>Whether to enable Point In Time Recovery for the table replica. Default is false.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Storage class of the table replica. Valid values are STANDARD and STANDARD_INFREQUENT_ACCESS. If not used, the table replica will use the same class as the global table.</summary>
     [JsonPropertyName("tableClassOverride")]

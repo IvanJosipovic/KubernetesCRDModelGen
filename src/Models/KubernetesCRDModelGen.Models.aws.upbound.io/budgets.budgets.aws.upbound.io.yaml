@@ -211,9 +211,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -229,8 +226,6 @@ spec:
                   timeUnit:
                     description: 'The length of time until a budget resets the actual and forecasted spend. Valid values: MONTHLY, QUARTERLY, ANNUALLY, and DAILY.'
                     type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -1030,9 +1025,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -1048,8 +1040,6 @@ spec:
                   timeUnit:
                     description: 'The length of time until a budget resets the actual and forecasted spend. Valid values: MONTHLY, QUARTERLY, ANNUALLY, and DAILY.'
                     type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-

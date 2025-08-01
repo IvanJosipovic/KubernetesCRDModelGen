@@ -16,7 +16,7 @@ public partial class V1beta1RegistryPolicySpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -173,6 +173,10 @@ public partial class V1beta1RegistryPolicyStatusAtProvider
     /// <summary>The policy document. This is a JSON formatted string</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The registry ID where the registry was created.</summary>
     [JsonPropertyName("registryId")]

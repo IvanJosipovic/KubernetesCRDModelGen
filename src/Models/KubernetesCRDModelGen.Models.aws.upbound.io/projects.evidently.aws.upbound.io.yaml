@@ -118,7 +118,10 @@ spec:
                     description: A name for the project.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -466,6 +469,12 @@ spec:
                     type: number
                   name:
                     description: A name for the project.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: The current state of the project. Valid values are AVAILABLE and UPDATING.
@@ -644,7 +653,10 @@ spec:
                     description: A name for the project.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -980,6 +992,12 @@ spec:
                     type: number
                   name:
                     description: A name for the project.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: The current state of the project. Valid values are AVAILABLE and UPDATING.

@@ -377,7 +377,7 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicRep
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplicationTopicNameConfiguration
 {
@@ -406,7 +406,7 @@ public partial class V1beta1ReplicatorSpecForProviderReplicationInfoListTopicRep
     [JsonPropertyName("startingPosition")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplicationStartingPosition? StartingPosition { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
     [JsonPropertyName("topicNameConfiguration")]
     public V1beta1ReplicatorSpecForProviderReplicationInfoListTopicReplicationTopicNameConfiguration? TopicNameConfiguration { get; set; }
 
@@ -528,7 +528,7 @@ public partial class V1beta1ReplicatorSpecForProvider
     [JsonPropertyName("kafkaCluster")]
     public IList<V1beta1ReplicatorSpecForProviderKafkaCluster>? KafkaCluster { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -552,7 +552,7 @@ public partial class V1beta1ReplicatorSpecForProvider
     [JsonPropertyName("serviceExecutionRoleArnSelector")]
     public V1beta1ReplicatorSpecForProviderServiceExecutionRoleArnSelector? ServiceExecutionRoleArnSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -926,7 +926,7 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicRe
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplicationTopicNameConfiguration
 {
@@ -955,7 +955,7 @@ public partial class V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicRe
     [JsonPropertyName("startingPosition")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplicationStartingPosition? StartingPosition { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
     [JsonPropertyName("topicNameConfiguration")]
     public V1beta1ReplicatorSpecInitProviderReplicationInfoListTopicReplicationTopicNameConfiguration? TopicNameConfiguration { get; set; }
 
@@ -1097,7 +1097,7 @@ public partial class V1beta1ReplicatorSpecInitProvider
     [JsonPropertyName("serviceExecutionRoleArnSelector")]
     public V1beta1ReplicatorSpecInitProviderServiceExecutionRoleArnSelector? ServiceExecutionRoleArnSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -1299,7 +1299,7 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicRe
     public string? Type { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplicationTopicNameConfiguration
 {
@@ -1328,7 +1328,7 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicRe
     [JsonPropertyName("startingPosition")]
     public V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplicationStartingPosition? StartingPosition { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Configuration for specifying replicated topic names should be the same as their corresponding upstream topics or prefixed with source cluster alias.</summary>
     [JsonPropertyName("topicNameConfiguration")]
     public V1beta1ReplicatorStatusAtProviderReplicationInfoListTopicReplicationTopicNameConfiguration? TopicNameConfiguration { get; set; }
 
@@ -1378,7 +1378,7 @@ public partial class V1beta1ReplicatorStatusAtProviderReplicationInfoList
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicatorStatusAtProvider
 {
-    /// <summary>ARN of the Replicator. Do not begin the description with "An", "The", "Defines", "Indicates", or "Specifies," as these are verbose. In other words, "Indicates the amount of storage," can be rewritten as "Amount of storage," without losing any information.</summary>
+    /// <summary>ARN of the Replicator.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -1398,6 +1398,10 @@ public partial class V1beta1ReplicatorStatusAtProvider
     [JsonPropertyName("kafkaCluster")]
     public IList<V1beta1ReplicatorStatusAtProviderKafkaCluster>? KafkaCluster { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>A list of replication configurations, where each configuration targets a given source cluster to target cluster replication flow.</summary>
     [JsonPropertyName("replicationInfoList")]
     public V1beta1ReplicatorStatusAtProviderReplicationInfoList? ReplicationInfoList { get; set; }
@@ -1410,11 +1414,11 @@ public partial class V1beta1ReplicatorStatusAtProvider
     [JsonPropertyName("serviceExecutionRoleArn")]
     public string? ServiceExecutionRoleArn { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary></summary>
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }

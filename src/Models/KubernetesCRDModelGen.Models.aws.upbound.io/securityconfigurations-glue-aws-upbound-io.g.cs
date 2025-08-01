@@ -260,11 +260,11 @@ public partial class V1beta1SecurityConfigurationSpecForProviderEncryptionConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecForProvider
 {
-    /// <summary>–  Configuration block containing encryption configuration. Detailed below.</summary>
+    /// <summary>Configuration block containing encryption configuration. Detailed below.</summary>
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1SecurityConfigurationSpecForProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -521,7 +521,7 @@ public partial class V1beta1SecurityConfigurationSpecInitProviderEncryptionConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationSpecInitProvider
 {
-    /// <summary>–  Configuration block containing encryption configuration. Detailed below.</summary>
+    /// <summary>Configuration block containing encryption configuration. Detailed below.</summary>
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1SecurityConfigurationSpecInitProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 }
@@ -718,13 +718,17 @@ public partial class V1beta1SecurityConfigurationStatusAtProviderEncryptionConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigurationStatusAtProvider
 {
-    /// <summary>–  Configuration block containing encryption configuration. Detailed below.</summary>
+    /// <summary>Configuration block containing encryption configuration. Detailed below.</summary>
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1SecurityConfigurationStatusAtProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
     /// <summary>Glue security configuration name</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

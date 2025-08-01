@@ -80,7 +80,7 @@ public partial class V1beta1InstanceStateSpecForProvider
     [JsonPropertyName("identifierSelector")]
     public V1beta1InstanceStateSpecForProviderIdentifierSelector? IdentifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1InstanceStateStatusAtProvider
     /// <summary>DB Instance Identifier</summary>
     [JsonPropertyName("identifier")]
     public string? Identifier { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configured state of the DB Instance. Valid values are available and stopped.</summary>
     [JsonPropertyName("state")]

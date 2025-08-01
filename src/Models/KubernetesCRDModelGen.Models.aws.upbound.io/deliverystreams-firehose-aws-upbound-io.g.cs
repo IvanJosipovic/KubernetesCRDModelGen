@@ -85,7 +85,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -102,7 +102,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurat
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1060,7 +1060,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderExtendedS3Configuration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -1077,7 +1077,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderExtendedS3Configuration
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1332,7 +1332,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -1349,7 +1349,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurati
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -2255,6 +2255,10 @@ public partial class V1beta1DeliveryStreamSpecForProviderMskSourceConfiguration
     [JsonPropertyName("mskClusterArn")]
     public string? MskClusterArn { get; set; }
 
+    /// <summary>The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).</summary>
+    [JsonPropertyName("readFromTimestamp")]
+    public string? ReadFromTimestamp { get; set; }
+
     /// <summary>The topic name within the Amazon MSK cluster.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
@@ -2346,7 +2350,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -2363,7 +2367,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchConfiguration
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -2990,7 +2994,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchserverlessCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -3007,7 +3011,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderOpensearchserverlessCon
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -3387,7 +3391,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationPa
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -3404,7 +3408,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationPr
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -3915,7 +3919,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration
     [JsonPropertyName("roleArnSelector")]
     public V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationRoleArnSelector? RoleArnSelector { get; set; }
 
-    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.</summary>
+    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.</summary>
     [JsonPropertyName("s3BackupConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationS3BackupConfiguration>? S3BackupConfiguration { get; set; }
 
@@ -3931,7 +3935,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration
     [JsonPropertyName("secretsManagerConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
-    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
+    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -4008,7 +4012,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -4025,7 +4029,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationP
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -4416,7 +4420,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSnowflakeConfiguration
     [JsonPropertyName("table")]
     public string? Table { get; set; }
 
-    /// <summary>The user for authentication.</summary>
+    /// <summary>The user for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
@@ -4459,7 +4463,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationHecT
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -4476,7 +4480,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfigurationProc
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecForProviderSplunkConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -4737,7 +4741,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfiguration
     [JsonPropertyName("retryDuration")]
     public double? RetryDuration { get; set; }
 
-    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.</summary>
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
     [JsonPropertyName("s3BackupMode")]
     public string? S3BackupMode { get; set; }
 
@@ -4754,7 +4758,7 @@ public partial class V1beta1DeliveryStreamSpecForProviderSplunkConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProvider
 {
-    /// <summary>–  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
+    /// <summary>This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -4802,7 +4806,7 @@ public partial class V1beta1DeliveryStreamSpecForProvider
     [JsonPropertyName("redshiftConfiguration")]
     public IList<V1beta1DeliveryStreamSpecForProviderRedshiftConfiguration>? RedshiftConfiguration { get; set; }
 
-    /// <summary>If you don't specify an AWS Region, the default is the current region. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -4904,7 +4908,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigura
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -4921,7 +4925,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigura
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -5875,7 +5879,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderExtendedS3Configuratio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -5892,7 +5896,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderExtendedS3Configuratio
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -6147,7 +6151,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -6164,7 +6168,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurat
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -7070,6 +7074,10 @@ public partial class V1beta1DeliveryStreamSpecInitProviderMskSourceConfiguration
     [JsonPropertyName("mskClusterArn")]
     public string? MskClusterArn { get; set; }
 
+    /// <summary>The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).</summary>
+    [JsonPropertyName("readFromTimestamp")]
+    public string? ReadFromTimestamp { get; set; }
+
     /// <summary>The topic name within the Amazon MSK cluster.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
@@ -7161,7 +7169,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchConfiguratio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -7178,7 +7186,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchConfiguratio
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -7805,7 +7813,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -7822,7 +7830,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessCo
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -8202,7 +8210,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -8219,7 +8227,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationP
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -8730,7 +8738,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfiguration
     [JsonPropertyName("roleArnSelector")]
     public V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationRoleArnSelector? RoleArnSelector { get; set; }
 
-    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.</summary>
+    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.</summary>
     [JsonPropertyName("s3BackupConfiguration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationS3BackupConfiguration>? S3BackupConfiguration { get; set; }
 
@@ -8746,7 +8754,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderRedshiftConfiguration
     [JsonPropertyName("secretsManagerConfiguration")]
     public IList<V1beta1DeliveryStreamSpecInitProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
-    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
+    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -8823,7 +8831,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -8840,7 +8848,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -9231,7 +9239,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSnowflakeConfiguration
     [JsonPropertyName("table")]
     public string? Table { get; set; }
 
-    /// <summary>The user for authentication.</summary>
+    /// <summary>The user for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
@@ -9274,7 +9282,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationHec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -9291,7 +9299,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationPro
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamSpecInitProviderSplunkConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -9552,7 +9560,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfiguration
     [JsonPropertyName("retryDuration")]
     public double? RetryDuration { get; set; }
 
-    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.</summary>
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
     [JsonPropertyName("s3BackupMode")]
     public string? S3BackupMode { get; set; }
 
@@ -9569,7 +9577,7 @@ public partial class V1beta1DeliveryStreamSpecInitProviderSplunkConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecInitProvider
 {
-    /// <summary>–  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
+    /// <summary>This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -9791,7 +9799,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigura
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -9808,7 +9816,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigura
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderElasticsearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -10194,7 +10202,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderExtendedS3Configuratio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -10211,7 +10219,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderExtendedS3Configuratio
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderExtendedS3ConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -10377,7 +10385,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -10394,7 +10402,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurat
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderHttpEndpointConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -10784,6 +10792,10 @@ public partial class V1beta1DeliveryStreamStatusAtProviderMskSourceConfiguration
     [JsonPropertyName("mskClusterArn")]
     public string? MskClusterArn { get; set; }
 
+    /// <summary>The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).</summary>
+    [JsonPropertyName("readFromTimestamp")]
+    public string? ReadFromTimestamp { get; set; }
+
     /// <summary>The topic name within the Amazon MSK cluster.</summary>
     [JsonPropertyName("topicName")]
     public string? TopicName { get; set; }
@@ -10819,7 +10831,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchConfiguratio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -10836,7 +10848,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchConfiguratio
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderOpensearchConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -11019,7 +11031,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -11036,7 +11048,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessCo
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderOpensearchserverlessConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -11203,7 +11215,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -11220,7 +11232,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationP
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -11407,7 +11419,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfiguration
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
-    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.</summary>
+    /// <summary>The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.</summary>
     [JsonPropertyName("s3BackupConfiguration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationS3BackupConfiguration>? S3BackupConfiguration { get; set; }
 
@@ -11423,7 +11435,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderRedshiftConfiguration
     [JsonPropertyName("secretsManagerConfiguration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfigurationSecretsManagerConfiguration>? SecretsManagerConfiguration { get; set; }
 
-    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.</summary>
+    /// <summary>The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -11466,7 +11478,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -11483,7 +11495,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderSnowflakeConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -11674,7 +11686,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSnowflakeConfiguration
     [JsonPropertyName("table")]
     public string? Table { get; set; }
 
-    /// <summary>The user for authentication.</summary>
+    /// <summary>The user for authentication. This value is required if secrets_manager_configuration is not provided.</summary>
     [JsonPropertyName("user")]
     public string? User { get; set; }
 }
@@ -11700,7 +11712,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationClo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationProcessingConfigurationProcessorsParameters
 {
-    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("parameterName")]
     public string? ParameterName { get; set; }
 
@@ -11717,7 +11729,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationPro
     [JsonPropertyName("parameters")]
     public IList<V1beta1DeliveryStreamStatusAtProviderSplunkConfigurationProcessingConfigurationProcessorsParameters>? Parameters { get; set; }
 
-    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.</summary>
+    /// <summary>The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -11846,7 +11858,7 @@ public partial class V1beta1DeliveryStreamStatusAtProviderSplunkConfiguration
     [JsonPropertyName("retryDuration")]
     public double? RetryDuration { get; set; }
 
-    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.</summary>
+    /// <summary>Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly. secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.</summary>
     [JsonPropertyName("s3BackupMode")]
     public string? S3BackupMode { get; set; }
 
@@ -11867,7 +11879,7 @@ public partial class V1beta1DeliveryStreamStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
+    /// <summary>This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -11918,6 +11930,10 @@ public partial class V1beta1DeliveryStreamStatusAtProvider
     /// <summary>Configuration options when destination is redshift. Requires the user to also specify an s3_configuration block. See redshift_configuration block below for details.</summary>
     [JsonPropertyName("redshiftConfiguration")]
     public IList<V1beta1DeliveryStreamStatusAtProviderRedshiftConfiguration>? RedshiftConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Encrypt at rest options. See server_side_encryption block below for details.</summary>
     [JsonPropertyName("serverSideEncryption")]

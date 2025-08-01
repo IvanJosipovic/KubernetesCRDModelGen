@@ -174,7 +174,7 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationSpecForProvid
     [JsonPropertyName("expectedBucketOwner")]
     public string? ExpectedBucketOwner { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -527,6 +527,10 @@ public partial class V1beta1BucketServerSideEncryptionConfigurationStatusAtProvi
     /// <summary>The bucket or bucket and expected_bucket_owner separated by a comma (,) if the latter is provided.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Set of server-side encryption configuration rules. See below. Currently, only a single rule is supported.</summary>
     [JsonPropertyName("rule")]

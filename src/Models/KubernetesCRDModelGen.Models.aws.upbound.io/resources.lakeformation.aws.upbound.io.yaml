@@ -85,16 +85,19 @@ spec:
               forProvider:
                 properties:
                   arn:
-                    description: –  Amazon Resource Name (ARN) of the resource.
+                    description: Amazon Resource Name (ARN) of the resource.
                     type: string
                   hybridAccessEnabled:
                     description: Flag to enable AWS LakeFormation hybrid access permission mode.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
-                    description: –  Role that has read/write access to the resource.
+                    description: Role that has read/write access to the resource.
                     type: string
                   roleArnRef:
                     description: Reference to a Role in iam to populate roleArn.
@@ -186,6 +189,7 @@ spec:
                     description: Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data Catalog.
                     type: boolean
                   withFederation:
+                    description: Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.
                     type: boolean
                 required:
                 - region
@@ -213,13 +217,13 @@ spec:
                   autoscaler.
                 properties:
                   arn:
-                    description: –  Amazon Resource Name (ARN) of the resource.
+                    description: Amazon Resource Name (ARN) of the resource.
                     type: string
                   hybridAccessEnabled:
                     description: Flag to enable AWS LakeFormation hybrid access permission mode.
                     type: boolean
                   roleArn:
-                    description: –  Role that has read/write access to the resource.
+                    description: Role that has read/write access to the resource.
                     type: string
                   roleArnRef:
                     description: Reference to a Role in iam to populate roleArn.
@@ -311,6 +315,7 @@ spec:
                     description: Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data Catalog.
                     type: boolean
                   withFederation:
+                    description: Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.
                     type: boolean
                 type: object
               managementPolicies:
@@ -530,7 +535,7 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: –  Amazon Resource Name (ARN) of the resource.
+                    description: Amazon Resource Name (ARN) of the resource.
                     type: string
                   hybridAccessEnabled:
                     description: Flag to enable AWS LakeFormation hybrid access permission mode.
@@ -540,13 +545,20 @@ spec:
                   lastModified:
                     description: Date and time the resource was last modified in RFC 3339 format.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   roleArn:
-                    description: –  Role that has read/write access to the resource.
+                    description: Role that has read/write access to the resource.
                     type: string
                   useServiceLinkedRole:
                     description: Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data Catalog.
                     type: boolean
                   withFederation:
+                    description: Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.
                     type: boolean
                 type: object
               conditions:

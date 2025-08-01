@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderDestinationOptions
 {
-    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    /// <summary>File format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
     [JsonPropertyName("fileFormat")]
     public string? FileFormat { get; set; }
 
@@ -261,11 +261,11 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("destinationOptions")]
     public IList<V1beta1FlowLogSpecForProviderDestinationOptions>? DestinationOptions { get; set; }
 
-    /// <summary>Elastic Network Interface ID to attach to</summary>
+    /// <summary>Elastic Network Interface ID to attach to.</summary>
     [JsonPropertyName("eniId")]
     public string? EniId { get; set; }
 
-    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    /// <summary>ARN of the IAM role that's used to post flow logs to a CloudWatch Logs log group.</summary>
     [JsonPropertyName("iamRoleArn")]
     public string? IamRoleArn { get; set; }
 
@@ -277,7 +277,7 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1FlowLogSpecForProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    /// <summary>ARN of the logging destination.</summary>
     [JsonPropertyName("logDestination")]
     public string? LogDestination { get; set; }
 
@@ -289,7 +289,7 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("logDestinationSelector")]
     public V1beta1FlowLogSpecForProviderLogDestinationSelector? LogDestinationSelector { get; set; }
 
-    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    /// <summary>Logging destination type. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
@@ -297,19 +297,15 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 
-    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
-    [JsonPropertyName("logGroupName")]
-    public string? LogGroupName { get; set; }
-
     /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
     [JsonPropertyName("maxAggregationInterval")]
     public double? MaxAggregationInterval { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Subnet ID to attach to</summary>
+    /// <summary>Subnet ID to attach to.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -329,15 +325,15 @@ public partial class V1beta1FlowLogSpecForProvider
     [JsonPropertyName("trafficType")]
     public string? TrafficType { get; set; }
 
-    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    /// <summary>Transit Gateway Attachment ID to attach to.</summary>
     [JsonPropertyName("transitGatewayAttachmentId")]
     public string? TransitGatewayAttachmentId { get; set; }
 
-    /// <summary>Transit Gateway ID to attach to</summary>
+    /// <summary>Transit Gateway ID to attach to.</summary>
     [JsonPropertyName("transitGatewayId")]
     public string? TransitGatewayId { get; set; }
 
-    /// <summary>VPC ID to attach to</summary>
+    /// <summary>VPC ID to attach to.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 
@@ -354,7 +350,7 @@ public partial class V1beta1FlowLogSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecInitProviderDestinationOptions
 {
-    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    /// <summary>File format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
     [JsonPropertyName("fileFormat")]
     public string? FileFormat { get; set; }
 
@@ -603,11 +599,11 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("destinationOptions")]
     public IList<V1beta1FlowLogSpecInitProviderDestinationOptions>? DestinationOptions { get; set; }
 
-    /// <summary>Elastic Network Interface ID to attach to</summary>
+    /// <summary>Elastic Network Interface ID to attach to.</summary>
     [JsonPropertyName("eniId")]
     public string? EniId { get; set; }
 
-    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    /// <summary>ARN of the IAM role that's used to post flow logs to a CloudWatch Logs log group.</summary>
     [JsonPropertyName("iamRoleArn")]
     public string? IamRoleArn { get; set; }
 
@@ -619,7 +615,7 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1FlowLogSpecInitProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    /// <summary>ARN of the logging destination.</summary>
     [JsonPropertyName("logDestination")]
     public string? LogDestination { get; set; }
 
@@ -631,7 +627,7 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("logDestinationSelector")]
     public V1beta1FlowLogSpecInitProviderLogDestinationSelector? LogDestinationSelector { get; set; }
 
-    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    /// <summary>Logging destination type. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
@@ -639,15 +635,11 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 
-    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
-    [JsonPropertyName("logGroupName")]
-    public string? LogGroupName { get; set; }
-
     /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
     [JsonPropertyName("maxAggregationInterval")]
     public double? MaxAggregationInterval { get; set; }
 
-    /// <summary>Subnet ID to attach to</summary>
+    /// <summary>Subnet ID to attach to.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -667,15 +659,15 @@ public partial class V1beta1FlowLogSpecInitProvider
     [JsonPropertyName("trafficType")]
     public string? TrafficType { get; set; }
 
-    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    /// <summary>Transit Gateway Attachment ID to attach to.</summary>
     [JsonPropertyName("transitGatewayAttachmentId")]
     public string? TransitGatewayAttachmentId { get; set; }
 
-    /// <summary>Transit Gateway ID to attach to</summary>
+    /// <summary>Transit Gateway ID to attach to.</summary>
     [JsonPropertyName("transitGatewayId")]
     public string? TransitGatewayId { get; set; }
 
-    /// <summary>VPC ID to attach to</summary>
+    /// <summary>VPC ID to attach to.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 
@@ -824,7 +816,7 @@ public partial class V1beta1FlowLogSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
 {
-    /// <summary>The format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
+    /// <summary>File format for the flow log. Default value: plain-text. Valid values: plain-text, parquet.</summary>
     [JsonPropertyName("fileFormat")]
     public string? FileFormat { get; set; }
 
@@ -841,7 +833,7 @@ public partial class V1beta1FlowLogStatusAtProviderDestinationOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogStatusAtProvider
 {
-    /// <summary>The ARN of the Flow Log.</summary>
+    /// <summary>ARN of the Flow Log.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -853,23 +845,23 @@ public partial class V1beta1FlowLogStatusAtProvider
     [JsonPropertyName("destinationOptions")]
     public IList<V1beta1FlowLogStatusAtProviderDestinationOptions>? DestinationOptions { get; set; }
 
-    /// <summary>Elastic Network Interface ID to attach to</summary>
+    /// <summary>Elastic Network Interface ID to attach to.</summary>
     [JsonPropertyName("eniId")]
     public string? EniId { get; set; }
 
-    /// <summary>The ARN for the IAM role that's used to post flow logs to a CloudWatch Logs log group</summary>
+    /// <summary>ARN of the IAM role that's used to post flow logs to a CloudWatch Logs log group.</summary>
     [JsonPropertyName("iamRoleArn")]
     public string? IamRoleArn { get; set; }
 
-    /// <summary>The Flow Log ID</summary>
+    /// <summary>Flow Log ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN of the logging destination. Either log_destination or log_group_name must be set.</summary>
+    /// <summary>ARN of the logging destination.</summary>
     [JsonPropertyName("logDestination")]
     public string? LogDestination { get; set; }
 
-    /// <summary>The type of the logging destination. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
+    /// <summary>Logging destination type. Valid values: cloud-watch-logs, s3, kinesis-data-firehose. Default: cloud-watch-logs.</summary>
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
@@ -877,15 +869,15 @@ public partial class V1beta1FlowLogStatusAtProvider
     [JsonPropertyName("logFormat")]
     public string? LogFormat { get; set; }
 
-    /// <summary>Deprecated: Use log_destination instead. The name of the CloudWatch log group. Either log_group_name or log_destination must be set.</summary>
-    [JsonPropertyName("logGroupName")]
-    public string? LogGroupName { get; set; }
-
     /// <summary>The maximum interval of time during which a flow of packets is captured and aggregated into a flow log record. Valid Values: 60 seconds (1 minute) or 600 seconds (10 minutes). Default: 600. When transit_gateway_id or transit_gateway_attachment_id is specified, max_aggregation_interval must be 60 seconds (1 minute).</summary>
     [JsonPropertyName("maxAggregationInterval")]
     public double? MaxAggregationInterval { get; set; }
 
-    /// <summary>Subnet ID to attach to</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Subnet ID to attach to.</summary>
     [JsonPropertyName("subnetId")]
     public string? SubnetId { get; set; }
 
@@ -901,15 +893,15 @@ public partial class V1beta1FlowLogStatusAtProvider
     [JsonPropertyName("trafficType")]
     public string? TrafficType { get; set; }
 
-    /// <summary>Transit Gateway Attachment ID to attach to</summary>
+    /// <summary>Transit Gateway Attachment ID to attach to.</summary>
     [JsonPropertyName("transitGatewayAttachmentId")]
     public string? TransitGatewayAttachmentId { get; set; }
 
-    /// <summary>Transit Gateway ID to attach to</summary>
+    /// <summary>Transit Gateway ID to attach to.</summary>
     [JsonPropertyName("transitGatewayId")]
     public string? TransitGatewayId { get; set; }
 
-    /// <summary>VPC ID to attach to</summary>
+    /// <summary>VPC ID to attach to.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }

@@ -69,6 +69,10 @@ public partial class V1beta1APISpecForProvider
     [JsonPropertyName("failOnWarnings")]
     public bool? FailOnWarnings { get; set; }
 
+    /// <summary>The IP address types that can invoke the API. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your API. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>Name of the API. Must be less than or equal to 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -77,7 +81,7 @@ public partial class V1beta1APISpecForProvider
     [JsonPropertyName("protocolType")]
     public string? ProtocolType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -162,6 +166,10 @@ public partial class V1beta1APISpecInitProvider
     /// <summary>Whether warnings should return an error while API Gateway is creating or updating the resource using an OpenAPI specification. Defaults to false. Applicable for HTTP APIs.</summary>
     [JsonPropertyName("failOnWarnings")]
     public bool? FailOnWarnings { get; set; }
+
+    /// <summary>The IP address types that can invoke the API. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your API. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
 
     /// <summary>Name of the API. Must be less than or equal to 128 characters in length.</summary>
     [JsonPropertyName("name")]
@@ -401,6 +409,10 @@ public partial class V1beta1APIStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>The IP address types that can invoke the API. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your API. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>Name of the API. Must be less than or equal to 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -408,6 +420,10 @@ public partial class V1beta1APIStatusAtProvider
     /// <summary>API protocol. Valid values: HTTP, WEBSOCKET.</summary>
     [JsonPropertyName("protocolType")]
     public string? ProtocolType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Part of quick create. Specifies any route key. Applicable for HTTP APIs.</summary>
     [JsonPropertyName("routeKey")]

@@ -23,6 +23,10 @@ public partial class V1beta1UserSpecForProviderIdentityInfo
     /// <summary>The last name. This is required if you are using Amazon Connect or SAML for identity management. Minimum length of 1. Maximum length of 100.</summary>
     [JsonPropertyName("lastName")]
     public string? LastName { get; set; }
+
+    /// <summary>The secondary email address. If present, email notifications will be sent to this email address instead of the primary one.</summary>
+    [JsonPropertyName("secondaryEmail")]
+    public string? SecondaryEmail { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -271,7 +275,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("phoneConfig")]
     public IList<V1beta1UserSpecForProviderPhoneConfig>? PhoneConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -319,6 +323,10 @@ public partial class V1beta1UserSpecInitProviderIdentityInfo
     /// <summary>The last name. This is required if you are using Amazon Connect or SAML for identity management. Minimum length of 1. Maximum length of 100.</summary>
     [JsonPropertyName("lastName")]
     public string? LastName { get; set; }
+
+    /// <summary>The secondary email address. If present, email notifications will be sent to this email address instead of the primary one.</summary>
+    [JsonPropertyName("secondaryEmail")]
+    public string? SecondaryEmail { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -743,6 +751,10 @@ public partial class V1beta1UserStatusAtProviderIdentityInfo
     /// <summary>The last name. This is required if you are using Amazon Connect or SAML for identity management. Minimum length of 1. Maximum length of 100.</summary>
     [JsonPropertyName("lastName")]
     public string? LastName { get; set; }
+
+    /// <summary>The secondary email address. If present, email notifications will be sent to this email address instead of the primary one.</summary>
+    [JsonPropertyName("secondaryEmail")]
+    public string? SecondaryEmail { get; set; }
 }
 
 /// <summary></summary>
@@ -801,6 +813,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>A block that contains information about the phone settings for the user. Documented below.</summary>
     [JsonPropertyName("phoneConfig")]
     public IList<V1beta1UserStatusAtProviderPhoneConfig>? PhoneConfig { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The identifier of the routing profile for the user.</summary>
     [JsonPropertyName("routingProfileId")]

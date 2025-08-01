@@ -109,7 +109,7 @@ public partial class V1beta1UserDefinedFunctionSpecForProvider
     [JsonPropertyName("ownerType")]
     public string? OwnerType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -332,6 +332,10 @@ public partial class V1beta1UserDefinedFunctionStatusAtProvider
     /// <summary>The owner type. can be one of USER, ROLE, and GROUP.</summary>
     [JsonPropertyName("ownerType")]
     public string? OwnerType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The configuration block for Resource URIs. See resource uris below for more details.</summary>
     [JsonPropertyName("resourceUris")]

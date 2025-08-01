@@ -137,7 +137,7 @@ public partial class V1beta1FirewallSpecForProviderSubnetMappingSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallSpecForProviderSubnetMapping
 {
-    /// <summary>The subnet's IP address type. Valida values: "DUALSTACK", "IPV4".</summary>
+    /// <summary>The subnet's IP address type. Valid values: "DUALSTACK", "IPV4".</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
@@ -222,6 +222,10 @@ public partial class V1beta1FirewallSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Set of types for which to collect analysis metrics. See Reporting on network traffic in Network Firewall for details on how to use the data. Valid values: TLS_SNI, HTTP_HOST. Defaults to [].</summary>
+    [JsonPropertyName("enabledAnalysisTypes")]
+    public IList<string>? EnabledAnalysisTypes { get; set; }
+
     /// <summary>KMS encryption configuration settings. See Encryption Configuration below for details.</summary>
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1FirewallSpecForProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
@@ -246,7 +250,7 @@ public partial class V1beta1FirewallSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -404,7 +408,7 @@ public partial class V1beta1FirewallSpecInitProviderSubnetMappingSubnetIdSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallSpecInitProviderSubnetMapping
 {
-    /// <summary>The subnet's IP address type. Valida values: "DUALSTACK", "IPV4".</summary>
+    /// <summary>The subnet's IP address type. Valid values: "DUALSTACK", "IPV4".</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
@@ -488,6 +492,10 @@ public partial class V1beta1FirewallSpecInitProvider
     /// <summary>A friendly description of the firewall.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Set of types for which to collect analysis metrics. See Reporting on network traffic in Network Firewall for details on how to use the data. Valid values: TLS_SNI, HTTP_HOST. Defaults to [].</summary>
+    [JsonPropertyName("enabledAnalysisTypes")]
+    public IList<string>? EnabledAnalysisTypes { get; set; }
 
     /// <summary>KMS encryption configuration settings. See Encryption Configuration below for details.</summary>
     [JsonPropertyName("encryptionConfiguration")]
@@ -722,7 +730,7 @@ public partial class V1beta1FirewallStatusAtProviderFirewallStatus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FirewallStatusAtProviderSubnetMapping
 {
-    /// <summary>The subnet's IP address type. Valida values: "DUALSTACK", "IPV4".</summary>
+    /// <summary>The subnet's IP address type. Valid values: "DUALSTACK", "IPV4".</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
@@ -747,6 +755,10 @@ public partial class V1beta1FirewallStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Set of types for which to collect analysis metrics. See Reporting on network traffic in Network Firewall for details on how to use the data. Valid values: TLS_SNI, HTTP_HOST. Defaults to [].</summary>
+    [JsonPropertyName("enabledAnalysisTypes")]
+    public IList<string>? EnabledAnalysisTypes { get; set; }
+
     /// <summary>KMS encryption configuration settings. See Encryption Configuration below for details.</summary>
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1FirewallStatusAtProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
@@ -770,6 +782,10 @@ public partial class V1beta1FirewallStatusAtProvider
     /// <summary>A friendly name of the firewall.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A flag indicating whether the firewall is protected against changes to the subnet associations. Use this setting to protect against accidentally modifying the subnet associations for a firewall that is in use. Defaults to false.</summary>
     [JsonPropertyName("subnetChangeProtection")]

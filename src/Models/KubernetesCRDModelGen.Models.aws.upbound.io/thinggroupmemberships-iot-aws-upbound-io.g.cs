@@ -16,7 +16,7 @@ public partial class V1beta1ThingGroupMembershipSpecForProvider
     [JsonPropertyName("overrideDynamicGroup")]
     public bool? OverrideDynamicGroup { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -189,6 +189,10 @@ public partial class V1beta1ThingGroupMembershipStatusAtProvider
     /// <summary>Override dynamic thing groups with static thing groups when 10-group limit is reached. If a thing belongs to 10 thing groups, and one or more of those groups are dynamic thing groups, adding a thing to a static group removes the thing from the last dynamic group.</summary>
     [JsonPropertyName("overrideDynamicGroup")]
     public bool? OverrideDynamicGroup { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the group to which you are adding a thing.</summary>
     [JsonPropertyName("thingGroupName")]

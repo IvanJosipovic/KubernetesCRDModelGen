@@ -320,7 +320,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1ClusterInstanceSpecForProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
+    /// <summary>Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -384,7 +384,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("monitoringRoleArnSelector")]
     public V1beta1ClusterInstanceSpecForProviderMonitoringRoleArnSelector? MonitoringRoleArnSelector { get; set; }
 
-    /// <summary>Specifies whether Performance Insights is enabled or not.</summary>
+    /// <summary>Specifies whether Performance Insights is enabled or not. NOTE: When Performance Insights is configured at the cluster level through aws_rds_cluster, this argument cannot be set to a value that conflicts with the cluster's configuration.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
@@ -420,7 +420,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -741,7 +741,7 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1ClusterInstanceSpecInitProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
+    /// <summary>Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -805,7 +805,7 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("monitoringRoleArnSelector")]
     public V1beta1ClusterInstanceSpecInitProviderMonitoringRoleArnSelector? MonitoringRoleArnSelector { get; set; }
 
-    /// <summary>Specifies whether Performance Insights is enabled or not.</summary>
+    /// <summary>Specifies whether Performance Insights is enabled or not. NOTE: When Performance Insights is configured at the cluster level through aws_rds_cluster, this argument cannot be set to a value that conflicts with the cluster's configuration.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
@@ -1006,7 +1006,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 
-    /// <summary>defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
+    /// <summary>Indicates whether to copy all of the user-defined tags from the DB instance to snapshots of the DB instance. Default false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -1070,7 +1070,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>Specifies whether Performance Insights is enabled or not.</summary>
+    /// <summary>Specifies whether Performance Insights is enabled or not. NOTE: When Performance Insights is configured at the cluster level through aws_rds_cluster, this argument cannot be set to a value that conflicts with the cluster's configuration.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
@@ -1102,6 +1102,10 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Specifies whether the DB cluster is encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
@@ -1114,7 +1118,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>– Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
+    /// <summary>Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
     [JsonPropertyName("writer")]
     public bool? Writer { get; set; }
 }

@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker projects.
+        description: ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker AI projects.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,10 @@ spec:
               forProvider:
                 properties:
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: Whether Service Catalog is enabled or disabled in SageMaker. Valid values are Enabled and Disabled.
@@ -337,6 +340,12 @@ spec:
                 properties:
                   id:
                     description: The AWS Region the Servicecatalog portfolio status resides in.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: Whether Service Catalog is enabled or disabled in SageMaker. Valid values are Enabled and Disabled.

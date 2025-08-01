@@ -112,10 +112,16 @@ spec:
                       Defaults to false.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceNameRef:
                     description: Reference to a VPCEndpointService in ec2 to populate serviceName.
@@ -203,6 +209,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
                     type: string
@@ -314,7 +323,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.
@@ -457,8 +466,11 @@ spec:
 
                       Defaults to false.
                     type: boolean
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceNameRef:
                     description: Reference to a VPCEndpointService in ec2 to populate serviceName.
@@ -546,6 +558,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
                     type: string
@@ -657,7 +672,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.
@@ -1024,9 +1039,18 @@ spec:
 
                       Defaults to false.
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   requesterManaged:
                     description: Whether or not the VPC Endpoint is being managed by its service - true or false.
                     type: boolean
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   routeTableIds:
                     description: One or more route table IDs. Applicable for endpoints of type Gateway.
                     items:
@@ -1043,7 +1067,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
@@ -1085,7 +1112,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.
@@ -1250,10 +1277,16 @@ spec:
                       Defaults to false.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceNameRef:
                     description: Reference to a VPCEndpointService in ec2 to populate serviceName.
@@ -1341,6 +1374,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
                     type: string
@@ -1452,7 +1488,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.
@@ -1593,8 +1629,11 @@ spec:
 
                       Defaults to false.
                     type: boolean
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceNameRef:
                     description: Reference to a VPCEndpointService in ec2 to populate serviceName.
@@ -1682,6 +1721,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
                     type: string
@@ -1793,7 +1835,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.
@@ -2158,9 +2200,18 @@ spec:
 
                       Defaults to false.
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   requesterManaged:
                     description: Whether or not the VPC Endpoint is being managed by its service - true or false.
                     type: boolean
+                  resourceConfigurationArn:
+                    description: The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
                   routeTableIds:
                     description: One or more route table IDs. Applicable for endpoints of type Gateway.
                     items:
@@ -2177,7 +2228,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   serviceName:
-                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook).
+                    description: The service name. For AWS services the service name is usually in the form com.amazonaws.<region>.<service> (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.<region>.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
+                    type: string
+                  serviceNetworkArn:
+                    description: The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.
                     type: string
                   serviceRegion:
                     description: '- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.'
@@ -2219,7 +2273,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   vpcEndpointType:
-                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.
+                    description: The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.
                     type: string
                   vpcId:
                     description: The ID of the VPC in which the endpoint will be used.

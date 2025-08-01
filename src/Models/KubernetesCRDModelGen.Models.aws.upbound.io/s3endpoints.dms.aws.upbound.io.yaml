@@ -112,7 +112,7 @@ spec:
                     description: Minimum file size condition as defined in kilobytes to output a file to Amazon S3. (AWS default is 32000 KB.)
                     type: number
                   cdcPath:
-                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.
                     type: string
                   certificateArn:
                     description: ARN for the certificate.
@@ -172,7 +172,7 @@ spec:
                     description: Bucket owner to prevent sniping. Value is an AWS account ID.
                     type: string
                   externalTableDefinition:
-                    description: JSON document that describes how AWS DMS should interpret the data.
+                    description: JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.
                     type: string
                   glueCatalogGeneration:
                     description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
@@ -285,7 +285,10 @@ spec:
                     description: Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false. (Ignored for source endpoints.)
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rfc4180:
                     description: For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.
@@ -542,7 +545,7 @@ spec:
                     description: Minimum file size condition as defined in kilobytes to output a file to Amazon S3. (AWS default is 32000 KB.)
                     type: number
                   cdcPath:
-                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.
                     type: string
                   certificateArn:
                     description: ARN for the certificate.
@@ -602,7 +605,7 @@ spec:
                     description: Bucket owner to prevent sniping. Value is an AWS account ID.
                     type: string
                   externalTableDefinition:
-                    description: JSON document that describes how AWS DMS should interpret the data.
+                    description: JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.
                     type: string
                   glueCatalogGeneration:
                     description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
@@ -1163,7 +1166,7 @@ spec:
                     description: Minimum file size condition as defined in kilobytes to output a file to Amazon S3. (AWS default is 32000 KB.)
                     type: number
                   cdcPath:
-                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.
+                    description: Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.
                     type: string
                   certificateArn:
                     description: ARN for the certificate.
@@ -1232,7 +1235,7 @@ spec:
                     description: Can be used for cross-account validation. Use it in another account with aws_dms_s3_endpoint to create the endpoint cross-account.
                     type: string
                   externalTableDefinition:
-                    description: JSON document that describes how AWS DMS should interpret the data.
+                    description: JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.
                     type: string
                   glueCatalogGeneration:
                     description: Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.
@@ -1260,6 +1263,12 @@ spec:
                   preserveTransactions:
                     description: Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false. (Ignored for source endpoints.)
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   rfc4180:
                     description: For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.
                     type: boolean

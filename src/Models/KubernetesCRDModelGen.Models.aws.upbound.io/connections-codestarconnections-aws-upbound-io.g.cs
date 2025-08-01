@@ -24,7 +24,7 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -213,6 +213,10 @@ public partial class V1beta1ConnectionStatusAtProvider
     /// <summary>The name of the external provider where your third-party code repository is configured. Valid values are Bitbucket, GitHub, GitHubEnterpriseServer, GitLab or GitLabSelfManaged. Changing provider_type will create a new resource. Conflicts with host_arn</summary>
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

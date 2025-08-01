@@ -140,7 +140,7 @@ public partial class V1beta1RouteResponseSpecForProvider
     [JsonPropertyName("modelSelectionExpression")]
     public string? ModelSelectionExpression { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -465,6 +465,10 @@ public partial class V1beta1RouteResponseStatusAtProvider
     /// <summary>The model selection expression for the route response.</summary>
     [JsonPropertyName("modelSelectionExpression")]
     public string? ModelSelectionExpression { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Response models for the route response.</summary>
     [JsonPropertyName("responseModels")]

@@ -84,9 +84,6 @@ spec:
                 type: string
               forProvider:
                 properties:
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   resourceSetName:
                     description: Name describing the resource set that will be monitored for readiness.
                     type: string
@@ -96,8 +93,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-

@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.sqs.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProvider
 {
-    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation</summary>
+    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation.</summary>
     [JsonPropertyName("contentBasedDeduplication")]
     public bool? ContentBasedDeduplication { get; set; }
 
@@ -20,7 +20,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("deduplicationScope")]
     public string? DeduplicationScope { get; set; }
 
-    /// <summary>The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
+    /// <summary>Time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
     [JsonPropertyName("delaySeconds")]
     public double? DelaySeconds { get; set; }
 
@@ -32,43 +32,43 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("fifoThroughputLimit")]
     public string? FifoThroughputLimit { get; set; }
 
-    /// <summary>The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
+    /// <summary>Length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
     [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
     public double? KmsDataKeyReusePeriodSeconds { get; set; }
 
-    /// <summary>The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
+    /// <summary>ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
     [JsonPropertyName("kmsMasterKeyId")]
     public string? KmsMasterKeyId { get; set; }
 
-    /// <summary>The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
+    /// <summary>Limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
     [JsonPropertyName("maxMessageSize")]
     public double? MaxMessageSize { get; set; }
 
-    /// <summary>The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
+    /// <summary>Number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
     [JsonPropertyName("messageRetentionSeconds")]
     public double? MessageRetentionSeconds { get; set; }
 
-    /// <summary>The name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix</summary>
+    /// <summary>Name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. It is preferred to use the aws_sqs_queue_policy resource instead.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
+    /// <summary>Time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
     [JsonPropertyName("receiveWaitTimeSeconds")]
     public double? ReceiveWaitTimeSeconds { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs.</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_allow_policy resource instead.</summary>
     [JsonPropertyName("redriveAllowPolicy")]
     public string? RedriveAllowPolicy { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue, see AWS docs. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_policy resource instead. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
     [JsonPropertyName("redrivePolicy")]
     public string? RedrivePolicy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -80,7 +80,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
+    /// <summary>Visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
     [JsonPropertyName("visibilityTimeoutSeconds")]
     public double? VisibilityTimeoutSeconds { get; set; }
 }
@@ -89,7 +89,7 @@ public partial class V1beta1QueueSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProvider
 {
-    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation</summary>
+    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation.</summary>
     [JsonPropertyName("contentBasedDeduplication")]
     public bool? ContentBasedDeduplication { get; set; }
 
@@ -97,7 +97,7 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("deduplicationScope")]
     public string? DeduplicationScope { get; set; }
 
-    /// <summary>The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
+    /// <summary>Time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
     [JsonPropertyName("delaySeconds")]
     public double? DelaySeconds { get; set; }
 
@@ -109,39 +109,39 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("fifoThroughputLimit")]
     public string? FifoThroughputLimit { get; set; }
 
-    /// <summary>The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
+    /// <summary>Length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
     [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
     public double? KmsDataKeyReusePeriodSeconds { get; set; }
 
-    /// <summary>The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
+    /// <summary>ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
     [JsonPropertyName("kmsMasterKeyId")]
     public string? KmsMasterKeyId { get; set; }
 
-    /// <summary>The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
+    /// <summary>Limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
     [JsonPropertyName("maxMessageSize")]
     public double? MaxMessageSize { get; set; }
 
-    /// <summary>The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
+    /// <summary>Number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
     [JsonPropertyName("messageRetentionSeconds")]
     public double? MessageRetentionSeconds { get; set; }
 
-    /// <summary>The name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix</summary>
+    /// <summary>Name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. It is preferred to use the aws_sqs_queue_policy resource instead.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
+    /// <summary>Time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
     [JsonPropertyName("receiveWaitTimeSeconds")]
     public double? ReceiveWaitTimeSeconds { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs.</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_allow_policy resource instead.</summary>
     [JsonPropertyName("redriveAllowPolicy")]
     public string? RedriveAllowPolicy { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue, see AWS docs. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_policy resource instead. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
     [JsonPropertyName("redrivePolicy")]
     public string? RedrivePolicy { get; set; }
 
@@ -153,7 +153,7 @@ public partial class V1beta1QueueSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
+    /// <summary>Visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
     [JsonPropertyName("visibilityTimeoutSeconds")]
     public double? VisibilityTimeoutSeconds { get; set; }
 }
@@ -294,11 +294,11 @@ public partial class V1beta1QueueSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueStatusAtProvider
 {
-    /// <summary>The ARN of the SQS queue</summary>
+    /// <summary>ARN of the SQS queue.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation</summary>
+    /// <summary>Enables content-based deduplication for FIFO queues. For more information, see the related documentation.</summary>
     [JsonPropertyName("contentBasedDeduplication")]
     public bool? ContentBasedDeduplication { get; set; }
 
@@ -306,7 +306,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("deduplicationScope")]
     public string? DeduplicationScope { get; set; }
 
-    /// <summary>The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
+    /// <summary>Time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes). The default for this attribute is 0 seconds.</summary>
     [JsonPropertyName("delaySeconds")]
     public double? DelaySeconds { get; set; }
 
@@ -318,45 +318,49 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("fifoThroughputLimit")]
     public string? FifoThroughputLimit { get; set; }
 
-    /// <summary>The URL for the created Amazon SQS queue.</summary>
+    /// <summary>URL for the created Amazon SQS queue.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
+    /// <summary>Length of time, in seconds, for which Amazon SQS can reuse a data key to encrypt or decrypt messages before calling AWS KMS again. An integer representing seconds, between 60 seconds (1 minute) and 86,400 seconds (24 hours). The default is 300 (5 minutes).</summary>
     [JsonPropertyName("kmsDataKeyReusePeriodSeconds")]
     public double? KmsDataKeyReusePeriodSeconds { get; set; }
 
-    /// <summary>The ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
+    /// <summary>ID of an AWS-managed customer master key (CMK) for Amazon SQS or a custom CMK. For more information, see Key Terms.</summary>
     [JsonPropertyName("kmsMasterKeyId")]
     public string? KmsMasterKeyId { get; set; }
 
-    /// <summary>The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
+    /// <summary>Limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB). The default for this attribute is 262144 (256 KiB).</summary>
     [JsonPropertyName("maxMessageSize")]
     public double? MaxMessageSize { get; set; }
 
-    /// <summary>The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
+    /// <summary>Number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days). The default for this attribute is 345600 (4 days).</summary>
     [JsonPropertyName("messageRetentionSeconds")]
     public double? MessageRetentionSeconds { get; set; }
 
-    /// <summary>The name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix</summary>
+    /// <summary>Name of the queue. Queue names must be made up of only uppercase and lowercase ASCII letters, numbers, underscores, and hyphens, and must be between 1 and 80 characters long. For a FIFO (first-in-first-out) queue, the name must end with the .fifo suffix. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. It is preferred to use the aws_sqs_queue_policy resource instead.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
+    /// <summary>Time for which a ReceiveMessage call will wait for a message to arrive (long polling) before returning. An integer from 0 to 20 (seconds). The default for this attribute is 0, meaning that the call will return immediately.</summary>
     [JsonPropertyName("receiveWaitTimeSeconds")]
     public double? ReceiveWaitTimeSeconds { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs.</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue redrive permission, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_allow_policy resource instead.</summary>
     [JsonPropertyName("redriveAllowPolicy")]
     public string? RedriveAllowPolicy { get; set; }
 
-    /// <summary>The JSON policy to set up the Dead Letter Queue, see AWS docs. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
+    /// <summary>JSON policy to set up the Dead Letter Queue, see AWS docs. It is preferred to use the aws_sqs_queue_redrive_policy resource instead. Note: when specifying maxReceiveCount, you must specify it as an integer (5), and not a string ("5").</summary>
     [JsonPropertyName("redrivePolicy")]
     public string? RedrivePolicy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Boolean to enable server-side encryption (SSE) of message content with SQS-owned encryption keys. See Encryption at rest.</summary>
     [JsonPropertyName("sqsManagedSseEnabled")]
@@ -366,7 +370,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
@@ -374,7 +378,7 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 
-    /// <summary>The visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
+    /// <summary>Visibility timeout for the queue. An integer from 0 to 43200 (12 hours). The default for this attribute is 30. For more information about visibility timeout, see AWS docs.</summary>
     [JsonPropertyName("visibilityTimeoutSeconds")]
     public double? VisibilityTimeoutSeconds { get; set; }
 }

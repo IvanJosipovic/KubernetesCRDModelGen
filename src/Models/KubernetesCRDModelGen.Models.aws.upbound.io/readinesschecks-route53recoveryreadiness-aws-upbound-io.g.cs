@@ -12,10 +12,6 @@ namespace KubernetesCRDModelGen.Models.route53recoveryreadiness.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReadinessCheckSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Name describing the resource set that will be monitored for readiness.</summary>
     [JsonPropertyName("resourceSetName")]
     public string? ResourceSetName { get; set; }

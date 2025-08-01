@@ -36,7 +36,7 @@ public partial class V1beta1DeploymentStrategySpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -253,6 +253,10 @@ public partial class V1beta1DeploymentStrategyStatusAtProvider
     /// <summary>Name for the deployment strategy. Must be between 1 and 64 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Where to save the deployment strategy. Valid values: NONE and SSM_DOCUMENT.</summary>
     [JsonPropertyName("replicateTo")]

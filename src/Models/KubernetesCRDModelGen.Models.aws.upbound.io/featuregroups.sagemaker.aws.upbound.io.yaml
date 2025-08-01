@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker Feature Group resource.
+        description: FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.
         properties:
           apiVersion:
             description: >-
@@ -195,7 +195,10 @@ spec:
                     description: The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an offline_store_config is provided.
@@ -879,6 +882,12 @@ spec:
                     type: array
                   recordIdentifierFeatureName:
                     description: The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an offline_store_config is provided.
@@ -989,7 +998,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker Feature Group resource.
+        description: FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.
         properties:
           apiVersion:
             description: >-
@@ -1135,7 +1144,10 @@ spec:
                     description: The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an offline_store_config is provided.
@@ -1783,6 +1795,12 @@ spec:
                     type: object
                   recordIdentifierFeatureName:
                     description: The name of the Feature whose value uniquely identifies a Record defined in the Feature Store. Only the latest record per identifier value will be stored in the Online Store.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an offline_store_config is provided.

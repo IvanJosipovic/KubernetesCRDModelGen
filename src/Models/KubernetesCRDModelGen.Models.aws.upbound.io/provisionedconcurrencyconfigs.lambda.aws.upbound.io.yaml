@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages a Lambda Provisioned Concurrency Configuration
+        description: ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages an AWS Lambda Provisioned Concurrency Configuration.
         properties:
           apiVersion:
             description: >-
@@ -94,10 +94,13 @@ spec:
                     description: Lambda Function version or Lambda Alias name.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   skipDestroy:
-                    description: Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.
+                    description: Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.
                     type: boolean
                 required:
                 - region
@@ -134,7 +137,7 @@ spec:
                     description: Lambda Function version or Lambda Alias name.
                     type: string
                   skipDestroy:
-                    description: Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.
+                    description: Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.
                     type: boolean
                 type: object
               managementPolicies:
@@ -369,8 +372,14 @@ spec:
                   qualifier:
                     description: Lambda Function version or Lambda Alias name.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   skipDestroy:
-                    description: Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.
+                    description: Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.
                     type: boolean
                 type: object
               conditions:

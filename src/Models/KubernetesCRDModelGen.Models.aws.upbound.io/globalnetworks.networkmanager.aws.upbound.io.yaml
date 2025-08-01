@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: GlobalNetwork is the Schema for the GlobalNetworks API. Provides a global network resource.
+        description: GlobalNetwork is the Schema for the GlobalNetworks API. Manages a Network Manager Global Network.
         properties:
           apiVersion:
             description: >-
@@ -87,17 +87,12 @@ spec:
                   description:
                     description: Description of the Global Network.
                     type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   tags:
                     additionalProperties:
                       type: string
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -345,7 +340,7 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: Global Network Amazon Resource Name (ARN)
+                    description: Global Network ARN.
                     type: string
                   description:
                     description: Description of the Global Network.
@@ -361,7 +356,7 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                 type: object

@@ -136,7 +136,7 @@ public partial class V1beta1ApprovalRuleTemplateAssociationSpecForProvider
     [JsonPropertyName("approvalRuleTemplateNameSelector")]
     public V1beta1ApprovalRuleTemplateAssociationSpecForProviderApprovalRuleTemplateNameSelector? ApprovalRuleTemplateNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -302,6 +302,10 @@ public partial class V1beta1ApprovalRuleTemplateAssociationStatusAtProvider
     /// <summary>The name of the approval rule template and name of the repository, separated by a comma (,).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the repository that you want to associate with the template.</summary>
     [JsonPropertyName("repositoryName")]

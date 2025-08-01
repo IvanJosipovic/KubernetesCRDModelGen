@@ -149,19 +149,19 @@ public partial class V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecForProvider
 {
-    /// <summary>The CodeEditorAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in Code Editor. See Code Editor App Image Config details below.</summary>
+    /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
     [JsonPropertyName("codeEditorAppImageConfig")]
     public IList<V1beta1AppImageConfigSpecForProviderCodeEditorAppImageConfig>? CodeEditorAppImageConfig { get; set; }
 
-    /// <summary>The JupyterLabAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in JupyterLab. See Jupyter Lab Image Config details below.</summary>
+    /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
     [JsonPropertyName("jupyterLabImageConfig")]
     public IList<V1beta1AppImageConfigSpecForProviderJupyterLabImageConfig>? JupyterLabImageConfig { get; set; }
 
-    /// <summary>The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
+    /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
     [JsonPropertyName("kernelGatewayImageConfig")]
     public IList<V1beta1AppImageConfigSpecForProviderKernelGatewayImageConfig>? KernelGatewayImageConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -311,15 +311,15 @@ public partial class V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppImageConfigSpecInitProvider
 {
-    /// <summary>The CodeEditorAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in Code Editor. See Code Editor App Image Config details below.</summary>
+    /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
     [JsonPropertyName("codeEditorAppImageConfig")]
     public IList<V1beta1AppImageConfigSpecInitProviderCodeEditorAppImageConfig>? CodeEditorAppImageConfig { get; set; }
 
-    /// <summary>The JupyterLabAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in JupyterLab. See Jupyter Lab Image Config details below.</summary>
+    /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
     [JsonPropertyName("jupyterLabImageConfig")]
     public IList<V1beta1AppImageConfigSpecInitProviderJupyterLabImageConfig>? JupyterLabImageConfig { get; set; }
 
-    /// <summary>The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
+    /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
     [JsonPropertyName("kernelGatewayImageConfig")]
     public IList<V1beta1AppImageConfigSpecInitProviderKernelGatewayImageConfig>? KernelGatewayImageConfig { get; set; }
 
@@ -605,7 +605,7 @@ public partial class V1beta1AppImageConfigStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The CodeEditorAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in Code Editor. See Code Editor App Image Config details below.</summary>
+    /// <summary>The CodeEditorAppImageConfig. See Code Editor App Image Config details below.</summary>
     [JsonPropertyName("codeEditorAppImageConfig")]
     public IList<V1beta1AppImageConfigStatusAtProviderCodeEditorAppImageConfig>? CodeEditorAppImageConfig { get; set; }
 
@@ -613,13 +613,17 @@ public partial class V1beta1AppImageConfigStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The JupyterLabAppImageConfig. You can only specify one image kernel in the AppImageConfig API. This kernel is shown to users before the image starts. After the image runs, all kernels are visible in JupyterLab. See Jupyter Lab Image Config details below.</summary>
+    /// <summary>The JupyterLabAppImageConfig. See Jupyter Lab Image Config details below.</summary>
     [JsonPropertyName("jupyterLabImageConfig")]
     public IList<V1beta1AppImageConfigStatusAtProviderJupyterLabImageConfig>? JupyterLabImageConfig { get; set; }
 
-    /// <summary>The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
+    /// <summary>The configuration for the file system and kernels in a SageMaker AI image running as a KernelGateway app. See Kernel Gateway Image Config details below.</summary>
     [JsonPropertyName("kernelGatewayImageConfig")]
     public IList<V1beta1AppImageConfigStatusAtProviderKernelGatewayImageConfig>? KernelGatewayImageConfig { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -676,7 +680,7 @@ public partial class V1beta1AppImageConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker App Image Config resource.</summary>
+/// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker AI App Image Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AppImageConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppImageConfigSpec>, IStatus<V1beta1AppImageConfigStatus>
@@ -706,7 +710,7 @@ public partial class V1beta1AppImageConfig : IKubernetesObject<V1ObjectMeta>, IS
     public V1beta1AppImageConfigStatus? Status { get; set; }
 }
 
-/// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker App Image Config resource.</summary>
+/// <summary>AppImageConfig is the Schema for the AppImageConfigs API. Provides a SageMaker AI App Image Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AppImageConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppImageConfig>

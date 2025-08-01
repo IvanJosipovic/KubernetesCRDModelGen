@@ -169,7 +169,7 @@ public partial class V1beta1GameSessionQueueSpecForProvider
     [JsonPropertyName("playerLatencyPolicy")]
     public IList<V1beta1GameSessionQueueSpecForProviderPlayerLatencyPolicy>? PlayerLatencyPolicy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -524,6 +524,10 @@ public partial class V1beta1GameSessionQueueStatusAtProvider
     /// <summary>One or more policies used to choose fleet based on player latency. See below.</summary>
     [JsonPropertyName("playerLatencyPolicy")]
     public IList<V1beta1GameSessionQueueStatusAtProviderPlayerLatencyPolicy>? PlayerLatencyPolicy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

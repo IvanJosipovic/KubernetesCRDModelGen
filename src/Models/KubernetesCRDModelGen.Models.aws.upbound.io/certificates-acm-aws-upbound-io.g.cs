@@ -147,7 +147,7 @@ public partial class V1beta1CertificateSpecForProvider
     [JsonPropertyName("privateKeySecretRef")]
     public V1beta1CertificateSpecForProviderPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -571,6 +571,10 @@ public partial class V1beta1CertificateStatusAtProvider
     /// <summary>true if a Private certificate eligible for managed renewal is within the early_renewal_duration period.</summary>
     [JsonPropertyName("pendingRenewal")]
     public bool? PendingRenewal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether the certificate is eligible for managed renewal.</summary>
     [JsonPropertyName("renewalEligibility")]

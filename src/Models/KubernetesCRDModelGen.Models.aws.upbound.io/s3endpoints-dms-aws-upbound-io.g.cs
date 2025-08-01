@@ -216,7 +216,7 @@ public partial class V1beta1S3EndpointSpecForProvider
     [JsonPropertyName("cdcMinFileSize")]
     public double? CdcMinFileSize { get; set; }
 
-    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
+    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.</summary>
     [JsonPropertyName("cdcPath")]
     public string? CdcPath { get; set; }
 
@@ -296,7 +296,7 @@ public partial class V1beta1S3EndpointSpecForProvider
     [JsonPropertyName("expectedBucketOwner")]
     public string? ExpectedBucketOwner { get; set; }
 
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
+    /// <summary>JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.</summary>
     [JsonPropertyName("externalTableDefinition")]
     public string? ExternalTableDefinition { get; set; }
 
@@ -340,7 +340,7 @@ public partial class V1beta1S3EndpointSpecForProvider
     [JsonPropertyName("preserveTransactions")]
     public bool? PreserveTransactions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -605,7 +605,7 @@ public partial class V1beta1S3EndpointSpecInitProvider
     [JsonPropertyName("cdcMinFileSize")]
     public double? CdcMinFileSize { get; set; }
 
-    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
+    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.</summary>
     [JsonPropertyName("cdcPath")]
     public string? CdcPath { get; set; }
 
@@ -685,7 +685,7 @@ public partial class V1beta1S3EndpointSpecInitProvider
     [JsonPropertyName("expectedBucketOwner")]
     public string? ExpectedBucketOwner { get; set; }
 
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
+    /// <summary>JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.</summary>
     [JsonPropertyName("externalTableDefinition")]
     public string? ExternalTableDefinition { get; set; }
 
@@ -954,7 +954,7 @@ public partial class V1beta1S3EndpointStatusAtProvider
     [JsonPropertyName("cdcMinFileSize")]
     public double? CdcMinFileSize { get; set; }
 
-    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
+    /// <summary>Folder path of CDC files. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later. Required for CDC.</summary>
     [JsonPropertyName("cdcPath")]
     public string? CdcPath { get; set; }
 
@@ -1046,7 +1046,7 @@ public partial class V1beta1S3EndpointStatusAtProvider
     [JsonPropertyName("externalId")]
     public string? ExternalId { get; set; }
 
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
+    /// <summary>JSON document that describes how AWS DMS should interpret the data. Required for source endpoints.</summary>
     [JsonPropertyName("externalTableDefinition")]
     public string? ExternalTableDefinition { get; set; }
 
@@ -1085,6 +1085,10 @@ public partial class V1beta1S3EndpointStatusAtProvider
     /// <summary>Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false. (Ignored for source endpoints.)</summary>
     [JsonPropertyName("preserveTransactions")]
     public bool? PreserveTransactions { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.</summary>
     [JsonPropertyName("rfc4180")]

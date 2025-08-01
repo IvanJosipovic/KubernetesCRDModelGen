@@ -314,6 +314,23 @@ public partial class V1beta2InstanceSpecForProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2InstanceSpecForProviderPasswordWoSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2InstanceSpecForProviderReplicateSourceDbRefPolicy
@@ -540,6 +557,10 @@ public partial class V1beta2InstanceSpecForProvider
     [JsonPropertyName("customerOwnedIpEnabled")]
     public bool? CustomerOwnedIpEnabled { get; set; }
 
+    /// <summary>The mode of Database Insights that is enabled for the instance. Valid values: standard, advanced .</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
+
     /// <summary>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.</summary>
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
@@ -720,6 +741,14 @@ public partial class V1beta2InstanceSpecForProvider
     [JsonPropertyName("passwordSecretRef")]
     public V1beta2InstanceSpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
+    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true.</summary>
+    [JsonPropertyName("passwordWoSecretRef")]
+    public V1beta2InstanceSpecForProviderPasswordWoSecretRef? PasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with password_wo to trigger an update. Increment this value when an update to password_wo is required.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
     /// <summary>Specifies whether Performance Insights are enabled. Defaults to false.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
@@ -740,7 +769,7 @@ public partial class V1beta2InstanceSpecForProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1123,6 +1152,23 @@ public partial class V1beta2InstanceSpecInitProviderPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta2InstanceSpecInitProviderPasswordWoSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2InstanceSpecInitProviderReplicateSourceDbRefPolicy
@@ -1345,6 +1391,10 @@ public partial class V1beta2InstanceSpecInitProvider
     [JsonPropertyName("customerOwnedIpEnabled")]
     public bool? CustomerOwnedIpEnabled { get; set; }
 
+    /// <summary>The mode of Database Insights that is enabled for the instance. Valid values: standard, advanced .</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
+
     /// <summary>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.</summary>
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
@@ -1524,6 +1574,14 @@ public partial class V1beta2InstanceSpecInitProvider
     /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta2InstanceSpecInitProviderPasswordSecretRef? PasswordSecretRef { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Cannot be set if manage_master_user_password is set to true.</summary>
+    [JsonPropertyName("passwordWoSecretRef")]
+    public V1beta2InstanceSpecInitProviderPasswordWoSecretRef? PasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with password_wo to trigger an update. Increment this value when an update to password_wo is required.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
 
     /// <summary>Specifies whether Performance Insights are enabled. Defaults to false.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
@@ -1911,6 +1969,10 @@ public partial class V1beta2InstanceStatusAtProvider
     [JsonPropertyName("customerOwnedIpEnabled")]
     public bool? CustomerOwnedIpEnabled { get; set; }
 
+    /// <summary>The mode of Database Insights that is enabled for the instance. Valid values: standard, advanced .</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
+
     /// <summary>The name of the database to create when the DB instance is created. If this parameter is not specified, no database is created in the DB instance. Note that this does not apply for Oracle or SQL Server engines. See the AWS documentation for more details on what applies for those engines. If you are providing an Oracle db name, it needs to be in all upper case. Cannot be specified for a replica.</summary>
     [JsonPropertyName("dbName")]
     public string? DbName { get; set; }
@@ -2075,6 +2137,10 @@ public partial class V1beta2InstanceStatusAtProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
+    /// <summary>Used together with password_wo to trigger an update. Increment this value when an update to password_wo is required.</summary>
+    [JsonPropertyName("passwordWoVersion")]
+    public double? PasswordWoVersion { get; set; }
+
     /// <summary>Specifies whether Performance Insights are enabled. Defaults to false.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
@@ -2094,6 +2160,10 @@ public partial class V1beta2InstanceStatusAtProvider
     /// <summary>Bool to control if instance is publicly accessible. Default is false.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies whether the replica is in either mounted or open-read-only mode. This attribute is only supported by Oracle instances. Oracle replicas operate in open-read-only mode unless otherwise specified. See Working with Oracle Read Replicas for more information.</summary>
     [JsonPropertyName("replicaMode")]

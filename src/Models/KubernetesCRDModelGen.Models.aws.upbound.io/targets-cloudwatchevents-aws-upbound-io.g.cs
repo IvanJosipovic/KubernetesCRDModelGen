@@ -494,11 +494,11 @@ public partial class V1beta1TargetSpecForProviderRunCommandTargets
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipelineParameterList
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -507,7 +507,7 @@ public partial class V1beta1TargetSpecForProviderSagemakerPipelineTargetPipeline
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderSagemakerPipelineTarget
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution.</summary>
     [JsonPropertyName("pipelineParameterList")]
     public IList<V1beta1TargetSpecForProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
@@ -585,7 +585,7 @@ public partial class V1beta1TargetSpecForProvider
     [JsonPropertyName("redshiftTarget")]
     public IList<V1beta1TargetSpecForProviderRedshiftTarget>? RedshiftTarget { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -621,7 +621,7 @@ public partial class V1beta1TargetSpecForProvider
     [JsonPropertyName("runCommandTargets")]
     public IList<V1beta1TargetSpecForProviderRunCommandTargets>? RunCommandTargets { get; set; }
 
-    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker Pipeline. Documented below. A maximum of 1 are allowed.</summary>
+    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker AI Pipeline. Documented below. A maximum of 1 are allowed.</summary>
     [JsonPropertyName("sagemakerPipelineTarget")]
     public IList<V1beta1TargetSpecForProviderSagemakerPipelineTarget>? SagemakerPipelineTarget { get; set; }
 
@@ -1120,11 +1120,11 @@ public partial class V1beta1TargetSpecInitProviderRunCommandTargets
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelineParameterList
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1133,7 +1133,7 @@ public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecInitProviderSagemakerPipelineTarget
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution.</summary>
     [JsonPropertyName("pipelineParameterList")]
     public IList<V1beta1TargetSpecInitProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
@@ -1243,7 +1243,7 @@ public partial class V1beta1TargetSpecInitProvider
     [JsonPropertyName("runCommandTargets")]
     public IList<V1beta1TargetSpecInitProviderRunCommandTargets>? RunCommandTargets { get; set; }
 
-    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker Pipeline. Documented below. A maximum of 1 are allowed.</summary>
+    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker AI Pipeline. Documented below. A maximum of 1 are allowed.</summary>
     [JsonPropertyName("sagemakerPipelineTarget")]
     public IList<V1beta1TargetSpecInitProviderSagemakerPipelineTarget>? SagemakerPipelineTarget { get; set; }
 
@@ -1642,11 +1642,11 @@ public partial class V1beta1TargetStatusAtProviderRunCommandTargets
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelineParameterList
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1655,7 +1655,7 @@ public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetStatusAtProviderSagemakerPipelineTarget
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution.</summary>
     [JsonPropertyName("pipelineParameterList")]
     public IList<V1beta1TargetStatusAtProviderSagemakerPipelineTargetPipelineParameterList>? PipelineParameterList { get; set; }
 }
@@ -1729,6 +1729,10 @@ public partial class V1beta1TargetStatusAtProvider
     [JsonPropertyName("redshiftTarget")]
     public IList<V1beta1TargetStatusAtProviderRedshiftTarget>? RedshiftTarget { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Parameters used when you are providing retry policies. Documented below. A maximum of 1 are allowed.</summary>
     [JsonPropertyName("retryPolicy")]
     public IList<V1beta1TargetStatusAtProviderRetryPolicy>? RetryPolicy { get; set; }
@@ -1745,7 +1749,7 @@ public partial class V1beta1TargetStatusAtProvider
     [JsonPropertyName("runCommandTargets")]
     public IList<V1beta1TargetStatusAtProviderRunCommandTargets>? RunCommandTargets { get; set; }
 
-    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker Pipeline. Documented below. A maximum of 1 are allowed.</summary>
+    /// <summary>Parameters used when you are using the rule to invoke an Amazon SageMaker AI Pipeline. Documented below. A maximum of 1 are allowed.</summary>
     [JsonPropertyName("sagemakerPipelineTarget")]
     public IList<V1beta1TargetStatusAtProviderSagemakerPipelineTarget>? SagemakerPipelineTarget { get; set; }
 

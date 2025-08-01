@@ -206,7 +206,7 @@ public partial class V1beta1PlatformApplicationSpecForProvider
     [JsonPropertyName("platformPrincipalSecretRef")]
     public V1beta1PlatformApplicationSpecForProviderPlatformPrincipalSecretRef? PlatformPrincipalSecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -617,6 +617,10 @@ public partial class V1beta1PlatformApplicationStatusAtProvider
     /// <summary>The platform that the app is registered with. See Platform for supported platforms.</summary>
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM role ARN permitted to receive success feedback for this application and give SNS write access to use CloudWatch logs on your behalf.</summary>
     [JsonPropertyName("successFeedbackRoleArn")]

@@ -112,7 +112,7 @@ public partial class V1beta1StackSpecForProvider
     [JsonPropertyName("policyUrl")]
     public string? PolicyUrl { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -429,6 +429,10 @@ public partial class V1beta1StackStatusAtProvider
     /// <summary>Location of a file containing the stack policy. Conflicts w/ policy_body.</summary>
     [JsonPropertyName("policyUrl")]
     public string? PolicyUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

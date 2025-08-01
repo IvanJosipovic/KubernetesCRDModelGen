@@ -214,7 +214,7 @@ public partial class V1beta1DomainSpecForProviderDomainEndpointOptions
     [JsonPropertyName("enforceHttps")]
     public bool? EnforceHttps { get; set; }
 
-    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.</summary>
+    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.</summary>
     [JsonPropertyName("tlsSecurityPolicy")]
     public string? TlsSecurityPolicy { get; set; }
 }
@@ -485,7 +485,7 @@ public partial class V1beta1DomainSpecForProvider
     [JsonPropertyName("nodeToNodeEncryption")]
     public IList<V1beta1DomainSpecForProviderNodeToNodeEncryption>? NodeToNodeEncryption { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -708,7 +708,7 @@ public partial class V1beta1DomainSpecInitProviderDomainEndpointOptions
     [JsonPropertyName("enforceHttps")]
     public bool? EnforceHttps { get; set; }
 
-    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.</summary>
+    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.</summary>
     [JsonPropertyName("tlsSecurityPolicy")]
     public string? TlsSecurityPolicy { get; set; }
 }
@@ -1309,7 +1309,7 @@ public partial class V1beta1DomainStatusAtProviderDomainEndpointOptions
     [JsonPropertyName("enforceHttps")]
     public bool? EnforceHttps { get; set; }
 
-    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.</summary>
+    /// <summary>Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.</summary>
     [JsonPropertyName("tlsSecurityPolicy")]
     public string? TlsSecurityPolicy { get; set; }
 }
@@ -1479,6 +1479,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>Configuration block for node-to-node encryption options. Detailed below.</summary>
     [JsonPropertyName("nodeToNodeEncryption")]
     public IList<V1beta1DomainStatusAtProviderNodeToNodeEncryption>? NodeToNodeEncryption { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.</summary>
     [JsonPropertyName("snapshotOptions")]

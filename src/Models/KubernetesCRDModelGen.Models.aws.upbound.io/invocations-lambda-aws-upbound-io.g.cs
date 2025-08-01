@@ -68,7 +68,7 @@ public partial class V1beta1InvocationSpecForProviderFunctionNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvocationSpecForProvider
 {
-    /// <summary>Name of the lambda function.</summary>
+    /// <summary>Name of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -80,7 +80,7 @@ public partial class V1beta1InvocationSpecForProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1InvocationSpecForProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>JSON payload to the lambda function.</summary>
+    /// <summary>JSON payload to the Lambda function.</summary>
     [JsonPropertyName("input")]
     public string? Input { get; set; }
 
@@ -88,15 +88,15 @@ public partial class V1beta1InvocationSpecForProvider
     [JsonPropertyName("lifecycleScope")]
     public string? LifecycleScope { get; set; }
 
-    /// <summary>Qualifier (i.e., version) of the lambda function. Defaults to $LATEST.</summary>
+    /// <summary>Qualifier (i.e., version) of the Lambda function. Defaults to $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
+    /// <summary>JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
     [JsonPropertyName("terraformKey")]
     public string? TerraformKey { get; set; }
 
@@ -165,7 +165,7 @@ public partial class V1beta1InvocationSpecInitProviderFunctionNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvocationSpecInitProvider
 {
-    /// <summary>Name of the lambda function.</summary>
+    /// <summary>Name of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1beta1InvocationSpecInitProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1InvocationSpecInitProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>JSON payload to the lambda function.</summary>
+    /// <summary>JSON payload to the Lambda function.</summary>
     [JsonPropertyName("input")]
     public string? Input { get; set; }
 
@@ -185,11 +185,11 @@ public partial class V1beta1InvocationSpecInitProvider
     [JsonPropertyName("lifecycleScope")]
     public string? LifecycleScope { get; set; }
 
-    /// <summary>Qualifier (i.e., version) of the lambda function. Defaults to $LATEST.</summary>
+    /// <summary>Qualifier (i.e., version) of the Lambda function. Defaults to $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>The JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
+    /// <summary>JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
     [JsonPropertyName("terraformKey")]
     public string? TerraformKey { get; set; }
 
@@ -334,7 +334,7 @@ public partial class V1beta1InvocationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvocationStatusAtProvider
 {
-    /// <summary>Name of the lambda function.</summary>
+    /// <summary>Name of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -342,7 +342,7 @@ public partial class V1beta1InvocationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>JSON payload to the lambda function.</summary>
+    /// <summary>JSON payload to the Lambda function.</summary>
     [JsonPropertyName("input")]
     public string? Input { get; set; }
 
@@ -350,15 +350,19 @@ public partial class V1beta1InvocationStatusAtProvider
     [JsonPropertyName("lifecycleScope")]
     public string? LifecycleScope { get; set; }
 
-    /// <summary>Qualifier (i.e., version) of the lambda function. Defaults to $LATEST.</summary>
+    /// <summary>Qualifier (i.e., version) of the Lambda function. Defaults to $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>String result of the lambda function invocation.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>String result of the Lambda function invocation.</summary>
     [JsonPropertyName("result")]
     public string? Result { get; set; }
 
-    /// <summary>The JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
+    /// <summary>JSON key used to store lifecycle information in the input JSON payload. Defaults to tf. This additional key is only included when lifecycle_scope is set to CRUD.</summary>
     [JsonPropertyName("terraformKey")]
     public string? TerraformKey { get; set; }
 
@@ -413,7 +417,7 @@ public partial class V1beta1InvocationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Invocation is the Schema for the Invocations API. Invoke AWS Lambda Function</summary>
+/// <summary>Invocation is the Schema for the Invocations API. Manages an AWS Lambda Function invocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Invocation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InvocationSpec>, IStatus<V1beta1InvocationStatus>
@@ -443,7 +447,7 @@ public partial class V1beta1Invocation : IKubernetesObject<V1ObjectMeta>, ISpec<
     public V1beta1InvocationStatus? Status { get; set; }
 }
 
-/// <summary>Invocation is the Schema for the Invocations API. Invoke AWS Lambda Function</summary>
+/// <summary>Invocation is the Schema for the Invocations API. Manages an AWS Lambda Function invocation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InvocationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Invocation>

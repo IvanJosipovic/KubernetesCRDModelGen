@@ -119,6 +119,15 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationS3Configuratio
     public IList<string>? InclusionPrefixes { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataSourceSpecForProviderConfigurationTemplateConfiguration
+{
+    /// <summary>JSON string containing a data source template schema.</summary>
+    [JsonPropertyName("template")]
+    public string? Template { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicy
@@ -179,7 +188,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
@@ -191,11 +200,11 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     [JsonPropertyName("credentialsSelector")]
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelector? CredentialsSelector { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -269,7 +278,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
@@ -281,11 +290,11 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     [JsonPropertyName("credentialsSelector")]
     public V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelector? CredentialsSelector { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -333,7 +342,7 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
 
-    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
+    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
     [JsonPropertyName("crawlDepth")]
     public double? CrawlDepth { get; set; }
 
@@ -370,11 +379,15 @@ public partial class V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecForProviderConfiguration
 {
-    /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
+    /// <summary>(Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DataSourceSpecForProviderConfigurationS3Configuration>? S3Configuration { get; set; }
 
     /// <summary>A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
+    [JsonPropertyName("templateConfiguration")]
+    public IList<V1beta1DataSourceSpecForProviderConfigurationTemplateConfiguration>? TemplateConfiguration { get; set; }
+
+    /// <summary>(Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
     [JsonPropertyName("webCrawlerConfiguration")]
     public IList<V1beta1DataSourceSpecForProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
@@ -751,7 +764,7 @@ public partial class V1beta1DataSourceSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -891,6 +904,15 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationS3Configurati
     public IList<string>? InclusionPrefixes { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataSourceSpecInitProviderConfigurationTemplateConfiguration
+{
+    /// <summary>JSON string containing a data source template schema.</summary>
+    [JsonPropertyName("template")]
+    public string? Template { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsRefPolicy
@@ -951,7 +973,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
@@ -963,11 +985,11 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     [JsonPropertyName("credentialsSelector")]
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthenticationCredentialsSelector? CredentialsSelector { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -1041,7 +1063,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
@@ -1053,11 +1075,11 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     [JsonPropertyName("credentialsSelector")]
     public V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationProxyConfigurationCredentialsSelector? CredentialsSelector { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -1105,7 +1127,7 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
 
-    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
+    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
     [JsonPropertyName("crawlDepth")]
     public double? CrawlDepth { get; set; }
 
@@ -1142,11 +1164,15 @@ public partial class V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceSpecInitProviderConfiguration
 {
-    /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
+    /// <summary>(Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DataSourceSpecInitProviderConfigurationS3Configuration>? S3Configuration { get; set; }
 
     /// <summary>A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
+    [JsonPropertyName("templateConfiguration")]
+    public IList<V1beta1DataSourceSpecInitProviderConfigurationTemplateConfiguration>? TemplateConfiguration { get; set; }
+
+    /// <summary>(Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
     [JsonPropertyName("webCrawlerConfiguration")]
     public IList<V1beta1DataSourceSpecInitProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
@@ -1729,17 +1755,26 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationS3Configurati
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DataSourceStatusAtProviderConfigurationTemplateConfiguration
+{
+    /// <summary>JSON string containing a data source template schema.</summary>
+    [JsonPropertyName("template")]
+    public string? Template { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationAuthenticationConfigurationBasicAuthentication
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -1757,15 +1792,15 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationProxyConfiguration
 {
-    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.</summary>
+    /// <summary>Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.</summary>
     [JsonPropertyName("credentials")]
     public string? Credentials { get; set; }
 
-    /// <summary>The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
+    /// <summary>The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".</summary>
     [JsonPropertyName("host")]
     public string? Host { get; set; }
 
-    /// <summary>The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
+    /// <summary>The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -1813,7 +1848,7 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
     [JsonPropertyName("authenticationConfiguration")]
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfigurationAuthenticationConfiguration>? AuthenticationConfiguration { get; set; }
 
-    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
+    /// <summary>Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.</summary>
     [JsonPropertyName("crawlDepth")]
     public double? CrawlDepth { get; set; }
 
@@ -1850,11 +1885,15 @@ public partial class V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSourceStatusAtProviderConfiguration
 {
-    /// <summary>A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
+    /// <summary>(Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.</summary>
     [JsonPropertyName("s3Configuration")]
     public IList<V1beta1DataSourceStatusAtProviderConfigurationS3Configuration>? S3Configuration { get; set; }
 
     /// <summary>A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
+    [JsonPropertyName("templateConfiguration")]
+    public IList<V1beta1DataSourceStatusAtProviderConfigurationTemplateConfiguration>? TemplateConfiguration { get; set; }
+
+    /// <summary>(Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.</summary>
     [JsonPropertyName("webCrawlerConfiguration")]
     public IList<V1beta1DataSourceStatusAtProviderConfigurationWebCrawlerConfiguration>? WebCrawlerConfiguration { get; set; }
 }
@@ -2095,7 +2134,7 @@ public partial class V1beta1DataSourceStatusAtProvider
     [JsonPropertyName("configuration")]
     public IList<V1beta1DataSourceStatusAtProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>The Unix timestamp of when the Data Source was created.</summary>
+    /// <summary>The Unix time stamp of when the Data Source was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
@@ -2111,7 +2150,7 @@ public partial class V1beta1DataSourceStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>When the Status field value is FAILED, the ErrorMessage field contains a description of the error that caused the Data Source to fail.</summary>
+    /// <summary>When the Status field value is FAILED, contains a description of the error that caused the Data Source to fail.</summary>
     [JsonPropertyName("errorMessage")]
     public string? ErrorMessage { get; set; }
 
@@ -2130,6 +2169,10 @@ public partial class V1beta1DataSourceStatusAtProvider
     /// <summary>A name for your data source connector.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.</summary>
     [JsonPropertyName("roleArn")]
@@ -2155,7 +2198,7 @@ public partial class V1beta1DataSourceStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The Unix timestamp of when the Data Source was last updated.</summary>
+    /// <summary>The Unix time stamp of when the Data Source was last updated.</summary>
     [JsonPropertyName("updatedAt")]
     public string? UpdatedAt { get; set; }
 }

@@ -76,7 +76,7 @@ public partial class V1beta1TransitGatewayMulticastDomainSpecForProvider
     [JsonPropertyName("igmpv2Support")]
     public string? Igmpv2Support { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -345,6 +345,10 @@ public partial class V1beta1TransitGatewayMulticastDomainStatusAtProvider
     /// <summary>Identifier of the AWS account that owns the EC2 Transit Gateway Multicast Domain.</summary>
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether to enable support for statically configuring multicast group sources for the EC2 Transit Gateway Multicast Domain. Valid values: disable, enable. Default value: disable.</summary>
     [JsonPropertyName("staticSourcesSupport")]

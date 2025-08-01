@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Configures Session Stickiness for a Lightsail Load Balancer
+        description: LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Manages session stickiness for a Lightsail Load Balancer.
         properties:
           apiVersion:
             description: >-
@@ -85,13 +85,16 @@ spec:
               forProvider:
                 properties:
                   cookieDuration:
-                    description: The cookie duration in seconds. This determines the length of the session stickiness.
+                    description: Cookie duration in seconds. This determines the length of the session stickiness.
                     type: number
                   enabled:
-                    description: '- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.'
+                    description: Whether to enable session stickiness for the load balancer.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -119,10 +122,10 @@ spec:
                   autoscaler.
                 properties:
                   cookieDuration:
-                    description: The cookie duration in seconds. This determines the length of the session stickiness.
+                    description: Cookie duration in seconds. This determines the length of the session stickiness.
                     type: number
                   enabled:
-                    description: '- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.'
+                    description: Whether to enable session stickiness for the load balancer.
                     type: boolean
                 type: object
               managementPolicies:
@@ -344,13 +347,19 @@ spec:
               atProvider:
                 properties:
                   cookieDuration:
-                    description: The cookie duration in seconds. This determines the length of the session stickiness.
+                    description: Cookie duration in seconds. This determines the length of the session stickiness.
                     type: number
                   enabled:
-                    description: '- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.'
+                    description: Whether to enable session stickiness for the load balancer.
                     type: boolean
                   id:
-                    description: The name used for this load balancer (matches lb_name).
+                    description: Name used for this load balancer (matches lb_name).
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

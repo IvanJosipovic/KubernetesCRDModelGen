@@ -16,7 +16,7 @@ public partial class V1beta1ServiceQuotaSpecForProvider
     [JsonPropertyName("quotaCode")]
     public string? QuotaCode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -247,6 +247,10 @@ public partial class V1beta1ServiceQuotaStatusAtProvider
     /// <summary>Name of the quota.</summary>
     [JsonPropertyName("quotaName")]
     public string? QuotaName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Service code and quota code, separated by a front slash (/)</summary>
     [JsonPropertyName("requestId")]

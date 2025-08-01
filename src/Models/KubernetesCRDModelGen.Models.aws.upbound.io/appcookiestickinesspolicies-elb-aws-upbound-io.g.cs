@@ -88,7 +88,7 @@ public partial class V1beta1AppCookieStickinessPolicySpecForProvider
     [JsonPropertyName("loadBalancerSelector")]
     public V1beta1AppCookieStickinessPolicySpecForProviderLoadBalancerSelector? LoadBalancerSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -253,6 +253,10 @@ public partial class V1beta1AppCookieStickinessPolicyStatusAtProvider
     /// <summary>Name of load balancer to which the policy should be attached.</summary>
     [JsonPropertyName("loadBalancer")]
     public string? LoadBalancer { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

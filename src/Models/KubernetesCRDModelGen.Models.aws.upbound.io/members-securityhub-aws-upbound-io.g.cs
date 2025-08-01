@@ -24,7 +24,7 @@ public partial class V1beta1MemberSpecForProvider
     [JsonPropertyName("invite")]
     public bool? Invite { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -205,6 +205,10 @@ public partial class V1beta1MemberStatusAtProvider
     /// <summary>The status of the member account relationship.</summary>
     [JsonPropertyName("memberStatus")]
     public string? MemberStatus { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

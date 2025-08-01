@@ -109,7 +109,7 @@ public partial class V1beta1DevicePoolSpecForProvider
     [JsonPropertyName("projectArnSelector")]
     public V1beta1DevicePoolSpecForProviderProjectArnSelector? ProjectArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -408,6 +408,10 @@ public partial class V1beta1DevicePoolStatusAtProvider
     /// <summary>The ARN of the project for the device pool.</summary>
     [JsonPropertyName("projectArn")]
     public string? ProjectArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The device pool's rules. See Rule.</summary>
     [JsonPropertyName("rule")]

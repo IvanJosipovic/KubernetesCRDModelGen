@@ -75,19 +75,6 @@ public partial class V1beta1TaskDefinitionSpecForProviderExecutionRoleArnSelecto
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TaskDefinitionSpecForProviderInferenceAccelerator
-{
-    /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
-    [JsonPropertyName("deviceName")]
-    public string? DeviceName { get; set; }
-
-    /// <summary>Elastic Inference accelerator type to use.</summary>
-    [JsonPropertyName("deviceType")]
-    public string? DeviceType { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskDefinitionSpecForProviderPlacementConstraints
 {
     /// <summary>Cluster Query Language expression to apply to the constraint. For more information, see Cluster Query Language in the Amazon EC2 Container Service Developer Guide.</summary>
@@ -263,6 +250,10 @@ public partial class V1beta1TaskDefinitionSpecForProvider
     [JsonPropertyName("cpu")]
     public string? Cpu { get; set; }
 
+    /// <summary>Enables fault injection and allows for fault injection requests to be accepted from the task's containers. Default is false.</summary>
+    [JsonPropertyName("enableFaultInjection")]
+    public bool? EnableFaultInjection { get; set; }
+
     /// <summary>The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.</summary>
     [JsonPropertyName("ephemeralStorage")]
     public IList<V1beta1TaskDefinitionSpecForProviderEphemeralStorage>? EphemeralStorage { get; set; }
@@ -282,10 +273,6 @@ public partial class V1beta1TaskDefinitionSpecForProvider
     /// <summary>A unique name for your task definition.</summary>
     [JsonPropertyName("family")]
     public string? Family { get; set; }
-
-    /// <summary>Configuration block(s) with Inference Accelerators settings. Detailed below.</summary>
-    [JsonPropertyName("inferenceAccelerator")]
-    public IList<V1beta1TaskDefinitionSpecForProviderInferenceAccelerator>? InferenceAccelerator { get; set; }
 
     /// <summary>IPC resource namespace to be used for the containers in the task The valid values are host, task, and none.</summary>
     [JsonPropertyName("ipcMode")]
@@ -311,7 +298,7 @@ public partial class V1beta1TaskDefinitionSpecForProvider
     [JsonPropertyName("proxyConfiguration")]
     public IList<V1beta1TaskDefinitionSpecForProviderProxyConfiguration>? ProxyConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -335,7 +322,7 @@ public partial class V1beta1TaskDefinitionSpecForProvider
     [JsonPropertyName("taskRoleArn")]
     public string? TaskRoleArn { get; set; }
 
-    /// <summary>Whether should track latest task definition or the one created with the resource. Default is false.</summary>
+    /// <summary>Whether should track latest ACTIVE task definition on AWS or the one created with the resource stored in state. Default is false. Useful in the event the task definition is modified outside of this resource.</summary>
     [JsonPropertyName("trackLatest")]
     public bool? TrackLatest { get; set; }
 
@@ -407,19 +394,6 @@ public partial class V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelect
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1TaskDefinitionSpecInitProviderExecutionRoleArnSelectorPolicy? Policy { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TaskDefinitionSpecInitProviderInferenceAccelerator
-{
-    /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
-    [JsonPropertyName("deviceName")]
-    public string? DeviceName { get; set; }
-
-    /// <summary>Elastic Inference accelerator type to use.</summary>
-    [JsonPropertyName("deviceType")]
-    public string? DeviceType { get; set; }
 }
 
 /// <summary></summary>
@@ -599,6 +573,10 @@ public partial class V1beta1TaskDefinitionSpecInitProvider
     [JsonPropertyName("cpu")]
     public string? Cpu { get; set; }
 
+    /// <summary>Enables fault injection and allows for fault injection requests to be accepted from the task's containers. Default is false.</summary>
+    [JsonPropertyName("enableFaultInjection")]
+    public bool? EnableFaultInjection { get; set; }
+
     /// <summary>The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.</summary>
     [JsonPropertyName("ephemeralStorage")]
     public IList<V1beta1TaskDefinitionSpecInitProviderEphemeralStorage>? EphemeralStorage { get; set; }
@@ -618,10 +596,6 @@ public partial class V1beta1TaskDefinitionSpecInitProvider
     /// <summary>A unique name for your task definition.</summary>
     [JsonPropertyName("family")]
     public string? Family { get; set; }
-
-    /// <summary>Configuration block(s) with Inference Accelerators settings. Detailed below.</summary>
-    [JsonPropertyName("inferenceAccelerator")]
-    public IList<V1beta1TaskDefinitionSpecInitProviderInferenceAccelerator>? InferenceAccelerator { get; set; }
 
     /// <summary>IPC resource namespace to be used for the containers in the task The valid values are host, task, and none.</summary>
     [JsonPropertyName("ipcMode")]
@@ -667,7 +641,7 @@ public partial class V1beta1TaskDefinitionSpecInitProvider
     [JsonPropertyName("taskRoleArn")]
     public string? TaskRoleArn { get; set; }
 
-    /// <summary>Whether should track latest task definition or the one created with the resource. Default is false.</summary>
+    /// <summary>Whether should track latest ACTIVE task definition on AWS or the one created with the resource stored in state. Default is false. Useful in the event the task definition is modified outside of this resource.</summary>
     [JsonPropertyName("trackLatest")]
     public bool? TrackLatest { get; set; }
 
@@ -815,19 +789,6 @@ public partial class V1beta1TaskDefinitionStatusAtProviderEphemeralStorage
     /// <summary>The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is 21 GiB and the maximum supported value is 200 GiB.</summary>
     [JsonPropertyName("sizeInGib")]
     public double? SizeInGib { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1TaskDefinitionStatusAtProviderInferenceAccelerator
-{
-    /// <summary>Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</summary>
-    [JsonPropertyName("deviceName")]
-    public string? DeviceName { get; set; }
-
-    /// <summary>Elastic Inference accelerator type to use.</summary>
-    [JsonPropertyName("deviceType")]
-    public string? DeviceType { get; set; }
 }
 
 /// <summary></summary>
@@ -1015,6 +976,10 @@ public partial class V1beta1TaskDefinitionStatusAtProvider
     [JsonPropertyName("cpu")]
     public string? Cpu { get; set; }
 
+    /// <summary>Enables fault injection and allows for fault injection requests to be accepted from the task's containers. Default is false.</summary>
+    [JsonPropertyName("enableFaultInjection")]
+    public bool? EnableFaultInjection { get; set; }
+
     /// <summary>The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.</summary>
     [JsonPropertyName("ephemeralStorage")]
     public IList<V1beta1TaskDefinitionStatusAtProviderEphemeralStorage>? EphemeralStorage { get; set; }
@@ -1030,10 +995,6 @@ public partial class V1beta1TaskDefinitionStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
-
-    /// <summary>Configuration block(s) with Inference Accelerators settings. Detailed below.</summary>
-    [JsonPropertyName("inferenceAccelerator")]
-    public IList<V1beta1TaskDefinitionStatusAtProviderInferenceAccelerator>? InferenceAccelerator { get; set; }
 
     /// <summary>IPC resource namespace to be used for the containers in the task The valid values are host, task, and none.</summary>
     [JsonPropertyName("ipcMode")]
@@ -1058,6 +1019,10 @@ public partial class V1beta1TaskDefinitionStatusAtProvider
     /// <summary>Configuration block for the App Mesh proxy. Detailed below.</summary>
     [JsonPropertyName("proxyConfiguration")]
     public IList<V1beta1TaskDefinitionStatusAtProviderProxyConfiguration>? ProxyConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Set of launch types required by the task. The valid values are EC2 and FARGATE.</summary>
     [JsonPropertyName("requiresCompatibilities")]
@@ -1087,7 +1052,7 @@ public partial class V1beta1TaskDefinitionStatusAtProvider
     [JsonPropertyName("taskRoleArn")]
     public string? TaskRoleArn { get; set; }
 
-    /// <summary>Whether should track latest task definition or the one created with the resource. Default is false.</summary>
+    /// <summary>Whether should track latest ACTIVE task definition on AWS or the one created with the resource stored in state. Default is false. Useful in the event the task definition is modified outside of this resource.</summary>
     [JsonPropertyName("trackLatest")]
     public bool? TrackLatest { get; set; }
 

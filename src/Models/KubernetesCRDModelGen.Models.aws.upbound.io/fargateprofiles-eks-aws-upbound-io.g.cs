@@ -193,7 +193,7 @@ public partial class V1beta1FargateProfileSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProvider
 {
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -205,7 +205,7 @@ public partial class V1beta1FargateProfileSpecForProvider
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1FargateProfileSpecForProviderClusterNameSelector? ClusterNameSelector { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
     [JsonPropertyName("podExecutionRoleArn")]
     public string? PodExecutionRoleArn { get; set; }
 
@@ -217,7 +217,7 @@ public partial class V1beta1FargateProfileSpecForProvider
     [JsonPropertyName("podExecutionRoleArnSelector")]
     public V1beta1FargateProfileSpecForProviderPodExecutionRoleArnSelector? PodExecutionRoleArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -233,7 +233,7 @@ public partial class V1beta1FargateProfileSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1FargateProfileSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
+    /// <summary>Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -427,7 +427,7 @@ public partial class V1beta1FargateProfileSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecInitProvider
 {
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -439,7 +439,7 @@ public partial class V1beta1FargateProfileSpecInitProvider
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1FargateProfileSpecInitProviderClusterNameSelector? ClusterNameSelector { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
     [JsonPropertyName("podExecutionRoleArn")]
     public string? PodExecutionRoleArn { get; set; }
 
@@ -463,7 +463,7 @@ public partial class V1beta1FargateProfileSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1FargateProfileSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
+    /// <summary>Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -625,7 +625,7 @@ public partial class V1beta1FargateProfileStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -633,9 +633,13 @@ public partial class V1beta1FargateProfileStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.</summary>
     [JsonPropertyName("podExecutionRoleArn")]
     public string? PodExecutionRoleArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.</summary>
     [JsonPropertyName("selector")]
@@ -645,7 +649,7 @@ public partial class V1beta1FargateProfileStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>–  Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
+    /// <summary>Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: kubernetes.io/cluster/CLUSTER_NAME (where CLUSTER_NAME is replaced with the name of the EKS Cluster).</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 

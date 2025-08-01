@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -228,7 +228,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -236,7 +236,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -1330,7 +1330,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -1338,7 +1338,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -1547,7 +1547,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -1555,7 +1555,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -2518,6 +2518,9 @@ spec:
                         mskClusterArn:
                           description: The ARN of the Amazon MSK cluster.
                           type: string
+                        readFromTimestamp:
+                          description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
+                          type: string
                         topicName:
                           description: The topic name within the Amazon MSK cluster.
                           type: string
@@ -2674,7 +2677,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -2682,7 +2685,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -3426,7 +3429,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -3434,7 +3437,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -3842,7 +3845,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -3850,7 +3853,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -3949,7 +3952,10 @@ spec:
                               type: object
                           type: object
                         s3BackupConfiguration:
-                          description: The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+                          description: >-
+                            The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.
                           items:
                             properties:
                               bucketArn:
@@ -4407,13 +4413,13 @@ spec:
                             type: object
                           type: array
                         username:
-                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
                   region:
                     description: >-
-                      If you don't specify an AWS Region, the default is the current region.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -4522,7 +4528,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -4530,7 +4536,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -4894,7 +4900,7 @@ spec:
                           description: The Snowflake table name.
                           type: string
                         user:
-                          description: The user for authentication.
+                          description: The user for authentication. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
@@ -4965,7 +4971,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -4973,7 +4979,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -4983,7 +4989,10 @@ spec:
                           description: After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
                           type: number
                         s3BackupMode:
-                          description: Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+                          description: >-
+                            Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.
                           type: string
                         s3Configuration:
                           description: The S3 Configuration. See s3_configuration block below for details.
@@ -5257,7 +5266,7 @@ spec:
                   autoscaler.
                 properties:
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -5400,7 +5409,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -5408,7 +5417,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -6499,7 +6508,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -6507,7 +6516,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -6716,7 +6725,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -6724,7 +6733,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -7687,6 +7696,9 @@ spec:
                         mskClusterArn:
                           description: The ARN of the Amazon MSK cluster.
                           type: string
+                        readFromTimestamp:
+                          description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
+                          type: string
                         topicName:
                           description: The topic name within the Amazon MSK cluster.
                           type: string
@@ -7843,7 +7855,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -7851,7 +7863,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -8595,7 +8607,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -8603,7 +8615,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -9011,7 +9023,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -9019,7 +9031,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -9118,7 +9130,10 @@ spec:
                               type: object
                           type: object
                         s3BackupConfiguration:
-                          description: The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+                          description: >-
+                            The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.
                           items:
                             properties:
                               bucketArn:
@@ -9576,7 +9591,7 @@ spec:
                             type: object
                           type: array
                         username:
-                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
@@ -9685,7 +9700,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -9693,7 +9708,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -10057,7 +10072,7 @@ spec:
                           description: The Snowflake table name.
                           type: string
                         user:
-                          description: The user for authentication.
+                          description: The user for authentication. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
@@ -10128,7 +10143,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -10136,7 +10151,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -10146,7 +10161,10 @@ spec:
                           description: After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
                           type: number
                         s3BackupMode:
-                          description: Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+                          description: >-
+                            Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.
                           type: string
                         s3Configuration:
                           description: The S3 Configuration. See s3_configuration block below for details.
@@ -10617,7 +10635,7 @@ spec:
                     description: The Amazon Resource Name (ARN) specifying the Stream
                     type: string
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -10674,7 +10692,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -10682,7 +10700,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -10998,7 +11016,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11006,7 +11024,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -11112,7 +11130,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11120,7 +11138,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -11397,6 +11415,9 @@ spec:
                         mskClusterArn:
                           description: The ARN of the Amazon MSK cluster.
                           type: string
+                        readFromTimestamp:
+                          description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
+                          type: string
                         topicName:
                           description: The topic name within the Amazon MSK cluster.
                           type: string
@@ -11467,7 +11488,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11475,7 +11496,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -11613,7 +11634,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11621,7 +11642,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -11756,7 +11777,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11764,7 +11785,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -11777,7 +11798,10 @@ spec:
                           description: The arn of the role the stream assumes.
                           type: string
                         s3BackupConfiguration:
-                          description: The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+                          description: >-
+                            The configuration for backup in Amazon S3. Required if s3_backup_mode is Enabled. Supports the same fields as s3_configuration object.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if username and password are not provided.
                           items:
                             properties:
                               bucketArn:
@@ -11891,10 +11915,16 @@ spec:
                             type: object
                           type: array
                         username:
-                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+                          description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   serverSideEncryption:
                     description: Encrypt at rest options. See server_side_encryption block below for details.
                     items:
@@ -11966,7 +11996,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -11974,7 +12004,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -12080,7 +12110,7 @@ spec:
                           description: The Snowflake table name.
                           type: string
                         user:
-                          description: The user for authentication.
+                          description: The user for authentication. This value is required if secrets_manager_configuration is not provided.
                           type: string
                       type: object
                     type: array
@@ -12134,7 +12164,7 @@ spec:
                                       items:
                                         properties:
                                           parameterName:
-                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                            description: 'Parameter name. Valid Values: LambdaArn, NumberOfRetries, MetadataExtractionQuery, JsonParsingEngine, RoleArn, BufferSizeInMBs, BufferIntervalInSeconds, SubRecordType, Delimiter, CompressionFormat, DataMessageExtraction. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                             type: string
                                           parameterValue:
                                             description: Parameter value. Must be between 1 and 512 length (inclusive). When providing a Lambda ARN, you should specify the resource version as well.
@@ -12142,7 +12172,7 @@ spec:
                                         type: object
                                       type: array
                                     type:
-                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord. Validation is done against AWS SDK constants; so that values not explicitly listed may also work.'
+                                      description: 'The type of processor. Valid Values: RecordDeAggregation, Lambda, MetadataExtraction, AppendDelimiterToRecord, Decompression, CloudWatchLogProcessing. Validation is done against AWS SDK constants; so values not explicitly listed may also work.'
                                       type: string
                                   type: object
                                 type: array
@@ -12152,7 +12182,10 @@ spec:
                           description: After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
                           type: number
                         s3BackupMode:
-                          description: Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+                          description: >-
+                            Defines how documents should be delivered to Amazon S3.  Valid values are FailedEventsOnly and AllEvents.  Default value is FailedEventsOnly.
+
+                            secrets_manager_configuration -  The Secrets Manager configuration. See secrets_manager_configuration block below for details. This value is required if hec_token is not provided.
                           type: string
                         s3Configuration:
                           description: The S3 Configuration. See s3_configuration block below for details.
@@ -12369,7 +12402,7 @@ spec:
               forProvider:
                 properties:
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -14729,6 +14762,9 @@ spec:
                       mskClusterArn:
                         description: The ARN of the Amazon MSK cluster.
                         type: string
+                      readFromTimestamp:
+                        description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
+                        type: string
                       topicName:
                         description: The topic name within the Amazon MSK cluster.
                         type: string
@@ -16584,7 +16620,7 @@ spec:
                     type: object
                   region:
                     description: >-
-                      If you don't specify an AWS Region, the default is the current region.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -17401,7 +17437,7 @@ spec:
                   autoscaler.
                 properties:
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -19757,6 +19793,9 @@ spec:
                         type: object
                       mskClusterArn:
                         description: The ARN of the Amazon MSK cluster.
+                        type: string
+                      readFromTimestamp:
+                        description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
                         type: string
                       topicName:
                         description: The topic name within the Amazon MSK cluster.
@@ -22621,7 +22660,7 @@ spec:
                     description: The Amazon Resource Name (ARN) specifying the Stream
                     type: string
                   destination:
-                    description: –  This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
+                    description: This is the destination to where the data is delivered. The only options are s3 (Deprecated, use extended_s3 instead), extended_s3, redshift, elasticsearch, splunk, http_endpoint, opensearch, opensearchserverless and snowflake.
                     type: string
                   destinationId:
                     type: string
@@ -23328,6 +23367,9 @@ spec:
                       mskClusterArn:
                         description: The ARN of the Amazon MSK cluster.
                         type: string
+                      readFromTimestamp:
+                        description: The start date and time in UTC for the offset position within your MSK topic from where Firehose begins to read. By default, this is set to timestamp when Firehose becomes Active. If you want to create a Firehose stream with Earliest start position set the read_from_timestamp parameter to Epoch (1970-01-01T00:00:00Z).
+                        type: string
                       topicName:
                         description: The topic name within the Amazon MSK cluster.
                         type: string
@@ -23786,6 +23828,12 @@ spec:
                         description: The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions. This value is required if secrets_manager_configuration is not provided.
                         type: string
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   serverSideEncryption:
                     description: Encrypt at rest options. See server_side_encryption block below for details.
                     properties:

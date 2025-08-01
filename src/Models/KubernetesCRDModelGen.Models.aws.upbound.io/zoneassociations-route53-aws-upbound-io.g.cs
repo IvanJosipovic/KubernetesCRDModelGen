@@ -124,10 +124,6 @@ public partial class V1beta1ZoneAssociationSpecForProviderZoneIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ZoneAssociationSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The VPC to associate with the private hosted zone.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }

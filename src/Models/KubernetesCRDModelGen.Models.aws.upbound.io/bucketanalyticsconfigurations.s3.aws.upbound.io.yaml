@@ -192,7 +192,10 @@ spec:
                     description: Unique identifier of the analytics configuration for the bucket.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageClassAnalysis:
                     description: Configuration for the analytics data export (documented below).
@@ -815,6 +818,12 @@ spec:
                     type: string
                   name:
                     description: Unique identifier of the analytics configuration for the bucket.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageClassAnalysis:
                     description: Configuration for the analytics data export (documented below).
@@ -1095,7 +1104,10 @@ spec:
                     description: Unique identifier of the analytics configuration for the bucket.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageClassAnalysis:
                     description: Configuration for the analytics data export (documented below).
@@ -1698,6 +1710,12 @@ spec:
                     type: string
                   name:
                     description: Unique identifier of the analytics configuration for the bucket.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageClassAnalysis:
                     description: Configuration for the analytics data export (documented below).

@@ -346,6 +346,10 @@ public partial class V1beta1DefaultSubnetStatusAtProvider
     [JsonPropertyName("privateDnsHostnameTypeOnLaunch")]
     public string? PrivateDnsHostnameTypeOnLaunch { get; set; }
 
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }

@@ -38,7 +38,7 @@ public partial class V1beta1SigningProfileSpecForProvider
     [JsonPropertyName("platformId")]
     public string? PlatformId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -288,6 +288,10 @@ public partial class V1beta1SigningProfileStatusAtProvider
     /// <summary>The ID of the platform that is used by the target signing profile.</summary>
     [JsonPropertyName("platformId")]
     public string? PlatformId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Revocation information for a signing profile. See revocation_record Block below for details.</summary>
     [JsonPropertyName("revocationRecord")]

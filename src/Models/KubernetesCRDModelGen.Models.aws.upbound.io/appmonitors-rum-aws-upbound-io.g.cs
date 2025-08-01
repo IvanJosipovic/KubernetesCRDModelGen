@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.rum.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppMonitorSpecForProviderAppMonitorConfiguration
 {
-    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
+    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
     [JsonPropertyName("allowCookies")]
     public bool? AllowCookies { get; set; }
 
-    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
+    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
     [JsonPropertyName("enableXray")]
     public bool? EnableXray { get; set; }
 
@@ -70,15 +70,19 @@ public partial class V1beta1AppMonitorSpecForProvider
     [JsonPropertyName("customEvents")]
     public IList<V1beta1AppMonitorSpecForProviderCustomEvents>? CustomEvents { get; set; }
 
-    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
+    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
     [JsonPropertyName("cwLogEnabled")]
     public bool? CwLogEnabled { get; set; }
 
-    /// <summary>The top-level internet domain name for which your application has administrative authority.</summary>
+    /// <summary>The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
+    [JsonPropertyName("domainList")]
+    public IList<string>? DomainList { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -91,11 +95,11 @@ public partial class V1beta1AppMonitorSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppMonitorSpecInitProviderAppMonitorConfiguration
 {
-    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
+    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
     [JsonPropertyName("allowCookies")]
     public bool? AllowCookies { get; set; }
 
-    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
+    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
     [JsonPropertyName("enableXray")]
     public bool? EnableXray { get; set; }
 
@@ -149,13 +153,17 @@ public partial class V1beta1AppMonitorSpecInitProvider
     [JsonPropertyName("customEvents")]
     public IList<V1beta1AppMonitorSpecInitProviderCustomEvents>? CustomEvents { get; set; }
 
-    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
+    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
     [JsonPropertyName("cwLogEnabled")]
     public bool? CwLogEnabled { get; set; }
 
-    /// <summary>The top-level internet domain name for which your application has administrative authority.</summary>
+    /// <summary>The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
+
+    /// <summary>A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
+    [JsonPropertyName("domainList")]
+    public IList<string>? DomainList { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -298,11 +306,11 @@ public partial class V1beta1AppMonitorSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppMonitorStatusAtProviderAppMonitorConfiguration
 {
-    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
+    /// <summary>If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.</summary>
     [JsonPropertyName("allowCookies")]
     public bool? AllowCookies { get; set; }
 
-    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
+    /// <summary>If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.</summary>
     [JsonPropertyName("enableXray")]
     public bool? EnableXray { get; set; }
 
@@ -364,7 +372,7 @@ public partial class V1beta1AppMonitorStatusAtProvider
     [JsonPropertyName("customEvents")]
     public IList<V1beta1AppMonitorStatusAtProviderCustomEvents>? CustomEvents { get; set; }
 
-    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
+    /// <summary>Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.</summary>
     [JsonPropertyName("cwLogEnabled")]
     public bool? CwLogEnabled { get; set; }
 
@@ -372,13 +380,21 @@ public partial class V1beta1AppMonitorStatusAtProvider
     [JsonPropertyName("cwLogGroup")]
     public string? CwLogGroup { get; set; }
 
-    /// <summary>The top-level internet domain name for which your application has administrative authority.</summary>
+    /// <summary>The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
+
+    /// <summary>A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.</summary>
+    [JsonPropertyName("domainList")]
+    public IList<string>? DomainList { get; set; }
 
     /// <summary>The CloudWatch RUM name as it is the identifier of a RUM.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

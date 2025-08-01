@@ -161,7 +161,7 @@ public partial class V1beta1BotAssociationSpecForProvider
     [JsonPropertyName("lexBot")]
     public IList<V1beta1BotAssociationSpecForProviderLexBot>? LexBot { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -412,6 +412,10 @@ public partial class V1beta1BotAssociationStatusAtProvider
     /// <summary>Configuration information of an Amazon Lex (V1) bot. Detailed below.</summary>
     [JsonPropertyName("lexBot")]
     public IList<V1beta1BotAssociationStatusAtProviderLexBot>? LexBot { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

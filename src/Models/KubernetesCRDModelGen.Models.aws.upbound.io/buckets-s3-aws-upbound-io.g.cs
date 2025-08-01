@@ -20,7 +20,7 @@ public partial class V1beta1BucketSpecForProvider
     [JsonPropertyName("objectLockEnabled")]
     public bool? ObjectLockEnabled { get; set; }
 
-    /// <summary>AWS region this bucket resides in. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -611,6 +611,10 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("bucketDomainName")]
     public string? BucketDomainName { get; set; }
 
+    /// <summary>AWS region this bucket resides in.</summary>
+    [JsonPropertyName("bucketRegion")]
+    public string? BucketRegion { get; set; }
+
     /// <summary>The bucket region-specific domain name. The bucket domain name including the region name. Please refer to the S3 endpoints reference for format. Note: AWS CloudFront allows specifying an S3 region-specific endpoint when creating an S3 origin. This will prevent redirect issues from CloudFront to the S3 Origin URL. For more information, see the Virtual Hosted-Style Requests for Other Regions section in the AWS S3 User Guide.</summary>
     [JsonPropertyName("bucketRegionalDomainName")]
     public string? BucketRegionalDomainName { get; set; }
@@ -655,7 +659,7 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>AWS region this bucket resides in. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 

@@ -40,7 +40,7 @@ public partial class V1beta1TransitGatewaySpecForProvider
     [JsonPropertyName("multicastSupport")]
     public string? MulticastSupport { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -293,6 +293,10 @@ public partial class V1beta1TransitGatewayStatusAtProvider
     /// <summary>Identifier of the default propagation route table</summary>
     [JsonPropertyName("propagationDefaultRouteTableId")]
     public string? PropagationDefaultRouteTableId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable. Default value: disable.</summary>
     [JsonPropertyName("securityGroupReferencingSupport")]

@@ -370,7 +370,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   s3BucketName:
                     description: Name of the S3 bucket designated for publishing log files.
@@ -465,7 +468,7 @@ spec:
                     description: S3 key prefix that follows the name of the bucket you have designated for log file delivery.
                     type: string
                   snsTopicName:
-                    description: Name of the Amazon SNS topic defined for notification of log file delivery.
+                    description: Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.
                     type: string
                   tags:
                     additionalProperties:
@@ -876,7 +879,7 @@ spec:
                     description: S3 key prefix that follows the name of the bucket you have designated for log file delivery.
                     type: string
                   snsTopicName:
-                    description: Name of the Amazon SNS topic defined for notification of log file delivery.
+                    description: Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.
                     type: string
                   tags:
                     additionalProperties:
@@ -1220,14 +1223,23 @@ spec:
                   kmsKeyId:
                     description: KMS key ARN to use to encrypt the logs delivered by CloudTrail.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   s3BucketName:
                     description: Name of the S3 bucket designated for publishing log files.
                     type: string
                   s3KeyPrefix:
                     description: S3 key prefix that follows the name of the bucket you have designated for log file delivery.
                     type: string
+                  snsTopicArn:
+                    description: ARN of the Amazon SNS topic that CloudTrail uses to send notifications when log files are delivered.
+                    type: string
                   snsTopicName:
-                    description: Name of the Amazon SNS topic defined for notification of log file delivery.
+                    description: Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.
                     type: string
                   tags:
                     additionalProperties:

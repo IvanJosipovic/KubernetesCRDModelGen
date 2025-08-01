@@ -68,7 +68,7 @@ public partial class V1beta1IdentityProviderConfigSpecForProviderClusterNameSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderConfigSpecForProviderOidc
 {
-    /// <summary>–  Client ID for the OpenID Connect identity provider.</summary>
+    /// <summary>Client ID for the OpenID Connect identity provider.</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
@@ -101,7 +101,7 @@ public partial class V1beta1IdentityProviderConfigSpecForProviderOidc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderConfigSpecForProvider
 {
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -117,7 +117,7 @@ public partial class V1beta1IdentityProviderConfigSpecForProvider
     [JsonPropertyName("oidc")]
     public IList<V1beta1IdentityProviderConfigSpecForProviderOidc>? Oidc { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -186,7 +186,7 @@ public partial class V1beta1IdentityProviderConfigSpecInitProviderClusterNameSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderConfigSpecInitProviderOidc
 {
-    /// <summary>–  Client ID for the OpenID Connect identity provider.</summary>
+    /// <summary>Client ID for the OpenID Connect identity provider.</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
@@ -219,7 +219,7 @@ public partial class V1beta1IdentityProviderConfigSpecInitProviderOidc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderConfigSpecInitProvider
 {
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -376,7 +376,7 @@ public partial class V1beta1IdentityProviderConfigSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderConfigStatusAtProviderOidc
 {
-    /// <summary>–  Client ID for the OpenID Connect identity provider.</summary>
+    /// <summary>Client ID for the OpenID Connect identity provider.</summary>
     [JsonPropertyName("clientId")]
     public string? ClientId { get; set; }
 
@@ -413,7 +413,7 @@ public partial class V1beta1IdentityProviderConfigStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -424,6 +424,10 @@ public partial class V1beta1IdentityProviderConfigStatusAtProvider
     /// <summary>Nested attribute containing OpenID Connect identity provider information for the cluster. Detailed below.</summary>
     [JsonPropertyName("oidc")]
     public IList<V1beta1IdentityProviderConfigStatusAtProviderOidc>? Oidc { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Status of the EKS Identity Provider Configuration.</summary>
     [JsonPropertyName("status")]

@@ -132,7 +132,7 @@ public partial class V1beta1EventSubscriptionSpecForProvider
     [JsonPropertyName("eventCategories")]
     public IList<string>? EventCategories { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -481,6 +481,10 @@ public partial class V1beta1EventSubscriptionStatusAtProvider
     /// <summary>The name of the DocumentDB event notification subscription</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name of the DocumentDB event notification subscription</summary>
     [JsonPropertyName("snsTopicArn")]

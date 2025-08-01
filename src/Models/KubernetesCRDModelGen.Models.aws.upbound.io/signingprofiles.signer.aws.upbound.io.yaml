@@ -88,7 +88,10 @@ spec:
                     description: The ID of the platform that is used by the target signing profile.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   signatureValidityPeriod:
                     description: The validity period for a signing job. See signature_validity_period Block below for details.
@@ -399,6 +402,12 @@ spec:
                     type: string
                   platformId:
                     description: The ID of the platform that is used by the target signing profile.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   revocationRecord:
                     description: Revocation information for a signing profile. See revocation_record Block below for details.
@@ -595,7 +604,10 @@ spec:
                     description: The ID of the platform that is used by the target signing profile.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   signatureValidityPeriod:
                     description: The validity period for a signing job. See signature_validity_period Block below for details.
@@ -898,6 +910,12 @@ spec:
                     type: string
                   platformId:
                     description: The ID of the platform that is used by the target signing profile.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   revocationRecord:
                     description: Revocation information for a signing profile. See revocation_record Block below for details.

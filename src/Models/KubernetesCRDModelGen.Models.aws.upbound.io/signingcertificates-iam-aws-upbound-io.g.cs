@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningCertificateSpecForProvider
 {
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the signing certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
-    /// <summary>–   The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
+    /// <summary>The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>–  The name of the user the signing certificate is for.</summary>
+    /// <summary>The name of the user the signing certificate is for.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
@@ -29,15 +29,15 @@ public partial class V1beta1SigningCertificateSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningCertificateSpecInitProvider
 {
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the signing certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
-    /// <summary>–   The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
+    /// <summary>The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>–  The name of the user the signing certificate is for.</summary>
+    /// <summary>The name of the user the signing certificate is for.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }
@@ -178,7 +178,7 @@ public partial class V1beta1SigningCertificateSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningCertificateStatusAtProvider
 {
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the signing certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
@@ -190,11 +190,11 @@ public partial class V1beta1SigningCertificateStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–   The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
+    /// <summary>The status you want to assign to the certificate. Active means that the certificate can be used for programmatic calls to Amazon Web Services Inactive means that the certificate cannot be used.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>–  The name of the user the signing certificate is for.</summary>
+    /// <summary>The name of the user the signing certificate is for.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 }

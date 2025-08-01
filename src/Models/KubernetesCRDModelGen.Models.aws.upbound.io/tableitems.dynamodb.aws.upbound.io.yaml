@@ -94,7 +94,10 @@ spec:
                     description: Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tableName:
                     description: Name of the table to contain the item.
@@ -537,6 +540,12 @@ spec:
                     type: string
                   rangeKey:
                     description: Range key to use for lookups and identification of the item. Required if there is range key defined in the table.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tableName:
                     description: Name of the table to contain the item.

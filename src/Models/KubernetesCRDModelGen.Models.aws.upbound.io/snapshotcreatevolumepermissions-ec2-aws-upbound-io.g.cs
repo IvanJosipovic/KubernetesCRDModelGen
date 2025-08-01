@@ -72,7 +72,7 @@ public partial class V1beta1SnapshotCreateVolumePermissionSpecForProvider
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1SnapshotCreateVolumePermissionStatusAtProvider
     /// <summary>A combination of "snapshot_id-account_id".</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A snapshot ID</summary>
     [JsonPropertyName("snapshotId")]

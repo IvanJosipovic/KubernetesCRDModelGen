@@ -40,7 +40,7 @@ public partial class V1beta1HostSpecForProvider
     [JsonPropertyName("outpostArn")]
     public string? OutpostArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -261,6 +261,10 @@ public partial class V1beta1HostStatusAtProvider
     /// <summary>The ID of the AWS account that owns the Dedicated Host.</summary>
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

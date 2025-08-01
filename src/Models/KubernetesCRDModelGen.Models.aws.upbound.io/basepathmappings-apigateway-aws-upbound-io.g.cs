@@ -212,7 +212,7 @@ public partial class V1beta1BasePathMappingSpecForProvider
     [JsonPropertyName("domainNameSelector")]
     public V1beta1BasePathMappingSpecForProviderDomainNameSelector? DomainNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -601,6 +601,10 @@ public partial class V1beta1BasePathMappingStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Name of a specific deployment stage to expose at the given path. If omitted, callers may select any stage by including its name as a path element after the base path.</summary>
     [JsonPropertyName("stageName")]

@@ -153,7 +153,7 @@ public partial class V1beta1CertificateAuthoritySpecForProvider
     [JsonPropertyName("permanentDeletionTimeInDays")]
     public double? PermanentDeletionTimeInDays { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -640,6 +640,10 @@ public partial class V1beta1CertificateAuthorityStatusAtProvider
     /// <summary>Number of days to make a CA restorable after it has been deleted, must be between 7 to 30 days, with default to 30 days.</summary>
     [JsonPropertyName("permanentDeletionTimeInDays")]
     public double? PermanentDeletionTimeInDays { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Nested argument containing revocation configuration. Defined below.</summary>
     [JsonPropertyName("revocationConfiguration")]

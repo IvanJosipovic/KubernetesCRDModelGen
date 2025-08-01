@@ -68,7 +68,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailure
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -141,7 +141,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -158,11 +158,11 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfig
 {
-    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 
-    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
     [JsonPropertyName("onSuccess")]
     public IList<V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
@@ -171,11 +171,11 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProviderDestinationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
 {
-    /// <summary>Configuration block with destination configuration. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration. See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1FunctionEventInvokeConfigSpecForProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</summary>
+    /// <summary>Name or ARN of the Lambda Function, omitting any version or alias qualifier.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -191,7 +191,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecForProvider
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -256,7 +256,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailure
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -329,7 +329,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -346,11 +346,11 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfig
 {
-    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 
-    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
     [JsonPropertyName("onSuccess")]
     public IList<V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
@@ -359,11 +359,11 @@ public partial class V1beta1FunctionEventInvokeConfigSpecInitProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigSpecInitProvider
 {
-    /// <summary>Configuration block with destination configuration. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration. See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1FunctionEventInvokeConfigSpecInitProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</summary>
+    /// <summary>Name or ARN of the Lambda Function, omitting any version or alias qualifier.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -516,7 +516,7 @@ public partial class V1beta1FunctionEventInvokeConfigSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnFailure
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
@@ -525,7 +525,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess
 {
-    /// <summary>Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
+    /// <summary>ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 }
@@ -534,11 +534,11 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfig
 {
-    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for failed asynchronous invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 
-    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration for successful asynchronous invocations. See below.</summary>
     [JsonPropertyName("onSuccess")]
     public IList<V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfigOnSuccess>? OnSuccess { get; set; }
 }
@@ -547,15 +547,15 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProviderDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
 {
-    /// <summary>Configuration block with destination configuration. See below for details.</summary>
+    /// <summary>Configuration block with destination configuration. See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1FunctionEventInvokeConfigStatusAtProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.</summary>
+    /// <summary>Name or ARN of the Lambda Function, omitting any version or alias qualifier.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
-    /// <summary>Fully qualified Lambda Function name or Amazon Resource Name (ARN)</summary>
+    /// <summary>Fully qualified Lambda Function name or ARN.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -570,6 +570,10 @@ public partial class V1beta1FunctionEventInvokeConfigStatusAtProvider
     /// <summary>Lambda Function published version, $LATEST, or Lambda Alias name.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -618,7 +622,7 @@ public partial class V1beta1FunctionEventInvokeConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.</summary>
+/// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FunctionEventInvokeConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionEventInvokeConfigSpec>, IStatus<V1beta1FunctionEventInvokeConfigStatus>
@@ -648,7 +652,7 @@ public partial class V1beta1FunctionEventInvokeConfig : IKubernetesObject<V1Obje
     public V1beta1FunctionEventInvokeConfigStatus? Status { get; set; }
 }
 
-/// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.</summary>
+/// <summary>FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FunctionEventInvokeConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionEventInvokeConfig>

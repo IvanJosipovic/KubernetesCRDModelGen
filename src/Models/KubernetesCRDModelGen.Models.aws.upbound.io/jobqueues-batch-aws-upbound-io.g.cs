@@ -170,10 +170,6 @@ public partial class V1beta1JobQueueSpecForProvider
     [JsonPropertyName("computeEnvironmentOrder")]
     public IList<V1beta1JobQueueSpecForProviderComputeEnvironmentOrder>? ComputeEnvironmentOrder { get; set; }
 
-    /// <summary>(Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.</summary>
-    [JsonPropertyName("computeEnvironments")]
-    public IList<string>? ComputeEnvironments { get; set; }
-
     /// <summary>The set of job state time limit actions mapped to a job queue. Specifies an action that AWS Batch will take after the job has remained at the head of the queue in the specified state for longer than the specified time.</summary>
     [JsonPropertyName("jobStateTimeLimitAction")]
     public IList<V1beta1JobQueueSpecForProviderJobStateTimeLimitAction>? JobStateTimeLimitAction { get; set; }
@@ -182,7 +178,7 @@ public partial class V1beta1JobQueueSpecForProvider
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -368,10 +364,6 @@ public partial class V1beta1JobQueueSpecInitProvider
     /// <summary>The set of compute environments mapped to a job queue and their order relative to each other. The job scheduler uses this parameter to determine which compute environment runs a specific job. Compute environments must be in the VALID state before you can associate them with a job queue. You can associate up to three compute environments with a job queue.</summary>
     [JsonPropertyName("computeEnvironmentOrder")]
     public IList<V1beta1JobQueueSpecInitProviderComputeEnvironmentOrder>? ComputeEnvironmentOrder { get; set; }
-
-    /// <summary>(Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.</summary>
-    [JsonPropertyName("computeEnvironments")]
-    public IList<string>? ComputeEnvironments { get; set; }
 
     /// <summary>The set of job state time limit actions mapped to a job queue. Specifies an action that AWS Batch will take after the job has remained at the head of the queue in the specified state for longer than the specified time.</summary>
     [JsonPropertyName("jobStateTimeLimitAction")]
@@ -580,10 +572,6 @@ public partial class V1beta1JobQueueStatusAtProvider
     [JsonPropertyName("computeEnvironmentOrder")]
     public IList<V1beta1JobQueueStatusAtProviderComputeEnvironmentOrder>? ComputeEnvironmentOrder { get; set; }
 
-    /// <summary>(Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.</summary>
-    [JsonPropertyName("computeEnvironments")]
-    public IList<string>? ComputeEnvironments { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -595,6 +583,10 @@ public partial class V1beta1JobQueueStatusAtProvider
     /// <summary>The priority of the job queue. Job queues with a higher priority are evaluated first when associated with the same compute environment.</summary>
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn't specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can't remove the fair share scheduling policy.</summary>
     [JsonPropertyName("schedulingPolicyArn")]

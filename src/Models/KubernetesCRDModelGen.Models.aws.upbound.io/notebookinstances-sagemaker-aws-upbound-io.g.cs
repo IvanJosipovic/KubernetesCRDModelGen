@@ -245,10 +245,6 @@ public partial class V1beta1NotebookInstanceSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecForProvider
 {
-    /// <summary>A list of Elastic Inference (EI) instance types to associate with this notebook instance. See Elastic Inference Accelerator for more details. Valid values: ml.eia1.medium, ml.eia1.large, ml.eia1.xlarge, ml.eia2.medium, ml.eia2.large, ml.eia2.xlarge.</summary>
-    [JsonPropertyName("acceleratorTypes")]
-    public IList<string>? AcceleratorTypes { get; set; }
-
     /// <summary>An array of up to three Git repositories to associate with the notebook instance. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in AWS CodeCommit or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.</summary>
     [JsonPropertyName("additionalCodeRepositories")]
     public IList<string>? AdditionalCodeRepositories { get; set; }
@@ -265,7 +261,7 @@ public partial class V1beta1NotebookInstanceSpecForProvider
     [JsonPropertyName("defaultCodeRepositorySelector")]
     public V1beta1NotebookInstanceSpecForProviderDefaultCodeRepositorySelector? DefaultCodeRepositorySelector { get; set; }
 
-    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
+    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker AI training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
     [JsonPropertyName("directInternetAccess")]
     public string? DirectInternetAccess { get; set; }
 
@@ -277,7 +273,7 @@ public partial class V1beta1NotebookInstanceSpecForProvider
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -293,15 +289,15 @@ public partial class V1beta1NotebookInstanceSpecForProvider
     [JsonPropertyName("lifecycleConfigName")]
     public string? LifecycleConfigName { get; set; }
 
-    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, or  notebook-al2-v2, depending on which version of Amazon Linux you require.</summary>
+    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, notebook-al2-v2, or notebook-al2-v3, depending on which version of Amazon Linux you require.</summary>
     [JsonPropertyName("platformIdentifier")]
     public string? PlatformIdentifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.</summary>
+    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker AI to call other services on your behalf.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -579,10 +575,6 @@ public partial class V1beta1NotebookInstanceSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecInitProvider
 {
-    /// <summary>A list of Elastic Inference (EI) instance types to associate with this notebook instance. See Elastic Inference Accelerator for more details. Valid values: ml.eia1.medium, ml.eia1.large, ml.eia1.xlarge, ml.eia2.medium, ml.eia2.large, ml.eia2.xlarge.</summary>
-    [JsonPropertyName("acceleratorTypes")]
-    public IList<string>? AcceleratorTypes { get; set; }
-
     /// <summary>An array of up to three Git repositories to associate with the notebook instance. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in AWS CodeCommit or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.</summary>
     [JsonPropertyName("additionalCodeRepositories")]
     public IList<string>? AdditionalCodeRepositories { get; set; }
@@ -599,7 +591,7 @@ public partial class V1beta1NotebookInstanceSpecInitProvider
     [JsonPropertyName("defaultCodeRepositorySelector")]
     public V1beta1NotebookInstanceSpecInitProviderDefaultCodeRepositorySelector? DefaultCodeRepositorySelector { get; set; }
 
-    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
+    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker AI training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
     [JsonPropertyName("directInternetAccess")]
     public string? DirectInternetAccess { get; set; }
 
@@ -611,7 +603,7 @@ public partial class V1beta1NotebookInstanceSpecInitProvider
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -627,11 +619,11 @@ public partial class V1beta1NotebookInstanceSpecInitProvider
     [JsonPropertyName("lifecycleConfigName")]
     public string? LifecycleConfigName { get; set; }
 
-    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, or  notebook-al2-v2, depending on which version of Amazon Linux you require.</summary>
+    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, notebook-al2-v2, or notebook-al2-v3, depending on which version of Amazon Linux you require.</summary>
     [JsonPropertyName("platformIdentifier")]
     public string? PlatformIdentifier { get; set; }
 
-    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.</summary>
+    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker AI to call other services on your behalf.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -817,10 +809,6 @@ public partial class V1beta1NotebookInstanceStatusAtProviderInstanceMetadataServ
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceStatusAtProvider
 {
-    /// <summary>A list of Elastic Inference (EI) instance types to associate with this notebook instance. See Elastic Inference Accelerator for more details. Valid values: ml.eia1.medium, ml.eia1.large, ml.eia1.xlarge, ml.eia2.medium, ml.eia2.large, ml.eia2.xlarge.</summary>
-    [JsonPropertyName("acceleratorTypes")]
-    public IList<string>? AcceleratorTypes { get; set; }
-
     /// <summary>An array of up to three Git repositories to associate with the notebook instance. These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in AWS CodeCommit or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.</summary>
     [JsonPropertyName("additionalCodeRepositories")]
     public IList<string>? AdditionalCodeRepositories { get; set; }
@@ -833,7 +821,7 @@ public partial class V1beta1NotebookInstanceStatusAtProvider
     [JsonPropertyName("defaultCodeRepository")]
     public string? DefaultCodeRepository { get; set; }
 
-    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
+    /// <summary>Set to Disabled to disable internet access to notebook. Requires security_groups and subnet_id to be set. Supported values: Enabled (Default) or Disabled. If set to Disabled, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker AI training and endpoint services unless your configure a NAT Gateway in your VPC.</summary>
     [JsonPropertyName("directInternetAccess")]
     public string? DirectInternetAccess { get; set; }
 
@@ -849,7 +837,7 @@ public partial class V1beta1NotebookInstanceStatusAtProvider
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -857,15 +845,19 @@ public partial class V1beta1NotebookInstanceStatusAtProvider
     [JsonPropertyName("lifecycleConfigName")]
     public string? LifecycleConfigName { get; set; }
 
-    /// <summary>The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting subnet_id.</summary>
+    /// <summary>The network interface ID that Amazon SageMaker AI created at the time of creating the instance. Only available when setting subnet_id.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 
-    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, or  notebook-al2-v2, depending on which version of Amazon Linux you require.</summary>
+    /// <summary>The platform identifier of the notebook instance runtime environment. This value can be either notebook-al1-v1, notebook-al2-v1, notebook-al2-v2, or notebook-al2-v3, depending on which version of Amazon Linux you require.</summary>
     [JsonPropertyName("platformIdentifier")]
     public string? PlatformIdentifier { get; set; }
 
-    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The ARN of the IAM role to be used by the notebook instance which allows SageMaker AI to call other services on your behalf.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -944,7 +936,7 @@ public partial class V1beta1NotebookInstanceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker Notebook Instance resource.</summary>
+/// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker AI Notebook Instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NotebookInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NotebookInstanceSpec>, IStatus<V1beta1NotebookInstanceStatus>
@@ -974,7 +966,7 @@ public partial class V1beta1NotebookInstance : IKubernetesObject<V1ObjectMeta>, 
     public V1beta1NotebookInstanceStatus? Status { get; set; }
 }
 
-/// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker Notebook Instance resource.</summary>
+/// <summary>NotebookInstance is the Schema for the NotebookInstances API. Provides a SageMaker AI Notebook Instance resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1NotebookInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstance>

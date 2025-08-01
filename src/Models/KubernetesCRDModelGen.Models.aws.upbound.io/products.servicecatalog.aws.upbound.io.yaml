@@ -100,7 +100,7 @@ spec:
                     description: Owner of the product.
                     type: string
                   provisioningArtifactParameters:
-                    description: Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+                    description: Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.
                     items:
                       properties:
                         description:
@@ -124,7 +124,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   supportDescription:
                     description: Support information about the product.
@@ -185,7 +188,7 @@ spec:
                     description: Owner of the product.
                     type: string
                   provisioningArtifactParameters:
-                    description: Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+                    description: Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.
                     items:
                       properties:
                         description:
@@ -477,7 +480,7 @@ spec:
                     description: Owner of the product.
                     type: string
                   provisioningArtifactParameters:
-                    description: Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
+                    description: Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.
                     items:
                       properties:
                         description:
@@ -500,6 +503,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   status:
                     description: Status of the product.
                     type: string
@@ -699,7 +708,10 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   supportDescription:
                     description: Support information about the product.
@@ -1071,6 +1083,12 @@ spec:
                         description: Type of provisioning artifact. See AWS Docs for valid list of values.
                         type: string
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   status:
                     description: Status of the product.
                     type: string

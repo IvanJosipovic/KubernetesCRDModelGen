@@ -12,27 +12,27 @@ namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLSpecForProviderCors
 {
-    /// <summary>Whether to allow cookies or other credentials in requests to the function URL. The default is false.</summary>
+    /// <summary>Whether to allow cookies or other credentials in requests to the function URL.</summary>
     [JsonPropertyName("allowCredentials")]
     public bool? AllowCredentials { get; set; }
 
-    /// <summary>The HTTP headers that origins can include in requests to the function URL. For example: ["date", "keep-alive", "x-custom-header"].</summary>
+    /// <summary>HTTP headers that origins can include in requests to the function URL.</summary>
     [JsonPropertyName("allowHeaders")]
     public IList<string>? AllowHeaders { get; set; }
 
-    /// <summary>The HTTP methods that are allowed when calling the function URL. For example: ["GET", "POST", "DELETE"], or the wildcard character (["*"]).</summary>
+    /// <summary>HTTP methods that are allowed when calling the function URL.</summary>
     [JsonPropertyName("allowMethods")]
     public IList<string>? AllowMethods { get; set; }
 
-    /// <summary>The origins that can access the function URL. You can list any number of specific origins (or the wildcard character ("*")), separated by a comma. For example: ["https://www.example.com", "http://localhost:60905"].</summary>
+    /// <summary>Origins that can access the function URL.</summary>
     [JsonPropertyName("allowOrigins")]
     public IList<string>? AllowOrigins { get; set; }
 
-    /// <summary>The HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
+    /// <summary>HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
     [JsonPropertyName("exposeHeaders")]
     public IList<string>? ExposeHeaders { get; set; }
 
-    /// <summary>The maximum amount of time, in seconds, that web browsers can cache results of a preflight request. By default, this is set to 0, which means that the browser doesn't cache results. The maximum value is 86400.</summary>
+    /// <summary>Maximum amount of time, in seconds, that web browsers can cache results of a preflight request. Maximum value is 86400.</summary>
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
@@ -97,15 +97,15 @@ public partial class V1beta1FunctionURLSpecForProviderFunctionNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLSpecForProvider
 {
-    /// <summary>The type of authentication that the function URL uses. Set to "AWS_IAM" to restrict access to authenticated IAM users only. Set to "NONE" to bypass IAM authentication and create a public endpoint. See the AWS documentation for more details.</summary>
+    /// <summary>Type of authentication that the function URL uses. Valid values are AWS_IAM and NONE.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>The cross-origin resource sharing (CORS) settings for the function URL. Documented below.</summary>
+    /// <summary>Cross-origin resource sharing (CORS) settings for the function URL. See below.</summary>
     [JsonPropertyName("cors")]
     public IList<V1beta1FunctionURLSpecForProviderCors>? Cors { get; set; }
 
-    /// <summary>The name (or ARN) of the Lambda function.</summary>
+    /// <summary>Name or ARN of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -117,15 +117,15 @@ public partial class V1beta1FunctionURLSpecForProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1FunctionURLSpecForProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>Determines how the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM. See more in Configuring a Lambda function to stream responses.</summary>
+    /// <summary>How the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM.</summary>
     [JsonPropertyName("invokeMode")]
     public string? InvokeMode { get; set; }
 
-    /// <summary>The alias name or "$LATEST".</summary>
+    /// <summary>Alias name or $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -134,27 +134,27 @@ public partial class V1beta1FunctionURLSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLSpecInitProviderCors
 {
-    /// <summary>Whether to allow cookies or other credentials in requests to the function URL. The default is false.</summary>
+    /// <summary>Whether to allow cookies or other credentials in requests to the function URL.</summary>
     [JsonPropertyName("allowCredentials")]
     public bool? AllowCredentials { get; set; }
 
-    /// <summary>The HTTP headers that origins can include in requests to the function URL. For example: ["date", "keep-alive", "x-custom-header"].</summary>
+    /// <summary>HTTP headers that origins can include in requests to the function URL.</summary>
     [JsonPropertyName("allowHeaders")]
     public IList<string>? AllowHeaders { get; set; }
 
-    /// <summary>The HTTP methods that are allowed when calling the function URL. For example: ["GET", "POST", "DELETE"], or the wildcard character (["*"]).</summary>
+    /// <summary>HTTP methods that are allowed when calling the function URL.</summary>
     [JsonPropertyName("allowMethods")]
     public IList<string>? AllowMethods { get; set; }
 
-    /// <summary>The origins that can access the function URL. You can list any number of specific origins (or the wildcard character ("*")), separated by a comma. For example: ["https://www.example.com", "http://localhost:60905"].</summary>
+    /// <summary>Origins that can access the function URL.</summary>
     [JsonPropertyName("allowOrigins")]
     public IList<string>? AllowOrigins { get; set; }
 
-    /// <summary>The HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
+    /// <summary>HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
     [JsonPropertyName("exposeHeaders")]
     public IList<string>? ExposeHeaders { get; set; }
 
-    /// <summary>The maximum amount of time, in seconds, that web browsers can cache results of a preflight request. By default, this is set to 0, which means that the browser doesn't cache results. The maximum value is 86400.</summary>
+    /// <summary>Maximum amount of time, in seconds, that web browsers can cache results of a preflight request. Maximum value is 86400.</summary>
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
@@ -219,15 +219,15 @@ public partial class V1beta1FunctionURLSpecInitProviderFunctionNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLSpecInitProvider
 {
-    /// <summary>The type of authentication that the function URL uses. Set to "AWS_IAM" to restrict access to authenticated IAM users only. Set to "NONE" to bypass IAM authentication and create a public endpoint. See the AWS documentation for more details.</summary>
+    /// <summary>Type of authentication that the function URL uses. Valid values are AWS_IAM and NONE.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>The cross-origin resource sharing (CORS) settings for the function URL. Documented below.</summary>
+    /// <summary>Cross-origin resource sharing (CORS) settings for the function URL. See below.</summary>
     [JsonPropertyName("cors")]
     public IList<V1beta1FunctionURLSpecInitProviderCors>? Cors { get; set; }
 
-    /// <summary>The name (or ARN) of the Lambda function.</summary>
+    /// <summary>Name or ARN of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -239,11 +239,11 @@ public partial class V1beta1FunctionURLSpecInitProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1FunctionURLSpecInitProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>Determines how the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM. See more in Configuring a Lambda function to stream responses.</summary>
+    /// <summary>How the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM.</summary>
     [JsonPropertyName("invokeMode")]
     public string? InvokeMode { get; set; }
 
-    /// <summary>The alias name or "$LATEST".</summary>
+    /// <summary>Alias name or $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 }
@@ -384,27 +384,27 @@ public partial class V1beta1FunctionURLSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLStatusAtProviderCors
 {
-    /// <summary>Whether to allow cookies or other credentials in requests to the function URL. The default is false.</summary>
+    /// <summary>Whether to allow cookies or other credentials in requests to the function URL.</summary>
     [JsonPropertyName("allowCredentials")]
     public bool? AllowCredentials { get; set; }
 
-    /// <summary>The HTTP headers that origins can include in requests to the function URL. For example: ["date", "keep-alive", "x-custom-header"].</summary>
+    /// <summary>HTTP headers that origins can include in requests to the function URL.</summary>
     [JsonPropertyName("allowHeaders")]
     public IList<string>? AllowHeaders { get; set; }
 
-    /// <summary>The HTTP methods that are allowed when calling the function URL. For example: ["GET", "POST", "DELETE"], or the wildcard character (["*"]).</summary>
+    /// <summary>HTTP methods that are allowed when calling the function URL.</summary>
     [JsonPropertyName("allowMethods")]
     public IList<string>? AllowMethods { get; set; }
 
-    /// <summary>The origins that can access the function URL. You can list any number of specific origins (or the wildcard character ("*")), separated by a comma. For example: ["https://www.example.com", "http://localhost:60905"].</summary>
+    /// <summary>Origins that can access the function URL.</summary>
     [JsonPropertyName("allowOrigins")]
     public IList<string>? AllowOrigins { get; set; }
 
-    /// <summary>The HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
+    /// <summary>HTTP headers in your function response that you want to expose to origins that call the function URL.</summary>
     [JsonPropertyName("exposeHeaders")]
     public IList<string>? ExposeHeaders { get; set; }
 
-    /// <summary>The maximum amount of time, in seconds, that web browsers can cache results of a preflight request. By default, this is set to 0, which means that the browser doesn't cache results. The maximum value is 86400.</summary>
+    /// <summary>Maximum amount of time, in seconds, that web browsers can cache results of a preflight request. Maximum value is 86400.</summary>
     [JsonPropertyName("maxAge")]
     public double? MaxAge { get; set; }
 }
@@ -413,23 +413,23 @@ public partial class V1beta1FunctionURLStatusAtProviderCors
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLStatusAtProvider
 {
-    /// <summary>The type of authentication that the function URL uses. Set to "AWS_IAM" to restrict access to authenticated IAM users only. Set to "NONE" to bypass IAM authentication and create a public endpoint. See the AWS documentation for more details.</summary>
+    /// <summary>Type of authentication that the function URL uses. Valid values are AWS_IAM and NONE.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>The cross-origin resource sharing (CORS) settings for the function URL. Documented below.</summary>
+    /// <summary>Cross-origin resource sharing (CORS) settings for the function URL. See below.</summary>
     [JsonPropertyName("cors")]
     public IList<V1beta1FunctionURLStatusAtProviderCors>? Cors { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the function.</summary>
+    /// <summary>ARN of the Lambda function.</summary>
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 
-    /// <summary>The name (or ARN) of the Lambda function.</summary>
+    /// <summary>Name or ARN of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
-    /// <summary>The HTTP URL endpoint for the function in the format https://&lt;url_id&gt;.lambda-url.&lt;region&gt;.on.aws/.</summary>
+    /// <summary>HTTP URL endpoint for the function in the format https://&lt;url_id&gt;.lambda-url.&lt;region&gt;.on.aws/.</summary>
     [JsonPropertyName("functionUrl")]
     public string? FunctionUrl { get; set; }
 
@@ -437,15 +437,19 @@ public partial class V1beta1FunctionURLStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Determines how the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM. See more in Configuring a Lambda function to stream responses.</summary>
+    /// <summary>How the Lambda function responds to an invocation. Valid values are BUFFERED (default) and RESPONSE_STREAM.</summary>
     [JsonPropertyName("invokeMode")]
     public string? InvokeMode { get; set; }
 
-    /// <summary>The alias name or "$LATEST".</summary>
+    /// <summary>Alias name or $LATEST.</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>A generated ID for the endpoint.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Generated ID for the endpoint.</summary>
     [JsonPropertyName("urlId")]
     public string? UrlId { get; set; }
 }
@@ -496,7 +500,7 @@ public partial class V1beta1FunctionURLStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>FunctionURL is the Schema for the FunctionURLs API. Provides a Lambda function URL resource.</summary>
+/// <summary>FunctionURL is the Schema for the FunctionURLs API. Manages a Lambda function URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FunctionURL : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FunctionURLSpec>, IStatus<V1beta1FunctionURLStatus>
@@ -526,7 +530,7 @@ public partial class V1beta1FunctionURL : IKubernetesObject<V1ObjectMeta>, ISpec
     public V1beta1FunctionURLStatus? Status { get; set; }
 }
 
-/// <summary>FunctionURL is the Schema for the FunctionURLs API. Provides a Lambda function URL resource.</summary>
+/// <summary>FunctionURL is the Schema for the FunctionURLs API. Manages a Lambda function URL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FunctionURLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionURL>

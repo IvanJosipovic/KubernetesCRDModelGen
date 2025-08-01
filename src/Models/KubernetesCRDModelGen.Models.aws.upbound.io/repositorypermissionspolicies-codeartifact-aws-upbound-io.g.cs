@@ -148,7 +148,7 @@ public partial class V1beta1RepositoryPermissionsPolicySpecForProvider
     [JsonPropertyName("policyRevision")]
     public string? PolicyRevision { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1beta1RepositoryPermissionsPolicyStatusAtProvider
     /// <summary>The current revision of the resource policy to be set. This revision is used for optimistic locking, which prevents others from overwriting your changes to the domain's resource policy.</summary>
     [JsonPropertyName("policyRevision")]
     public string? PolicyRevision { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the repository to set the resource policy on.</summary>
     [JsonPropertyName("repository")]

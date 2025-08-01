@@ -105,7 +105,7 @@ public partial class V1beta1VPCIpamPoolCidrSpecForProvider
     [JsonPropertyName("netmaskLength")]
     public double? NetmaskLength { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -380,6 +380,10 @@ public partial class V1beta1VPCIpamPoolCidrStatusAtProvider
     /// <summary>If provided, the cidr provisioned into the specified pool will be the next available cidr given this declared netmask length. Conflicts with cidr.</summary>
     [JsonPropertyName("netmaskLength")]
     public double? NetmaskLength { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

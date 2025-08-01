@@ -41,7 +41,7 @@ public partial class V1beta1ParameterGroupSpecForProvider
     [JsonPropertyName("parameter")]
     public IList<V1beta1ParameterGroupSpecForProviderParameter>? Parameter { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -260,6 +260,10 @@ public partial class V1beta1ParameterGroupStatusAtProvider
     /// <summary>A list of ElastiCache parameters to apply.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1ParameterGroupStatusAtProviderParameter>? Parameter { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

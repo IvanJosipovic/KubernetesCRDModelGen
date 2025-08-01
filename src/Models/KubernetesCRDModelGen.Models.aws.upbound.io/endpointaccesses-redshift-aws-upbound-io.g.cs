@@ -192,7 +192,7 @@ public partial class V1beta1EndpointAccessSpecForProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1EndpointAccessSpecForProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -627,6 +627,10 @@ public partial class V1beta1EndpointAccessStatusAtProvider
     /// <summary>The port number on which the cluster accepts incoming connections.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Web Services account ID of the owner of the cluster. This is only required if the cluster is in another Amazon Web Services account.</summary>
     [JsonPropertyName("resourceOwner")]

@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: LinkAssociation is the Schema for the LinkAssociations API. Associates a link to a device.
+        description: LinkAssociation is the Schema for the LinkAssociations API. Manages a Network Manager link association.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   deviceId:
-                    description: The ID of the device.
+                    description: ID of the device.
                     type: string
                   deviceIdRef:
                     description: Reference to a Device in networkmanager to populate deviceId.
@@ -174,7 +174,7 @@ spec:
                         type: object
                     type: object
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -263,7 +263,7 @@ spec:
                         type: object
                     type: object
                   linkId:
-                    description: The ID of the link.
+                    description: ID of the link.
                     type: string
                   linkIdRef:
                     description: Reference to a Link in networkmanager to populate linkId.
@@ -351,11 +351,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -593,15 +588,15 @@ spec:
               atProvider:
                 properties:
                   deviceId:
-                    description: The ID of the device.
+                    description: ID of the device.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   id:
                     type: string
                   linkId:
-                    description: The ID of the link.
+                    description: ID of the link.
                     type: string
                 type: object
               conditions:

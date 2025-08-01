@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigClientConfig
 {
-    /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
+    /// <summary>The maximum number of concurrent requests sent by the SageMaker AI client to the model container. If no value is provided, Amazon SageMaker AI will choose an optimal value for you.</summary>
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
@@ -38,7 +38,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigOutputConfig
 {
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker AI uses to encrypt the asynchronous inference output in Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -59,7 +59,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfig
 {
-    /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
+    /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
     [JsonPropertyName("clientConfig")]
     public IList<V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigClientConfig>? ClientConfig { get; set; }
 
@@ -72,11 +72,11 @@ public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureContentTypeHeader
 {
-    /// <summary>The CSV content type headers to capture.</summary>
+    /// <summary>The CSV content type headers to capture. One of csv_content_types or json_content_types is required.</summary>
     [JsonPropertyName("csvContentTypes")]
     public IList<string>? CsvContentTypes { get; set; }
 
-    /// <summary>The JSON content type headers to capture.</summary>
+    /// <summary>The JSON content type headers to capture. One of json_content_types or csv_content_types is required.</summary>
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
@@ -85,7 +85,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureOptions
 {
-    /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
+    /// <summary>Specifies the data to be captured. Should be one of Input, Output or InputAndOutput.</summary>
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
@@ -94,7 +94,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfig
 {
-    /// <summary>The content type headers to capture. Fields are documented below.</summary>
+    /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
     [JsonPropertyName("captureContentTypeHeader")]
     public IList<V1beta1EndpointConfigurationSpecForProviderDataCaptureConfigCaptureContentTypeHeader>? CaptureContentTypeHeader { get; set; }
 
@@ -114,7 +114,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderDataCaptureConfi
     [JsonPropertyName("initialSamplingPercentage")]
     public double? InitialSamplingPercentage { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt the captured data on Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -183,7 +183,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -295,7 +295,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderProductionVarian
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -368,7 +368,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -424,7 +424,7 @@ public partial class V1beta1EndpointConfigurationSpecForProviderShadowProduction
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -489,11 +489,11 @@ public partial class V1beta1EndpointConfigurationSpecForProvider
     [JsonPropertyName("asyncInferenceConfig")]
     public IList<V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfig>? AsyncInferenceConfig { get; set; }
 
-    /// <summary>Specifies the parameters to capture input/output of SageMaker models endpoints. Fields are documented below.</summary>
+    /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
     [JsonPropertyName("dataCaptureConfig")]
     public IList<V1beta1EndpointConfigurationSpecForProviderDataCaptureConfig>? DataCaptureConfig { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -509,7 +509,7 @@ public partial class V1beta1EndpointConfigurationSpecForProvider
     [JsonPropertyName("productionVariants")]
     public IList<V1beta1EndpointConfigurationSpecForProviderProductionVariants>? ProductionVariants { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -526,7 +526,7 @@ public partial class V1beta1EndpointConfigurationSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigClientConfig
 {
-    /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
+    /// <summary>The maximum number of concurrent requests sent by the SageMaker AI client to the model container. If no value is provided, Amazon SageMaker AI will choose an optimal value for you.</summary>
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
@@ -552,7 +552,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigOutputConfig
 {
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker AI uses to encrypt the asynchronous inference output in Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -573,7 +573,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfig
 {
-    /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
+    /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
     [JsonPropertyName("clientConfig")]
     public IList<V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfigClientConfig>? ClientConfig { get; set; }
 
@@ -586,11 +586,11 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureContentTypeHeader
 {
-    /// <summary>The CSV content type headers to capture.</summary>
+    /// <summary>The CSV content type headers to capture. One of csv_content_types or json_content_types is required.</summary>
     [JsonPropertyName("csvContentTypes")]
     public IList<string>? CsvContentTypes { get; set; }
 
-    /// <summary>The JSON content type headers to capture.</summary>
+    /// <summary>The JSON content type headers to capture. One of json_content_types or csv_content_types is required.</summary>
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
@@ -599,7 +599,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureOptions
 {
-    /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
+    /// <summary>Specifies the data to be captured. Should be one of Input, Output or InputAndOutput.</summary>
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
@@ -608,7 +608,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfig
 {
-    /// <summary>The content type headers to capture. Fields are documented below.</summary>
+    /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
     [JsonPropertyName("captureContentTypeHeader")]
     public IList<V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfigCaptureContentTypeHeader>? CaptureContentTypeHeader { get; set; }
 
@@ -628,7 +628,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderDataCaptureConf
     [JsonPropertyName("initialSamplingPercentage")]
     public double? InitialSamplingPercentage { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt the captured data on Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -697,7 +697,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -809,7 +809,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderProductionVaria
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -882,7 +882,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -938,7 +938,7 @@ public partial class V1beta1EndpointConfigurationSpecInitProviderShadowProductio
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -1003,11 +1003,11 @@ public partial class V1beta1EndpointConfigurationSpecInitProvider
     [JsonPropertyName("asyncInferenceConfig")]
     public IList<V1beta1EndpointConfigurationSpecInitProviderAsyncInferenceConfig>? AsyncInferenceConfig { get; set; }
 
-    /// <summary>Specifies the parameters to capture input/output of SageMaker models endpoints. Fields are documented below.</summary>
+    /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
     [JsonPropertyName("dataCaptureConfig")]
     public IList<V1beta1EndpointConfigurationSpecInitProviderDataCaptureConfig>? DataCaptureConfig { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -1168,7 +1168,7 @@ public partial class V1beta1EndpointConfigurationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigClientConfig
 {
-    /// <summary>The maximum number of concurrent requests sent by the SageMaker client to the model container. If no value is provided, Amazon SageMaker will choose an optimal value for you.</summary>
+    /// <summary>The maximum number of concurrent requests sent by the SageMaker AI client to the model container. If no value is provided, Amazon SageMaker AI will choose an optimal value for you.</summary>
     [JsonPropertyName("maxConcurrentInvocationsPerInstance")]
     public double? MaxConcurrentInvocationsPerInstance { get; set; }
 }
@@ -1194,7 +1194,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigOutputConfig
 {
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker AI uses to encrypt the asynchronous inference output in Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -1215,7 +1215,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfig
 {
-    /// <summary>Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.</summary>
+    /// <summary>Configures the behavior of the client used by Amazon SageMaker AI to interact with the model container during asynchronous inference.</summary>
     [JsonPropertyName("clientConfig")]
     public IList<V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfigClientConfig>? ClientConfig { get; set; }
 
@@ -1228,11 +1228,11 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureContentTypeHeader
 {
-    /// <summary>The CSV content type headers to capture.</summary>
+    /// <summary>The CSV content type headers to capture. One of csv_content_types or json_content_types is required.</summary>
     [JsonPropertyName("csvContentTypes")]
     public IList<string>? CsvContentTypes { get; set; }
 
-    /// <summary>The JSON content type headers to capture.</summary>
+    /// <summary>The JSON content type headers to capture. One of json_content_types or csv_content_types is required.</summary>
     [JsonPropertyName("jsonContentTypes")]
     public IList<string>? JsonContentTypes { get; set; }
 }
@@ -1241,7 +1241,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureOptions
 {
-    /// <summary>Specifies the data to be captured. Should be one of Input or Output.</summary>
+    /// <summary>Specifies the data to be captured. Should be one of Input, Output or InputAndOutput.</summary>
     [JsonPropertyName("captureMode")]
     public string? CaptureMode { get; set; }
 }
@@ -1250,7 +1250,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfig
 {
-    /// <summary>The content type headers to capture. Fields are documented below.</summary>
+    /// <summary>The content type headers to capture. See capture_content_type_header below.</summary>
     [JsonPropertyName("captureContentTypeHeader")]
     public IList<V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfigCaptureContentTypeHeader>? CaptureContentTypeHeader { get; set; }
 
@@ -1270,7 +1270,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderDataCaptureConf
     [JsonPropertyName("initialSamplingPercentage")]
     public double? InitialSamplingPercentage { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt the captured data on Amazon S3.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt the captured data on Amazon S3.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -1283,7 +1283,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -1339,7 +1339,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderProductionVaria
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -1404,7 +1404,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("destinationS3Uri")]
     public string? DestinationS3Uri { get; set; }
 
-    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
+    /// <summary>The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that SageMaker AI uses to encrypt the core dump data at rest using Amazon S3 server-side encryption.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 }
@@ -1460,7 +1460,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProviderShadowProductio
     [JsonPropertyName("acceleratorType")]
     public string? AcceleratorType { get; set; }
 
-    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
+    /// <summary>The timeout value, in seconds, for your inference container to pass health check by SageMaker AI Hosting. For more information about health check, see How Your Container Should Respond to Health Check (Ping) Requests. Valid values between 60 and 3600.</summary>
     [JsonPropertyName("containerStartupHealthCheckTimeoutInSeconds")]
     public double? ContainerStartupHealthCheckTimeoutInSeconds { get; set; }
 
@@ -1529,7 +1529,7 @@ public partial class V1beta1EndpointConfigurationStatusAtProvider
     [JsonPropertyName("asyncInferenceConfig")]
     public IList<V1beta1EndpointConfigurationStatusAtProviderAsyncInferenceConfig>? AsyncInferenceConfig { get; set; }
 
-    /// <summary>Specifies the parameters to capture input/output of SageMaker models endpoints. Fields are documented below.</summary>
+    /// <summary>Specifies the parameters to capture input/output of SageMaker AI models endpoints. Fields are documented below.</summary>
     [JsonPropertyName("dataCaptureConfig")]
     public IList<V1beta1EndpointConfigurationStatusAtProviderDataCaptureConfig>? DataCaptureConfig { get; set; }
 
@@ -1537,13 +1537,17 @@ public partial class V1beta1EndpointConfigurationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
+    /// <summary>Amazon Resource Name (ARN) of a AWS Key Management Service key that Amazon SageMaker AI uses to encrypt data on the storage volume attached to the ML compute instance that hosts the endpoint.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
     /// <summary>An list of ProductionVariant objects, one for each model that you want to host at this endpoint. Fields are documented below.</summary>
     [JsonPropertyName("productionVariants")]
     public IList<V1beta1EndpointConfigurationStatusAtProviderProductionVariants>? ProductionVariants { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Array of ProductionVariant objects. There is one for each model that you want to host at this endpoint in shadow mode with production traffic replicated from the model specified on ProductionVariants. If you use this field, you can only specify one variant for ProductionVariants and one variant for ShadowProductionVariants. Fields are documented below.</summary>
     [JsonPropertyName("shadowProductionVariants")]
@@ -1604,7 +1608,7 @@ public partial class V1beta1EndpointConfigurationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker Endpoint Configuration resource.</summary>
+/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EndpointConfiguration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointConfigurationSpec>, IStatus<V1beta1EndpointConfigurationStatus>
@@ -1634,7 +1638,7 @@ public partial class V1beta1EndpointConfiguration : IKubernetesObject<V1ObjectMe
     public V1beta1EndpointConfigurationStatus? Status { get; set; }
 }
 
-/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker Endpoint Configuration resource.</summary>
+/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EndpointConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EndpointConfiguration>

@@ -188,7 +188,7 @@ spec:
                     type: string
                   region:
                     description: >-
-                      The region of the address.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -676,6 +676,12 @@ spec:
                   profileUrl:
                     description: An URL that may be associated with the user.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   timezone:
                     description: The user's time zone.
                     type: string
@@ -921,7 +927,7 @@ spec:
                     type: string
                   region:
                     description: >-
-                      The region of the address.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -1392,6 +1398,12 @@ spec:
                     type: string
                   profileUrl:
                     description: An URL that may be associated with the user.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   timezone:
                     description: The user's time zone.

@@ -244,7 +244,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   steps:
                     description: Specifies the details for the steps that are in the specified workflow. See Workflow Steps below.
@@ -1308,6 +1311,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   steps:
                     description: Specifies the details for the steps that are in the specified workflow. See Workflow Steps below.
                     items:
@@ -1748,7 +1757,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   steps:
                     description: Specifies the details for the steps that are in the specified workflow. See Workflow Steps below.
@@ -2724,6 +2736,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   steps:
                     description: Specifies the details for the steps that are in the specified workflow. See Workflow Steps below.
                     items:

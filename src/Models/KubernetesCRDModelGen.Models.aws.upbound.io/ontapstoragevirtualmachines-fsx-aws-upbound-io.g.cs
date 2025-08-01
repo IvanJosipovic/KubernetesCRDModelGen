@@ -123,7 +123,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemI
     public V1beta1OntapStorageVirtualMachineSpecForProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+/// <summary>Specifies the password to use when logging on to the SVM using a secure shell (SSH) connection to the SVM's management endpoint. Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API. If you do not specify a password, you can still use the file system's fsxadmin user to manage the SVM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapStorageVirtualMachineSpecForProviderSvmAdminPasswordSecretRef
 {
@@ -164,7 +164,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -172,7 +172,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecForProvider
     [JsonPropertyName("rootVolumeSecurityStyle")]
     public string? RootVolumeSecurityStyle { get; set; }
 
-    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    /// <summary>Specifies the password to use when logging on to the SVM using a secure shell (SSH) connection to the SVM's management endpoint. Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API. If you do not specify a password, you can still use the file system's fsxadmin user to manage the SVM.</summary>
     [JsonPropertyName("svmAdminPasswordSecretRef")]
     public V1beta1OntapStorageVirtualMachineSpecForProviderSvmAdminPasswordSecretRef? SvmAdminPasswordSecretRef { get; set; }
 
@@ -296,7 +296,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystem
     public V1beta1OntapStorageVirtualMachineSpecInitProviderFileSystemIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+/// <summary>Specifies the password to use when logging on to the SVM using a secure shell (SSH) connection to the SVM's management endpoint. Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API. If you do not specify a password, you can still use the file system's fsxadmin user to manage the SVM.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapStorageVirtualMachineSpecInitProviderSvmAdminPasswordSecretRef
 {
@@ -341,7 +341,7 @@ public partial class V1beta1OntapStorageVirtualMachineSpecInitProvider
     [JsonPropertyName("rootVolumeSecurityStyle")]
     public string? RootVolumeSecurityStyle { get; set; }
 
-    /// <summary>A SecretKeySelector is a reference to a secret key in an arbitrary namespace.</summary>
+    /// <summary>Specifies the password to use when logging on to the SVM using a secure shell (SSH) connection to the SVM's management endpoint. Doing so enables you to manage the SVM using the NetApp ONTAP CLI or REST API. If you do not specify a password, you can still use the file system's fsxadmin user to manage the SVM.</summary>
     [JsonPropertyName("svmAdminPasswordSecretRef")]
     public V1beta1OntapStorageVirtualMachineSpecInitProviderSvmAdminPasswordSecretRef? SvmAdminPasswordSecretRef { get; set; }
 
@@ -620,6 +620,10 @@ public partial class V1beta1OntapStorageVirtualMachineStatusAtProvider
     /// <summary>The name of the SVM. You can use a maximum of 47 alphanumeric characters, plus the underscore (_) special character.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies the root volume security style, Valid values are UNIX, NTFS, and MIXED. All volumes created under this SVM will inherit the root security style unless the security style is specified on the volume. Default value is UNIX.</summary>
     [JsonPropertyName("rootVolumeSecurityStyle")]

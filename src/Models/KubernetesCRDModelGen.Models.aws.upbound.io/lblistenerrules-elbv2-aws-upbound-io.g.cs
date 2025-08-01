@@ -418,7 +418,7 @@ public partial class V1beta1LBListenerRuleSpecForProviderActionForward
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerRuleSpecForProviderActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>One or more target groups block.</summary>
+    /// <summary>One or more target group blocks.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerRuleSpecForProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -728,7 +728,7 @@ public partial class V1beta1LBListenerRuleSpecForProvider
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1147,7 +1147,7 @@ public partial class V1beta1LBListenerRuleSpecInitProviderActionForward
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerRuleSpecInitProviderActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>One or more target groups block.</summary>
+    /// <summary>One or more target group blocks.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerRuleSpecInitProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -1727,7 +1727,7 @@ public partial class V1beta1LBListenerRuleStatusAtProviderActionForward
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerRuleStatusAtProviderActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>One or more target groups block.</summary>
+    /// <summary>One or more target group blocks.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerRuleStatusAtProviderActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -1916,6 +1916,10 @@ public partial class V1beta1LBListenerRuleStatusAtProvider
     /// <summary>The priority for the rule between 1 and 50000. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.</summary>
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -140,10 +140,6 @@ public partial class V1beta1TrafficPolicyInstanceSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>ID of the traffic policy that you want to use to create resource record sets in the specified hosted zone.</summary>
     [JsonPropertyName("trafficPolicyId")]
     public string? TrafficPolicyId { get; set; }
@@ -454,6 +450,10 @@ public partial class V1beta1TrafficPolicyInstanceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficPolicyInstanceStatusAtProvider
 {
+    /// <summary>Amazon Resource Name (ARN) of the traffic policy instance.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>ID of the hosted zone that you want Amazon Route 53 to create resource record sets in by using the configuration in a traffic policy.</summary>
     [JsonPropertyName("hostedZoneId")]
     public string? HostedZoneId { get; set; }

@@ -72,7 +72,7 @@ public partial class V1beta1ProxySpecForProviderAuth
     [JsonPropertyName("authScheme")]
     public string? AuthScheme { get; set; }
 
-    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
+    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_CACHING_SHA2_PASSWORD, MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
     [JsonPropertyName("clientPasswordAuthType")]
     public string? ClientPasswordAuthType { get; set; }
 
@@ -289,7 +289,7 @@ public partial class V1beta1ProxySpecForProvider
     [JsonPropertyName("idleClientTimeout")]
     public double? IdleClientTimeout { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -402,7 +402,7 @@ public partial class V1beta1ProxySpecInitProviderAuth
     [JsonPropertyName("authScheme")]
     public string? AuthScheme { get; set; }
 
-    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
+    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_CACHING_SHA2_PASSWORD, MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
     [JsonPropertyName("clientPasswordAuthType")]
     public string? ClientPasswordAuthType { get; set; }
 
@@ -804,7 +804,7 @@ public partial class V1beta1ProxyStatusAtProviderAuth
     [JsonPropertyName("authScheme")]
     public string? AuthScheme { get; set; }
 
-    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
+    /// <summary>The type of authentication the proxy uses for connections from clients. Valid values are MYSQL_CACHING_SHA2_PASSWORD, MYSQL_NATIVE_PASSWORD, POSTGRES_SCRAM_SHA_256, POSTGRES_MD5, and SQL_SERVER_AUTHENTICATION.</summary>
     [JsonPropertyName("clientPasswordAuthType")]
     public string? ClientPasswordAuthType { get; set; }
 
@@ -856,6 +856,10 @@ public partial class V1beta1ProxyStatusAtProvider
     /// <summary>The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it. You can set this value higher or lower than the connection timeout limit for the associated database.</summary>
     [JsonPropertyName("idleClientTimeout")]
     public double? IdleClientTimeout { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy. By enabling this setting, you can enforce encrypted TLS connections to the proxy.</summary>
     [JsonPropertyName("requireTls")]

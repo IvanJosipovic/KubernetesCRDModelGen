@@ -113,7 +113,7 @@ public partial class V1beta1RateBasedRuleSpecForProvider
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -412,6 +412,10 @@ public partial class V1beta1RateBasedRuleStatusAtProvider
     /// <summary>The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.</summary>
     [JsonPropertyName("rateLimit")]
     public double? RateLimit { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

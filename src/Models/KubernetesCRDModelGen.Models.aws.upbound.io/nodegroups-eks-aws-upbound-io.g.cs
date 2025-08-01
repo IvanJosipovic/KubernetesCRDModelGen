@@ -76,9 +76,18 @@ public partial class V1beta1NodeGroupSpecForProviderLaunchTemplate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>EC2 Launch Template version number. While the API accepts values like $Default and $Latest, the API will convert the value to the associated version number (e.g., 1). Using the default_version or latest_version attribute of the aws_launch_template resource or data source is recommended for this argument.</summary>
+    /// <summary>EC2 Launch Template version number.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeGroupSpecForProviderNodeRepairConfig
+{
+    /// <summary>Specifies whether to enable node auto repair for the node group. Node auto repair is disabled by default.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -385,7 +394,7 @@ public partial class V1beta1NodeGroupSpecForProvider
     [JsonPropertyName("capacityType")]
     public string? CapacityType { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -417,7 +426,11 @@ public partial class V1beta1NodeGroupSpecForProvider
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta1NodeGroupSpecForProviderLaunchTemplate>? LaunchTemplate { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
+    /// <summary>The node auto repair configuration for the node group. See node_repair_config below for details.</summary>
+    [JsonPropertyName("nodeRepairConfig")]
+    public IList<V1beta1NodeGroupSpecForProviderNodeRepairConfig>? NodeRepairConfig { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 
@@ -429,11 +442,11 @@ public partial class V1beta1NodeGroupSpecForProvider
     [JsonPropertyName("nodeRoleArnSelector")]
     public V1beta1NodeGroupSpecForProviderNodeRoleArnSelector? NodeRoleArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
+    /// <summary>AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
     [JsonPropertyName("releaseVersion")]
     public string? ReleaseVersion { get; set; }
 
@@ -469,7 +482,7 @@ public partial class V1beta1NodeGroupSpecForProvider
     [JsonPropertyName("updateConfig")]
     public IList<V1beta1NodeGroupSpecForProviderUpdateConfig>? UpdateConfig { get; set; }
 
-    /// <summary>–  Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
+    /// <summary>Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
@@ -494,9 +507,18 @@ public partial class V1beta1NodeGroupSpecInitProviderLaunchTemplate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>EC2 Launch Template version number. While the API accepts values like $Default and $Latest, the API will convert the value to the associated version number (e.g., 1). Using the default_version or latest_version attribute of the aws_launch_template resource or data source is recommended for this argument.</summary>
+    /// <summary>EC2 Launch Template version number.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeGroupSpecInitProviderNodeRepairConfig
+{
+    /// <summary>Specifies whether to enable node auto repair for the node group. Node auto repair is disabled by default.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -823,7 +845,11 @@ public partial class V1beta1NodeGroupSpecInitProvider
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta1NodeGroupSpecInitProviderLaunchTemplate>? LaunchTemplate { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
+    /// <summary>The node auto repair configuration for the node group. See node_repair_config below for details.</summary>
+    [JsonPropertyName("nodeRepairConfig")]
+    public IList<V1beta1NodeGroupSpecInitProviderNodeRepairConfig>? NodeRepairConfig { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 
@@ -835,7 +861,7 @@ public partial class V1beta1NodeGroupSpecInitProvider
     [JsonPropertyName("nodeRoleArnSelector")]
     public V1beta1NodeGroupSpecInitProviderNodeRoleArnSelector? NodeRoleArnSelector { get; set; }
 
-    /// <summary>–  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
+    /// <summary>AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
     [JsonPropertyName("releaseVersion")]
     public string? ReleaseVersion { get; set; }
 
@@ -871,7 +897,7 @@ public partial class V1beta1NodeGroupSpecInitProvider
     [JsonPropertyName("updateConfig")]
     public IList<V1beta1NodeGroupSpecInitProviderUpdateConfig>? UpdateConfig { get; set; }
 
-    /// <summary>–  Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
+    /// <summary>Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
@@ -1028,9 +1054,18 @@ public partial class V1beta1NodeGroupStatusAtProviderLaunchTemplate
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>EC2 Launch Template version number. While the API accepts values like $Default and $Latest, the API will convert the value to the associated version number (e.g., 1). Using the default_version or latest_version attribute of the aws_launch_template resource or data source is recommended for this argument.</summary>
+    /// <summary>EC2 Launch Template version number.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NodeGroupStatusAtProviderNodeRepairConfig
+{
+    /// <summary>Specifies whether to enable node auto repair for the node group. Node auto repair is disabled by default.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
 }
 
 /// <summary></summary>
@@ -1131,7 +1166,7 @@ public partial class V1beta1NodeGroupStatusAtProvider
     [JsonPropertyName("capacityType")]
     public string? CapacityType { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -1159,11 +1194,19 @@ public partial class V1beta1NodeGroupStatusAtProvider
     [JsonPropertyName("launchTemplate")]
     public IList<V1beta1NodeGroupStatusAtProviderLaunchTemplate>? LaunchTemplate { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
+    /// <summary>The node auto repair configuration for the node group. See node_repair_config below for details.</summary>
+    [JsonPropertyName("nodeRepairConfig")]
+    public IList<V1beta1NodeGroupStatusAtProviderNodeRepairConfig>? NodeRepairConfig { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.</summary>
     [JsonPropertyName("nodeRoleArn")]
     public string? NodeRoleArn { get; set; }
 
-    /// <summary>–  AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.</summary>
     [JsonPropertyName("releaseVersion")]
     public string? ReleaseVersion { get; set; }
 
@@ -1203,7 +1246,7 @@ public partial class V1beta1NodeGroupStatusAtProvider
     [JsonPropertyName("updateConfig")]
     public IList<V1beta1NodeGroupStatusAtProviderUpdateConfig>? UpdateConfig { get; set; }
 
-    /// <summary>–  Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
+    /// <summary>Kubernetes version. Defaults to EKS Cluster Kubernetes version.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }

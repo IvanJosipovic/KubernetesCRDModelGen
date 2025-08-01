@@ -45,7 +45,7 @@ public partial class V1beta1HostSpecForProvider
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -272,6 +272,10 @@ public partial class V1beta1HostStatusAtProvider
     /// <summary>The name of the external provider where your third-party code repository is configured.</summary>
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The CodeStar Host status. Possible values are PENDING, AVAILABLE, VPC_CONFIG_DELETING, VPC_CONFIG_INITIALIZING, and VPC_CONFIG_FAILED_INITIALIZATION.</summary>
     [JsonPropertyName("status")]

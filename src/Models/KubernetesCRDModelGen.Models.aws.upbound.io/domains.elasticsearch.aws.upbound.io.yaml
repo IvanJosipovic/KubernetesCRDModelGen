@@ -256,7 +256,7 @@ spec:
                           description: Whether or not to require HTTPS. Defaults to true.
                           type: boolean
                         tlsSecurityPolicy:
-                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.'
+                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.'
                           type: string
                       type: object
                     type: array
@@ -407,7 +407,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   snapshotOptions:
                     description: Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
@@ -728,7 +731,7 @@ spec:
                           description: Whether or not to require HTTPS. Defaults to true.
                           type: boolean
                         tlsSecurityPolicy:
-                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.'
+                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.'
                           type: string
                       type: object
                     type: array
@@ -1372,7 +1375,7 @@ spec:
                           description: Whether or not to require HTTPS. Defaults to true.
                           type: boolean
                         tlsSecurityPolicy:
-                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07 and Policy-Min-TLS-1-2-2019-07.'
+                          description: 'Name of the TLS security policy that needs to be applied to the HTTPS endpoint. Valid values:  Policy-Min-TLS-1-0-2019-07, Policy-Min-TLS-1-2-2019-07, and Policy-Min-TLS-1-2-PFS-2023-10.'
                           type: string
                       type: object
                     type: array
@@ -1447,6 +1450,12 @@ spec:
                           type: boolean
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   snapshotOptions:
                     description: Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
                     items:
@@ -1928,7 +1937,10 @@ spec:
                         type: boolean
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   snapshotOptions:
                     description: Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
@@ -2912,6 +2924,12 @@ spec:
                         description: Whether to enable node-to-node encryption. If the node_to_node_encryption block is not provided then this defaults to false. Enabling node-to-node encryption of a new domain requires an elasticsearch_version of 6.0 or greater.
                         type: boolean
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   snapshotOptions:
                     description: Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running Elasticsearch 5.3 and later, Amazon ES takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions of Elasticsearch, Amazon ES takes daily automated snapshots.
                     properties:

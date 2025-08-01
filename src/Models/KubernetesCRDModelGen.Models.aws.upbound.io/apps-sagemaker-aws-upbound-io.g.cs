@@ -68,7 +68,7 @@ public partial class V1beta1AppSpecForProviderDomainIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecForProviderResourceSpec
 {
-    /// <summary>The instance type that the image version runs on. For valid values see SageMaker Instance Types.</summary>
+    /// <summary>The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
@@ -76,11 +76,11 @@ public partial class V1beta1AppSpecForProviderResourceSpec
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    /// <summary>The ARN of the SageMaker AI image that the image version belongs to.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -153,7 +153,7 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("appName")]
     public string? AppName { get; set; }
 
-    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.</summary>
+    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.</summary>
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
@@ -169,11 +169,11 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("domainIdSelector")]
     public V1beta1AppSpecForProviderDomainIdSelector? DomainIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.</summary>
+    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.</summary>
     [JsonPropertyName("resourceSpec")]
     public IList<V1beta1AppSpecForProviderResourceSpec>? ResourceSpec { get; set; }
 
@@ -258,7 +258,7 @@ public partial class V1beta1AppSpecInitProviderDomainIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecInitProviderResourceSpec
 {
-    /// <summary>The instance type that the image version runs on. For valid values see SageMaker Instance Types.</summary>
+    /// <summary>The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
@@ -266,11 +266,11 @@ public partial class V1beta1AppSpecInitProviderResourceSpec
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    /// <summary>The ARN of the SageMaker AI image that the image version belongs to.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -343,7 +343,7 @@ public partial class V1beta1AppSpecInitProvider
     [JsonPropertyName("appName")]
     public string? AppName { get; set; }
 
-    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.</summary>
+    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.</summary>
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
@@ -359,7 +359,7 @@ public partial class V1beta1AppSpecInitProvider
     [JsonPropertyName("domainIdSelector")]
     public V1beta1AppSpecInitProviderDomainIdSelector? DomainIdSelector { get; set; }
 
-    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.</summary>
+    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.</summary>
     [JsonPropertyName("resourceSpec")]
     public IList<V1beta1AppSpecInitProviderResourceSpec>? ResourceSpec { get; set; }
 
@@ -520,7 +520,7 @@ public partial class V1beta1AppSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppStatusAtProviderResourceSpec
 {
-    /// <summary>The instance type that the image version runs on. For valid values see SageMaker Instance Types.</summary>
+    /// <summary>The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.</summary>
     [JsonPropertyName("instanceType")]
     public string? InstanceType { get; set; }
 
@@ -528,11 +528,11 @@ public partial class V1beta1AppStatusAtProviderResourceSpec
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The ARN of the SageMaker image that the image version belongs to.</summary>
+    /// <summary>The ARN of the SageMaker AI image that the image version belongs to.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -549,7 +549,7 @@ public partial class V1beta1AppStatusAtProvider
     [JsonPropertyName("appName")]
     public string? AppName { get; set; }
 
-    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.</summary>
+    /// <summary>The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.</summary>
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
@@ -565,7 +565,11 @@ public partial class V1beta1AppStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.</summary>
     [JsonPropertyName("resourceSpec")]
     public IList<V1beta1AppStatusAtProviderResourceSpec>? ResourceSpec { get; set; }
 
@@ -632,7 +636,7 @@ public partial class V1beta1AppStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>App is the Schema for the Apps API. Provides a SageMaker App resource.</summary>
+/// <summary>App is the Schema for the Apps API. Provides a SageMaker AI App resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1App : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AppSpec>, IStatus<V1beta1AppStatus>
@@ -662,7 +666,7 @@ public partial class V1beta1App : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     public V1beta1AppStatus? Status { get; set; }
 }
 
-/// <summary>App is the Schema for the Apps API. Provides a SageMaker App resource.</summary>
+/// <summary>App is the Schema for the Apps API. Provides a SageMaker AI App resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1App>

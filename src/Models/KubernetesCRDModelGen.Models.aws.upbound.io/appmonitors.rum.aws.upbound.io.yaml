@@ -89,10 +89,10 @@ spec:
                     items:
                       properties:
                         allowCookies:
-                          description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                          description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                           type: boolean
                         enableXray:
-                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                           type: boolean
                         excludedPages:
                           description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -139,13 +139,21 @@ spec:
                       type: object
                     type: array
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -183,10 +191,10 @@ spec:
                     items:
                       properties:
                         allowCookies:
-                          description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                          description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                           type: boolean
                         enableXray:
-                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                           type: boolean
                         excludedPages:
                           description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -233,11 +241,16 @@ spec:
                       type: object
                     type: array
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   tags:
                     additionalProperties:
                       type: string
@@ -453,9 +466,6 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: spec.forProvider.domain is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.domain) || (has(self.initProvider) && has(self.initProvider.domain))"
           status:
             description: AppMonitorStatus defines the observed state of AppMonitor.
             properties:
@@ -466,10 +476,10 @@ spec:
                     items:
                       properties:
                         allowCookies:
-                          description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                          description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                           type: boolean
                         enableXray:
-                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                          description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                           type: boolean
                         excludedPages:
                           description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -522,16 +532,27 @@ spec:
                       type: object
                     type: array
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   cwLogGroup:
                     description: The name of the log group where the copies are stored.
                     type: string
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   id:
                     description: The CloudWatch RUM name as it is the identifier of a RUM.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -683,10 +704,10 @@ spec:
                     description: configuration data for the app monitor. See app_monitor_configuration below.
                     properties:
                       allowCookies:
-                        description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                        description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                         type: boolean
                       enableXray:
-                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                         type: boolean
                       excludedPages:
                         description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -730,13 +751,21 @@ spec:
                         type: string
                     type: object
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -773,10 +802,10 @@ spec:
                     description: configuration data for the app monitor. See app_monitor_configuration below.
                     properties:
                       allowCookies:
-                        description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                        description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                         type: boolean
                       enableXray:
-                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                         type: boolean
                       excludedPages:
                         description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -820,11 +849,16 @@ spec:
                         type: string
                     type: object
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   tags:
                     additionalProperties:
                       type: string
@@ -1040,9 +1074,6 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: spec.forProvider.domain is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.domain) || (has(self.initProvider) && has(self.initProvider.domain))"
           status:
             description: AppMonitorStatus defines the observed state of AppMonitor.
             properties:
@@ -1052,10 +1083,10 @@ spec:
                     description: configuration data for the app monitor. See app_monitor_configuration below.
                     properties:
                       allowCookies:
-                        description: If you set this to true, RUM web client sets two cookies, a session cookie  and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
+                        description: If you set this to true, RUM web client sets two cookies, a session cookie and a user cookie. The cookies allow the RUM web client to collect data relating to the number of users an application has and the behavior of the application across a sequence of events. Cookies are stored in the top-level domain of the current page.
                         type: boolean
                       enableXray:
-                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions  that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
+                        description: If you set this to true, RUM enables X-Ray tracing for the user sessions that RUM samples. RUM adds an X-Ray trace header to allowed HTTP requests. It also records an X-Ray segment for allowed HTTP requests.
                         type: boolean
                       excludedPages:
                         description: A list of URLs in your website or application to exclude from RUM data collection.
@@ -1105,16 +1136,27 @@ spec:
                         type: string
                     type: object
                   cwLogEnabled:
-                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter  specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
+                    description: Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to Amazon CloudWatch Logs in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur Amazon CloudWatch Logs charges. Default value is false.
                     type: boolean
                   cwLogGroup:
                     description: The name of the log group where the copies are stored.
                     type: string
                   domain:
-                    description: The top-level internet domain name for which your application has administrative authority.
+                    description: The top-level internet domain name for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
                     type: string
+                  domainList:
+                    description: A list of internet domain names for which your application has administrative authority. Exactly one of domain or domain_list must be specified.
+                    items:
+                      type: string
+                    type: array
                   id:
                     description: The CloudWatch RUM name as it is the identifier of a RUM.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

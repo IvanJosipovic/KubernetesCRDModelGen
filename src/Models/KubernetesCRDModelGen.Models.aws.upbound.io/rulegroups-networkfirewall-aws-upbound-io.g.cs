@@ -422,7 +422,7 @@ public partial class V1beta1RuleGroupSpecForProviderRuleGroupRulesSource
     [JsonPropertyName("rulesSourceList")]
     public IList<V1beta1RuleGroupSpecForProviderRuleGroupRulesSourceRulesSourceList>? RulesSourceList { get; set; }
 
-    /// <summary>The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain stateful inspection criteria and the action to take for traffic that matches the criteria.</summary>
+    /// <summary>Stateful inspection criteria, provided in Suricata compatible rules. These rules contain the inspection criteria and the action to take for traffic that matches the criteria, so this type of rule group doesn’t have a separate action setting.</summary>
     [JsonPropertyName("rulesString")]
     public string? RulesString { get; set; }
 
@@ -485,7 +485,7 @@ public partial class V1beta1RuleGroupSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -920,7 +920,7 @@ public partial class V1beta1RuleGroupSpecInitProviderRuleGroupRulesSource
     [JsonPropertyName("rulesSourceList")]
     public IList<V1beta1RuleGroupSpecInitProviderRuleGroupRulesSourceRulesSourceList>? RulesSourceList { get; set; }
 
-    /// <summary>The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain stateful inspection criteria and the action to take for traffic that matches the criteria.</summary>
+    /// <summary>Stateful inspection criteria, provided in Suricata compatible rules. These rules contain the inspection criteria and the action to take for traffic that matches the criteria, so this type of rule group doesn’t have a separate action setting.</summary>
     [JsonPropertyName("rulesString")]
     public string? RulesString { get; set; }
 
@@ -1482,7 +1482,7 @@ public partial class V1beta1RuleGroupStatusAtProviderRuleGroupRulesSource
     [JsonPropertyName("rulesSourceList")]
     public IList<V1beta1RuleGroupStatusAtProviderRuleGroupRulesSourceRulesSourceList>? RulesSourceList { get; set; }
 
-    /// <summary>The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain stateful inspection criteria and the action to take for traffic that matches the criteria.</summary>
+    /// <summary>Stateful inspection criteria, provided in Suricata compatible rules. These rules contain the inspection criteria and the action to take for traffic that matches the criteria, so this type of rule group doesn’t have a separate action setting.</summary>
     [JsonPropertyName("rulesString")]
     public string? RulesString { get; set; }
 
@@ -1552,6 +1552,10 @@ public partial class V1beta1RuleGroupStatusAtProvider
     /// <summary>A friendly name of the rule group.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A configuration block that defines the rule group rules. Required unless rules is specified. See Rule Group below for details.</summary>
     [JsonPropertyName("ruleGroup")]

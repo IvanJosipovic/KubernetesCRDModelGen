@@ -84,7 +84,7 @@ public partial class V1beta1DomainSpecForProvider
     [JsonPropertyName("encryptionKeySelector")]
     public V1beta1DomainSpecForProviderEncryptionKeySelector? EncryptionKeySelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>The AWS account ID that owns the domain.</summary>
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The number of repositories in the domain.</summary>
     [JsonPropertyName("repositoryCount")]

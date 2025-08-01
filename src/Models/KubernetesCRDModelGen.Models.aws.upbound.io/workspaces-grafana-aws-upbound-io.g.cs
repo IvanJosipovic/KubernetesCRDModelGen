@@ -106,7 +106,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("configuration")]
     public string? Configuration { get; set; }
 
-    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY</summary>
+    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`</summary>
     [JsonPropertyName("dataSources")]
     public IList<string>? DataSources { get; set; }
 
@@ -114,7 +114,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.</summary>
+    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.</summary>
     [JsonPropertyName("grafanaVersion")]
     public string? GrafanaVersion { get; set; }
 
@@ -142,7 +142,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("permissionType")]
     public string? PermissionType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -269,7 +269,7 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("configuration")]
     public string? Configuration { get; set; }
 
-    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY</summary>
+    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`</summary>
     [JsonPropertyName("dataSources")]
     public IList<string>? DataSources { get; set; }
 
@@ -277,7 +277,7 @@ public partial class V1beta1WorkspaceSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.</summary>
+    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.</summary>
     [JsonPropertyName("grafanaVersion")]
     public string? GrafanaVersion { get; set; }
 
@@ -508,7 +508,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("configuration")]
     public string? Configuration { get; set; }
 
-    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY</summary>
+    /// <summary>The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`</summary>
     [JsonPropertyName("dataSources")]
     public IList<string>? DataSources { get; set; }
 
@@ -520,7 +520,7 @@ public partial class V1beta1WorkspaceStatusAtProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.</summary>
+    /// <summary>Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.</summary>
     [JsonPropertyName("grafanaVersion")]
     public string? GrafanaVersion { get; set; }
 
@@ -551,6 +551,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     /// <summary>The permission type of the workspace. If SERVICE_MANAGED is specified, the IAM roles and IAM policy attachments are generated automatically. If CUSTOMER_MANAGED is specified, the IAM roles and IAM policy attachments will not be created.</summary>
     [JsonPropertyName("permissionType")]
     public string? PermissionType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM role ARN that the workspace assumes.</summary>
     [JsonPropertyName("roleArn")]

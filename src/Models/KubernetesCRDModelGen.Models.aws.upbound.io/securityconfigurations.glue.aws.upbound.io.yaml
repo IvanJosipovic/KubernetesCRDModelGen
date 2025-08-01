@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     items:
                       properties:
                         cloudwatchEncryption:
@@ -383,7 +383,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -411,7 +414,7 @@ spec:
                   autoscaler.
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     items:
                       properties:
                         cloudwatchEncryption:
@@ -926,7 +929,7 @@ spec:
               atProvider:
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     items:
                       properties:
                         cloudwatchEncryption:
@@ -967,6 +970,12 @@ spec:
                     type: array
                   id:
                     description: Glue security configuration name
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -1103,7 +1112,7 @@ spec:
               forProvider:
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     properties:
                       cloudwatchEncryption:
                         properties:
@@ -1393,7 +1402,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -1421,7 +1433,7 @@ spec:
                   autoscaler.
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     properties:
                       cloudwatchEncryption:
                         properties:
@@ -1928,7 +1940,7 @@ spec:
               atProvider:
                 properties:
                   encryptionConfiguration:
-                    description: –  Configuration block containing encryption configuration. Detailed below.
+                    description: Configuration block containing encryption configuration. Detailed below.
                     properties:
                       cloudwatchEncryption:
                         properties:
@@ -1961,6 +1973,12 @@ spec:
                     type: object
                   id:
                     description: Glue security configuration name
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

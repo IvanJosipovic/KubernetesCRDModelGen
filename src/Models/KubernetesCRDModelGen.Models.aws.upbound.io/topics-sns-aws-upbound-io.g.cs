@@ -616,6 +616,10 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>Enables higher throughput for FIFO topics by adjusting the scope of deduplication. This attribute has two possible values, Topic and MessageGroup. For more information, see the related documentation.</summary>
+    [JsonPropertyName("fifoThroughputScope")]
+    public string? FifoThroughputScope { get; set; }
+
     /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
@@ -712,7 +716,7 @@ public partial class V1beta1TopicSpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1365,6 +1369,10 @@ public partial class V1beta1TopicSpecInitProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>Enables higher throughput for FIFO topics by adjusting the scope of deduplication. This attribute has two possible values, Topic and MessageGroup. For more information, see the related documentation.</summary>
+    [JsonPropertyName("fifoThroughputScope")]
+    public string? FifoThroughputScope { get; set; }
+
     /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
@@ -1674,6 +1682,10 @@ public partial class V1beta1TopicStatusAtProvider
     [JsonPropertyName("displayName")]
     public string? DisplayName { get; set; }
 
+    /// <summary>Enables higher throughput for FIFO topics by adjusting the scope of deduplication. This attribute has two possible values, Topic and MessageGroup. For more information, see the related documentation.</summary>
+    [JsonPropertyName("fifoThroughputScope")]
+    public string? FifoThroughputScope { get; set; }
+
     /// <summary>Boolean indicating whether or not to create a FIFO (first-in-first-out) topic. FIFO topics can't deliver messages to customer managed endpoints, such as email addresses, mobile apps, SMS, or HTTP(S) endpoints. These endpoint types aren't guaranteed to preserve strict message ordering. Default is false.</summary>
     [JsonPropertyName("fifoTopic")]
     public bool? FifoTopic { get; set; }
@@ -1729,6 +1741,10 @@ public partial class V1beta1TopicStatusAtProvider
     /// <summary>The fully-formed AWS policy as JSON.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>If SignatureVersion should be 1 (SHA1) or 2 (SHA256). The signature version corresponds to the hashing algorithm used while creating the signature of the notifications, subscription confirmations, or unsubscribe confirmation messages sent by Amazon SNS.</summary>
     [JsonPropertyName("signatureVersion")]

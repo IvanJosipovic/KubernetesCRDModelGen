@@ -72,11 +72,15 @@ public partial class V1beta1RuleGroupNamespaceSpecForProvider
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>ID of the prometheus workspace the rule group namespace should be linked to</summary>
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>ID of the prometheus workspace the rule group namespace should be linked to.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 
@@ -96,6 +100,10 @@ public partial class V1beta1RuleGroupNamespaceSpecInitProvider
     /// <summary>the rule group namespace data that you want to be applied. See more in AWS Docs.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -234,6 +242,10 @@ public partial class V1beta1RuleGroupNamespaceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupNamespaceStatusAtProvider
 {
+    /// <summary>The ARN of the rule group namespace.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>the rule group namespace data that you want to be applied. See more in AWS Docs.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
@@ -242,7 +254,19 @@ public partial class V1beta1RuleGroupNamespaceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>ID of the prometheus workspace the rule group namespace should be linked to</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>ID of the prometheus workspace the rule group namespace should be linked to.</summary>
     [JsonPropertyName("workspaceId")]
     public string? WorkspaceId { get; set; }
 }

@@ -150,7 +150,7 @@ public partial class V1beta1TableSpecForProviderSchema
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProvider
 {
-    /// <summary>–  The name of the Timestream database.</summary>
+    /// <summary>The name of the Timestream database.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -166,7 +166,7 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("magneticStoreWriteProperties")]
     public IList<V1beta1TableSpecForProviderMagneticStoreWriteProperties>? MagneticStoreWriteProperties { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -512,7 +512,7 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  The name of the Timestream database.</summary>
+    /// <summary>The name of the Timestream database.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -523,6 +523,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.</summary>
     [JsonPropertyName("magneticStoreWriteProperties")]
     public IList<V1beta1TableStatusAtProviderMagneticStoreWriteProperties>? MagneticStoreWriteProperties { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, magnetic_store_retention_period_in_days default to 73000 and memory_store_retention_period_in_hours defaults to 6.</summary>
     [JsonPropertyName("retentionProperties")]

@@ -72,7 +72,7 @@ public partial class V1beta1SubnetGroupSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1beta1SubnetGroupSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetGroupSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  A list of VPC subnet IDs for the subnet group.</summary>
+    /// <summary>A list of VPC subnet IDs for the subnet group.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
@@ -161,7 +161,7 @@ public partial class V1beta1SubnetGroupSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetGroupSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  A list of VPC subnet IDs for the subnet group.</summary>
+    /// <summary>A list of VPC subnet IDs for the subnet group.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
@@ -310,11 +310,15 @@ public partial class V1beta1SubnetGroupStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  A list of VPC subnet IDs for the subnet group.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>A list of VPC subnet IDs for the subnet group.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
-    /// <summary>– VPC ID of the subnet group.</summary>
+    /// <summary>VPC ID of the subnet group.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }

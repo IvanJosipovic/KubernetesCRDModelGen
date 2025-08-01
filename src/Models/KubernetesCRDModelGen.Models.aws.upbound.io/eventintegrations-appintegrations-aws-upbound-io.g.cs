@@ -33,7 +33,7 @@ public partial class V1beta1EventIntegrationSpecForProvider
     [JsonPropertyName("eventbridgeBus")]
     public string? EventbridgeBus { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -236,6 +236,10 @@ public partial class V1beta1EventIntegrationStatusAtProvider
     /// <summary>Identifier of the Event Integration which is the name of the Event Integration.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

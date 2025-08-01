@@ -37,7 +37,7 @@ public partial class V1beta1GroupSpecForProvider
     [JsonPropertyName("insightsConfiguration")]
     public IList<V1beta1GroupSpecForProviderInsightsConfiguration>? InsightsConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -248,6 +248,10 @@ public partial class V1beta1GroupStatusAtProvider
     /// <summary>Configuration options for enabling insights.</summary>
     [JsonPropertyName("insightsConfiguration")]
     public IList<V1beta1GroupStatusAtProviderInsightsConfiguration>? InsightsConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

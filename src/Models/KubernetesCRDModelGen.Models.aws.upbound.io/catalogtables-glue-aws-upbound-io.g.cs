@@ -344,7 +344,7 @@ public partial class V1beta1CatalogTableSpecForProvider
     [JsonPropertyName("partitionKeys")]
     public IList<V1beta1CatalogTableSpecForProviderPartitionKeys>? PartitionKeys { get; set; }
 
-    /// <summary>Region of the target table. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1065,6 +1065,10 @@ public partial class V1beta1CatalogTableStatusAtProvider
     /// <summary>Configuration block of columns by which the table is partitioned. Only primitive types are supported as partition keys. See partition_keys below.</summary>
     [JsonPropertyName("partitionKeys")]
     public IList<V1beta1CatalogTableStatusAtProviderPartitionKeys>? PartitionKeys { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Retention time for this table.</summary>
     [JsonPropertyName("retention")]

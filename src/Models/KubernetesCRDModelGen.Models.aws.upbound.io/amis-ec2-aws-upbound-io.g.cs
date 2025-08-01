@@ -130,7 +130,7 @@ public partial class V1beta1AMISpecForProviderEphemeralBlockDevice
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecForProvider
 {
-    /// <summary>Machine architecture for created instances. Defaults to "x86_64".</summary>
+    /// <summary>Machine architecture for created instances. Defaults to x86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
@@ -178,7 +178,7 @@ public partial class V1beta1AMISpecForProvider
     [JsonPropertyName("ramdiskId")]
     public string? RamdiskId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -197,6 +197,10 @@ public partial class V1beta1AMISpecForProvider
     /// <summary>If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.</summary>
     [JsonPropertyName("tpmSupport")]
     public string? TpmSupport { get; set; }
+
+    /// <summary>Base64 representation of the non-volatile UEFI variable store.</summary>
+    [JsonPropertyName("uefiData")]
+    public string? UefiData { get; set; }
 
     /// <summary>Keyword to choose what virtualization mode created instances will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type changes the set of further arguments that are required, as described below.</summary>
     [JsonPropertyName("virtualizationType")]
@@ -325,7 +329,7 @@ public partial class V1beta1AMISpecInitProviderEphemeralBlockDevice
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMISpecInitProvider
 {
-    /// <summary>Machine architecture for created instances. Defaults to "x86_64".</summary>
+    /// <summary>Machine architecture for created instances. Defaults to x86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
@@ -388,6 +392,10 @@ public partial class V1beta1AMISpecInitProvider
     /// <summary>If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.</summary>
     [JsonPropertyName("tpmSupport")]
     public string? TpmSupport { get; set; }
+
+    /// <summary>Base64 representation of the non-volatile UEFI variable store.</summary>
+    [JsonPropertyName("uefiData")]
+    public string? UefiData { get; set; }
 
     /// <summary>Keyword to choose what virtualization mode created instances will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type changes the set of further arguments that are required, as described below.</summary>
     [JsonPropertyName("virtualizationType")]
@@ -584,7 +592,7 @@ public partial class V1beta1AMIStatusAtProviderEphemeralBlockDevice
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AMIStatusAtProvider
 {
-    /// <summary>Machine architecture for created instances. Defaults to "x86_64".</summary>
+    /// <summary>Machine architecture for created instances. Defaults to x86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
@@ -644,6 +652,10 @@ public partial class V1beta1AMIStatusAtProvider
     [JsonPropertyName("kernelId")]
     public string? KernelId { get; set; }
 
+    /// <summary>(Computed) Date and time, in ISO 8601 date-time format , when the AMI was last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before that usage is reported. For more information, see the following AWS document.</summary>
+    [JsonPropertyName("lastLaunchedTime")]
+    public string? LastLaunchedTime { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("manageEbsSnapshots")]
     public bool? ManageEbsSnapshots { get; set; }
@@ -672,6 +684,10 @@ public partial class V1beta1AMIStatusAtProvider
     [JsonPropertyName("ramdiskId")]
     public string? RamdiskId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Name of the root device (for example, /dev/sda1, or /dev/xvda).</summary>
     [JsonPropertyName("rootDeviceName")]
     public string? RootDeviceName { get; set; }
@@ -695,6 +711,10 @@ public partial class V1beta1AMIStatusAtProvider
     /// <summary>If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.</summary>
     [JsonPropertyName("tpmSupport")]
     public string? TpmSupport { get; set; }
+
+    /// <summary>Base64 representation of the non-volatile UEFI variable store.</summary>
+    [JsonPropertyName("uefiData")]
+    public string? UefiData { get; set; }
 
     /// <summary>Operation of the Amazon EC2 instance and the billing code that is associated with the AMI.</summary>
     [JsonPropertyName("usageOperation")]

@@ -353,7 +353,7 @@ public partial class V1beta1IntegrationSpecForProvider
     [JsonPropertyName("passthroughBehavior")]
     public string? PassthroughBehavior { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -389,7 +389,7 @@ public partial class V1beta1IntegrationSpecForProvider
     [JsonPropertyName("restApiIdSelector")]
     public V1beta1IntegrationSpecForProviderRestApiIdSelector? RestApiIdSelector { get; set; }
 
-    /// <summary>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</summary>
+    /// <summary>Custom timeout between 50 and 300,000 milliseconds. The default value is 29,000 milliseconds. You need to raise a Service Quota Ticket to increase time beyond 29,000 milliseconds.</summary>
     [JsonPropertyName("timeoutMilliseconds")]
     public double? TimeoutMilliseconds { get; set; }
 
@@ -401,7 +401,7 @@ public partial class V1beta1IntegrationSpecForProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
+    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:123456789012:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -791,7 +791,7 @@ public partial class V1beta1IntegrationSpecInitProvider
     [JsonPropertyName("restApiIdSelector")]
     public V1beta1IntegrationSpecInitProviderRestApiIdSelector? RestApiIdSelector { get; set; }
 
-    /// <summary>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</summary>
+    /// <summary>Custom timeout between 50 and 300,000 milliseconds. The default value is 29,000 milliseconds. You need to raise a Service Quota Ticket to increase time beyond 29,000 milliseconds.</summary>
     [JsonPropertyName("timeoutMilliseconds")]
     public double? TimeoutMilliseconds { get; set; }
 
@@ -803,7 +803,7 @@ public partial class V1beta1IntegrationSpecInitProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
+    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:123456789012:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -1001,6 +1001,10 @@ public partial class V1beta1IntegrationStatusAtProvider
     [JsonPropertyName("passthroughBehavior")]
     public string? PassthroughBehavior { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Map of request query string parameters and headers that should be passed to the backend responder. For example: request_parameters = { "integration.request.header.X-Some-Other-Header" = "method.request.header.X-Some-Header" }</summary>
     [JsonPropertyName("requestParameters")]
     public IDictionary<string, string>? RequestParameters { get; set; }
@@ -1017,7 +1021,7 @@ public partial class V1beta1IntegrationStatusAtProvider
     [JsonPropertyName("restApiId")]
     public string? RestApiId { get; set; }
 
-    /// <summary>Custom timeout between 50 and 29,000 milliseconds. The default value is 29,000 milliseconds.</summary>
+    /// <summary>Custom timeout between 50 and 300,000 milliseconds. The default value is 29,000 milliseconds. You need to raise a Service Quota Ticket to increase time beyond 29,000 milliseconds.</summary>
     [JsonPropertyName("timeoutMilliseconds")]
     public double? TimeoutMilliseconds { get; set; }
 
@@ -1029,7 +1033,7 @@ public partial class V1beta1IntegrationStatusAtProvider
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:012345678901:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
+    /// <summary>Input's URI. Required if type is AWS, AWS_PROXY, HTTP or HTTP_PROXY. For HTTP integrations, the URI must be a fully formed, encoded HTTP(S) URL according to the RFC-3986 specification . For AWS integrations, the URI should be of the form arn:aws:apigateway:{region}:{subdomain.service|service}:{path|action}/{service_api}. region, subdomain and service are used to determine the right endpoint. e.g., arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:123456789012:function:my-func/invocations. For private integrations, the URI parameter is not used for routing requests to your endpoint, but is used for setting the Host header and for certificate validation.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }

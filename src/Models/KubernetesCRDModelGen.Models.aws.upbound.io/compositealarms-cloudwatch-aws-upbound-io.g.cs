@@ -185,7 +185,7 @@ public partial class V1beta1CompositeAlarmSpecForProvider
     [JsonPropertyName("okActionsSelector")]
     public V1beta1CompositeAlarmSpecForProviderOkActionsSelector? OkActionsSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -564,6 +564,10 @@ public partial class V1beta1CompositeAlarmStatusAtProvider
     /// <summary>The set of actions to execute when this alarm transitions to an OK state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.</summary>
     [JsonPropertyName("okActions")]
     public IList<string>? OkActions { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -174,7 +174,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("posixProfile")]
     public IList<V1beta1UserSpecForProviderPosixProfile>? PosixProfile { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -595,6 +595,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>Specifies the full POSIX identity, including user ID (Uid), group ID (Gid), and any secondary groups IDs (SecondaryGids), that controls your users' access to your Amazon EFS file systems. See Posix Profile below.</summary>
     [JsonPropertyName("posixProfile")]
     public IList<V1beta1UserStatusAtProviderPosixProfile>? PosixProfile { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of an IAM role that allows the service to control your user’s access to your Amazon S3 bucket.</summary>
     [JsonPropertyName("role")]

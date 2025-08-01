@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderAddOn
 {
-    /// <summary>The daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
+    /// <summary>Daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
     [JsonPropertyName("snapshotTime")]
     public string? SnapshotTime { get; set; }
 
-    /// <summary>The status of the add on. Valid Values: Enabled, Disabled.</summary>
+    /// <summary>Status of the add-on. Valid values: Enabled, Disabled.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>The add-on type. There is currently only one valid type AutoSnapshot.</summary>
+    /// <summary>Add-on type. There is currently only one valid type AutoSnapshot.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -29,31 +29,31 @@ public partial class V1beta1InstanceSpecForProviderAddOn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProvider
 {
-    /// <summary>The add on configuration for the instance. Detailed below.</summary>
+    /// <summary>Add-on configuration for the instance. See below.</summary>
     [JsonPropertyName("addOn")]
     public IList<V1beta1InstanceSpecForProviderAddOn>? AddOn { get; set; }
 
-    /// <summary>The Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
+    /// <summary>Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
+    /// <summary>ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
     [JsonPropertyName("blueprintId")]
     public string? BlueprintId { get; set; }
 
-    /// <summary>The bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
+    /// <summary>Bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>The IP address type of the Lightsail Instance. Valid Values: dualstack | ipv4.</summary>
+    /// <summary>IP address type of the Lightsail Instance. Valid values: dualstack, ipv4, ipv6. Default: dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
-    /// <summary>The name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time)</summary>
+    /// <summary>Name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time).</summary>
     [JsonPropertyName("keyPairName")]
     public string? KeyPairName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -61,7 +61,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Single lined launch script as a string to configure server with additional user data</summary>
+    /// <summary>Single lined launch script as a string to configure server with additional user data.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 }
@@ -70,15 +70,15 @@ public partial class V1beta1InstanceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderAddOn
 {
-    /// <summary>The daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
+    /// <summary>Daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
     [JsonPropertyName("snapshotTime")]
     public string? SnapshotTime { get; set; }
 
-    /// <summary>The status of the add on. Valid Values: Enabled, Disabled.</summary>
+    /// <summary>Status of the add-on. Valid values: Enabled, Disabled.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>The add-on type. There is currently only one valid type AutoSnapshot.</summary>
+    /// <summary>Add-on type. There is currently only one valid type AutoSnapshot.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -87,27 +87,27 @@ public partial class V1beta1InstanceSpecInitProviderAddOn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProvider
 {
-    /// <summary>The add on configuration for the instance. Detailed below.</summary>
+    /// <summary>Add-on configuration for the instance. See below.</summary>
     [JsonPropertyName("addOn")]
     public IList<V1beta1InstanceSpecInitProviderAddOn>? AddOn { get; set; }
 
-    /// <summary>The Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
+    /// <summary>Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
+    /// <summary>ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
     [JsonPropertyName("blueprintId")]
     public string? BlueprintId { get; set; }
 
-    /// <summary>The bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
+    /// <summary>Bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>The IP address type of the Lightsail Instance. Valid Values: dualstack | ipv4.</summary>
+    /// <summary>IP address type of the Lightsail Instance. Valid values: dualstack, ipv4, ipv6. Default: dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
-    /// <summary>The name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time)</summary>
+    /// <summary>Name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time).</summary>
     [JsonPropertyName("keyPairName")]
     public string? KeyPairName { get; set; }
 
@@ -115,7 +115,7 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Single lined launch script as a string to configure server with additional user data</summary>
+    /// <summary>Single lined launch script as a string to configure server with additional user data.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 }
@@ -256,15 +256,15 @@ public partial class V1beta1InstanceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderAddOn
 {
-    /// <summary>The daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
+    /// <summary>Daily time when an automatic snapshot will be created. Must be in HH:00 format, and in an hourly increment and specified in Coordinated Universal Time (UTC). The snapshot will be automatically created between the time specified and up to 45 minutes after.</summary>
     [JsonPropertyName("snapshotTime")]
     public string? SnapshotTime { get; set; }
 
-    /// <summary>The status of the add on. Valid Values: Enabled, Disabled.</summary>
+    /// <summary>Status of the add-on. Valid values: Enabled, Disabled.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>The add-on type. There is currently only one valid type AutoSnapshot.</summary>
+    /// <summary>Add-on type. There is currently only one valid type AutoSnapshot.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -273,39 +273,39 @@ public partial class V1beta1InstanceStatusAtProviderAddOn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProvider
 {
-    /// <summary>The add on configuration for the instance. Detailed below.</summary>
+    /// <summary>Add-on configuration for the instance. See below.</summary>
     [JsonPropertyName("addOn")]
     public IList<V1beta1InstanceStatusAtProviderAddOn>? AddOn { get; set; }
 
-    /// <summary>The ARN of the Lightsail instance (matches id).</summary>
+    /// <summary>ARN of the Lightsail instance (matches id).</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
+    /// <summary>Availability Zone in which to create your instance. A list of available zones can be obtained using the AWS CLI command: aws lightsail get-regions --include-availability-zones.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
+    /// <summary>ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: aws lightsail get-blueprints.</summary>
     [JsonPropertyName("blueprintId")]
     public string? BlueprintId { get; set; }
 
-    /// <summary>The bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
+    /// <summary>Bundle of specification information. A list of available bundle IDs can be obtained using the AWS CLI command: aws lightsail get-bundles.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>The number of vCPUs the instance has.</summary>
+    /// <summary>Number of vCPUs the instance has.</summary>
     [JsonPropertyName("cpuCount")]
     public double? CpuCount { get; set; }
 
-    /// <summary>The timestamp when the instance was created.</summary>
+    /// <summary>Timestamp when the instance was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>The ARN of the Lightsail instance (matches arn).</summary>
+    /// <summary>ARN of the Lightsail instance (matches arn).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The IP address type of the Lightsail Instance. Valid Values: dualstack | ipv4.</summary>
+    /// <summary>IP address type of the Lightsail Instance. Valid values: dualstack, ipv4, ipv6. Default: dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
@@ -313,39 +313,43 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("ipv6Addresses")]
     public IList<string>? Ipv6Addresses { get; set; }
 
-    /// <summary>A Boolean value indicating whether this instance has a static IP assigned to it.</summary>
+    /// <summary>Whether this instance has a static IP assigned to it.</summary>
     [JsonPropertyName("isStaticIp")]
     public bool? IsStaticIp { get; set; }
 
-    /// <summary>The name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time)</summary>
+    /// <summary>Name of your key pair. Created in the Lightsail console (cannot use aws_key_pair at this time).</summary>
     [JsonPropertyName("keyPairName")]
     public string? KeyPairName { get; set; }
 
-    /// <summary>The private IP address of the instance.</summary>
+    /// <summary>Private IP address of the instance.</summary>
     [JsonPropertyName("privateIpAddress")]
     public string? PrivateIpAddress { get; set; }
 
-    /// <summary>The public IP address of the instance.</summary>
+    /// <summary>Public IP address of the instance.</summary>
     [JsonPropertyName("publicIpAddress")]
     public string? PublicIpAddress { get; set; }
 
-    /// <summary>The amount of RAM in GB on the instance (e.g., 1.0).</summary>
+    /// <summary>Amount of RAM in GB on the instance (e.g., 1.0).</summary>
     [JsonPropertyName("ramSize")]
     public double? RamSize { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Single lined launch script as a string to configure server with additional user data</summary>
+    /// <summary>Single lined launch script as a string to configure server with additional user data.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 
-    /// <summary>The user name for connecting to the instance (e.g., ec2-user).</summary>
+    /// <summary>User name for connecting to the instance (e.g., ec2-user).</summary>
     [JsonPropertyName("username")]
     public string? Username { get; set; }
 }
@@ -396,7 +400,7 @@ public partial class V1beta1InstanceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Instance is the Schema for the Instances API. Provides an Lightsail Instance</summary>
+/// <summary>Instance is the Schema for the Instances API. Manages a Lightsail Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstanceSpec>, IStatus<V1beta1InstanceStatus>
@@ -426,7 +430,7 @@ public partial class V1beta1Instance : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     public V1beta1InstanceStatus? Status { get; set; }
 }
 
-/// <summary>Instance is the Schema for the Instances API. Provides an Lightsail Instance</summary>
+/// <summary>Instance is the Schema for the Instances API. Manages a Lightsail Instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Instance>

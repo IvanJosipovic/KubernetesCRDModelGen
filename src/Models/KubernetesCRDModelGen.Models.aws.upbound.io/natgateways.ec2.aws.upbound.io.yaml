@@ -180,7 +180,10 @@ spec:
                     description: The private IPv4 address to assign to the NAT Gateway. If you don't provide an address, a private IPv4 address will be automatically assigned.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   secondaryAllocationIds:
                     description: A list of secondary allocation EIP IDs for this NAT Gateway.
@@ -934,6 +937,12 @@ spec:
                     type: string
                   publicIp:
                     description: The Elastic IP address associated with the NAT Gateway.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   secondaryAllocationIds:
                     description: A list of secondary allocation EIP IDs for this NAT Gateway.

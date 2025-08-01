@@ -808,7 +808,7 @@ public partial class V1beta2ClusterSpecForProvider
     [JsonPropertyName("openMonitoring")]
     public IList<V1beta2ClusterSpecForProviderOpenMonitoring>? OpenMonitoring { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -2169,6 +2169,10 @@ public partial class V1beta2ClusterStatusAtProvider
     /// <summary>Configuration block for JMX and Node monitoring for the MSK cluster. See below.</summary>
     [JsonPropertyName("openMonitoring")]
     public IList<V1beta2ClusterStatusAtProviderOpenMonitoring>? OpenMonitoring { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Controls storage mode for supported storage tiers. Valid values are: LOCAL or TIERED.</summary>
     [JsonPropertyName("storageMode")]

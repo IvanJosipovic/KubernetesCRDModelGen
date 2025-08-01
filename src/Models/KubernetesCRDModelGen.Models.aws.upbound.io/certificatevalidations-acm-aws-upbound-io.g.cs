@@ -80,7 +80,7 @@ public partial class V1beta1CertificateValidationSpecForProvider
     [JsonPropertyName("certificateArnSelector")]
     public V1beta1CertificateValidationSpecForProviderCertificateArnSelector? CertificateArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1CertificateValidationStatusAtProvider
     /// <summary>Time at which the certificate was issued</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of FQDNs that implement the validation. Only valid for DNS validation method ACM certificates. If this is set, the resource can implement additional sanity checks and has an explicit dependency on the resource that is implementing the validation</summary>
     [JsonPropertyName("validationRecordFqdns")]

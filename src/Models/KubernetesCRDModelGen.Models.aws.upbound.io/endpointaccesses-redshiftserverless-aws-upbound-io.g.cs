@@ -128,7 +128,7 @@ public partial class V1beta1EndpointAccessSpecForProvider
     [JsonPropertyName("ownerAccount")]
     public string? OwnerAccount { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -503,6 +503,10 @@ public partial class V1beta1EndpointAccessStatusAtProvider
     /// <summary>The port that Amazon Redshift Serverless listens on.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An array of VPC subnet IDs to associate with the endpoint.</summary>
     [JsonPropertyName("subnetIds")]

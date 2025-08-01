@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.backup.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderConditionStringEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -25,11 +25,11 @@ public partial class V1beta1SelectionSpecForProviderConditionStringEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderConditionStringLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -38,11 +38,11 @@ public partial class V1beta1SelectionSpecForProviderConditionStringLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderConditionStringNotEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -51,11 +51,11 @@ public partial class V1beta1SelectionSpecForProviderConditionStringNotEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderConditionStringNotLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -64,19 +64,19 @@ public partial class V1beta1SelectionSpecForProviderConditionStringNotLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderCondition
 {
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged with the same value. Also called "exact matching". See below for details.</summary>
     [JsonPropertyName("stringEquals")]
     public IList<V1beta1SelectionSpecForProviderConditionStringEquals>? StringEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*) anywhere in the string. For example, prod* or *rod* matches the tag value production. See below for details.</summary>
     [JsonPropertyName("stringLike")]
     public IList<V1beta1SelectionSpecForProviderConditionStringLike>? StringLike { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged that do not have the same value. Also called "negated matching". See below for details.</summary>
     [JsonPropertyName("stringNotEquals")]
     public IList<V1beta1SelectionSpecForProviderConditionStringNotEquals>? StringNotEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*) anywhere in the string. See below for details.</summary>
     [JsonPropertyName("stringNotLike")]
     public IList<V1beta1SelectionSpecForProviderConditionStringNotLike>? StringNotLike { get; set; }
 }
@@ -309,15 +309,15 @@ public partial class V1beta1SelectionSpecForProviderResourcesSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProviderSelectionTag
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>An operation, such as StringEquals, that is applied to a key-value pair used to filter resources in a selection.</summary>
+    /// <summary>An operation, such as STRINGEQUALS, that is applied to the key-value pair used to filter resources in a selection.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -326,7 +326,7 @@ public partial class V1beta1SelectionSpecForProviderSelectionTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecForProvider
 {
-    /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
+    /// <summary>Condition-based filters used to specify sets of resources for a backup plan. See below for details.</summary>
     [JsonPropertyName("condition")]
     public IList<V1beta1SelectionSpecForProviderCondition>? Condition { get; set; }
 
@@ -370,7 +370,7 @@ public partial class V1beta1SelectionSpecForProvider
     [JsonPropertyName("planIdSelector")]
     public V1beta1SelectionSpecForProviderPlanIdSelector? PlanIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -386,7 +386,7 @@ public partial class V1beta1SelectionSpecForProvider
     [JsonPropertyName("resourcesSelector")]
     public V1beta1SelectionSpecForProviderResourcesSelector? ResourcesSelector { get; set; }
 
-    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan.</summary>
+    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan. See below for details.</summary>
     [JsonPropertyName("selectionTag")]
     public IList<V1beta1SelectionSpecForProviderSelectionTag>? SelectionTag { get; set; }
 }
@@ -395,11 +395,11 @@ public partial class V1beta1SelectionSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderConditionStringEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -408,11 +408,11 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderConditionStringLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -421,11 +421,11 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderConditionStringNotEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -434,11 +434,11 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringNotEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderConditionStringNotLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -447,19 +447,19 @@ public partial class V1beta1SelectionSpecInitProviderConditionStringNotLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderCondition
 {
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged with the same value. Also called "exact matching". See below for details.</summary>
     [JsonPropertyName("stringEquals")]
     public IList<V1beta1SelectionSpecInitProviderConditionStringEquals>? StringEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*) anywhere in the string. For example, prod* or *rod* matches the tag value production. See below for details.</summary>
     [JsonPropertyName("stringLike")]
     public IList<V1beta1SelectionSpecInitProviderConditionStringLike>? StringLike { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged that do not have the same value. Also called "negated matching". See below for details.</summary>
     [JsonPropertyName("stringNotEquals")]
     public IList<V1beta1SelectionSpecInitProviderConditionStringNotEquals>? StringNotEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*) anywhere in the string. See below for details.</summary>
     [JsonPropertyName("stringNotLike")]
     public IList<V1beta1SelectionSpecInitProviderConditionStringNotLike>? StringNotLike { get; set; }
 }
@@ -692,15 +692,15 @@ public partial class V1beta1SelectionSpecInitProviderResourcesSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProviderSelectionTag
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>An operation, such as StringEquals, that is applied to a key-value pair used to filter resources in a selection.</summary>
+    /// <summary>An operation, such as STRINGEQUALS, that is applied to the key-value pair used to filter resources in a selection.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -709,7 +709,7 @@ public partial class V1beta1SelectionSpecInitProviderSelectionTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionSpecInitProvider
 {
-    /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
+    /// <summary>Condition-based filters used to specify sets of resources for a backup plan. See below for details.</summary>
     [JsonPropertyName("condition")]
     public IList<V1beta1SelectionSpecInitProviderCondition>? Condition { get; set; }
 
@@ -765,7 +765,7 @@ public partial class V1beta1SelectionSpecInitProvider
     [JsonPropertyName("resourcesSelector")]
     public V1beta1SelectionSpecInitProviderResourcesSelector? ResourcesSelector { get; set; }
 
-    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan.</summary>
+    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan. See below for details.</summary>
     [JsonPropertyName("selectionTag")]
     public IList<V1beta1SelectionSpecInitProviderSelectionTag>? SelectionTag { get; set; }
 }
@@ -906,11 +906,11 @@ public partial class V1beta1SelectionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderConditionStringEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -919,11 +919,11 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderConditionStringLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -932,11 +932,11 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderConditionStringNotEquals
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -945,11 +945,11 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringNotEquals
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderConditionStringNotLike
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -958,19 +958,19 @@ public partial class V1beta1SelectionStatusAtProviderConditionStringNotLike
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderCondition
 {
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged with the same value. Also called "exact matching". See below for details.</summary>
     [JsonPropertyName("stringEquals")]
     public IList<V1beta1SelectionStatusAtProviderConditionStringEquals>? StringEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for matching tag values with the use of a wildcard character (*) anywhere in the string. For example, prod* or *rod* matches the tag value production. See below for details.</summary>
     [JsonPropertyName("stringLike")]
     public IList<V1beta1SelectionStatusAtProviderConditionStringLike>? StringLike { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for only those resources that you tagged that do not have the same value. Also called "negated matching". See below for details.</summary>
     [JsonPropertyName("stringNotEquals")]
     public IList<V1beta1SelectionStatusAtProviderConditionStringNotEquals>? StringNotEquals { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Filters the values of your tagged resources for non-matching tag values with the use of a wildcard character (*) anywhere in the string. See below for details.</summary>
     [JsonPropertyName("stringNotLike")]
     public IList<V1beta1SelectionStatusAtProviderConditionStringNotLike>? StringNotLike { get; set; }
 }
@@ -979,15 +979,15 @@ public partial class V1beta1SelectionStatusAtProviderCondition
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProviderSelectionTag
 {
-    /// <summary>The key in a key-value pair.</summary>
+    /// <summary>Key for the filter.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>An operation, such as StringEquals, that is applied to a key-value pair used to filter resources in a selection.</summary>
+    /// <summary>An operation, such as STRINGEQUALS, that is applied to the key-value pair used to filter resources in a selection.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The value in a key-value pair.</summary>
+    /// <summary>Value for the filter.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -996,7 +996,7 @@ public partial class V1beta1SelectionStatusAtProviderSelectionTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SelectionStatusAtProvider
 {
-    /// <summary>A list of conditions that you define to assign resources to your backup plans using tags.</summary>
+    /// <summary>Condition-based filters used to specify sets of resources for a backup plan. See below for details.</summary>
     [JsonPropertyName("condition")]
     public IList<V1beta1SelectionStatusAtProviderCondition>? Condition { get; set; }
 
@@ -1020,11 +1020,15 @@ public partial class V1beta1SelectionStatusAtProvider
     [JsonPropertyName("planId")]
     public string? PlanId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>An array of strings that either contain Amazon Resource Names (ARNs) or match patterns of resources to assign to a backup plan.</summary>
     [JsonPropertyName("resources")]
     public IList<string>? Resources { get; set; }
 
-    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan.</summary>
+    /// <summary>Tag-based conditions used to specify a set of resources to assign to a backup plan. See below for details.</summary>
     [JsonPropertyName("selectionTag")]
     public IList<V1beta1SelectionStatusAtProviderSelectionTag>? SelectionTag { get; set; }
 }

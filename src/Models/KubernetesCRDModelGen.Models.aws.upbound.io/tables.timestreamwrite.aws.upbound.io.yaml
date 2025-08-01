@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   databaseName:
-                    description: –  The name of the Timestream database.
+                    description: The name of the Timestream database.
                     type: string
                   databaseNameRef:
                     description: Reference to a Database in timestreamwrite to populate databaseName.
@@ -207,7 +207,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   retentionProperties:
                     description: The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, magnetic_store_retention_period_in_days default to 73000 and memory_store_retention_period_in_hours defaults to 6.
@@ -567,7 +570,7 @@ spec:
                     description: The ARN that uniquely identifies this table.
                     type: string
                   databaseName:
-                    description: –  The name of the Timestream database.
+                    description: The name of the Timestream database.
                     type: string
                   id:
                     description: The table_name and database_name separated by a colon (:).
@@ -605,6 +608,12 @@ spec:
                           type: array
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   retentionProperties:
                     description: The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, magnetic_store_retention_period_in_days default to 73000 and memory_store_retention_period_in_hours defaults to 6.
                     items:
@@ -788,7 +797,7 @@ spec:
               forProvider:
                 properties:
                   databaseName:
-                    description: –  The name of the Timestream database.
+                    description: The name of the Timestream database.
                     type: string
                   databaseNameRef:
                     description: Reference to a Database in timestreamwrite to populate databaseName.
@@ -904,7 +913,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   retentionProperties:
                     description: The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, magnetic_store_retention_period_in_days default to 73000 and memory_store_retention_period_in_hours defaults to 6.
@@ -1246,7 +1258,7 @@ spec:
                     description: The ARN that uniquely identifies this table.
                     type: string
                   databaseName:
-                    description: –  The name of the Timestream database.
+                    description: The name of the Timestream database.
                     type: string
                   id:
                     description: The table_name and database_name separated by a colon (:).
@@ -1278,6 +1290,12 @@ spec:
                             type: object
                         type: object
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   retentionProperties:
                     description: The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, magnetic_store_retention_period_in_days default to 73000 and memory_store_retention_period_in_hours defaults to 6.
                     properties:

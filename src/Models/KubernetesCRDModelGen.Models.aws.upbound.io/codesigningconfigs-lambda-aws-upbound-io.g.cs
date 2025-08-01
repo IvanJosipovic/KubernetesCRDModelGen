@@ -68,7 +68,7 @@ public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishersSig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProviderAllowedPublishers
 {
-    /// <summary>The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.</summary>
+    /// <summary>Set of ARNs for each of the signing profiles. A signing profile defines a trusted user who can sign a code package. Maximum of 20 signing profiles.</summary>
     [JsonPropertyName("signingProfileVersionArns")]
     public IList<string>? SigningProfileVersionArns { get; set; }
 
@@ -94,7 +94,7 @@ public partial class V1beta1CodeSigningConfigSpecForProviderPolicies
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecForProvider
 {
-    /// <summary>A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.</summary>
+    /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
     [JsonPropertyName("allowedPublishers")]
     public IList<V1beta1CodeSigningConfigSpecForProviderAllowedPublishers>? AllowedPublishers { get; set; }
 
@@ -102,11 +102,11 @@ public partial class V1beta1CodeSigningConfigSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.</summary>
+    /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
     [JsonPropertyName("policies")]
     public IList<V1beta1CodeSigningConfigSpecForProviderPolicies>? Policies { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -175,7 +175,7 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishersSi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProviderAllowedPublishers
 {
-    /// <summary>The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.</summary>
+    /// <summary>Set of ARNs for each of the signing profiles. A signing profile defines a trusted user who can sign a code package. Maximum of 20 signing profiles.</summary>
     [JsonPropertyName("signingProfileVersionArns")]
     public IList<string>? SigningProfileVersionArns { get; set; }
 
@@ -201,7 +201,7 @@ public partial class V1beta1CodeSigningConfigSpecInitProviderPolicies
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigSpecInitProvider
 {
-    /// <summary>A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.</summary>
+    /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
     [JsonPropertyName("allowedPublishers")]
     public IList<V1beta1CodeSigningConfigSpecInitProviderAllowedPublishers>? AllowedPublishers { get; set; }
 
@@ -209,7 +209,7 @@ public partial class V1beta1CodeSigningConfigSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.</summary>
+    /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
     [JsonPropertyName("policies")]
     public IList<V1beta1CodeSigningConfigSpecInitProviderPolicies>? Policies { get; set; }
 
@@ -354,7 +354,7 @@ public partial class V1beta1CodeSigningConfigSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusAtProviderAllowedPublishers
 {
-    /// <summary>The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.</summary>
+    /// <summary>Set of ARNs for each of the signing profiles. A signing profile defines a trusted user who can sign a code package. Maximum of 20 signing profiles.</summary>
     [JsonPropertyName("signingProfileVersionArns")]
     public IList<string>? SigningProfileVersionArns { get; set; }
 }
@@ -372,11 +372,11 @@ public partial class V1beta1CodeSigningConfigStatusAtProviderPolicies
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodeSigningConfigStatusAtProvider
 {
-    /// <summary>A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.</summary>
+    /// <summary>Configuration block of allowed publishers as signing profiles for this code signing configuration. See below.</summary>
     [JsonPropertyName("allowedPublishers")]
     public IList<V1beta1CodeSigningConfigStatusAtProviderAllowedPublishers>? AllowedPublishers { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the code signing configuration.</summary>
+    /// <summary>ARN of the code signing configuration.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -392,19 +392,23 @@ public partial class V1beta1CodeSigningConfigStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The date and time that the code signing configuration was last modified.</summary>
+    /// <summary>Date and time that the code signing configuration was last modified.</summary>
     [JsonPropertyName("lastModified")]
     public string? LastModified { get; set; }
 
-    /// <summary>A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.</summary>
+    /// <summary>Configuration block of code signing policies that define the actions to take if the validation checks fail. See below.</summary>
     [JsonPropertyName("policies")]
     public IList<V1beta1CodeSigningConfigStatusAtProviderPolicies>? Policies { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -455,7 +459,7 @@ public partial class V1beta1CodeSigningConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Provides a Lambda Code Signing Config resource.</summary>
+/// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Manages an AWS Lambda Code Signing Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CodeSigningConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CodeSigningConfigSpec>, IStatus<V1beta1CodeSigningConfigStatus>
@@ -485,7 +489,7 @@ public partial class V1beta1CodeSigningConfig : IKubernetesObject<V1ObjectMeta>,
     public V1beta1CodeSigningConfigStatus? Status { get; set; }
 }
 
-/// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Provides a Lambda Code Signing Config resource.</summary>
+/// <summary>CodeSigningConfig is the Schema for the CodeSigningConfigs API. Manages an AWS Lambda Code Signing Config.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CodeSigningConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CodeSigningConfig>

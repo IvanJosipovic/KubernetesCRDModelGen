@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.ecs.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationExecuteCommandConfigurationLogConfiguration
 {
-    /// <summary>Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("cloudWatchEncryptionEnabled")]
     public bool? CloudWatchEncryptionEnabled { get; set; }
 
@@ -20,15 +20,15 @@ public partial class V1beta1ClusterSpecForProviderConfigurationExecuteCommandCon
     [JsonPropertyName("cloudWatchLogGroupName")]
     public string? CloudWatchLogGroupName { get; set; }
 
-    /// <summary>Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("s3BucketEncryptionEnabled")]
     public bool? S3BucketEncryptionEnabled { get; set; }
 
-    /// <summary>The name of the S3 bucket to send logs to.</summary>
+    /// <summary>Name of the S3 bucket to send logs to.</summary>
     [JsonPropertyName("s3BucketName")]
     public string? S3BucketName { get; set; }
 
-    /// <summary>An optional folder in the S3 bucket to place logs in.</summary>
+    /// <summary>Optional folder in the S3 bucket to place logs in.</summary>
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 }
@@ -37,15 +37,15 @@ public partial class V1beta1ClusterSpecForProviderConfigurationExecuteCommandCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfigurationExecuteCommandConfiguration
 {
-    /// <summary>The AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
+    /// <summary>AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The log configuration for the results of the execute command actions Required when logging is OVERRIDE. Detailed below.</summary>
+    /// <summary>Log configuration for the results of the execute command actions. Required when logging is OVERRIDE. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ClusterSpecForProviderConfigurationExecuteCommandConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The log setting to use for redirecting logs for your execute command results. Valid values are NONE, DEFAULT, and OVERRIDE.</summary>
+    /// <summary>Log setting to use for redirecting logs for your execute command results. Valid values: NONE, DEFAULT, OVERRIDE.</summary>
     [JsonPropertyName("logging")]
     public string? Logging { get; set; }
 }
@@ -67,7 +67,7 @@ public partial class V1beta1ClusterSpecForProviderConfigurationManagedStorageCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderConfiguration
 {
-    /// <summary>The details of the execute command configuration. Detailed below.</summary>
+    /// <summary>Details of the execute command configuration. See execute_command_configuration Block for details.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterSpecForProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
 
@@ -80,7 +80,7 @@ public partial class V1beta1ClusterSpecForProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderServiceConnectDefaults
 {
-    /// <summary>The ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
+    /// <summary>ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -93,7 +93,7 @@ public partial class V1beta1ClusterSpecForProviderSetting
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value to assign to the setting. Valid values are enabled and disabled.</summary>
+    /// <summary>Value to assign to the setting. Valid values: enhanced, enabled, disabled.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -102,19 +102,19 @@ public partial class V1beta1ClusterSpecForProviderSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
-    /// <summary>The execute command configuration for the cluster. Detailed below.</summary>
+    /// <summary>Execute command configuration for the cluster. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1ClusterSpecForProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Configures a default Service Connect namespace. Detailed below.</summary>
+    /// <summary>Default Service Connect namespace. See service_connect_defaults Block for details.</summary>
     [JsonPropertyName("serviceConnectDefaults")]
     public IList<V1beta1ClusterSpecForProviderServiceConnectDefaults>? ServiceConnectDefaults { get; set; }
 
-    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.</summary>
+    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. See setting Block for details.</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ClusterSpecForProviderSetting>? Setting { get; set; }
 
@@ -127,7 +127,7 @@ public partial class V1beta1ClusterSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationExecuteCommandConfigurationLogConfiguration
 {
-    /// <summary>Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("cloudWatchEncryptionEnabled")]
     public bool? CloudWatchEncryptionEnabled { get; set; }
 
@@ -135,15 +135,15 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationExecuteCommandCo
     [JsonPropertyName("cloudWatchLogGroupName")]
     public string? CloudWatchLogGroupName { get; set; }
 
-    /// <summary>Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("s3BucketEncryptionEnabled")]
     public bool? S3BucketEncryptionEnabled { get; set; }
 
-    /// <summary>The name of the S3 bucket to send logs to.</summary>
+    /// <summary>Name of the S3 bucket to send logs to.</summary>
     [JsonPropertyName("s3BucketName")]
     public string? S3BucketName { get; set; }
 
-    /// <summary>An optional folder in the S3 bucket to place logs in.</summary>
+    /// <summary>Optional folder in the S3 bucket to place logs in.</summary>
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 }
@@ -152,15 +152,15 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationExecuteCommandCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfigurationExecuteCommandConfiguration
 {
-    /// <summary>The AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
+    /// <summary>AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The log configuration for the results of the execute command actions Required when logging is OVERRIDE. Detailed below.</summary>
+    /// <summary>Log configuration for the results of the execute command actions. Required when logging is OVERRIDE. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderConfigurationExecuteCommandConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The log setting to use for redirecting logs for your execute command results. Valid values are NONE, DEFAULT, and OVERRIDE.</summary>
+    /// <summary>Log setting to use for redirecting logs for your execute command results. Valid values: NONE, DEFAULT, OVERRIDE.</summary>
     [JsonPropertyName("logging")]
     public string? Logging { get; set; }
 }
@@ -182,7 +182,7 @@ public partial class V1beta1ClusterSpecInitProviderConfigurationManagedStorageCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderConfiguration
 {
-    /// <summary>The details of the execute command configuration. Detailed below.</summary>
+    /// <summary>Details of the execute command configuration. See execute_command_configuration Block for details.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
 
@@ -195,7 +195,7 @@ public partial class V1beta1ClusterSpecInitProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderServiceConnectDefaults
 {
-    /// <summary>The ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
+    /// <summary>ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -208,7 +208,7 @@ public partial class V1beta1ClusterSpecInitProviderSetting
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value to assign to the setting. Valid values are enabled and disabled.</summary>
+    /// <summary>Value to assign to the setting. Valid values: enhanced, enabled, disabled.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -217,15 +217,15 @@ public partial class V1beta1ClusterSpecInitProviderSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
-    /// <summary>The execute command configuration for the cluster. Detailed below.</summary>
+    /// <summary>Execute command configuration for the cluster. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1ClusterSpecInitProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Configures a default Service Connect namespace. Detailed below.</summary>
+    /// <summary>Default Service Connect namespace. See service_connect_defaults Block for details.</summary>
     [JsonPropertyName("serviceConnectDefaults")]
     public IList<V1beta1ClusterSpecInitProviderServiceConnectDefaults>? ServiceConnectDefaults { get; set; }
 
-    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.</summary>
+    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. See setting Block for details.</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ClusterSpecInitProviderSetting>? Setting { get; set; }
 
@@ -370,7 +370,7 @@ public partial class V1beta1ClusterSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfigurationExecuteCommandConfigurationLogConfiguration
 {
-    /// <summary>Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("cloudWatchEncryptionEnabled")]
     public bool? CloudWatchEncryptionEnabled { get; set; }
 
@@ -378,15 +378,15 @@ public partial class V1beta1ClusterStatusAtProviderConfigurationExecuteCommandCo
     [JsonPropertyName("cloudWatchLogGroupName")]
     public string? CloudWatchLogGroupName { get; set; }
 
-    /// <summary>Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
+    /// <summary>Whether to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.</summary>
     [JsonPropertyName("s3BucketEncryptionEnabled")]
     public bool? S3BucketEncryptionEnabled { get; set; }
 
-    /// <summary>The name of the S3 bucket to send logs to.</summary>
+    /// <summary>Name of the S3 bucket to send logs to.</summary>
     [JsonPropertyName("s3BucketName")]
     public string? S3BucketName { get; set; }
 
-    /// <summary>An optional folder in the S3 bucket to place logs in.</summary>
+    /// <summary>Optional folder in the S3 bucket to place logs in.</summary>
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 }
@@ -395,15 +395,15 @@ public partial class V1beta1ClusterStatusAtProviderConfigurationExecuteCommandCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfigurationExecuteCommandConfiguration
 {
-    /// <summary>The AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
+    /// <summary>AWS Key Management Service key ID to encrypt the data between the local client and the container.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The log configuration for the results of the execute command actions Required when logging is OVERRIDE. Detailed below.</summary>
+    /// <summary>Log configuration for the results of the execute command actions. Required when logging is OVERRIDE. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderConfigurationExecuteCommandConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The log setting to use for redirecting logs for your execute command results. Valid values are NONE, DEFAULT, and OVERRIDE.</summary>
+    /// <summary>Log setting to use for redirecting logs for your execute command results. Valid values: NONE, DEFAULT, OVERRIDE.</summary>
     [JsonPropertyName("logging")]
     public string? Logging { get; set; }
 }
@@ -425,7 +425,7 @@ public partial class V1beta1ClusterStatusAtProviderConfigurationManagedStorageCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderConfiguration
 {
-    /// <summary>The details of the execute command configuration. Detailed below.</summary>
+    /// <summary>Details of the execute command configuration. See execute_command_configuration Block for details.</summary>
     [JsonPropertyName("executeCommandConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderConfigurationExecuteCommandConfiguration>? ExecuteCommandConfiguration { get; set; }
 
@@ -438,7 +438,7 @@ public partial class V1beta1ClusterStatusAtProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderServiceConnectDefaults
 {
-    /// <summary>The ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
+    /// <summary>ARN of the aws_service_discovery_http_namespace that's used when you create a service and don't specify a Service Connect configuration.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 }
@@ -451,7 +451,7 @@ public partial class V1beta1ClusterStatusAtProviderSetting
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value to assign to the setting. Valid values are enabled and disabled.</summary>
+    /// <summary>Value to assign to the setting. Valid values: enhanced, enabled, disabled.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -464,19 +464,23 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The execute command configuration for the cluster. Detailed below.</summary>
+    /// <summary>Execute command configuration for the cluster. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1ClusterStatusAtProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>ARN that identifies the cluster.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Configures a default Service Connect namespace. Detailed below.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Default Service Connect namespace. See service_connect_defaults Block for details.</summary>
     [JsonPropertyName("serviceConnectDefaults")]
     public IList<V1beta1ClusterStatusAtProviderServiceConnectDefaults>? ServiceConnectDefaults { get; set; }
 
-    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Detailed below.</summary>
+    /// <summary>Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. See setting Block for details.</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ClusterStatusAtProviderSetting>? Setting { get; set; }
 

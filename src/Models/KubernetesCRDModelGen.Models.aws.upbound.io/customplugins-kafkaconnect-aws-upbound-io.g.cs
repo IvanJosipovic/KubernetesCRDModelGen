@@ -157,7 +157,7 @@ public partial class V1beta1CustomPluginSpecForProviderLocationS3
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecForProviderLocation
 {
-    /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
+    /// <summary>Information of the plugin file stored in Amazon S3. See s3 Block for details..</summary>
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginSpecForProviderLocationS3>? S3 { get; set; }
 }
@@ -174,7 +174,7 @@ public partial class V1beta1CustomPluginSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Information about the location of a custom plugin. See below.</summary>
+    /// <summary>Information about the location of a custom plugin. See location Block for details.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1CustomPluginSpecForProviderLocation>? Location { get; set; }
 
@@ -182,7 +182,7 @@ public partial class V1beta1CustomPluginSpecForProvider
     [JsonPropertyName("name")]
     public string Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -340,7 +340,7 @@ public partial class V1beta1CustomPluginSpecInitProviderLocationS3
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginSpecInitProviderLocation
 {
-    /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
+    /// <summary>Information of the plugin file stored in Amazon S3. See s3 Block for details..</summary>
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginSpecInitProviderLocationS3>? S3 { get; set; }
 }
@@ -357,7 +357,7 @@ public partial class V1beta1CustomPluginSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Information about the location of a custom plugin. See below.</summary>
+    /// <summary>Information about the location of a custom plugin. See location Block for details.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1CustomPluginSpecInitProviderLocation>? Location { get; set; }
 
@@ -519,7 +519,7 @@ public partial class V1beta1CustomPluginStatusAtProviderLocationS3
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomPluginStatusAtProviderLocation
 {
-    /// <summary>Information of the plugin file stored in Amazon S3. See below.</summary>
+    /// <summary>Information of the plugin file stored in Amazon S3. See s3 Block for details..</summary>
     [JsonPropertyName("s3")]
     public IList<V1beta1CustomPluginStatusAtProviderLocationS3>? S3 { get; set; }
 }
@@ -548,13 +548,17 @@ public partial class V1beta1CustomPluginStatusAtProvider
     [JsonPropertyName("latestRevision")]
     public double? LatestRevision { get; set; }
 
-    /// <summary>Information about the location of a custom plugin. See below.</summary>
+    /// <summary>Information about the location of a custom plugin. See location Block for details.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1CustomPluginStatusAtProviderLocation>? Location { get; set; }
 
     /// <summary>The name of the custom plugin..</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>the state of the custom plugin.</summary>
     [JsonPropertyName("state")]

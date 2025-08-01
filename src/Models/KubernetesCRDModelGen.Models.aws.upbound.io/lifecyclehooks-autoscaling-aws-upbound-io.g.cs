@@ -156,7 +156,7 @@ public partial class V1beta1LifecycleHookSpecForProvider
     [JsonPropertyName("notificationTargetArn")]
     public string? NotificationTargetArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -429,6 +429,10 @@ public partial class V1beta1LifecycleHookStatusAtProvider
     /// <summary>ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.</summary>
     [JsonPropertyName("notificationTargetArn")]
     public string? NotificationTargetArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.</summary>
     [JsonPropertyName("roleArn")]

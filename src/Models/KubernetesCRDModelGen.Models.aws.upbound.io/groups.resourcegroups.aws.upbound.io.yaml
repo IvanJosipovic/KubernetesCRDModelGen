@@ -111,7 +111,10 @@ spec:
                     description: A description of the resource group.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceQuery:
                     description: A resource_query block. Resource queries are documented below.
@@ -444,6 +447,12 @@ spec:
                     description: A description of the resource group.
                     type: string
                   id:
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceQuery:
                     description: A resource_query block. Resource queries are documented below.
@@ -630,7 +639,10 @@ spec:
                     description: A description of the resource group.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceQuery:
                     description: A resource_query block. Resource queries are documented below.
@@ -959,6 +971,12 @@ spec:
                     description: A description of the resource group.
                     type: string
                   id:
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceQuery:
                     description: A resource_query block. Resource queries are documented below.

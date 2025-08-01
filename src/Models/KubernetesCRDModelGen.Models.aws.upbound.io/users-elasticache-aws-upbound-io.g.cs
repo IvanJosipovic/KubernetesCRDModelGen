@@ -67,7 +67,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("authenticationMode")]
     public IList<V1beta1UserSpecForProviderAuthenticationMode>? AuthenticationMode { get; set; }
 
-    /// <summary>The current supported value is REDIS.</summary>
+    /// <summary>The current supported values are redis, valkey (case insensitive).</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -79,7 +79,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("passwordsSecretRef")]
     public IList<V1beta1UserSpecForProviderPasswordsSecretRef>? PasswordsSecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -117,7 +117,7 @@ public partial class V1beta1UserSpecInitProvider
     [JsonPropertyName("authenticationMode")]
     public IList<V1beta1UserSpecInitProviderAuthenticationMode>? AuthenticationMode { get; set; }
 
-    /// <summary>The current supported value is REDIS.</summary>
+    /// <summary>The current supported values are redis, valkey (case insensitive).</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -299,7 +299,7 @@ public partial class V1beta1UserStatusAtProvider
     [JsonPropertyName("authenticationMode")]
     public IList<V1beta1UserStatusAtProviderAuthenticationMode>? AuthenticationMode { get; set; }
 
-    /// <summary>The current supported value is REDIS.</summary>
+    /// <summary>The current supported values are redis, valkey (case insensitive).</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -310,6 +310,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>Indicates a password is not required for this user.</summary>
     [JsonPropertyName("noPasswordRequired")]
     public bool? NoPasswordRequired { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

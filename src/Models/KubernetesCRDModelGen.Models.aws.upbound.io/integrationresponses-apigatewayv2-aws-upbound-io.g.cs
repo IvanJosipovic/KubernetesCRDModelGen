@@ -156,7 +156,7 @@ public partial class V1beta1IntegrationResponseSpecForProvider
     [JsonPropertyName("integrationResponseKey")]
     public string? IntegrationResponseKey { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -481,6 +481,10 @@ public partial class V1beta1IntegrationResponseStatusAtProvider
     /// <summary>Integration response key.</summary>
     [JsonPropertyName("integrationResponseKey")]
     public string? IntegrationResponseKey { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</summary>
     [JsonPropertyName("responseTemplates")]

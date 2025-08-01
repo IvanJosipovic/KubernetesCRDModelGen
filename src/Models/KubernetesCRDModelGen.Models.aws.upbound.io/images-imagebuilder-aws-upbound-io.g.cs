@@ -309,7 +309,7 @@ public partial class V1beta1ImageSpecForProvider
     [JsonPropertyName("infrastructureConfigurationArnSelector")]
     public V1beta1ImageSpecForProviderInfrastructureConfigurationArnSelector? InfrastructureConfigurationArnSelector { get; set; }
 
-    /// <summary>Region of the AMI. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -823,7 +823,7 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesAmis
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region of the AMI.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -836,7 +836,7 @@ public partial class V1beta1ImageStatusAtProviderOutputResourcesContainers
     [JsonPropertyName("imageUris")]
     public IList<string>? ImageUris { get; set; }
 
-    /// <summary>Region of the AMI.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -951,6 +951,10 @@ public partial class V1beta1ImageStatusAtProvider
     /// <summary>Platform of the image.</summary>
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

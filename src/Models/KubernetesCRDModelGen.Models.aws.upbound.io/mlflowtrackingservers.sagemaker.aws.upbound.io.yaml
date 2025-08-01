@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker MLFlow Tracking Server resource.
+        description: MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker AI MLFlow Tracking Server resource.
         properties:
           apiVersion:
             description: >-
@@ -94,7 +94,10 @@ spec:
                     description: The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.
@@ -563,6 +566,12 @@ spec:
                     type: string
                   mlflowVersion:
                     description: The version of MLflow that the tracking server uses. To see which MLflow versions are available to use, see How it works.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.

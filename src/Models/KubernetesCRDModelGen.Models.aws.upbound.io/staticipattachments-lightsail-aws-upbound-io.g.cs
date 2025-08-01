@@ -124,7 +124,7 @@ public partial class V1beta1StaticIPAttachmentSpecForProviderStaticIpNameSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecForProvider
 {
-    /// <summary>The name of the Lightsail instance to attach the IP to</summary>
+    /// <summary>Name of the Lightsail instance to attach the IP to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -136,11 +136,11 @@ public partial class V1beta1StaticIPAttachmentSpecForProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1StaticIPAttachmentSpecForProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The name of the allocated static IP</summary>
+    /// <summary>Name of the allocated static IP.</summary>
     [JsonPropertyName("staticIpName")]
     public string? StaticIpName { get; set; }
 
@@ -269,7 +269,7 @@ public partial class V1beta1StaticIPAttachmentSpecInitProviderStaticIpNameSelect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPAttachmentSpecInitProvider
 {
-    /// <summary>The name of the Lightsail instance to attach the IP to</summary>
+    /// <summary>Name of the Lightsail instance to attach the IP to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -281,7 +281,7 @@ public partial class V1beta1StaticIPAttachmentSpecInitProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1StaticIPAttachmentSpecInitProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>The name of the allocated static IP</summary>
+    /// <summary>Name of the allocated static IP.</summary>
     [JsonPropertyName("staticIpName")]
     public string? StaticIpName { get; set; }
 
@@ -434,15 +434,19 @@ public partial class V1beta1StaticIPAttachmentStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the Lightsail instance to attach the IP to</summary>
+    /// <summary>Name of the Lightsail instance to attach the IP to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
-    /// <summary>The allocated static IP address</summary>
+    /// <summary>Allocated static IP address.</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>The name of the allocated static IP</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Name of the allocated static IP.</summary>
     [JsonPropertyName("staticIpName")]
     public string? StaticIpName { get; set; }
 }
@@ -493,7 +497,7 @@ public partial class V1beta1StaticIPAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Provides an Lightsail Static IP Attachment</summary>
+/// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Manages a Lightsail Static IP Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StaticIPAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StaticIPAttachmentSpec>, IStatus<V1beta1StaticIPAttachmentStatus>
@@ -523,7 +527,7 @@ public partial class V1beta1StaticIPAttachment : IKubernetesObject<V1ObjectMeta>
     public V1beta1StaticIPAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Provides an Lightsail Static IP Attachment</summary>
+/// <summary>StaticIPAttachment is the Schema for the StaticIPAttachments API. Manages a Lightsail Static IP Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StaticIPAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StaticIPAttachment>

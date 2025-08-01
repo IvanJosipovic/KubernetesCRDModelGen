@@ -130,7 +130,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1UserSpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -409,6 +409,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("preferredMfaSetting")]
     public string? PreferredMfaSetting { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>current user status.</summary>
     [JsonPropertyName("status")]

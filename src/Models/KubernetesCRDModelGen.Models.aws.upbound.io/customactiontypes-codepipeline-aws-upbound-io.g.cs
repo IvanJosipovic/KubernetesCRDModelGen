@@ -112,7 +112,7 @@ public partial class V1beta1CustomActionTypeSpecForProvider
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -493,6 +493,10 @@ public partial class V1beta1CustomActionTypeStatusAtProvider
     /// <summary>The provider of the service used in the custom action</summary>
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The settings for an action type.</summary>
     [JsonPropertyName("settings")]

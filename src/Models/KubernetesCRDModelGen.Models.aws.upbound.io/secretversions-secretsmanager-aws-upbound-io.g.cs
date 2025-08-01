@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.upbound.io;
-/// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</summary>
+/// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string or secret_string_wo is not set. Needs to be encoded to base64.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecForProviderSecretBinarySecretRef
 {
@@ -81,9 +81,26 @@ public partial class V1beta1SecretVersionSpecForProviderSecretIdSelector
     public V1beta1SecretVersionSpecForProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</summary>
+/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string_wo is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecForProviderSecretStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string is not set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecretVersionSpecForProviderSecretStringWoSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -102,11 +119,11 @@ public partial class V1beta1SecretVersionSpecForProviderSecretStringSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</summary>
+    /// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string or secret_string_wo is not set. Needs to be encoded to base64.</summary>
     [JsonPropertyName("secretBinarySecretRef")]
     public V1beta1SecretVersionSpecForProviderSecretBinarySecretRef? SecretBinarySecretRef { get; set; }
 
@@ -122,16 +139,24 @@ public partial class V1beta1SecretVersionSpecForProvider
     [JsonPropertyName("secretIdSelector")]
     public V1beta1SecretVersionSpecForProviderSecretIdSelector? SecretIdSelector { get; set; }
 
-    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</summary>
+    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string_wo is not set.</summary>
     [JsonPropertyName("secretStringSecretRef")]
     public V1beta1SecretVersionSpecForProviderSecretStringSecretRef? SecretStringSecretRef { get; set; }
+
+    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string is not set.</summary>
+    [JsonPropertyName("secretStringWoSecretRef")]
+    public V1beta1SecretVersionSpecForProviderSecretStringWoSecretRef? SecretStringWoSecretRef { get; set; }
+
+    /// <summary>Used together with secret_string_wo to trigger an update. Increment this value when an update to secret_string_wo is required.</summary>
+    [JsonPropertyName("secretStringWoVersion")]
+    public double? SecretStringWoVersion { get; set; }
 
     /// <summary>Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that's already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label AWSCURRENT to this new version on creation.</summary>
     [JsonPropertyName("versionStages")]
     public IList<string>? VersionStages { get; set; }
 }
 
-/// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</summary>
+/// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string or secret_string_wo is not set. Needs to be encoded to base64.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecInitProviderSecretBinarySecretRef
 {
@@ -204,9 +229,26 @@ public partial class V1beta1SecretVersionSpecInitProviderSecretIdSelector
     public V1beta1SecretVersionSpecInitProviderSecretIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</summary>
+/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string_wo is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecInitProviderSecretStringSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string is not set.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1SecretVersionSpecInitProviderSecretStringWoSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -225,7 +267,7 @@ public partial class V1beta1SecretVersionSpecInitProviderSecretStringSecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecInitProvider
 {
-    /// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string is not set. Needs to be encoded to base64.</summary>
+    /// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string or secret_string_wo is not set. Needs to be encoded to base64.</summary>
     [JsonPropertyName("secretBinarySecretRef")]
     public V1beta1SecretVersionSpecInitProviderSecretBinarySecretRef? SecretBinarySecretRef { get; set; }
 
@@ -241,9 +283,17 @@ public partial class V1beta1SecretVersionSpecInitProvider
     [JsonPropertyName("secretIdSelector")]
     public V1beta1SecretVersionSpecInitProviderSecretIdSelector? SecretIdSelector { get; set; }
 
-    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary is not set.</summary>
+    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string_wo is not set.</summary>
     [JsonPropertyName("secretStringSecretRef")]
     public V1beta1SecretVersionSpecInitProviderSecretStringSecretRef? SecretStringSecretRef { get; set; }
+
+    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string is not set.</summary>
+    [JsonPropertyName("secretStringWoSecretRef")]
+    public V1beta1SecretVersionSpecInitProviderSecretStringWoSecretRef? SecretStringWoSecretRef { get; set; }
+
+    /// <summary>Used together with secret_string_wo to trigger an update. Increment this value when an update to secret_string_wo is required.</summary>
+    [JsonPropertyName("secretStringWoVersion")]
+    public double? SecretStringWoVersion { get; set; }
 
     /// <summary>Specifies a list of staging labels that are attached to this version of the secret. A staging label must be unique to a single version of the secret. If you specify a staging label that's already associated with a different version of the same secret then that staging label is automatically removed from the other version and attached to this version. If you do not specify a value, then AWS Secrets Manager automatically moves the staging label AWSCURRENT to this new version on creation.</summary>
     [JsonPropertyName("versionStages")]
@@ -390,13 +440,25 @@ public partial class V1beta1SecretVersionStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
+    /// <summary>Specifies text data that you want to encrypt and store in this version of the secret. This is required if secret_binary or secret_string is not set.</summary>
+    [JsonPropertyName("hasSecretStringWo")]
+    public bool? HasSecretStringWo { get; set; }
+
     /// <summary>A pipe delimited combination of secret ID and version ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.</summary>
     [JsonPropertyName("secretId")]
     public string? SecretId { get; set; }
+
+    /// <summary>Used together with secret_string_wo to trigger an update. Increment this value when an update to secret_string_wo is required.</summary>
+    [JsonPropertyName("secretStringWoVersion")]
+    public double? SecretStringWoVersion { get; set; }
 
     /// <summary>The unique identifier of the version of the secret.</summary>
     [JsonPropertyName("versionId")]

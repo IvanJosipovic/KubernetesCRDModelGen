@@ -202,7 +202,7 @@ public partial class V1beta1ConnectorSpecForProvider
     [JsonPropertyName("loggingRole")]
     public string? LoggingRole { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -643,6 +643,10 @@ public partial class V1beta1ConnectorStatusAtProvider
     /// <summary>The IAM Role which is required for allowing the connector to turn on CloudWatch logging for Amazon S3 events.</summary>
     [JsonPropertyName("loggingRole")]
     public string? LoggingRole { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Name of the security policy for the connector.</summary>
     [JsonPropertyName("securityPolicyName")]

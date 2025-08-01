@@ -88,7 +88,7 @@ public partial class V1beta1PermissionSpecForProvider
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1beta1PermissionStatusAtProvider
     /// <summary>AWS service or identity that receives the permission. At this time, the only valid principal is acm.amazonaws.com.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the calling account</summary>
     [JsonPropertyName("sourceAccount")]

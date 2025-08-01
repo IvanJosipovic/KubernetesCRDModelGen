@@ -80,10 +80,6 @@ public partial class V1beta1HostedZoneDNSSECSpecForProvider
     [JsonPropertyName("hostedZoneIdSelector")]
     public V1beta1HostedZoneDNSSECSpecForProviderHostedZoneIdSelector? HostedZoneIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Hosted Zone signing status. Valid values: SIGNING, NOT_SIGNING. Defaults to SIGNING.</summary>
     [JsonPropertyName("signingStatus")]
     public string? SigningStatus { get; set; }

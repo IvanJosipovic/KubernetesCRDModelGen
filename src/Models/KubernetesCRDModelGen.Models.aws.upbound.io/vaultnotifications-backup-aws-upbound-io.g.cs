@@ -140,7 +140,7 @@ public partial class V1beta1VaultNotificationsSpecForProvider
     [JsonPropertyName("backupVaultNameSelector")]
     public V1beta1VaultNotificationsSpecForProviderBackupVaultNameSelector? BackupVaultNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -453,6 +453,10 @@ public partial class V1beta1VaultNotificationsStatusAtProvider
     /// <summary>The name of the vault.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events</summary>
     [JsonPropertyName("snsTopicArn")]

@@ -185,7 +185,7 @@ public partial class V1beta2QueueSpecForProvider
     [JsonPropertyName("quickConnectIds")]
     public IList<string>? QuickConnectIds { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -576,6 +576,10 @@ public partial class V1beta2QueueStatusAtProvider
     /// <summary>Specifies a list of quick connects ids that determine the quick connects available to agents who are working the queue.</summary>
     [JsonPropertyName("quickConnectIds")]
     public IList<string>? QuickConnectIds { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies the description of the Queue. Valid values are ENABLED, DISABLED.</summary>
     [JsonPropertyName("status")]

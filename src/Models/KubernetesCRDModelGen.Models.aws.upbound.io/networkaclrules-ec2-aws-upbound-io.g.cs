@@ -108,7 +108,7 @@ public partial class V1beta1NetworkACLRuleSpecForProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -409,6 +409,10 @@ public partial class V1beta1NetworkACLRuleStatusAtProvider
     /// <summary>The protocol. A value of -1 means all protocols.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Indicates whether to allow or deny the traffic that matches the rule. Accepted values: allow | deny</summary>
     [JsonPropertyName("ruleAction")]

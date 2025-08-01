@@ -99,7 +99,7 @@ public partial class V1beta1DomainSpecForProvider
     [JsonPropertyName("multiAz")]
     public bool? MultiAz { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -442,6 +442,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.</summary>
     [JsonPropertyName("multiAz")]
     public bool? MultiAz { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Domain scaling parameters. Documented below.</summary>
     [JsonPropertyName("scalingParameters")]

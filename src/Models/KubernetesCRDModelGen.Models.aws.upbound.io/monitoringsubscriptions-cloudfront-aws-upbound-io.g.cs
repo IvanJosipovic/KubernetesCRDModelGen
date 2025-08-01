@@ -101,10 +101,6 @@ public partial class V1beta1MonitoringSubscriptionSpecForProvider
     /// <summary>A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.</summary>
     [JsonPropertyName("monitoringSubscription")]
     public IList<V1beta1MonitoringSubscriptionSpecForProviderMonitoringSubscription>? MonitoringSubscription { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>

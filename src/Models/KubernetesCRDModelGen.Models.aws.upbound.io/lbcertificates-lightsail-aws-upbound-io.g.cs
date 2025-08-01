@@ -68,11 +68,11 @@ public partial class V1beta1LBCertificateSpecForProviderLbNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCertificateSpecForProvider
 {
-    /// <summary>The domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
+    /// <summary>Domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>The load balancer name where you want to create the SSL/TLS certificate.</summary>
+    /// <summary>Load balancer name where you want to create the SSL/TLS certificate.</summary>
     [JsonPropertyName("lbName")]
     public string? LbName { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1beta1LBCertificateSpecForProvider
     [JsonPropertyName("lbNameSelector")]
     public V1beta1LBCertificateSpecForProviderLbNameSelector? LbNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -97,7 +97,7 @@ public partial class V1beta1LBCertificateSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCertificateSpecInitProvider
 {
-    /// <summary>The domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
+    /// <summary>Domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
@@ -242,11 +242,11 @@ public partial class V1beta1LBCertificateSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCertificateStatusAtProviderDomainValidationRecords
 {
-    /// <summary>The domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
+    /// <summary>Domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>The SSL/TLS certificate name.</summary>
+    /// <summary>SSL/TLS certificate name.</summary>
     [JsonPropertyName("resourceRecordName")]
     public string? ResourceRecordName { get; set; }
 
@@ -263,35 +263,39 @@ public partial class V1beta1LBCertificateStatusAtProviderDomainValidationRecords
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCertificateStatusAtProvider
 {
-    /// <summary>The ARN of the lightsail certificate.</summary>
+    /// <summary>ARN of the lightsail certificate.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The timestamp when the instance was created.</summary>
+    /// <summary>Timestamp when the instance was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>The domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
+    /// <summary>Domain name (e.g., example.com) for your SSL/TLS certificate.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Set of domain validation objects which can be used to complete certificate validation. Can have more than one element, e.g., if SANs are defined.</summary>
     [JsonPropertyName("domainValidationRecords")]
     public IList<V1beta1LBCertificateStatusAtProviderDomainValidationRecords>? DomainValidationRecords { get; set; }
 
-    /// <summary>A combination of attributes to create a unique id: lb_name,name</summary>
+    /// <summary>Combination of attributes to create a unique id: lb_name,name</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The load balancer name where you want to create the SSL/TLS certificate.</summary>
+    /// <summary>Load balancer name where you want to create the SSL/TLS certificate.</summary>
     [JsonPropertyName("lbName")]
     public string? LbName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Set of domains that should be SANs in the issued certificate. domain_name attribute is automatically added as a Subject Alternative Name.</summary>
     [JsonPropertyName("subjectAlternativeNames")]
     public IList<string>? SubjectAlternativeNames { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Support code for the certificate.</summary>
     [JsonPropertyName("supportCode")]
     public string? SupportCode { get; set; }
 }
@@ -342,7 +346,7 @@ public partial class V1beta1LBCertificateStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LBCertificate is the Schema for the LBCertificates API. Provides a Lightsail Load Balancer</summary>
+/// <summary>LBCertificate is the Schema for the LBCertificates API. Manages a Lightsail Load Balancer Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBCertificateSpec>, IStatus<V1beta1LBCertificateStatus>
@@ -372,7 +376,7 @@ public partial class V1beta1LBCertificate : IKubernetesObject<V1ObjectMeta>, ISp
     public V1beta1LBCertificateStatus? Status { get; set; }
 }
 
-/// <summary>LBCertificate is the Schema for the LBCertificates API. Provides a Lightsail Load Balancer</summary>
+/// <summary>LBCertificate is the Schema for the LBCertificates API. Manages a Lightsail Load Balancer Certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBCertificate>

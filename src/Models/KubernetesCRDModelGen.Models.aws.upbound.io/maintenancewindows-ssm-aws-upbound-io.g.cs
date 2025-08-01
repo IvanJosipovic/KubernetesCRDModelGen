@@ -40,7 +40,7 @@ public partial class V1beta1MaintenanceWindowSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -48,7 +48,7 @@ public partial class V1beta1MaintenanceWindowSpecForProvider
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.</summary>
+    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.</summary>
     [JsonPropertyName("scheduleOffset")]
     public double? ScheduleOffset { get; set; }
 
@@ -101,7 +101,7 @@ public partial class V1beta1MaintenanceWindowSpecInitProvider
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.</summary>
+    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.</summary>
     [JsonPropertyName("scheduleOffset")]
     public double? ScheduleOffset { get; set; }
 
@@ -286,11 +286,15 @@ public partial class V1beta1MaintenanceWindowStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The schedule of the Maintenance Window in the form of a cron or rate expression.</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.</summary>
+    /// <summary>The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.</summary>
     [JsonPropertyName("scheduleOffset")]
     public double? ScheduleOffset { get; set; }
 

@@ -177,7 +177,7 @@ public partial class V1beta1ConfigRuleSpecForProvider
     [JsonPropertyName("maximumExecutionFrequency")]
     public string? MaximumExecutionFrequency { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -620,6 +620,10 @@ public partial class V1beta1ConfigRuleStatusAtProvider
     /// <summary>The maximum frequency with which AWS Config runs evaluations for a rule.</summary>
     [JsonPropertyName("maximumExecutionFrequency")]
     public string? MaximumExecutionFrequency { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the config rule</summary>
     [JsonPropertyName("ruleId")]

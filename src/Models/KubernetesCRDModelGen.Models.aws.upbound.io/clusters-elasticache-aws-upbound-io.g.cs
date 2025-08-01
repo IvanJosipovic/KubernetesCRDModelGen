@@ -257,7 +257,7 @@ public partial class V1beta1ClusterSpecForProviderSubnetGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
-    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..</summary>
+    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -273,11 +273,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("azMode")]
     public string? AzMode { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>–  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -293,7 +293,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta1ClusterSpecForProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -301,15 +301,15 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The instance class used. See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS. See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached. For Memcached, changing this value will re-create the resource.</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic.</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
+    /// <summary>The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
     [JsonPropertyName("numCacheNodes")]
     public double? NumCacheNodes { get; set; }
 
@@ -317,7 +317,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("outpostMode")]
     public string? OutpostMode { get; set; }
 
-    /// <summary>–  The name of the parameter group to associate with this cache cluster.</summary>
+    /// <summary>The name of the parameter group to associate with this cache cluster.</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
@@ -329,7 +329,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("parameterGroupNameSelector")]
     public V1beta1ClusterSpecForProviderParameterGroupNameSelector? ParameterGroupNameSelector { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -341,7 +341,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("preferredOutpostArn")]
     public string? PreferredOutpostArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -365,11 +365,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
+    /// <summary>One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
+    /// <summary>Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 
@@ -385,7 +385,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("snapshotWindow")]
     public string? SnapshotWindow { get; set; }
 
-    /// <summary>create the resource. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 
@@ -401,7 +401,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
+    /// <summary>Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 }
@@ -655,7 +655,7 @@ public partial class V1beta1ClusterSpecInitProviderSubnetGroupNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
-    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..</summary>
+    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -671,11 +671,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("azMode")]
     public string? AzMode { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>–  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -691,7 +691,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -699,15 +699,15 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The instance class used. See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS. See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached. For Memcached, changing this value will re-create the resource.</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic.</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
+    /// <summary>The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
     [JsonPropertyName("numCacheNodes")]
     public double? NumCacheNodes { get; set; }
 
@@ -715,7 +715,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("outpostMode")]
     public string? OutpostMode { get; set; }
 
-    /// <summary>–  The name of the parameter group to associate with this cache cluster.</summary>
+    /// <summary>The name of the parameter group to associate with this cache cluster.</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
@@ -727,7 +727,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("parameterGroupNameSelector")]
     public V1beta1ClusterSpecInitProviderParameterGroupNameSelector? ParameterGroupNameSelector { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -759,11 +759,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
+    /// <summary>One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
+    /// <summary>Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 
@@ -779,7 +779,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("snapshotWindow")]
     public string? SnapshotWindow { get; set; }
 
-    /// <summary>create the resource. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 
@@ -795,7 +795,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
+    /// <summary>Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 }
@@ -952,7 +952,7 @@ public partial class V1beta1ClusterStatusAtProviderCacheNodes
     [JsonPropertyName("outpostArn")]
     public string? OutpostArn { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -982,7 +982,7 @@ public partial class V1beta1ClusterStatusAtProviderLogDeliveryConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
-    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information..</summary>
+    /// <summary>Whether any database modifications are applied immediately, or during the next maintenance window. Default is false. See Amazon ElastiCache Documentation for more information.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -1014,11 +1014,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("configurationEndpoint")]
     public string? ConfigurationEndpoint { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached and redis.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis and valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>–  Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Version number of the cache engine to be used. If not set, defaults to the latest version. See Describe Cache Engine Versions in the AWS Documentation for supported versions. When engine is redis and the version is 7 or higher, the major and minor version should be set, e.g., 7.2. When the version is 6, the major and minor version can be set, e.g., 6.2, or the minor version can be unspecified which will use the latest version at creation time, e.g., 6.x. Otherwise, specify the full version desired, e.g., 5.0.6. The actual engine version used is returned in the attribute engine_version_actual, see Attribute Reference below. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -1042,7 +1042,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -1050,15 +1050,15 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The instance class used. See AWS documentation for information on supported node types for Valkey or Redis OSS and guidance on selecting node types for Valkey or Redis OSS. See AWS documentation for information on supported node types for Memcached and guidance on selecting node types for Memcached. For Memcached, changing this value will re-create the resource.</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic.</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic.</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
+    /// <summary>The initial number of cache nodes that the cache cluster will have. For Redis, this value must be 1. For Memcached, this value must be between 1 and 40. If this number is reduced on subsequent runs, the highest numbered nodes will be removed.</summary>
     [JsonPropertyName("numCacheNodes")]
     public double? NumCacheNodes { get; set; }
 
@@ -1066,11 +1066,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("outpostMode")]
     public string? OutpostMode { get; set; }
 
-    /// <summary>–  The name of the parameter group to associate with this cache cluster.</summary>
+    /// <summary>The name of the parameter group to associate with this cache cluster.</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>create the resource.</summary>
+    /// <summary>The port number on which each of the cache nodes will accept connections. For Memcached the default is 11211, and for Redis the default port is 6379. Cannot be provided with replication_group_id. Changing this value will re-create the resource.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -1082,15 +1082,19 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("preferredOutpostArn")]
     public string? PreferredOutpostArn { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>ID of the replication group to which this cluster should belong. If this parameter is specified, the cluster is added to the specified replication group as a read replica; otherwise, the cluster is a standalone primary that is not part of any replication group.</summary>
     [JsonPropertyName("replicationGroupId")]
     public string? ReplicationGroupId { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
+    /// <summary>One or more VPC security groups associated with the cache cluster. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
+    /// <summary>Single-element string list containing an Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3. The object name cannot contain any commas. Changing snapshot_arns forces a new resource.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 
@@ -1106,7 +1110,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("snapshotWindow")]
     public string? SnapshotWindow { get; set; }
 
-    /// <summary>create the resource. Cannot be provided with replication_group_id.</summary>
+    /// <summary>Name of the subnet group to be used for the cache cluster. Changing this value will re-create the resource. Cannot be provided with replication_group_id.</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 
@@ -1118,7 +1122,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Enable encryption in-transit. Supported only with Memcached versions 1.6.12 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
+    /// <summary>Enable encryption in-transit. Supported with Memcached versions 1.6.12 and later, Valkey 7.2 and later, Redis OSS versions 3.2.6, 4.0.10 and later, running in a VPC. See the ElastiCache in-transit encryption documentation for more details.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]
     public bool? TransitEncryptionEnabled { get; set; }
 }

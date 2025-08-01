@@ -42,7 +42,7 @@ public partial class V1beta1RecordSpecForProviderCidrRoutingPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecForProviderFailoverRoutingPolicy
 {
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -348,10 +348,6 @@ public partial class V1beta1RecordSpecForProvider
     [JsonPropertyName("recordsSelector")]
     public V1beta1RecordSpecForProviderRecordsSelector? RecordsSelector { get; set; }
 
-    /// <summary>An AWS region from which to measure latency. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-latency Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Unique identifier to differentiate records with routing policies from one another. Required if using cidr_routing_policy, failover_routing_policy, geolocation_routing_policy,geoproximity_routing_policy, latency_routing_policy, multivalue_answer_routing_policy, or weighted_routing_policy.</summary>
     [JsonPropertyName("setIdentifier")]
     public string? SetIdentifier { get; set; }
@@ -360,7 +356,7 @@ public partial class V1beta1RecordSpecForProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -415,7 +411,7 @@ public partial class V1beta1RecordSpecInitProviderCidrRoutingPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSpecInitProviderFailoverRoutingPolicy
 {
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -726,7 +722,7 @@ public partial class V1beta1RecordSpecInitProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -913,7 +909,7 @@ public partial class V1beta1RecordStatusAtProviderCidrRoutingPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordStatusAtProviderFailoverRoutingPolicy
 {
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1051,7 +1047,7 @@ public partial class V1beta1RecordStatusAtProvider
     [JsonPropertyName("ttl")]
     public double? Ttl { get; set; }
 
-    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, MX, NAPTR, NS, PTR, SOA, SPF, SRV and TXT.</summary>
+    /// <summary>The record type. Valid values are A, AAAA, CAA, CNAME, DS, HTTPS, MX, NAPTR, NS, PTR, SOA, SPF, SRV, SSHFP, SVCB, TLSA, and TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 

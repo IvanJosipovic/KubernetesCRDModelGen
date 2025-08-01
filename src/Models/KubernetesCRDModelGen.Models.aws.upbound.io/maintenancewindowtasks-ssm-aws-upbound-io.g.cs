@@ -740,7 +740,7 @@ public partial class V1beta1MaintenanceWindowTaskSpecForProvider
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1915,6 +1915,10 @@ public partial class V1beta1MaintenanceWindowTaskStatusAtProvider
     /// <summary>The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.</summary>
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.</summary>
     [JsonPropertyName("serviceRoleArn")]

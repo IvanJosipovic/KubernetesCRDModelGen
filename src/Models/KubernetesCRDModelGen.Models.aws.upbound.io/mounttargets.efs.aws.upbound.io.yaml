@@ -180,7 +180,10 @@ spec:
                       which the file system may be mounted via the mount target.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityGroups:
                     description: >-
@@ -922,6 +925,12 @@ spec:
                     type: string
                   ownerId:
                     description: AWS account ID that owns the resource.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityGroups:
                     description: >-

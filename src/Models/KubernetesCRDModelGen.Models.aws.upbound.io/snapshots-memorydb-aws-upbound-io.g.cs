@@ -148,7 +148,7 @@ public partial class V1beta1SnapshotSpecForProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1SnapshotSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -518,6 +518,10 @@ public partial class V1beta1SnapshotStatusAtProvider
     /// <summary>ARN of the KMS key used to encrypt the snapshot at rest.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Indicates whether the snapshot is from an automatic backup (automated) or was created manually (manual).</summary>
     [JsonPropertyName("source")]

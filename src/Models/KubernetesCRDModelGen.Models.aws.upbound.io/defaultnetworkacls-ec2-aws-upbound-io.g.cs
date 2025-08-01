@@ -290,7 +290,7 @@ public partial class V1beta1DefaultNetworkACLSpecForProvider
     [JsonPropertyName("ingress")]
     public IList<V1beta1DefaultNetworkACLSpecForProviderIngress>? Ingress { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -851,6 +851,10 @@ public partial class V1beta1DefaultNetworkACLStatusAtProvider
     /// <summary>ID of the AWS account that owns the Default Network ACL</summary>
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of Subnet IDs to apply the ACL to. See the notes above on Managing Subnets in the Default Network ACL</summary>
     [JsonPropertyName("subnetIds")]

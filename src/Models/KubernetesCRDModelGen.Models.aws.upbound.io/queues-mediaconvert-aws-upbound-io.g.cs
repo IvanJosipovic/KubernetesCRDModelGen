@@ -29,6 +29,10 @@ public partial class V1beta1QueueSpecForProviderReservationPlanSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProvider
 {
+    /// <summary>The maximum number of jobs your queue can process concurrently. For on-demand queues, the value you enter is constrained by your service quotas for Maximum concurrent jobs, per on-demand queue and Maximum concurrent jobs, per account. For reserved queues, specify the number of jobs you can process concurrently in your reservation plan instead.</summary>
+    [JsonPropertyName("concurrentJobs")]
+    public double? ConcurrentJobs { get; set; }
+
     /// <summary>A description of the queue</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -37,7 +41,7 @@ public partial class V1beta1QueueSpecForProvider
     [JsonPropertyName("pricingPlan")]
     public string? PricingPlan { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -75,6 +79,10 @@ public partial class V1beta1QueueSpecInitProviderReservationPlanSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecInitProvider
 {
+    /// <summary>The maximum number of jobs your queue can process concurrently. For on-demand queues, the value you enter is constrained by your service quotas for Maximum concurrent jobs, per on-demand queue and Maximum concurrent jobs, per account. For reserved queues, specify the number of jobs you can process concurrently in your reservation plan instead.</summary>
+    [JsonPropertyName("concurrentJobs")]
+    public double? ConcurrentJobs { get; set; }
+
     /// <summary>A description of the queue</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -253,6 +261,10 @@ public partial class V1beta1QueueStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
+    /// <summary>The maximum number of jobs your queue can process concurrently. For on-demand queues, the value you enter is constrained by your service quotas for Maximum concurrent jobs, per on-demand queue and Maximum concurrent jobs, per account. For reserved queues, specify the number of jobs you can process concurrently in your reservation plan instead.</summary>
+    [JsonPropertyName("concurrentJobs")]
+    public double? ConcurrentJobs { get; set; }
+
     /// <summary>A description of the queue</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -264,6 +276,10 @@ public partial class V1beta1QueueStatusAtProvider
     /// <summary>Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are ON_DEMAND or RESERVED. Default to ON_DEMAND.</summary>
     [JsonPropertyName("pricingPlan")]
     public string? PricingPlan { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A detail pricing plan of the  reserved queue. See below.</summary>
     [JsonPropertyName("reservationPlanSettings")]

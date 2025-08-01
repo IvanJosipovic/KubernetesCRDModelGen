@@ -140,7 +140,11 @@ public partial class V1beta1UserPoolDomainSpecForProvider
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>A version number that indicates the state of managed login for your domain. Valid values: 1 for hosted UI (classic), 2 for the newer managed login with the branding designer.</summary>
+    [JsonPropertyName("managedLoginVersion")]
+    public double? ManagedLoginVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -288,6 +292,10 @@ public partial class V1beta1UserPoolDomainSpecInitProvider
     /// <summary>For custom domains, this is the fully-qualified domain name, such as auth.example.com. For Amazon Cognito prefix domains, this is the prefix alone, such as auth.</summary>
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
+
+    /// <summary>A version number that indicates the state of managed login for your domain. Valid values: 1 for hosted UI (classic), 2 for the newer managed login with the branding designer.</summary>
+    [JsonPropertyName("managedLoginVersion")]
+    public double? ManagedLoginVersion { get; set; }
 
     /// <summary>The user pool ID.</summary>
     [JsonPropertyName("userPoolId")]
@@ -465,6 +473,14 @@ public partial class V1beta1UserPoolDomainStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>A version number that indicates the state of managed login for your domain. Valid values: 1 for hosted UI (classic), 2 for the newer managed login with the branding designer.</summary>
+    [JsonPropertyName("managedLoginVersion")]
+    public double? ManagedLoginVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The S3 bucket where the static files for this domain are stored.</summary>
     [JsonPropertyName("s3Bucket")]

@@ -519,7 +519,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsAvailBlankingAv
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -555,7 +555,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -568,71 +568,71 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -645,7 +645,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -658,71 +658,71 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -731,19 +731,19 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
-    /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
+    /// <summary>Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
     [JsonPropertyName("copyrightHolder")]
     public string? CopyrightHolder { get; set; }
 
-    /// <summary>line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
+    /// <summary>Specifies how to handle the gap between the lines (in multi-line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
     [JsonPropertyName("fillLineGap")]
     public string? FillLineGap { get; set; }
 
-    /// <summary>TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
+    /// <summary>Specifies the font family to include in the font data attached to the EBU-TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
     [JsonPropertyName("fontFamily")]
     public string? FontFamily { get; set; }
 
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -794,7 +794,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -803,7 +803,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -844,19 +844,19 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescript
     [JsonPropertyName("scte20PlusEmbeddedDestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings>? Scte20PlusEmbeddedDestinationSettings { get; set; }
 
-    /// <summary>–  SCTE27 Destination Settings.</summary>
+    /// <summary>SCTE27 Destination Settings.</summary>
     [JsonPropertyName("scte27DestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings>? Scte27DestinationSettings { get; set; }
 
-    /// <summary>–  SMPTE TT Destination Settings.</summary>
+    /// <summary>SMPTE TT Destination Settings.</summary>
     [JsonPropertyName("smpteTtDestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings>? SmpteTtDestinationSettings { get; set; }
 
-    /// <summary>–  Teletext Destination Settings.</summary>
+    /// <summary>Teletext Destination Settings.</summary>
     [JsonPropertyName("teletextDestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings>? TeletextDestinationSettings { get; set; }
 
-    /// <summary>–  TTML Destination Settings. See TTML Destination Settings for more details.</summary>
+    /// <summary>TTML Destination Settings. See TTML Destination Settings for more details.</summary>
     [JsonPropertyName("ttmlDestinationSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings>? TtmlDestinationSettings { get; set; }
 
@@ -902,7 +902,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -940,11 +940,11 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfiguration
 {
-    /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
+    /// <summary>Value to set the initial audio gain for the Live Event.</summary>
     [JsonPropertyName("initialAudioGain")]
     public double? InitialAudioGain { get; set; }
 
-    /// <summary>of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
+    /// <summary>Indicates the action to take when the current input completes (e.g. end-of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
     [JsonPropertyName("inputEndAction")]
     public string? InputEndAction { get; set; }
 
@@ -952,15 +952,15 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigura
     [JsonPropertyName("inputLossBehavior")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsGlobalConfigurationInputLossBehavior>? InputLossBehavior { get; set; }
 
-    /// <summary>MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
+    /// <summary>Indicates how MediaLive pipelines are synchronized. PIPELINE_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
     [JsonPropertyName("outputLockingMode")]
     public string? OutputLockingMode { get; set; }
 
-    /// <summary>–  Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
+    /// <summary>Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
     [JsonPropertyName("outputTimingSource")]
     public string? OutputTimingSource { get; set; }
 
-    /// <summary>–  Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
+    /// <summary>Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
@@ -975,7 +975,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
-    /// <summary>–  Html Motion Graphics Settings.</summary>
+    /// <summary>Html Motion Graphics Settings.</summary>
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
@@ -984,7 +984,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsConfiguration
 {
-    /// <summary>–  Motion Graphics Insertion.</summary>
+    /// <summary>Motion Graphics Insertion.</summary>
     [JsonPropertyName("motionGraphicsInsertion")]
     public string? MotionGraphicsInsertion { get; set; }
 
@@ -997,11 +997,11 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsMotionGraphicsC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderEncoderSettingsNielsenConfiguration
 {
-    /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
+    /// <summary>Enter the Distributor ID assigned to your organization by Nielsen.</summary>
     [JsonPropertyName("distributorId")]
     public string? DistributorId { get; set; }
 
-    /// <summary>–  Enables Nielsen PCM to ID3 tagging.</summary>
+    /// <summary>Enables Nielsen PCM to ID3 tagging.</summary>
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
@@ -1262,7 +1262,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -1960,7 +1960,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsOutputGroupsOut
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -2723,7 +2723,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -2973,7 +2973,7 @@ public partial class V1beta1ChannelSpecForProviderEncoderSettingsVideoDescriptio
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -3589,11 +3589,11 @@ public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsV
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecForProviderInputAttachmentsInputSettings
 {
-    /// <summary></summary>
+    /// <summary>Used to select the audio stream to decode for inputs that have multiple. See Audio Selectors for more details.</summary>
     [JsonPropertyName("audioSelector")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsAudioSelector>? AudioSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to select the caption input to use for inputs that have multiple available. See Caption Selectors for more details.</summary>
     [JsonPropertyName("captionSelector")]
     public IList<V1beta1ChannelSpecForProviderInputAttachmentsInputSettingsCaptionSelector>? CaptionSelector { get; set; }
 
@@ -3806,7 +3806,7 @@ public partial class V1beta1ChannelSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -4346,7 +4346,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsAvailBlankingA
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -4382,7 +4382,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -4395,71 +4395,71 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -4472,7 +4472,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -4485,71 +4485,71 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -4558,19 +4558,19 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
-    /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
+    /// <summary>Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
     [JsonPropertyName("copyrightHolder")]
     public string? CopyrightHolder { get; set; }
 
-    /// <summary>line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
+    /// <summary>Specifies how to handle the gap between the lines (in multi-line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
     [JsonPropertyName("fillLineGap")]
     public string? FillLineGap { get; set; }
 
-    /// <summary>TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
+    /// <summary>Specifies the font family to include in the font data attached to the EBU-TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
     [JsonPropertyName("fontFamily")]
     public string? FontFamily { get; set; }
 
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -4621,7 +4621,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -4630,7 +4630,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -4671,19 +4671,19 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("scte20PlusEmbeddedDestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings>? Scte20PlusEmbeddedDestinationSettings { get; set; }
 
-    /// <summary>–  SCTE27 Destination Settings.</summary>
+    /// <summary>SCTE27 Destination Settings.</summary>
     [JsonPropertyName("scte27DestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings>? Scte27DestinationSettings { get; set; }
 
-    /// <summary>–  SMPTE TT Destination Settings.</summary>
+    /// <summary>SMPTE TT Destination Settings.</summary>
     [JsonPropertyName("smpteTtDestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings>? SmpteTtDestinationSettings { get; set; }
 
-    /// <summary>–  Teletext Destination Settings.</summary>
+    /// <summary>Teletext Destination Settings.</summary>
     [JsonPropertyName("teletextDestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings>? TeletextDestinationSettings { get; set; }
 
-    /// <summary>–  TTML Destination Settings. See TTML Destination Settings for more details.</summary>
+    /// <summary>TTML Destination Settings. See TTML Destination Settings for more details.</summary>
     [JsonPropertyName("ttmlDestinationSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings>? TtmlDestinationSettings { get; set; }
 
@@ -4729,7 +4729,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -4767,11 +4767,11 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfiguration
 {
-    /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
+    /// <summary>Value to set the initial audio gain for the Live Event.</summary>
     [JsonPropertyName("initialAudioGain")]
     public double? InitialAudioGain { get; set; }
 
-    /// <summary>of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
+    /// <summary>Indicates the action to take when the current input completes (e.g. end-of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
     [JsonPropertyName("inputEndAction")]
     public string? InputEndAction { get; set; }
 
@@ -4779,15 +4779,15 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("inputLossBehavior")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsGlobalConfigurationInputLossBehavior>? InputLossBehavior { get; set; }
 
-    /// <summary>MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
+    /// <summary>Indicates how MediaLive pipelines are synchronized. PIPELINE_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
     [JsonPropertyName("outputLockingMode")]
     public string? OutputLockingMode { get; set; }
 
-    /// <summary>–  Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
+    /// <summary>Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
     [JsonPropertyName("outputTimingSource")]
     public string? OutputTimingSource { get; set; }
 
-    /// <summary>–  Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
+    /// <summary>Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
@@ -4802,7 +4802,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
-    /// <summary>–  Html Motion Graphics Settings.</summary>
+    /// <summary>Html Motion Graphics Settings.</summary>
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
@@ -4811,7 +4811,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphicsConfiguration
 {
-    /// <summary>–  Motion Graphics Insertion.</summary>
+    /// <summary>Motion Graphics Insertion.</summary>
     [JsonPropertyName("motionGraphicsInsertion")]
     public string? MotionGraphicsInsertion { get; set; }
 
@@ -4824,11 +4824,11 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderEncoderSettingsNielsenConfiguration
 {
-    /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
+    /// <summary>Enter the Distributor ID assigned to your organization by Nielsen.</summary>
     [JsonPropertyName("distributorId")]
     public string? DistributorId { get; set; }
 
-    /// <summary>–  Enables Nielsen PCM to ID3 tagging.</summary>
+    /// <summary>Enables Nielsen PCM to ID3 tagging.</summary>
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
@@ -5089,7 +5089,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -5787,7 +5787,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -6550,7 +6550,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -6800,7 +6800,7 @@ public partial class V1beta1ChannelSpecInitProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -7416,11 +7416,11 @@ public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelSpecInitProviderInputAttachmentsInputSettings
 {
-    /// <summary></summary>
+    /// <summary>Used to select the audio stream to decode for inputs that have multiple. See Audio Selectors for more details.</summary>
     [JsonPropertyName("audioSelector")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsAudioSelector>? AudioSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to select the caption input to use for inputs that have multiple available. See Caption Selectors for more details.</summary>
     [JsonPropertyName("captionSelector")]
     public IList<V1beta1ChannelSpecInitProviderInputAttachmentsInputSettingsCaptionSelector>? CaptionSelector { get; set; }
 
@@ -8301,7 +8301,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsAvailBlankingA
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -8337,7 +8337,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -8350,71 +8350,71 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsBurnInDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -8427,7 +8427,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -8440,71 +8440,71 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettings
 {
-    /// <summary>justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>If no explicit xPosition or yPosition is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. Selecting “smart” justification will left-justify live subtitles and center-justify pre-recorded subtitles. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("alignment")]
     public string? Alignment { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the rectangle behind the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundColor")]
     public string? BackgroundColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the background rectangle. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("backgroundOpacity")]
     public double? BackgroundOpacity { get; set; }
 
-    /// <summary>in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
+    /// <summary>External font file used for caption burn-in. File extension must be ‘ttf’ or ‘tte’. Although the user can select output fonts for many different types of input captions, embedded, STL and teletext sources use a strict grid system. Using external fonts with these caption sources could cause unexpected display of proportional fonts. All burn-in and DVB-Sub font settings must match. See Font for more details.</summary>
     [JsonPropertyName("font")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsDvbSubDestinationSettingsFont>? Font { get; set; }
 
-    /// <summary>in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the burned-in captions. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontColor")]
     public string? FontColor { get; set; }
 
-    /// <summary>in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the burned-in captions. 255 is opaque; 0 is transparent. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontOpacity")]
     public double? FontOpacity { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Font resolution in DPI (dots per inch); default is 96 dpi. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontResolution")]
     public double? FontResolution { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>When set to ‘auto’ fontSize will scale depending on the size of the output. Giving a positive integer will specify the exact font size in points. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("fontSize")]
     public string? FontSize { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline color. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineColor")]
     public string? OutlineColor { get; set; }
 
-    /// <summary>defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies font outline size in pixels. This option is not valid for source captions that are either 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("outlineSize")]
     public double? OutlineSize { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the color of the shadow cast by the captions. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowColor")]
     public string? ShadowColor { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the opacity of the shadow. 255 is opaque; 0 is transparent. Leaving this parameter out is equivalent to setting it to 0 (transparent). All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowOpacity")]
     public double? ShadowOpacity { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels to the left. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowXOffset")]
     public double? ShadowXOffset { get; set; }
 
-    /// <summary>2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical offset of the shadow relative to the captions in pixels. A value of -2 would result in a shadow offset 2 pixels above the text. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("shadowYOffset")]
     public double? ShadowYOffset { get; set; }
 
-    /// <summary>Sub/Burn-in outputs.</summary>
+    /// <summary>Controls whether a fixed grid size will be used to generate the output subtitles bitmap. Only applicable for Teletext inputs and DVB-Sub/Burn-in outputs.</summary>
     [JsonPropertyName("teletextGridControl")]
     public string? TeletextGridControl { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the horizontal position of the caption relative to the left side of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the left of the output. If no explicit xPosition is provided, the horizontal caption position will be determined by the alignment parameter. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("xPosition")]
     public double? XPosition { get; set; }
 
-    /// <summary>in and DVB-Sub font settings must match.</summary>
+    /// <summary>Specifies the vertical position of the caption relative to the top of the output in pixels. A value of 10 would result in the captions starting 10 pixels from the top of the output. If no explicit yPosition is provided, the caption will be positioned towards the bottom of the output. All burn-in and DVB-Sub font settings must match.</summary>
     [JsonPropertyName("yPosition")]
     public double? YPosition { get; set; }
 }
@@ -8513,19 +8513,19 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsEbuTtDDestinationSettings
 {
-    /// <summary>–  Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
+    /// <summary>Complete this field if you want to include the name of the copyright holder in the copyright tag in the captions metadata.</summary>
     [JsonPropertyName("copyrightHolder")]
     public string? CopyrightHolder { get; set; }
 
-    /// <summary>line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
+    /// <summary>Specifies how to handle the gap between the lines (in multi-line captions). - enabled: Fill with the captions background color (as specified in the input captions). - disabled: Leave the gap unfilled.</summary>
     [JsonPropertyName("fillLineGap")]
     public string? FillLineGap { get; set; }
 
-    /// <summary>TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
+    /// <summary>Specifies the font family to include in the font data attached to the EBU-TT captions. Valid only if styleControl is set to include. If you leave this field empty, the font family is set to “monospaced”. (If styleControl is set to exclude, the font family is always set to “monospaced”.) You specify only the font family. All other style information (color, bold, position and so on) is copied from the input captions. The size is always set to 100% to allow the downstream player to choose the size. - Enter a list of font families, as a comma-separated list of font names, in order of preference. The name can be a font family (such as “Arial”), or a generic font family (such as “serif”), or “default” (to let the downstream player choose the font). - Leave blank to set the family to “monospace”.</summary>
     [JsonPropertyName("fontFamily")]
     public string? FontFamily { get; set; }
 
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -8576,7 +8576,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -8585,7 +8585,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsWebvttDestinationSettings
 {
-    /// <summary>TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
+    /// <summary>Specifies the style information (font color, font position, and so on) to include in the font data that is attached to the EBU-TT captions. - include: Take the style information (font color, font position, and so on) from the source captions and include that information in the font data attached to the EBU-TT captions. This option is valid only if the source captions are Embedded or Teletext. - exclude: In the font data attached to the EBU-TT captions, set the font family to “monospaced”. Do not include any other style information.</summary>
     [JsonPropertyName("styleControl")]
     public string? StyleControl { get; set; }
 }
@@ -8626,19 +8626,19 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescrip
     [JsonPropertyName("scte20PlusEmbeddedDestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte20PlusEmbeddedDestinationSettings>? Scte20PlusEmbeddedDestinationSettings { get; set; }
 
-    /// <summary>–  SCTE27 Destination Settings.</summary>
+    /// <summary>SCTE27 Destination Settings.</summary>
     [JsonPropertyName("scte27DestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsScte27DestinationSettings>? Scte27DestinationSettings { get; set; }
 
-    /// <summary>–  SMPTE TT Destination Settings.</summary>
+    /// <summary>SMPTE TT Destination Settings.</summary>
     [JsonPropertyName("smpteTtDestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsSmpteTtDestinationSettings>? SmpteTtDestinationSettings { get; set; }
 
-    /// <summary>–  Teletext Destination Settings.</summary>
+    /// <summary>Teletext Destination Settings.</summary>
     [JsonPropertyName("teletextDestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTeletextDestinationSettings>? TeletextDestinationSettings { get; set; }
 
-    /// <summary>–  TTML Destination Settings. See TTML Destination Settings for more details.</summary>
+    /// <summary>TTML Destination Settings. See TTML Destination Settings for more details.</summary>
     [JsonPropertyName("ttmlDestinationSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsCaptionDescriptionsDestinationSettingsTtmlDestinationSettings>? TtmlDestinationSettings { get; set; }
 
@@ -8684,7 +8684,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -8722,11 +8722,11 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfiguration
 {
-    /// <summary>–  Value to set the initial audio gain for the Live Event.</summary>
+    /// <summary>Value to set the initial audio gain for the Live Event.</summary>
     [JsonPropertyName("initialAudioGain")]
     public double? InitialAudioGain { get; set; }
 
-    /// <summary>of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
+    /// <summary>Indicates the action to take when the current input completes (e.g. end-of-file). When switchAndLoopInputs is configured the encoder will restart at the beginning of the first input. When “none” is configured the encoder will transcode either black, a solid color, or a user specified slate images per the “Input Loss Behavior” configuration until the next input switch occurs (which is controlled through the Channel Schedule API).</summary>
     [JsonPropertyName("inputEndAction")]
     public string? InputEndAction { get; set; }
 
@@ -8734,15 +8734,15 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigur
     [JsonPropertyName("inputLossBehavior")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsGlobalConfigurationInputLossBehavior>? InputLossBehavior { get; set; }
 
-    /// <summary>MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
+    /// <summary>Indicates how MediaLive pipelines are synchronized. PIPELINE_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the other. EPOCH_LOCKING - MediaLive will attempt to synchronize the output of each pipeline to the Unix epoch.</summary>
     [JsonPropertyName("outputLockingMode")]
     public string? OutputLockingMode { get; set; }
 
-    /// <summary>–  Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
+    /// <summary>Indicates whether the rate of frames emitted by the Live encoder should be paced by its system clock (which optionally may be locked to another source via NTP) or should be locked to the clock of the source that is providing the input stream.</summary>
     [JsonPropertyName("outputTimingSource")]
     public string? OutputTimingSource { get; set; }
 
-    /// <summary>–  Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
+    /// <summary>Adjusts video input buffer for streams with very low video framerates. This is commonly set to enabled for music channels with less than one video frame per second.</summary>
     [JsonPropertyName("supportLowFramerateInputs")]
     public string? SupportLowFramerateInputs { get; set; }
 }
@@ -8757,7 +8757,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettings
 {
-    /// <summary>–  Html Motion Graphics Settings.</summary>
+    /// <summary>Html Motion Graphics Settings.</summary>
     [JsonPropertyName("htmlMotionGraphicsSettings")]
     public IList<V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfigurationMotionGraphicsSettingsHtmlMotionGraphicsSettings>? HtmlMotionGraphicsSettings { get; set; }
 }
@@ -8766,7 +8766,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphicsConfiguration
 {
-    /// <summary>–  Motion Graphics Insertion.</summary>
+    /// <summary>Motion Graphics Insertion.</summary>
     [JsonPropertyName("motionGraphicsInsertion")]
     public string? MotionGraphicsInsertion { get; set; }
 
@@ -8779,11 +8779,11 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsMotionGraphics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderEncoderSettingsNielsenConfiguration
 {
-    /// <summary>–  Enter the Distributor ID assigned to your organization by Nielsen.</summary>
+    /// <summary>Enter the Distributor ID assigned to your organization by Nielsen.</summary>
     [JsonPropertyName("distributorId")]
     public string? DistributorId { get; set; }
 
-    /// <summary>–  Enables Nielsen PCM to ID3 tagging.</summary>
+    /// <summary>Enables Nielsen PCM to ID3 tagging.</summary>
     [JsonPropertyName("nielsenPcmToId3Tagging")]
     public string? NielsenPcmToId3Tagging { get; set; }
 }
@@ -9044,7 +9044,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -9742,7 +9742,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsOutputGroupsOu
     [JsonPropertyName("passwordParam")]
     public string? PasswordParam { get; set; }
 
-    /// <summary>–  Path to a file accessible to the live stream.</summary>
+    /// <summary>Path to a file accessible to the live stream.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 
@@ -10505,7 +10505,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -10755,7 +10755,7 @@ public partial class V1beta1ChannelStatusAtProviderEncoderSettingsVideoDescripti
     [JsonPropertyName("maxBitrate")]
     public double? MaxBitrate { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Min interval.</summary>
     [JsonPropertyName("minIInterval")]
     public double? MinIInterval { get; set; }
 
@@ -11315,11 +11315,11 @@ public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ChannelStatusAtProviderInputAttachmentsInputSettings
 {
-    /// <summary></summary>
+    /// <summary>Used to select the audio stream to decode for inputs that have multiple. See Audio Selectors for more details.</summary>
     [JsonPropertyName("audioSelector")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsAudioSelector>? AudioSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Used to select the caption input to use for inputs that have multiple available. See Caption Selectors for more details.</summary>
     [JsonPropertyName("captionSelector")]
     public IList<V1beta1ChannelStatusAtProviderInputAttachmentsInputSettingsCaptionSelector>? CaptionSelector { get; set; }
 
@@ -11487,6 +11487,10 @@ public partial class V1beta1ChannelStatusAtProvider
     /// <summary>Name of the Channel.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Concise argument description.</summary>
     [JsonPropertyName("roleArn")]

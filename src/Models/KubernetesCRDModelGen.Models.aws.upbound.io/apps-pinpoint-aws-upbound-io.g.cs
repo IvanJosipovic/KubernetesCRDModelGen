@@ -79,7 +79,7 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("quietTime")]
     public IList<V1beta1AppSpecForProviderQuietTime>? QuietTime { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -378,6 +378,10 @@ public partial class V1beta1AppStatusAtProvider
     /// <summary>The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own</summary>
     [JsonPropertyName("quietTime")]
     public IList<V1beta1AppStatusAtProviderQuietTime>? QuietTime { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

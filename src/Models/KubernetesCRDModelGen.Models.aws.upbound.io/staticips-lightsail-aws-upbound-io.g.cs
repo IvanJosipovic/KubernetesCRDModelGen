@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPSpecForProvider
 {
-    /// <summary>The name for the allocated static IP</summary>
+    /// <summary>Name for the allocated static IP.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -25,7 +25,7 @@ public partial class V1beta1StaticIPSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPSpecInitProvider
 {
-    /// <summary>The name for the allocated static IP</summary>
+    /// <summary>Name for the allocated static IP.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -166,7 +166,7 @@ public partial class V1beta1StaticIPSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticIPStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail static IP</summary>
+    /// <summary>ARN of the Lightsail static IP.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -174,15 +174,19 @@ public partial class V1beta1StaticIPStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The allocated static IP address</summary>
+    /// <summary>Allocated static IP address.</summary>
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>The name for the allocated static IP</summary>
+    /// <summary>Name for the allocated static IP.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The support code.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Support code for the static IP. Include this code in your email to support when you have questions about a static IP in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
     [JsonPropertyName("supportCode")]
     public string? SupportCode { get; set; }
 }
@@ -233,7 +237,7 @@ public partial class V1beta1StaticIPStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>StaticIP is the Schema for the StaticIPs API. Provides an Lightsail Static IP</summary>
+/// <summary>StaticIP is the Schema for the StaticIPs API. Manages a Lightsail Static IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StaticIP : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StaticIPSpec>, IStatus<V1beta1StaticIPStatus>
@@ -263,7 +267,7 @@ public partial class V1beta1StaticIP : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     public V1beta1StaticIPStatus? Status { get; set; }
 }
 
-/// <summary>StaticIP is the Schema for the StaticIPs API. Provides an Lightsail Static IP</summary>
+/// <summary>StaticIP is the Schema for the StaticIPs API. Manages a Lightsail Static IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StaticIPList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StaticIP>

@@ -37,7 +37,7 @@ public partial class V1beta1ConformancePackSpecForProvider
     [JsonPropertyName("inputParameter")]
     public IList<V1beta1ConformancePackSpecForProviderInputParameter>? InputParameter { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -256,6 +256,10 @@ public partial class V1beta1ConformancePackStatusAtProvider
     /// <summary>Set of configuration blocks describing input parameters passed to the conformance pack template. Documented below. When configured, the parameters must also be included in the template_body or in the template stored in Amazon S3 if using template_s3_uri.</summary>
     [JsonPropertyName("inputParameter")]
     public IList<V1beta1ConformancePackStatusAtProviderInputParameter>? InputParameter { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A string containing full conformance pack template body. Maximum length of 51200. Drift detection is not possible with this argument.</summary>
     [JsonPropertyName("templateBody")]

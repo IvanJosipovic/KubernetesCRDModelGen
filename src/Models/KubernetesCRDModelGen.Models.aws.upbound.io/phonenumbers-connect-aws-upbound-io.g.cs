@@ -80,7 +80,7 @@ public partial class V1beta1PhoneNumberSpecForProvider
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -370,6 +370,10 @@ public partial class V1beta1PhoneNumberStatusAtProvider
     /// <summary>The prefix of the phone number that is used to filter available phone numbers. If provided, it must contain + as part of the country code. Do not specify this argument when importing the resource.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A block that specifies status of the phone number. Documented below.</summary>
     [JsonPropertyName("status")]

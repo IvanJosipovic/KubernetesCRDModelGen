@@ -207,7 +207,7 @@ public partial class V1beta1ExtensionSpecForProvider
     [JsonPropertyName("parameter")]
     public IList<V1beta1ExtensionSpecForProviderParameter>? Parameter { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -630,6 +630,10 @@ public partial class V1beta1ExtensionStatusAtProvider
     /// <summary>The parameters accepted by the extension. You specify parameter values when you associate the extension to an AppConfig resource by using the CreateExtensionAssociation API action. For Lambda extension actions, these parameters are included in the Lambda request object. Detailed below.</summary>
     [JsonPropertyName("parameter")]
     public IList<V1beta1ExtensionStatusAtProviderParameter>? Parameter { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

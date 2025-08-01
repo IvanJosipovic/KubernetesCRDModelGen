@@ -97,7 +97,7 @@ public partial class V1beta1VoiceConnectorOriginationSpecForProvider
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -392,6 +392,10 @@ public partial class V1beta1VoiceConnectorOriginationStatusAtProvider
     /// <summary>The Amazon Chime Voice Connector ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.</summary>
     [JsonPropertyName("route")]

@@ -96,7 +96,7 @@ public partial class V1beta1VPCIpamPoolCidrAllocationSpecForProvider
     [JsonPropertyName("netmaskLength")]
     public double? NetmaskLength { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -353,6 +353,10 @@ public partial class V1beta1VPCIpamPoolCidrAllocationStatusAtProvider
     /// <summary>The netmask length of the CIDR you would like to allocate to the IPAM pool. Valid Values: 0-128.</summary>
     [JsonPropertyName("netmaskLength")]
     public double? NetmaskLength { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the resource.</summary>
     [JsonPropertyName("resourceId")]

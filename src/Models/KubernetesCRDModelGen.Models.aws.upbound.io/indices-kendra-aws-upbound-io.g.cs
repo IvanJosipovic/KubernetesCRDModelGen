@@ -237,7 +237,7 @@ public partial class V1beta1IndexSpecForProvider
     [JsonPropertyName("documentMetadataConfigurationUpdates")]
     public IList<V1beta1IndexSpecForProviderDocumentMetadataConfigurationUpdates>? DocumentMetadataConfigurationUpdates { get; set; }
 
-    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION</summary>
+    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Use GEN_AI_ENTERPRISE_EDITION for creating generative AI applications. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
 
@@ -245,7 +245,7 @@ public partial class V1beta1IndexSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -511,7 +511,7 @@ public partial class V1beta1IndexSpecInitProvider
     [JsonPropertyName("documentMetadataConfigurationUpdates")]
     public IList<V1beta1IndexSpecInitProviderDocumentMetadataConfigurationUpdates>? DocumentMetadataConfigurationUpdates { get; set; }
 
-    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION</summary>
+    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Use GEN_AI_ENTERPRISE_EDITION for creating generative AI applications. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
 
@@ -900,7 +900,7 @@ public partial class V1beta1IndexStatusAtProvider
     [JsonPropertyName("documentMetadataConfigurationUpdates")]
     public IList<V1beta1IndexStatusAtProviderDocumentMetadataConfigurationUpdates>? DocumentMetadataConfigurationUpdates { get; set; }
 
-    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION</summary>
+    /// <summary>The Amazon Kendra edition to use for the index. Choose DEVELOPER_EDITION for indexes intended for development, testing, or proof of concept. Use ENTERPRISE_EDITION for your production databases. Use GEN_AI_ENTERPRISE_EDITION for creating generative AI applications. Once you set the edition for an index, it can't be changed. Defaults to ENTERPRISE_EDITION.</summary>
     [JsonPropertyName("edition")]
     public string? Edition { get; set; }
 
@@ -919,6 +919,10 @@ public partial class V1beta1IndexStatusAtProvider
     /// <summary>Specifies the name of the Index.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An AWS Identity and Access Management (IAM) role that gives Amazon Kendra permissions to access your Amazon CloudWatch logs and metrics. This is also the role you use when you call the BatchPutDocument API to index documents from an Amazon S3 bucket.</summary>
     [JsonPropertyName("roleArn")]

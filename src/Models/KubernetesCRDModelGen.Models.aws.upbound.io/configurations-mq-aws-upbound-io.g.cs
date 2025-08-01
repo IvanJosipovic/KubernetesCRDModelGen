@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.mq.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecForProvider
 {
-    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.</summary>
+    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for RabbitMQ engine type.</summary>
     [JsonPropertyName("authenticationStrategy")]
     public string? AuthenticationStrategy { get; set; }
 
-    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.</summary>
+    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See AWS documentation for supported parameters and format of the XML.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
@@ -36,7 +36,7 @@ public partial class V1beta1ConfigurationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -49,11 +49,11 @@ public partial class V1beta1ConfigurationSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSpecInitProvider
 {
-    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.</summary>
+    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for RabbitMQ engine type.</summary>
     [JsonPropertyName("authenticationStrategy")]
     public string? AuthenticationStrategy { get; set; }
 
-    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.</summary>
+    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See AWS documentation for supported parameters and format of the XML.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
@@ -218,11 +218,11 @@ public partial class V1beta1ConfigurationStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for engine_type RabbitMQ.</summary>
+    /// <summary>Authentication strategy associated with the configuration. Valid values are simple and ldap. ldap is not supported for RabbitMQ engine type.</summary>
     [JsonPropertyName("authenticationStrategy")]
     public string? AuthenticationStrategy { get; set; }
 
-    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See official docs for supported parameters and format of the XML.</summary>
+    /// <summary>Broker configuration in XML format for ActiveMQ or Cuttlefish format for RabbitMQ. See AWS documentation for supported parameters and format of the XML.</summary>
     [JsonPropertyName("data")]
     public string? Data { get; set; }
 
@@ -250,11 +250,15 @@ public partial class V1beta1ConfigurationStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -305,7 +309,7 @@ public partial class V1beta1ConfigurationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Configuration is the Schema for the Configurations API. Provides an MQ configuration Resource</summary>
+/// <summary>Configuration is the Schema for the Configurations API. "Manages an Amazon MQ configuration"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Configuration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConfigurationSpec>, IStatus<V1beta1ConfigurationStatus>
@@ -335,7 +339,7 @@ public partial class V1beta1Configuration : IKubernetesObject<V1ObjectMeta>, ISp
     public V1beta1ConfigurationStatus? Status { get; set; }
 }
 
-/// <summary>Configuration is the Schema for the Configurations API. Provides an MQ configuration Resource</summary>
+/// <summary>Configuration is the Schema for the Configurations API. "Manages an Amazon MQ configuration"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Configuration>

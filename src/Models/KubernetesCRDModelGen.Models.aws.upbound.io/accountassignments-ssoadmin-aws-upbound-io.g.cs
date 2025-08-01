@@ -156,7 +156,7 @@ public partial class V1beta1AccountAssignmentSpecForProvider
     [JsonPropertyName("principalType")]
     public string PrincipalType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -330,6 +330,10 @@ public partial class V1beta1AccountAssignmentStatusAtProvider
     /// <summary>The entity type for which the assignment will be created. Valid values: USER, GROUP.</summary>
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An AWS account identifier, typically a 10-12 digit string.</summary>
     [JsonPropertyName("targetId")]

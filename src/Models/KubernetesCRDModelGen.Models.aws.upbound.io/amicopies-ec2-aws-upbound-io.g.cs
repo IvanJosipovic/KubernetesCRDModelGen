@@ -176,7 +176,7 @@ public partial class V1beta1AMICopySpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -653,6 +653,10 @@ public partial class V1beta1AMICopyStatusAtProvider
     public string? KmsKeyId { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("lastLaunchedTime")]
+    public string? LastLaunchedTime { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("manageEbsSnapshots")]
     public bool? ManageEbsSnapshots { get; set; }
 
@@ -679,6 +683,10 @@ public partial class V1beta1AMICopyStatusAtProvider
     /// <summary>ID of the created AMI.</summary>
     [JsonPropertyName("ramdiskId")]
     public string? RamdiskId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Region-unique name for the AMI.</summary>
     [JsonPropertyName("rootDeviceName")]
@@ -711,6 +719,10 @@ public partial class V1beta1AMICopyStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("tpmSupport")]
     public string? TpmSupport { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("uefiData")]
+    public string? UefiData { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("usageOperation")]

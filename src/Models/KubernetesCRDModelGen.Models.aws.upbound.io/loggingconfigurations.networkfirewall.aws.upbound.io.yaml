@@ -178,7 +178,7 @@ spec:
                     items:
                       properties:
                         logDestinationConfig:
-                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.
+                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.
                           items:
                             properties:
                               logDestination:
@@ -191,14 +191,17 @@ spec:
                                 description: 'The location to send logs to. Valid values: S3, CloudWatchLogs, KinesisDataFirehose.'
                                 type: string
                               logType:
-                                description: 'The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
+                                description: 'The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
                                 type: string
                             type: object
                           type: array
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -319,7 +322,7 @@ spec:
                     items:
                       properties:
                         logDestinationConfig:
-                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.
+                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.
                           items:
                             properties:
                               logDestination:
@@ -332,7 +335,7 @@ spec:
                                 description: 'The location to send logs to. Valid values: S3, CloudWatchLogs, KinesisDataFirehose.'
                                 type: string
                               logType:
-                                description: 'The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
+                                description: 'The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
                                 type: string
                             type: object
                           type: array
@@ -566,7 +569,7 @@ spec:
                     items:
                       properties:
                         logDestinationConfig:
-                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.
+                          description: Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.
                           items:
                             properties:
                               logDestination:
@@ -579,12 +582,18 @@ spec:
                                 description: 'The location to send logs to. Valid values: S3, CloudWatchLogs, KinesisDataFirehose.'
                                 type: string
                               logType:
-                                description: 'The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
+                                description: 'The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.'
                                 type: string
                             type: object
                           type: array
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.
@@ -831,7 +840,10 @@ spec:
                         type: array
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -1214,6 +1226,12 @@ spec:
                           type: object
                         type: array
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                 type: object
               conditions:
                 description: Conditions of the resource.

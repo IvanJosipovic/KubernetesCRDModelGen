@@ -114,7 +114,7 @@ public partial class V1beta1RepositorySpecForProvider
     [JsonPropertyName("imageTagMutability")]
     public string? ImageTagMutability { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -415,6 +415,10 @@ public partial class V1beta1RepositoryStatusAtProvider
     /// <summary>The tag mutability setting for the repository. Must be one of: MUTABLE or IMMUTABLE. Defaults to MUTABLE.</summary>
     [JsonPropertyName("imageTagMutability")]
     public string? ImageTagMutability { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The registry ID where the repository was created.</summary>
     [JsonPropertyName("registryId")]

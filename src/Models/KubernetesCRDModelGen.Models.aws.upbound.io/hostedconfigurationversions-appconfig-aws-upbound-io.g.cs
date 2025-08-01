@@ -177,7 +177,7 @@ public partial class V1beta1HostedConfigurationVersionSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -511,6 +511,10 @@ public partial class V1beta1HostedConfigurationVersionStatusAtProvider
     /// <summary>AppConfig application ID, configuration profile ID, and version number separated by a slash (/).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Version number of the hosted configuration.</summary>
     [JsonPropertyName("versionNumber")]

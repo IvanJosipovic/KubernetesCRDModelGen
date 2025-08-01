@@ -211,7 +211,7 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1FleetSpecForProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 60 seconds.</summary>
+    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 0. Valid value is between 60 and 3600 seconds.</summary>
     [JsonPropertyName("idleDisconnectTimeoutInSeconds")]
     public double? IdleDisconnectTimeoutInSeconds { get; set; }
 
@@ -239,7 +239,7 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -459,7 +459,7 @@ public partial class V1beta1FleetSpecInitProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1FleetSpecInitProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 60 seconds.</summary>
+    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 0. Valid value is between 60 and 3600 seconds.</summary>
     [JsonPropertyName("idleDisconnectTimeoutInSeconds")]
     public double? IdleDisconnectTimeoutInSeconds { get; set; }
 
@@ -731,7 +731,7 @@ public partial class V1beta1FleetStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 60 seconds.</summary>
+    /// <summary>Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the disconnect_timeout_in_seconds time interval begins. Defaults to 0. Valid value is between 60 and 3600 seconds.</summary>
     [JsonPropertyName("idleDisconnectTimeoutInSeconds")]
     public double? IdleDisconnectTimeoutInSeconds { get; set; }
 
@@ -758,6 +758,10 @@ public partial class V1beta1FleetStatusAtProvider
     /// <summary>Unique name for the fleet.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>State of the fleet. Can be STARTING, RUNNING, STOPPING or STOPPED</summary>
     [JsonPropertyName("state")]

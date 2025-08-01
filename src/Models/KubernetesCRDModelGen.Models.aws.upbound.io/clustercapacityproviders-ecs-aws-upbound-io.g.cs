@@ -105,7 +105,7 @@ public partial class V1beta1ClusterCapacityProvidersSpecForProvider
     [JsonPropertyName("defaultCapacityProviderStrategy")]
     public IList<V1beta1ClusterCapacityProvidersSpecForProviderDefaultCapacityProviderStrategy>? DefaultCapacityProviderStrategy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -376,6 +376,10 @@ public partial class V1beta1ClusterCapacityProvidersStatusAtProvider
     /// <summary>Same as cluster_name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

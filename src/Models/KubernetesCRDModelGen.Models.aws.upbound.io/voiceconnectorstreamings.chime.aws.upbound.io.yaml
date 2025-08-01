@@ -103,7 +103,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   streamingNotificationTargets:
                     description: 'The streaming notification targets. Valid Values: EventBridge | SNS | SQS'
@@ -576,6 +579,12 @@ spec:
                           type: boolean
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   streamingNotificationTargets:
                     description: 'The streaming notification targets. Valid Values: EventBridge | SNS | SQS'
                     items:
@@ -736,7 +745,10 @@ spec:
                         type: boolean
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   streamingNotificationTargets:
                     description: 'The streaming notification targets. Valid Values: EventBridge | SNS | SQS'
@@ -1205,6 +1217,12 @@ spec:
                         description: When true, the media insights configuration is not enabled. Defaults to false.
                         type: boolean
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   streamingNotificationTargets:
                     description: 'The streaming notification targets. Valid Values: EventBridge | SNS | SQS'
                     items:

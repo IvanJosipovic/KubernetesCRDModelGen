@@ -106,13 +106,16 @@ spec:
                     description: The name of the maintenance window.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: The schedule of the Maintenance Window in the form of a cron or rate expression.
                     type: string
                   scheduleOffset:
-                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.
                     type: number
                   scheduleTimezone:
                     description: 'Timezone for schedule in Internet Assigned Numbers Authority (IANA) Time Zone Database format. For example: America/Los_Angeles, etc/UTC, or Asia/Seoul.'
@@ -176,7 +179,7 @@ spec:
                     description: The schedule of the Maintenance Window in the form of a cron or rate expression.
                     type: string
                   scheduleOffset:
-                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.
                     type: number
                   scheduleTimezone:
                     description: 'Timezone for schedule in Internet Assigned Numbers Authority (IANA) Time Zone Database format. For example: America/Los_Angeles, etc/UTC, or Asia/Seoul.'
@@ -437,11 +440,17 @@ spec:
                   name:
                     description: The name of the maintenance window.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schedule:
                     description: The schedule of the Maintenance Window in the form of a cron or rate expression.
                     type: string
                   scheduleOffset:
-                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
+                    description: The number of days to wait after the date and time specified by a CRON expression before running the maintenance window. Valid range is 1 to 6.
                     type: number
                   scheduleTimezone:
                     description: 'Timezone for schedule in Internet Assigned Numbers Authority (IANA) Time Zone Database format. For example: America/Los_Angeles, etc/UTC, or Asia/Seoul.'

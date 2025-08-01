@@ -85,11 +85,11 @@ public partial class V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguratio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguration
 {
-    /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
+    /// <summary>The total number of SSD IOPS provisioned for the file system.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>- Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
+    /// <summary>Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -328,7 +328,7 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("aliases")]
     public IList<string>? Aliases { get; set; }
 
-    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See Audit Log Configuration below.</summary>
+    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See audit_log_configuration Block for details.</summary>
     [JsonPropertyName("auditLogConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecForProviderAuditLogConfiguration>? AuditLogConfiguration { get; set; }
 
@@ -352,7 +352,7 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
-    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See Disk Iops Configuration below.</summary>
+    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See disk_iops_configuration Block for details.</summary>
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecForProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
@@ -376,7 +376,7 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("preferredSubnetId")]
     public string? PreferredSubnetId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -392,7 +392,7 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See Self-Managed Active Directory below.</summary>
+    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See self_managed_active_directory Block for details.</summary>
     [JsonPropertyName("selfManagedActiveDirectory")]
     public IList<V1beta1WindowsFileSystemSpecForProviderSelfManagedActiveDirectory>? SelfManagedActiveDirectory { get; set; }
 
@@ -424,7 +424,7 @@ public partial class V1beta1WindowsFileSystemSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of 8 and maximum of 2048.</summary>
+    /// <summary>Throughput (megabytes per second) of the file system. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 
@@ -510,11 +510,11 @@ public partial class V1beta1WindowsFileSystemSpecInitProviderAuditLogConfigurati
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfiguration
 {
-    /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
+    /// <summary>The total number of SSD IOPS provisioned for the file system.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>- Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
+    /// <summary>Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -753,7 +753,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("aliases")]
     public IList<string>? Aliases { get; set; }
 
-    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See Audit Log Configuration below.</summary>
+    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See audit_log_configuration Block for details.</summary>
     [JsonPropertyName("auditLogConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecInitProviderAuditLogConfiguration>? AuditLogConfiguration { get; set; }
 
@@ -777,7 +777,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
-    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See Disk Iops Configuration below.</summary>
+    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See disk_iops_configuration Block for details.</summary>
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1WindowsFileSystemSpecInitProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
@@ -813,7 +813,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See Self-Managed Active Directory below.</summary>
+    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See self_managed_active_directory Block for details.</summary>
     [JsonPropertyName("selfManagedActiveDirectory")]
     public IList<V1beta1WindowsFileSystemSpecInitProviderSelfManagedActiveDirectory>? SelfManagedActiveDirectory { get; set; }
 
@@ -845,7 +845,7 @@ public partial class V1beta1WindowsFileSystemSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of 8 and maximum of 2048.</summary>
+    /// <summary>Throughput (megabytes per second) of the file system. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 
@@ -1007,11 +1007,11 @@ public partial class V1beta1WindowsFileSystemStatusAtProviderAuditLogConfigurati
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfiguration
 {
-    /// <summary>- The total number of SSD IOPS provisioned for the file system.</summary>
+    /// <summary>The total number of SSD IOPS provisioned for the file system.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>- Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
+    /// <summary>Specifies whether the number of IOPS for the file system is using the system. Valid values are AUTOMATIC and USER_PROVISIONED. Default value is AUTOMATIC.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -1057,7 +1057,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See Audit Log Configuration below.</summary>
+    /// <summary>The configuration that Amazon FSx for Windows File Server uses to audit and log user accesses of files, folders, and file shares on the Amazon FSx for Windows File Server file system. See audit_log_configuration Block for details.</summary>
     [JsonPropertyName("auditLogConfiguration")]
     public IList<V1beta1WindowsFileSystemStatusAtProviderAuditLogConfiguration>? AuditLogConfiguration { get; set; }
 
@@ -1081,7 +1081,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
-    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See Disk Iops Configuration below.</summary>
+    /// <summary>The SSD IOPS configuration for the Amazon FSx for Windows File Server file system. See disk_iops_configuration Block for details.</summary>
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1WindowsFileSystemStatusAtProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
@@ -1117,6 +1117,10 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("preferredSubnetId")]
     public string? PreferredSubnetId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>For MULTI_AZ_1 deployment types, use this endpoint when performing administrative tasks on the file system using Amazon FSx Remote PowerShell. For SINGLE_AZ_1 deployment types, this is the DNS name of the file system.</summary>
     [JsonPropertyName("remoteAdministrationEndpoint")]
     public string? RemoteAdministrationEndpoint { get; set; }
@@ -1125,7 +1129,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See Self-Managed Active Directory below.</summary>
+    /// <summary>Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with active_directory_id. See self_managed_active_directory Block for details.</summary>
     [JsonPropertyName("selfManagedActiveDirectory")]
     public IList<V1beta1WindowsFileSystemStatusAtProviderSelfManagedActiveDirectory>? SelfManagedActiveDirectory { get; set; }
 
@@ -1153,7 +1157,7 @@ public partial class V1beta1WindowsFileSystemStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of 8 and maximum of 2048.</summary>
+    /// <summary>Throughput (megabytes per second) of the file system. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 

@@ -89,7 +89,7 @@ public partial class V1beta1ConfigurationTemplateSpecForProviderSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecForProvider
 {
-    /// <summary>–  name of the application to associate with this configuration template</summary>
+    /// <summary>name of the application to associate with this configuration template</summary>
     [JsonPropertyName("application")]
     public string? Application { get; set; }
 
@@ -105,19 +105,19 @@ public partial class V1beta1ConfigurationTemplateSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  The ID of the environment used with this configuration template</summary>
+    /// <summary>The ID of the environment used with this configuration template</summary>
     [JsonPropertyName("environmentId")]
     public string? EnvironmentId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
+    /// <summary>Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ConfigurationTemplateSpecForProviderSetting>? Setting { get; set; }
 
-    /// <summary>–  A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
+    /// <summary>A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }
@@ -203,7 +203,7 @@ public partial class V1beta1ConfigurationTemplateSpecInitProviderSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateSpecInitProvider
 {
-    /// <summary>–  name of the application to associate with this configuration template</summary>
+    /// <summary>name of the application to associate with this configuration template</summary>
     [JsonPropertyName("application")]
     public string? Application { get; set; }
 
@@ -219,15 +219,15 @@ public partial class V1beta1ConfigurationTemplateSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  The ID of the environment used with this configuration template</summary>
+    /// <summary>The ID of the environment used with this configuration template</summary>
     [JsonPropertyName("environmentId")]
     public string? EnvironmentId { get; set; }
 
-    /// <summary>–  Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
+    /// <summary>Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ConfigurationTemplateSpecInitProviderSetting>? Setting { get; set; }
 
-    /// <summary>–  A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
+    /// <summary>A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }
@@ -389,7 +389,7 @@ public partial class V1beta1ConfigurationTemplateStatusAtProviderSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationTemplateStatusAtProvider
 {
-    /// <summary>–  name of the application to associate with this configuration template</summary>
+    /// <summary>name of the application to associate with this configuration template</summary>
     [JsonPropertyName("application")]
     public string? Application { get; set; }
 
@@ -397,7 +397,7 @@ public partial class V1beta1ConfigurationTemplateStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  The ID of the environment used with this configuration template</summary>
+    /// <summary>The ID of the environment used with this configuration template</summary>
     [JsonPropertyName("environmentId")]
     public string? EnvironmentId { get; set; }
 
@@ -405,11 +405,15 @@ public partial class V1beta1ConfigurationTemplateStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Option settings to configure the new Environment. These override specific values that are set as defaults. The format is detailed below in Option Settings</summary>
     [JsonPropertyName("setting")]
     public IList<V1beta1ConfigurationTemplateStatusAtProviderSetting>? Setting { get; set; }
 
-    /// <summary>–  A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
+    /// <summary>A solution stack to base your Template off of. Example stacks can be found in the Amazon API documentation</summary>
     [JsonPropertyName("solutionStackName")]
     public string? SolutionStackName { get; set; }
 }

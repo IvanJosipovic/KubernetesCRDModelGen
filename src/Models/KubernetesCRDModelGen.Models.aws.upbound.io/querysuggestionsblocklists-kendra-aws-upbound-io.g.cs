@@ -221,7 +221,7 @@ public partial class V1beta1QuerySuggestionsBlockListSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -652,6 +652,10 @@ public partial class V1beta1QuerySuggestionsBlockListStatusAtProvider
     /// <summary>Unique identifier of the block list.</summary>
     [JsonPropertyName("querySuggestionsBlockListId")]
     public string? QuerySuggestionsBlockListId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>IAM (Identity and Access Management) role used to access the block list text file in S3.</summary>
     [JsonPropertyName("roleArn")]

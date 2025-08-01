@@ -161,11 +161,11 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values are DoH, Do53, or DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -343,7 +343,7 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values are DoH, Do53, or DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
@@ -549,9 +549,13 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values: DoH, Do53, DoH-FIPS.</summary>
+    /// <summary>Protocols you want to use for the Route 53 Resolver endpoint. Valid values are DoH, Do53, or DoH-FIPS.</summary>
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Endpoint IP type. This endpoint type is applied to all IP addresses. Valid values are IPV6,IPV4 or DUALSTACK (both IPv4 and IPv6).</summary>
     [JsonPropertyName("resolverEndpointType")]

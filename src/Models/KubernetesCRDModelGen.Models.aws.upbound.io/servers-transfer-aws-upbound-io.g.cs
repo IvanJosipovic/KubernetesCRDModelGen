@@ -504,11 +504,11 @@ public partial class V1beta1ServerSpecForProviderWorkflowDetailsOnUpload
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecForProviderWorkflowDetails
 {
-    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.</summary>
     [JsonPropertyName("onPartialUpload")]
     public IList<V1beta1ServerSpecForProviderWorkflowDetailsOnPartialUpload>? OnPartialUpload { get; set; }
 
-    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.</summary>
     [JsonPropertyName("onUpload")]
     public IList<V1beta1ServerSpecForProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
@@ -545,7 +545,7 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.</summary>
+    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.</summary>
     [JsonPropertyName("endpointDetails")]
     public IList<V1beta1ServerSpecForProviderEndpointDetails>? EndpointDetails { get; set; }
 
@@ -557,7 +557,7 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>The ARN for a lambda function to use for the Identity provider.</summary>
+    /// <summary>The ARN for a lambda function to use for the Identity provider with an identity_provider_type of AWS_LAMBDA.</summary>
     [JsonPropertyName("function")]
     public string? Function { get; set; }
 
@@ -593,7 +593,7 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("preAuthenticationLoginBannerSecretRef")]
     public V1beta1ServerSpecForProviderPreAuthenticationLoginBannerSecretRef? PreAuthenticationLoginBannerSecretRef { get; set; }
 
-    /// <summary>The protocol settings that are configured for your server. See protocol_details block below for details.</summary>
+    /// <summary>The protocol settings that are configured for your server. See protocol_details Block below for details.</summary>
     [JsonPropertyName("protocolDetails")]
     public IList<V1beta1ServerSpecForProviderProtocolDetails>? ProtocolDetails { get; set; }
 
@@ -601,11 +601,11 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.</summary>
+    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.</summary>
     [JsonPropertyName("s3StorageOptions")]
     public IList<V1beta1ServerSpecForProviderS3StorageOptions>? S3StorageOptions { get; set; }
 
@@ -613,7 +613,7 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("securityPolicyName")]
     public string? SecurityPolicyName { get; set; }
 
-    /// <summary>For SFTP-enabled servers, and for custom identity providers only. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
+    /// <summary>For SFTP-enabled servers with an identity_provider_type of API_GATEWAY or AWS_LAMBDA. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
     [JsonPropertyName("sftpAuthenticationMethods")]
     public string? SftpAuthenticationMethods { get; set; }
 
@@ -629,7 +629,7 @@ public partial class V1beta1ServerSpecForProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 
-    /// <summary>Specifies the workflow details. See workflow_details block below for details.</summary>
+    /// <summary>Specifies the workflow details. See workflow_details Block below for details.</summary>
     [JsonPropertyName("workflowDetails")]
     public IList<V1beta1ServerSpecForProviderWorkflowDetails>? WorkflowDetails { get; set; }
 }
@@ -1130,11 +1130,11 @@ public partial class V1beta1ServerSpecInitProviderWorkflowDetailsOnUpload
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecInitProviderWorkflowDetails
 {
-    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.</summary>
     [JsonPropertyName("onPartialUpload")]
     public IList<V1beta1ServerSpecInitProviderWorkflowDetailsOnPartialUpload>? OnPartialUpload { get; set; }
 
-    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.</summary>
     [JsonPropertyName("onUpload")]
     public IList<V1beta1ServerSpecInitProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
@@ -1171,7 +1171,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("domain")]
     public string? Domain { get; set; }
 
-    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.</summary>
+    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.</summary>
     [JsonPropertyName("endpointDetails")]
     public IList<V1beta1ServerSpecInitProviderEndpointDetails>? EndpointDetails { get; set; }
 
@@ -1183,7 +1183,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>The ARN for a lambda function to use for the Identity provider.</summary>
+    /// <summary>The ARN for a lambda function to use for the Identity provider with an identity_provider_type of AWS_LAMBDA.</summary>
     [JsonPropertyName("function")]
     public string? Function { get; set; }
 
@@ -1219,7 +1219,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("preAuthenticationLoginBannerSecretRef")]
     public V1beta1ServerSpecInitProviderPreAuthenticationLoginBannerSecretRef? PreAuthenticationLoginBannerSecretRef { get; set; }
 
-    /// <summary>The protocol settings that are configured for your server. See protocol_details block below for details.</summary>
+    /// <summary>The protocol settings that are configured for your server. See protocol_details Block below for details.</summary>
     [JsonPropertyName("protocolDetails")]
     public IList<V1beta1ServerSpecInitProviderProtocolDetails>? ProtocolDetails { get; set; }
 
@@ -1227,7 +1227,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.</summary>
+    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.</summary>
     [JsonPropertyName("s3StorageOptions")]
     public IList<V1beta1ServerSpecInitProviderS3StorageOptions>? S3StorageOptions { get; set; }
 
@@ -1235,7 +1235,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("securityPolicyName")]
     public string? SecurityPolicyName { get; set; }
 
-    /// <summary>For SFTP-enabled servers, and for custom identity providers only. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
+    /// <summary>For SFTP-enabled servers with an identity_provider_type of API_GATEWAY or AWS_LAMBDA. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
     [JsonPropertyName("sftpAuthenticationMethods")]
     public string? SftpAuthenticationMethods { get; set; }
 
@@ -1251,7 +1251,7 @@ public partial class V1beta1ServerSpecInitProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 
-    /// <summary>Specifies the workflow details. See workflow_details block below for details.</summary>
+    /// <summary>Specifies the workflow details. See workflow_details Block below for details.</summary>
     [JsonPropertyName("workflowDetails")]
     public IList<V1beta1ServerSpecInitProviderWorkflowDetails>? WorkflowDetails { get; set; }
 }
@@ -1473,11 +1473,11 @@ public partial class V1beta1ServerStatusAtProviderWorkflowDetailsOnUpload
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerStatusAtProviderWorkflowDetails
 {
-    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow if a file is only partially uploaded. See Workflow Detail below. See on_partial_upload Block below for details.</summary>
     [JsonPropertyName("onPartialUpload")]
     public IList<V1beta1ServerStatusAtProviderWorkflowDetailsOnPartialUpload>? OnPartialUpload { get; set; }
 
-    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload block below for details.</summary>
+    /// <summary>A trigger that starts a workflow: the workflow begins to execute after a file is uploaded. See on_upload Block below for details.</summary>
     [JsonPropertyName("onUpload")]
     public IList<V1beta1ServerStatusAtProviderWorkflowDetailsOnUpload>? OnUpload { get; set; }
 }
@@ -1506,7 +1506,7 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details block below for details.</summary>
+    /// <summary>The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. See endpoint_details Block below for details.</summary>
     [JsonPropertyName("endpointDetails")]
     public IList<V1beta1ServerStatusAtProviderEndpointDetails>? EndpointDetails { get; set; }
 
@@ -1518,7 +1518,7 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>The ARN for a lambda function to use for the Identity provider.</summary>
+    /// <summary>The ARN for a lambda function to use for the Identity provider with an identity_provider_type of AWS_LAMBDA.</summary>
     [JsonPropertyName("function")]
     public string? Function { get; set; }
 
@@ -1542,7 +1542,7 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("loggingRole")]
     public string? LoggingRole { get; set; }
 
-    /// <summary>The protocol settings that are configured for your server. See protocol_details block below for details.</summary>
+    /// <summary>The protocol settings that are configured for your server. See protocol_details Block below for details.</summary>
     [JsonPropertyName("protocolDetails")]
     public IList<V1beta1ServerStatusAtProviderProtocolDetails>? ProtocolDetails { get; set; }
 
@@ -1550,7 +1550,11 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("protocols")]
     public IList<string>? Protocols { get; set; }
 
-    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options block below for details.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Specifies whether or not performance for your Amazon S3 directories is optimized. This is disabled by default. See s3_storage_options Block below for details.</summary>
     [JsonPropertyName("s3StorageOptions")]
     public IList<V1beta1ServerStatusAtProviderS3StorageOptions>? S3StorageOptions { get; set; }
 
@@ -1558,7 +1562,7 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("securityPolicyName")]
     public string? SecurityPolicyName { get; set; }
 
-    /// <summary>For SFTP-enabled servers, and for custom identity providers only. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
+    /// <summary>For SFTP-enabled servers with an identity_provider_type of API_GATEWAY or AWS_LAMBDA. Valid values are PASSWORD, PUBLIC_KEY, PUBLIC_KEY_OR_PASSWORD and PUBLIC_KEY_AND_PASSWORD. Default value is: PUBLIC_KEY_OR_PASSWORD.</summary>
     [JsonPropertyName("sftpAuthenticationMethods")]
     public string? SftpAuthenticationMethods { get; set; }
 
@@ -1578,7 +1582,7 @@ public partial class V1beta1ServerStatusAtProvider
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 
-    /// <summary>Specifies the workflow details. See workflow_details block below for details.</summary>
+    /// <summary>Specifies the workflow details. See workflow_details Block below for details.</summary>
     [JsonPropertyName("workflowDetails")]
     public IList<V1beta1ServerStatusAtProviderWorkflowDetails>? WorkflowDetails { get; set; }
 }

@@ -132,7 +132,7 @@ public partial class V1beta1BucketACLSpecForProvider
     [JsonPropertyName("accessControlPolicy")]
     public IList<V1beta1BucketACLSpecForProviderAccessControlPolicy>? AccessControlPolicy { get; set; }
 
-    /// <summary>Canned ACL to apply to the bucket.</summary>
+    /// <summary>Specifies the Canned ACL to apply to the bucket. Valid values: private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, bucket-owner-full-control, log-delivery-write. Full details are available on the AWS documentation.</summary>
     [JsonPropertyName("acl")]
     public string? Acl { get; set; }
 
@@ -152,7 +152,7 @@ public partial class V1beta1BucketACLSpecForProvider
     [JsonPropertyName("expectedBucketOwner")]
     public string? ExpectedBucketOwner { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -281,7 +281,7 @@ public partial class V1beta1BucketACLSpecInitProvider
     [JsonPropertyName("accessControlPolicy")]
     public IList<V1beta1BucketACLSpecInitProviderAccessControlPolicy>? AccessControlPolicy { get; set; }
 
-    /// <summary>Canned ACL to apply to the bucket.</summary>
+    /// <summary>Specifies the Canned ACL to apply to the bucket. Valid values: private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, bucket-owner-full-control, log-delivery-write. Full details are available on the AWS documentation.</summary>
     [JsonPropertyName("acl")]
     public string? Acl { get; set; }
 
@@ -506,7 +506,7 @@ public partial class V1beta1BucketACLStatusAtProvider
     [JsonPropertyName("accessControlPolicy")]
     public IList<V1beta1BucketACLStatusAtProviderAccessControlPolicy>? AccessControlPolicy { get; set; }
 
-    /// <summary>Canned ACL to apply to the bucket.</summary>
+    /// <summary>Specifies the Canned ACL to apply to the bucket. Valid values: private, public-read, public-read-write, aws-exec-read, authenticated-read, bucket-owner-read, bucket-owner-full-control, log-delivery-write. Full details are available on the AWS documentation.</summary>
     [JsonPropertyName("acl")]
     public string? Acl { get; set; }
 
@@ -521,6 +521,10 @@ public partial class V1beta1BucketACLStatusAtProvider
     /// <summary>The bucket, expected_bucket_owner (if configured), and acl (if configured) separated by commas (,).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

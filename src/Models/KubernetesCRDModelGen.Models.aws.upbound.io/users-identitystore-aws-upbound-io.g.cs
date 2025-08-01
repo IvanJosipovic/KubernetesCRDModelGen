@@ -152,7 +152,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("profileUrl")]
     public string? ProfileUrl { get; set; }
 
-    /// <summary>The region of the address. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -622,6 +622,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>An URL that may be associated with the user.</summary>
     [JsonPropertyName("profileUrl")]
     public string? ProfileUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The user's time zone.</summary>
     [JsonPropertyName("timezone")]

@@ -50,10 +50,6 @@ public partial class V1beta1SizeConstraintSetSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Parts of web requests that you want to inspect the size of.</summary>
     [JsonPropertyName("sizeConstraints")]
     public IList<V1beta1SizeConstraintSetSpecForProviderSizeConstraints>? SizeConstraints { get; set; }

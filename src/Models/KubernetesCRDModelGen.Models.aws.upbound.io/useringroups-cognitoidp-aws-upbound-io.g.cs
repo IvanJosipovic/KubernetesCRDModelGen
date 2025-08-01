@@ -192,7 +192,7 @@ public partial class V1beta1UserInGroupSpecForProvider
     [JsonPropertyName("groupNameSelector")]
     public V1beta1UserInGroupSpecForProviderGroupNameSelector? GroupNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -573,6 +573,10 @@ public partial class V1beta1UserInGroupStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The user pool ID of the user and group.</summary>
     [JsonPropertyName("userPoolId")]

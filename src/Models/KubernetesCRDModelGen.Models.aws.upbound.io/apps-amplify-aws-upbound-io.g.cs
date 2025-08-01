@@ -113,6 +113,62 @@ public partial class V1beta1AppSpecForProviderCacheConfig
     public string? Type { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderComputeRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate computeRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderComputeRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AppSpecForProviderComputeRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderComputeRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate computeRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderComputeRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AppSpecForProviderComputeRoleArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecForProviderCustomRule
@@ -190,6 +246,15 @@ public partial class V1beta1AppSpecForProviderIamServiceRoleArnSelector
     public V1beta1AppSpecForProviderIamServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecForProviderJobConfig
+{
+    /// <summary>Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.</summary>
+    [JsonPropertyName("buildComputeType")]
+    public string? BuildComputeType { get; set; }
+}
+
 /// <summary>OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecForProviderOauthTokenSecretRef
@@ -215,7 +280,7 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("accessTokenSecretRef")]
     public V1beta1AppSpecForProviderAccessTokenSecretRef? AccessTokenSecretRef { get; set; }
 
-    /// <summary>Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.</summary>
+    /// <summary>Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.</summary>
     [JsonPropertyName("autoBranchCreationConfig")]
     public IList<V1beta1AppSpecForProviderAutoBranchCreationConfig>? AutoBranchCreationConfig { get; set; }
 
@@ -235,11 +300,23 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("cacheConfig")]
     public IList<V1beta1AppSpecForProviderCacheConfig>? CacheConfig { get; set; }
 
+    /// <summary>AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.</summary>
+    [JsonPropertyName("computeRoleArn")]
+    public string? ComputeRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate computeRoleArn.</summary>
+    [JsonPropertyName("computeRoleArnRef")]
+    public V1beta1AppSpecForProviderComputeRoleArnRef? ComputeRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate computeRoleArn.</summary>
+    [JsonPropertyName("computeRoleArnSelector")]
+    public V1beta1AppSpecForProviderComputeRoleArnSelector? ComputeRoleArnSelector { get; set; }
+
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]
     public string? CustomHeaders { get; set; }
 
-    /// <summary>Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.</summary>
+    /// <summary>Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.</summary>
     [JsonPropertyName("customRule")]
     public IList<V1beta1AppSpecForProviderCustomRule>? CustomRule { get; set; }
 
@@ -279,6 +356,10 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("iamServiceRoleArnSelector")]
     public V1beta1AppSpecForProviderIamServiceRoleArnSelector? IamServiceRoleArnSelector { get; set; }
 
+    /// <summary>Used to configure the Amplify Application build settings. See job_config Block for details.</summary>
+    [JsonPropertyName("jobConfig")]
+    public IList<V1beta1AppSpecForProviderJobConfig>? JobConfig { get; set; }
+
     /// <summary>Name for an Amplify app.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -291,7 +372,7 @@ public partial class V1beta1AppSpecForProvider
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -409,6 +490,62 @@ public partial class V1beta1AppSpecInitProviderCacheConfig
     public string? Type { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderComputeRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate computeRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderComputeRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AppSpecInitProviderComputeRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderComputeRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate computeRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderComputeRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1AppSpecInitProviderComputeRoleArnSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecInitProviderCustomRule
@@ -486,6 +623,15 @@ public partial class V1beta1AppSpecInitProviderIamServiceRoleArnSelector
     public V1beta1AppSpecInitProviderIamServiceRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppSpecInitProviderJobConfig
+{
+    /// <summary>Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.</summary>
+    [JsonPropertyName("buildComputeType")]
+    public string? BuildComputeType { get; set; }
+}
+
 /// <summary>OAuth token for a third-party source control system for an Amplify app. The OAuth token is used to create a webhook and a read-only deploy key. The OAuth token is not stored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecInitProviderOauthTokenSecretRef
@@ -511,7 +657,7 @@ public partial class V1beta1AppSpecInitProvider
     [JsonPropertyName("accessTokenSecretRef")]
     public V1beta1AppSpecInitProviderAccessTokenSecretRef? AccessTokenSecretRef { get; set; }
 
-    /// <summary>Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.</summary>
+    /// <summary>Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.</summary>
     [JsonPropertyName("autoBranchCreationConfig")]
     public IList<V1beta1AppSpecInitProviderAutoBranchCreationConfig>? AutoBranchCreationConfig { get; set; }
 
@@ -531,11 +677,23 @@ public partial class V1beta1AppSpecInitProvider
     [JsonPropertyName("cacheConfig")]
     public IList<V1beta1AppSpecInitProviderCacheConfig>? CacheConfig { get; set; }
 
+    /// <summary>AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.</summary>
+    [JsonPropertyName("computeRoleArn")]
+    public string? ComputeRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate computeRoleArn.</summary>
+    [JsonPropertyName("computeRoleArnRef")]
+    public V1beta1AppSpecInitProviderComputeRoleArnRef? ComputeRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate computeRoleArn.</summary>
+    [JsonPropertyName("computeRoleArnSelector")]
+    public V1beta1AppSpecInitProviderComputeRoleArnSelector? ComputeRoleArnSelector { get; set; }
+
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]
     public string? CustomHeaders { get; set; }
 
-    /// <summary>Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.</summary>
+    /// <summary>Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.</summary>
     [JsonPropertyName("customRule")]
     public IList<V1beta1AppSpecInitProviderCustomRule>? CustomRule { get; set; }
 
@@ -574,6 +732,10 @@ public partial class V1beta1AppSpecInitProvider
     /// <summary>Selector for a Role in iam to populate iamServiceRoleArn.</summary>
     [JsonPropertyName("iamServiceRoleArnSelector")]
     public V1beta1AppSpecInitProviderIamServiceRoleArnSelector? IamServiceRoleArnSelector { get; set; }
+
+    /// <summary>Used to configure the Amplify Application build settings. See job_config Block for details.</summary>
+    [JsonPropertyName("jobConfig")]
+    public IList<V1beta1AppSpecInitProviderJobConfig>? JobConfig { get; set; }
 
     /// <summary>Name for an Amplify app.</summary>
     [JsonPropertyName("name")]
@@ -801,6 +963,15 @@ public partial class V1beta1AppStatusAtProviderCustomRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AppStatusAtProviderJobConfig
+{
+    /// <summary>Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.</summary>
+    [JsonPropertyName("buildComputeType")]
+    public string? BuildComputeType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppStatusAtProviderProductionBranch
 {
     /// <summary>Branch name for the production branch.</summary>
@@ -828,7 +999,7 @@ public partial class V1beta1AppStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.</summary>
+    /// <summary>Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.</summary>
     [JsonPropertyName("autoBranchCreationConfig")]
     public IList<V1beta1AppStatusAtProviderAutoBranchCreationConfig>? AutoBranchCreationConfig { get; set; }
 
@@ -844,11 +1015,15 @@ public partial class V1beta1AppStatusAtProvider
     [JsonPropertyName("cacheConfig")]
     public IList<V1beta1AppStatusAtProviderCacheConfig>? CacheConfig { get; set; }
 
+    /// <summary>AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.</summary>
+    [JsonPropertyName("computeRoleArn")]
+    public string? ComputeRoleArn { get; set; }
+
     /// <summary>The custom HTTP headers for an Amplify app.</summary>
     [JsonPropertyName("customHeaders")]
     public string? CustomHeaders { get; set; }
 
-    /// <summary>Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.</summary>
+    /// <summary>Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.</summary>
     [JsonPropertyName("customRule")]
     public IList<V1beta1AppStatusAtProviderCustomRule>? CustomRule { get; set; }
 
@@ -888,6 +1063,10 @@ public partial class V1beta1AppStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Used to configure the Amplify Application build settings. See job_config Block for details.</summary>
+    [JsonPropertyName("jobConfig")]
+    public IList<V1beta1AppStatusAtProviderJobConfig>? JobConfig { get; set; }
+
     /// <summary>Name for an Amplify app.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
@@ -899,6 +1078,10 @@ public partial class V1beta1AppStatusAtProvider
     /// <summary>Describes the information about a production branch for an Amplify app. A production_branch block is documented below.</summary>
     [JsonPropertyName("productionBranch")]
     public IList<V1beta1AppStatusAtProviderProductionBranch>? ProductionBranch { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Repository for an Amplify app.</summary>
     [JsonPropertyName("repository")]

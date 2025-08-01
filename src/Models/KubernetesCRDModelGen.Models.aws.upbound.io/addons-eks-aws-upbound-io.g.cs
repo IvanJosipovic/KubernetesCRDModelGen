@@ -137,15 +137,15 @@ public partial class V1beta1AddonSpecForProviderServiceAccountRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonSpecForProvider
 {
-    /// <summary>on. The name must match one of the names returned by describe-addon-versions.</summary>
+    /// <summary>Name of the EKS add-on. The name must match one of the names returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonName")]
     public string? AddonName { get; set; }
 
-    /// <summary>on. The version must match one of the versions returned by describe-addon-versions.</summary>
+    /// <summary>The version of the EKS add-on. The version must match one of the versions returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonVersion")]
     public string? AddonVersion { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -169,19 +169,15 @@ public partial class V1beta1AddonSpecForProvider
     [JsonPropertyName("preserve")]
     public bool? Preserve { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>(Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.</summary>
-    [JsonPropertyName("resolveConflicts")]
-    public string? ResolveConflicts { get; set; }
-
-    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnCreate")]
     public string? ResolveConflictsOnCreate { get; set; }
 
-    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnUpdate")]
     public string? ResolveConflictsOnUpdate { get; set; }
 
@@ -331,15 +327,15 @@ public partial class V1beta1AddonSpecInitProviderServiceAccountRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonSpecInitProvider
 {
-    /// <summary>on. The name must match one of the names returned by describe-addon-versions.</summary>
+    /// <summary>Name of the EKS add-on. The name must match one of the names returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonName")]
     public string? AddonName { get; set; }
 
-    /// <summary>on. The version must match one of the versions returned by describe-addon-versions.</summary>
+    /// <summary>The version of the EKS add-on. The version must match one of the versions returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonVersion")]
     public string? AddonVersion { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -363,15 +359,11 @@ public partial class V1beta1AddonSpecInitProvider
     [JsonPropertyName("preserve")]
     public bool? Preserve { get; set; }
 
-    /// <summary>(Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.</summary>
-    [JsonPropertyName("resolveConflicts")]
-    public string? ResolveConflicts { get; set; }
-
-    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnCreate")]
     public string? ResolveConflictsOnCreate { get; set; }
 
-    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnUpdate")]
     public string? ResolveConflictsOnUpdate { get; set; }
 
@@ -541,11 +533,11 @@ public partial class V1beta1AddonStatusAtProviderPodIdentityAssociation
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AddonStatusAtProvider
 {
-    /// <summary>on. The name must match one of the names returned by describe-addon-versions.</summary>
+    /// <summary>Name of the EKS add-on. The name must match one of the names returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonName")]
     public string? AddonName { get; set; }
 
-    /// <summary>on. The version must match one of the versions returned by describe-addon-versions.</summary>
+    /// <summary>The version of the EKS add-on. The version must match one of the versions returned by describe-addon-versions.</summary>
     [JsonPropertyName("addonVersion")]
     public string? AddonVersion { get; set; }
 
@@ -553,7 +545,7 @@ public partial class V1beta1AddonStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -581,15 +573,15 @@ public partial class V1beta1AddonStatusAtProvider
     [JsonPropertyName("preserve")]
     public bool? Preserve { get; set; }
 
-    /// <summary>(Deprecated use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead) Define how to resolve parameter value conflicts when migrating an existing add-on to an Amazon EKS add-on or when applying version updates to the add-on. Valid values are NONE, OVERWRITE and PRESERVE. Note that PRESERVE is only valid on addon update, not for initial addon creation. If you need to set this to PRESERVE, use the resolve_conflicts_on_create and resolve_conflicts_on_update attributes instead. For more details check UpdateAddon API Docs.</summary>
-    [JsonPropertyName("resolveConflicts")]
-    public string? ResolveConflicts { get; set; }
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
-    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts when migrating a self-managed add-on to an Amazon EKS add-on. Valid values are NONE and OVERWRITE. For more details see the CreateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnCreate")]
     public string? ResolveConflictsOnCreate { get; set; }
 
-    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Docs.</summary>
+    /// <summary>How to resolve field value conflicts for an Amazon EKS add-on if you've changed a value from the Amazon EKS default value. Valid values are NONE, OVERWRITE, and PRESERVE. For more details see the UpdateAddon API Documentation.</summary>
     [JsonPropertyName("resolveConflictsOnUpdate")]
     public string? ResolveConflictsOnUpdate { get; set; }
 

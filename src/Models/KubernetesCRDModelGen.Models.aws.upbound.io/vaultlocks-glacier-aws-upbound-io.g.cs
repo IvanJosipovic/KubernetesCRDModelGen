@@ -80,7 +80,7 @@ public partial class V1beta1VaultLockSpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -333,6 +333,10 @@ public partial class V1beta1VaultLockStatusAtProvider
     /// <summary>JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the Glacier Vault.</summary>
     [JsonPropertyName("vaultName")]

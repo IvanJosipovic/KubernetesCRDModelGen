@@ -117,7 +117,7 @@ public partial class V1beta1MetricFilterSpecForProvider
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -412,6 +412,10 @@ public partial class V1beta1MetricFilterStatusAtProvider
     /// <summary>A valid CloudWatch Logs filter pattern for extracting metric data out of ingested log events.</summary>
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -118,7 +118,7 @@ public partial class V1beta1SharedDirectorySpecForProvider
     [JsonPropertyName("notesSecretRef")]
     public V1beta1SharedDirectorySpecForProviderNotesSecretRef? NotesSecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -402,6 +402,10 @@ public partial class V1beta1SharedDirectoryStatusAtProvider
     /// <summary>Method used when sharing a directory. Valid values are ORGANIZATIONS and HANDSHAKE. Default is HANDSHAKE.</summary>
     [JsonPropertyName("method")]
     public string? Method { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Identifier of the directory that is stored in the directory consumer account that corresponds to the shared directory in the owner account.</summary>
     [JsonPropertyName("sharedDirectoryId")]

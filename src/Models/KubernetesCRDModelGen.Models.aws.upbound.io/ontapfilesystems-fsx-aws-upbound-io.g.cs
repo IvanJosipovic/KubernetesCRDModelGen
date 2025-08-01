@@ -274,7 +274,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("dailyAutomaticBackupStartTime")]
     public string? DailyAutomaticBackupStartTime { get; set; }
 
-    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
+    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, MULTI_AZ_2, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
@@ -290,7 +290,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("fsxAdminPasswordSecretRef")]
     public V1beta1OntapFileSystemSpecForProviderFsxAdminPasswordSecretRef? FsxAdminPasswordSecretRef { get; set; }
 
-    /// <summary>- The number of ha_pairs to deploy for the file system. Valid values are 1 through 12. Value of 2 or greater required for SINGLE_AZ_2. Only value of 1 is supported with SINGLE_AZ_1 or MULTI_AZ_1 but not required.</summary>
+    /// <summary>- The number of ha_pairs to deploy for the file system. Valid value is 1 for SINGLE_AZ_1 or MULTI_AZ_1 and MULTI_AZ_2. Valid values are 1 through 12 for SINGLE_AZ_2.</summary>
     [JsonPropertyName("haPairs")]
     public double? HaPairs { get; set; }
 
@@ -318,7 +318,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("preferredSubnetIdSelector")]
     public V1beta1OntapFileSystemSpecForProviderPreferredSubnetIdSelector? PreferredSubnetIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -338,7 +338,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values between 2048 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2.</summary>
+    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values are between 1024 and 524288 for MULTI_AZ_2. Valid values between 1024 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2. For SINGLE_AZ_2, the 1048576 (1PB) maximum is only supported when using 2 or more ha_pairs, the maximum is 524288 (512TB) when using 1 ha_pair.</summary>
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
@@ -366,7 +366,7 @@ public partial class V1beta1OntapFileSystemSpecForProvider
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 
-    /// <summary>Sets the throughput capacity (in MBps) for the file system that you're creating. Valid value when using 1 ha_pair are 128, 256, 512, 1024, 2048, and 4096. Valid values when using 2 or more ha_pairs are 3072,6144. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
+    /// <summary>Sets the per-HA-pair throughput capacity (in MBps) for the file system that you're creating, as opposed to throughput_capacity which specifies the total throughput capacity for the file system. Valid value for MULTI_AZ_1 and SINGLE_AZ_1 are 128, 256, 512, 1024, 2048, and 4096. Valid values for deployment type MULTI_AZ_2 and SINGLE_AZ_2 are 384,768,1536,3072,6144 where ha_pairs is 1. Valid values for deployment type SINGLE_AZ_2 are 1536, 3072, and 6144 where ha_pairs is greater than 1. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
     [JsonPropertyName("throughputCapacityPerHaPair")]
     public double? ThroughputCapacityPerHaPair { get; set; }
 
@@ -641,7 +641,7 @@ public partial class V1beta1OntapFileSystemSpecInitProvider
     [JsonPropertyName("dailyAutomaticBackupStartTime")]
     public string? DailyAutomaticBackupStartTime { get; set; }
 
-    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
+    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, MULTI_AZ_2, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
@@ -657,7 +657,7 @@ public partial class V1beta1OntapFileSystemSpecInitProvider
     [JsonPropertyName("fsxAdminPasswordSecretRef")]
     public V1beta1OntapFileSystemSpecInitProviderFsxAdminPasswordSecretRef? FsxAdminPasswordSecretRef { get; set; }
 
-    /// <summary>- The number of ha_pairs to deploy for the file system. Valid values are 1 through 12. Value of 2 or greater required for SINGLE_AZ_2. Only value of 1 is supported with SINGLE_AZ_1 or MULTI_AZ_1 but not required.</summary>
+    /// <summary>- The number of ha_pairs to deploy for the file system. Valid value is 1 for SINGLE_AZ_1 or MULTI_AZ_1 and MULTI_AZ_2. Valid values are 1 through 12 for SINGLE_AZ_2.</summary>
     [JsonPropertyName("haPairs")]
     public double? HaPairs { get; set; }
 
@@ -701,7 +701,7 @@ public partial class V1beta1OntapFileSystemSpecInitProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values between 2048 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2.</summary>
+    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values are between 1024 and 524288 for MULTI_AZ_2. Valid values between 1024 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2. For SINGLE_AZ_2, the 1048576 (1PB) maximum is only supported when using 2 or more ha_pairs, the maximum is 524288 (512TB) when using 1 ha_pair.</summary>
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
@@ -729,7 +729,7 @@ public partial class V1beta1OntapFileSystemSpecInitProvider
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 
-    /// <summary>Sets the throughput capacity (in MBps) for the file system that you're creating. Valid value when using 1 ha_pair are 128, 256, 512, 1024, 2048, and 4096. Valid values when using 2 or more ha_pairs are 3072,6144. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
+    /// <summary>Sets the per-HA-pair throughput capacity (in MBps) for the file system that you're creating, as opposed to throughput_capacity which specifies the total throughput capacity for the file system. Valid value for MULTI_AZ_1 and SINGLE_AZ_1 are 128, 256, 512, 1024, 2048, and 4096. Valid values for deployment type MULTI_AZ_2 and SINGLE_AZ_2 are 384,768,1536,3072,6144 where ha_pairs is 1. Valid values for deployment type SINGLE_AZ_2 are 1536, 3072, and 6144 where ha_pairs is greater than 1. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
     [JsonPropertyName("throughputCapacityPerHaPair")]
     public double? ThroughputCapacityPerHaPair { get; set; }
 
@@ -887,7 +887,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
 {
-    /// <summary>DNS name for the file system, e.g., fs-12345678.fsx.us-west-2.amazonaws.com</summary>
+    /// <summary>DNS name for the file system.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
@@ -900,7 +900,7 @@ public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsIntercluster
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OntapFileSystemStatusAtProviderEndpointsManagement
 {
-    /// <summary>DNS name for the file system, e.g., fs-12345678.fsx.us-west-2.amazonaws.com</summary>
+    /// <summary>DNS name for the file system.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
@@ -938,7 +938,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("dailyAutomaticBackupStartTime")]
     public string? DailyAutomaticBackupStartTime { get; set; }
 
-    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
+    /// <summary>- The filesystem deployment type. Supports MULTI_AZ_1, MULTI_AZ_2, SINGLE_AZ_1, and SINGLE_AZ_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
 
@@ -946,7 +946,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("diskIopsConfiguration")]
     public IList<V1beta1OntapFileSystemStatusAtProviderDiskIopsConfiguration>? DiskIopsConfiguration { get; set; }
 
-    /// <summary>DNS name for the file system, e.g., fs-12345678.fsx.us-west-2.amazonaws.com</summary>
+    /// <summary>DNS name for the file system.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
@@ -958,7 +958,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("endpoints")]
     public IList<V1beta1OntapFileSystemStatusAtProviderEndpoints>? Endpoints { get; set; }
 
-    /// <summary>- The number of ha_pairs to deploy for the file system. Valid values are 1 through 12. Value of 2 or greater required for SINGLE_AZ_2. Only value of 1 is supported with SINGLE_AZ_1 or MULTI_AZ_1 but not required.</summary>
+    /// <summary>- The number of ha_pairs to deploy for the file system. Valid value is 1 for SINGLE_AZ_1 or MULTI_AZ_1 and MULTI_AZ_2. Valid values are 1 through 12 for SINGLE_AZ_2.</summary>
     [JsonPropertyName("haPairs")]
     public double? HaPairs { get; set; }
 
@@ -982,6 +982,10 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("preferredSubnetId")]
     public string? PreferredSubnetId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your VPC's default route table.</summary>
     [JsonPropertyName("routeTableIds")]
     public IList<string>? RouteTableIds { get; set; }
@@ -990,7 +994,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values between 2048 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2.</summary>
+    /// <summary>The storage capacity (GiB) of the file system. Valid values between 1024 and 196608 for file systems with deployment_type SINGLE_AZ_1 and MULTI_AZ_1. Valid values are between 1024 and 524288 for MULTI_AZ_2. Valid values between 1024 (1024 per ha pair) and 1048576 for file systems with deployment_type SINGLE_AZ_2. For SINGLE_AZ_2, the 1048576 (1PB) maximum is only supported when using 2 or more ha_pairs, the maximum is 524288 (512TB) when using 1 ha_pair.</summary>
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
@@ -1014,7 +1018,7 @@ public partial class V1beta1OntapFileSystemStatusAtProvider
     [JsonPropertyName("throughputCapacity")]
     public double? ThroughputCapacity { get; set; }
 
-    /// <summary>Sets the throughput capacity (in MBps) for the file system that you're creating. Valid value when using 1 ha_pair are 128, 256, 512, 1024, 2048, and 4096. Valid values when using 2 or more ha_pairs are 3072,6144. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
+    /// <summary>Sets the per-HA-pair throughput capacity (in MBps) for the file system that you're creating, as opposed to throughput_capacity which specifies the total throughput capacity for the file system. Valid value for MULTI_AZ_1 and SINGLE_AZ_1 are 128, 256, 512, 1024, 2048, and 4096. Valid values for deployment type MULTI_AZ_2 and SINGLE_AZ_2 are 384,768,1536,3072,6144 where ha_pairs is 1. Valid values for deployment type SINGLE_AZ_2 are 1536, 3072, and 6144 where ha_pairs is greater than 1. This parameter is only supported when specifying the ha_pairs parameter. Either throughput_capacity or throughput_capacity_per_ha_pair must be specified.</summary>
     [JsonPropertyName("throughputCapacityPerHaPair")]
     public double? ThroughputCapacityPerHaPair { get; set; }
 

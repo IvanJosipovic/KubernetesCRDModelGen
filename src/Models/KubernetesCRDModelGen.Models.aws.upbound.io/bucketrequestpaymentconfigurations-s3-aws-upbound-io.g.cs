@@ -88,7 +88,7 @@ public partial class V1beta1BucketRequestPaymentConfigurationSpecForProvider
     [JsonPropertyName("payer")]
     public string? Payer { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -325,6 +325,10 @@ public partial class V1beta1BucketRequestPaymentConfigurationStatusAtProvider
     /// <summary>Specifies who pays for the download and request fees. Valid values: BucketOwner, Requester.</summary>
     [JsonPropertyName("payer")]
     public string? Payer { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

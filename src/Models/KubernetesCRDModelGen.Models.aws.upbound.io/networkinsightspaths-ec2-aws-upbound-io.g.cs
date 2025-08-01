@@ -64,6 +64,100 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderDestinationSelecto
     public V1beta1NetworkInsightsPathSpecForProviderDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtDestination
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
+}
+
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecForProviderFilterAtSource
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProviderSourceRefPolicy
@@ -124,7 +218,7 @@ public partial class V1beta1NetworkInsightsPathSpecForProviderSourceSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecForProvider
 {
-    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.</summary>
+    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -144,11 +238,19 @@ public partial class V1beta1NetworkInsightsPathSpecForProvider
     [JsonPropertyName("destinationSelector")]
     public V1beta1NetworkInsightsPathSpecForProviderDestinationSelector? DestinationSelector { get; set; }
 
+    /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+    [JsonPropertyName("filterAtDestination")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtDestination? FilterAtDestination { get; set; }
+
+    /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+    [JsonPropertyName("filterAtSource")]
+    public V1beta1NetworkInsightsPathSpecForProviderFilterAtSource? FilterAtSource { get; set; }
+
     /// <summary>Protocol to use for analysis. Valid options are tcp or udp.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -229,6 +331,100 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderDestinationSelect
     public V1beta1NetworkInsightsPathSpecInitProviderDestinationSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestination
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
+}
+
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathSpecInitProviderFilterAtSource
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceRefPolicy
@@ -289,7 +485,7 @@ public partial class V1beta1NetworkInsightsPathSpecInitProviderSourceSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathSpecInitProvider
 {
-    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.</summary>
+    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -308,6 +504,14 @@ public partial class V1beta1NetworkInsightsPathSpecInitProvider
     /// <summary>Selector for a NetworkInterface in ec2 to populate destination.</summary>
     [JsonPropertyName("destinationSelector")]
     public V1beta1NetworkInsightsPathSpecInitProviderDestinationSelector? DestinationSelector { get; set; }
+
+    /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+    [JsonPropertyName("filterAtDestination")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtDestination? FilterAtDestination { get; set; }
+
+    /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+    [JsonPropertyName("filterAtSource")]
+    public V1beta1NetworkInsightsPathSpecInitProviderFilterAtSource? FilterAtSource { get; set; }
 
     /// <summary>Protocol to use for analysis. Valid options are tcp or udp.</summary>
     [JsonPropertyName("protocol")]
@@ -466,6 +670,100 @@ public partial class V1beta1NetworkInsightsPathSpec
     public V1beta1NetworkInsightsPathSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestination
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestinationSourcePortRange? SourcePortRange { get; set; }
+}
+
+/// <summary>The destination port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceDestinationPortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>The source port range. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceSourcePortRange
+{
+    /// <summary>The first port in the range.</summary>
+    [JsonPropertyName("fromPort")]
+    public double? FromPort { get; set; }
+
+    /// <summary>The last port in the range.</summary>
+    [JsonPropertyName("toPort")]
+    public double? ToPort { get; set; }
+}
+
+/// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1NetworkInsightsPathStatusAtProviderFilterAtSource
+{
+    /// <summary>The destination IPv4 address.</summary>
+    [JsonPropertyName("destinationAddress")]
+    public string? DestinationAddress { get; set; }
+
+    /// <summary>The destination port range. See below for details.</summary>
+    [JsonPropertyName("destinationPortRange")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceDestinationPortRange? DestinationPortRange { get; set; }
+
+    /// <summary>IP address of the source resource.</summary>
+    [JsonPropertyName("sourceAddress")]
+    public string? SourceAddress { get; set; }
+
+    /// <summary>The source port range. See below for details.</summary>
+    [JsonPropertyName("sourcePortRange")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtSourceSourcePortRange? SourcePortRange { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInsightsPathStatusAtProvider
@@ -474,7 +772,7 @@ public partial class V1beta1NetworkInsightsPathStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.</summary>
+    /// <summary>ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.</summary>
     [JsonPropertyName("destination")]
     public string? Destination { get; set; }
 
@@ -490,6 +788,14 @@ public partial class V1beta1NetworkInsightsPathStatusAtProvider
     [JsonPropertyName("destinationPort")]
     public double? DestinationPort { get; set; }
 
+    /// <summary>Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.</summary>
+    [JsonPropertyName("filterAtDestination")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtDestination? FilterAtDestination { get; set; }
+
+    /// <summary>Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.</summary>
+    [JsonPropertyName("filterAtSource")]
+    public V1beta1NetworkInsightsPathStatusAtProviderFilterAtSource? FilterAtSource { get; set; }
+
     /// <summary>ID of the Network Insights Path.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -497,6 +803,10 @@ public partial class V1beta1NetworkInsightsPathStatusAtProvider
     /// <summary>Protocol to use for analysis. Valid options are tcp or udp.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID or ARN of the resource which is the source of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.</summary>
     [JsonPropertyName("source")]

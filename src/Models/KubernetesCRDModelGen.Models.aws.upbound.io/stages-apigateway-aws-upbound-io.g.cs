@@ -194,11 +194,11 @@ public partial class V1beta1StageSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version of the associated API documentation</summary>
+    /// <summary>Version of the associated API documentation.</summary>
     [JsonPropertyName("documentationVersion")]
     public string? DocumentationVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -222,7 +222,7 @@ public partial class V1beta1StageSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Map that defines the stage variables</summary>
+    /// <summary>Map that defines the stage variables.</summary>
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 
@@ -417,7 +417,7 @@ public partial class V1beta1StageSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version of the associated API documentation</summary>
+    /// <summary>Version of the associated API documentation.</summary>
     [JsonPropertyName("documentationVersion")]
     public string? DocumentationVersion { get; set; }
 
@@ -441,7 +441,7 @@ public partial class V1beta1StageSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Map that defines the stage variables</summary>
+    /// <summary>Map that defines the stage variables.</summary>
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 
@@ -652,7 +652,7 @@ public partial class V1beta1StageStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Version of the associated API documentation</summary>
+    /// <summary>Version of the associated API documentation.</summary>
     [JsonPropertyName("documentationVersion")]
     public string? DocumentationVersion { get; set; }
 
@@ -667,6 +667,10 @@ public partial class V1beta1StageStatusAtProvider
     /// <summary>URL to invoke the API pointing to the stage, e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod</summary>
     [JsonPropertyName("invokeUrl")]
     public string? InvokeUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the associated REST API</summary>
     [JsonPropertyName("restApiId")]
@@ -684,7 +688,7 @@ public partial class V1beta1StageStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Map that defines the stage variables</summary>
+    /// <summary>Map that defines the stage variables.</summary>
     [JsonPropertyName("variables")]
     public IDictionary<string, string>? Variables { get; set; }
 

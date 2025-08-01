@@ -340,7 +340,7 @@ public partial class V1beta1SecurityGroupRuleSpecForProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -913,6 +913,10 @@ public partial class V1beta1SecurityGroupRuleStatusAtProvider
     /// <summary>Protocol. If not icmp, icmpv6, tcp, udp, or all use the protocol number</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Security group to apply this rule to.</summary>
     [JsonPropertyName("securityGroupId")]

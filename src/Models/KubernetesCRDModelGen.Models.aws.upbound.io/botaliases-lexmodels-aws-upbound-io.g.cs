@@ -62,7 +62,7 @@ public partial class V1beta1BotAliasSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -331,6 +331,10 @@ public partial class V1beta1BotAliasStatusAtProvider
     /// <summary>The date that the bot alias was updated. When you create a resource, the creation date and the last updated date are the same.</summary>
     [JsonPropertyName("lastUpdatedDate")]
     public string? LastUpdatedDate { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

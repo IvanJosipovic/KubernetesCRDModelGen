@@ -1165,16 +1165,16 @@ public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipeline
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
 
-/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+/// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParameters
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -1241,7 +1241,7 @@ public partial class V1beta1PipeSpecForProviderTargetParameters
     [JsonPropertyName("redshiftDataParameters")]
     public V1beta1PipeSpecForProviderTargetParametersRedshiftDataParameters? RedshiftDataParameters { get; set; }
 
-    /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+    /// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public V1beta1PipeSpecForProviderTargetParametersSagemakerPipelineParameters? SagemakerPipelineParameters { get; set; }
 
@@ -1338,11 +1338,15 @@ public partial class V1beta1PipeSpecForProvider
     [JsonPropertyName("enrichmentSelector")]
     public V1beta1PipeSpecForProviderEnrichmentSelector? EnrichmentSelector { get; set; }
 
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
     /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("logConfiguration")]
     public V1beta1PipeSpecForProviderLogConfiguration? LogConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -2552,16 +2556,16 @@ public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
 
-/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+/// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParameters
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -2628,7 +2632,7 @@ public partial class V1beta1PipeSpecInitProviderTargetParameters
     [JsonPropertyName("redshiftDataParameters")]
     public V1beta1PipeSpecInitProviderTargetParametersRedshiftDataParameters? RedshiftDataParameters { get; set; }
 
-    /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+    /// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public V1beta1PipeSpecInitProviderTargetParametersSagemakerPipelineParameters? SagemakerPipelineParameters { get; set; }
 
@@ -2724,6 +2728,10 @@ public partial class V1beta1PipeSpecInitProvider
     /// <summary>Selector for a APIDestination in cloudwatchevents to populate enrichment.</summary>
     [JsonPropertyName("enrichmentSelector")]
     public V1beta1PipeSpecInitProviderEnrichmentSelector? EnrichmentSelector { get; set; }
+
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
 
     /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("logConfiguration")]
@@ -3835,16 +3843,16 @@ public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelin
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
 
-/// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+/// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParameters
 {
-    /// <summary>List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.</summary>
+    /// <summary>List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -3911,7 +3919,7 @@ public partial class V1beta1PipeStatusAtProviderTargetParameters
     [JsonPropertyName("redshiftDataParameters")]
     public V1beta1PipeStatusAtProviderTargetParametersRedshiftDataParameters? RedshiftDataParameters { get; set; }
 
-    /// <summary>The parameters for using a SageMaker pipeline as a target. Detailed below.</summary>
+    /// <summary>The parameters for using a SageMaker AI pipeline as a target. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public V1beta1PipeStatusAtProviderTargetParametersSagemakerPipelineParameters? SagemakerPipelineParameters { get; set; }
 
@@ -3952,9 +3960,17 @@ public partial class V1beta1PipeStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
     /// <summary>Logging configuration settings for the pipe. Detailed below.</summary>
     [JsonPropertyName("logConfiguration")]
     public V1beta1PipeStatusAtProviderLogConfiguration? LogConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the role that allows the pipe to send data to the target.</summary>
     [JsonPropertyName("roleArn")]

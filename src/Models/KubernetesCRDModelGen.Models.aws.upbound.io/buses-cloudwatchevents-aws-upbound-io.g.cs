@@ -8,10 +8,23 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.upbound.io;
+/// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BusSpecForProviderDeadLetterConfig
+{
+    /// <summary>The ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BusSpecForProvider
 {
+    /// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+    [JsonPropertyName("deadLetterConfig")]
+    public V1beta1BusSpecForProviderDeadLetterConfig? DeadLetterConfig { get; set; }
+
     /// <summary>Event bus description.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -24,7 +37,7 @@ public partial class V1beta1BusSpecForProvider
     [JsonPropertyName("kmsKeyIdentifier")]
     public string? KmsKeyIdentifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. The following arguments are required: Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -33,10 +46,23 @@ public partial class V1beta1BusSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
+/// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BusSpecInitProviderDeadLetterConfig
+{
+    /// <summary>The ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BusSpecInitProvider
 {
+    /// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+    [JsonPropertyName("deadLetterConfig")]
+    public V1beta1BusSpecInitProviderDeadLetterConfig? DeadLetterConfig { get; set; }
+
     /// <summary>Event bus description.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
@@ -186,13 +212,26 @@ public partial class V1beta1BusSpec
     public V1beta1BusSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1BusStatusAtProviderDeadLetterConfig
+{
+    /// <summary>The ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BusStatusAtProvider
 {
-    /// <summary>ARN of the event bus.</summary>
+    /// <summary>The ARN of the SQS queue specified as the target for the dead-letter queue.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
+
+    /// <summary>Configuration details of the Amazon SQS queue for EventBridge to use as a dead-letter queue (DLQ). This block supports the following arguments:</summary>
+    [JsonPropertyName("deadLetterConfig")]
+    public V1beta1BusStatusAtProviderDeadLetterConfig? DeadLetterConfig { get; set; }
 
     /// <summary>Event bus description.</summary>
     [JsonPropertyName("description")]
@@ -209,6 +248,10 @@ public partial class V1beta1BusStatusAtProvider
     /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt events on this event bus. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
     [JsonPropertyName("kmsKeyIdentifier")]
     public string? KmsKeyIdentifier { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. The following arguments are required: Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -24,7 +24,7 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderDestination
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The region in which the replica should be created.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -93,7 +93,7 @@ public partial class V1beta1ReplicationConfigurationSpecForProvider
     [JsonPropertyName("destination")]
     public IList<V1beta1ReplicationConfigurationSpecForProviderDestination>? Destination { get; set; }
 
-    /// <summary>The region in which the replica should be created. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -352,7 +352,7 @@ public partial class V1beta1ReplicationConfigurationStatusAtProviderDestination
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The region in which the replica should be created.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
@@ -380,6 +380,10 @@ public partial class V1beta1ReplicationConfigurationStatusAtProvider
     /// <summary>The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.</summary>
     [JsonPropertyName("originalSourceFileSystemArn")]
     public string? OriginalSourceFileSystemArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the current source file system in the replication configuration.</summary>
     [JsonPropertyName("sourceFileSystemArn")]

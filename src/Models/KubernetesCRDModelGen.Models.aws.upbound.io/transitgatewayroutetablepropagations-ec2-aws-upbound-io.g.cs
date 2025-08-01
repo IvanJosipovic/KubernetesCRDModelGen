@@ -124,7 +124,7 @@ public partial class V1beta1TransitGatewayRouteTablePropagationSpecForProviderTr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayRouteTablePropagationSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -433,6 +433,10 @@ public partial class V1beta1TransitGatewayRouteTablePropagationStatusAtProvider
     /// <summary>EC2 Transit Gateway Route Table identifier combined with EC2 Transit Gateway Attachment identifier</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Identifier of the resource</summary>
     [JsonPropertyName("resourceId")]

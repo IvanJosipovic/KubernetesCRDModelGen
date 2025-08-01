@@ -174,11 +174,6 @@ spec:
                           type: array
                       type: object
                     type: array
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -511,6 +506,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  arn:
+                    description: The cache policy ARN.
+                    type: string
                   comment:
                     description: Description for the cache policy.
                     type: string
@@ -817,11 +815,6 @@ spec:
                             type: object
                         type: object
                     type: object
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -1140,6 +1133,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  arn:
+                    description: The cache policy ARN.
+                    type: string
                   comment:
                     description: Description for the cache policy.
                     type: string

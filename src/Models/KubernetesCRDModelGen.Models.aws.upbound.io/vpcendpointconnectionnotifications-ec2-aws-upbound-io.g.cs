@@ -140,7 +140,7 @@ public partial class V1beta1VPCEndpointConnectionNotificationSpecForProvider
     [JsonPropertyName("connectionNotificationArnSelector")]
     public V1beta1VPCEndpointConnectionNotificationSpecForProviderConnectionNotificationArnSelector? ConnectionNotificationArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -461,6 +461,10 @@ public partial class V1beta1VPCEndpointConnectionNotificationStatusAtProvider
     /// <summary>The type of notification.</summary>
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The state of the notification.</summary>
     [JsonPropertyName("state")]

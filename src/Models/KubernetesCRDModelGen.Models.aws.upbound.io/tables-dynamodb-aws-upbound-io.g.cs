@@ -172,13 +172,21 @@ public partial class V1beta1TableSpecForProviderPointInTimeRecovery
     /// <summary>Whether to enable point-in-time recovery. It can take 10 minutes to enable for new tables. If the point_in_time_recovery block is not provided, this defaults to false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary>Number of preceding days for which continuous backups are taken and maintained. Default is 35.</summary>
+    [JsonPropertyName("recoveryPeriodInDays")]
+    public double? RecoveryPeriodInDays { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderReplica
 {
-    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys.</summary>
+    /// <summary>Whether this global table will be using STRONG consistency mode or EVENTUAL consistency mode. Default value is EVENTUAL.</summary>
+    [JsonPropertyName("consistencyMode")]
+    public string? ConsistencyMode { get; set; }
+
+    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys. Note: Changing this value will recreate the replica.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -186,7 +194,7 @@ public partial class V1beta1TableSpecForProviderReplica
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
-    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. In other words, tag drift on a replica will not trigger an update. Tag or replica changes on the global table, whether from drift or configuration changes, are propagated to replicas. Changing from true to false on a subsequent apply means replica tags are left as they were, unmanaged, not deleted.</summary>
+    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. Tag drift on a replica will not trigger an update. Tag changes on the global table are propagated to replicas. Changing from true to false on a subsequent apply leaves replica tags as-is and no longer manages them.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
@@ -212,11 +220,11 @@ public partial class V1beta1TableSpecForProviderServerSideEncryption
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderTtl
 {
-    /// <summary>Name of the table attribute to store the TTL timestamp in.</summary>
+    /// <summary>Name of the table attribute to store the TTL timestamp in. Required if enabled is true, must not be set otherwise.</summary>
     [JsonPropertyName("attributeName")]
     public string? AttributeName { get; set; }
 
-    /// <summary>Whether TTL is enabled.</summary>
+    /// <summary>Whether TTL is enabled. Default value is false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -269,7 +277,7 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("readCapacity")]
     public double? ReadCapacity { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -293,7 +301,7 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("restoreToLatestTime")]
     public bool? RestoreToLatestTime { get; set; }
 
-    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. See below.</summary>
+    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. Must be supplied for cross-region restores. See below.</summary>
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1TableSpecForProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 
@@ -486,13 +494,21 @@ public partial class V1beta1TableSpecInitProviderPointInTimeRecovery
     /// <summary>Whether to enable point-in-time recovery. It can take 10 minutes to enable for new tables. If the point_in_time_recovery block is not provided, this defaults to false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary>Number of preceding days for which continuous backups are taken and maintained. Default is 35.</summary>
+    [JsonPropertyName("recoveryPeriodInDays")]
+    public double? RecoveryPeriodInDays { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderReplica
 {
-    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys.</summary>
+    /// <summary>Whether this global table will be using STRONG consistency mode or EVENTUAL consistency mode. Default value is EVENTUAL.</summary>
+    [JsonPropertyName("consistencyMode")]
+    public string? ConsistencyMode { get; set; }
+
+    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys. Note: Changing this value will recreate the replica.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -500,7 +516,7 @@ public partial class V1beta1TableSpecInitProviderReplica
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
-    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. In other words, tag drift on a replica will not trigger an update. Tag or replica changes on the global table, whether from drift or configuration changes, are propagated to replicas. Changing from true to false on a subsequent apply means replica tags are left as they were, unmanaged, not deleted.</summary>
+    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. Tag drift on a replica will not trigger an update. Tag changes on the global table are propagated to replicas. Changing from true to false on a subsequent apply leaves replica tags as-is and no longer manages them.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
@@ -526,11 +542,11 @@ public partial class V1beta1TableSpecInitProviderServerSideEncryption
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecInitProviderTtl
 {
-    /// <summary>Name of the table attribute to store the TTL timestamp in.</summary>
+    /// <summary>Name of the table attribute to store the TTL timestamp in. Required if enabled is true, must not be set otherwise.</summary>
     [JsonPropertyName("attributeName")]
     public string? AttributeName { get; set; }
 
-    /// <summary>Whether TTL is enabled.</summary>
+    /// <summary>Whether TTL is enabled. Default value is false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -603,7 +619,7 @@ public partial class V1beta1TableSpecInitProvider
     [JsonPropertyName("restoreToLatestTime")]
     public bool? RestoreToLatestTime { get; set; }
 
-    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. See below.</summary>
+    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. Must be supplied for cross-region restores. See below.</summary>
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1TableSpecInitProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 
@@ -928,6 +944,10 @@ public partial class V1beta1TableStatusAtProviderPointInTimeRecovery
     /// <summary>Whether to enable point-in-time recovery. It can take 10 minutes to enable for new tables. If the point_in_time_recovery block is not provided, this defaults to false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+
+    /// <summary>Number of preceding days for which continuous backups are taken and maintained. Default is 35.</summary>
+    [JsonPropertyName("recoveryPeriodInDays")]
+    public double? RecoveryPeriodInDays { get; set; }
 }
 
 /// <summary></summary>
@@ -938,7 +958,11 @@ public partial class V1beta1TableStatusAtProviderReplica
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys.</summary>
+    /// <summary>Whether this global table will be using STRONG consistency mode or EVENTUAL consistency mode. Default value is EVENTUAL.</summary>
+    [JsonPropertyName("consistencyMode")]
+    public string? ConsistencyMode { get; set; }
+
+    /// <summary>ARN of the CMK that should be used for the AWS KMS encryption. This argument should only be used if the key is different from the default KMS-managed DynamoDB key, alias/aws/dynamodb. Note: This attribute will not be populated with the ARN of default keys. Note: Changing this value will recreate the replica.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -946,7 +970,7 @@ public partial class V1beta1TableStatusAtProviderReplica
     [JsonPropertyName("pointInTimeRecovery")]
     public bool? PointInTimeRecovery { get; set; }
 
-    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. In other words, tag drift on a replica will not trigger an update. Tag or replica changes on the global table, whether from drift or configuration changes, are propagated to replicas. Changing from true to false on a subsequent apply means replica tags are left as they were, unmanaged, not deleted.</summary>
+    /// <summary>Whether to propagate the global table's tags to a replica. Default is false. Changes to tags only move in one direction: from global (source) to replica. Tag drift on a replica will not trigger an update. Tag changes on the global table are propagated to replicas. Changing from true to false on a subsequent apply leaves replica tags as-is and no longer manages them.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
@@ -980,11 +1004,11 @@ public partial class V1beta1TableStatusAtProviderServerSideEncryption
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableStatusAtProviderTtl
 {
-    /// <summary>Name of the table attribute to store the TTL timestamp in.</summary>
+    /// <summary>Name of the table attribute to store the TTL timestamp in. Required if enabled is true, must not be set otherwise.</summary>
     [JsonPropertyName("attributeName")]
     public string? AttributeName { get; set; }
 
-    /// <summary>Whether TTL is enabled.</summary>
+    /// <summary>Whether TTL is enabled. Default value is false.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -1045,6 +1069,10 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("readCapacity")]
     public double? ReadCapacity { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Configuration block(s) with DynamoDB Global Tables V2 (version 2019.11.21) replication configurations. See below.</summary>
     [JsonPropertyName("replica")]
     public IList<V1beta1TableStatusAtProviderReplica>? Replica { get; set; }
@@ -1065,7 +1093,7 @@ public partial class V1beta1TableStatusAtProvider
     [JsonPropertyName("restoreToLatestTime")]
     public bool? RestoreToLatestTime { get; set; }
 
-    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. See below.</summary>
+    /// <summary>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS-owned Customer Master Key if this argument isn't specified. Must be supplied for cross-region restores. See below.</summary>
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1TableStatusAtProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 

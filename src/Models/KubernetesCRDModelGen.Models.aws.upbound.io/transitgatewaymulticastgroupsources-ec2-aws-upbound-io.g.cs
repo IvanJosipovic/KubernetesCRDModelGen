@@ -140,7 +140,7 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceSpecForProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1TransitGatewayMulticastGroupSourceSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -449,6 +449,10 @@ public partial class V1beta1TransitGatewayMulticastGroupSourceStatusAtProvider
     /// <summary>The group members' network interface ID to register with the transit gateway multicast group.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the transit gateway multicast domain.</summary>
     [JsonPropertyName("transitGatewayMulticastDomainId")]

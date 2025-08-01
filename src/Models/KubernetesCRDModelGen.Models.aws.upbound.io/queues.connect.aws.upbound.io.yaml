@@ -293,7 +293,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
@@ -813,6 +816,12 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
                     type: string
@@ -1171,7 +1180,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
@@ -1686,6 +1698,12 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
                     type: string
@@ -2042,7 +2060,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
@@ -2553,6 +2574,12 @@ spec:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   status:
                     description: Specifies the description of the Queue. Valid values are ENABLED, DISABLED.
                     type: string

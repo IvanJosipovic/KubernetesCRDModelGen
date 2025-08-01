@@ -270,7 +270,7 @@ public partial class V1beta1ImagePipelineSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -863,6 +863,10 @@ public partial class V1beta1ImagePipelineStatusAtProvider
     /// <summary>Platform of the image pipeline.</summary>
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block with schedule settings. Detailed below.</summary>
     [JsonPropertyName("schedule")]

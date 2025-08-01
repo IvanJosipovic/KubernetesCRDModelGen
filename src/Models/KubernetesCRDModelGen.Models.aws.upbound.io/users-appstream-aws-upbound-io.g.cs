@@ -28,7 +28,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("lastName")]
     public string? LastName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -221,6 +221,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>Last name, or surname, of the user.</summary>
     [JsonPropertyName("lastName")]
     public string? LastName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Send an email notification.</summary>
     [JsonPropertyName("sendEmailNotification")]

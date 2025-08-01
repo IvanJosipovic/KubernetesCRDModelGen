@@ -8,7 +8,20 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
-/// <summary>value pairs used as parameters for this connection.</summary>
+/// <summary>Map of key-value pairs used as connection properties specific to the Athena compute environment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderAthenaPropertiesSecretRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Map of key-value pairs used as parameters for this connection. For more information, see the AWS Documentation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProviderConnectionPropertiesSecretRef
 {
@@ -234,31 +247,35 @@ public partial class V1beta1ConnectionSpecForProviderPhysicalConnectionRequireme
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProvider
 {
-    /// <summary>–  The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</summary>
+    /// <summary>Map of key-value pairs used as connection properties specific to the Athena compute environment.</summary>
+    [JsonPropertyName("athenaPropertiesSecretRef")]
+    public V1beta1ConnectionSpecForProviderAthenaPropertiesSecretRef? AthenaPropertiesSecretRef { get; set; }
+
+    /// <summary>ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</summary>
     [JsonPropertyName("catalogId")]
     public string CatalogId { get; set; }
 
-    /// <summary>value pairs used as parameters for this connection.</summary>
+    /// <summary>Map of key-value pairs used as parameters for this connection. For more information, see the AWS Documentation.</summary>
     [JsonPropertyName("connectionPropertiesSecretRef")]
     public V1beta1ConnectionSpecForProviderConnectionPropertiesSecretRef? ConnectionPropertiesSecretRef { get; set; }
 
-    /// <summary>–  The type of the connection. Supported are: CUSTOM, JDBC, KAFKA, MARKETPLACE, MONGODB, and NETWORK. Defaults to JDBC.</summary>
+    /// <summary>Type of the connection. Valid values: AZURECOSMOS, AZURESQL, BIGQUERY, CUSTOM, DYNAMODB, JDBC, KAFKA, MARKETPLACE, MONGODB, NETWORK, OPENSEARCH, SNOWFLAKE. Defaults to JDBC.</summary>
     [JsonPropertyName("connectionType")]
     public string? ConnectionType { get; set; }
 
-    /// <summary>–  Description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  A list of criteria that can be used in selecting this connection.</summary>
+    /// <summary>List of criteria that can be used in selecting this connection.</summary>
     [JsonPropertyName("matchCriteria")]
     public IList<string>? MatchCriteria { get; set; }
 
-    /// <summary>A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</summary>
+    /// <summary>Map of physical connection requirements, such as VPC and SecurityGroup. See physical_connection_requirements Block for details.</summary>
     [JsonPropertyName("physicalConnectionRequirements")]
     public IList<V1beta1ConnectionSpecForProviderPhysicalConnectionRequirements>? PhysicalConnectionRequirements { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -481,22 +498,26 @@ public partial class V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirem
 public partial class V1beta1ConnectionSpecInitProvider
 {
     /// <summary></summary>
+    [JsonPropertyName("athenaPropertiesSecretRef")]
+    public IDictionary<string, string>? AthenaPropertiesSecretRef { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("connectionPropertiesSecretRef")]
     public IDictionary<string, string>? ConnectionPropertiesSecretRef { get; set; }
 
-    /// <summary>–  The type of the connection. Supported are: CUSTOM, JDBC, KAFKA, MARKETPLACE, MONGODB, and NETWORK. Defaults to JDBC.</summary>
+    /// <summary>Type of the connection. Valid values: AZURECOSMOS, AZURESQL, BIGQUERY, CUSTOM, DYNAMODB, JDBC, KAFKA, MARKETPLACE, MONGODB, NETWORK, OPENSEARCH, SNOWFLAKE. Defaults to JDBC.</summary>
     [JsonPropertyName("connectionType")]
     public string? ConnectionType { get; set; }
 
-    /// <summary>–  Description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  A list of criteria that can be used in selecting this connection.</summary>
+    /// <summary>List of criteria that can be used in selecting this connection.</summary>
     [JsonPropertyName("matchCriteria")]
     public IList<string>? MatchCriteria { get; set; }
 
-    /// <summary>A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</summary>
+    /// <summary>Map of physical connection requirements, such as VPC and SecurityGroup. See physical_connection_requirements Block for details.</summary>
     [JsonPropertyName("physicalConnectionRequirements")]
     public IList<V1beta1ConnectionSpecInitProviderPhysicalConnectionRequirements>? PhysicalConnectionRequirements { get; set; }
 
@@ -658,33 +679,37 @@ public partial class V1beta1ConnectionStatusAtProviderPhysicalConnectionRequirem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProvider
 {
-    /// <summary>The ARN of the Glue Connection.</summary>
+    /// <summary>ARN of the Glue Connection.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  The ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</summary>
+    /// <summary>ID of the Data Catalog in which to create the connection. If none is supplied, the AWS account ID is used by default.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  The type of the connection. Supported are: CUSTOM, JDBC, KAFKA, MARKETPLACE, MONGODB, and NETWORK. Defaults to JDBC.</summary>
+    /// <summary>Type of the connection. Valid values: AZURECOSMOS, AZURESQL, BIGQUERY, CUSTOM, DYNAMODB, JDBC, KAFKA, MARKETPLACE, MONGODB, NETWORK, OPENSEARCH, SNOWFLAKE. Defaults to JDBC.</summary>
     [JsonPropertyName("connectionType")]
     public string? ConnectionType { get; set; }
 
-    /// <summary>–  Description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Catalog ID and name of the connection</summary>
+    /// <summary>Catalog ID and name of the connection.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  A list of criteria that can be used in selecting this connection.</summary>
+    /// <summary>List of criteria that can be used in selecting this connection.</summary>
     [JsonPropertyName("matchCriteria")]
     public IList<string>? MatchCriteria { get; set; }
 
-    /// <summary>A map of physical connection requirements, such as VPC and SecurityGroup. Defined below.</summary>
+    /// <summary>Map of physical connection requirements, such as VPC and SecurityGroup. See physical_connection_requirements Block for details.</summary>
     [JsonPropertyName("physicalConnectionRequirements")]
     public IList<V1beta1ConnectionStatusAtProviderPhysicalConnectionRequirements>? PhysicalConnectionRequirements { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -25,7 +25,7 @@ public partial class V1beta1ObservabilityConfigurationSpecForProvider
     [JsonPropertyName("observabilityConfigurationName")]
     public string? ObservabilityConfigurationName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -228,6 +228,10 @@ public partial class V1beta1ObservabilityConfigurationStatusAtProvider
     /// <summary>The revision of this observability configuration.</summary>
     [JsonPropertyName("observabilityConfigurationRevision")]
     public double? ObservabilityConfigurationRevision { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Current state of the observability configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.</summary>
     [JsonPropertyName("status")]

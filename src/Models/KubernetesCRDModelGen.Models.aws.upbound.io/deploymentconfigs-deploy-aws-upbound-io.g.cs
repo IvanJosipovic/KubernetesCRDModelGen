@@ -106,7 +106,7 @@ public partial class V1beta1DeploymentConfigSpecForProvider
     [JsonPropertyName("minimumHealthyHosts")]
     public IList<V1beta1DeploymentConfigSpecForProviderMinimumHealthyHosts>? MinimumHealthyHosts { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -467,6 +467,10 @@ public partial class V1beta1DeploymentConfigStatusAtProvider
     /// <summary>A minimum_healthy_hosts block. Required for Server compute platform. Minimum Healthy Hosts are documented below.</summary>
     [JsonPropertyName("minimumHealthyHosts")]
     public IList<V1beta1DeploymentConfigStatusAtProviderMinimumHealthyHosts>? MinimumHealthyHosts { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A traffic_routing_config block. Traffic Routing Config is documented below.</summary>
     [JsonPropertyName("trafficRoutingConfig")]

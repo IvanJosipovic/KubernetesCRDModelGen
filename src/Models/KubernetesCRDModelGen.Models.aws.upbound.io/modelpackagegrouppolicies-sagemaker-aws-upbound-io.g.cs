@@ -80,7 +80,7 @@ public partial class V1beta1ModelPackageGroupPolicySpecForProvider
     [JsonPropertyName("modelPackageGroupNameSelector")]
     public V1beta1ModelPackageGroupPolicySpecForProviderModelPackageGroupNameSelector? ModelPackageGroupNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -310,6 +310,10 @@ public partial class V1beta1ModelPackageGroupPolicyStatusAtProvider
     [JsonPropertyName("modelPackageGroupName")]
     public string? ModelPackageGroupName { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("resourcePolicy")]
     public string? ResourcePolicy { get; set; }
@@ -361,7 +365,7 @@ public partial class V1beta1ModelPackageGroupPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker Model Package Group Policy resource.</summary>
+/// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker AI Model Package Group Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ModelPackageGroupPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ModelPackageGroupPolicySpec>, IStatus<V1beta1ModelPackageGroupPolicyStatus>
@@ -391,7 +395,7 @@ public partial class V1beta1ModelPackageGroupPolicy : IKubernetesObject<V1Object
     public V1beta1ModelPackageGroupPolicyStatus? Status { get; set; }
 }
 
-/// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker Model Package Group Policy resource.</summary>
+/// <summary>ModelPackageGroupPolicy is the Schema for the ModelPackageGroupPolicys API. Provides a SageMaker AI Model Package Group Policy resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ModelPackageGroupPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ModelPackageGroupPolicy>

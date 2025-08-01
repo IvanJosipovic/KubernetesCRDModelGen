@@ -319,11 +319,14 @@ spec:
                             type: string
                         type: object
                     type: object
+                  manageMasterUserPassword:
+                    description: Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.
+                    type: boolean
                   masterPasswordSecretRef:
                     description: >-
                       Password for the master DB user. Note that this may
 
-                      show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints.
+                      show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password.
 
                       Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.
                     properties:
@@ -341,6 +344,15 @@ spec:
                     - name
                     - namespace
                     type: object
+                  masterPasswordWo:
+                    description: >-
+                      Password for the master DB user. Note that this may
+
+                      show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.
+                    type: string
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -357,7 +369,10 @@ spec:
                     description: The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restoreToPointInTime:
                     description: A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.
@@ -748,11 +763,14 @@ spec:
                             type: string
                         type: object
                     type: object
+                  manageMasterUserPassword:
+                    description: Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.
+                    type: boolean
                   masterPasswordSecretRef:
                     description: >-
                       Password for the master DB user. Note that this may
 
-                      show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints.
+                      show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password.
 
                       Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.
                     properties:
@@ -770,6 +788,15 @@ spec:
                     - name
                     - namespace
                     type: object
+                  masterPasswordWo:
+                    description: >-
+                      Password for the master DB user. Note that this may
+
+                      show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.
+                    type: string
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -1158,7 +1185,7 @@ spec:
                     description: The days to retain backups for. Default 1
                     type: number
                   clusterMembers:
-                    description: – List of DocumentDB Instances that are a part of this cluster
+                    description: List of DocumentDB Instances that are a part of this cluster
                     items:
                       type: string
                     type: array
@@ -1207,11 +1234,36 @@ spec:
                     description: The Route53 Hosted Zone ID of the endpoint
                     type: string
                   id:
-                    description: The DocumentDB Cluster Identifier
+                    description: (Deprecated) Amazon Resource Name (ARN) of cluster
                     type: string
                   kmsKeyId:
                     description: The ARN for the KMS encryption key. When specifying kms_key_id, storage_encrypted needs to be set to true.
                     type: string
+                  manageMasterUserPassword:
+                    description: Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.
+                    type: boolean
+                  masterPasswordWo:
+                    description: >-
+                      Password for the master DB user. Note that this may
+
+                      show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.
+                    type: string
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
+                  masterUserSecret:
+                    items:
+                      properties:
+                        kmsKeyId:
+                          description: The ARN for the KMS encryption key. When specifying kms_key_id, storage_encrypted needs to be set to true.
+                          type: string
+                        secretArn:
+                          description: Amazon Resource Name (ARN) of cluster
+                          type: string
+                        secretStatus:
+                          type: string
+                      type: object
+                    type: array
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -1229,6 +1281,12 @@ spec:
                     type: string
                   readerEndpoint:
                     description: A read-only endpoint for the DocumentDB cluster, automatically load-balanced across replicas
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restoreToPointInTime:
                     description: A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.

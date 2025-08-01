@@ -357,15 +357,15 @@ public partial class V1beta1TriggerSpecForProviderPredicate
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProvider
 {
-    /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
+    /// <summary>List of actions initiated by this trigger when it fires. See Actions Below.</summary>
     [JsonPropertyName("actions")]
     public IList<V1beta1TriggerSpecForProviderActions>? Actions { get; set; }
 
-    /// <summary>–  A description of the new trigger.</summary>
+    /// <summary>A description of the new trigger.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Start the trigger. Defaults to true.</summary>
+    /// <summary>Start the trigger. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -373,19 +373,19 @@ public partial class V1beta1TriggerSpecForProvider
     [JsonPropertyName("eventBatchingCondition")]
     public IList<V1beta1TriggerSpecForProviderEventBatchingCondition>? EventBatchingCondition { get; set; }
 
-    /// <summary>–  A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
+    /// <summary>A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
     [JsonPropertyName("predicate")]
     public IList<V1beta1TriggerSpecForProviderPredicate>? Predicate { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Based Schedules for Jobs and Crawlers</summary>
+    /// <summary>A cron expression used to specify the schedule. Time-Based Schedules for Jobs and Crawlers</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>–  Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
+    /// <summary>Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
     [JsonPropertyName("startOnCreation")]
     public bool? StartOnCreation { get; set; }
 
@@ -393,7 +393,7 @@ public partial class V1beta1TriggerSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
+    /// <summary>The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -751,15 +751,15 @@ public partial class V1beta1TriggerSpecInitProviderPredicate
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecInitProvider
 {
-    /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
+    /// <summary>List of actions initiated by this trigger when it fires. See Actions Below.</summary>
     [JsonPropertyName("actions")]
     public IList<V1beta1TriggerSpecInitProviderActions>? Actions { get; set; }
 
-    /// <summary>–  A description of the new trigger.</summary>
+    /// <summary>A description of the new trigger.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Start the trigger. Defaults to true.</summary>
+    /// <summary>Start the trigger. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -767,15 +767,15 @@ public partial class V1beta1TriggerSpecInitProvider
     [JsonPropertyName("eventBatchingCondition")]
     public IList<V1beta1TriggerSpecInitProviderEventBatchingCondition>? EventBatchingCondition { get; set; }
 
-    /// <summary>–  A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
+    /// <summary>A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
     [JsonPropertyName("predicate")]
     public IList<V1beta1TriggerSpecInitProviderPredicate>? Predicate { get; set; }
 
-    /// <summary>Based Schedules for Jobs and Crawlers</summary>
+    /// <summary>A cron expression used to specify the schedule. Time-Based Schedules for Jobs and Crawlers</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>–  Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
+    /// <summary>Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
     [JsonPropertyName("startOnCreation")]
     public bool? StartOnCreation { get; set; }
 
@@ -783,7 +783,7 @@ public partial class V1beta1TriggerSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
+    /// <summary>The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
@@ -1017,7 +1017,7 @@ public partial class V1beta1TriggerStatusAtProviderPredicate
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerStatusAtProvider
 {
-    /// <summary>–  List of actions initiated by this trigger when it fires. See Actions Below.</summary>
+    /// <summary>List of actions initiated by this trigger when it fires. See Actions Below.</summary>
     [JsonPropertyName("actions")]
     public IList<V1beta1TriggerStatusAtProviderActions>? Actions { get; set; }
 
@@ -1025,11 +1025,11 @@ public partial class V1beta1TriggerStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  A description of the new trigger.</summary>
+    /// <summary>A description of the new trigger.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Start the trigger. Defaults to true.</summary>
+    /// <summary>Start the trigger. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
@@ -1041,15 +1041,19 @@ public partial class V1beta1TriggerStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
+    /// <summary>A predicate to specify when the new trigger should fire. Required when trigger type is CONDITIONAL. See Predicate Below.</summary>
     [JsonPropertyName("predicate")]
     public IList<V1beta1TriggerStatusAtProviderPredicate>? Predicate { get; set; }
 
-    /// <summary>Based Schedules for Jobs and Crawlers</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>A cron expression used to specify the schedule. Time-Based Schedules for Jobs and Crawlers</summary>
     [JsonPropertyName("schedule")]
     public string? Schedule { get; set; }
 
-    /// <summary>–  Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
+    /// <summary>Set to true to start SCHEDULED and CONDITIONAL triggers when created. True is not supported for ON_DEMAND triggers.</summary>
     [JsonPropertyName("startOnCreation")]
     public bool? StartOnCreation { get; set; }
 
@@ -1065,7 +1069,7 @@ public partial class V1beta1TriggerStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>–  The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
+    /// <summary>The type of trigger. Valid values are CONDITIONAL, EVENT, ON_DEMAND, and SCHEDULED.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 

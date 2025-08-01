@@ -85,10 +85,10 @@ spec:
               forProvider:
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     items:
                       properties:
                         connectionPasswordEncryption:
@@ -293,7 +293,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -321,10 +324,10 @@ spec:
                   autoscaler.
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     items:
                       properties:
                         connectionPasswordEncryption:
@@ -746,10 +749,10 @@ spec:
               atProvider:
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     items:
                       properties:
                         connectionPasswordEncryption:
@@ -783,6 +786,12 @@ spec:
                     type: array
                   id:
                     description: The ID of the Data Catalog to set the security configuration for.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -919,10 +928,10 @@ spec:
               forProvider:
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     properties:
                       connectionPasswordEncryption:
                         description: When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
@@ -1121,7 +1130,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -1149,10 +1161,10 @@ spec:
                   autoscaler.
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     properties:
                       connectionPasswordEncryption:
                         description: When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
@@ -1568,10 +1580,10 @@ spec:
               atProvider:
                 properties:
                   catalogId:
-                    description: –  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
+                    description: The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
                     type: string
                   dataCatalogEncryptionSettings:
-                    description: –  The security configuration to set. see Data Catalog Encryption Settings.
+                    description: The security configuration to set. see Data Catalog Encryption Settings.
                     properties:
                       connectionPasswordEncryption:
                         description: When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
@@ -1599,6 +1611,12 @@ spec:
                     type: object
                   id:
                     description: The ID of the Data Catalog to set the security configuration for.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

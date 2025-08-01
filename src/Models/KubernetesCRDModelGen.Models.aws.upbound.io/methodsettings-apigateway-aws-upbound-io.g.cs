@@ -173,7 +173,7 @@ public partial class V1beta1MethodSettingsSpecForProvider
     [JsonPropertyName("methodPath")]
     public string? MethodPath { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -588,6 +588,10 @@ public partial class V1beta1MethodSettingsStatusAtProvider
     /// <summary>Method path defined as {resource_path}/{http_method} for an individual method override, or */* for overriding all methods in the stage. Ensure to trim any leading forward slashes in the path (e.g., trimprefix(aws_api_gateway_resource.example.path, "/")).</summary>
     [JsonPropertyName("methodPath")]
     public string? MethodPath { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the REST API</summary>
     [JsonPropertyName("restApiId")]

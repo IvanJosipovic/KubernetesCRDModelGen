@@ -286,7 +286,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("authTokenSecretRef")]
     public V1beta2ReplicationGroupSpecForProviderAuthTokenSecretRef? AuthTokenSecretRef { get; set; }
 
-    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Defaults to ROTATE.</summary>
+    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.</summary>
     [JsonPropertyName("authTokenUpdateStrategy")]
     public string? AuthTokenUpdateStrategy { get; set; }
 
@@ -310,7 +310,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("dataTieringEnabled")]
     public bool? DataTieringEnabled { get; set; }
 
-    /// <summary>created description for the replication group. Must not be empty.</summary>
+    /// <summary>User-created description for the replication group. Must not be empty.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -358,7 +358,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupSpecForProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -374,7 +374,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
@@ -390,7 +390,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
+    /// <summary>Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -398,7 +398,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("preferredCacheClusterAzs")]
     public IList<string>? PreferredCacheClusterAzs { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -422,7 +422,7 @@ public partial class V1beta2ReplicationGroupSpecForProvider
     [JsonPropertyName("securityGroupNames")]
     public IList<string>? SecurityGroupNames { get; set; }
 
-    /// <summary>–  List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
+    /// <summary>List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 
@@ -745,7 +745,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("authTokenSecretRef")]
     public V1beta2ReplicationGroupSpecInitProviderAuthTokenSecretRef? AuthTokenSecretRef { get; set; }
 
-    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Defaults to ROTATE.</summary>
+    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.</summary>
     [JsonPropertyName("authTokenUpdateStrategy")]
     public string? AuthTokenUpdateStrategy { get; set; }
 
@@ -765,7 +765,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("dataTieringEnabled")]
     public bool? DataTieringEnabled { get; set; }
 
-    /// <summary>created description for the replication group. Must not be empty.</summary>
+    /// <summary>User-created description for the replication group. Must not be empty.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -813,7 +813,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupSpecInitProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -829,7 +829,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
@@ -845,7 +845,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
+    /// <summary>Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -873,7 +873,7 @@ public partial class V1beta2ReplicationGroupSpecInitProvider
     [JsonPropertyName("securityGroupNames")]
     public IList<string>? SecurityGroupNames { get; set; }
 
-    /// <summary>–  List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
+    /// <summary>List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 
@@ -1087,7 +1087,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("atRestEncryptionEnabled")]
     public string? AtRestEncryptionEnabled { get; set; }
 
-    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Defaults to ROTATE.</summary>
+    /// <summary>Strategy to use when updating the auth_token. Valid values are SET, ROTATE, and DELETE. Required if auth_token is set.</summary>
     [JsonPropertyName("authTokenUpdateStrategy")]
     public string? AuthTokenUpdateStrategy { get; set; }
 
@@ -1115,7 +1115,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("dataTieringEnabled")]
     public bool? DataTieringEnabled { get; set; }
 
-    /// <summary>created description for the replication group. Must not be empty.</summary>
+    /// <summary>User-created description for the replication group. Must not be empty.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -1155,7 +1155,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("logDeliveryConfiguration")]
     public IList<V1beta2ReplicationGroupStatusAtProviderLogDeliveryConfiguration>? LogDeliveryConfiguration { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cache cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
@@ -1175,7 +1175,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>ARN of an SNS topic to send ElastiCache notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
@@ -1191,7 +1191,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
+    /// <summary>Port number on which each of the cache nodes will accept connections. For Memcache the default is 11211, and for Redis the default port is 6379.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
@@ -1207,6 +1207,10 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("readerEndpointAddress")]
     public string? ReaderEndpointAddress { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Number of replica nodes in each node group. Changing this number will trigger a resizing operation before other settings modifications. Valid values are 0 to 5. Conflicts with num_cache_clusters. Can only be set if num_node_groups is set.</summary>
     [JsonPropertyName("replicasPerNodeGroup")]
     public double? ReplicasPerNodeGroup { get; set; }
@@ -1219,7 +1223,7 @@ public partial class V1beta2ReplicationGroupStatusAtProvider
     [JsonPropertyName("securityGroupNames")]
     public IList<string>? SecurityGroupNames { get; set; }
 
-    /// <summary>–  List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
+    /// <summary>List of ARNs that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.</summary>
     [JsonPropertyName("snapshotArns")]
     public IList<string>? SnapshotArns { get; set; }
 

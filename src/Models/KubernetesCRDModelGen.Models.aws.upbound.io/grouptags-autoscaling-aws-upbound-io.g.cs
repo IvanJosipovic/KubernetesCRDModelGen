@@ -97,7 +97,7 @@ public partial class V1beta1GroupTagSpecForProvider
     [JsonPropertyName("autoscalingGroupNameSelector")]
     public V1beta1GroupTagSpecForProviderAutoscalingGroupNameSelector? AutoscalingGroupNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -360,6 +360,10 @@ public partial class V1beta1GroupTagStatusAtProvider
     /// <summary>ASG name and key, separated by a comma (,)</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Tag to create. The tag block is documented below.</summary>
     [JsonPropertyName("tag")]

@@ -281,7 +281,10 @@ spec:
                     description: The private DNS name for the service.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   supportedIpAddressTypes:
                     description: The supported IP address types. The possible values are ipv4 and ipv6.
@@ -820,6 +823,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   serviceName:
                     description: The service name.
                     type: string

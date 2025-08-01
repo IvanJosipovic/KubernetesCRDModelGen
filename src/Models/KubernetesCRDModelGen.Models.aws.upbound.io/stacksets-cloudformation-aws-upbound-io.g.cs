@@ -167,7 +167,7 @@ public partial class V1beta1StackSetSpecForProvider
     [JsonPropertyName("permissionModel")]
     public string? PermissionModel { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -590,6 +590,10 @@ public partial class V1beta1StackSetStatusAtProvider
     /// <summary>Describes how the IAM roles required for your StackSet are created. Valid values: SELF_MANAGED (default), SERVICE_MANAGED.</summary>
     [JsonPropertyName("permissionModel")]
     public string? PermissionModel { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Unique identifier of the StackSet.</summary>
     [JsonPropertyName("stackSetId")]

@@ -90,11 +90,6 @@ spec:
 
                       (helpful for identifying single delegation set amongst others)
                     type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-

@@ -89,7 +89,7 @@ public partial class V1beta1PermissionsSpecForProviderDataLocationArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecForProviderDataLocation
 {
-    /// <summary>–  Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -170,7 +170,7 @@ public partial class V1beta1PermissionsSpecForProviderDatabase
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -191,7 +191,7 @@ public partial class V1beta1PermissionsSpecForProviderLfTag
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>name for the tag.</summary>
+    /// <summary>The key-name for the tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -204,7 +204,7 @@ public partial class V1beta1PermissionsSpecForProviderLfTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecForProviderLfTagPolicyExpression
 {
-    /// <summary>name of an LF-Tag.</summary>
+    /// <summary>The key-name of an LF-Tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -225,7 +225,7 @@ public partial class V1beta1PermissionsSpecForProviderLfTagPolicy
     [JsonPropertyName("expression")]
     public IList<V1beta1PermissionsSpecForProviderLfTagPolicyExpression>? Expression { get; set; }
 
-    /// <summary>–  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
+    /// <summary>The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
@@ -238,7 +238,7 @@ public partial class V1beta1PermissionsSpecForProviderTable
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database for the table. Unique to a Data Catalog.</summary>
+    /// <summary>Name of the database for the table. Unique to a Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -319,7 +319,7 @@ public partial class V1beta1PermissionsSpecForProviderTableWithColumns
     [JsonPropertyName("columnNames")]
     public IList<string>? ColumnNames { get; set; }
 
-    /// <summary>–  Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -327,7 +327,7 @@ public partial class V1beta1PermissionsSpecForProviderTableWithColumns
     [JsonPropertyName("excludedColumnNames")]
     public IList<string>? ExcludedColumnNames { get; set; }
 
-    /// <summary>–  Name of the table resource.</summary>
+    /// <summary>Name of the table resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -348,7 +348,7 @@ public partial class V1beta1PermissionsSpecForProviderTableWithColumns
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecForProvider
 {
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -376,7 +376,7 @@ public partial class V1beta1PermissionsSpecForProvider
     [JsonPropertyName("lfTagPolicy")]
     public IList<V1beta1PermissionsSpecForProviderLfTagPolicy>? LfTagPolicy { get; set; }
 
-    /// <summary>–  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
+    /// <summary>List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("permissions")]
     public IList<string>? Permissions { get; set; }
 
@@ -384,11 +384,11 @@ public partial class V1beta1PermissionsSpecForProvider
     [JsonPropertyName("permissionsWithGrantOption")]
     public IList<string>? PermissionsWithGrantOption { get; set; }
 
-    /// <summary>account permissions. For more information, see Lake Formation Permissions Reference.</summary>
+    /// <summary>Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -482,7 +482,7 @@ public partial class V1beta1PermissionsSpecInitProviderDataLocationArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecInitProviderDataLocation
 {
-    /// <summary>–  Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -563,7 +563,7 @@ public partial class V1beta1PermissionsSpecInitProviderDatabase
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -584,7 +584,7 @@ public partial class V1beta1PermissionsSpecInitProviderLfTag
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>name for the tag.</summary>
+    /// <summary>The key-name for the tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -597,7 +597,7 @@ public partial class V1beta1PermissionsSpecInitProviderLfTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecInitProviderLfTagPolicyExpression
 {
-    /// <summary>name of an LF-Tag.</summary>
+    /// <summary>The key-name of an LF-Tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -618,7 +618,7 @@ public partial class V1beta1PermissionsSpecInitProviderLfTagPolicy
     [JsonPropertyName("expression")]
     public IList<V1beta1PermissionsSpecInitProviderLfTagPolicyExpression>? Expression { get; set; }
 
-    /// <summary>–  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
+    /// <summary>The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
@@ -631,7 +631,7 @@ public partial class V1beta1PermissionsSpecInitProviderTable
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database for the table. Unique to a Data Catalog.</summary>
+    /// <summary>Name of the database for the table. Unique to a Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -712,7 +712,7 @@ public partial class V1beta1PermissionsSpecInitProviderTableWithColumns
     [JsonPropertyName("columnNames")]
     public IList<string>? ColumnNames { get; set; }
 
-    /// <summary>–  Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -720,7 +720,7 @@ public partial class V1beta1PermissionsSpecInitProviderTableWithColumns
     [JsonPropertyName("excludedColumnNames")]
     public IList<string>? ExcludedColumnNames { get; set; }
 
-    /// <summary>–  Name of the table resource.</summary>
+    /// <summary>Name of the table resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -741,7 +741,7 @@ public partial class V1beta1PermissionsSpecInitProviderTableWithColumns
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecInitProvider
 {
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -769,7 +769,7 @@ public partial class V1beta1PermissionsSpecInitProvider
     [JsonPropertyName("lfTagPolicy")]
     public IList<V1beta1PermissionsSpecInitProviderLfTagPolicy>? LfTagPolicy { get; set; }
 
-    /// <summary>–  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
+    /// <summary>List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("permissions")]
     public IList<string>? Permissions { get; set; }
 
@@ -777,7 +777,7 @@ public partial class V1beta1PermissionsSpecInitProvider
     [JsonPropertyName("permissionsWithGrantOption")]
     public IList<string>? PermissionsWithGrantOption { get; set; }
 
-    /// <summary>account permissions. For more information, see Lake Formation Permissions Reference.</summary>
+    /// <summary>Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
@@ -947,7 +947,7 @@ public partial class V1beta1PermissionsStatusAtProviderDataCellsFilter
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsStatusAtProviderDataLocation
 {
-    /// <summary>–  Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) that uniquely identifies the data location resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -964,7 +964,7 @@ public partial class V1beta1PermissionsStatusAtProviderDatabase
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 }
@@ -977,7 +977,7 @@ public partial class V1beta1PermissionsStatusAtProviderLfTag
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>name for the tag.</summary>
+    /// <summary>The key-name for the tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -990,7 +990,7 @@ public partial class V1beta1PermissionsStatusAtProviderLfTag
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsStatusAtProviderLfTagPolicyExpression
 {
-    /// <summary>name of an LF-Tag.</summary>
+    /// <summary>The key-name of an LF-Tag.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
@@ -1011,7 +1011,7 @@ public partial class V1beta1PermissionsStatusAtProviderLfTagPolicy
     [JsonPropertyName("expression")]
     public IList<V1beta1PermissionsStatusAtProviderLfTagPolicyExpression>? Expression { get; set; }
 
-    /// <summary>–  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
+    /// <summary>The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 }
@@ -1024,7 +1024,7 @@ public partial class V1beta1PermissionsStatusAtProviderTable
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  Name of the database for the table. Unique to a Data Catalog.</summary>
+    /// <summary>Name of the database for the table. Unique to a Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -1049,7 +1049,7 @@ public partial class V1beta1PermissionsStatusAtProviderTableWithColumns
     [JsonPropertyName("columnNames")]
     public IList<string>? ColumnNames { get; set; }
 
-    /// <summary>–  Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
+    /// <summary>Name of the database for the table with columns resource. Unique to the Data Catalog.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -1057,7 +1057,7 @@ public partial class V1beta1PermissionsStatusAtProviderTableWithColumns
     [JsonPropertyName("excludedColumnNames")]
     public IList<string>? ExcludedColumnNames { get; set; }
 
-    /// <summary>–  Name of the table resource.</summary>
+    /// <summary>Name of the table resource.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -1070,7 +1070,7 @@ public partial class V1beta1PermissionsStatusAtProviderTableWithColumns
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsStatusAtProvider
 {
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -1102,7 +1102,7 @@ public partial class V1beta1PermissionsStatusAtProvider
     [JsonPropertyName("lfTagPolicy")]
     public IList<V1beta1PermissionsStatusAtProviderLfTagPolicy>? LfTagPolicy { get; set; }
 
-    /// <summary>–  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
+    /// <summary>List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("permissions")]
     public IList<string>? Permissions { get; set; }
 
@@ -1110,9 +1110,13 @@ public partial class V1beta1PermissionsStatusAtProvider
     [JsonPropertyName("permissionsWithGrantOption")]
     public IList<string>? PermissionsWithGrantOption { get; set; }
 
-    /// <summary>account permissions. For more information, see Lake Formation Permissions Reference.</summary>
+    /// <summary>Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for a table resource. Detailed below.</summary>
     [JsonPropertyName("table")]

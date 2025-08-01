@@ -380,21 +380,111 @@ public partial class V1beta1ConnectionSpecForProviderAuthParameters
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderInvocationConnectivityParametersResourceParameters
+{
+    /// <summary>ARN of the Amazon VPC Lattice resource configuration for the resource endpoint.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderInvocationConnectivityParameters
+{
+    /// <summary>The parameters for EventBridge to use when invoking the resource endpoint. Documented below.</summary>
+    [JsonPropertyName("resourceParameters")]
+    public IList<V1beta1ConnectionSpecForProviderInvocationConnectivityParametersResourceParameters>? ResourceParameters { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderKmsKeyIdentifierRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderKmsKeyIdentifierRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecForProviderKmsKeyIdentifierRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderKmsKeyIdentifierSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecForProviderKmsKeyIdentifierSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecForProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProvider
 {
     /// <summary>Parameters used for authorization. A maximum of 1 are allowed. Documented below.</summary>
     [JsonPropertyName("authParameters")]
     public IList<V1beta1ConnectionSpecForProviderAuthParameters>? AuthParameters { get; set; }
 
-    /// <summary>Choose the type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
+    /// <summary>Type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Enter a description for the connection. Maximum of 512 characters.</summary>
+    /// <summary>Description for the connection. Maximum of 512 characters.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Parameters to use for invoking a private API. Documented below.</summary>
+    [JsonPropertyName("invocationConnectivityParameters")]
+    public IList<V1beta1ConnectionSpecForProviderInvocationConnectivityParameters>? InvocationConnectivityParameters { get; set; }
+
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this connection. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
+    [JsonPropertyName("kmsKeyIdentifierRef")]
+    public V1beta1ConnectionSpecForProviderKmsKeyIdentifierRef? KmsKeyIdentifierRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
+    [JsonPropertyName("kmsKeyIdentifierSelector")]
+    public V1beta1ConnectionSpecForProviderKmsKeyIdentifierSelector? KmsKeyIdentifierSelector { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -769,6 +859,80 @@ public partial class V1beta1ConnectionSpecInitProviderAuthParameters
     public IList<V1beta1ConnectionSpecInitProviderAuthParametersOauth>? Oauth { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderInvocationConnectivityParametersResourceParameters
+{
+    /// <summary>ARN of the Amazon VPC Lattice resource configuration for the resource endpoint.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderInvocationConnectivityParameters
+{
+    /// <summary>The parameters for EventBridge to use when invoking the resource endpoint. Documented below.</summary>
+    [JsonPropertyName("resourceParameters")]
+    public IList<V1beta1ConnectionSpecInitProviderInvocationConnectivityParametersResourceParameters>? ResourceParameters { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderKmsKeyIdentifierRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderKmsKeyIdentifierRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecInitProviderKmsKeyIdentifierRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderKmsKeyIdentifierSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionSpecInitProviderKmsKeyIdentifierSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ConnectionSpecInitProviderKmsKeyIdentifierSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProvider
@@ -777,13 +941,29 @@ public partial class V1beta1ConnectionSpecInitProvider
     [JsonPropertyName("authParameters")]
     public IList<V1beta1ConnectionSpecInitProviderAuthParameters>? AuthParameters { get; set; }
 
-    /// <summary>Choose the type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
+    /// <summary>Type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Enter a description for the connection. Maximum of 512 characters.</summary>
+    /// <summary>Description for the connection. Maximum of 512 characters.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
+
+    /// <summary>Parameters to use for invoking a private API. Documented below.</summary>
+    [JsonPropertyName("invocationConnectivityParameters")]
+    public IList<V1beta1ConnectionSpecInitProviderInvocationConnectivityParameters>? InvocationConnectivityParameters { get; set; }
+
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this connection. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
+    /// <summary>Reference to a Key in kms to populate kmsKeyIdentifier.</summary>
+    [JsonPropertyName("kmsKeyIdentifierRef")]
+    public V1beta1ConnectionSpecInitProviderKmsKeyIdentifierRef? KmsKeyIdentifierRef { get; set; }
+
+    /// <summary>Selector for a Key in kms to populate kmsKeyIdentifier.</summary>
+    [JsonPropertyName("kmsKeyIdentifierSelector")]
+    public V1beta1ConnectionSpecInitProviderKmsKeyIdentifierSelector? KmsKeyIdentifierSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1101,6 +1281,28 @@ public partial class V1beta1ConnectionStatusAtProviderAuthParameters
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionStatusAtProviderInvocationConnectivityParametersResourceParameters
+{
+    /// <summary>The Amazon Resource Name (ARN) of the connection.</summary>
+    [JsonPropertyName("resourceAssociationArn")]
+    public string? ResourceAssociationArn { get; set; }
+
+    /// <summary>ARN of the Amazon VPC Lattice resource configuration for the resource endpoint.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ConnectionStatusAtProviderInvocationConnectivityParameters
+{
+    /// <summary>The parameters for EventBridge to use when invoking the resource endpoint. Documented below.</summary>
+    [JsonPropertyName("resourceParameters")]
+    public IList<V1beta1ConnectionStatusAtProviderInvocationConnectivityParametersResourceParameters>? ResourceParameters { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProvider
 {
     /// <summary>The Amazon Resource Name (ARN) of the connection.</summary>
@@ -1111,17 +1313,29 @@ public partial class V1beta1ConnectionStatusAtProvider
     [JsonPropertyName("authParameters")]
     public IList<V1beta1ConnectionStatusAtProviderAuthParameters>? AuthParameters { get; set; }
 
-    /// <summary>Choose the type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
+    /// <summary>Type of authorization to use for the connection. One of API_KEY,BASIC,OAUTH_CLIENT_CREDENTIALS.</summary>
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Enter a description for the connection. Maximum of 512 characters.</summary>
+    /// <summary>Description for the connection. Maximum of 512 characters.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Parameters to use for invoking a private API. Documented below.</summary>
+    [JsonPropertyName("invocationConnectivityParameters")]
+    public IList<V1beta1ConnectionStatusAtProviderInvocationConnectivityParameters>? InvocationConnectivityParameters { get; set; }
+
+    /// <summary>Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt this connection. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN.</summary>
+    [JsonPropertyName("kmsKeyIdentifier")]
+    public string? KmsKeyIdentifier { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the secret created from the authorization parameters specified for the connection.</summary>
     [JsonPropertyName("secretArn")]

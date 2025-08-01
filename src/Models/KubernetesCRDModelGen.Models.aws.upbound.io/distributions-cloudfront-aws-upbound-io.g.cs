@@ -78,6 +78,15 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunct
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -113,7 +122,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -129,15 +138,19 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionSpecForProviderDefaultCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionSpecForProviderDefaultCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionSpecForProviderDefaultCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -178,7 +191,7 @@ public partial class V1beta1DistributionSpecForProviderDefaultCacheBehavior
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderLoggingConfig
 {
-    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
+    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com. The bucket must have correct ACL attached with "FULL_CONTROL" permission for "awslogsdelivery" account (Canonical ID: "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0") for log transfer to work.</summary>
     [JsonPropertyName("bucket")]
     public string? Bucket { get; set; }
 
@@ -302,6 +315,15 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunct
     public V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
@@ -403,7 +425,7 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -419,15 +441,19 @@ public partial class V1beta1DistributionSpecForProviderOrderedCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionSpecForProviderOrderedCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionSpecForProviderOrderedCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionSpecForProviderOrderedCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -816,6 +842,10 @@ public partial class V1beta1DistributionSpecForProvider
     [JsonPropertyName("aliases")]
     public IList<string>? Aliases { get; set; }
 
+    /// <summary>ID of the Anycast static IP list that is associated with the distribution.</summary>
+    [JsonPropertyName("anycastIpListId")]
+    public string? AnycastIpListId { get; set; }
+
     /// <summary>Any comments you want to include about the distribution.</summary>
     [JsonPropertyName("comment")]
     public string? Comment { get; set; }
@@ -848,7 +878,7 @@ public partial class V1beta1DistributionSpecForProvider
     [JsonPropertyName("isIpv6Enabled")]
     public bool? IsIpv6Enabled { get; set; }
 
-    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one).</summary>
+    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
     [JsonPropertyName("loggingConfig")]
     public IList<V1beta1DistributionSpecForProviderLoggingConfig>? LoggingConfig { get; set; }
 
@@ -867,10 +897,6 @@ public partial class V1beta1DistributionSpecForProvider
     /// <summary>Price class for this distribution. One of PriceClass_All, PriceClass_200, PriceClass_100.</summary>
     [JsonPropertyName("priceClass")]
     public string? PriceClass { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 
     /// <summary>The restriction configuration for this distribution (maximum one).</summary>
     [JsonPropertyName("restrictions")]
@@ -971,6 +997,15 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -1006,7 +1041,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -1022,15 +1057,19 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionSpecInitProviderDefaultCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionSpecInitProviderDefaultCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionSpecInitProviderDefaultCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -1071,7 +1110,7 @@ public partial class V1beta1DistributionSpecInitProviderDefaultCacheBehavior
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderLoggingConfig
 {
-    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
+    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com. The bucket must have correct ACL attached with "FULL_CONTROL" permission for "awslogsdelivery" account (Canonical ID: "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0") for log transfer to work.</summary>
     [JsonPropertyName("bucket")]
     public string? Bucket { get; set; }
 
@@ -1195,6 +1234,15 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunc
     public V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociationFunctionArnSelector? FunctionArnSelector { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociationLambdaArnRefPolicy
@@ -1296,7 +1344,7 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -1312,15 +1360,19 @@ public partial class V1beta1DistributionSpecInitProviderOrderedCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionSpecInitProviderOrderedCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionSpecInitProviderOrderedCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionSpecInitProviderOrderedCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -1709,6 +1761,10 @@ public partial class V1beta1DistributionSpecInitProvider
     [JsonPropertyName("aliases")]
     public IList<string>? Aliases { get; set; }
 
+    /// <summary>ID of the Anycast static IP list that is associated with the distribution.</summary>
+    [JsonPropertyName("anycastIpListId")]
+    public string? AnycastIpListId { get; set; }
+
     /// <summary>Any comments you want to include about the distribution.</summary>
     [JsonPropertyName("comment")]
     public string? Comment { get; set; }
@@ -1741,7 +1797,7 @@ public partial class V1beta1DistributionSpecInitProvider
     [JsonPropertyName("isIpv6Enabled")]
     public bool? IsIpv6Enabled { get; set; }
 
-    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one).</summary>
+    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
     [JsonPropertyName("loggingConfig")]
     public IList<V1beta1DistributionSpecInitProviderLoggingConfig>? LoggingConfig { get; set; }
 
@@ -1992,6 +2048,15 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2027,7 +2092,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -2043,15 +2108,19 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionStatusAtProviderDefaultCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionStatusAtProviderDefaultCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionStatusAtProviderDefaultCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -2092,7 +2161,7 @@ public partial class V1beta1DistributionStatusAtProviderDefaultCacheBehavior
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderLoggingConfig
 {
-    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com.</summary>
+    /// <summary>Amazon S3 bucket to store the access logs in, for example, myawslogbucket.s3.amazonaws.com. The bucket must have correct ACL attached with "FULL_CONTROL" permission for "awslogsdelivery" account (Canonical ID: "c4c1ede66af53448b93c283ce9448c4ba468c9432aa01d700d3878632f77d2d0") for log transfer to work.</summary>
     [JsonPropertyName("bucket")]
     public string? Bucket { get; set; }
 
@@ -2154,6 +2223,15 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorGrpcConfig
+{
+    /// <summary>Whether the distribution is enabled to accept end user requests for content.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLambdaFunctionAssociation
 {
     /// <summary>Specific event to trigger this function. Valid values: viewer-request, origin-request, viewer-response, origin-response.</summary>
@@ -2189,7 +2267,7 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
     [JsonPropertyName("compress")]
     public bool? Compress { get; set; }
 
-    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header.</summary>
+    /// <summary>Default amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request in the absence of an Cache-Control max-age or Expires header. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("defaultTtl")]
     public double? DefaultTtl { get; set; }
 
@@ -2205,15 +2283,19 @@ public partial class V1beta1DistributionStatusAtProviderOrderedCacheBehavior
     [JsonPropertyName("functionAssociation")]
     public IList<V1beta1DistributionStatusAtProviderOrderedCacheBehaviorFunctionAssociation>? FunctionAssociation { get; set; }
 
+    /// <summary>A config block that sets the grpc config.</summary>
+    [JsonPropertyName("grpcConfig")]
+    public IList<V1beta1DistributionStatusAtProviderOrderedCacheBehaviorGrpcConfig>? GrpcConfig { get; set; }
+
     /// <summary>A config block that triggers a lambda function with specific actions (maximum 4).</summary>
     [JsonPropertyName("lambdaFunctionAssociation")]
     public IList<V1beta1DistributionStatusAtProviderOrderedCacheBehaviorLambdaFunctionAssociation>? LambdaFunctionAssociation { get; set; }
 
-    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers.</summary>
+    /// <summary>Maximum amount of time (in seconds) that an object is in a CloudFront cache before CloudFront forwards another request to your origin to determine whether the object has been updated. Only effective in the presence of Cache-Control max-age, Cache-Control s-maxage, and Expires headers. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("maxTtl")]
     public double? MaxTtl { get; set; }
 
-    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds.</summary>
+    /// <summary>Minimum amount of time that you want objects to stay in CloudFront caches before CloudFront queries your origin to see whether the object has been updated. Defaults to 0 seconds. The TTL defined in Cache Policy overrides this configuration.</summary>
     [JsonPropertyName("minTtl")]
     public double? MinTtl { get; set; }
 
@@ -2526,6 +2608,10 @@ public partial class V1beta1DistributionStatusAtProvider
     [JsonPropertyName("aliases")]
     public IList<string>? Aliases { get; set; }
 
+    /// <summary>ID of the Anycast static IP list that is associated with the distribution.</summary>
+    [JsonPropertyName("anycastIpListId")]
+    public string? AnycastIpListId { get; set; }
+
     /// <summary>ARN for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
@@ -2590,7 +2676,7 @@ public partial class V1beta1DistributionStatusAtProvider
     [JsonPropertyName("lastModifiedTime")]
     public string? LastModifiedTime { get; set; }
 
-    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one).</summary>
+    /// <summary>The logging configuration that controls how logs are written to your distribution (maximum one). AWS provides two versions of access logs for CloudFront: Legacy and v2. This argument configures legacy version standard logs.</summary>
     [JsonPropertyName("loggingConfig")]
     public IList<V1beta1DistributionStatusAtProviderLoggingConfig>? LoggingConfig { get; set; }
 

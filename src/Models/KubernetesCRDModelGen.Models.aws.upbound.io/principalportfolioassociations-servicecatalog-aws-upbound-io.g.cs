@@ -156,7 +156,7 @@ public partial class V1beta1PrincipalPortfolioAssociationSpecForProvider
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -465,6 +465,10 @@ public partial class V1beta1PrincipalPortfolioAssociationStatusAtProvider
     /// <summary>Principal type. Setting this argument empty (e.g., principal_type = "") will result in an error. Valid values are IAM and IAM_PATTERN. Default is IAM.</summary>
     [JsonPropertyName("principalType")]
     public string? PrincipalType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

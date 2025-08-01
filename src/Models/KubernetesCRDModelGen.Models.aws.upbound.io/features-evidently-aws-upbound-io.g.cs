@@ -130,7 +130,7 @@ public partial class V1beta1FeatureSpecForProvider
     [JsonPropertyName("projectSelector")]
     public V1beta1FeatureSpecForProviderProjectSelector? ProjectSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -428,6 +428,10 @@ public partial class V1beta1FeatureStatusAtProvider
     /// <summary>The name or ARN of the project that is to contain the new feature.</summary>
     [JsonPropertyName("project")]
     public string? Project { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The current state of the feature. Valid values are AVAILABLE and UPDATING.</summary>
     [JsonPropertyName("status")]

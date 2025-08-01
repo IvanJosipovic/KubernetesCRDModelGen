@@ -91,7 +91,7 @@ spec:
                     description: >-
                       The password of the administrator for the first database created in the namespace.
 
-                      Conflicts with manage_admin_password.
+                      Conflicts with manage_admin_password and admin_user_password_wo.
                     properties:
                       key:
                         description: The key to select.
@@ -107,6 +107,15 @@ spec:
                     - name
                     - namespace
                     type: object
+                  adminUserPasswordWo:
+                    description: >-
+                      The password of the administrator for the first database created in the namespace.
+
+                      Conflicts with manage_admin_password and admin_user_password.
+                    type: string
+                  adminUserPasswordWoVersion:
+                    description: Used together with admin_user_password_wo to trigger an update. Increment this value when an update to the admin_user_password_wo is required
+                    type: number
                   adminUsernameSecretRef:
                     description: The username of the administrator for the first database created in the namespace.
                     properties:
@@ -410,10 +419,13 @@ spec:
                     description: >-
                       Whether to use AWS SecretManager to manage namespace's admin credentials.
 
-                      Conflicts with admin_user_password.
+                      Conflicts with admin_user_password and admin_user_password_wo.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -453,7 +465,7 @@ spec:
                     description: >-
                       The password of the administrator for the first database created in the namespace.
 
-                      Conflicts with manage_admin_password.
+                      Conflicts with manage_admin_password and admin_user_password_wo.
                     properties:
                       key:
                         description: The key to select.
@@ -469,6 +481,15 @@ spec:
                     - name
                     - namespace
                     type: object
+                  adminUserPasswordWo:
+                    description: >-
+                      The password of the administrator for the first database created in the namespace.
+
+                      Conflicts with manage_admin_password and admin_user_password.
+                    type: string
+                  adminUserPasswordWoVersion:
+                    description: Used together with admin_user_password_wo to trigger an update. Increment this value when an update to the admin_user_password_wo is required
+                    type: number
                   adminUsernameSecretRef:
                     description: The username of the administrator for the first database created in the namespace.
                     properties:
@@ -772,7 +793,7 @@ spec:
                     description: >-
                       Whether to use AWS SecretManager to manage namespace's admin credentials.
 
-                      Conflicts with admin_user_password.
+                      Conflicts with admin_user_password and admin_user_password_wo.
                     type: boolean
                   tags:
                     additionalProperties:
@@ -995,11 +1016,20 @@ spec:
               atProvider:
                 properties:
                   adminPasswordSecretArn:
-                    description: Amazon Resource Name (ARN) of the Redshift Serverless Namespace.
+                    description: Amazon Resource Name (ARN) of namespace's admin user credentials secret.
                     type: string
                   adminPasswordSecretKmsKeyId:
                     description: ID of the KMS key used to encrypt the namespace's admin credentials secret.
                     type: string
+                  adminUserPasswordWo:
+                    description: >-
+                      The password of the administrator for the first database created in the namespace.
+
+                      Conflicts with manage_admin_password and admin_user_password.
+                    type: string
+                  adminUserPasswordWoVersion:
+                    description: Used together with admin_user_password_wo to trigger an update. Increment this value when an update to the admin_user_password_wo is required
+                    type: number
                   arn:
                     description: Amazon Resource Name (ARN) of the Redshift Serverless Namespace.
                     type: string
@@ -1031,10 +1061,16 @@ spec:
                     description: >-
                       Whether to use AWS SecretManager to manage namespace's admin credentials.
 
-                      Conflicts with admin_user_password.
+                      Conflicts with admin_user_password and admin_user_password_wo.
                     type: boolean
                   namespaceId:
                     description: The Redshift Namespace ID.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

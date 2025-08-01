@@ -370,11 +370,11 @@ public partial class V1beta1LifecyclePolicySpecForProviderPolicyDetailsScheduleS
     [JsonPropertyName("targetAccounts")]
     public IList<string>? TargetAccounts { get; set; }
 
-    /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
+    /// <summary>The period after which snapshots that are shared with other AWS accounts are automatically unshared.</summary>
     [JsonPropertyName("unshareInterval")]
     public double? UnshareInterval { get; set; }
 
-    /// <summary>The unit for how often the lifecycle policy should be evaluated. HOURS is currently the only allowed value and also the default value. Conflicts with cron_expression. Must be set if interval is set.</summary>
+    /// <summary>The unit of time for the automatic unsharing interval. Valid values are DAYS, WEEKS, MONTHS, YEARS.</summary>
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
@@ -485,7 +485,7 @@ public partial class V1beta1LifecyclePolicySpecForProvider
     [JsonPropertyName("policyDetails")]
     public IList<V1beta1LifecyclePolicySpecForProviderPolicyDetails>? PolicyDetails { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -860,11 +860,11 @@ public partial class V1beta1LifecyclePolicySpecInitProviderPolicyDetailsSchedule
     [JsonPropertyName("targetAccounts")]
     public IList<string>? TargetAccounts { get; set; }
 
-    /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
+    /// <summary>The period after which snapshots that are shared with other AWS accounts are automatically unshared.</summary>
     [JsonPropertyName("unshareInterval")]
     public double? UnshareInterval { get; set; }
 
-    /// <summary>The unit for how often the lifecycle policy should be evaluated. HOURS is currently the only allowed value and also the default value. Conflicts with cron_expression. Must be set if interval is set.</summary>
+    /// <summary>The unit of time for the automatic unsharing interval. Valid values are DAYS, WEEKS, MONTHS, YEARS.</summary>
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
@@ -1358,11 +1358,11 @@ public partial class V1beta1LifecyclePolicyStatusAtProviderPolicyDetailsSchedule
     [JsonPropertyName("targetAccounts")]
     public IList<string>? TargetAccounts { get; set; }
 
-    /// <summary>How often this lifecycle policy should be evaluated. 1, 2,3,4,6,8,12 or 24 are valid values. Conflicts with cron_expression. If set, interval_unit and times must also be set.</summary>
+    /// <summary>The period after which snapshots that are shared with other AWS accounts are automatically unshared.</summary>
     [JsonPropertyName("unshareInterval")]
     public double? UnshareInterval { get; set; }
 
-    /// <summary>The unit for how often the lifecycle policy should be evaluated. HOURS is currently the only allowed value and also the default value. Conflicts with cron_expression. Must be set if interval is set.</summary>
+    /// <summary>The unit of time for the automatic unsharing interval. Valid values are DAYS, WEEKS, MONTHS, YEARS.</summary>
     [JsonPropertyName("unshareIntervalUnit")]
     public string? UnshareIntervalUnit { get; set; }
 }
@@ -1472,6 +1472,10 @@ public partial class V1beta1LifecyclePolicyStatusAtProvider
     /// <summary>See the policy_details configuration block. Max of 1.</summary>
     [JsonPropertyName("policyDetails")]
     public IList<V1beta1LifecyclePolicyStatusAtProviderPolicyDetails>? PolicyDetails { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether the lifecycle policy should be enabled or disabled. ENABLED or DISABLED are valid values. Defaults to ENABLED.</summary>
     [JsonPropertyName("state")]

@@ -145,7 +145,7 @@ public partial class V1beta1AssociationSpecForProviderTargets
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>A list of instance IDs or tag values. AWS currently limits this list size to one value.</summary>
+    /// <summary>User-defined criteria that maps to Key. A list of instance IDs or tag values.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 
@@ -182,10 +182,6 @@ public partial class V1beta1AssociationSpecForProvider
     [JsonPropertyName("documentVersion")]
     public string? DocumentVersion { get; set; }
 
-    /// <summary>The instance ID to apply an SSM document to. Use targets with key InstanceIds for document schema versions 2.0 and above. Use the targets attribute instead.</summary>
-    [JsonPropertyName("instanceId")]
-    public string? InstanceId { get; set; }
-
     /// <summary>The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</summary>
     [JsonPropertyName("maxConcurrency")]
     public string? MaxConcurrency { get; set; }
@@ -214,7 +210,7 @@ public partial class V1beta1AssociationSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -376,7 +372,7 @@ public partial class V1beta1AssociationSpecInitProviderTargets
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>A list of instance IDs or tag values. AWS currently limits this list size to one value.</summary>
+    /// <summary>User-defined criteria that maps to Key. A list of instance IDs or tag values.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 
@@ -412,10 +408,6 @@ public partial class V1beta1AssociationSpecInitProvider
     /// <summary>The document version you want to associate with the target(s). Can be a specific version or the default version.</summary>
     [JsonPropertyName("documentVersion")]
     public string? DocumentVersion { get; set; }
-
-    /// <summary>The instance ID to apply an SSM document to. Use targets with key InstanceIds for document schema versions 2.0 and above. Use the targets attribute instead.</summary>
-    [JsonPropertyName("instanceId")]
-    public string? InstanceId { get; set; }
 
     /// <summary>The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</summary>
     [JsonPropertyName("maxConcurrency")]
@@ -623,7 +615,7 @@ public partial class V1beta1AssociationStatusAtProviderTargets
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>A list of instance IDs or tag values. AWS currently limits this list size to one value.</summary>
+    /// <summary>User-defined criteria that maps to Key. A list of instance IDs or tag values.</summary>
     [JsonPropertyName("values")]
     public IList<string>? Values { get; set; }
 }
@@ -664,10 +656,6 @@ public partial class V1beta1AssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The instance ID to apply an SSM document to. Use targets with key InstanceIds for document schema versions 2.0 and above. Use the targets attribute instead.</summary>
-    [JsonPropertyName("instanceId")]
-    public string? InstanceId { get; set; }
-
     /// <summary>The maximum number of targets allowed to run the association at the same time. You can specify a number, for example 10, or a percentage of the target set, for example 10%.</summary>
     [JsonPropertyName("maxConcurrency")]
     public string? MaxConcurrency { get; set; }
@@ -687,6 +675,10 @@ public partial class V1beta1AssociationStatusAtProvider
     /// <summary>A block of arbitrary string parameters to pass to the SSM document.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A cron or rate expression that specifies when the association runs.</summary>
     [JsonPropertyName("scheduleExpression")]

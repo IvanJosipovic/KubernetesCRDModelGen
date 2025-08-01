@@ -24,11 +24,11 @@ public partial class V1beta1ProvisionedConcurrencyConfigSpecForProvider
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.</summary>
+    /// <summary>Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 }
@@ -49,7 +49,7 @@ public partial class V1beta1ProvisionedConcurrencyConfigSpecInitProvider
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.</summary>
+    /// <summary>Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 }
@@ -206,7 +206,11 @@ public partial class V1beta1ProvisionedConcurrencyConfigStatusAtProvider
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>Whether to retain the provisoned concurrency configuration upon destruction. Defaults to false. If set to true, the resource in simply removed from state instead.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Whether to retain the provisioned concurrency configuration upon destruction. Defaults to false. If set to true, the resource is simply removed from state instead.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 }
@@ -257,7 +261,7 @@ public partial class V1beta1ProvisionedConcurrencyConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages a Lambda Provisioned Concurrency Configuration</summary>
+/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages an AWS Lambda Provisioned Concurrency Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProvisionedConcurrencyConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProvisionedConcurrencyConfigSpec>, IStatus<V1beta1ProvisionedConcurrencyConfigStatus>
@@ -287,7 +291,7 @@ public partial class V1beta1ProvisionedConcurrencyConfig : IKubernetesObject<V1O
     public V1beta1ProvisionedConcurrencyConfigStatus? Status { get; set; }
 }
 
-/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages a Lambda Provisioned Concurrency Configuration</summary>
+/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages an AWS Lambda Provisioned Concurrency Configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ProvisionedConcurrencyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProvisionedConcurrencyConfig>

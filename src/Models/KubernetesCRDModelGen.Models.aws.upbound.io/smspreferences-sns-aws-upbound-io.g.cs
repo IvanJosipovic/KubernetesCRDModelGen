@@ -96,7 +96,7 @@ public partial class V1beta1SMSPreferencesSpecForProvider
     [JsonPropertyName("monthlySpendLimit")]
     public double? MonthlySpendLimit { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -357,6 +357,10 @@ public partial class V1beta1SMSPreferencesStatusAtProvider
     /// <summary>The maximum amount in USD that you are willing to spend each month to send SMS messages.</summary>
     [JsonPropertyName("monthlySpendLimit")]
     public double? MonthlySpendLimit { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.</summary>
     [JsonPropertyName("usageReportS3Bucket")]

@@ -198,7 +198,7 @@ public partial class V1beta2RoutingProfileSpecForProvider
     [JsonPropertyName("queueConfigs")]
     public IList<V1beta2RoutingProfileSpecForProviderQueueConfigs>? QueueConfigs { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -611,6 +611,10 @@ public partial class V1beta2RoutingProfileStatusAtProvider
     /// <summary>One or more queue_configs blocks that specify the inbound queues associated with the routing profile. If no queue is added, the agent only can make outbound calls. The queue_configs block is documented below.</summary>
     [JsonPropertyName("queueConfigs")]
     public IList<V1beta2RoutingProfileStatusAtProviderQueueConfigs>? QueueConfigs { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The identifier for the Routing Profile.</summary>
     [JsonPropertyName("routingProfileId")]

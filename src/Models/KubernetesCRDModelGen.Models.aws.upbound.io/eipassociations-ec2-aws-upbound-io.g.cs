@@ -124,7 +124,7 @@ public partial class V1beta1EIPAssociationSpecForProviderInstanceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EIPAssociationSpecForProvider
 {
-    /// <summary>The allocation ID. This is required for EC2-VPC.</summary>
+    /// <summary>ID of the associated Elastic IP. This argument is required despite being optional at the resource level due to legacy support for EC2-Classic networking.</summary>
     [JsonPropertyName("allocationId")]
     public string? AllocationId { get; set; }
 
@@ -136,11 +136,11 @@ public partial class V1beta1EIPAssociationSpecForProvider
     [JsonPropertyName("allocationIdSelector")]
     public V1beta1EIPAssociationSpecForProviderAllocationIdSelector? AllocationIdSelector { get; set; }
 
-    /// <summary>Whether to allow an Elastic IP to be re-associated. Defaults to true in VPC.</summary>
+    /// <summary>Whether to allow an Elastic IP address to be re-associated. Defaults to true.</summary>
     [JsonPropertyName("allowReassociation")]
     public bool? AllowReassociation { get; set; }
 
-    /// <summary>The ID of the instance. This is required for EC2-Classic. For EC2-VPC, you can specify either the instance ID or the network interface ID, but not both. The operation fails if you specify an instance ID unless exactly one network interface is attached.</summary>
+    /// <summary>ID of the instance. The instance must have exactly one attached network interface. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
 
@@ -152,19 +152,19 @@ public partial class V1beta1EIPAssociationSpecForProvider
     [JsonPropertyName("instanceIdSelector")]
     public V1beta1EIPAssociationSpecForProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 
-    /// <summary>The ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID.</summary>
+    /// <summary>ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 
-    /// <summary>The primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
+    /// <summary>Primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
     [JsonPropertyName("privateIpAddress")]
     public string? PrivateIpAddress { get; set; }
 
-    /// <summary>The Elastic IP address. This is required for EC2-Classic.</summary>
+    /// <summary>Address of the associated Elastic IP.</summary>
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -285,7 +285,7 @@ public partial class V1beta1EIPAssociationSpecInitProviderInstanceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EIPAssociationSpecInitProvider
 {
-    /// <summary>The allocation ID. This is required for EC2-VPC.</summary>
+    /// <summary>ID of the associated Elastic IP. This argument is required despite being optional at the resource level due to legacy support for EC2-Classic networking.</summary>
     [JsonPropertyName("allocationId")]
     public string? AllocationId { get; set; }
 
@@ -297,11 +297,11 @@ public partial class V1beta1EIPAssociationSpecInitProvider
     [JsonPropertyName("allocationIdSelector")]
     public V1beta1EIPAssociationSpecInitProviderAllocationIdSelector? AllocationIdSelector { get; set; }
 
-    /// <summary>Whether to allow an Elastic IP to be re-associated. Defaults to true in VPC.</summary>
+    /// <summary>Whether to allow an Elastic IP address to be re-associated. Defaults to true.</summary>
     [JsonPropertyName("allowReassociation")]
     public bool? AllowReassociation { get; set; }
 
-    /// <summary>The ID of the instance. This is required for EC2-Classic. For EC2-VPC, you can specify either the instance ID or the network interface ID, but not both. The operation fails if you specify an instance ID unless exactly one network interface is attached.</summary>
+    /// <summary>ID of the instance. The instance must have exactly one attached network interface. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
 
@@ -313,15 +313,15 @@ public partial class V1beta1EIPAssociationSpecInitProvider
     [JsonPropertyName("instanceIdSelector")]
     public V1beta1EIPAssociationSpecInitProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 
-    /// <summary>The ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID.</summary>
+    /// <summary>ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 
-    /// <summary>The primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
+    /// <summary>Primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
     [JsonPropertyName("privateIpAddress")]
     public string? PrivateIpAddress { get; set; }
 
-    /// <summary>The Elastic IP address. This is required for EC2-Classic.</summary>
+    /// <summary>Address of the associated Elastic IP.</summary>
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
 }
@@ -462,33 +462,37 @@ public partial class V1beta1EIPAssociationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EIPAssociationStatusAtProvider
 {
-    /// <summary>The allocation ID. This is required for EC2-VPC.</summary>
+    /// <summary>ID of the associated Elastic IP. This argument is required despite being optional at the resource level due to legacy support for EC2-Classic networking.</summary>
     [JsonPropertyName("allocationId")]
     public string? AllocationId { get; set; }
 
-    /// <summary>Whether to allow an Elastic IP to be re-associated. Defaults to true in VPC.</summary>
+    /// <summary>Whether to allow an Elastic IP address to be re-associated. Defaults to true.</summary>
     [JsonPropertyName("allowReassociation")]
     public bool? AllowReassociation { get; set; }
 
-    /// <summary></summary>
+    /// <summary>ID that represents the association of the Elastic IP address with an instance.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the instance. This is required for EC2-Classic. For EC2-VPC, you can specify either the instance ID or the network interface ID, but not both. The operation fails if you specify an instance ID unless exactly one network interface is attached.</summary>
+    /// <summary>ID of the instance. The instance must have exactly one attached network interface. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
 
-    /// <summary>The ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID.</summary>
+    /// <summary>ID of the network interface. If the instance has more than one network interface, you must specify a network interface ID. You can specify either the instance ID or the network interface ID, but not both.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 
-    /// <summary>The primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
+    /// <summary>Primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.</summary>
     [JsonPropertyName("privateIpAddress")]
     public string? PrivateIpAddress { get; set; }
 
-    /// <summary>The Elastic IP address. This is required for EC2-Classic.</summary>
+    /// <summary>Address of the associated Elastic IP.</summary>
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

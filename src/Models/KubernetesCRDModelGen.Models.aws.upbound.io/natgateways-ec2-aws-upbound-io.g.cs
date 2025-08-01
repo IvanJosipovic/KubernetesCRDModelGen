@@ -200,7 +200,7 @@ public partial class V1beta1NATGatewaySpecForProvider
     [JsonPropertyName("privateIp")]
     public string? PrivateIp { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -633,6 +633,10 @@ public partial class V1beta1NATGatewayStatusAtProvider
     /// <summary>The Elastic IP address associated with the NAT Gateway.</summary>
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A list of secondary allocation EIP IDs for this NAT Gateway.</summary>
     [JsonPropertyName("secondaryAllocationIds")]

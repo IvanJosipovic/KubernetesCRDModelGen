@@ -723,7 +723,7 @@ public partial class V1beta1SpotFleetRequestSpecForProvider
     [JsonPropertyName("onDemandTargetCapacity")]
     public double? OnDemandTargetCapacity { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -2202,6 +2202,10 @@ public partial class V1beta1SpotFleetRequestStatusAtProvider
     /// <summary>The number of On-Demand units to request. If the request type is maintain, you can specify a target capacity of 0 and add capacity later.</summary>
     [JsonPropertyName("onDemandTargetCapacity")]
     public double? OnDemandTargetCapacity { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Indicates whether Spot fleet should replace unhealthy instances. Default false.</summary>
     [JsonPropertyName("replaceUnhealthyInstances")]

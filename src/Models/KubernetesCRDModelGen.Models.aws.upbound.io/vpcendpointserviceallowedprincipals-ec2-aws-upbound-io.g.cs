@@ -72,7 +72,7 @@ public partial class V1beta1VPCEndpointServiceAllowedPrincipalSpecForProvider
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1VPCEndpointServiceAllowedPrincipalStatusAtProvider
     /// <summary>The ARN of the principal to allow permissions.</summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the VPC endpoint service to allow permission.</summary>
     [JsonPropertyName("vpcEndpointServiceId")]

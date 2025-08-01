@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecForProvider
 {
-    /// <summary>- The ID of the bundle to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
+    /// <summary>Bundle ID to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>AWS by default will not delete an s3 bucket which is not empty, to prevent losing bucket data and affecting other resources in lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
+    /// <summary>AWS by default will not delete a bucket which is not empty, to prevent losing bucket data and affecting other resources in Lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
     [JsonPropertyName("forceDelete")]
     public bool? ForceDelete { get; set; }
 
-    /// <summary>The Amazon Web Services Region name. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -33,11 +33,11 @@ public partial class V1beta1BucketSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketSpecInitProvider
 {
-    /// <summary>- The ID of the bundle to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
+    /// <summary>Bundle ID to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>AWS by default will not delete an s3 bucket which is not empty, to prevent losing bucket data and affecting other resources in lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
+    /// <summary>AWS by default will not delete a bucket which is not empty, to prevent losing bucket data and affecting other resources in Lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
     [JsonPropertyName("forceDelete")]
     public bool? ForceDelete { get; set; }
 
@@ -182,35 +182,35 @@ public partial class V1beta1BucketSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketStatusAtProvider
 {
-    /// <summary>The ARN of the lightsail bucket.</summary>
+    /// <summary>ARN of the Lightsail bucket.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The resource Availability Zone. Follows the format us-east-2a (case-sensitive).</summary>
+    /// <summary>Availability Zone. Follows the format us-east-2a (case-sensitive).</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>- The ID of the bundle to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
+    /// <summary>Bundle ID to use for the bucket. A bucket bundle specifies the monthly cost, storage space, and data transfer quota for a bucket. Use the get-bucket-bundles cli command to get a list of bundle IDs that you can specify.</summary>
     [JsonPropertyName("bundleId")]
     public string? BundleId { get; set; }
 
-    /// <summary>The timestamp when the bucket was created.</summary>
+    /// <summary>Date and time when the bucket was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>AWS by default will not delete an s3 bucket which is not empty, to prevent losing bucket data and affecting other resources in lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
+    /// <summary>AWS by default will not delete a bucket which is not empty, to prevent losing bucket data and affecting other resources in Lightsail. If force_delete is set to true the bucket will be deleted even when not empty.</summary>
     [JsonPropertyName("forceDelete")]
     public bool? ForceDelete { get; set; }
 
-    /// <summary>The name used for this bucket (matches name).</summary>
+    /// <summary>Name used for this bucket (matches name).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The Amazon Web Services Region name. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
-    /// <summary>The support code for the resource. Include this code in your email to support when you have questions about a resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
+    /// <summary>Support code for the resource. Include this code in your email to support when you have questions about a resource in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
     [JsonPropertyName("supportCode")]
     public string? SupportCode { get; set; }
 
@@ -218,11 +218,11 @@ public partial class V1beta1BucketStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary></summary>
+    /// <summary>URL of the bucket.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -273,7 +273,7 @@ public partial class V1beta1BucketStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Bucket is the Schema for the Buckets API. Provides a lightsail bucket</summary>
+/// <summary>Bucket is the Schema for the Buckets API. Manages a Lightsail object storage bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BucketSpec>, IStatus<V1beta1BucketStatus>
@@ -303,7 +303,7 @@ public partial class V1beta1Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     public V1beta1BucketStatus? Status { get; set; }
 }
 
-/// <summary>Bucket is the Schema for the Buckets API. Provides a lightsail bucket</summary>
+/// <summary>Bucket is the Schema for the Buckets API. Manages a Lightsail object storage bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BucketList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Bucket>

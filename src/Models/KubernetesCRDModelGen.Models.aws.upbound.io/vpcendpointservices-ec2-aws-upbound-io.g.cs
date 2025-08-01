@@ -156,7 +156,7 @@ public partial class V1beta1VPCEndpointServiceSpecForProvider
     [JsonPropertyName("privateDnsName")]
     public string? PrivateDnsName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -534,6 +534,10 @@ public partial class V1beta1VPCEndpointServiceStatusAtProvider
     /// <summary>List of objects containing information about the endpoint service private DNS name configuration.</summary>
     [JsonPropertyName("privateDnsNameConfiguration")]
     public IList<V1beta1VPCEndpointServiceStatusAtProviderPrivateDnsNameConfiguration>? PrivateDnsNameConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The service name.</summary>
     [JsonPropertyName("serviceName")]

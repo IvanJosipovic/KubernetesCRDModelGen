@@ -173,7 +173,7 @@ public partial class V1beta1PermissionSpecForProvider
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -524,6 +524,10 @@ public partial class V1beta1PermissionStatusAtProvider
     /// <summary>The 12-digit AWS account ID that you are permitting to put events to your default event bus. Specify * to permit any account to put events to your default event bus, optionally limited by condition.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An identifier string for the external account that you are granting permissions to.</summary>
     [JsonPropertyName("statementId")]

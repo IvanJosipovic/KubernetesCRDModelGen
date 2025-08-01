@@ -127,7 +127,7 @@ spec:
                     items:
                       properties:
                         recordingFrequency:
-                          description: Default reecording frequency. CONTINUOUS or DAILY.
+                          description: Default recording frequency. CONTINUOUS or DAILY.
                           type: string
                         recordingModeOverride:
                           description: Recording mode overrides. Detailed below.
@@ -137,7 +137,7 @@ spec:
                                 description: A description you provide of the override.
                                 type: string
                               recordingFrequency:
-                                description: Default reecording frequency. CONTINUOUS or DAILY.
+                                description: Default recording frequency. CONTINUOUS or DAILY.
                                 type: string
                               resourceTypes:
                                 description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -150,7 +150,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See AWS Docs for more details.
@@ -309,7 +312,7 @@ spec:
                     items:
                       properties:
                         recordingFrequency:
-                          description: Default reecording frequency. CONTINUOUS or DAILY.
+                          description: Default recording frequency. CONTINUOUS or DAILY.
                           type: string
                         recordingModeOverride:
                           description: Recording mode overrides. Detailed below.
@@ -319,7 +322,7 @@ spec:
                                 description: A description you provide of the override.
                                 type: string
                               recordingFrequency:
-                                description: Default reecording frequency. CONTINUOUS or DAILY.
+                                description: Default recording frequency. CONTINUOUS or DAILY.
                                 type: string
                               resourceTypes:
                                 description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -680,7 +683,7 @@ spec:
                     items:
                       properties:
                         recordingFrequency:
-                          description: Default reecording frequency. CONTINUOUS or DAILY.
+                          description: Default recording frequency. CONTINUOUS or DAILY.
                           type: string
                         recordingModeOverride:
                           description: Recording mode overrides. Detailed below.
@@ -690,7 +693,7 @@ spec:
                                 description: A description you provide of the override.
                                 type: string
                               recordingFrequency:
-                                description: Default reecording frequency. CONTINUOUS or DAILY.
+                                description: Default recording frequency. CONTINUOUS or DAILY.
                                 type: string
                               resourceTypes:
                                 description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -702,6 +705,12 @@ spec:
                           type: array
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   roleArn:
                     description: Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See AWS Docs for more details.
                     type: string
@@ -879,7 +888,7 @@ spec:
                     description: Recording mode - see below.
                     properties:
                       recordingFrequency:
-                        description: Default reecording frequency. CONTINUOUS or DAILY.
+                        description: Default recording frequency. CONTINUOUS or DAILY.
                         type: string
                       recordingModeOverride:
                         description: Recording mode overrides. Detailed below.
@@ -888,7 +897,7 @@ spec:
                             description: A description you provide of the override.
                             type: string
                           recordingFrequency:
-                            description: Default reecording frequency. CONTINUOUS or DAILY.
+                            description: Default recording frequency. CONTINUOUS or DAILY.
                             type: string
                           resourceTypes:
                             description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -899,7 +908,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See AWS Docs for more details.
@@ -1055,7 +1067,7 @@ spec:
                     description: Recording mode - see below.
                     properties:
                       recordingFrequency:
-                        description: Default reecording frequency. CONTINUOUS or DAILY.
+                        description: Default recording frequency. CONTINUOUS or DAILY.
                         type: string
                       recordingModeOverride:
                         description: Recording mode overrides. Detailed below.
@@ -1064,7 +1076,7 @@ spec:
                             description: A description you provide of the override.
                             type: string
                           recordingFrequency:
-                            description: Default reecording frequency. CONTINUOUS or DAILY.
+                            description: Default recording frequency. CONTINUOUS or DAILY.
                             type: string
                           resourceTypes:
                             description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -1420,7 +1432,7 @@ spec:
                     description: Recording mode - see below.
                     properties:
                       recordingFrequency:
-                        description: Default reecording frequency. CONTINUOUS or DAILY.
+                        description: Default recording frequency. CONTINUOUS or DAILY.
                         type: string
                       recordingModeOverride:
                         description: Recording mode overrides. Detailed below.
@@ -1429,7 +1441,7 @@ spec:
                             description: A description you provide of the override.
                             type: string
                           recordingFrequency:
-                            description: Default reecording frequency. CONTINUOUS or DAILY.
+                            description: Default recording frequency. CONTINUOUS or DAILY.
                             type: string
                           resourceTypes:
                             description: A list that specifies the types of AWS resources for which AWS Config excludes records configuration changes. See relevant part of AWS Docs for available types.
@@ -1439,6 +1451,12 @@ spec:
                             x-kubernetes-list-type: set
                         type: object
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   roleArn:
                     description: Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See AWS Docs for more details.
                     type: string

@@ -24,11 +24,11 @@ public partial class V1beta1IPSetSpecForProvider
     [JsonPropertyName("ipAddressVersion")]
     public string? IpAddressVersion { get; set; }
 
-    /// <summary>A friendly name of the IP set.</summary>
+    /// <summary>A friendly name of the IP set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -57,7 +57,7 @@ public partial class V1beta1IPSetSpecInitProvider
     [JsonPropertyName("ipAddressVersion")]
     public string? IpAddressVersion { get; set; }
 
-    /// <summary>A friendly name of the IP set.</summary>
+    /// <summary>A friendly name of the IP set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -230,9 +230,13 @@ public partial class V1beta1IPSetStatusAtProvider
     [JsonPropertyName("lockToken")]
     public string? LockToken { get; set; }
 
-    /// <summary>A friendly name of the IP set.</summary>
+    /// <summary>A friendly name of the IP set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are CLOUDFRONT or REGIONAL. To work with CloudFront, you must also specify the Region US East (N. Virginia).</summary>
     [JsonPropertyName("scope")]

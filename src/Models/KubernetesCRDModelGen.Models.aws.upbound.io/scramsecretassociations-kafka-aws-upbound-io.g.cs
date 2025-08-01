@@ -136,7 +136,7 @@ public partial class V1beta1ScramSecretAssociationSpecForProvider
     [JsonPropertyName("clusterArnSelector")]
     public V1beta1ScramSecretAssociationSpecForProviderClusterArnSelector? ClusterArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1ScramSecretAssociationStatusAtProvider
     /// <summary>Amazon Resource Name (ARN) of the MSK cluster.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of all AWS Secrets Manager secret ARNs to associate with the cluster. Secrets not referenced, selected or listed here will be disassociated from the cluster.</summary>
     [JsonPropertyName("secretArnList")]

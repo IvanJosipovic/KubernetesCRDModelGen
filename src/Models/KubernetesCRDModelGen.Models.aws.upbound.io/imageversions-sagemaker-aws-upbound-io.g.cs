@@ -68,9 +68,17 @@ public partial class V1beta1ImageVersionSpecForProviderImageNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageVersionSpecForProvider
 {
+    /// <summary>A list of aliases for the image version.</summary>
+    [JsonPropertyName("aliases")]
+    public IList<string>? Aliases { get; set; }
+
     /// <summary>The registry path of the container image on which this image version is based.</summary>
     [JsonPropertyName("baseImage")]
     public string? BaseImage { get; set; }
+
+    /// <summary>Indicates Horovod compatibility.</summary>
+    [JsonPropertyName("horovod")]
+    public bool? Horovod { get; set; }
 
     /// <summary>The name of the image. Must be unique to your account.</summary>
     [JsonPropertyName("imageName")]
@@ -84,9 +92,33 @@ public partial class V1beta1ImageVersionSpecForProvider
     [JsonPropertyName("imageNameSelector")]
     public V1beta1ImageVersionSpecForProviderImageNameSelector? ImageNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Indicates SageMaker AI job type compatibility. Valid values are: TRAINING, INFERENCE, and NOTEBOOK_KERNEL.</summary>
+    [JsonPropertyName("jobType")]
+    public string? JobType { get; set; }
+
+    /// <summary>The machine learning framework vended in the image version.</summary>
+    [JsonPropertyName("mlFramework")]
+    public string? MlFramework { get; set; }
+
+    /// <summary>Indicates CPU or GPU compatibility. Valid values are: CPU and GPU.</summary>
+    [JsonPropertyName("processor")]
+    public string? Processor { get; set; }
+
+    /// <summary>The supported programming language and its version.</summary>
+    [JsonPropertyName("programmingLang")]
+    public string? ProgrammingLang { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
+
+    /// <summary>The maintainer description of the image version.</summary>
+    [JsonPropertyName("releaseNotes")]
+    public string? ReleaseNotes { get; set; }
+
+    /// <summary>The stability of the image version, specified by the maintainer. Valid values are: NOT_PROVIDED, STABLE, TO_BE_ARCHIVED, and ARCHIVED.</summary>
+    [JsonPropertyName("vendorGuidance")]
+    public string? VendorGuidance { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -149,9 +181,17 @@ public partial class V1beta1ImageVersionSpecInitProviderImageNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageVersionSpecInitProvider
 {
+    /// <summary>A list of aliases for the image version.</summary>
+    [JsonPropertyName("aliases")]
+    public IList<string>? Aliases { get; set; }
+
     /// <summary>The registry path of the container image on which this image version is based.</summary>
     [JsonPropertyName("baseImage")]
     public string? BaseImage { get; set; }
+
+    /// <summary>Indicates Horovod compatibility.</summary>
+    [JsonPropertyName("horovod")]
+    public bool? Horovod { get; set; }
 
     /// <summary>The name of the image. Must be unique to your account.</summary>
     [JsonPropertyName("imageName")]
@@ -164,6 +204,30 @@ public partial class V1beta1ImageVersionSpecInitProvider
     /// <summary>Selector for a Image in sagemaker to populate imageName.</summary>
     [JsonPropertyName("imageNameSelector")]
     public V1beta1ImageVersionSpecInitProviderImageNameSelector? ImageNameSelector { get; set; }
+
+    /// <summary>Indicates SageMaker AI job type compatibility. Valid values are: TRAINING, INFERENCE, and NOTEBOOK_KERNEL.</summary>
+    [JsonPropertyName("jobType")]
+    public string? JobType { get; set; }
+
+    /// <summary>The machine learning framework vended in the image version.</summary>
+    [JsonPropertyName("mlFramework")]
+    public string? MlFramework { get; set; }
+
+    /// <summary>Indicates CPU or GPU compatibility. Valid values are: CPU and GPU.</summary>
+    [JsonPropertyName("processor")]
+    public string? Processor { get; set; }
+
+    /// <summary>The supported programming language and its version.</summary>
+    [JsonPropertyName("programmingLang")]
+    public string? ProgrammingLang { get; set; }
+
+    /// <summary>The maintainer description of the image version.</summary>
+    [JsonPropertyName("releaseNotes")]
+    public string? ReleaseNotes { get; set; }
+
+    /// <summary>The stability of the image version, specified by the maintainer. Valid values are: NOT_PROVIDED, STABLE, TO_BE_ARCHIVED, and ARCHIVED.</summary>
+    [JsonPropertyName("vendorGuidance")]
+    public string? VendorGuidance { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -302,6 +366,10 @@ public partial class V1beta1ImageVersionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageVersionStatusAtProvider
 {
+    /// <summary>A list of aliases for the image version.</summary>
+    [JsonPropertyName("aliases")]
+    public IList<string>? Aliases { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Image Version.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
@@ -314,11 +382,15 @@ public partial class V1beta1ImageVersionStatusAtProvider
     [JsonPropertyName("containerImage")]
     public string? ContainerImage { get; set; }
 
-    /// <summary>The name of the Image.</summary>
+    /// <summary>Indicates Horovod compatibility.</summary>
+    [JsonPropertyName("horovod")]
+    public bool? Horovod { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the image the version is based on.</summary>
+    /// <summary>The Amazon Resource Name (ARN) assigned by AWS to this Image Version.</summary>
     [JsonPropertyName("imageArn")]
     public string? ImageArn { get; set; }
 
@@ -326,7 +398,35 @@ public partial class V1beta1ImageVersionStatusAtProvider
     [JsonPropertyName("imageName")]
     public string? ImageName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Indicates SageMaker AI job type compatibility. Valid values are: TRAINING, INFERENCE, and NOTEBOOK_KERNEL.</summary>
+    [JsonPropertyName("jobType")]
+    public string? JobType { get; set; }
+
+    /// <summary>The machine learning framework vended in the image version.</summary>
+    [JsonPropertyName("mlFramework")]
+    public string? MlFramework { get; set; }
+
+    /// <summary>Indicates CPU or GPU compatibility. Valid values are: CPU and GPU.</summary>
+    [JsonPropertyName("processor")]
+    public string? Processor { get; set; }
+
+    /// <summary>The supported programming language and its version.</summary>
+    [JsonPropertyName("programmingLang")]
+    public string? ProgrammingLang { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The maintainer description of the image version.</summary>
+    [JsonPropertyName("releaseNotes")]
+    public string? ReleaseNotes { get; set; }
+
+    /// <summary>The stability of the image version, specified by the maintainer. Valid values are: NOT_PROVIDED, STABLE, TO_BE_ARCHIVED, and ARCHIVED.</summary>
+    [JsonPropertyName("vendorGuidance")]
+    public string? VendorGuidance { get; set; }
+
+    /// <summary>The version of the image. If not specified, the latest version is described.</summary>
     [JsonPropertyName("version")]
     public double? Version { get; set; }
 }
@@ -377,7 +477,7 @@ public partial class V1beta1ImageVersionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ImageVersion is the Schema for the ImageVersions API. Provides a SageMaker Image Version resource.</summary>
+/// <summary>ImageVersion is the Schema for the ImageVersions API. Provides a SageMaker AI Image Version resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ImageVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ImageVersionSpec>, IStatus<V1beta1ImageVersionStatus>
@@ -407,7 +507,7 @@ public partial class V1beta1ImageVersion : IKubernetesObject<V1ObjectMeta>, ISpe
     public V1beta1ImageVersionStatus? Status { get; set; }
 }
 
-/// <summary>ImageVersion is the Schema for the ImageVersions API. Provides a SageMaker Image Version resource.</summary>
+/// <summary>ImageVersion is the Schema for the ImageVersions API. Provides a SageMaker AI Image Version resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ImageVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ImageVersion>

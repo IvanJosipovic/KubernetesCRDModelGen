@@ -98,13 +98,13 @@ spec:
                           description: The Key ID, ARN, alias, or alias ARN of the KMS key that should be used to encrypt the replica file system. If omitted, the default KMS key for EFS /aws/elasticfilesystem will be used.
                           type: string
                         region:
-                          description: The region in which the replica should be created.
+                          description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                           type: string
                       type: object
                     type: array
                   region:
                     description: >-
-                      The region in which the replica should be created.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -560,7 +560,7 @@ spec:
                           description: The Key ID, ARN, alias, or alias ARN of the KMS key that should be used to encrypt the replica file system. If omitted, the default KMS key for EFS /aws/elasticfilesystem will be used.
                           type: string
                         region:
-                          description: The region in which the replica should be created.
+                          description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                           type: string
                         status:
                           description: The status of the replication.
@@ -571,6 +571,12 @@ spec:
                     type: string
                   originalSourceFileSystemArn:
                     description: The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceFileSystemArn:
                     description: The Amazon Resource Name (ARN) of the current source file system in the replication configuration.
@@ -728,12 +734,12 @@ spec:
                         description: The Key ID, ARN, alias, or alias ARN of the KMS key that should be used to encrypt the replica file system. If omitted, the default KMS key for EFS /aws/elasticfilesystem will be used.
                         type: string
                       region:
-                        description: The region in which the replica should be created.
+                        description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                         type: string
                     type: object
                   region:
                     description: >-
-                      The region in which the replica should be created.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -1186,7 +1192,7 @@ spec:
                         description: The Key ID, ARN, alias, or alias ARN of the KMS key that should be used to encrypt the replica file system. If omitted, the default KMS key for EFS /aws/elasticfilesystem will be used.
                         type: string
                       region:
-                        description: The region in which the replica should be created.
+                        description: Region where this resource will be managed. Defaults to the Region set in the provider configuration.
                         type: string
                       status:
                         description: The status of the replication.
@@ -1196,6 +1202,12 @@ spec:
                     type: string
                   originalSourceFileSystemArn:
                     description: The Amazon Resource Name (ARN) of the original source Amazon EFS file system in the replication configuration.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceFileSystemArn:
                     description: The Amazon Resource Name (ARN) of the current source file system in the replication configuration.

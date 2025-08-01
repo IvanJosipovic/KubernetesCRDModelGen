@@ -49,7 +49,7 @@ public partial class V1beta1DocumentSpecForProvider
     [JsonPropertyName("permissions")]
     public IDictionary<string, string>? Permissions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -361,6 +361,10 @@ public partial class V1beta1DocumentStatusAtProvider
     /// <summary>The list of operating system (OS) platforms compatible with this SSM document. Valid values: Windows, Linux, MacOS.</summary>
     [JsonPropertyName("platformTypes")]
     public IList<string>? PlatformTypes { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The schema version of the document.</summary>
     [JsonPropertyName("schemaVersion")]

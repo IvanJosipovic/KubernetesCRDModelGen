@@ -264,7 +264,7 @@ public partial class V1beta1RiskConfigurationSpecForProvider
     [JsonPropertyName("compromisedCredentialsRiskConfiguration")]
     public IList<V1beta1RiskConfigurationSpecForProviderCompromisedCredentialsRiskConfiguration>? CompromisedCredentialsRiskConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -893,6 +893,10 @@ public partial class V1beta1RiskConfigurationStatusAtProvider
     /// <summary>The user pool ID or the user pool ID and Client Id separated by a : if the configuration is client specific.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The configuration to override the risk decision. See details below.</summary>
     [JsonPropertyName("riskExceptionConfiguration")]

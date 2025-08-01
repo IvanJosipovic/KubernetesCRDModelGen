@@ -136,7 +136,7 @@ public partial class V1beta1UserGroupSpecForProvider
     [JsonPropertyName("precedence")]
     public double? Precedence { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -469,6 +469,10 @@ public partial class V1beta1UserGroupStatusAtProvider
     /// <summary>The precedence of the user group.</summary>
     [JsonPropertyName("precedence")]
     public double? Precedence { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN of the IAM role to be associated with the user group.</summary>
     [JsonPropertyName("roleArn")]

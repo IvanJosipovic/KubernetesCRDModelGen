@@ -596,7 +596,7 @@ public partial class V1beta2RouteSpecForProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta2RouteSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1477,6 +1477,10 @@ public partial class V1beta2RouteStatusAtProvider
     /// <summary>How the route was created - CreateRouteTable, CreateRoute or EnableVgwRoutePropagation.</summary>
     [JsonPropertyName("origin")]
     public string? Origin { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the routing table.</summary>
     [JsonPropertyName("routeTableId")]

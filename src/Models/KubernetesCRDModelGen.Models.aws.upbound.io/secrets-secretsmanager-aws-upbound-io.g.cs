@@ -109,7 +109,7 @@ public partial class V1beta1SecretSpecForProvider
     [JsonPropertyName("recoveryWindowInDays")]
     public double? RecoveryWindowInDays { get; set; }
 
-    /// <summary>Region for replicating the secret. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -420,6 +420,10 @@ public partial class V1beta1SecretStatusAtProvider
     /// <summary>Number of days that AWS Secrets Manager waits before it can delete the secret. This value can be 0 to force deletion without recovery or range from 7 to 30 days. The default value is 30.</summary>
     [JsonPropertyName("recoveryWindowInDays")]
     public double? RecoveryWindowInDays { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block to support secret replication. See details below.</summary>
     [JsonPropertyName("replica")]

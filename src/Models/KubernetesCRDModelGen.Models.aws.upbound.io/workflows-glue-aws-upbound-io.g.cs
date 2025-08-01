@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProvider
 {
-    /// <summary>–  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
+    /// <summary>A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
     [JsonPropertyName("defaultRunProperties")]
     public IDictionary<string, string>? DefaultRunProperties { get; set; }
 
-    /// <summary>–  Description of the workflow.</summary>
+    /// <summary>Description of the workflow.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -24,7 +24,7 @@ public partial class V1beta1WorkflowSpecForProvider
     [JsonPropertyName("maxConcurrentRuns")]
     public double? MaxConcurrentRuns { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -37,11 +37,11 @@ public partial class V1beta1WorkflowSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecInitProvider
 {
-    /// <summary>–  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
+    /// <summary>A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
     [JsonPropertyName("defaultRunProperties")]
     public IDictionary<string, string>? DefaultRunProperties { get; set; }
 
-    /// <summary>–  Description of the workflow.</summary>
+    /// <summary>Description of the workflow.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -194,11 +194,11 @@ public partial class V1beta1WorkflowStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
+    /// <summary>A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.</summary>
     [JsonPropertyName("defaultRunProperties")]
     public IDictionary<string, string>? DefaultRunProperties { get; set; }
 
-    /// <summary>–  Description of the workflow.</summary>
+    /// <summary>Description of the workflow.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -209,6 +209,10 @@ public partial class V1beta1WorkflowStatusAtProvider
     /// <summary>Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.</summary>
     [JsonPropertyName("maxConcurrentRuns")]
     public double? MaxConcurrentRuns { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -136,7 +136,7 @@ public partial class V1beta1SigningJobSpecForProvider
     [JsonPropertyName("profileNameSelector")]
     public V1beta1SigningJobSpecForProviderProfileNameSelector? ProfileNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -548,6 +548,10 @@ public partial class V1beta1SigningJobStatusAtProvider
     /// <summary>The version of the signing profile used to initiate the signing job.</summary>
     [JsonPropertyName("profileVersion")]
     public string? ProfileVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM principal that requested the signing job.</summary>
     [JsonPropertyName("requestedBy")]

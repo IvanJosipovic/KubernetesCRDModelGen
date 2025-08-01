@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.deploy.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAlarmConfiguration
 {
-    /// <summary>A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.</summary>
+    /// <summary>A list of alarms configured for the deployment group.</summary>
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 
@@ -832,7 +832,7 @@ public partial class V1beta1DeploymentGroupSpecForProvider
     [JsonPropertyName("outdatedInstancesStrategy")]
     public string? OutdatedInstancesStrategy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -865,7 +865,7 @@ public partial class V1beta1DeploymentGroupSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecInitProviderAlarmConfiguration
 {
-    /// <summary>A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.</summary>
+    /// <summary>A list of alarms configured for the deployment group.</summary>
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 
@@ -1778,7 +1778,7 @@ public partial class V1beta1DeploymentGroupSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupStatusAtProviderAlarmConfiguration
 {
-    /// <summary>A list of alarms configured for the deployment group. A maximum of 10 alarms can be added to a deployment group.</summary>
+    /// <summary>A list of alarms configured for the deployment group.</summary>
     [JsonPropertyName("alarms")]
     public IList<string>? Alarms { get; set; }
 
@@ -2109,6 +2109,10 @@ public partial class V1beta1DeploymentGroupStatusAtProvider
     /// <summary>Configuration block of Indicates what happens when new Amazon EC2 instances are launched mid-deployment and do not receive the deployed application revision. Valid values are UPDATE and IGNORE. Defaults to UPDATE.</summary>
     [JsonPropertyName("outdatedInstancesStrategy")]
     public string? OutdatedInstancesStrategy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The service role ARN that allows deployments.</summary>
     [JsonPropertyName("serviceRoleArn")]

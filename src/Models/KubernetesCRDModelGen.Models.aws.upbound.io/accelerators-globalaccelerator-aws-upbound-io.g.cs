@@ -49,10 +49,6 @@ public partial class V1beta1AcceleratorSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -270,6 +266,10 @@ public partial class V1beta1AcceleratorStatusAtProviderIpSets
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AcceleratorStatusAtProvider
 {
+    /// <summary>The Amazon Resource Name (ARN) of the accelerator.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>The attributes of the accelerator. Fields documented below.</summary>
     [JsonPropertyName("attributes")]
     public IList<V1beta1AcceleratorStatusAtProviderAttributes>? Attributes { get; set; }

@@ -104,10 +104,6 @@ public partial class V1beta1ListenerSpecForProvider
     /// <summary>The protocol for the connections from clients to the accelerator. Valid values are TCP, UDP.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -360,6 +356,10 @@ public partial class V1beta1ListenerStatusAtProvider
     /// <summary>The Amazon Resource Name (ARN) of your accelerator.</summary>
     [JsonPropertyName("acceleratorArn")]
     public string? AcceleratorArn { get; set; }
+
+    /// <summary>The Amazon Resource Name (ARN) of the listener.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
 
     /// <summary>Direct all requests from a user to the same endpoint. Valid values are NONE, SOURCE_IP. Default: NONE. If NONE, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If SOURCE_IP, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.</summary>
     [JsonPropertyName("clientAffinity")]

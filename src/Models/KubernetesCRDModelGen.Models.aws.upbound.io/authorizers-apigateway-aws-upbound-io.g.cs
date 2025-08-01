@@ -224,7 +224,7 @@ public partial class V1beta1AuthorizerSpecForProvider
     [JsonPropertyName("providerArns")]
     public IList<string>? ProviderArns { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -649,6 +649,10 @@ public partial class V1beta1AuthorizerStatusAtProvider
     /// <summary>List of the Amazon Cognito user pool ARNs. Each element is of this format: arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}.</summary>
     [JsonPropertyName("providerArns")]
     public IList<string>? ProviderArns { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the associated REST API</summary>
     [JsonPropertyName("restApiId")]

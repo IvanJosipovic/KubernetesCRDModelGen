@@ -140,7 +140,7 @@ public partial class V1beta1NotificationSpecForProvider
     [JsonPropertyName("notifications")]
     public IList<string>? Notifications { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -449,6 +449,10 @@ public partial class V1beta1NotificationStatusAtProvider
     /// <summary>List of Notification Types that trigger notifications. Acceptable values are documented in the AWS documentation here</summary>
     [JsonPropertyName("notifications")]
     public IList<string>? Notifications { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Topic ARN for notifications to be sent through</summary>
     [JsonPropertyName("topicArn")]

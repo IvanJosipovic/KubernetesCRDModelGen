@@ -141,7 +141,7 @@ public partial class V1beta1DatasourceSpecForProviderDynamodbConfigTableNameSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderDynamodbConfig
 {
-    /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
+    /// <summary>The DeltaSyncConfig for a versioned data source. See delta_sync_config Block for details.</summary>
     [JsonPropertyName("deltaSyncConfig")]
     public IList<V1beta1DatasourceSpecForProviderDynamodbConfigDeltaSyncConfig>? DeltaSyncConfig { get; set; }
 
@@ -178,7 +178,7 @@ public partial class V1beta1DatasourceSpecForProviderElasticsearchConfig
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS region of Elasticsearch domain. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -213,7 +213,7 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Identity and Access Management (IAM) settings. See AWS IAM Config.</summary>
+    /// <summary>Identity and Access Management (IAM) settings. See aws_iam_config Block for details.</summary>
     [JsonPropertyName("awsIamConfig")]
     public IList<V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
@@ -222,11 +222,11 @@ public partial class V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderHttpConfig
 {
-    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
+    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See authorization_config Block for details.</summary>
     [JsonPropertyName("authorizationConfig")]
     public IList<V1beta1DatasourceSpecForProviderHttpConfigAuthorizationConfig>? AuthorizationConfig { get; set; }
 
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP URL.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 }
@@ -244,11 +244,11 @@ public partial class V1beta1DatasourceSpecForProviderLambdaConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderOpensearchserviceConfig
 {
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP endpoint of the OpenSearch domain.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS region of the OpenSearch domain. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -269,7 +269,7 @@ public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHtt
     [JsonPropertyName("dbClusterIdentifier")]
     public string? DbClusterIdentifier { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS Region for RDS HTTP endpoint. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
@@ -282,7 +282,7 @@ public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHtt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecForProviderRelationalDatabaseConfig
 {
-    /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
+    /// <summary>Amazon RDS HTTP endpoint configuration. See http_endpoint_config Block for details.</summary>
     [JsonPropertyName("httpEndpointConfig")]
     public IList<V1beta1DatasourceSpecForProviderRelationalDatabaseConfigHttpEndpointConfig>? HttpEndpointConfig { get; set; }
 
@@ -367,35 +367,35 @@ public partial class V1beta1DatasourceSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>DynamoDB settings. See DynamoDB Config</summary>
+    /// <summary>DynamoDB settings. See dynamodb_config Block for details.</summary>
     [JsonPropertyName("dynamodbConfig")]
     public IList<V1beta1DatasourceSpecForProviderDynamodbConfig>? DynamodbConfig { get; set; }
 
-    /// <summary>Amazon Elasticsearch settings. See ElasticSearch Config</summary>
+    /// <summary>Amazon Elasticsearch settings. See elasticsearch_config Block for details.</summary>
     [JsonPropertyName("elasticsearchConfig")]
     public IList<V1beta1DatasourceSpecForProviderElasticsearchConfig>? ElasticsearchConfig { get; set; }
 
-    /// <summary>AWS EventBridge settings. See Event Bridge Config</summary>
+    /// <summary>AWS EventBridge settings. See event_bridge_config Block for details.</summary>
     [JsonPropertyName("eventBridgeConfig")]
     public IList<V1beta1DatasourceSpecForProviderEventBridgeConfig>? EventBridgeConfig { get; set; }
 
-    /// <summary>HTTP settings. See HTTP Config</summary>
+    /// <summary>HTTP settings. See http_config Block for details.</summary>
     [JsonPropertyName("httpConfig")]
     public IList<V1beta1DatasourceSpecForProviderHttpConfig>? HttpConfig { get; set; }
 
-    /// <summary>AWS Lambda settings. See Lambda Config</summary>
+    /// <summary>AWS Lambda settings. See lambda_config Block for details.</summary>
     [JsonPropertyName("lambdaConfig")]
     public IList<V1beta1DatasourceSpecForProviderLambdaConfig>? LambdaConfig { get; set; }
 
-    /// <summary>Amazon OpenSearch Service settings. See OpenSearch Service Config</summary>
+    /// <summary>Amazon OpenSearch Service settings. See opensearchservice_config Block for details.</summary>
     [JsonPropertyName("opensearchserviceConfig")]
     public IList<V1beta1DatasourceSpecForProviderOpensearchserviceConfig>? OpensearchserviceConfig { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>AWS RDS settings. See Relational Database Config</summary>
+    /// <summary>AWS RDS settings. See relational_database_config Block for details.</summary>
     [JsonPropertyName("relationalDatabaseConfig")]
     public IList<V1beta1DatasourceSpecForProviderRelationalDatabaseConfig>? RelationalDatabaseConfig { get; set; }
 
@@ -493,7 +493,7 @@ public partial class V1beta1DatasourceSpecInitProviderDynamodbConfigTableNameSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderDynamodbConfig
 {
-    /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
+    /// <summary>The DeltaSyncConfig for a versioned data source. See delta_sync_config Block for details.</summary>
     [JsonPropertyName("deltaSyncConfig")]
     public IList<V1beta1DatasourceSpecInitProviderDynamodbConfigDeltaSyncConfig>? DeltaSyncConfig { get; set; }
 
@@ -557,7 +557,7 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Identity and Access Management (IAM) settings. See AWS IAM Config.</summary>
+    /// <summary>Identity and Access Management (IAM) settings. See aws_iam_config Block for details.</summary>
     [JsonPropertyName("awsIamConfig")]
     public IList<V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
@@ -566,11 +566,11 @@ public partial class V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderHttpConfig
 {
-    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
+    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See authorization_config Block for details.</summary>
     [JsonPropertyName("authorizationConfig")]
     public IList<V1beta1DatasourceSpecInitProviderHttpConfigAuthorizationConfig>? AuthorizationConfig { get; set; }
 
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP URL.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 }
@@ -588,7 +588,7 @@ public partial class V1beta1DatasourceSpecInitProviderLambdaConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderOpensearchserviceConfig
 {
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP endpoint of the OpenSearch domain.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 }
@@ -618,7 +618,7 @@ public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceSpecInitProviderRelationalDatabaseConfig
 {
-    /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
+    /// <summary>Amazon RDS HTTP endpoint configuration. See http_endpoint_config Block for details.</summary>
     [JsonPropertyName("httpEndpointConfig")]
     public IList<V1beta1DatasourceSpecInitProviderRelationalDatabaseConfigHttpEndpointConfig>? HttpEndpointConfig { get; set; }
 
@@ -691,31 +691,31 @@ public partial class V1beta1DatasourceSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>DynamoDB settings. See DynamoDB Config</summary>
+    /// <summary>DynamoDB settings. See dynamodb_config Block for details.</summary>
     [JsonPropertyName("dynamodbConfig")]
     public IList<V1beta1DatasourceSpecInitProviderDynamodbConfig>? DynamodbConfig { get; set; }
 
-    /// <summary>Amazon Elasticsearch settings. See ElasticSearch Config</summary>
+    /// <summary>Amazon Elasticsearch settings. See elasticsearch_config Block for details.</summary>
     [JsonPropertyName("elasticsearchConfig")]
     public IList<V1beta1DatasourceSpecInitProviderElasticsearchConfig>? ElasticsearchConfig { get; set; }
 
-    /// <summary>AWS EventBridge settings. See Event Bridge Config</summary>
+    /// <summary>AWS EventBridge settings. See event_bridge_config Block for details.</summary>
     [JsonPropertyName("eventBridgeConfig")]
     public IList<V1beta1DatasourceSpecInitProviderEventBridgeConfig>? EventBridgeConfig { get; set; }
 
-    /// <summary>HTTP settings. See HTTP Config</summary>
+    /// <summary>HTTP settings. See http_config Block for details.</summary>
     [JsonPropertyName("httpConfig")]
     public IList<V1beta1DatasourceSpecInitProviderHttpConfig>? HttpConfig { get; set; }
 
-    /// <summary>AWS Lambda settings. See Lambda Config</summary>
+    /// <summary>AWS Lambda settings. See lambda_config Block for details.</summary>
     [JsonPropertyName("lambdaConfig")]
     public IList<V1beta1DatasourceSpecInitProviderLambdaConfig>? LambdaConfig { get; set; }
 
-    /// <summary>Amazon OpenSearch Service settings. See OpenSearch Service Config</summary>
+    /// <summary>Amazon OpenSearch Service settings. See opensearchservice_config Block for details.</summary>
     [JsonPropertyName("opensearchserviceConfig")]
     public IList<V1beta1DatasourceSpecInitProviderOpensearchserviceConfig>? OpensearchserviceConfig { get; set; }
 
-    /// <summary>AWS RDS settings. See Relational Database Config</summary>
+    /// <summary>AWS RDS settings. See relational_database_config Block for details.</summary>
     [JsonPropertyName("relationalDatabaseConfig")]
     public IList<V1beta1DatasourceSpecInitProviderRelationalDatabaseConfig>? RelationalDatabaseConfig { get; set; }
 
@@ -889,7 +889,7 @@ public partial class V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderDynamodbConfig
 {
-    /// <summary>The DeltaSyncConfig for a versioned data source. See Delta Sync Config</summary>
+    /// <summary>The DeltaSyncConfig for a versioned data source. See delta_sync_config Block for details.</summary>
     [JsonPropertyName("deltaSyncConfig")]
     public IList<V1beta1DatasourceStatusAtProviderDynamodbConfigDeltaSyncConfig>? DeltaSyncConfig { get; set; }
 
@@ -918,7 +918,7 @@ public partial class V1beta1DatasourceStatusAtProviderElasticsearchConfig
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS region of Elasticsearch domain. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -953,7 +953,7 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
     [JsonPropertyName("authorizationType")]
     public string? AuthorizationType { get; set; }
 
-    /// <summary>Identity and Access Management (IAM) settings. See AWS IAM Config.</summary>
+    /// <summary>Identity and Access Management (IAM) settings. See aws_iam_config Block for details.</summary>
     [JsonPropertyName("awsIamConfig")]
     public IList<V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfigAwsIamConfig>? AwsIamConfig { get; set; }
 }
@@ -962,11 +962,11 @@ public partial class V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationCon
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderHttpConfig
 {
-    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See Authorization Config.</summary>
+    /// <summary>Authorization configuration in case the HTTP endpoint requires authorization. See authorization_config Block for details.</summary>
     [JsonPropertyName("authorizationConfig")]
     public IList<V1beta1DatasourceStatusAtProviderHttpConfigAuthorizationConfig>? AuthorizationConfig { get; set; }
 
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP URL.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 }
@@ -984,11 +984,11 @@ public partial class V1beta1DatasourceStatusAtProviderLambdaConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderOpensearchserviceConfig
 {
-    /// <summary>HTTP endpoint of the Elasticsearch domain.</summary>
+    /// <summary>HTTP endpoint of the OpenSearch domain.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS region of the OpenSearch domain. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -1009,7 +1009,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHt
     [JsonPropertyName("dbClusterIdentifier")]
     public string? DbClusterIdentifier { get; set; }
 
-    /// <summary>AWS region of the DynamoDB table. Defaults to current region.</summary>
+    /// <summary>AWS Region for RDS HTTP endpoint. Defaults to current region.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
@@ -1022,7 +1022,7 @@ public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig
 {
-    /// <summary>Amazon RDS HTTP endpoint configuration. See HTTP Endpoint Config.</summary>
+    /// <summary>Amazon RDS HTTP endpoint configuration. See http_endpoint_config Block for details.</summary>
     [JsonPropertyName("httpEndpointConfig")]
     public IList<V1beta1DatasourceStatusAtProviderRelationalDatabaseConfigHttpEndpointConfig>? HttpEndpointConfig { get; set; }
 
@@ -1047,19 +1047,19 @@ public partial class V1beta1DatasourceStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>DynamoDB settings. See DynamoDB Config</summary>
+    /// <summary>DynamoDB settings. See dynamodb_config Block for details.</summary>
     [JsonPropertyName("dynamodbConfig")]
     public IList<V1beta1DatasourceStatusAtProviderDynamodbConfig>? DynamodbConfig { get; set; }
 
-    /// <summary>Amazon Elasticsearch settings. See ElasticSearch Config</summary>
+    /// <summary>Amazon Elasticsearch settings. See elasticsearch_config Block for details.</summary>
     [JsonPropertyName("elasticsearchConfig")]
     public IList<V1beta1DatasourceStatusAtProviderElasticsearchConfig>? ElasticsearchConfig { get; set; }
 
-    /// <summary>AWS EventBridge settings. See Event Bridge Config</summary>
+    /// <summary>AWS EventBridge settings. See event_bridge_config Block for details.</summary>
     [JsonPropertyName("eventBridgeConfig")]
     public IList<V1beta1DatasourceStatusAtProviderEventBridgeConfig>? EventBridgeConfig { get; set; }
 
-    /// <summary>HTTP settings. See HTTP Config</summary>
+    /// <summary>HTTP settings. See http_config Block for details.</summary>
     [JsonPropertyName("httpConfig")]
     public IList<V1beta1DatasourceStatusAtProviderHttpConfig>? HttpConfig { get; set; }
 
@@ -1067,15 +1067,19 @@ public partial class V1beta1DatasourceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>AWS Lambda settings. See Lambda Config</summary>
+    /// <summary>AWS Lambda settings. See lambda_config Block for details.</summary>
     [JsonPropertyName("lambdaConfig")]
     public IList<V1beta1DatasourceStatusAtProviderLambdaConfig>? LambdaConfig { get; set; }
 
-    /// <summary>Amazon OpenSearch Service settings. See OpenSearch Service Config</summary>
+    /// <summary>Amazon OpenSearch Service settings. See opensearchservice_config Block for details.</summary>
     [JsonPropertyName("opensearchserviceConfig")]
     public IList<V1beta1DatasourceStatusAtProviderOpensearchserviceConfig>? OpensearchserviceConfig { get; set; }
 
-    /// <summary>AWS RDS settings. See Relational Database Config</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>AWS RDS settings. See relational_database_config Block for details.</summary>
     [JsonPropertyName("relationalDatabaseConfig")]
     public IList<V1beta1DatasourceStatusAtProviderRelationalDatabaseConfig>? RelationalDatabaseConfig { get; set; }
 

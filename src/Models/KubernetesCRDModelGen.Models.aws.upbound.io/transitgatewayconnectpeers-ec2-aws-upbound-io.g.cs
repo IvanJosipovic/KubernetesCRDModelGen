@@ -80,7 +80,7 @@ public partial class V1beta1TransitGatewayConnectPeerSpecForProvider
     [JsonPropertyName("peerAddress")]
     public string? PeerAddress { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -361,6 +361,10 @@ public partial class V1beta1TransitGatewayConnectPeerStatusAtProvider
     /// <summary>The IP addressed assigned to customer device, which will be used as tunnel endpoint. It can be IPv4 or IPv6 address, but must be the same address family as transit_gateway_address</summary>
     [JsonPropertyName("peerAddress")]
     public string? PeerAddress { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -509,7 +509,7 @@ public partial class V1beta1BucketReplicationConfigurationSpecForProvider
     [JsonPropertyName("bucketSelector")]
     public V1beta1BucketReplicationConfigurationSpecForProviderBucketSelector? BucketSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1427,6 +1427,10 @@ public partial class V1beta1BucketReplicationConfigurationStatusAtProvider
     /// <summary>S3 source bucket name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the IAM role for Amazon S3 to assume when replicating the objects.</summary>
     [JsonPropertyName("role")]

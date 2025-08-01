@@ -138,7 +138,7 @@ public partial class V1beta1FilterSpecForProvider
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -412,13 +412,17 @@ public partial class V1beta1FilterStatusAtProvider
     [JsonPropertyName("findingCriteria")]
     public IList<V1beta1FilterStatusAtProviderFindingCriteria>? FindingCriteria { get; set; }
 
-    /// <summary>A compound field, consisting of the ID of the GuardDuty detector and the name of the filter.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
     /// <summary>Specifies the position of the filter in the list of current filters. Also specifies the order in which this filter is applied to the findings.</summary>
     [JsonPropertyName("rank")]
     public double? Rank { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

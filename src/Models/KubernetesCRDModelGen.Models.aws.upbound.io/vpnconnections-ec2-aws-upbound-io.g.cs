@@ -350,7 +350,11 @@ public partial class V1beta1VPNConnectionSpecForProvider
     [JsonPropertyName("outsideIpAddressType")]
     public string? OutsideIpAddressType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Storage mode for the pre-shared key (PSK). Valid values are Standard (stored in the Site-to-Site VPN service) or SecretsManager (stored in AWS Secrets Manager).</summary>
+    [JsonPropertyName("presharedKeyStorage")]
+    public string? PresharedKeyStorage { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -917,6 +921,10 @@ public partial class V1beta1VPNConnectionSpecInitProvider
     [JsonPropertyName("outsideIpAddressType")]
     public string? OutsideIpAddressType { get; set; }
 
+    /// <summary>Storage mode for the pre-shared key (PSK). Valid values are Standard (stored in the Site-to-Site VPN service) or SecretsManager (stored in AWS Secrets Manager).</summary>
+    [JsonPropertyName("presharedKeyStorage")]
+    public string? PresharedKeyStorage { get; set; }
+
     /// <summary>The IPv4 CIDR on the AWS side of the VPN connection.</summary>
     [JsonPropertyName("remoteIpv4NetworkCidr")]
     public string? RemoteIpv4NetworkCidr { get; set; }
@@ -1407,6 +1415,18 @@ public partial class V1beta1VPNConnectionStatusAtProvider
     /// <summary>Indicates if a Public S2S VPN or Private S2S VPN over AWS Direct Connect. Valid values are PublicIpv4 | PrivateIpv4</summary>
     [JsonPropertyName("outsideIpAddressType")]
     public string? OutsideIpAddressType { get; set; }
+
+    /// <summary>ARN of the Secrets Manager secret storing the pre-shared key(s) for the VPN connection. Note that even if it returns a valid Secrets Manager ARN, the pre-shared key(s) will not be stored in Secrets Manager unless the preshared_key_storage argument is set to SecretsManager.</summary>
+    [JsonPropertyName("presharedKeyArn")]
+    public string? PresharedKeyArn { get; set; }
+
+    /// <summary>Storage mode for the pre-shared key (PSK). Valid values are Standard (stored in the Site-to-Site VPN service) or SecretsManager (stored in AWS Secrets Manager).</summary>
+    [JsonPropertyName("presharedKeyStorage")]
+    public string? PresharedKeyStorage { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IPv4 CIDR on the AWS side of the VPN connection.</summary>
     [JsonPropertyName("remoteIpv4NetworkCidr")]

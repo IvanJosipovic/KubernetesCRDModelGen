@@ -207,6 +207,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  kmsKeyIdentifier:
+                    description: Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.
+                    type: string
                   logConfiguration:
                     description: Logging configuration settings for the pipe. Detailed below.
                     properties:
@@ -337,7 +340,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: ARN of the role that allows the pipe to send data to the target.
@@ -1122,17 +1128,17 @@ spec:
                             type: boolean
                         type: object
                       sagemakerPipelineParameters:
-                        description: The parameters for using a SageMaker pipeline as a target. Detailed below.
+                        description: The parameters for using a SageMaker AI pipeline as a target. Detailed below.
                         properties:
                           pipelineParameter:
-                            description: List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.
+                            description: List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.
                             items:
                               properties:
                                 name:
                                   description: The name of the container that receives the override. This parameter is required if any override is specified.
                                   type: string
                                 value:
-                                  description: Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.
+                                  description: Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.
                                   type: string
                               type: object
                             type: array
@@ -1389,6 +1395,9 @@ spec:
                             type: string
                         type: object
                     type: object
+                  kmsKeyIdentifier:
+                    description: Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.
+                    type: string
                   logConfiguration:
                     description: Logging configuration settings for the pipe. Detailed below.
                     properties:
@@ -2301,17 +2310,17 @@ spec:
                             type: boolean
                         type: object
                       sagemakerPipelineParameters:
-                        description: The parameters for using a SageMaker pipeline as a target. Detailed below.
+                        description: The parameters for using a SageMaker AI pipeline as a target. Detailed below.
                         properties:
                           pipelineParameter:
-                            description: List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.
+                            description: List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.
                             items:
                               properties:
                                 name:
                                   description: The name of the container that receives the override. This parameter is required if any override is specified.
                                   type: string
                                 value:
-                                  description: Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.
+                                  description: Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.
                                   type: string
                               type: object
                             type: array
@@ -2677,6 +2686,9 @@ spec:
                   id:
                     description: Same as name.
                     type: string
+                  kmsKeyIdentifier:
+                    description: Identifier of the AWS KMS customer managed key for EventBridge to use, if you choose to use a customer managed key to encrypt pipe data. The identifier can be the key Amazon Resource Name (ARN), KeyId, key alias, or key alias ARN. If not set, EventBridge uses an AWS owned key to encrypt pipe data.
+                    type: string
                   logConfiguration:
                     description: Logging configuration settings for the pipe. Detailed below.
                     properties:
@@ -2720,6 +2732,12 @@ spec:
                             type: string
                         type: object
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   roleArn:
                     description: ARN of the role that allows the pipe to send data to the target.
                     type: string
@@ -3337,17 +3355,17 @@ spec:
                             type: boolean
                         type: object
                       sagemakerPipelineParameters:
-                        description: The parameters for using a SageMaker pipeline as a target. Detailed below.
+                        description: The parameters for using a SageMaker AI pipeline as a target. Detailed below.
                         properties:
                           pipelineParameter:
-                            description: List of Parameter names and values for SageMaker Model Building Pipeline execution. Detailed below.
+                            description: List of Parameter names and values for SageMaker AI Model Building Pipeline execution. Detailed below.
                             items:
                               properties:
                                 name:
                                   description: The name of the container that receives the override. This parameter is required if any override is specified.
                                   type: string
                                 value:
-                                  description: Value of parameter to start execution of a SageMaker Model Building Pipeline. Maximum length of 1024.
+                                  description: Value of parameter to start execution of a SageMaker AI Model Building Pipeline. Maximum length of 1024.
                                   type: string
                               type: object
                             type: array

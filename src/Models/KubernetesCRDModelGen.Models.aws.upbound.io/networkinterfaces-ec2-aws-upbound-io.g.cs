@@ -188,7 +188,7 @@ public partial class V1beta1NetworkInterfaceSpecForProvider
     [JsonPropertyName("privateIpsCount")]
     public double? PrivateIpsCount { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -682,6 +682,10 @@ public partial class V1beta1NetworkInterfaceStatusAtProvider
     /// <summary>Number of secondary private IPs to assign to the ENI. The total number of private IPs will be 1 + private_ips_count, as a primary private IP will be assiged to an ENI by default.</summary>
     [JsonPropertyName("privateIpsCount")]
     public double? PrivateIpsCount { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of security group IDs to assign to the ENI.</summary>
     [JsonPropertyName("securityGroups")]

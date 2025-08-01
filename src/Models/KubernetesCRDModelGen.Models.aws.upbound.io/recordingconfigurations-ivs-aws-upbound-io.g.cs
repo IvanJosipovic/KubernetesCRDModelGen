@@ -55,7 +55,7 @@ public partial class V1beta1RecordingConfigurationSpecForProvider
     [JsonPropertyName("recordingReconnectWindowSeconds")]
     public double? RecordingReconnectWindowSeconds { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -310,6 +310,10 @@ public partial class V1beta1RecordingConfigurationStatusAtProvider
     /// <summary>If a broadcast disconnects and then reconnects within the specified interval, the multiple streams will be considered a single broadcast and merged together.</summary>
     [JsonPropertyName("recordingReconnectWindowSeconds")]
     public double? RecordingReconnectWindowSeconds { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The current state of the Recording Configuration.</summary>
     [JsonPropertyName("state")]

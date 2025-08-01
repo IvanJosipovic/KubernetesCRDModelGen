@@ -71,15 +71,15 @@ public partial class V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationPro
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
@@ -365,7 +365,7 @@ public partial class V1beta1GraphQLAPISpecForProviderUserPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecForProvider
 {
-    /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
+    /// <summary>One or more additional authentication providers for the GraphQL API. See additional_authentication_provider Block for details.</summary>
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPISpecForProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
@@ -385,11 +385,11 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("introspectionConfig")]
     public string? IntrospectionConfig { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing logging configuration. Defined below.</summary>
+    /// <summary>Nested argument containing logging configuration. See log_config Block for details.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderLogConfig>? LogConfig { get; set; }
 
@@ -405,11 +405,11 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("mergedApiExecutionRoleArnSelector")]
     public V1beta1GraphQLAPISpecForProviderMergedApiExecutionRoleArnSelector? MergedApiExecutionRoleArnSelector { get; set; }
 
-    /// <summary>User-supplied name for the GraphqlApi.</summary>
+    /// <summary>User-supplied name for the GraphQL API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
@@ -417,7 +417,7 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("queryDepthLimit")]
     public double? QueryDepthLimit { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -433,7 +433,7 @@ public partial class V1beta1GraphQLAPISpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecForProviderUserPoolConfig>? UserPoolConfig { get; set; }
 
@@ -509,15 +509,15 @@ public partial class V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationPr
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
@@ -803,7 +803,7 @@ public partial class V1beta1GraphQLAPISpecInitProviderUserPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPISpecInitProvider
 {
-    /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
+    /// <summary>One or more additional authentication providers for the GraphQL API. See additional_authentication_provider Block for details.</summary>
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPISpecInitProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
@@ -823,11 +823,11 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     [JsonPropertyName("introspectionConfig")]
     public string? IntrospectionConfig { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing logging configuration. Defined below.</summary>
+    /// <summary>Nested argument containing logging configuration. See log_config Block for details.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderLogConfig>? LogConfig { get; set; }
 
@@ -843,11 +843,11 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     [JsonPropertyName("mergedApiExecutionRoleArnSelector")]
     public V1beta1GraphQLAPISpecInitProviderMergedApiExecutionRoleArnSelector? MergedApiExecutionRoleArnSelector { get; set; }
 
-    /// <summary>User-supplied name for the GraphqlApi.</summary>
+    /// <summary>User-supplied name for the GraphQL API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
@@ -867,7 +867,7 @@ public partial class V1beta1GraphQLAPISpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPISpecInitProviderUserPoolConfig>? UserPoolConfig { get; set; }
 
@@ -1075,15 +1075,15 @@ public partial class V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationPr
     [JsonPropertyName("authenticationType")]
     public string? AuthenticationType { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProviderUserPoolConfig>? UserPoolConfig { get; set; }
 }
@@ -1185,7 +1185,7 @@ public partial class V1beta1GraphQLAPIStatusAtProviderUserPoolConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphQLAPIStatusAtProvider
 {
-    /// <summary>One or more additional authentication providers for the GraphqlApi. Defined below.</summary>
+    /// <summary>One or more additional authentication providers for the GraphQL API. See additional_authentication_provider Block for details.</summary>
     [JsonPropertyName("additionalAuthenticationProvider")]
     public IList<V1beta1GraphQLAPIStatusAtProviderAdditionalAuthenticationProvider>? AdditionalAuthenticationProvider { get; set; }
 
@@ -1213,11 +1213,11 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     [JsonPropertyName("introspectionConfig")]
     public string? IntrospectionConfig { get; set; }
 
-    /// <summary>Nested argument containing Lambda authorizer configuration. Defined below.</summary>
+    /// <summary>Nested argument containing Lambda authorizer configuration. See lambda_authorizer_config Block for details.</summary>
     [JsonPropertyName("lambdaAuthorizerConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderLambdaAuthorizerConfig>? LambdaAuthorizerConfig { get; set; }
 
-    /// <summary>Nested argument containing logging configuration. Defined below.</summary>
+    /// <summary>Nested argument containing logging configuration. See log_config Block for details.</summary>
     [JsonPropertyName("logConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderLogConfig>? LogConfig { get; set; }
 
@@ -1225,17 +1225,21 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     [JsonPropertyName("mergedApiExecutionRoleArn")]
     public string? MergedApiExecutionRoleArn { get; set; }
 
-    /// <summary>User-supplied name for the GraphqlApi.</summary>
+    /// <summary>User-supplied name for the GraphQL API.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Nested argument containing OpenID Connect configuration. Defined below.</summary>
+    /// <summary>Nested argument containing OpenID Connect configuration. See openid_connect_config Block for details.</summary>
     [JsonPropertyName("openidConnectConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderOpenidConnectConfig>? OpenidConnectConfig { get; set; }
 
     /// <summary>The maximum depth a query can have in a single request. Depth refers to the amount of nested levels allowed in the body of query. The default value is 0 (or unspecified), which indicates there's no depth limit. If you set a limit, it can be between 1 and 75 nested levels. This field will produce a limit error if the operation falls out of bounds.</summary>
     [JsonPropertyName("queryDepthLimit")]
     public double? QueryDepthLimit { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The maximum number of resolvers that can be invoked in a single request. The default value is 0 (or unspecified), which will set the limit to 10000. When specified, the limit value can be between 1 and 10000. This field will produce a limit error if the operation falls out of bounds.</summary>
     [JsonPropertyName("resolverCountLimit")]
@@ -1253,11 +1257,11 @@ public partial class V1beta1GraphQLAPIStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Map of URIs associated with the APIE.g., uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql</summary>
+    /// <summary>Map of URIs associated with the API E.g., uris["GRAPHQL"] = https://ID.appsync-api.REGION.amazonaws.com/graphql</summary>
     [JsonPropertyName("uris")]
     public IDictionary<string, string>? Uris { get; set; }
 
-    /// <summary>Amazon Cognito User Pool configuration. Defined below.</summary>
+    /// <summary>Amazon Cognito User Pool configuration. See user_pool_config Block for details.</summary>
     [JsonPropertyName("userPoolConfig")]
     public IList<V1beta1GraphQLAPIStatusAtProviderUserPoolConfig>? UserPoolConfig { get; set; }
 

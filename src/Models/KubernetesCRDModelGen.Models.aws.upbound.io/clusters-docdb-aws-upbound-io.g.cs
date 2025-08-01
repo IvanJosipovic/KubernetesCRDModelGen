@@ -120,7 +120,7 @@ public partial class V1beta1ClusterSpecForProviderKmsKeyIdSelector
     public V1beta1ClusterSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterPasswordSecretRef
 {
@@ -290,9 +290,21 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ClusterSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+    /// <summary>Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.</summary>
+    [JsonPropertyName("manageMasterUserPassword")]
+    public bool? ManageMasterUserPassword { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecForProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.</summary>
+    [JsonPropertyName("masterPasswordWo")]
+    public string? MasterPasswordWo { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -310,7 +322,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -463,7 +475,7 @@ public partial class V1beta1ClusterSpecInitProviderKmsKeyIdSelector
     public V1beta1ClusterSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+/// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterPasswordSecretRef
 {
@@ -629,9 +641,21 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ClusterSpecInitProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
+    /// <summary>Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.</summary>
+    [JsonPropertyName("manageMasterUserPassword")]
+    public bool? ManageMasterUserPassword { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs, and it will be stored in the state file. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password_wo and manage_master_user_password. Password for the master DB user. If you set autoGeneratePassword to true, the Secret referenced here will be created or updated with generated password if it does not already contain one.</summary>
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecInitProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.</summary>
+    [JsonPropertyName("masterPasswordWo")]
+    public string? MasterPasswordWo { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -818,6 +842,23 @@ public partial class V1beta1ClusterSpec
     public V1beta1ClusterSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterStatusAtProviderMasterUserSecret
+{
+    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_id, storage_encrypted needs to be set to true.</summary>
+    [JsonPropertyName("kmsKeyId")]
+    public string? KmsKeyId { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of cluster</summary>
+    [JsonPropertyName("secretArn")]
+    public string? SecretArn { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("secretStatus")]
+    public string? SecretStatus { get; set; }
+}
+
 /// <summary>A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderRestoreToPointInTime
@@ -863,7 +904,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("backupRetentionPeriod")]
     public double? BackupRetentionPeriod { get; set; }
 
-    /// <summary>– List of DocumentDB Instances that are a part of this cluster</summary>
+    /// <summary>List of DocumentDB Instances that are a part of this cluster</summary>
     [JsonPropertyName("clusterMembers")]
     public IList<string>? ClusterMembers { get; set; }
 
@@ -911,13 +952,29 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("hostedZoneId")]
     public string? HostedZoneId { get; set; }
 
-    /// <summary>The DocumentDB Cluster Identifier</summary>
+    /// <summary>(Deprecated) Amazon Resource Name (ARN) of cluster</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
     /// <summary>The ARN for the KMS encryption key. When specifying kms_key_id, storage_encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+
+    /// <summary>Set to true to allow Amazon DocumentDB to manage the master user password in AWS Secrets Manager. Cannot be set if master_password or master_password_wo is provided.</summary>
+    [JsonPropertyName("manageMasterUserPassword")]
+    public bool? ManageMasterUserPassword { get; set; }
+
+    /// <summary>Password for the master DB user. Note that this may show up in logs. Please refer to the DocumentDB Naming Constraints. Conflicts with master_password and manage_master_user_password.</summary>
+    [JsonPropertyName("masterPasswordWo")]
+    public string? MasterPasswordWo { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("masterUserSecret")]
+    public IList<V1beta1ClusterStatusAtProviderMasterUserSecret>? MasterUserSecret { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -938,6 +995,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>A read-only endpoint for the DocumentDB cluster, automatically load-balanced across replicas</summary>
     [JsonPropertyName("readerEndpoint")]
     public string? ReaderEndpoint { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A configuration block for restoring a DB instance to an arbitrary point in time. Requires the identifier argument to be set with the name of the new DB instance to be created. See Restore To Point In Time below for details.</summary>
     [JsonPropertyName("restoreToPointInTime")]

@@ -86,15 +86,15 @@ public partial class V1beta1VPCPeeringConnectionOptionsSpecForProviderVpcPeering
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionOptionsSpecForProvider
 {
-    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that acceptsthe peering connection (a maximum of one).</summary>
+    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that accepts the peering connection (a maximum of one).</summary>
     [JsonPropertyName("accepter")]
     public IList<V1beta1VPCPeeringConnectionOptionsSpecForProviderAccepter>? Accepter { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requeststhe peering connection (a maximum of one).</summary>
+    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests the peering connection (a maximum of one).</summary>
     [JsonPropertyName("requester")]
     public IList<V1beta1VPCPeeringConnectionOptionsSpecForProviderRequester>? Requester { get; set; }
 
@@ -189,11 +189,11 @@ public partial class V1beta1VPCPeeringConnectionOptionsSpecInitProviderVpcPeerin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionOptionsSpecInitProvider
 {
-    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that acceptsthe peering connection (a maximum of one).</summary>
+    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that accepts the peering connection (a maximum of one).</summary>
     [JsonPropertyName("accepter")]
     public IList<V1beta1VPCPeeringConnectionOptionsSpecInitProviderAccepter>? Accepter { get; set; }
 
-    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requeststhe peering connection (a maximum of one).</summary>
+    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests the peering connection (a maximum of one).</summary>
     [JsonPropertyName("requester")]
     public IList<V1beta1VPCPeeringConnectionOptionsSpecInitProviderRequester>? Requester { get; set; }
 
@@ -364,7 +364,7 @@ public partial class V1beta1VPCPeeringConnectionOptionsStatusAtProviderRequester
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionOptionsStatusAtProvider
 {
-    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that acceptsthe peering connection (a maximum of one).</summary>
+    /// <summary>An optional configuration block that allows for VPC Peering Connection options to be set for the VPC that accepts the peering connection (a maximum of one).</summary>
     [JsonPropertyName("accepter")]
     public IList<V1beta1VPCPeeringConnectionOptionsStatusAtProviderAccepter>? Accepter { get; set; }
 
@@ -372,7 +372,11 @@ public partial class V1beta1VPCPeeringConnectionOptionsStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requeststhe peering connection (a maximum of one).</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests the peering connection (a maximum of one).</summary>
     [JsonPropertyName("requester")]
     public IList<V1beta1VPCPeeringConnectionOptionsStatusAtProviderRequester>? Requester { get; set; }
 

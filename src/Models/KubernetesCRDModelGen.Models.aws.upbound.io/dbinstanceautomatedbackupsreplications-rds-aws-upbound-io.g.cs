@@ -140,7 +140,7 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationSpecForProvider
     [JsonPropertyName("preSignedUrl")]
     public string? PreSignedUrl { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -457,6 +457,10 @@ public partial class V1beta1DBInstanceAutomatedBackupsReplicationStatusAtProvide
     /// <summary>A URL that contains a Signature Version 4 signed request for the StartDBInstanceAutomatedBackupsReplication action to be called in the AWS Region of the source DB instance.</summary>
     [JsonPropertyName("preSignedUrl")]
     public string? PreSignedUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The retention period for the replicated automated backups, defaults to 7.</summary>
     [JsonPropertyName("retentionPeriod")]

@@ -257,7 +257,7 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("newGameSessionProtectionPolicy")]
     public string? NewGameSessionProtectionPolicy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -816,6 +816,10 @@ public partial class V1beta1FleetStatusAtProvider
     /// <summary>Operating system of the fleet's computing resources.</summary>
     [JsonPropertyName("operatingSystem")]
     public string? OperatingSystem { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.</summary>
     [JsonPropertyName("resourceCreationLimitPolicy")]

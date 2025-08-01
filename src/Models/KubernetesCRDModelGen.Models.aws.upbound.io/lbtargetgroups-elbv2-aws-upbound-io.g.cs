@@ -251,7 +251,7 @@ public partial class V1beta1LBTargetGroupSpecForProvider
     [JsonPropertyName("proxyProtocolV2")]
     public bool? ProxyProtocolV2 { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -914,6 +914,10 @@ public partial class V1beta1LBTargetGroupStatusAtProvider
     /// <summary>Whether to enable support for proxy protocol v2 on Network Load Balancers. See doc for more information. Default is false.</summary>
     [JsonPropertyName("proxyProtocolV2")]
     public bool? ProxyProtocolV2 { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.</summary>
     [JsonPropertyName("slowStart")]

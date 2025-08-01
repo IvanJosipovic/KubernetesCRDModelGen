@@ -260,7 +260,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -750,6 +750,10 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Determines whether a final DB snapshot is created before the DB instance is deleted.</summary>
     [JsonPropertyName("skipFinalSnapshot")]
     public bool? SkipFinalSnapshot { get; set; }
@@ -770,7 +774,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>– Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
+    /// <summary>Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
     [JsonPropertyName("writer")]
     public bool? Writer { get; set; }
 }

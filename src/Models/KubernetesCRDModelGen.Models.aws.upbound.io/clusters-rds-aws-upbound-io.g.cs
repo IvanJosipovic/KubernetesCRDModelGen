@@ -249,6 +249,23 @@ public partial class V1beta1ClusterSpecForProviderMasterPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Only required unless manage_master_user_password is set to true, a snapshot_identifier, replication_source_identifier, or master_password is provided or unless a global_cluster_identifier is provided when the cluster is the "secondary" cluster of a global database) Password for the master DB user. Note that this may show up in logs. Please refer to the RDS Naming Constraints. Cannot be set if manage_master_user_password is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMasterPasswordWoSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterUserSecretKmsKeyIdRefPolicy
@@ -303,6 +320,62 @@ public partial class V1beta1ClusterSpecForProviderMasterUserSecretKmsKeyIdSelect
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecForProviderMasterUserSecretKmsKeyIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMonitoringRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMonitoringRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderMonitoringRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMonitoringRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecForProviderMonitoringRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecForProviderMonitoringRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -621,13 +694,21 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("caCertificateIdentifier")]
     public string? CaCertificateIdentifier { get; set; }
 
-    /// <summary>– List of RDS Instances that are a part of this cluster</summary>
+    /// <summary>List of RDS Instances that are a part of this cluster</summary>
     [JsonPropertyName("clusterMembers")]
     public IList<string>? ClusterMembers { get; set; }
 
-    /// <summary>–  Copy all Cluster tags to snapshots. Default is false.</summary>
+    /// <summary>Specifies the scalability mode of the Aurora DB cluster. When set to limitless, the cluster operates as an Aurora Limitless Database. When set to standard (the default), the cluster uses normal DB instance creation. Valid values: limitless, standard.</summary>
+    [JsonPropertyName("clusterScalabilityType")]
+    public string? ClusterScalabilityType { get; set; }
+
+    /// <summary>Copy all Cluster tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
+
+    /// <summary>The mode of Database Insights to enable for the DB cluster. Valid values: standard, advanced.</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
 
     /// <summary>Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: RDS Naming Constraints</summary>
     [JsonPropertyName("databaseName")]
@@ -705,7 +786,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("enableLocalWriteForwarding")]
     public bool? EnableLocalWriteForwarding { get; set; }
 
-    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, postgresql (PostgreSQL).</summary>
+    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, iam-db-auth-error, postgresql (PostgreSQL).</summary>
     [JsonPropertyName("enabledCloudwatchLogsExports")]
     public IList<string>? EnabledCloudwatchLogsExports { get; set; }
 
@@ -717,7 +798,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("engineLifecycleSupport")]
     public string? EngineLifecycleSupport { get; set; }
 
-    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
+    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. Specify an empty value ("") for no engine mode. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
 
@@ -761,6 +842,14 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecForProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
 
+    /// <summary>Only required unless manage_master_user_password is set to true, a snapshot_identifier, replication_source_identifier, or master_password is provided or unless a global_cluster_identifier is provided when the cluster is the "secondary" cluster of a global database) Password for the master DB user. Note that this may show up in logs. Please refer to the RDS Naming Constraints. Cannot be set if manage_master_user_password is set to true.</summary>
+    [JsonPropertyName("masterPasswordWoSecretRef")]
+    public V1beta1ClusterSpecForProviderMasterPasswordWoSecretRef? MasterPasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
+
     /// <summary>Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN. If not specified, the default KMS key for your Amazon Web Services account is used.</summary>
     [JsonPropertyName("masterUserSecretKmsKeyId")]
     public string? MasterUserSecretKmsKeyId { get; set; }
@@ -777,27 +866,43 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("masterUsername")]
     public string? MasterUsername { get; set; }
 
+    /// <summary>Interval, in seconds, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster. To turn off collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</summary>
+    [JsonPropertyName("monitoringInterval")]
+    public double? MonitoringInterval { get; set; }
+
+    /// <summary>ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs. You can find more information on the AWS Documentation what IAM permissions are needed to allow Enhanced Monitoring for RDS Clusters.</summary>
+    [JsonPropertyName("monitoringRoleArn")]
+    public string? MonitoringRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
+    [JsonPropertyName("monitoringRoleArnRef")]
+    public V1beta1ClusterSpecForProviderMonitoringRoleArnRef? MonitoringRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
+    [JsonPropertyName("monitoringRoleArnSelector")]
+    public V1beta1ClusterSpecForProviderMonitoringRoleArnSelector? MonitoringRoleArnSelector { get; set; }
+
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    /// <summary>Enables Performance Insights.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    /// <summary>Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
     [JsonPropertyName("performanceInsightsKmsKeyId")]
     public string? PerformanceInsightsKmsKeyId { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    /// <summary>Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
     [JsonPropertyName("performanceInsightsRetentionPeriod")]
     public double? PerformanceInsightsRetentionPeriod { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region, e.g. 04:00-09:00.</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
@@ -805,11 +910,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.</summary>
+    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. Note: Removing this attribute after creation will promote the read replica to a standalone cluster.</summary>
     [JsonPropertyName("replicationSourceIdentifier")]
     public string? ReplicationSourceIdentifier { get; set; }
 
@@ -817,7 +922,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("restoreToPointInTime")]
     public IList<V1beta1ClusterSpecForProviderRestoreToPointInTime>? RestoreToPointInTime { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("s3Import")]
     public IList<V1beta1ClusterSpecForProviderS3Import>? S3Import { get; set; }
 
@@ -1107,6 +1212,23 @@ public partial class V1beta1ClusterSpecInitProviderMasterPasswordSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Only required unless manage_master_user_password is set to true, a snapshot_identifier, replication_source_identifier, or master_password is provided or unless a global_cluster_identifier is provided when the cluster is the "secondary" cluster of a global database) Password for the master DB user. Note that this may show up in logs. Please refer to the RDS Naming Constraints. Cannot be set if manage_master_user_password is set to true.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMasterPasswordWoSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterUserSecretKmsKeyIdRefPolicy
@@ -1161,6 +1283,62 @@ public partial class V1beta1ClusterSpecInitProviderMasterUserSecretKmsKeyIdSelec
     /// <summary>Policies for selection.</summary>
     [JsonPropertyName("policy")]
     public V1beta1ClusterSpecInitProviderMasterUserSecretKmsKeyIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMonitoringRoleArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMonitoringRoleArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderMonitoringRoleArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMonitoringRoleArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ClusterSpecInitProviderMonitoringRoleArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ClusterSpecInitProviderMonitoringRoleArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1475,13 +1653,21 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("caCertificateIdentifier")]
     public string? CaCertificateIdentifier { get; set; }
 
-    /// <summary>– List of RDS Instances that are a part of this cluster</summary>
+    /// <summary>List of RDS Instances that are a part of this cluster</summary>
     [JsonPropertyName("clusterMembers")]
     public IList<string>? ClusterMembers { get; set; }
 
-    /// <summary>–  Copy all Cluster tags to snapshots. Default is false.</summary>
+    /// <summary>Specifies the scalability mode of the Aurora DB cluster. When set to limitless, the cluster operates as an Aurora Limitless Database. When set to standard (the default), the cluster uses normal DB instance creation. Valid values: limitless, standard.</summary>
+    [JsonPropertyName("clusterScalabilityType")]
+    public string? ClusterScalabilityType { get; set; }
+
+    /// <summary>Copy all Cluster tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
+
+    /// <summary>The mode of Database Insights to enable for the DB cluster. Valid values: standard, advanced.</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
 
     /// <summary>Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: RDS Naming Constraints</summary>
     [JsonPropertyName("databaseName")]
@@ -1559,7 +1745,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("enableLocalWriteForwarding")]
     public bool? EnableLocalWriteForwarding { get; set; }
 
-    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, postgresql (PostgreSQL).</summary>
+    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, iam-db-auth-error, postgresql (PostgreSQL).</summary>
     [JsonPropertyName("enabledCloudwatchLogsExports")]
     public IList<string>? EnabledCloudwatchLogsExports { get; set; }
 
@@ -1571,7 +1757,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("engineLifecycleSupport")]
     public string? EngineLifecycleSupport { get; set; }
 
-    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
+    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. Specify an empty value ("") for no engine mode. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
 
@@ -1615,6 +1801,14 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecInitProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
 
+    /// <summary>Only required unless manage_master_user_password is set to true, a snapshot_identifier, replication_source_identifier, or master_password is provided or unless a global_cluster_identifier is provided when the cluster is the "secondary" cluster of a global database) Password for the master DB user. Note that this may show up in logs. Please refer to the RDS Naming Constraints. Cannot be set if manage_master_user_password is set to true.</summary>
+    [JsonPropertyName("masterPasswordWoSecretRef")]
+    public V1beta1ClusterSpecInitProviderMasterPasswordWoSecretRef? MasterPasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
+
     /// <summary>Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN. If not specified, the default KMS key for your Amazon Web Services account is used.</summary>
     [JsonPropertyName("masterUserSecretKmsKeyId")]
     public string? MasterUserSecretKmsKeyId { get; set; }
@@ -1631,27 +1825,43 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("masterUsername")]
     public string? MasterUsername { get; set; }
 
+    /// <summary>Interval, in seconds, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster. To turn off collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</summary>
+    [JsonPropertyName("monitoringInterval")]
+    public double? MonitoringInterval { get; set; }
+
+    /// <summary>ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs. You can find more information on the AWS Documentation what IAM permissions are needed to allow Enhanced Monitoring for RDS Clusters.</summary>
+    [JsonPropertyName("monitoringRoleArn")]
+    public string? MonitoringRoleArn { get; set; }
+
+    /// <summary>Reference to a Role in iam to populate monitoringRoleArn.</summary>
+    [JsonPropertyName("monitoringRoleArnRef")]
+    public V1beta1ClusterSpecInitProviderMonitoringRoleArnRef? MonitoringRoleArnRef { get; set; }
+
+    /// <summary>Selector for a Role in iam to populate monitoringRoleArn.</summary>
+    [JsonPropertyName("monitoringRoleArnSelector")]
+    public V1beta1ClusterSpecInitProviderMonitoringRoleArnSelector? MonitoringRoleArnSelector { get; set; }
+
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    /// <summary>Enables Performance Insights.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    /// <summary>Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
     [JsonPropertyName("performanceInsightsKmsKeyId")]
     public string? PerformanceInsightsKmsKeyId { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    /// <summary>Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
     [JsonPropertyName("performanceInsightsRetentionPeriod")]
     public double? PerformanceInsightsRetentionPeriod { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region, e.g. 04:00-09:00.</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
@@ -1659,7 +1869,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.</summary>
+    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. Note: Removing this attribute after creation will promote the read replica to a standalone cluster.</summary>
     [JsonPropertyName("replicationSourceIdentifier")]
     public string? ReplicationSourceIdentifier { get; set; }
 
@@ -1667,7 +1877,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("restoreToPointInTime")]
     public IList<V1beta1ClusterSpecInitProviderRestoreToPointInTime>? RestoreToPointInTime { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("s3Import")]
     public IList<V1beta1ClusterSpecInitProviderS3Import>? S3Import { get; set; }
 
@@ -2001,7 +2211,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("caCertificateValidTill")]
     public string? CaCertificateValidTill { get; set; }
 
-    /// <summary>– List of RDS Instances that are a part of this cluster</summary>
+    /// <summary>List of RDS Instances that are a part of this cluster</summary>
     [JsonPropertyName("clusterMembers")]
     public IList<string>? ClusterMembers { get; set; }
 
@@ -2009,9 +2219,17 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("clusterResourceId")]
     public string? ClusterResourceId { get; set; }
 
-    /// <summary>–  Copy all Cluster tags to snapshots. Default is false.</summary>
+    /// <summary>Specifies the scalability mode of the Aurora DB cluster. When set to limitless, the cluster operates as an Aurora Limitless Database. When set to standard (the default), the cluster uses normal DB instance creation. Valid values: limitless, standard.</summary>
+    [JsonPropertyName("clusterScalabilityType")]
+    public string? ClusterScalabilityType { get; set; }
+
+    /// <summary>Copy all Cluster tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
+
+    /// <summary>The mode of Database Insights to enable for the DB cluster. Valid values: standard, advanced.</summary>
+    [JsonPropertyName("databaseInsightsMode")]
+    public string? DatabaseInsightsMode { get; set; }
 
     /// <summary>Name for an automatically created database on cluster creation. There are different naming restrictions per database engine: RDS Naming Constraints</summary>
     [JsonPropertyName("databaseName")]
@@ -2065,7 +2283,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("enableLocalWriteForwarding")]
     public bool? EnableLocalWriteForwarding { get; set; }
 
-    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, postgresql (PostgreSQL).</summary>
+    /// <summary>Set of log types to export to cloudwatch. If omitted, no logs will be exported. The following log types are supported: audit, error, general, slowquery, iam-db-auth-error, postgresql (PostgreSQL).</summary>
     [JsonPropertyName("enabledCloudwatchLogsExports")]
     public IList<string>? EnabledCloudwatchLogsExports { get; set; }
 
@@ -2081,7 +2299,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("engineLifecycleSupport")]
     public string? EngineLifecycleSupport { get; set; }
 
-    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. See the RDS User Guide for limitations when using serverless.</summary>
+    /// <summary>Database engine mode. Valid values: global (only valid for Aurora MySQL 1.21 and earlier), parallelquery, provisioned, serverless. Defaults to: provisioned. Specify an empty value ("") for no engine mode. See the RDS User Guide for limitations when using serverless.</summary>
     [JsonPropertyName("engineMode")]
     public string? EngineMode { get; set; }
 
@@ -2129,6 +2347,10 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("manageMasterUserPassword")]
     public bool? ManageMasterUserPassword { get; set; }
 
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
+
     /// <summary>Block that specifies the master user secret. Only available when manage_master_user_password is set to true. Documented below.</summary>
     [JsonPropertyName("masterUserSecret")]
     public IList<V1beta1ClusterStatusAtProviderMasterUserSecret>? MasterUserSecret { get; set; }
@@ -2141,27 +2363,35 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("masterUsername")]
     public string? MasterUsername { get; set; }
 
+    /// <summary>Interval, in seconds, in seconds, between points when Enhanced Monitoring metrics are collected for the DB cluster. To turn off collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60.</summary>
+    [JsonPropertyName("monitoringInterval")]
+    public double? MonitoringInterval { get; set; }
+
+    /// <summary>ARN for the IAM role that permits RDS to send enhanced monitoring metrics to CloudWatch Logs. You can find more information on the AWS Documentation what IAM permissions are needed to allow Enhanced Monitoring for RDS Clusters.</summary>
+    [JsonPropertyName("monitoringRoleArn")]
+    public string? MonitoringRoleArn { get; set; }
+
     /// <summary>Network type of the cluster. Valid values: IPV4, DUAL.</summary>
     [JsonPropertyName("networkType")]
     public string? NetworkType { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Enables Performance Insights for the RDS Cluster</summary>
+    /// <summary>Enables Performance Insights.</summary>
     [JsonPropertyName("performanceInsightsEnabled")]
     public bool? PerformanceInsightsEnabled { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
+    /// <summary>Specifies the KMS Key ID to encrypt Performance Insights data. If not specified, the default RDS KMS key will be used (aws/rds).</summary>
     [JsonPropertyName("performanceInsightsKmsKeyId")]
     public string? PerformanceInsightsKmsKeyId { get; set; }
 
-    /// <summary>Valid only for Non-Aurora Multi-AZ DB Clusters. Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
+    /// <summary>Specifies the amount of time to retain performance insights data for. Defaults to 7 days if Performance Insights are enabled. Valid values are 7, month * 31 (where month is a number of months from 1-23), and 731. See here for more information on retention periods.</summary>
     [JsonPropertyName("performanceInsightsRetentionPeriod")]
     public double? PerformanceInsightsRetentionPeriod { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter.Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per region, e.g. 04:00-09:00.</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
@@ -2173,7 +2403,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("readerEndpoint")]
     public string? ReaderEndpoint { get; set; }
 
-    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>ARN of a source DB cluster or DB instance if this DB cluster is to be created as a Read Replica. Note: Removing this attribute after creation will promote the read replica to a standalone cluster.</summary>
     [JsonPropertyName("replicationSourceIdentifier")]
     public string? ReplicationSourceIdentifier { get; set; }
 
@@ -2181,7 +2415,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("restoreToPointInTime")]
     public IList<V1beta1ClusterStatusAtProviderRestoreToPointInTime>? RestoreToPointInTime { get; set; }
 
-    /// <summary>Port on which the DB accepts connections</summary>
+    /// <summary>Port on which the DB accepts connections.</summary>
     [JsonPropertyName("s3Import")]
     public IList<V1beta1ClusterStatusAtProviderS3Import>? S3Import { get; set; }
 

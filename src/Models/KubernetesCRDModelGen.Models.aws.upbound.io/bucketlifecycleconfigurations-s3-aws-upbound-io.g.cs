@@ -106,7 +106,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilte
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
-    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.</summary>
+    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply. If set, must contain at least one key-value pair.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -134,11 +134,11 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilte
 
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeGreaterThan")]
-    public string? ObjectSizeGreaterThan { get; set; }
+    public double? ObjectSizeGreaterThan { get; set; }
 
     /// <summary>Maximum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeLessThan")]
-    public string? ObjectSizeLessThan { get; set; }
+    public double? ObjectSizeLessThan { get; set; }
 
     /// <summary>Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if not specified.</summary>
     [JsonPropertyName("prefix")]
@@ -155,7 +155,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncu
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -168,7 +168,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncu
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -208,7 +208,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRule
     [JsonPropertyName("expiration")]
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRuleExpiration>? Expiration { get; set; }
 
-    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix.</summary>
+    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix. One of filter or prefix should be specified.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRuleFilter>? Filter { get; set; }
 
@@ -224,7 +224,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProviderRule
     [JsonPropertyName("noncurrentVersionTransition")]
     public IList<V1beta1BucketLifecycleConfigurationSpecForProviderRuleNoncurrentVersionTransition>? NoncurrentVersionTransition { get; set; }
 
-    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified.</summary>
+    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified. One of prefix or filter should be specified.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -257,7 +257,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecForProvider
     [JsonPropertyName("expectedBucketOwner")]
     public string? ExpectedBucketOwner { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -368,7 +368,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilt
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
-    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.</summary>
+    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply. If set, must contain at least one key-value pair.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -396,11 +396,11 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilt
 
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeGreaterThan")]
-    public string? ObjectSizeGreaterThan { get; set; }
+    public double? ObjectSizeGreaterThan { get; set; }
 
     /// <summary>Maximum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeLessThan")]
-    public string? ObjectSizeLessThan { get; set; }
+    public double? ObjectSizeLessThan { get; set; }
 
     /// <summary>Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if not specified.</summary>
     [JsonPropertyName("prefix")]
@@ -417,7 +417,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNonc
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -430,7 +430,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNonc
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -470,7 +470,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRule
     [JsonPropertyName("expiration")]
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRuleExpiration>? Expiration { get; set; }
 
-    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix.</summary>
+    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix. One of filter or prefix should be specified.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRuleFilter>? Filter { get; set; }
 
@@ -486,7 +486,7 @@ public partial class V1beta1BucketLifecycleConfigurationSpecInitProviderRule
     [JsonPropertyName("noncurrentVersionTransition")]
     public IList<V1beta1BucketLifecycleConfigurationSpecInitProviderRuleNoncurrentVersionTransition>? NoncurrentVersionTransition { get; set; }
 
-    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified.</summary>
+    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified. One of prefix or filter should be specified.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -702,7 +702,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilt
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
-    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply.</summary>
+    /// <summary>Key-value map of resource tags. All of these tags must exist in the object's tag set in order for the rule to apply. If set, must contain at least one key-value pair.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
@@ -730,11 +730,11 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilt
 
     /// <summary>Minimum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeGreaterThan")]
-    public string? ObjectSizeGreaterThan { get; set; }
+    public double? ObjectSizeGreaterThan { get; set; }
 
     /// <summary>Maximum object size (in bytes) to which the rule applies.</summary>
     [JsonPropertyName("objectSizeLessThan")]
-    public string? ObjectSizeLessThan { get; set; }
+    public double? ObjectSizeLessThan { get; set; }
 
     /// <summary>Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if not specified.</summary>
     [JsonPropertyName("prefix")]
@@ -751,7 +751,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNonc
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -764,7 +764,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNonc
 {
     /// <summary>Number of noncurrent versions Amazon S3 will retain. Must be a non-zero positive integer.</summary>
     [JsonPropertyName("newerNoncurrentVersions")]
-    public string? NewerNoncurrentVersions { get; set; }
+    public double? NewerNoncurrentVersions { get; set; }
 
     /// <summary>Number of days an object is noncurrent before Amazon S3 can perform the associated action.</summary>
     [JsonPropertyName("noncurrentDays")]
@@ -804,7 +804,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRule
     [JsonPropertyName("expiration")]
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRuleExpiration>? Expiration { get; set; }
 
-    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix.</summary>
+    /// <summary>Configuration block used to identify objects that a Lifecycle Rule applies to. See below. If not specified, the rule will default to using prefix. One of filter or prefix should be specified.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRuleFilter>? Filter { get; set; }
 
@@ -820,7 +820,7 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProviderRule
     [JsonPropertyName("noncurrentVersionTransition")]
     public IList<V1beta1BucketLifecycleConfigurationStatusAtProviderRuleNoncurrentVersionTransition>? NoncurrentVersionTransition { get; set; }
 
-    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified.</summary>
+    /// <summary>DEPRECATED Use filter instead. This has been deprecated by Amazon S3. Prefix identifying one or more objects to which the rule applies. Defaults to an empty string ("") if filter is not specified. One of prefix or filter should be specified.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
 
@@ -848,6 +848,10 @@ public partial class V1beta1BucketLifecycleConfigurationStatusAtProvider
     /// <summary>and status)</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of configuration blocks describing the rules managing the replication. See below.</summary>
     [JsonPropertyName("rule")]

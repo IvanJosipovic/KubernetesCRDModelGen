@@ -20,10 +20,6 @@ public partial class V1beta1RegionSpecForProvider
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The region name to manage.</summary>
     [JsonPropertyName("regionName")]
     public string RegionName { get; set; }

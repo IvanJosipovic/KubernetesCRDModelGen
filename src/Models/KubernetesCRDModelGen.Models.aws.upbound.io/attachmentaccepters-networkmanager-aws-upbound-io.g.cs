@@ -124,7 +124,7 @@ public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProvider
 {
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary>ID of the attachment.</summary>
     [JsonPropertyName("attachmentId")]
     public string? AttachmentId { get; set; }
 
@@ -136,7 +136,7 @@ public partial class V1beta1AttachmentAccepterSpecForProvider
     [JsonPropertyName("attachmentIdSelector")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentIdSelector? AttachmentIdSelector { get; set; }
 
-    /// <summary>The type of attachment. Valid values can be found in the AWS Documentation</summary>
+    /// <summary>Type of attachment. Valid values: CONNECT, DIRECT_CONNECT_GATEWAY, SITE_TO_SITE_VPN, TRANSIT_GATEWAY_ROUTE_TABLE, VPC.</summary>
     [JsonPropertyName("attachmentType")]
     public string? AttachmentType { get; set; }
 
@@ -147,10 +147,6 @@ public partial class V1beta1AttachmentAccepterSpecForProvider
     /// <summary>Selector for a VPCAttachment in networkmanager to populate attachmentType.</summary>
     [JsonPropertyName("attachmentTypeSelector")]
     public V1beta1AttachmentAccepterSpecForProviderAttachmentTypeSelector? AttachmentTypeSelector { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -269,7 +265,7 @@ public partial class V1beta1AttachmentAccepterSpecInitProviderAttachmentTypeSele
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecInitProvider
 {
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary>ID of the attachment.</summary>
     [JsonPropertyName("attachmentId")]
     public string? AttachmentId { get; set; }
 
@@ -281,7 +277,7 @@ public partial class V1beta1AttachmentAccepterSpecInitProvider
     [JsonPropertyName("attachmentIdSelector")]
     public V1beta1AttachmentAccepterSpecInitProviderAttachmentIdSelector? AttachmentIdSelector { get; set; }
 
-    /// <summary>The type of attachment. Valid values can be found in the AWS Documentation</summary>
+    /// <summary>Type of attachment. Valid values: CONNECT, DIRECT_CONNECT_GATEWAY, SITE_TO_SITE_VPN, TRANSIT_GATEWAY_ROUTE_TABLE, VPC.</summary>
     [JsonPropertyName("attachmentType")]
     public string? AttachmentType { get; set; }
 
@@ -430,31 +426,31 @@ public partial class V1beta1AttachmentAccepterSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterStatusAtProvider
 {
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary>ID of the attachment.</summary>
     [JsonPropertyName("attachmentId")]
     public string? AttachmentId { get; set; }
 
-    /// <summary>The policy rule number associated with the attachment.</summary>
+    /// <summary>Policy rule number associated with the attachment.</summary>
     [JsonPropertyName("attachmentPolicyRuleNumber")]
     public double? AttachmentPolicyRuleNumber { get; set; }
 
-    /// <summary>The type of attachment. Valid values can be found in the AWS Documentation</summary>
+    /// <summary>Type of attachment. Valid values: CONNECT, DIRECT_CONNECT_GATEWAY, SITE_TO_SITE_VPN, TRANSIT_GATEWAY_ROUTE_TABLE, VPC.</summary>
     [JsonPropertyName("attachmentType")]
     public string? AttachmentType { get; set; }
 
-    /// <summary>The ARN of a core network.</summary>
+    /// <summary>ARN of the core network.</summary>
     [JsonPropertyName("coreNetworkArn")]
     public string? CoreNetworkArn { get; set; }
 
-    /// <summary>The id of a core network.</summary>
+    /// <summary>ID of the core network.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
-    /// <summary>The Region where the edge is located. This is returned for all attachment types except a Direct Connect gateway attachment, which instead returns edge_locations.</summary>
+    /// <summary>Region where the edge is located. This is returned for all attachment types except Direct Connect gateway attachments, which instead return edge_locations.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
 
-    /// <summary>The edge locations that the Direct Connect gateway is associated with. This is returned only for Direct Connect gateway attachments. All other attachment types return edge_location</summary>
+    /// <summary>Edge locations that the Direct Connect gateway is associated with. This is returned only for Direct Connect gateway attachments. All other attachment types return edge_location.</summary>
     [JsonPropertyName("edgeLocations")]
     public IList<string>? EdgeLocations { get; set; }
 
@@ -462,19 +458,19 @@ public partial class V1beta1AttachmentAccepterStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the attachment account owner.</summary>
+    /// <summary>ID of the attachment account owner.</summary>
     [JsonPropertyName("ownerAccountId")]
     public string? OwnerAccountId { get; set; }
 
-    /// <summary>The attachment resource ARN.</summary>
+    /// <summary>Attachment resource ARN.</summary>
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 
-    /// <summary>The name of the segment attachment.</summary>
+    /// <summary>Name of the segment attachment.</summary>
     [JsonPropertyName("segmentName")]
     public string? SegmentName { get; set; }
 
-    /// <summary>The state of the attachment.</summary>
+    /// <summary>State of the attachment.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 }
@@ -525,7 +521,7 @@ public partial class V1beta1AttachmentAccepterStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API.</summary>
+/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AttachmentAccepter : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AttachmentAccepterSpec>, IStatus<V1beta1AttachmentAccepterStatus>
@@ -555,7 +551,7 @@ public partial class V1beta1AttachmentAccepter : IKubernetesObject<V1ObjectMeta>
     public V1beta1AttachmentAccepterStatus? Status { get; set; }
 }
 
-/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API.</summary>
+/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AttachmentAccepter>

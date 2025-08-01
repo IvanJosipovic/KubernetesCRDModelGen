@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBStickinessPolicySpecForProvider
 {
-    /// <summary>The cookie duration in seconds. This determines the length of the session stickiness.</summary>
+    /// <summary>Cookie duration in seconds. This determines the length of the session stickiness.</summary>
     [JsonPropertyName("cookieDuration")]
     public double? CookieDuration { get; set; }
 
-    /// <summary>- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.</summary>
+    /// <summary>Whether to enable session stickiness for the load balancer.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -29,11 +29,11 @@ public partial class V1beta1LBStickinessPolicySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBStickinessPolicySpecInitProvider
 {
-    /// <summary>The cookie duration in seconds. This determines the length of the session stickiness.</summary>
+    /// <summary>Cookie duration in seconds. This determines the length of the session stickiness.</summary>
     [JsonPropertyName("cookieDuration")]
     public double? CookieDuration { get; set; }
 
-    /// <summary>- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.</summary>
+    /// <summary>Whether to enable session stickiness for the load balancer.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -174,17 +174,21 @@ public partial class V1beta1LBStickinessPolicySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBStickinessPolicyStatusAtProvider
 {
-    /// <summary>The cookie duration in seconds. This determines the length of the session stickiness.</summary>
+    /// <summary>Cookie duration in seconds. This determines the length of the session stickiness.</summary>
     [JsonPropertyName("cookieDuration")]
     public double? CookieDuration { get; set; }
 
-    /// <summary>- The Session Stickiness state of the load balancer. true to activate session stickiness or false to deactivate session stickiness.</summary>
+    /// <summary>Whether to enable session stickiness for the load balancer.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The name used for this load balancer (matches lb_name).</summary>
+    /// <summary>Name used for this load balancer (matches lb_name).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -233,7 +237,7 @@ public partial class V1beta1LBStickinessPolicyStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Configures Session Stickiness for a Lightsail Load Balancer</summary>
+/// <summary>LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Manages session stickiness for a Lightsail Load Balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBStickinessPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBStickinessPolicySpec>, IStatus<V1beta1LBStickinessPolicyStatus>
@@ -263,7 +267,7 @@ public partial class V1beta1LBStickinessPolicy : IKubernetesObject<V1ObjectMeta>
     public V1beta1LBStickinessPolicyStatus? Status { get; set; }
 }
 
-/// <summary>LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Configures Session Stickiness for a Lightsail Load Balancer</summary>
+/// <summary>LBStickinessPolicy is the Schema for the LBStickinessPolicys API. Manages session stickiness for a Lightsail Load Balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBStickinessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBStickinessPolicy>

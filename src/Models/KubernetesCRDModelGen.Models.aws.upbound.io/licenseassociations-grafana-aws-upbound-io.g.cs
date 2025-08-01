@@ -76,7 +76,7 @@ public partial class V1beta1LicenseAssociationSpecForProvider
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -329,6 +329,10 @@ public partial class V1beta1LicenseAssociationStatusAtProvider
     /// <summary>The type of license for the workspace license association. Valid values are ENTERPRISE and ENTERPRISE_FREE_TRIAL.</summary>
     [JsonPropertyName("licenseType")]
     public string? LicenseType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The workspace id.</summary>
     [JsonPropertyName("workspaceId")]

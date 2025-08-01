@@ -143,7 +143,7 @@ public partial class V1beta1DomainSAMLOptionsSpecForProvider
     [JsonPropertyName("domainNameSelector")]
     public V1beta1DomainSAMLOptionsSpecForProviderDomainNameSelector? DomainNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -477,6 +477,10 @@ public partial class V1beta1DomainSAMLOptionsStatusAtProvider
     /// <summary>Name of the domain the SAML options are associated with.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>SAML authentication options for an AWS OpenSearch Domain.</summary>
     [JsonPropertyName("samlOptions")]

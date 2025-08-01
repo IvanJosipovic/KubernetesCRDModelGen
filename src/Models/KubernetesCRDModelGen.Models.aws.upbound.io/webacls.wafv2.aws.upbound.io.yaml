@@ -166,6 +166,37 @@ spec:
                           type: string
                       type: object
                     type: array
+                  dataProtectionConfig:
+                    description: Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.
+                    properties:
+                      dataProtection:
+                        description: A block for data protection configurations for specific web request field types. See data_protection block for details.
+                        items:
+                          properties:
+                            action:
+                              description: Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.
+                              type: string
+                            excludeRateBasedDetails:
+                              description: Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.
+                              type: boolean
+                            excludeRuleMatchDetails:
+                              description: Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.
+                              type: boolean
+                            field:
+                              description: Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.
+                              properties:
+                                fieldKeys:
+                                  description: Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.
+                                  items:
+                                    type: string
+                                  type: array
+                                fieldType:
+                                  description: Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
+                    type: object
                   defaultAction:
                     description: Action to perform if none of the rules contained in the WebACL match. See default_action below for details.
                     properties:
@@ -220,10 +251,13 @@ spec:
                     description: Friendly description of the WebACL.
                     type: string
                   name:
-                    description: Friendly name of the WebACL.
+                    description: Friendly name of the WebACL. Conflicts with name_prefix.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   ruleJson:
                     description: 'A raw JSON string used to define the rules for allowing, blocking, or counting web requests. When this field is used, Crossplane cannot observe changes in the configuration through the AWS API; therefore, drift detection cannot be performed. Refer to the AWS documentation for the expected JSON structure: https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateWebACL.html'
@@ -363,6 +397,37 @@ spec:
                           type: string
                       type: object
                     type: array
+                  dataProtectionConfig:
+                    description: Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.
+                    properties:
+                      dataProtection:
+                        description: A block for data protection configurations for specific web request field types. See data_protection block for details.
+                        items:
+                          properties:
+                            action:
+                              description: Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.
+                              type: string
+                            excludeRateBasedDetails:
+                              description: Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.
+                              type: boolean
+                            excludeRuleMatchDetails:
+                              description: Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.
+                              type: boolean
+                            field:
+                              description: Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.
+                              properties:
+                                fieldKeys:
+                                  description: Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.
+                                  items:
+                                    type: string
+                                  type: array
+                                fieldType:
+                                  description: Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
+                    type: object
                   defaultAction:
                     description: Action to perform if none of the rules contained in the WebACL match. See default_action below for details.
                     properties:
@@ -417,7 +482,7 @@ spec:
                     description: Friendly description of the WebACL.
                     type: string
                   name:
-                    description: Friendly name of the WebACL.
+                    description: Friendly name of the WebACL. Conflicts with name_prefix.
                     type: string
                   ruleJson:
                     description: 'A raw JSON string used to define the rules for allowing, blocking, or counting web requests. When this field is used, Crossplane cannot observe changes in the configuration through the AWS API; therefore, drift detection cannot be performed. Refer to the AWS documentation for the expected JSON structure: https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateWebACL.html'
@@ -662,8 +727,6 @@ spec:
             x-kubernetes-validations:
             - message: spec.forProvider.defaultAction is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.defaultAction) || (has(self.initProvider) && has(self.initProvider.defaultAction))"
-            - message: spec.forProvider.name is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.name) || (has(self.initProvider) && has(self.initProvider.name))"
             - message: spec.forProvider.scope is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.scope) || (has(self.initProvider) && has(self.initProvider.scope))"
             - message: spec.forProvider.visibilityConfig is a required parameter
@@ -764,6 +827,37 @@ spec:
                           type: string
                       type: object
                     type: array
+                  dataProtectionConfig:
+                    description: Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.
+                    properties:
+                      dataProtection:
+                        description: A block for data protection configurations for specific web request field types. See data_protection block for details.
+                        items:
+                          properties:
+                            action:
+                              description: Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.
+                              type: string
+                            excludeRateBasedDetails:
+                              description: Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.
+                              type: boolean
+                            excludeRuleMatchDetails:
+                              description: Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.
+                              type: boolean
+                            field:
+                              description: Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.
+                              properties:
+                                fieldKeys:
+                                  description: Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.
+                                  items:
+                                    type: string
+                                  type: array
+                                fieldType:
+                                  description: Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.
+                                  type: string
+                              type: object
+                          type: object
+                        type: array
+                    type: object
                   defaultAction:
                     description: Action to perform if none of the rules contained in the WebACL match. See default_action below for details.
                     properties:
@@ -823,7 +917,13 @@ spec:
                   lockToken:
                     type: string
                   name:
-                    description: Friendly name of the WebACL.
+                    description: Friendly name of the WebACL. Conflicts with name_prefix.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   ruleJson:
                     description: 'A raw JSON string used to define the rules for allowing, blocking, or counting web requests. When this field is used, Crossplane cannot observe changes in the configuration through the AWS API; therefore, drift detection cannot be performed. Refer to the AWS documentation for the expected JSON structure: https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateWebACL.html'

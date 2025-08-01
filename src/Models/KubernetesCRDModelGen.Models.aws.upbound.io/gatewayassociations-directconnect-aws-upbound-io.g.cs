@@ -160,13 +160,9 @@ public partial class V1beta1GatewayAssociationSpecForProvider
     [JsonPropertyName("proposalId")]
     public string? ProposalId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
-
-    /// <summary>The ID of the Direct Connect gateway association resource.</summary>
-    [JsonPropertyName("vpnGatewayId")]
-    public string? VpnGatewayId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -320,10 +316,6 @@ public partial class V1beta1GatewayAssociationSpecInitProvider
     /// <summary>The ID of the Direct Connect gateway association proposal. Used for cross-account Direct Connect gateway associations.</summary>
     [JsonPropertyName("proposalId")]
     public string? ProposalId { get; set; }
-
-    /// <summary>The ID of the Direct Connect gateway association resource.</summary>
-    [JsonPropertyName("vpnGatewayId")]
-    public string? VpnGatewayId { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -490,7 +482,7 @@ public partial class V1beta1GatewayAssociationStatusAtProvider
     [JsonPropertyName("dxGatewayOwnerAccountId")]
     public string? DxGatewayOwnerAccountId { get; set; }
 
-    /// <summary>The ID of the Direct Connect gateway association resource.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -498,9 +490,9 @@ public partial class V1beta1GatewayAssociationStatusAtProvider
     [JsonPropertyName("proposalId")]
     public string? ProposalId { get; set; }
 
-    /// <summary>The ID of the Direct Connect gateway association resource.</summary>
-    [JsonPropertyName("vpnGatewayId")]
-    public string? VpnGatewayId { get; set; }
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -85,11 +85,16 @@ spec:
               forProvider:
                 properties:
                   certificateBody:
-                    description: encoded format.
+                    description: >-
+                      The contents of the public key certificate in
+
+                      PEM-encoded format.
                     type: string
                   certificateChain:
                     description: >-
-                      encoded public key certificates
+                      The contents of the certificate chain.
+
+                      This is typically a concatenation of the PEM-encoded public key certificates
 
                       of the chain.
                     type: string
@@ -104,7 +109,7 @@ spec:
                       See IAM Identifiers for more details on IAM Paths.
                     type: string
                   privateKeySecretRef:
-                    description: encoded format.
+                    description: The contents of the private key in PEM-encoded format.
                     properties:
                       key:
                         description: The key to select.
@@ -150,11 +155,16 @@ spec:
                   autoscaler.
                 properties:
                   certificateBody:
-                    description: encoded format.
+                    description: >-
+                      The contents of the public key certificate in
+
+                      PEM-encoded format.
                     type: string
                   certificateChain:
                     description: >-
-                      encoded public key certificates
+                      The contents of the certificate chain.
+
+                      This is typically a concatenation of the PEM-encoded public key certificates
 
                       of the chain.
                     type: string
@@ -169,7 +179,7 @@ spec:
                       See IAM Identifiers for more details on IAM Paths.
                     type: string
                   privateKeySecretRef:
-                    description: encoded format.
+                    description: The contents of the private key in PEM-encoded format.
                     properties:
                       key:
                         description: The key to select.
@@ -416,11 +426,16 @@ spec:
                     description: The Amazon Resource Name (ARN) specifying the server certificate.
                     type: string
                   certificateBody:
-                    description: encoded format.
+                    description: >-
+                      The contents of the public key certificate in
+
+                      PEM-encoded format.
                     type: string
                   certificateChain:
                     description: >-
-                      encoded public key certificates
+                      The contents of the certificate chain.
+
+                      This is typically a concatenation of the PEM-encoded public key certificates
 
                       of the chain.
                     type: string

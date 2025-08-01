@@ -196,7 +196,7 @@ public partial class V1beta1MountTargetSpecForProvider
     [JsonPropertyName("ipAddress")]
     public string? IpAddress { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -613,6 +613,10 @@ public partial class V1beta1MountTargetStatusAtProvider
     /// <summary>AWS account ID that owns the resource.</summary>
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A list of up to 5 VPC security group IDs (that must be for the same VPC as subnet specified) in effect for the mount target.</summary>
     [JsonPropertyName("securityGroups")]

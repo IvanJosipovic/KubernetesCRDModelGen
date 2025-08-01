@@ -152,7 +152,7 @@ public partial class V1beta1HealthCheckSpecForProvider
     [JsonPropertyName("cloudwatchAlarmNameSelector")]
     public V1beta1HealthCheckSpecForProviderCloudwatchAlarmNameSelector? CloudwatchAlarmNameSelector { get; set; }
 
-    /// <summary>The CloudWatchRegion that the CloudWatch alarm was created in.</summary>
+    /// <summary>The region that the CloudWatch alarm was created in.</summary>
     [JsonPropertyName("cloudwatchAlarmRegion")]
     public string? CloudwatchAlarmRegion { get; set; }
 
@@ -196,10 +196,6 @@ public partial class V1beta1HealthCheckSpecForProvider
     [JsonPropertyName("referenceName")]
     public string? ReferenceName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>A list of AWS regions that you want Amazon Route 53 health checkers to check the specified endpoint from.</summary>
     [JsonPropertyName("regions")]
     public IList<string>? Regions { get; set; }
@@ -223,6 +219,10 @@ public partial class V1beta1HealthCheckSpecForProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Map of arbitrary keys and values that, when changed, will trigger an in-place update of the CloudWatch alarm arguments. Use this argument to synchronize the health check when an alarm is changed. See example above.</summary>
+    [JsonPropertyName("triggers")]
+    public IDictionary<string, string>? Triggers { get; set; }
 
     /// <summary>The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.</summary>
     [JsonPropertyName("type")]
@@ -373,7 +373,7 @@ public partial class V1beta1HealthCheckSpecInitProvider
     [JsonPropertyName("cloudwatchAlarmNameSelector")]
     public V1beta1HealthCheckSpecInitProviderCloudwatchAlarmNameSelector? CloudwatchAlarmNameSelector { get; set; }
 
-    /// <summary>The CloudWatchRegion that the CloudWatch alarm was created in.</summary>
+    /// <summary>The region that the CloudWatch alarm was created in.</summary>
     [JsonPropertyName("cloudwatchAlarmRegion")]
     public string? CloudwatchAlarmRegion { get; set; }
 
@@ -440,6 +440,10 @@ public partial class V1beta1HealthCheckSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Map of arbitrary keys and values that, when changed, will trigger an in-place update of the CloudWatch alarm arguments. Use this argument to synchronize the health check when an alarm is changed. See example above.</summary>
+    [JsonPropertyName("triggers")]
+    public IDictionary<string, string>? Triggers { get; set; }
 
     /// <summary>The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.</summary>
     [JsonPropertyName("type")]
@@ -598,7 +602,7 @@ public partial class V1beta1HealthCheckStatusAtProvider
     [JsonPropertyName("cloudwatchAlarmName")]
     public string? CloudwatchAlarmName { get; set; }
 
-    /// <summary>The CloudWatchRegion that the CloudWatch alarm was created in.</summary>
+    /// <summary>The region that the CloudWatch alarm was created in.</summary>
     [JsonPropertyName("cloudwatchAlarmRegion")]
     public string? CloudwatchAlarmRegion { get; set; }
 
@@ -673,6 +677,10 @@ public partial class V1beta1HealthCheckStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>Map of arbitrary keys and values that, when changed, will trigger an in-place update of the CloudWatch alarm arguments. Use this argument to synchronize the health check when an alarm is changed. See example above.</summary>
+    [JsonPropertyName("triggers")]
+    public IDictionary<string, string>? Triggers { get; set; }
 
     /// <summary>The protocol to use when performing health checks. Valid values are HTTP, HTTPS, HTTP_STR_MATCH, HTTPS_STR_MATCH, TCP, CALCULATED, CLOUDWATCH_METRIC and RECOVERY_CONTROL.</summary>
     [JsonPropertyName("type")]

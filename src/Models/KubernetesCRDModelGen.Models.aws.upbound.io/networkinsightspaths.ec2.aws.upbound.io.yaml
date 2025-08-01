@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   destination:
-                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.
+                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.
                     type: string
                   destinationIp:
                     description: IP address of the destination resource.
@@ -179,11 +179,74 @@ spec:
                             type: string
                         type: object
                     type: object
+                  filterAtDestination:
+                    description: Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                    type: object
+                  filterAtSource:
+                    description: Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                    type: object
                   protocol:
                     description: Protocol to use for analysis. Valid options are tcp or udp.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   source:
                     description: ID or ARN of the resource which is the source of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.
@@ -309,7 +372,7 @@ spec:
                   autoscaler.
                 properties:
                   destination:
-                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.
+                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.
                     type: string
                   destinationIp:
                     description: IP address of the destination resource.
@@ -401,6 +464,66 @@ spec:
                             - Always
                             - IfNotPresent
                             type: string
+                        type: object
+                    type: object
+                  filterAtDestination:
+                    description: Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                    type: object
+                  filterAtSource:
+                    description: Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
                         type: object
                     type: object
                   protocol:
@@ -725,7 +848,7 @@ spec:
                     description: ARN of the Network Insights Path.
                     type: string
                   destination:
-                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.
+                    description: ID or ARN of the resource which is the destination of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN. Either the destination argument or the destination_address argument in the filter_at_source block must be specified.
                     type: string
                   destinationArn:
                     description: ARN of the destination.
@@ -736,11 +859,77 @@ spec:
                   destinationPort:
                     description: Destination port to analyze access to.
                     type: number
+                  filterAtDestination:
+                    description: Scopes the analysis to network paths that match specific filters at the destination. If you specify this parameter, you can't specify destination_ip. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                    type: object
+                  filterAtSource:
+                    description: Scopes the analysis to network paths that match specific filters at the source. If you specify this parameter, you can't specify source_ip or destination_port. See below for details.
+                    properties:
+                      destinationAddress:
+                        description: The destination IPv4 address.
+                        type: string
+                      destinationPortRange:
+                        description: The destination port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                      sourceAddress:
+                        description: IP address of the source resource.
+                        type: string
+                      sourcePortRange:
+                        description: The source port range. See below for details.
+                        properties:
+                          fromPort:
+                            description: The first port in the range.
+                            type: number
+                          toPort:
+                            description: The last port in the range.
+                            type: number
+                        type: object
+                    type: object
                   id:
                     description: ID of the Network Insights Path.
                     type: string
                   protocol:
                     description: Protocol to use for analysis. Valid options are tcp or udp.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   source:
                     description: ID or ARN of the resource which is the source of the path. Can be an Instance, Internet Gateway, Network Interface, Transit Gateway, VPC Endpoint, VPC Peering Connection or VPN Gateway. If the resource is in another account, you must specify an ARN.

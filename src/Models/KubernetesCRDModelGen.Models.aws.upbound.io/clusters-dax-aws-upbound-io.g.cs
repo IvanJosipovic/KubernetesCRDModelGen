@@ -137,11 +137,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
 
-    /// <summary>–  The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
+    /// <summary>The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
     [JsonPropertyName("clusterEndpointEncryptionType")]
     public string? ClusterEndpointEncryptionType { get; set; }
 
-    /// <summary>–  Description for the cluster</summary>
+    /// <summary>Description for the cluster</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -157,27 +157,27 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1ClusterSpecForProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
+    /// <summary>The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>An Amazon Resource Name (ARN) of an SNS topic to send DAX notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  Name of the parameter group to associate with this DAX cluster</summary>
+    /// <summary>Name of the parameter group to associate with this DAX cluster</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>node cluster, without any read replicas</summary>
+    /// <summary>The number of nodes in the DAX cluster. A replication factor of 1 will create a single-node cluster, without any read replicas</summary>
     [JsonPropertyName("replicationFactor")]
     public double? ReplicationFactor { get; set; }
 
@@ -189,7 +189,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cluster</summary>
+    /// <summary>One or more VPC security groups associated with the cluster</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -197,7 +197,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1ClusterSpecForProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 
-    /// <summary>–  Name of the subnet group to be used for the cluster</summary>
+    /// <summary>Name of the subnet group to be used for the cluster</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 
@@ -335,11 +335,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
 
-    /// <summary>–  The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
+    /// <summary>The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
     [JsonPropertyName("clusterEndpointEncryptionType")]
     public string? ClusterEndpointEncryptionType { get; set; }
 
-    /// <summary>–  Description for the cluster</summary>
+    /// <summary>Description for the cluster</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -355,23 +355,23 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1ClusterSpecInitProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
+    /// <summary>The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>An Amazon Resource Name (ARN) of an SNS topic to send DAX notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  Name of the parameter group to associate with this DAX cluster</summary>
+    /// <summary>Name of the parameter group to associate with this DAX cluster</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>node cluster, without any read replicas</summary>
+    /// <summary>The number of nodes in the DAX cluster. A replication factor of 1 will create a single-node cluster, without any read replicas</summary>
     [JsonPropertyName("replicationFactor")]
     public double? ReplicationFactor { get; set; }
 
@@ -383,7 +383,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cluster</summary>
+    /// <summary>One or more VPC security groups associated with the cluster</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -391,7 +391,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1ClusterSpecInitProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 
-    /// <summary>–  Name of the subnet group to be used for the cluster</summary>
+    /// <summary>Name of the subnet group to be used for the cluster</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 
@@ -578,7 +578,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("clusterAddress")]
     public string? ClusterAddress { get; set; }
 
-    /// <summary>–  The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
+    /// <summary>The type of encryption the cluster's endpoint should support. Valid values are: NONE and TLS. Default value is NONE.</summary>
     [JsonPropertyName("clusterEndpointEncryptionType")]
     public string? ClusterEndpointEncryptionType { get; set; }
 
@@ -586,7 +586,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("configurationEndpoint")]
     public string? ConfigurationEndpoint { get; set; }
 
-    /// <summary>–  Description for the cluster</summary>
+    /// <summary>Description for the cluster</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -598,11 +598,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
+    /// <summary>Specifies the weekly time range for when maintenance on the cluster is performed. The format is ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: sun:05:00-sun:09:00</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
+    /// <summary>The compute and memory capacity of the nodes. See Nodes for supported node types</summary>
     [JsonPropertyName("nodeType")]
     public string? NodeType { get; set; }
 
@@ -610,11 +610,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("nodes")]
     public IList<V1beta1ClusterStatusAtProviderNodes>? Nodes { get; set; }
 
-    /// <summary>east-1:012345678999:my_sns_topic</summary>
+    /// <summary>An Amazon Resource Name (ARN) of an SNS topic to send DAX notifications to. Example: arn:aws:sns:us-east-1:012345678999:my_sns_topic</summary>
     [JsonPropertyName("notificationTopicArn")]
     public string? NotificationTopicArn { get; set; }
 
-    /// <summary>–  Name of the parameter group to associate with this DAX cluster</summary>
+    /// <summary>Name of the parameter group to associate with this DAX cluster</summary>
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
@@ -622,11 +622,15 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>node cluster, without any read replicas</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The number of nodes in the DAX cluster. A replication factor of 1 will create a single-node cluster, without any read replicas</summary>
     [JsonPropertyName("replicationFactor")]
     public double? ReplicationFactor { get; set; }
 
-    /// <summary>–  One or more VPC security groups associated with the cluster</summary>
+    /// <summary>One or more VPC security groups associated with the cluster</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -634,7 +638,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("serverSideEncryption")]
     public IList<V1beta1ClusterStatusAtProviderServerSideEncryption>? ServerSideEncryption { get; set; }
 
-    /// <summary>–  Name of the subnet group to be used for the cluster</summary>
+    /// <summary>Name of the subnet group to be used for the cluster</summary>
     [JsonPropertyName("subnetGroupName")]
     public string? SubnetGroupName { get; set; }
 

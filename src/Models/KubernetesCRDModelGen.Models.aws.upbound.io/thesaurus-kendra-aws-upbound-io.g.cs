@@ -285,7 +285,7 @@ public partial class V1beta1ThesaurusSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -776,6 +776,10 @@ public partial class V1beta1ThesaurusStatusAtProvider
     /// <summary>The name for the thesaurus.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM (Identity and Access Management) role used to access the thesaurus file in S3.</summary>
     [JsonPropertyName("roleArn")]

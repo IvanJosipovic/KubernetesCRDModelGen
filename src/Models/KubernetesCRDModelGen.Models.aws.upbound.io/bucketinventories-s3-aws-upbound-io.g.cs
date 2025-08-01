@@ -248,7 +248,7 @@ public partial class V1beta1BucketInventorySpecForProvider
     [JsonPropertyName("optionalFields")]
     public IList<string>? OptionalFields { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -749,6 +749,10 @@ public partial class V1beta1BucketInventoryStatusAtProvider
     /// <summary>List of optional fields that are included in the inventory results. Please refer to the S3 documentation for more details.</summary>
     [JsonPropertyName("optionalFields")]
     public IList<string>? OptionalFields { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies the schedule for generating inventory results (documented below).</summary>
     [JsonPropertyName("schedule")]

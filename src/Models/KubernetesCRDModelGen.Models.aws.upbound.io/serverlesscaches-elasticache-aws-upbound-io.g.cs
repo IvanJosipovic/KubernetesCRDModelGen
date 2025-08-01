@@ -235,7 +235,7 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -251,11 +251,11 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ServerlessCacheSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>–  The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
+    /// <summary>The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
     [JsonPropertyName("majorEngineVersion")]
     public string? MajorEngineVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -287,7 +287,7 @@ public partial class V1beta1ServerlessCacheSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ServerlessCacheSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
+    /// <summary>A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -527,7 +527,7 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -543,7 +543,7 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ServerlessCacheSpecInitProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>–  The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
+    /// <summary>The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
     [JsonPropertyName("majorEngineVersion")]
     public string? MajorEngineVersion { get; set; }
 
@@ -575,7 +575,7 @@ public partial class V1beta1ServerlessCacheSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ServerlessCacheSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
+    /// <summary>A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -817,7 +817,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("endpoint")]
     public IList<V1beta1ServerlessCacheStatusAtProviderEndpoint>? Endpoint { get; set; }
 
-    /// <summary>–  Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
+    /// <summary>Name of the cache engine to be used for this cache cluster. Valid values are memcached, redis or valkey.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
@@ -833,13 +833,17 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>–  The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
+    /// <summary>The version of the cache engine that will be used to create the serverless cache. See Describe Cache Engine Versions in the AWS Documentation for supported versions.</summary>
     [JsonPropertyName("majorEngineVersion")]
     public string? MajorEngineVersion { get; set; }
 
     /// <summary>Represents the information required for client programs to connect to a cache node. See reader_endpoint Block for details.</summary>
     [JsonPropertyName("readerEndpoint")]
     public IList<V1beta1ServerlessCacheStatusAtProviderReaderEndpoint>? ReaderEndpoint { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A list of the one or more VPC security groups to be associated with the serverless cache. The security group will authorize traffic access for the VPC end-point (private-link). If no other information is given this will be the VPC’s Default Security Group that is associated with the cluster VPC end-point.</summary>
     [JsonPropertyName("securityGroupIds")]
@@ -857,7 +861,7 @@ public partial class V1beta1ServerlessCacheStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>–  A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
+    /// <summary>A list of the identifiers of the subnets where the VPC endpoint for the serverless cache will be deployed. All the subnetIds must belong to the same VPC.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 

@@ -84,6 +84,12 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  applicationProtocol:
+                    description: An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.
+                    type: string
+                  authenticationType:
+                    description: An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.
+                    type: string
                   authorizerConfig:
                     description: An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.
                     properties:
@@ -98,7 +104,10 @@ spec:
                     description: Fully-qualified domain name.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   serverCertificateArns:
                     description: The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains. When using a custom domain_name, the cert must include it.
@@ -242,6 +251,12 @@ spec:
 
                   autoscaler.
                 properties:
+                  applicationProtocol:
+                    description: An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.
+                    type: string
+                  authenticationType:
+                    description: An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.
+                    type: string
                   authorizerConfig:
                     description: An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.
                     properties:
@@ -586,8 +601,14 @@ spec:
             properties:
               atProvider:
                 properties:
+                  applicationProtocol:
+                    description: An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.
+                    type: string
                   arn:
                     description: The ARN of the domain configuration.
+                    type: string
+                  authenticationType:
+                    description: An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.
                     type: string
                   authorizerConfig:
                     description: An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.
@@ -607,6 +628,12 @@ spec:
                     type: string
                   id:
                     description: The name of the created domain configuration.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   serverCertificateArns:
                     description: The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains. When using a custom domain_name, the cert must include it.

@@ -124,7 +124,7 @@ public partial class V1beta1AccessEntrySpecForProviderPrincipalArnFromRoleSelect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessEntrySpecForProvider
 {
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -136,11 +136,11 @@ public partial class V1beta1AccessEntrySpecForProvider
     [JsonPropertyName("clusterNameSelector")]
     public V1beta1AccessEntrySpecForProviderClusterNameSelector? ClusterNameSelector { get; set; }
 
-    /// <summary>–  List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
+    /// <summary>List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
     [JsonPropertyName("kubernetesGroups")]
     public IList<string>? KubernetesGroups { get; set; }
 
-    /// <summary>–  The IAM Principal ARN which requires Authentication access to the EKS cluster.</summary>
+    /// <summary>The IAM Principal ARN which requires Authentication access to the EKS cluster.</summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
 
@@ -152,7 +152,7 @@ public partial class V1beta1AccessEntrySpecForProvider
     [JsonPropertyName("principalArnFromRoleSelector")]
     public V1beta1AccessEntrySpecForProviderPrincipalArnFromRoleSelector? PrincipalArnFromRoleSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -173,7 +173,7 @@ public partial class V1beta1AccessEntrySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessEntrySpecInitProvider
 {
-    /// <summary>–  List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
+    /// <summary>List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
     [JsonPropertyName("kubernetesGroups")]
     public IList<string>? KubernetesGroups { get; set; }
 
@@ -330,7 +330,7 @@ public partial class V1beta1AccessEntryStatusAtProvider
     [JsonPropertyName("accessEntryArn")]
     public string? AccessEntryArn { get; set; }
 
-    /// <summary>–  Name of the EKS Cluster.</summary>
+    /// <summary>Name of the EKS Cluster.</summary>
     [JsonPropertyName("clusterName")]
     public string? ClusterName { get; set; }
 
@@ -342,7 +342,7 @@ public partial class V1beta1AccessEntryStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
+    /// <summary>List of string which can optionally specify the Kubernetes groups the user would belong to when creating an access entry.</summary>
     [JsonPropertyName("kubernetesGroups")]
     public IList<string>? KubernetesGroups { get; set; }
 
@@ -350,9 +350,13 @@ public partial class V1beta1AccessEntryStatusAtProvider
     [JsonPropertyName("modifiedAt")]
     public string? ModifiedAt { get; set; }
 
-    /// <summary>–  The IAM Principal ARN which requires Authentication access to the EKS cluster.</summary>
+    /// <summary>The IAM Principal ARN which requires Authentication access to the EKS cluster.</summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

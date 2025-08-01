@@ -248,7 +248,7 @@ public partial class V1beta1WorkteamSpecForProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
-/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
@@ -261,22 +261,22 @@ public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Pr
     public string? VpcSourceIp { get; set; }
 }
 
-/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
     [JsonPropertyName("iamPolicyConstraints")]
-    public V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
+    public IList<V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints>? IamPolicyConstraints { get; set; }
 }
 
-/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecForProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
     [JsonPropertyName("s3Presign")]
-    public V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
+    public IList<V1beta1WorkteamSpecForProviderWorkerAccessConfigurationS3Presign>? S3Presign { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -351,7 +351,7 @@ public partial class V1beta1WorkteamSpecForProvider
     [JsonPropertyName("notificationConfiguration")]
     public IList<V1beta1WorkteamSpecForProviderNotificationConfiguration>? NotificationConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -361,7 +361,7 @@ public partial class V1beta1WorkteamSpecForProvider
 
     /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
     [JsonPropertyName("workerAccessConfiguration")]
-    public V1beta1WorkteamSpecForProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
+    public IList<V1beta1WorkteamSpecForProviderWorkerAccessConfiguration>? WorkerAccessConfiguration { get; set; }
 
     /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
@@ -616,7 +616,7 @@ public partial class V1beta1WorkteamSpecInitProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
-/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
@@ -629,22 +629,22 @@ public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3P
     public string? VpcSourceIp { get; set; }
 }
 
-/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
     [JsonPropertyName("iamPolicyConstraints")]
-    public V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
+    public IList<V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints>? IamPolicyConstraints { get; set; }
 }
 
-/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
     [JsonPropertyName("s3Presign")]
-    public V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
+    public IList<V1beta1WorkteamSpecInitProviderWorkerAccessConfigurationS3Presign>? S3Presign { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -725,7 +725,7 @@ public partial class V1beta1WorkteamSpecInitProvider
 
     /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
     [JsonPropertyName("workerAccessConfiguration")]
-    public V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
+    public IList<V1beta1WorkteamSpecInitProviderWorkerAccessConfiguration>? WorkerAccessConfiguration { get; set; }
 
     /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
@@ -920,7 +920,7 @@ public partial class V1beta1WorkteamStatusAtProviderNotificationConfiguration
     public string? NotificationTopicArn { get; set; }
 }
 
-/// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints
 {
@@ -933,22 +933,22 @@ public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3P
     public string? VpcSourceIp { get; set; }
 }
 
-/// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign
 {
     /// <summary>Use this parameter to specify the allowed request source. Possible sources are either SourceIp or VpcSourceIp. see IAM Policy Constraints details below.</summary>
     [JsonPropertyName("iamPolicyConstraints")]
-    public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints? IamPolicyConstraints { get; set; }
+    public IList<V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3PresignIamPolicyConstraints>? IamPolicyConstraints { get; set; }
 }
 
-/// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration
 {
     /// <summary>Defines any Amazon S3 resource constraints. see S3 Presign details below.</summary>
     [JsonPropertyName("s3Presign")]
-    public V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign? S3Presign { get; set; }
+    public IList<V1beta1WorkteamStatusAtProviderWorkerAccessConfigurationS3Presign>? S3Presign { get; set; }
 }
 
 /// <summary></summary>
@@ -975,6 +975,10 @@ public partial class V1beta1WorkteamStatusAtProvider
     [JsonPropertyName("notificationConfiguration")]
     public IList<V1beta1WorkteamStatusAtProviderNotificationConfiguration>? NotificationConfiguration { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The subdomain for your OIDC Identity Provider.</summary>
     [JsonPropertyName("subdomain")]
     public string? Subdomain { get; set; }
@@ -989,7 +993,7 @@ public partial class V1beta1WorkteamStatusAtProvider
 
     /// <summary>Use this optional parameter to constrain access to an Amazon S3 resource based on the IP address using supported IAM global condition keys. The Amazon S3 resource is accessed in the worker portal using a Amazon S3 presigned URL. see Worker Access Configuration details below.</summary>
     [JsonPropertyName("workerAccessConfiguration")]
-    public V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration? WorkerAccessConfiguration { get; set; }
+    public IList<V1beta1WorkteamStatusAtProviderWorkerAccessConfiguration>? WorkerAccessConfiguration { get; set; }
 
     /// <summary>The name of the workforce.</summary>
     [JsonPropertyName("workforceName")]
@@ -1042,7 +1046,7 @@ public partial class V1beta1WorkteamStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker Workteam resource.</summary>
+/// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker AI Workteam resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Workteam : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkteamSpec>, IStatus<V1beta1WorkteamStatus>
@@ -1072,7 +1076,7 @@ public partial class V1beta1Workteam : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     public V1beta1WorkteamStatus? Status { get; set; }
 }
 
-/// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker Workteam resource.</summary>
+/// <summary>Workteam is the Schema for the Workteams API. Provides a SageMaker AI Workteam resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WorkteamList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workteam>

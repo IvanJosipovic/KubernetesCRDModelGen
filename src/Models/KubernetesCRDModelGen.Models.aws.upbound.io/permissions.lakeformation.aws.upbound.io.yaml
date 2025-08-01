@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -113,7 +113,7 @@ spec:
                     items:
                       properties:
                         arn:
-                          description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                          description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                           type: string
                         arnRef:
                           description: Reference to a Resource in lakeformation to populate arn.
@@ -214,7 +214,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         name:
-                          description: –  Name of the database resource. Unique to the Data Catalog.
+                          description: Name of the database resource. Unique to the Data Catalog.
                           type: string
                         nameRef:
                           description: Reference to a CatalogDatabase in glue to populate name.
@@ -312,7 +312,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         key:
-                          description: name for the tag.
+                          description: The key-name for the tag.
                           type: string
                         values:
                           description: A list of possible values an attribute can take.
@@ -334,7 +334,7 @@ spec:
                           items:
                             properties:
                               key:
-                                description: name of an LF-Tag.
+                                description: The key-name of an LF-Tag.
                                 type: string
                               values:
                                 description: A list of possible values of an LF-Tag.
@@ -345,12 +345,12 @@ spec:
                             type: object
                           type: array
                         resourceType:
-                          description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                          description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                           type: string
                       type: object
                     type: array
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -362,10 +362,13 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -375,7 +378,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         databaseName:
-                          description: –  Name of the database for the table. Unique to a Data Catalog.
+                          description: Name of the database for the table. Unique to a Data Catalog.
                           type: string
                         name:
                           description: Name of the table.
@@ -399,7 +402,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         databaseName:
-                          description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                          description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                           type: string
                         excludedColumnNames:
                           description: Set of column names for the table to exclude.
@@ -408,7 +411,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         name:
-                          description: –  Name of the table resource.
+                          description: Name of the table resource.
                           type: string
                         nameRef:
                           description: Reference to a CatalogTable in glue to populate name.
@@ -527,7 +530,7 @@ spec:
                   autoscaler.
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -555,7 +558,7 @@ spec:
                     items:
                       properties:
                         arn:
-                          description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                          description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                           type: string
                         arnRef:
                           description: Reference to a Resource in lakeformation to populate arn.
@@ -656,7 +659,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         name:
-                          description: –  Name of the database resource. Unique to the Data Catalog.
+                          description: Name of the database resource. Unique to the Data Catalog.
                           type: string
                         nameRef:
                           description: Reference to a CatalogDatabase in glue to populate name.
@@ -754,7 +757,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         key:
-                          description: name for the tag.
+                          description: The key-name for the tag.
                           type: string
                         values:
                           description: A list of possible values an attribute can take.
@@ -776,7 +779,7 @@ spec:
                           items:
                             properties:
                               key:
-                                description: name of an LF-Tag.
+                                description: The key-name of an LF-Tag.
                                 type: string
                               values:
                                 description: A list of possible values of an LF-Tag.
@@ -787,12 +790,12 @@ spec:
                             type: object
                           type: array
                         resourceType:
-                          description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                          description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                           type: string
                       type: object
                     type: array
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -804,7 +807,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -814,7 +817,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         databaseName:
-                          description: –  Name of the database for the table. Unique to a Data Catalog.
+                          description: Name of the database for the table. Unique to a Data Catalog.
                           type: string
                         name:
                           description: Name of the table.
@@ -838,7 +841,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         databaseName:
-                          description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                          description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                           type: string
                         excludedColumnNames:
                           description: Set of column names for the table to exclude.
@@ -847,7 +850,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         name:
-                          description: –  Name of the table resource.
+                          description: Name of the table resource.
                           type: string
                         nameRef:
                           description: Reference to a CatalogTable in glue to populate name.
@@ -1160,7 +1163,7 @@ spec:
               atProvider:
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -1188,7 +1191,7 @@ spec:
                     items:
                       properties:
                         arn:
-                          description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                          description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                           type: string
                         catalogId:
                           description: Identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the account ID of the caller.
@@ -1203,7 +1206,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         name:
-                          description: –  Name of the database resource. Unique to the Data Catalog.
+                          description: Name of the database resource. Unique to the Data Catalog.
                           type: string
                       type: object
                     type: array
@@ -1217,7 +1220,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         key:
-                          description: name for the tag.
+                          description: The key-name for the tag.
                           type: string
                         values:
                           description: A list of possible values an attribute can take.
@@ -1239,7 +1242,7 @@ spec:
                           items:
                             properties:
                               key:
-                                description: name of an LF-Tag.
+                                description: The key-name of an LF-Tag.
                                 type: string
                               values:
                                 description: A list of possible values of an LF-Tag.
@@ -1250,12 +1253,12 @@ spec:
                             type: object
                           type: array
                         resourceType:
-                          description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                          description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                           type: string
                       type: object
                     type: array
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -1267,7 +1270,13 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -1277,7 +1286,7 @@ spec:
                           description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                           type: string
                         databaseName:
-                          description: –  Name of the database for the table. Unique to a Data Catalog.
+                          description: Name of the database for the table. Unique to a Data Catalog.
                           type: string
                         name:
                           description: Name of the table.
@@ -1301,7 +1310,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         databaseName:
-                          description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                          description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                           type: string
                         excludedColumnNames:
                           description: Set of column names for the table to exclude.
@@ -1310,7 +1319,7 @@ spec:
                           type: array
                           x-kubernetes-list-type: set
                         name:
-                          description: –  Name of the table resource.
+                          description: Name of the table resource.
                           type: string
                         wildcard:
                           description: Whether to use a column wildcard.
@@ -1452,7 +1461,7 @@ spec:
               forProvider:
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -1477,7 +1486,7 @@ spec:
                     description: Configuration block for a data location resource. Detailed below.
                     properties:
                       arn:
-                        description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                        description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                         type: string
                       arnRef:
                         description: Reference to a Resource in lakeformation to populate arn.
@@ -1576,7 +1585,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       name:
-                        description: –  Name of the database resource. Unique to the Data Catalog.
+                        description: Name of the database resource. Unique to the Data Catalog.
                         type: string
                       nameRef:
                         description: Reference to a CatalogDatabase in glue to populate name.
@@ -1672,7 +1681,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       key:
-                        description: name for the tag.
+                        description: The key-name for the tag.
                         type: string
                       values:
                         description: A list of possible values an attribute can take.
@@ -1692,7 +1701,7 @@ spec:
                         items:
                           properties:
                             key:
-                              description: name of an LF-Tag.
+                              description: The key-name of an LF-Tag.
                               type: string
                             values:
                               description: A list of possible values of an LF-Tag.
@@ -1703,11 +1712,11 @@ spec:
                           type: object
                         type: array
                       resourceType:
-                        description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                        description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                         type: string
                     type: object
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -1719,10 +1728,13 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -1731,7 +1743,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       databaseName:
-                        description: –  Name of the database for the table. Unique to a Data Catalog.
+                        description: Name of the database for the table. Unique to a Data Catalog.
                         type: string
                       name:
                         description: Name of the table.
@@ -1753,7 +1765,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       databaseName:
-                        description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                        description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                         type: string
                       excludedColumnNames:
                         description: Set of column names for the table to exclude.
@@ -1762,7 +1774,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       name:
-                        description: –  Name of the table resource.
+                        description: Name of the table resource.
                         type: string
                       nameRef:
                         description: Reference to a CatalogTable in glue to populate name.
@@ -1880,7 +1892,7 @@ spec:
                   autoscaler.
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -1905,7 +1917,7 @@ spec:
                     description: Configuration block for a data location resource. Detailed below.
                     properties:
                       arn:
-                        description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                        description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                         type: string
                       arnRef:
                         description: Reference to a Resource in lakeformation to populate arn.
@@ -2004,7 +2016,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       name:
-                        description: –  Name of the database resource. Unique to the Data Catalog.
+                        description: Name of the database resource. Unique to the Data Catalog.
                         type: string
                       nameRef:
                         description: Reference to a CatalogDatabase in glue to populate name.
@@ -2100,7 +2112,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       key:
-                        description: name for the tag.
+                        description: The key-name for the tag.
                         type: string
                       values:
                         description: A list of possible values an attribute can take.
@@ -2120,7 +2132,7 @@ spec:
                         items:
                           properties:
                             key:
-                              description: name of an LF-Tag.
+                              description: The key-name of an LF-Tag.
                               type: string
                             values:
                               description: A list of possible values of an LF-Tag.
@@ -2131,11 +2143,11 @@ spec:
                           type: object
                         type: array
                       resourceType:
-                        description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                        description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                         type: string
                     type: object
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -2147,7 +2159,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -2156,7 +2168,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       databaseName:
-                        description: –  Name of the database for the table. Unique to a Data Catalog.
+                        description: Name of the database for the table. Unique to a Data Catalog.
                         type: string
                       name:
                         description: Name of the table.
@@ -2178,7 +2190,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       databaseName:
-                        description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                        description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                         type: string
                       excludedColumnNames:
                         description: Set of column names for the table to exclude.
@@ -2187,7 +2199,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       name:
-                        description: –  Name of the table resource.
+                        description: Name of the table resource.
                         type: string
                       nameRef:
                         description: Reference to a CatalogTable in glue to populate name.
@@ -2499,7 +2511,7 @@ spec:
               atProvider:
                 properties:
                   catalogId:
-                    description: –  Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
+                    description: Identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata store. It contains database definitions, table definitions, and other control information to manage your Lake Formation environment.
                     type: string
                   catalogResource:
                     description: Whether the permissions are to be granted for the Data Catalog. Defaults to false.
@@ -2524,7 +2536,7 @@ spec:
                     description: Configuration block for a data location resource. Detailed below.
                     properties:
                       arn:
-                        description: –  Amazon Resource Name (ARN) that uniquely identifies the data location resource.
+                        description: Amazon Resource Name (ARN) that uniquely identifies the data location resource.
                         type: string
                       catalogId:
                         description: Identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the account ID of the caller.
@@ -2537,7 +2549,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       name:
-                        description: –  Name of the database resource. Unique to the Data Catalog.
+                        description: Name of the database resource. Unique to the Data Catalog.
                         type: string
                     type: object
                   id:
@@ -2549,7 +2561,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       key:
-                        description: name for the tag.
+                        description: The key-name for the tag.
                         type: string
                       values:
                         description: A list of possible values an attribute can take.
@@ -2569,7 +2581,7 @@ spec:
                         items:
                           properties:
                             key:
-                              description: name of an LF-Tag.
+                              description: The key-name of an LF-Tag.
                               type: string
                             values:
                               description: A list of possible values of an LF-Tag.
@@ -2580,11 +2592,11 @@ spec:
                           type: object
                         type: array
                       resourceType:
-                        description: –  The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
+                        description: The resource type for which the tag policy applies. Valid values are DATABASE and TABLE.
                         type: string
                     type: object
                   permissions:
-                    description: –  List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
+                    description: List of permissions granted to the principal. Valid values may include ALL, ALTER, ASSOCIATE, CREATE_DATABASE, CREATE_TABLE, DATA_LOCATION_ACCESS, DELETE, DESCRIBE, DROP, INSERT, and SELECT. For details on each permission, see Lake Formation Permissions Reference.
                     items:
                       type: string
                     type: array
@@ -2596,7 +2608,13 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   principal:
-                    description: account permissions. For more information, see Lake Formation Permissions Reference.
+                    description: Principal to be granted the permissions on the resource. Supported principals include IAM_ALLOWED_PRINCIPALS (see Default Behavior and  above), IAM roles, users, groups, Federated Users, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see Lake Formation Permissions Reference.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   table:
                     description: Configuration block for a table resource. Detailed below.
@@ -2605,7 +2623,7 @@ spec:
                         description: Identifier for the Data Catalog. By default, it is the account ID of the caller.
                         type: string
                       databaseName:
-                        description: –  Name of the database for the table. Unique to a Data Catalog.
+                        description: Name of the database for the table. Unique to a Data Catalog.
                         type: string
                       name:
                         description: Name of the table.
@@ -2627,7 +2645,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       databaseName:
-                        description: –  Name of the database for the table with columns resource. Unique to the Data Catalog.
+                        description: Name of the database for the table with columns resource. Unique to the Data Catalog.
                         type: string
                       excludedColumnNames:
                         description: Set of column names for the table to exclude.
@@ -2636,7 +2654,7 @@ spec:
                         type: array
                         x-kubernetes-list-type: set
                       name:
-                        description: –  Name of the table resource.
+                        description: Name of the table resource.
                         type: string
                       wildcard:
                         description: Whether to use a column wildcard.

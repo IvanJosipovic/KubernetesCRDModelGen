@@ -174,7 +174,7 @@ public partial class V1beta1RepositorySpecForProvider
     [JsonPropertyName("externalConnections")]
     public V1beta1RepositorySpecForProviderExternalConnections? ExternalConnections { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -491,6 +491,10 @@ public partial class V1beta1RepositoryStatusAtProvider
     /// <summary>The ARN of the repository.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the repository to create.</summary>
     [JsonPropertyName("repository")]

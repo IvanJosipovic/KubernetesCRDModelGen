@@ -87,9 +87,6 @@ spec:
                   name:
                     description: The name or description of the SQL Injection Match Set.
                     type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   sqlInjectionMatchTuples:
                     description: The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
                     items:
@@ -130,8 +127,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -415,6 +410,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  arn:
+                    description: Amazon Resource Name (ARN) of the SQL injection match set.
+                    type: string
                   id:
                     description: The ID of the WAF SQL Injection Match Set.
                     type: string
@@ -598,9 +596,6 @@ spec:
                   name:
                     description: The name or description of the SQL Injection Match Set.
                     type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   sqlInjectionMatchTuples:
                     description: The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
                     items:
@@ -639,8 +634,6 @@ spec:
                           type: string
                       type: object
                     type: array
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -922,6 +915,9 @@ spec:
             properties:
               atProvider:
                 properties:
+                  arn:
+                    description: Amazon Resource Name (ARN) of the SQL injection match set.
+                    type: string
                   id:
                     description: The ID of the WAF SQL Injection Match Set.
                     type: string

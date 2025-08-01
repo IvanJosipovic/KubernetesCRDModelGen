@@ -20,7 +20,7 @@ public partial class V1beta1EmailIdentityMailFromAttributesSpecForProvider
     [JsonPropertyName("mailFromDomain")]
     public string? MailFromDomain { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -185,6 +185,10 @@ public partial class V1beta1EmailIdentityMailFromAttributesStatusAtProvider
     /// <summary>The custom MAIL FROM domain that you want the verified identity to use. Required if behavior_on_mx_failure is REJECT_MESSAGE.</summary>
     [JsonPropertyName("mailFromDomain")]
     public string? MailFromDomain { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

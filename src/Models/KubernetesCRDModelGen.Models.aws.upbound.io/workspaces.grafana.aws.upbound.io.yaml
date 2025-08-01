@@ -96,7 +96,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -104,7 +104,7 @@ spec:
                     description: The workspace description.
                     type: string
                   grafanaVersion:
-                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.
+                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.
                     type: string
                   name:
                     description: The Grafana workspace name.
@@ -144,7 +144,10 @@ spec:
                     description: The permission type of the workspace. If SERVICE_MANAGED is specified, the IAM roles and IAM policy attachments are generated automatically. If CUSTOMER_MANAGED is specified, the IAM roles and IAM policy attachments will not be created.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The IAM role ARN that the workspace assumes.
@@ -299,7 +302,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -307,7 +310,7 @@ spec:
                     description: The workspace description.
                     type: string
                   grafanaVersion:
-                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.
+                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.
                     type: string
                   name:
                     description: The Grafana workspace name.
@@ -698,7 +701,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -709,7 +712,7 @@ spec:
                     description: The endpoint of the Grafana workspace.
                     type: string
                   grafanaVersion:
-                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to 9.4.
+                    description: Specifies the version of Grafana to support in the new workspace. Supported values are 8.4, 9.4 and 10.4. If not specified, defaults to the latest version.
                     type: string
                   id:
                     type: string
@@ -749,6 +752,12 @@ spec:
                     type: array
                   permissionType:
                     description: The permission type of the workspace. If SERVICE_MANAGED is specified, the IAM roles and IAM policy attachments are generated automatically. If CUSTOMER_MANAGED is specified, the IAM roles and IAM policy attachments will not be created.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The IAM role ARN that the workspace assumes.
@@ -934,7 +943,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -980,7 +989,10 @@ spec:
                     description: The permission type of the workspace. If SERVICE_MANAGED is specified, the IAM roles and IAM policy attachments are generated automatically. If CUSTOMER_MANAGED is specified, the IAM roles and IAM policy attachments will not be created.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The IAM role ARN that the workspace assumes.
@@ -1133,7 +1145,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -1528,7 +1540,7 @@ spec:
                     description: The configuration string for the workspace that you create. For more information about the format and configuration options available, see Working in your Grafana workspace.
                     type: string
                   dataSources:
-                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, XRAY
+                    description: The data sources for the workspace. Valid values are AMAZON_OPENSEARCH_SERVICE, ATHENA, CLOUDWATCH, PROMETHEUS, REDSHIFT, SITEWISE, TIMESTREAM, TWINMAKER, XRAY`
                     items:
                       type: string
                     type: array
@@ -1577,6 +1589,12 @@ spec:
                     type: array
                   permissionType:
                     description: The permission type of the workspace. If SERVICE_MANAGED is specified, the IAM roles and IAM policy attachments are generated automatically. If CUSTOMER_MANAGED is specified, the IAM roles and IAM policy attachments will not be created.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The IAM role ARN that the workspace assumes.

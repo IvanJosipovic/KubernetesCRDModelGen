@@ -137,15 +137,15 @@ public partial class V1beta1LinkSpecForProviderSiteIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProvider
 {
-    /// <summary>The upload speed and download speed in Mbps. Documented below.</summary>
+    /// <summary>Upload speed and download speed in Mbps. See below.</summary>
     [JsonPropertyName("bandwidth")]
     public IList<V1beta1LinkSpecForProviderBandwidth>? Bandwidth { get; set; }
 
-    /// <summary>A description of the link.</summary>
+    /// <summary>Description of the link.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -157,15 +157,11 @@ public partial class V1beta1LinkSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1LinkSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The provider of the link.</summary>
+    /// <summary>Provider of the link.</summary>
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -181,7 +177,7 @@ public partial class V1beta1LinkSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of the link.</summary>
+    /// <summary>Type of the link.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -315,15 +311,15 @@ public partial class V1beta1LinkSpecInitProviderSiteIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecInitProvider
 {
-    /// <summary>The upload speed and download speed in Mbps. Documented below.</summary>
+    /// <summary>Upload speed and download speed in Mbps. See below.</summary>
     [JsonPropertyName("bandwidth")]
     public IList<V1beta1LinkSpecInitProviderBandwidth>? Bandwidth { get; set; }
 
-    /// <summary>A description of the link.</summary>
+    /// <summary>Description of the link.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -335,11 +331,11 @@ public partial class V1beta1LinkSpecInitProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1LinkSpecInitProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The provider of the link.</summary>
+    /// <summary>Provider of the link.</summary>
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -355,7 +351,7 @@ public partial class V1beta1LinkSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of the link.</summary>
+    /// <summary>Type of the link.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -509,19 +505,19 @@ public partial class V1beta1LinkStatusAtProviderBandwidth
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkStatusAtProvider
 {
-    /// <summary>Link Amazon Resource Name (ARN).</summary>
+    /// <summary>Link ARN.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The upload speed and download speed in Mbps. Documented below.</summary>
+    /// <summary>Upload speed and download speed in Mbps. See below.</summary>
     [JsonPropertyName("bandwidth")]
     public IList<V1beta1LinkStatusAtProviderBandwidth>? Bandwidth { get; set; }
 
-    /// <summary>A description of the link.</summary>
+    /// <summary>Description of the link.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -529,11 +525,11 @@ public partial class V1beta1LinkStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The provider of the link.</summary>
+    /// <summary>Provider of the link.</summary>
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -541,11 +537,11 @@ public partial class V1beta1LinkStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The type of the link.</summary>
+    /// <summary>Type of the link.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -596,7 +592,7 @@ public partial class V1beta1LinkStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Link is the Schema for the Links API. Creates a link for a site.</summary>
+/// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Link : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LinkSpec>, IStatus<V1beta1LinkStatus>
@@ -626,7 +622,7 @@ public partial class V1beta1Link : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     public V1beta1LinkStatus? Status { get; set; }
 }
 
-/// <summary>Link is the Schema for the Links API. Creates a link for a site.</summary>
+/// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LinkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Link>

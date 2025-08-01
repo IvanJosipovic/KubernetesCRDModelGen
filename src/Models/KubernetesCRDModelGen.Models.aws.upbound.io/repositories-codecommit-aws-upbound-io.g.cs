@@ -88,7 +88,7 @@ public partial class V1beta1RepositorySpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1RepositorySpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -345,6 +345,10 @@ public partial class V1beta1RepositoryStatusAtProvider
     /// <summary>The ARN of the encryption key. If no key is specified, the default aws/codecommit Amazon Web Services managed key is used.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the repository</summary>
     [JsonPropertyName("repositoryId")]

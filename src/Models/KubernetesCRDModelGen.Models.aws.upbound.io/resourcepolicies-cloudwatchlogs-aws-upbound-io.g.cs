@@ -16,7 +16,7 @@ public partial class V1beta1ResourcePolicySpecForProvider
     [JsonPropertyName("policyDocument")]
     public string? PolicyDocument { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -173,6 +173,10 @@ public partial class V1beta1ResourcePolicyStatusAtProvider
     /// <summary>Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.</summary>
     [JsonPropertyName("policyDocument")]
     public string? PolicyDocument { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

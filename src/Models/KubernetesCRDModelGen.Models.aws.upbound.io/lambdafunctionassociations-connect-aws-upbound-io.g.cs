@@ -148,7 +148,7 @@ public partial class V1beta1LambdaFunctionAssociationSpecForProvider
     [JsonPropertyName("instanceIdSelector")]
     public V1beta1LambdaFunctionAssociationSpecForProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -306,6 +306,10 @@ public partial class V1beta1LambdaFunctionAssociationStatusAtProvider
     /// <summary>The identifier of the Amazon Connect instance. You can find the instanceId in the ARN of the instance.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

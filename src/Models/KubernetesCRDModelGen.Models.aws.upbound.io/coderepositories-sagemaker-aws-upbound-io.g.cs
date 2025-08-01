@@ -97,7 +97,7 @@ public partial class V1beta1CodeRepositorySpecForProvider
     [JsonPropertyName("gitConfig")]
     public IList<V1beta1CodeRepositorySpecForProviderGitConfig>? GitConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -365,6 +365,10 @@ public partial class V1beta1CodeRepositoryStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -420,7 +424,7 @@ public partial class V1beta1CodeRepositoryStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker Code Repository resource.</summary>
+/// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker AI Code Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CodeRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CodeRepositorySpec>, IStatus<V1beta1CodeRepositoryStatus>
@@ -450,7 +454,7 @@ public partial class V1beta1CodeRepository : IKubernetesObject<V1ObjectMeta>, IS
     public V1beta1CodeRepositoryStatus? Status { get; set; }
 }
 
-/// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker Code Repository resource.</summary>
+/// <summary>CodeRepository is the Schema for the CodeRepositorys API. Provides a SageMaker AI Code Repository resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CodeRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CodeRepository>

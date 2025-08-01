@@ -12,25 +12,89 @@ namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderAmazonManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Queue in sqs to populate destinationArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Queue in sqs to populate destinationArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailure
 {
-    /// <summary>The Amazon Resource Name (ARN) of the destination resource.</summary>
+    /// <summary>ARN of the destination resource.</summary>
     [JsonPropertyName("destinationArn")]
     public string? DestinationArn { get; set; }
+
+    /// <summary>Reference to a Queue in sqs to populate destinationArn.</summary>
+    [JsonPropertyName("destinationArnRef")]
+    public V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnRef? DestinationArnRef { get; set; }
+
+    /// <summary>Selector for a Queue in sqs to populate destinationArn.</summary>
+    [JsonPropertyName("destinationArnSelector")]
+    public V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailureDestinationArnSelector? DestinationArnSelector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfig
 {
-    /// <summary>The destination configuration for failed invocations. Detailed below.</summary>
+    /// <summary>Destination configuration for failed invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1EventSourceMappingSpecForProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 }
@@ -39,11 +103,11 @@ public partial class V1beta1EventSourceMappingSpecForProviderDestinationConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderDocumentDbEventSourceConfig
 {
-    /// <summary>The name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
+    /// <summary>Name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
     [JsonPropertyName("collectionName")]
     public string? CollectionName { get; set; }
 
-    /// <summary>The name of the database to consume within the DocumentDB cluster.</summary>
+    /// <summary>Name of the database to consume within the DocumentDB cluster.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -56,7 +120,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderDocumentDbEventSour
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderFilterCriteriaFilter
 {
-    /// <summary>A filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
+    /// <summary>Filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
@@ -65,7 +129,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderFilterCriteriaFilte
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderFilterCriteria
 {
-    /// <summary>A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.</summary>
+    /// <summary>Set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. See below.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1EventSourceMappingSpecForProviderFilterCriteriaFilter>? Filter { get; set; }
 }
@@ -186,7 +250,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderMetricsConfig
 {
-    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    /// <summary>List containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
     [JsonPropertyName("metrics")]
     public IList<string>? Metrics { get; set; }
 }
@@ -195,11 +259,11 @@ public partial class V1beta1EventSourceMappingSpecForProviderMetricsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderProvisionedPollerConfig
 {
-    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    /// <summary>Maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
     [JsonPropertyName("maximumPollers")]
     public double? MaximumPollers { get; set; }
 
-    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    /// <summary>Minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
     [JsonPropertyName("minimumPollers")]
     public double? MinimumPollers { get; set; }
 }
@@ -208,7 +272,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderProvisionedPollerCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderScalingConfig
 {
-    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
+    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be greater than or equal to 2. See Configuring maximum concurrency for Amazon SQS event sources. You need to raise a Service Quota Ticket to increase the concurrency beyond 1000.</summary>
     [JsonPropertyName("maximumConcurrency")]
     public double? MaximumConcurrency { get; set; }
 }
@@ -217,7 +281,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderScalingConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderSelfManagedEventSource
 {
-    /// <summary>A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
+    /// <summary>Map of endpoints for the self managed source. For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
     [JsonPropertyName("endpoints")]
     public IDictionary<string, string>? Endpoints { get; set; }
 }
@@ -226,7 +290,7 @@ public partial class V1beta1EventSourceMappingSpecForProviderSelfManagedEventSou
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderSelfManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
 }
@@ -235,11 +299,11 @@ public partial class V1beta1EventSourceMappingSpecForProviderSelfManagedKafkaEve
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderSourceAccessConfiguration
 {
-    /// <summary>The type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
+    /// <summary>Type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The URI for this configuration.  For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute.  For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
+    /// <summary>URI for this configuration. For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute. For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
@@ -248,39 +312,39 @@ public partial class V1beta1EventSourceMappingSpecForProviderSourceAccessConfigu
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProvider
 {
-    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with "self_managed_event_source" and "self_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with self_managed_event_source and self_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("amazonManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderAmazonManagedKafkaEventSourceConfig>? AmazonManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
+    /// <summary>Largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
     [JsonPropertyName("batchSize")]
     public double? BatchSize { get; set; }
 
-    /// <summary>If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
+    /// <summary>Whether to split the batch in two and retry if the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
     [JsonPropertyName("bisectBatchOnFunctionError")]
     public bool? BisectBatchOnFunctionError { get; set; }
 
-    /// <summary>An Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). Detailed below.</summary>
+    /// <summary>Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Configuration settings for a DocumentDB event source. Detailed below.</summary>
+    /// <summary>Configuration settings for a DocumentDB event source. See below.</summary>
     [JsonPropertyName("documentDbEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderDocumentDbEventSourceConfig>? DocumentDbEventSourceConfig { get; set; }
 
-    /// <summary>Determines if the mapping will be enabled on creation. Defaults to true.</summary>
+    /// <summary>Whether the mapping is enabled. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream.  It is incompatible with a Self Managed Kafka source.</summary>
+    /// <summary>Event source ARN - required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream. Incompatible with Self Managed Kafka source.</summary>
     [JsonPropertyName("eventSourceArn")]
     public string? EventSourceArn { get; set; }
 
-    /// <summary>The criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. Detailed below.</summary>
+    /// <summary>Criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. See below.</summary>
     [JsonPropertyName("filterCriteria")]
     public IList<V1beta1EventSourceMappingSpecForProviderFilterCriteria>? FilterCriteria { get; set; }
 
-    /// <summary>The name or the ARN of the Lambda function that will be subscribing to events.</summary>
+    /// <summary>Name or ARN of the Lambda function that will be subscribing to events.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -292,11 +356,11 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1EventSourceMappingSpecForProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>A list of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
+    /// <summary>List of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
     [JsonPropertyName("functionResponseTypes")]
     public IList<string>? FunctionResponseTypes { get; set; }
 
-    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    /// <summary>ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -308,59 +372,59 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1EventSourceMappingSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
+    /// <summary>Maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
     [JsonPropertyName("maximumBatchingWindowInSeconds")]
     public double? MaximumBatchingWindowInSeconds { get; set; }
 
-    /// <summary>The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
+    /// <summary>Maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
     [JsonPropertyName("maximumRecordAgeInSeconds")]
     public double? MaximumRecordAgeInSeconds { get; set; }
 
-    /// <summary>The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
+    /// <summary>Maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
-    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. See below.</summary>
     [JsonPropertyName("metricsConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderMetricsConfig>? MetricsConfig { get; set; }
 
-    /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
+    /// <summary>Number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
 
-    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. See below.</summary>
     [JsonPropertyName("provisionedPollerConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
-    /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
+    /// <summary>Name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
     public IList<string>? Queues { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Scaling configuration of the event source. Only available for SQS queues. Detailed below.</summary>
+    /// <summary>Scaling configuration of the event source. Only available for SQS queues. See below.</summary>
     [JsonPropertyName("scalingConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderScalingConfig>? ScalingConfig { get; set; }
 
-    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. See below.</summary>
     [JsonPropertyName("selfManagedEventSource")]
     public IList<V1beta1EventSourceMappingSpecForProviderSelfManagedEventSource>? SelfManagedEventSource { get; set; }
 
-    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with "event_source_arn" and "amazon_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with event_source_arn and amazon_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("selfManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecForProviderSelfManagedKafkaEventSourceConfig>? SelfManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>:  For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. See below.</summary>
     [JsonPropertyName("sourceAccessConfiguration")]
     public IList<V1beta1EventSourceMappingSpecForProviderSourceAccessConfiguration>? SourceAccessConfiguration { get; set; }
 
-    /// <summary>The position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
+    /// <summary>Position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
     [JsonPropertyName("startingPosition")]
     public string? StartingPosition { get; set; }
 
-    /// <summary>A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
+    /// <summary>Timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
     [JsonPropertyName("startingPositionTimestamp")]
     public string? StartingPositionTimestamp { get; set; }
 
@@ -368,11 +432,11 @@ public partial class V1beta1EventSourceMappingSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
+    /// <summary>Name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
     public IList<string>? Topics { get; set; }
 
-    /// <summary>The duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
+    /// <summary>Duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
     [JsonPropertyName("tumblingWindowInSeconds")]
     public double? TumblingWindowInSeconds { get; set; }
 }
@@ -381,25 +445,89 @@ public partial class V1beta1EventSourceMappingSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderAmazonManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Queue in sqs to populate destinationArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Queue in sqs to populate destinationArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailure
 {
-    /// <summary>The Amazon Resource Name (ARN) of the destination resource.</summary>
+    /// <summary>ARN of the destination resource.</summary>
     [JsonPropertyName("destinationArn")]
     public string? DestinationArn { get; set; }
+
+    /// <summary>Reference to a Queue in sqs to populate destinationArn.</summary>
+    [JsonPropertyName("destinationArnRef")]
+    public V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnRef? DestinationArnRef { get; set; }
+
+    /// <summary>Selector for a Queue in sqs to populate destinationArn.</summary>
+    [JsonPropertyName("destinationArnSelector")]
+    public V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailureDestinationArnSelector? DestinationArnSelector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfig
 {
-    /// <summary>The destination configuration for failed invocations. Detailed below.</summary>
+    /// <summary>Destination configuration for failed invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1EventSourceMappingSpecInitProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 }
@@ -408,11 +536,11 @@ public partial class V1beta1EventSourceMappingSpecInitProviderDestinationConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderDocumentDbEventSourceConfig
 {
-    /// <summary>The name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
+    /// <summary>Name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
     [JsonPropertyName("collectionName")]
     public string? CollectionName { get; set; }
 
-    /// <summary>The name of the database to consume within the DocumentDB cluster.</summary>
+    /// <summary>Name of the database to consume within the DocumentDB cluster.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -425,7 +553,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderDocumentDbEventSou
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderFilterCriteriaFilter
 {
-    /// <summary>A filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
+    /// <summary>Filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
@@ -434,7 +562,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderFilterCriteriaFilt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderFilterCriteria
 {
-    /// <summary>A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.</summary>
+    /// <summary>Set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. See below.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1EventSourceMappingSpecInitProviderFilterCriteriaFilter>? Filter { get; set; }
 }
@@ -555,7 +683,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderMetricsConfig
 {
-    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    /// <summary>List containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
     [JsonPropertyName("metrics")]
     public IList<string>? Metrics { get; set; }
 }
@@ -564,11 +692,11 @@ public partial class V1beta1EventSourceMappingSpecInitProviderMetricsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderProvisionedPollerConfig
 {
-    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    /// <summary>Maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
     [JsonPropertyName("maximumPollers")]
     public double? MaximumPollers { get; set; }
 
-    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    /// <summary>Minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
     [JsonPropertyName("minimumPollers")]
     public double? MinimumPollers { get; set; }
 }
@@ -577,7 +705,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderProvisionedPollerC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderScalingConfig
 {
-    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
+    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be greater than or equal to 2. See Configuring maximum concurrency for Amazon SQS event sources. You need to raise a Service Quota Ticket to increase the concurrency beyond 1000.</summary>
     [JsonPropertyName("maximumConcurrency")]
     public double? MaximumConcurrency { get; set; }
 }
@@ -586,7 +714,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderScalingConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderSelfManagedEventSource
 {
-    /// <summary>A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
+    /// <summary>Map of endpoints for the self managed source. For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
     [JsonPropertyName("endpoints")]
     public IDictionary<string, string>? Endpoints { get; set; }
 }
@@ -595,7 +723,7 @@ public partial class V1beta1EventSourceMappingSpecInitProviderSelfManagedEventSo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderSelfManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
 }
@@ -604,11 +732,11 @@ public partial class V1beta1EventSourceMappingSpecInitProviderSelfManagedKafkaEv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProviderSourceAccessConfiguration
 {
-    /// <summary>The type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
+    /// <summary>Type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The URI for this configuration.  For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute.  For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
+    /// <summary>URI for this configuration. For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute. For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
@@ -617,39 +745,39 @@ public partial class V1beta1EventSourceMappingSpecInitProviderSourceAccessConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecInitProvider
 {
-    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with "self_managed_event_source" and "self_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with self_managed_event_source and self_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("amazonManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderAmazonManagedKafkaEventSourceConfig>? AmazonManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
+    /// <summary>Largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
     [JsonPropertyName("batchSize")]
     public double? BatchSize { get; set; }
 
-    /// <summary>If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
+    /// <summary>Whether to split the batch in two and retry if the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
     [JsonPropertyName("bisectBatchOnFunctionError")]
     public bool? BisectBatchOnFunctionError { get; set; }
 
-    /// <summary>An Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). Detailed below.</summary>
+    /// <summary>Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Configuration settings for a DocumentDB event source. Detailed below.</summary>
+    /// <summary>Configuration settings for a DocumentDB event source. See below.</summary>
     [JsonPropertyName("documentDbEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderDocumentDbEventSourceConfig>? DocumentDbEventSourceConfig { get; set; }
 
-    /// <summary>Determines if the mapping will be enabled on creation. Defaults to true.</summary>
+    /// <summary>Whether the mapping is enabled. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream.  It is incompatible with a Self Managed Kafka source.</summary>
+    /// <summary>Event source ARN - required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream. Incompatible with Self Managed Kafka source.</summary>
     [JsonPropertyName("eventSourceArn")]
     public string? EventSourceArn { get; set; }
 
-    /// <summary>The criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. Detailed below.</summary>
+    /// <summary>Criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. See below.</summary>
     [JsonPropertyName("filterCriteria")]
     public IList<V1beta1EventSourceMappingSpecInitProviderFilterCriteria>? FilterCriteria { get; set; }
 
-    /// <summary>The name or the ARN of the Lambda function that will be subscribing to events.</summary>
+    /// <summary>Name or ARN of the Lambda function that will be subscribing to events.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -661,11 +789,11 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1EventSourceMappingSpecInitProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>A list of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
+    /// <summary>List of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
     [JsonPropertyName("functionResponseTypes")]
     public IList<string>? FunctionResponseTypes { get; set; }
 
-    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    /// <summary>ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -677,55 +805,55 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1EventSourceMappingSpecInitProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
+    /// <summary>Maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
     [JsonPropertyName("maximumBatchingWindowInSeconds")]
     public double? MaximumBatchingWindowInSeconds { get; set; }
 
-    /// <summary>The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
+    /// <summary>Maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
     [JsonPropertyName("maximumRecordAgeInSeconds")]
     public double? MaximumRecordAgeInSeconds { get; set; }
 
-    /// <summary>The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
+    /// <summary>Maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
-    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. See below.</summary>
     [JsonPropertyName("metricsConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderMetricsConfig>? MetricsConfig { get; set; }
 
-    /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
+    /// <summary>Number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
 
-    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. See below.</summary>
     [JsonPropertyName("provisionedPollerConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
-    /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
+    /// <summary>Name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
     public IList<string>? Queues { get; set; }
 
-    /// <summary>Scaling configuration of the event source. Only available for SQS queues. Detailed below.</summary>
+    /// <summary>Scaling configuration of the event source. Only available for SQS queues. See below.</summary>
     [JsonPropertyName("scalingConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderScalingConfig>? ScalingConfig { get; set; }
 
-    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. See below.</summary>
     [JsonPropertyName("selfManagedEventSource")]
     public IList<V1beta1EventSourceMappingSpecInitProviderSelfManagedEventSource>? SelfManagedEventSource { get; set; }
 
-    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with "event_source_arn" and "amazon_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with event_source_arn and amazon_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("selfManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingSpecInitProviderSelfManagedKafkaEventSourceConfig>? SelfManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>:  For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. See below.</summary>
     [JsonPropertyName("sourceAccessConfiguration")]
     public IList<V1beta1EventSourceMappingSpecInitProviderSourceAccessConfiguration>? SourceAccessConfiguration { get; set; }
 
-    /// <summary>The position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
+    /// <summary>Position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
     [JsonPropertyName("startingPosition")]
     public string? StartingPosition { get; set; }
 
-    /// <summary>A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
+    /// <summary>Timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
     [JsonPropertyName("startingPositionTimestamp")]
     public string? StartingPositionTimestamp { get; set; }
 
@@ -733,11 +861,11 @@ public partial class V1beta1EventSourceMappingSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
+    /// <summary>Name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
     public IList<string>? Topics { get; set; }
 
-    /// <summary>The duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
+    /// <summary>Duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
     [JsonPropertyName("tumblingWindowInSeconds")]
     public double? TumblingWindowInSeconds { get; set; }
 }
@@ -878,7 +1006,7 @@ public partial class V1beta1EventSourceMappingSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderAmazonManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See AmazonManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
 }
@@ -887,7 +1015,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderAmazonManagedKafka
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderDestinationConfigOnFailure
 {
-    /// <summary>The Amazon Resource Name (ARN) of the destination resource.</summary>
+    /// <summary>ARN of the destination resource.</summary>
     [JsonPropertyName("destinationArn")]
     public string? DestinationArn { get; set; }
 }
@@ -896,7 +1024,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderDestinationConfigO
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderDestinationConfig
 {
-    /// <summary>The destination configuration for failed invocations. Detailed below.</summary>
+    /// <summary>Destination configuration for failed invocations. See below.</summary>
     [JsonPropertyName("onFailure")]
     public IList<V1beta1EventSourceMappingStatusAtProviderDestinationConfigOnFailure>? OnFailure { get; set; }
 }
@@ -905,11 +1033,11 @@ public partial class V1beta1EventSourceMappingStatusAtProviderDestinationConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderDocumentDbEventSourceConfig
 {
-    /// <summary>The name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
+    /// <summary>Name of the collection to consume within the database. If you do not specify a collection, Lambda consumes all collections.</summary>
     [JsonPropertyName("collectionName")]
     public string? CollectionName { get; set; }
 
-    /// <summary>The name of the database to consume within the DocumentDB cluster.</summary>
+    /// <summary>Name of the database to consume within the DocumentDB cluster.</summary>
     [JsonPropertyName("databaseName")]
     public string? DatabaseName { get; set; }
 
@@ -922,7 +1050,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderDocumentDbEventSou
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderFilterCriteriaFilter
 {
-    /// <summary>A filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
+    /// <summary>Filter pattern up to 4096 characters. See Filter Rule Syntax.</summary>
     [JsonPropertyName("pattern")]
     public string? Pattern { get; set; }
 }
@@ -931,7 +1059,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderFilterCriteriaFilt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderFilterCriteria
 {
-    /// <summary>A set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. Detailed below.</summary>
+    /// <summary>Set of up to 5 filter. If an event satisfies at least one, Lambda sends the event to the function or adds it to the next batch. See below.</summary>
     [JsonPropertyName("filter")]
     public IList<V1beta1EventSourceMappingStatusAtProviderFilterCriteriaFilter>? Filter { get; set; }
 }
@@ -940,7 +1068,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderFilterCriteria
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderMetricsConfig
 {
-    /// <summary>A list containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
+    /// <summary>List containing the metrics to be produced by the event source mapping. Valid values: EventCount.</summary>
     [JsonPropertyName("metrics")]
     public IList<string>? Metrics { get; set; }
 }
@@ -949,11 +1077,11 @@ public partial class V1beta1EventSourceMappingStatusAtProviderMetricsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderProvisionedPollerConfig
 {
-    /// <summary>The maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
+    /// <summary>Maximum number of event pollers this event source can scale up to. The range is between 1 and 2000.</summary>
     [JsonPropertyName("maximumPollers")]
     public double? MaximumPollers { get; set; }
 
-    /// <summary>The minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
+    /// <summary>Minimum number of event pollers this event source can scale down to. The range is between 1 and 200.</summary>
     [JsonPropertyName("minimumPollers")]
     public double? MinimumPollers { get; set; }
 }
@@ -962,7 +1090,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderProvisionedPollerC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderScalingConfig
 {
-    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be between 2 and 1000. See Configuring maximum concurrency for Amazon SQS event sources.</summary>
+    /// <summary>Limits the number of concurrent instances that the Amazon SQS event source can invoke. Must be greater than or equal to 2. See Configuring maximum concurrency for Amazon SQS event sources. You need to raise a Service Quota Ticket to increase the concurrency beyond 1000.</summary>
     [JsonPropertyName("maximumConcurrency")]
     public double? MaximumConcurrency { get; set; }
 }
@@ -971,7 +1099,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderScalingConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderSelfManagedEventSource
 {
-    /// <summary>A map of endpoints for the self managed source.  For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
+    /// <summary>Map of endpoints for the self managed source. For Kafka self-managed sources, the key should be KAFKA_BOOTSTRAP_SERVERS and the value should be a string with a comma separated list of broker endpoints.</summary>
     [JsonPropertyName("endpoints")]
     public IDictionary<string, string>? Endpoints { get; set; }
 }
@@ -980,7 +1108,7 @@ public partial class V1beta1EventSourceMappingStatusAtProviderSelfManagedEventSo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderSelfManagedKafkaEventSourceConfig
 {
-    /// <summary>A Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
+    /// <summary>Kafka consumer group ID between 1 and 200 characters for use when creating this event source mapping. If one is not specified, this value will be automatically generated. See SelfManagedKafkaEventSourceConfig Syntax.</summary>
     [JsonPropertyName("consumerGroupId")]
     public string? ConsumerGroupId { get; set; }
 }
@@ -989,11 +1117,11 @@ public partial class V1beta1EventSourceMappingStatusAtProviderSelfManagedKafkaEv
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProviderSourceAccessConfiguration
 {
-    /// <summary>The type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
+    /// <summary>Type of authentication protocol, VPC components, or virtual host for your event source. For valid values, refer to the AWS documentation.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The URI for this configuration.  For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute.  For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
+    /// <summary>URI for this configuration. For type VPC_SUBNET the value should be subnet:subnet_id where subnet_id is the value you would find in an aws_subnet resource's id attribute. For type VPC_SECURITY_GROUP the value should be security_group:security_group_id where security_group_id is the value you would find in an aws_security_group resource's id attribute.</summary>
     [JsonPropertyName("uri")]
     public string? Uri { get; set; }
 }
@@ -1002,51 +1130,51 @@ public partial class V1beta1EventSourceMappingStatusAtProviderSourceAccessConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingStatusAtProvider
 {
-    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with "self_managed_event_source" and "self_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with self_managed_event_source and self_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("amazonManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderAmazonManagedKafkaEventSourceConfig>? AmazonManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>The event source mapping ARN.</summary>
+    /// <summary>Event source mapping ARN.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
+    /// <summary>Largest number of records that Lambda will retrieve from your event source at the time of invocation. Defaults to 100 for DynamoDB, Kinesis, MQ and MSK, 10 for SQS.</summary>
     [JsonPropertyName("batchSize")]
     public double? BatchSize { get; set; }
 
-    /// <summary>If the function returns an error, split the batch in two and retry. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
+    /// <summary>Whether to split the batch in two and retry if the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Defaults to false.</summary>
     [JsonPropertyName("bisectBatchOnFunctionError")]
     public bool? BisectBatchOnFunctionError { get; set; }
 
-    /// <summary>An Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). Detailed below.</summary>
+    /// <summary>Amazon SQS queue, Amazon SNS topic or Amazon S3 bucket (only available for Kafka sources) destination for failed records. Only available for stream sources (DynamoDB and Kinesis) and Kafka sources (Amazon MSK and Self-managed Apache Kafka). See below.</summary>
     [JsonPropertyName("destinationConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderDestinationConfig>? DestinationConfig { get; set; }
 
-    /// <summary>Configuration settings for a DocumentDB event source. Detailed below.</summary>
+    /// <summary>Configuration settings for a DocumentDB event source. See below.</summary>
     [JsonPropertyName("documentDbEventSourceConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderDocumentDbEventSourceConfig>? DocumentDbEventSourceConfig { get; set; }
 
-    /// <summary>Determines if the mapping will be enabled on creation. Defaults to true.</summary>
+    /// <summary>Whether the mapping is enabled. Defaults to true.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The event source ARN - this is required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream.  It is incompatible with a Self Managed Kafka source.</summary>
+    /// <summary>Event source ARN - required for Kinesis stream, DynamoDB stream, SQS queue, MQ broker, MSK cluster or DocumentDB change stream. Incompatible with Self Managed Kafka source.</summary>
     [JsonPropertyName("eventSourceArn")]
     public string? EventSourceArn { get; set; }
 
-    /// <summary>The criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. Detailed below.</summary>
+    /// <summary>Criteria to use for event filtering Kinesis stream, DynamoDB stream, SQS queue event sources. See below.</summary>
     [JsonPropertyName("filterCriteria")]
     public IList<V1beta1EventSourceMappingStatusAtProviderFilterCriteria>? FilterCriteria { get; set; }
 
-    /// <summary>The the ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from function_name above.)</summary>
+    /// <summary>ARN of the Lambda function the event source mapping is sending events to. (Note: this is a computed value that differs from function_name above.)</summary>
     [JsonPropertyName("functionArn")]
     public string? FunctionArn { get; set; }
 
-    /// <summary>The name or the ARN of the Lambda function that will be subscribing to events.</summary>
+    /// <summary>Name or ARN of the Lambda function that will be subscribing to events.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
-    /// <summary>A list of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
+    /// <summary>List of current response type enums applied to the event source mapping for AWS Lambda checkpointing. Only available for SQS and stream sources (DynamoDB and Kinesis). Valid values: ReportBatchItemFailures.</summary>
     [JsonPropertyName("functionResponseTypes")]
     public IList<string>? FunctionResponseTypes { get; set; }
 
@@ -1054,75 +1182,79 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
+    /// <summary>ARN of the Key Management Service (KMS) customer managed key that Lambda uses to encrypt your function's filter criteria.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
-    /// <summary>The date this resource was last modified.</summary>
+    /// <summary>Date this resource was last modified.</summary>
     [JsonPropertyName("lastModified")]
     public string? LastModified { get; set; }
 
-    /// <summary>The result of the last AWS Lambda invocation of your Lambda function.</summary>
+    /// <summary>Result of the last AWS Lambda invocation of your Lambda function.</summary>
     [JsonPropertyName("lastProcessingResult")]
     public string? LastProcessingResult { get; set; }
 
-    /// <summary>The maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer (or accumulate in the case of an SQS queue event source) until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. If the batch it reads from the stream/queue only has one record in it, Lambda only sends one record to the function. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
+    /// <summary>Maximum amount of time to gather records before invoking the function, in seconds (between 0 and 300). Records will continue to buffer until either maximum_batching_window_in_seconds expires or batch_size has been met. For streaming event sources, defaults to as soon as records are available in the stream. Only available for stream sources (DynamoDB and Kinesis) and SQS standard queues.</summary>
     [JsonPropertyName("maximumBatchingWindowInSeconds")]
     public double? MaximumBatchingWindowInSeconds { get; set; }
 
-    /// <summary>The maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
+    /// <summary>Maximum age of a record that Lambda sends to a function for processing. Only available for stream sources (DynamoDB and Kinesis). Must be either -1 (forever, and the default value) or between 60 and 604800 (inclusive).</summary>
     [JsonPropertyName("maximumRecordAgeInSeconds")]
     public double? MaximumRecordAgeInSeconds { get; set; }
 
-    /// <summary>The maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
+    /// <summary>Maximum number of times to retry when the function returns an error. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of -1 (forever), maximum of 10000.</summary>
     [JsonPropertyName("maximumRetryAttempts")]
     public double? MaximumRetryAttempts { get; set; }
 
-    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. Detailed below.</summary>
+    /// <summary>CloudWatch metrics configuration of the event source. Only available for stream sources (DynamoDB and Kinesis) and SQS queues. See below.</summary>
     [JsonPropertyName("metricsConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderMetricsConfig>? MetricsConfig { get; set; }
 
-    /// <summary>The number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
+    /// <summary>Number of batches to process from each shard concurrently. Only available for stream sources (DynamoDB and Kinesis). Minimum and default of 1, maximum of 10.</summary>
     [JsonPropertyName("parallelizationFactor")]
     public double? ParallelizationFactor { get; set; }
 
-    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. Detailed below.</summary>
+    /// <summary>Event poller configuration for the event source. Only valid for Amazon MSK or self-managed Apache Kafka sources. See below.</summary>
     [JsonPropertyName("provisionedPollerConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderProvisionedPollerConfig>? ProvisionedPollerConfig { get; set; }
 
-    /// <summary>The name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
+    /// <summary>Name of the Amazon MQ broker destination queue to consume. Only available for MQ sources. The list must contain exactly one queue name.</summary>
     [JsonPropertyName("queues")]
     public IList<string>? Queues { get; set; }
 
-    /// <summary>Scaling configuration of the event source. Only available for SQS queues. Detailed below.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Scaling configuration of the event source. Only available for SQS queues. See below.</summary>
     [JsonPropertyName("scalingConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderScalingConfig>? ScalingConfig { get; set; }
 
-    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the location of the self managed cluster. If set, configuration must also include source_access_configuration. See below.</summary>
     [JsonPropertyName("selfManagedEventSource")]
     public IList<V1beta1EventSourceMappingStatusAtProviderSelfManagedEventSource>? SelfManagedEventSource { get; set; }
 
-    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with "event_source_arn" and "amazon_managed_kafka_event_source_config". Detailed below.</summary>
+    /// <summary>Additional configuration block for Self Managed Kafka sources. Incompatible with event_source_arn and amazon_managed_kafka_event_source_config. See below.</summary>
     [JsonPropertyName("selfManagedKafkaEventSourceConfig")]
     public IList<V1beta1EventSourceMappingStatusAtProviderSelfManagedKafkaEventSourceConfig>? SelfManagedKafkaEventSourceConfig { get; set; }
 
-    /// <summary>:  For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. Detailed below.</summary>
+    /// <summary>For Self Managed Kafka sources, the access configuration for the source. If set, configuration must also include self_managed_event_source. See below.</summary>
     [JsonPropertyName("sourceAccessConfiguration")]
     public IList<V1beta1EventSourceMappingStatusAtProviderSourceAccessConfiguration>? SourceAccessConfiguration { get; set; }
 
-    /// <summary>The position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
+    /// <summary>Position in the stream where AWS Lambda should start reading. Must be one of AT_TIMESTAMP (Kinesis only), LATEST or TRIM_HORIZON if getting events from Kinesis, DynamoDB, MSK or Self Managed Apache Kafka. Must not be provided if getting events from SQS. More information about these positions can be found in the AWS DynamoDB Streams API Reference and AWS Kinesis API Reference.</summary>
     [JsonPropertyName("startingPosition")]
     public string? StartingPosition { get; set; }
 
-    /// <summary>A timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
+    /// <summary>Timestamp in RFC3339 format of the data record which to start reading when using starting_position set to AT_TIMESTAMP. If a record with this exact timestamp does not exist, the next later record is chosen. If the timestamp is older than the current trim horizon, the oldest available record is chosen.</summary>
     [JsonPropertyName("startingPositionTimestamp")]
     public string? StartingPositionTimestamp { get; set; }
 
-    /// <summary>The state of the event source mapping.</summary>
+    /// <summary>State of the event source mapping.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>The reason the event source mapping is in its current state.</summary>
+    /// <summary>Reason the event source mapping is in its current state.</summary>
     [JsonPropertyName("stateTransitionReason")]
     public string? StateTransitionReason { get; set; }
 
@@ -1130,19 +1262,19 @@ public partial class V1beta1EventSourceMappingStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
+    /// <summary>Name of the Kafka topics. Only available for MSK sources. A single topic name must be specified.</summary>
     [JsonPropertyName("topics")]
     public IList<string>? Topics { get; set; }
 
-    /// <summary>The duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
+    /// <summary>Duration in seconds of a processing window for AWS Lambda streaming analytics. The range is between 1 second up to 900 seconds. Only available for stream sources (DynamoDB and Kinesis).</summary>
     [JsonPropertyName("tumblingWindowInSeconds")]
     public double? TumblingWindowInSeconds { get; set; }
 
-    /// <summary>The UUID of the created event source mapping.</summary>
+    /// <summary>UUID of the created event source mapping.</summary>
     [JsonPropertyName("uuid")]
     public string? Uuid { get; set; }
 }
@@ -1193,7 +1325,7 @@ public partial class V1beta1EventSourceMappingStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB, SQS, Amazon MQ and Managed Streaming for Apache Kafka (MSK).</summary>
+/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Manages an AWS Lambda Event Source Mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EventSourceMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EventSourceMappingSpec>, IStatus<V1beta1EventSourceMappingStatus>
@@ -1223,7 +1355,7 @@ public partial class V1beta1EventSourceMapping : IKubernetesObject<V1ObjectMeta>
     public V1beta1EventSourceMappingStatus? Status { get; set; }
 }
 
-/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Provides a Lambda event source mapping. This allows Lambda functions to get events from Kinesis, DynamoDB, SQS, Amazon MQ and Managed Streaming for Apache Kafka (MSK).</summary>
+/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Manages an AWS Lambda Event Source Mapping.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EventSourceMappingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventSourceMapping>

@@ -86,7 +86,7 @@ spec:
                 properties:
                   region:
                     description: >-
-                      Region with the bucket targeted by the Resource Data Sync.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -631,6 +631,12 @@ spec:
                 properties:
                   id:
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   s3Destination:
                     description: Amazon S3 configuration details for the sync.
                     items:
@@ -788,7 +794,7 @@ spec:
                 properties:
                   region:
                     description: >-
-                      Region with the bucket targeted by the Resource Data Sync.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -1328,6 +1334,12 @@ spec:
               atProvider:
                 properties:
                   id:
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   s3Destination:
                     description: Amazon S3 configuration details for the sync.

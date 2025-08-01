@@ -183,7 +183,10 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   staticMembers:
                     description: List of DB instance identifiers that are part of the custom endpoint group.
@@ -569,6 +572,12 @@ spec:
                     x-kubernetes-list-type: set
                   id:
                     description: The Neptune Cluster Endpoint Identifier.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   staticMembers:
                     description: List of DB instance identifiers that are part of the custom endpoint group.

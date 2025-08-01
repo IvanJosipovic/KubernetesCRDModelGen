@@ -89,7 +89,7 @@ spec:
                     items:
                       properties:
                         s3Configuration:
-                          description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                          description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                           items:
                             properties:
                               accessControlListConfiguration:
@@ -219,8 +219,17 @@ spec:
                                 x-kubernetes-list-type: set
                             type: object
                           type: array
-                        webCrawlerConfiguration:
+                        templateConfiguration:
                           description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                          items:
+                            properties:
+                              template:
+                                description: JSON string containing a data source template schema.
+                                type: string
+                            type: object
+                          type: array
+                        webCrawlerConfiguration:
+                          description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                           items:
                             properties:
                               authenticationConfiguration:
@@ -232,7 +241,7 @@ spec:
                                       items:
                                         properties:
                                           credentials:
-                                            description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                            description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                             type: string
                                           credentialsRef:
                                             description: Reference to a Secret in secretsmanager to populate credentials.
@@ -321,17 +330,17 @@ spec:
                                                 type: object
                                             type: object
                                           host:
-                                            description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                            description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                             type: string
                                           port:
-                                            description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                            description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                             type: number
                                         type: object
                                       type: array
                                   type: object
                                 type: array
                               crawlDepth:
-                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                                 type: number
                               maxContentSizePerPageInMegaBytes:
                                 description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -347,7 +356,7 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     credentialsRef:
                                       description: Reference to a Secret in secretsmanager to populate credentials.
@@ -436,10 +445,10 @@ spec:
                                           type: object
                                       type: object
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
@@ -761,7 +770,10 @@ spec:
                     description: A name for your data source connector.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.
@@ -894,7 +906,7 @@ spec:
                     items:
                       properties:
                         s3Configuration:
-                          description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                          description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                           items:
                             properties:
                               accessControlListConfiguration:
@@ -1024,8 +1036,17 @@ spec:
                                 x-kubernetes-list-type: set
                             type: object
                           type: array
-                        webCrawlerConfiguration:
+                        templateConfiguration:
                           description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                          items:
+                            properties:
+                              template:
+                                description: JSON string containing a data source template schema.
+                                type: string
+                            type: object
+                          type: array
+                        webCrawlerConfiguration:
+                          description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                           items:
                             properties:
                               authenticationConfiguration:
@@ -1037,7 +1058,7 @@ spec:
                                       items:
                                         properties:
                                           credentials:
-                                            description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                            description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                             type: string
                                           credentialsRef:
                                             description: Reference to a Secret in secretsmanager to populate credentials.
@@ -1126,17 +1147,17 @@ spec:
                                                 type: object
                                             type: object
                                           host:
-                                            description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                            description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                             type: string
                                           port:
-                                            description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                            description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                             type: number
                                         type: object
                                       type: array
                                   type: object
                                 type: array
                               crawlDepth:
-                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                                 type: number
                               maxContentSizePerPageInMegaBytes:
                                 description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -1152,7 +1173,7 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     credentialsRef:
                                       description: Reference to a Secret in secretsmanager to populate credentials.
@@ -1241,10 +1262,10 @@ spec:
                                           type: object
                                       type: object
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
@@ -1893,7 +1914,7 @@ spec:
                     items:
                       properties:
                         s3Configuration:
-                          description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                          description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                           items:
                             properties:
                               accessControlListConfiguration:
@@ -1937,8 +1958,17 @@ spec:
                                 x-kubernetes-list-type: set
                             type: object
                           type: array
-                        webCrawlerConfiguration:
+                        templateConfiguration:
                           description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                          items:
+                            properties:
+                              template:
+                                description: JSON string containing a data source template schema.
+                                type: string
+                            type: object
+                          type: array
+                        webCrawlerConfiguration:
+                          description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                           items:
                             properties:
                               authenticationConfiguration:
@@ -1950,20 +1980,20 @@ spec:
                                       items:
                                         properties:
                                           credentials:
-                                            description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                            description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                             type: string
                                           host:
-                                            description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                            description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                             type: string
                                           port:
-                                            description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                            description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                             type: number
                                         type: object
                                       type: array
                                   type: object
                                 type: array
                               crawlDepth:
-                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                                description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                                 type: number
                               maxContentSizePerPageInMegaBytes:
                                 description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -1979,13 +2009,13 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
@@ -2039,7 +2069,7 @@ spec:
                       type: object
                     type: array
                   createdAt:
-                    description: The Unix timestamp of when the Data Source was created.
+                    description: The Unix time stamp of when the Data Source was created.
                     type: string
                   customDocumentEnrichmentConfiguration:
                     description: A block with the configuration information for altering document metadata and content during the document ingestion process. For more information on how to create, modify and delete document metadata, or make other content alterations when you ingest documents into Amazon Kendra, see Customizing document metadata during the ingestion process. Detailed below.
@@ -2218,7 +2248,7 @@ spec:
                     description: A description for the Data Source connector.
                     type: string
                   errorMessage:
-                    description: When the Status field value is FAILED, the ErrorMessage field contains a description of the error that caused the Data Source to fail.
+                    description: When the Status field value is FAILED, contains a description of the error that caused the Data Source to fail.
                     type: string
                   id:
                     description: The unique identifiers of the Data Source and index separated by a slash (/).
@@ -2231,6 +2261,12 @@ spec:
                     type: string
                   name:
                     description: A name for your data source connector.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.
@@ -2257,7 +2293,7 @@ spec:
                     description: The type of data source repository. For an updated list of values, refer to Valid Values for Type.
                     type: string
                   updatedAt:
-                    description: The Unix timestamp of when the Data Source was last updated.
+                    description: The Unix time stamp of when the Data Source was last updated.
                     type: string
                 type: object
               conditions:
@@ -2397,7 +2433,7 @@ spec:
                     description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     properties:
                       s3Configuration:
-                        description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                        description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                         properties:
                           accessControlListConfiguration:
                             description: A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.
@@ -2521,8 +2557,15 @@ spec:
                             type: array
                             x-kubernetes-list-type: set
                         type: object
-                      webCrawlerConfiguration:
+                      templateConfiguration:
                         description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                        properties:
+                          template:
+                            description: JSON string containing a data source template schema.
+                            type: string
+                        type: object
+                      webCrawlerConfiguration:
+                        description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                         properties:
                           authenticationConfiguration:
                             description: A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.
@@ -2532,7 +2575,7 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     credentialsRef:
                                       description: Reference to a Secret in secretsmanager to populate credentials.
@@ -2621,16 +2664,16 @@ spec:
                                           type: object
                                       type: object
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
                             type: object
                           crawlDepth:
-                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                             type: number
                           maxContentSizePerPageInMegaBytes:
                             description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -2645,7 +2688,7 @@ spec:
                             description: Configuration information required to connect to your internal websites via a web proxy. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic authentication. To store web proxy credentials, you use a secret in AWS Secrets Manager. Detailed below.
                             properties:
                               credentials:
-                                description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                 type: string
                               credentialsRef:
                                 description: Reference to a Secret in secretsmanager to populate credentials.
@@ -2734,10 +2777,10 @@ spec:
                                     type: object
                                 type: object
                               host:
-                                description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                 type: string
                               port:
-                                description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                 type: number
                             type: object
                           urlExclusionPatterns:
@@ -3028,7 +3071,10 @@ spec:
                     description: A name for your data source connector.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.
@@ -3160,7 +3206,7 @@ spec:
                     description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     properties:
                       s3Configuration:
-                        description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                        description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                         properties:
                           accessControlListConfiguration:
                             description: A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.
@@ -3284,8 +3330,15 @@ spec:
                             type: array
                             x-kubernetes-list-type: set
                         type: object
-                      webCrawlerConfiguration:
+                      templateConfiguration:
                         description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                        properties:
+                          template:
+                            description: JSON string containing a data source template schema.
+                            type: string
+                        type: object
+                      webCrawlerConfiguration:
+                        description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                         properties:
                           authenticationConfiguration:
                             description: A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.
@@ -3295,7 +3348,7 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     credentialsRef:
                                       description: Reference to a Secret in secretsmanager to populate credentials.
@@ -3384,16 +3437,16 @@ spec:
                                           type: object
                                       type: object
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
                             type: object
                           crawlDepth:
-                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                             type: number
                           maxContentSizePerPageInMegaBytes:
                             description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -3408,7 +3461,7 @@ spec:
                             description: Configuration information required to connect to your internal websites via a web proxy. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic authentication. To store web proxy credentials, you use a secret in AWS Secrets Manager. Detailed below.
                             properties:
                               credentials:
-                                description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                 type: string
                               credentialsRef:
                                 description: Reference to a Secret in secretsmanager to populate credentials.
@@ -3497,10 +3550,10 @@ spec:
                                     type: object
                                 type: object
                               host:
-                                description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                 type: string
                               port:
-                                description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                 type: number
                             type: object
                           urlExclusionPatterns:
@@ -4117,7 +4170,7 @@ spec:
                     description: A block with the configuration information to connect to your Data Source repository. You can't specify the configuration block when the type parameter is set to CUSTOM. Detailed below.
                     properties:
                       s3Configuration:
-                        description: A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
+                        description: (Deprecated, Required if type is set to S3) A block that provides the configuration information to connect to an Amazon S3 bucket as your data source. Detailed below.
                         properties:
                           accessControlListConfiguration:
                             description: A block that provides the path to the S3 bucket that contains the user context filtering files for the data source. For the format of the file, see Access control for S3 data sources. Detailed below.
@@ -4155,8 +4208,15 @@ spec:
                             type: array
                             x-kubernetes-list-type: set
                         type: object
-                      webCrawlerConfiguration:
+                      templateConfiguration:
                         description: A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
+                        properties:
+                          template:
+                            description: JSON string containing a data source template schema.
+                            type: string
+                        type: object
+                      webCrawlerConfiguration:
+                        description: (Deprecated, Required if type is set to WEBCRAWLER) A block that provides the configuration information required for Amazon Kendra Web Crawler. Detailed below.
                         properties:
                           authenticationConfiguration:
                             description: A block with the configuration information required to connect to websites using authentication. You can connect to websites using basic authentication of user name and password. You use a secret in AWS Secrets Manager to store your authentication credentials. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Detailed below.
@@ -4166,19 +4226,19 @@ spec:
                                 items:
                                   properties:
                                     credentials:
-                                      description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                      description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                       type: string
                                     host:
-                                      description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                      description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                       type: string
                                     port:
-                                      description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                      description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                       type: number
                                   type: object
                                 type: array
                             type: object
                           crawlDepth:
-                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels – index level (i.e. seed in this example), sections level, and subsections level – and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
+                            description: Specifies the number of levels in a website that you want to crawl. The first level begins from the website seed or starting point URL. For example, if a website has 3 levels - index level (i.e. seed in this example), sections level, and subsections level - and you are only interested in crawling information up to the sections level (i.e. levels 0-1), you can set your depth to 1. The default crawl depth is set to 2. Minimum value of 0. Maximum value of 10.
                             type: number
                           maxContentSizePerPageInMegaBytes:
                             description: The maximum size (in MB) of a webpage or attachment to crawl. Files larger than this size (in MB) are skipped/not crawled. The default maximum size of a webpage or attachment is set to 50 MB. Minimum value of 1.0e-06. Maximum value of 50.
@@ -4193,13 +4253,13 @@ spec:
                             description: Configuration information required to connect to your internal websites via a web proxy. You must provide the website host name and port number. For example, the host name of https://a.example.com/page1.html is "a.example.com" and the port is 443, the standard port for HTTPS. Web proxy credentials are optional and you can use them to connect to a web proxy server that requires basic authentication. To store web proxy credentials, you use a secret in AWS Secrets Manager. Detailed below.
                             properties:
                               credentials:
-                                description: Your secret ARN, which you can create in AWS Secrets Manager. You use a secret if basic authentication credentials are required to connect to a website. The secret stores your credentials of user name and password.
+                                description: Your secret ARN, which you can create in AWS Secrets Manager. The credentials are optional. You use a secret if web proxy credentials are required to connect to a website host. Amazon Kendra currently support basic authentication to connect to a web proxy server. The secret stores your credentials.
                                 type: string
                               host:
-                                description: The name of the website host you want to connect to using authentication credentials. For example, the host name of https://a.example.com/page1.html is "a.example.com".
+                                description: The name of the website host you want to connect to via a web proxy server. For example, the host name of https://a.example.com/page1.html is "a.example.com".
                                 type: string
                               port:
-                                description: The port number of the website host you want to connect to using authentication credentials. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
+                                description: The port number of the website host you want to connect to via a web proxy server. For example, the port for https://a.example.com/page1.html is 443, the standard port for HTTPS.
                                 type: number
                             type: object
                           urlExclusionPatterns:
@@ -4244,7 +4304,7 @@ spec:
                         type: object
                     type: object
                   createdAt:
-                    description: The Unix timestamp of when the Data Source was created.
+                    description: The Unix time stamp of when the Data Source was created.
                     type: string
                   customDocumentEnrichmentConfiguration:
                     description: A block with the configuration information for altering document metadata and content during the document ingestion process. For more information on how to create, modify and delete document metadata, or make other content alterations when you ingest documents into Amazon Kendra, see Customizing document metadata during the ingestion process. Detailed below.
@@ -4401,7 +4461,7 @@ spec:
                     description: A description for the Data Source connector.
                     type: string
                   errorMessage:
-                    description: When the Status field value is FAILED, the ErrorMessage field contains a description of the error that caused the Data Source to fail.
+                    description: When the Status field value is FAILED, contains a description of the error that caused the Data Source to fail.
                     type: string
                   id:
                     description: The unique identifiers of the Data Source and index separated by a slash (/).
@@ -4414,6 +4474,12 @@ spec:
                     type: string
                   name:
                     description: A name for your data source connector.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: The Amazon Resource Name (ARN) of a role with permission to access the data source connector. For more information, see IAM roles for Amazon Kendra. You can't specify the role_arn parameter when the type parameter is set to CUSTOM. The role_arn parameter is required for all other data sources.
@@ -4440,7 +4506,7 @@ spec:
                     description: The type of data source repository. For an updated list of values, refer to Valid Values for Type.
                     type: string
                   updatedAt:
-                    description: The Unix timestamp of when the Data Source was last updated.
+                    description: The Unix time stamp of when the Data Source was last updated.
                     type: string
                 type: object
               conditions:
